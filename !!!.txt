@@ -1,0 +1,10 @@
+
+# Настройка CUDA architectures в зависимости от ОС
+if(NOT CMAKE_CUDA_ARCHITECTURES)
+    if(WIN32)
+        set(CMAKE_CUDA_ARCHITECTURES "52" CACHE STRING "CUDA architectures: 52 for RTX 2080 Ti on Windows")
+    else()
+        set(CMAKE_CUDA_ARCHITECTURES "75;86;89" CACHE STRING "CUDA architectures: 75;86;89 for RTX 3060 on Linux")
+    endif()
+endif()
+set_target_properties(LCuda PROPERTIES CUDA_ARCHITECTURES ${CMAKE_CUDA_ARCHITECTURES})
