@@ -40,19 +40,20 @@ __global__ void sumKernel(int16_t* data, size_t num_points, int* result) {
     }
 }
 
-__global__ void generateRandomNumbers(int16_t* random_numbers, size_t num_points, unsigned long long seed) {
+__global__ void generateRandomNumbers(int16_t* random_numbers, float max_random, size_t num_points, unsigned long long seed) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx < num_points) {
         curandState state;
         curand_init(seed, idx, 0, &state);
         float rand_val = curand_uniform(&state);
-        int16_t num = (int16_t)(floorf(rand_val * 65536.0f)) - 32768;
+//        int16_t num = (int16_t)(floorf(rand_val * 65536.0f)) - 32768;
+        int16_t num = (int16_t)(floorf(rand_val * (float)max_random));
         random_numbers[idx] = num;
     }
 }
 
-RandomGeneratorGPU::RandomGeneratorGPU(unsigned long long seed, size_t num_points)
-    : seed_(seed), num_points_(num_points), d_random_numbers_(nullptr) {
+RandomGeneratorGPU::RandomGeneratorGPU(unsigned long long seed, float max_random, size_t num_points)
+    : seed_(seed), num_points_(num_points), max_random_(max_random), d_random_numbers_(nullptr) {
     h_random_numbers_.resize(num_points_);
     cudaError_t err = cudaMalloc(&d_random_numbers_, num_points_ * sizeof(int16_t));
     if (err != cudaSuccess) {
@@ -69,7 +70,7 @@ RandomGeneratorGPU::~RandomGeneratorGPU() {
 void RandomGeneratorGPU::generate() {
     int threads_per_block = 256;
     int blocks = (num_points_ + threads_per_block - 1) / threads_per_block;
-    generateRandomNumbers<<<blocks, threads_per_block>>>(d_random_numbers_, num_points_, seed_);
+    generateRandomNumbers<<<blocks, threads_per_block>>>(d_random_numbers_, max_random_, num_points_, seed_);
     cudaError_t err = cudaGetLastError();
     if (err != cudaSuccess) {
         throw std::runtime_error("Kernel launch failed");

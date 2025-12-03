@@ -12,7 +12,7 @@ int main()
   unsigned long long seed = 12345;
   size_t num_points = 2500000;
 
-  RandomGeneratorGPU generator(seed, num_points);
+  RandomGeneratorGPU generator(seed, 100.0f, num_points);
   generator.generate();
   std::cout << "Sum before filter: " << generator.getSum() << std::endl;
   generator.applyLowPassConvolution(10);

@@ -8,3 +8,11 @@ if(NOT CMAKE_CUDA_ARCHITECTURES)
     endif()
 endif()
 set_target_properties(LCuda PROPERTIES CUDA_ARCHITECTURES ${CMAKE_CUDA_ARCHITECTURES})
+
+
+1. /////////////////////////////////////
+ Генератор RAMDOM CUDA статья на Haber
+////////////////
+
+2. ////////////////////////////////////
+Генерация последовательности на полиноме НА CUDA видел решение на Habre

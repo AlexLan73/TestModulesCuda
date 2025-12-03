@@ -1,17 +1,16 @@
 cmake_minimum_required(VERSION 3.18)
 project(TestModulesCuda)
 
+# ===== БЛОК ДЛЯ LINUX =====
+set(CMAKE_CUDA_ARCHITECTURES 75 CACHE STRING "CUDA architectures for Linux")
+set(CMAKE_CUDA_COMPILER "/usr/local/cuda-13.0/bin/nvcc" CACHE PATH "CUDA compiler")
+
+# ===== БЛОК ДЛЯ WINDOWS (ЗАКОММЕНТИРОВАН) =====
+# set(CMAKE_CUDA_ARCHITECTURES 52 CACHE STRING "CUDA architectures for Windows")
+# set(CMAKE_CUDA_COMPILER "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin/nvcc.exe" CACHE PATH "CUDA compiler")
+
 enable_language(CUDA)
 find_package(CUDA REQUIRED)
-
-# Настройка CUDA architectures в зависимости от ОС
-if(NOT CMAKE_CUDA_ARCHITECTURES)
-    if(WIN32)
-        set(CMAKE_CUDA_ARCHITECTURES "52" CACHE STRING "CUDA architectures: 52 for RTX 2080 Ti on Windows")
-    else()
-        set(CMAKE_CUDA_ARCHITECTURES "75;86;89" CACHE STRING "CUDA architectures: 75;86;89 for RTX 3060 on Linux")
-    endif()
-endif()
 
 add_executable(main main.cpp src/RandomGeneratorGPU.cu)
 target_include_directories(main PRIVATE src)

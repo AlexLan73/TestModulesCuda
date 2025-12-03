@@ -6,7 +6,7 @@
 
 class RandomGeneratorGPU {
 public:
-    RandomGeneratorGPU(unsigned long long seed, size_t num_points);
+    RandomGeneratorGPU(unsigned long long seed, float max_random, size_t num_points);
     ~RandomGeneratorGPU();
 
     void generate();
@@ -19,6 +19,7 @@ private:
     unsigned long long seed_;
     size_t num_points_;
     int16_t* d_random_numbers_;
+    float max_random_;
     std::vector<int16_t> h_random_numbers_;
 };
 
