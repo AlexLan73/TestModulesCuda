@@ -1,0 +1,118 @@
+.TH "ModelNS23817A620S1823::CMsgSharedTypes::ImitObject" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::CMsgSharedTypes::ImitObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <controlMsgSharedTypes\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBintensity\fP"
+.br
+.ti -1c
+.RI "int32_t \fBfreqPoint\fP"
+.br
+.ti -1c
+.RI "int32_t \fBbegin\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBlength\fP"
+.br
+.ti -1c
+.RI "double \fBsigPhase\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBobjType\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBsignalType\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBsigPolynomial\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBinitSequence\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBinterfBandWidth\fP"
+.br
+.ti -1c
+.RI "\fBRayCoords\fP \fBspatialCoords\fP"
+.br
+.ti -1c
+.RI "int32_t \fBdfm\fP"
+.br
+.ti -1c
+.RI "float \fBnTay\fP"
+.br
+.ti -1c
+.RI "double \fBminDist2ZObject\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBrDelays\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBsigInitPhase\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBsigFreq\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "int32_t \fBsigPhaseInc\fP"
+.br
+.ti -1c
+.RI "double \fBresidualDelays\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Параметры объекта (помеха/сигнал)\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::begin"
+дискрет начала объекта от начала строба, может начинаться до и после строба 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::dfm"
+девиация частоты сигнала, в Гц 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::freqPoint"
+частотная точка объекта 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::initSequence"
+начальная последовательность оно же число знаков М-последовательности (по словам КЛМ) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::intensity"
+интенсивность имитируемого объекта 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::interfBandWidth"
+ширина полосы помехи (параметр М ФНЧ помехи) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::length"
+длина объекта 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::minDist2ZObject"
+минимальная дальность до объекта, м 
+.SS "float ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::nTay"
+Длительность дискрета ФМ, в мкс Поле используется исключительно в ФПО Воронеж-СМ 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::objType"
+тип объекта (сигнал/помеха) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::rDelays[\fBSharedConst::maxChannelsInCellSM\fP]"
+задержки в объектах для каждого канала ячейки (для объектов) сдвиг данных посредством них производится вправо с 0й точки на int_del 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::residualDelays[\fBSharedConst::maxChannelsInCellSM\fP]"
+остаточная 'задержка', определяет начальную фазу объекта для каждого канала ячейки 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::sigFreq[\fBSharedConst::maxChannelsInCellSM\fP]"
+частота сигнала (Воронеж-М/СМ) a1 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::sigInitPhase[\fBSharedConst::maxChannelsInCellSM\fP]"
+начальная фаза сигнала (Воронеж-М/СМ) a0 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::signalType"
+тип сигнал 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::sigPhase"
+общая для всех приёмных каналов фаза сигнала в долях периода для всех поляризаций 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::sigPhaseInc"
+приращение фазы за счёт ЛЧМ сигнала (Воронеж-М/СМ) a2 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::sigPolynomial"
+полином для сигнала 
+.SS "\fBRayCoords\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitObject::spatialCoords"
+пространственные координаты объекта 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

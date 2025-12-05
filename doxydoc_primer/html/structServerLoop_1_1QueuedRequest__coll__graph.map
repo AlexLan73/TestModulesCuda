@@ -1,0 +1,13 @@
+<map id="ServerLoop::QueuedRequest" name="ServerLoop::QueuedRequest">
+<area shape="rect" id="Node000001" title="Запрос на вполнение JSON RPC метода (любого), поставленный в очередь." alt="" coords="295,311,494,396"/>
+<area shape="rect" id="Node000002" href="$structModelInputBundle.html" title=" " alt="" coords="329,163,461,248"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,248,397,294,392,294,392,248"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,219,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="158,83,194,111,233,136,314,174,312,179,231,141,191,115,155,88"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="243,13,384,78"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="332,77,368,147,363,149,327,79"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="409,5,543,85"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="463,86,438,140,433,150,428,147,434,137,458,84"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="567,5,702,85"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="600,87,570,115,536,141,477,174,474,169,533,136,566,111,596,83"/>
+</map>

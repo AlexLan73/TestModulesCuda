@@ -1,0 +1,11 @@
+<map id="MainWindow::onRm1SliceFileDataBtnClicked" name="MainWindow::onRm1SliceFileDataBtnClicked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,73,219,113"/>
+<area shape="rect" id="Node000002" href="$classSliceViewer.html#a1090bf1d9baa963f919f8ae88d1d4307" title=" " alt="" coords="274,5,477,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,70,266,39,298,31,299,36,267,45,171,75"/>
+<area shape="rect" id="Node000003" href="$classSliceViewer.html#a980ccdf2c23db58af0a4720b8a155494" title=" " alt="" coords="289,55,461,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,80,275,74,276,80,219,85"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#ae9c5b9622e554ef8c99147df3bde0ec2" title=" " alt="" coords="267,104,484,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,100,253,103,253,108,219,105"/>
+<area shape="rect" id="Node000005" href="$classMainWindow.html#a00aa650c9b0ee3f1c3612570a9f1fa5f" title=" " alt="" coords="272,154,479,194"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="178,110,267,138,297,147,295,152,266,143,177,115"/>
+</map>

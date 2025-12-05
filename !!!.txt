@@ -16,3 +16,5 @@ set_target_properties(LCuda PROPERTIES CUDA_ARCHITECTURES ${CMAKE_CUDA_ARCHITECT
 
 2. ////////////////////////////////////
 Генерация последовательности на полиноме НА CUDA видел решение на Habre
+
+doxygen Doxyfile

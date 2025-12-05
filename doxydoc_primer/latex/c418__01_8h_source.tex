@@ -1,0 +1,63 @@
+\doxysection{c418\+\_\+01.\+h}
+\hypertarget{c418__01_8h_source}{}\label{c418__01_8h_source}\index{src/c418\_01.h@{src/c418\_01.h}}
+\mbox{\hyperlink{c418__01_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C418\_01\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C418\_01\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}\ \textcolor{comment}{//\ maxActiveInterferences}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c412__06_8h}{c412\_06.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418Base_8h}{c418Base.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsg_8h}{controlMsg.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__01}{VirtualCell418\_01}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__01_a3df1601e8529e7e88d4c5d56a85f93b0}{\string~VirtualCell418\_01}}()\ \{\}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__01_ab07ebb88ef63922ed234e81bb7d84b57}{getResults}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result)\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__01_a61483bebc520ead519742975f0d99977}{sendAdaptiveVectors2ZCell412}}(}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ \textcolor{comment}{/*adaptiveVect*/}[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}])\ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<std::unique\_ptr<VirtualCell412\_06>>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__01_a0a78611d3ec0023d2ede021ad00c896e}{c412}};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01}{Cell418\_01}}\ :\ \textcolor{keyword}{public}\ \textcolor{comment}{/*implements*/}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__01}{VirtualCell418\_01}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base}{Cell418Base}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01}{Cell418\_01}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\&\ cmg,\ \textcolor{keywordtype}{int}\ crnum);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a0b6e90c4c4a32a1ea99ab1e8f6c7d1cb}{getResults}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a670aa3ea940679d39792b3aebb6adb47}{sendAdaptiveVectors2ZCell412}}(}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ [][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}]);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a055496efb9393e31ec71513e0be2ec65}{resetStopFlag}}();}
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00051\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a5096a177e592143fa01055219163ac0d}{crateNum}};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a803f91bb0cd7580b320ef66a369d0cc1}{inputSlice}};}
+\DoxyCodeLine{00055\ \ \ \ \ std::complex<int32\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_ac08329332bc4c01d1c8c037f69ca18e7}{interfData}}\ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7af73a6acd98e2f3281d3e076634aeb2}{SharedConst::maxCellsInCrateMrik}}]}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}]}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}];}
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a10ade080d96cbe2da76048c18e1c14be}{initSliceFiles}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_afd3c637aa0706943a1d3febc1ffe1dc4}{dumpInputSlice}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72}{inData}},\ uint32\_t\ cellNum);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_abd42185cf2c97b98ccb93fa7b4bbae8a}{inDataProcessing}}(uint32\_t\ cellNum,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_aa0f81480786ae809c76615e91f73b5d3}{postProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *\ \textcolor{comment}{/*result*/});}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_ab3c4c18846a6c477d3d797033ad46d7b}{collectCellAdaptData}}(uint32\_t\ cellNum,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_af07cbb29593600bb06f79511ae799c75}{collectCalibrLIMMSourceData}}(uint32\_t\ cellNum,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a7455af49ced1b64778cb3fca9b2f73de}{antennaPartsProcessing}}(uint32\_t\ cellInCrateNum,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result);}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a6edbcc8ae30d623ce1013a985db057b9}{dftOfInterfData}}(uint32\_t\ cellInCrateNum,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ data[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}]);}
+\DoxyCodeLine{00116\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_afcbe243f5bc3e0a3b0214c03d729ccfd}{calcGlobal0ChInCellIndex}}(uint32\_t\ cellNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_aead4e12b6b45cb7a7530ff45c39f56aa}{clearInterfDataBuf}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a49b18894c3abc8108e73b903eb210065}{sumMrikCellDataInFragment}}(uint32\_t\ cellInCrateNum);}
+\DoxyCodeLine{00125\ \};\ \textcolor{comment}{//\ class\ Cell418\_01}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C418\_01\_H\_\_}}
+
+\end{DoxyCode}

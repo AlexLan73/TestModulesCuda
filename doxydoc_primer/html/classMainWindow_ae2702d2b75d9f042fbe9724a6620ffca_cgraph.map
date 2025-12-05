@@ -1,0 +1,7 @@
+<map id="MainWindow::onAddObjBtnClicked" name="MainWindow::onAddObjBtnClicked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,251,56"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#adf31d2f21cd5a1adfa216ea607c9ce52" title=" " alt="" coords="299,5,499,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,29,285,26,285,31,251,35"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a838ad212ad5ef30828aef00e3b3ac5fe" title=" " alt="" coords="301,55,496,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,52,288,55,287,60,251,57"/>
+</map>

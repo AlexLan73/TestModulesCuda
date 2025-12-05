@@ -1,0 +1,45 @@
+\doxysection{c412\+\_\+06\+ADCImitator.\+h}
+\hypertarget{c412__06ADCImitator_8h_source}{}\label{c412__06ADCImitator_8h_source}\index{src/c412\_06ADCImitator.h@{src/c412\_06ADCImitator.h}}
+\mbox{\hyperlink{c412__06ADCImitator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C412\_06ADCIMITATOR\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C412\_06ADCIMITATOR\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsg_8h}{controlMsg.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit}{Cell412\_06ADCImit}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a2e1f9e7f669ea0eab296468b269a0a8d}{Cell412\_06ADCImit}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ab910d6498e4074ff7f8a241ed7b92e18}{\string~Cell412\_06ADCImit}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0d372bb16bf1cafb0018f921f05c46b1}{getChannelData}}(uint32\_t\ chanNum,\ int32\_t\ channelData[]);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a6a01ca1f670170b1658abcf2583a5070}{setControlMessage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\&\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a36db21e11dd5e83c27dbe4d881e72105}{controlMsg}});}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{maxObjLength}}\ =\ 3500000;}
+\DoxyCodeLine{00031\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a288079c0e8135b1e313769c2086bc864}{objectData}}[\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{maxObjLength}}];}
+\DoxyCodeLine{00033\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a25fa52e8c5032e5cc271fa8ebd2cb831}{objectImage}}[\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{maxObjLength}}];}
+\DoxyCodeLine{00035\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_acffa25bfb8c4995028ef28146d92137f}{interfImageTmp}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a5449c6568ae7abe0cdc19abedf1c0284}{SharedConst::maxInterfBandWidth}}];}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a36db21e11dd5e83c27dbe4d881e72105}{controlMsg}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0557cb1ae37b7c16f70db2915496fabe}{strb}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsgModelTypes::StationParams}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ae116d50bdf0bc8b84ef56a6998a6a162}{stationParams}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsgSharedTypes::ImitObject}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abb9807c2795f03506b525fbfa70be6a0}{imitObjects}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ac27f80eb95cb8d8e47c621975c07c864}{genSelfNoise}}(uint32\_t\ chanNum,\ int32\_t\ channelData[]);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a10caa9df4b7bce33eb9483c38bf67e8a}{genInterfNoise}}(int32\_t\ channelData[],\ uint32\_t\ interfIndex);}
+\DoxyCodeLine{00061\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a4d2b0820c238d4acb2708b00a5b7ab5c}{genInterfImage}}(uint32\_t\ objNum);}
+\DoxyCodeLine{00066\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ad563b8e792379098f6192753fd59adb7}{genSignalImage}}(uint32\_t\ objNum);}
+\DoxyCodeLine{00072\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a00b8c891ef76042b22997f9ec4c70495}{genObject}}(uint32\_t\ objNum,\ uint32\_t\ chanNum);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0a92e0e23b25681d6f13ae59c09bd87d}{genCarrierFreq}}(uint32\_t\ objNum,\ uint32\_t\ chanNum,\ uint32\_t\ objLength);}
+\DoxyCodeLine{00085\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_afed2a557f6971b66dfb9ef8a5598cfbb}{calcNk}}(uint32\_t\ objNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abbfcd98598a977247f4f8fc6d6b7d25a}{calcNdk}}(uint32\_t\ objNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a5d84eba988fd6d880d9bf1f296df18d7}{applyKaiserOnSignal}}(uint32\_t\ currLength);}
+\DoxyCodeLine{00099\ \};\ \textcolor{comment}{//\ class\ Cell412\_06ADCImit}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C412\_06ADCIMITATOR\_H\_\_}}
+
+\end{DoxyCode}

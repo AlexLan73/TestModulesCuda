@@ -1,0 +1,207 @@
+.TH "ModelNS23817A620S1823::Ippa" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Ippa
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ippa\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIppa\fP ()"
+.br
+.ti -1c
+.RI "\fBIppa\fP (const \fBIppa\fP &)"
+.br
+.ti -1c
+.RI "\fBIppa\fP (E2IPPA *newMsg)"
+.br
+.ti -1c
+.RI "\fB~Ippa\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNewMsg\fP (E2IPPA *newMsg)"
+.br
+.ti -1c
+.RI "void \fBgetMsg\fP (E2IPPA *msgBuf) const"
+.br
+.ti -1c
+.RI "int32_t \fBgetUV\fP (int32_t aInterfIndex, float *u, float *v) const"
+.br
+.ti -1c
+.RI "float \fBgetU\fP (int32_t aInterfIndex) const"
+.br
+.ti -1c
+.RI "float \fBgetV\fP (int32_t aInterfIndex) const"
+.br
+.ti -1c
+.RI "int16_t \fBgetActiveInterfsNumber\fP () const"
+.br
+.ti -1c
+.RI "int32_t \fBvalidate\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "void \fBfillDummyIppa\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBpushBackUV\fP (float u, float v)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "E2IPPA \fBippa\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс активных помехопостановщиков\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Ippa::Ippa ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Ippa::Ippa (const \fBIppa\fP & newIppa)\fC [explicit]\fP"
+Копирующий конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Ippa::Ippa (E2IPPA * newMsg)"
+Конструктор объекта класса\&. Инициализирует объект ippa значениями из newMsg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewMsg\fP указатель на объект сетевого сообщения Е2ИППА 
+.RE
+.PP
+
+.SS "ModelNS23817A620S1823::Ippa::~Ippa ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Ippa::clear ()"
+Обнуление памяти, занимаемой объектом ippa\&. 
+.SS "void ModelNS23817A620S1823::Ippa::fillDummyIppa ()"
+Заполнение объекта ippa тестовыми данными\&. 
+.SS "int16_t ModelNS23817A620S1823::Ippa::getActiveInterfsNumber () const"
+Возврат количества активных помехопостановщиков\&. 
+.PP
+\fBReturns\fP
+.RS 4
+количество активных помехопостановщиков 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Ippa::getMsg (E2IPPA * msgBuf) const"
+Копирование объекта ippa в заданную память\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsgBuf\fP указатель на объект сетевого сообщения Е2ИППА 
+.RE
+.PP
+
+.SS "float ModelNS23817A620S1823::Ippa::getU (int32_t aInterfIndex) const"
+Возврат координаты U заданного помехопостановщика\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaInterfIndex\fP индекс активной помехи 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+координата U заданного помехопостановщика (активной помехи) 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Ippa::getUV (int32_t aInterfIndex, float * u, float * v) const"
+Занесение координат U, V заданного помехопостановщика в заданную память, 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaInterfIndex\fP индекс активной помехи 
+.br
+\fIu\fP указатель на буфер для записи в него координаты u заданной активной помехи 
+.br
+\fIv\fP указатель на буфер для записи в него координаты v заданной активной помехи 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 если память не указана, в противном случае - 0 
+.RE
+.PP
+
+.SS "float ModelNS23817A620S1823::Ippa::getV (int32_t aInterfIndex) const"
+Возврат координаты V заданного помехопостановщика\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaInterfIndex\fP индекс активной помехи 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+координата V заданного помехопостановщика (активной помехи) 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Ippa::pushBackUV (float u, float v)"
+Добавление координат помехи в конец списка помехопостановщиков\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIu\fP координата u активной помехи 
+.br
+\fIv\fP координата v активной помехи 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 если u или v находятся за пределами [-1; 1], если данные в указанном выше диапазоне, то возвращается 0\&. 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Ippa::setNewMsg (E2IPPA * newMsg)"
+Инициализация объекта ippa значениями из newMsg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewMsg\fP указатель на объект сетевого сообщения Е2ИППА 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Ippa::size () const"
+Расчёт реального размера объекта сетевой структуры, исходя из реального количества помехопостановщиков в ней\&. 
+.PP
+\fBReturns\fP
+.RS 4
+реальный размер объекта сетевой структуры (Е2ИППА) 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Ippa::validate ()"
+Проверка полей ИППА на граничные значения\&. 
+.PP
+\fBReturns\fP
+.RS 4
+0 если проверка пройдена успешно 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "E2IPPA ModelNS23817A620S1823::Ippa::ippa\fC [private]\fP"
+объект сетевой структуры активных помехопостановщиков 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

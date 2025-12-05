@@ -1,0 +1,321 @@
+\doxysection{helpers.\+h}
+\hypertarget{helpers_8h_source}{}\label{helpers_8h_source}\index{src/helpers.h@{src/helpers.h}}
+\mbox{\hyperlink{helpers_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HELPERS\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HELPERS\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}\ \textcolor{comment}{//\ std::cout}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ uint64\_t}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cmath>}\ \textcolor{comment}{//\ round()}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ std::vector}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{controlMsgSharedTypes_8h}{model/controlMsgSharedTypes.h}}>}\ \textcolor{comment}{//\ CMsgSharedTypes::ImitStrobe}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sliceFile_8h}{sliceFile.h}}"{}}\ \textcolor{comment}{//\ SliceFile}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsgModelTypes_8h}{controlMsgModelTypes.h}}"{}}\ \textcolor{comment}{//\ CMsgModelTypes::StationParams}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ Группа\ функций\ для\ печати\ комплексных\ чисел\ в\ поток.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ Экономит\ ресурсы\ на\ использовании\ operator<<\ (ostream,\ complex<T>)}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{maybe\_terminate}}(\textcolor{keywordtype}{char}\ *s,\ uint\ n,\ \textcolor{keywordtype}{char}\ c)}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (c)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ s[n]\ =\ c;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ s[n\ +\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::ostream\&\ s,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::complex<int32\_t>\&\ data,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[50];}
+\DoxyCodeLine{00035\ \ \ \ \ uint\ n\ =\ snprintf(buf,\ \textcolor{keyword}{sizeof}(buf),\ \textcolor{stringliteral}{"{}(\%d,\%d)"{}},\ data.real(),\ data.imag());}
+\DoxyCodeLine{00036\ \ \ \ \ assert(n\ +\ 1\ <\ \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{maybe\_terminate}}(buf,\ n,\ c);}
+\DoxyCodeLine{00038\ \ \ \ \ s\ <<\ buf;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::ostream\&\ s,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::complex<double>\&\ data,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[50];}
+\DoxyCodeLine{00046\ \ \ \ \ uint\ n\ =\ snprintf(buf,\ \textcolor{keyword}{sizeof}(buf),\ \textcolor{stringliteral}{"{}(\%g,\%g)"{}},\ data.real(),\ data.imag());}
+\DoxyCodeLine{00047\ \ \ \ \ assert(n\ +\ 1\ <\ \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{maybe\_terminate}}(buf,\ n,\ c);}
+\DoxyCodeLine{00049\ \ \ \ \ s\ <<\ buf;}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::ostream\&\ s,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ int32\_t\&\ data,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[50];}
+\DoxyCodeLine{00057\ \ \ \ \ uint\ n\ =\ snprintf(buf,\ \textcolor{keyword}{sizeof}(buf),\ \textcolor{stringliteral}{"{}\%d"{}},\ data);}
+\DoxyCodeLine{00058\ \ \ \ \ assert(n\ +\ 1\ <\ \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{maybe\_terminate}}(buf,\ n,\ c);}
+\DoxyCodeLine{00060\ \ \ \ \ s\ <<\ buf;}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ эта\ функция\ не\ определена\ -\/\ вроде\ бы\ пока\ int64\_t\ печатать\ не\ нужно}}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::ostream\&\ s,\ \textcolor{keyword}{const}\ int64\_t\&\ data,\ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::ostream\&\ s,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t\&\ data,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[50];}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#if\ defined(\_LP64)\ ||\ defined(\_\_LP64\_\_)}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *uint64\_fmt\ =\ \textcolor{stringliteral}{"{}\%lu"{}};}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *uint64\_fmt\ =\ \textcolor{stringliteral}{"{}\%llu"{}};}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00076\ \ \ \ \ uint\ n\ =\ snprintf(buf,\ \textcolor{keyword}{sizeof}(buf),\ uint64\_fmt\ ,\ data);}
+\DoxyCodeLine{00077\ \ \ \ \ assert(n\ +\ 1\ <\ \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{maybe\_terminate}}(buf,\ n,\ c);}
+\DoxyCodeLine{00079\ \ \ \ \ s\ <<\ buf;}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::ostream\&\ s,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ data,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[50];}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ n\ =\ sprintf(buf,\ \textcolor{stringliteral}{"{}\%g"{}},\ data);}
+\DoxyCodeLine{00088\ \ \ \ \ assert(n\ +\ 1\ <\ \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{maybe\_terminate}}(buf,\ n,\ c);}
+\DoxyCodeLine{00090\ \ \ \ \ s\ <<\ buf;}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a099f1fe658d71ddb40bb82995a15444f}{quickPrintln}}(std::ostream\&\ s,\ \textcolor{keyword}{const}\ T\&\ v)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(s,\ v,\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a513446493a680aae9a86d2011dd2da59}{round\_u32}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keyword}{const}\ uint32\_t\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ n);}
+\DoxyCodeLine{00099\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int64\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_abd072fbb6c2f3abef34b77d65cd68cc0}{round\_u64}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keyword}{const}\ uint64\_t\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ n);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ Реализация\ выражения\ (int32\_t)round((float)x\ /\ pow(2,\ n))\ без\ использования\ "{}math"{}\ функций}}
+\DoxyCodeLine{00102\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a0bb27d7b33ace176910233ff3b345381}{round\_i32}}(int32\_t\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ n)}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ ==\ 0\ ||\ n\ ==\ 0)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{const}\ int\_least8\_t\ s\ =\ (x\ <\ 0)\ ?\ -\/1\ :\ 1;}
+\DoxyCodeLine{00107\ \ \ \ \ x\ *=\ s;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ IEEE\ 754\ 32-\/bit\ float}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ \ 1\ bit\ \ -\/\ sign}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ \ 8\ bits\ -\/\ exponent}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ 23\ bits\ -\/\ fraction\ (22\ stored)}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ S.EEEEEEEE.\_FFFFFFFFFFFFFFFFFFFFFF}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//\ Если\ "{}ширина"{}\ 'x'\ более\ 22-\/bit\ (fraction)\ следует\ выполнить\ округление}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ с\ помощью\ приведения\ типа\ к\ float\ и\ обратно:\ x\ =\ (int32\_t)((float)x)}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ \&\ 0x7FC00000)\ \textcolor{comment}{//\ EEEEEEEEE.\_}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ x\ =\ (float)x;}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a513446493a680aae9a86d2011dd2da59}{round\_u32}}(s,\ x,\ n);}
+\DoxyCodeLine{00121\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ Реализация\ выражения\ (int64\_t)round((double)x\ /\ pow(2,\ n))\ без\ использования\ "{}math"{}\ функций}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int64\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a97ef45869b51098405dad2f196d94474}{round\_i64}}(int64\_t\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ n)}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ ==\ 0\ ||\ n\ ==\ 0)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ x;}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{const}\ int\_least8\_t\ s\ =\ (x\ <\ 0)\ ?\ -\/1\ :\ 1;}
+\DoxyCodeLine{00129\ \ \ \ \ x\ *=\ s;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ IEEE\ 754\ 64-\/bit\ float\ (double)}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//\ \ 1\ bit\ \ -\/\ sign}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ 11\ bits\ -\/\ exponent}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ 53\ bits\ -\/\ fraction\ (52\ stored)}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//\ S.EEEEEEEEEEE.\_FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ Если\ "{}ширина"{}\ 'x'\ более\ 52-\/bit\ (fraction)\ следует\ выполнить\ округление}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ с\ помощью\ приведения\ типа\ к\ double\ и\ обратно:\ x\ =\ (int64\_t)((double)x)}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ \&\ 0x7FF8000000000000)\ \textcolor{comment}{//\ EEEEEEEEEEE.\_}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ x\ =\ (double)x;}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_abd072fbb6c2f3abef34b77d65cd68cc0}{round\_u64}}(s,\ x,\ n);}
+\DoxyCodeLine{00143\ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{comment}{//\ Внимание:\ аргумент\ 'x'\ д.\ быть\ положительным\ целым\ в\ диапазоне:\ 0...INT32\_MAX}}
+\DoxyCodeLine{00146\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a513446493a680aae9a86d2011dd2da59}{round\_u32}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keyword}{const}\ uint32\_t\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ n)}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ y\ =\ (uint32\_t)\ 1\ <<\ n;}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ y2\ =\ y\ >>\ 1;\ \textcolor{comment}{//\ y/2}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ rem\ =\ x\ \&\ (y\ -\/\ 1);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ add\ =\ (rem\ >=\ y2)\ ?\ y\ :\ 0;}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{return}\ s\ *\ ((x\ -\/\ rem\ +\ add)\ >>\ n);}
+\DoxyCodeLine{00153\ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{comment}{//\ Внимание:\ аргумент\ 'x'\ д.\ быть\ положительным\ целым\ в\ диапазоне:\ 0...INT64\_MAX}}
+\DoxyCodeLine{00156\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int64\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_abd072fbb6c2f3abef34b77d65cd68cc0}{round\_u64}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keyword}{const}\ uint64\_t\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ n)}
+\DoxyCodeLine{00157\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t\ y\ =\ (uint64\_t)\ 1\ <<\ n;}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t\ y2\ =\ y\ >>\ 1;\ \textcolor{comment}{//\ y/2}}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t\ rem\ =\ x\ \&\ (y\ -\/\ 1);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{const}\ uint64\_t\ add\ =\ (rem\ >=\ y2)\ ?\ y\ :\ 0;}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}\ s\ *\ ((x\ -\/\ rem\ +\ add)\ >>\ n);}
+\DoxyCodeLine{00163\ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{namespace\ }Helpers\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ capacity>}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keyword}{inline}\ int32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_abe6c67dd3d1b5cf57e55aa958c216336}{rshiftBy}}(int32\_t\ value)}
+\DoxyCodeLine{00175\ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a0bb27d7b33ace176910233ff3b345381}{round\_i32}}(value,\ capacity);}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ capacity>}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keyword}{inline}\ int64\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_adb8c09633653904b77f249d6abc25fa3}{rshift64By}}(int64\_t\ value)}
+\DoxyCodeLine{00187\ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a97ef45869b51098405dad2f196d94474}{round\_i64}}(value,\ capacity);}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ capacity>}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keyword}{inline}\ std::complex<int32\_t>\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_abe6c67dd3d1b5cf57e55aa958c216336}{rshiftBy}}(\textcolor{keyword}{const}\ std::complex<int32\_t>\&\ value)}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::complex<int32\_t>(rshiftBy<capacity>(value.real()),}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rshiftBy<capacity>(value.imag()));}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{unsigned}\ capacity>}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{inline}\ std::complex<int64\_t>\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_adb8c09633653904b77f249d6abc25fa3}{rshift64By}}(\textcolor{keyword}{const}\ std::complex<int64\_t>\&\ value)}
+\DoxyCodeLine{00200\ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::complex<int64\_t>(rshift64By<capacity>(value.real()),}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rshift64By<capacity>(value.imag()));}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a4ec45a40fd7534549edaa65b5ad05b2f}{flp2}}(uint32\_t\ x);}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a83fc4933fb8f468179b8d10ed98f56f7}{isInterfModeStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aab804c17c6331df19d2ab8aadff432d6}{isTargetModeStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_ab2905bdba81471bfc9f192cf71cb8770}{isCoordAdaptStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a70a220ee82b24c41e5095c53ed6dedea}{isSignalAdaptStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_af7281c45ee109fe93059c8028f1e8459}{isAutocompStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a21d4d44b6b64c131c1a5ae454844b304}{isCalibrStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_adff9707b7a3530c5f9a62ed10130bcc3}{isLIMMStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a687cddb6f575d22bbdf873bcf1ba0d36}{isFragmStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aeb89d6cc545fbab069a9076f86e5658f}{isTfcStrb}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00267\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a5b80c2dcd034f8385df57533032fba98}{calcSamplesInRay}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ *strb);}
+\DoxyCodeLine{00273\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aabdb31d2add16b63348d1ad008455778}{calcTransientResponseLength}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ *strb);}
+\DoxyCodeLine{00281\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a8910ccf5e21ff6ed675cb824ae6df61e}{calcAutocompSamplesInRay}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ *strb);}
+\DoxyCodeLine{00286\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aa2cb71c43a87b8ef71b3e41872e2cb8a}{calcRaysNum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ *strb);}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_ad58103cb4e1fe3345ce1b2cab7b06b68}{getStrobeIDAppendix}}(uint32\_t\ strbType);}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_afdefbc89c749f596f330669162fb89df}{isLastPolarization}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{SharedConst::PolarizationTypes}}\ polarType,}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ polarMask);}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a63a270be0bd04eaa87b979c0652848d7}{isMrikBottomHalf}}(uint32\_t\ lChanNum);}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a01c864754900d1da7814e09c551ee219}{printArr}}(\textcolor{keyword}{const}\ T\ arr[],\ int32\_t\ length,}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ direction\ =\ \textcolor{charliteral}{'r'},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *descr\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00323\ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ std::cout\ <<\ descr\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{charliteral}{'c'})}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (int32\_t\ i\ =\ 0;\ i\ <\ length;\ i++)\ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(std::cout,\ arr[i]);}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{charliteral}{'c'})}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (direction\ ==\ \textcolor{charliteral}{'r'})}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00335\ \ \ \ \ \}}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00345\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a4698105c1122c8b0993295bf4f66597d}{dump1DimSlice}}(\textcolor{keyword}{const}\ T\ buf[],\ uint32\_t\ length,\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\&\ sFile,}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::ios\_base::openmode\ mode\ =\ std::ios\_base::trunc)}
+\DoxyCodeLine{00347\ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ sFile.\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6}{openSlice}}(mode);}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (...)\ \{\ \textcolor{comment}{//\ ...\ \ -\/\ не\ очень\ хорошо,\ надо\ конкретизировать}}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sFile.\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96bf8b0f07f33cf5a5420f319fdf830a}{getPrintMode}}()\ ==\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaa6cfc21513937fcee2cd238afd2d8f79b}{SliceFile::byColumn}})\ \textcolor{comment}{//\ печать\ в\ столбец}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ length;\ i++)}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a099f1fe658d71ddb40bb82995a15444f}{quickPrintln}}(sFile,\ buf[i]);}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//\ печать\ в\ строку}}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ length;\ i++)}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(sFile,\ buf[i],\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ sFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ sFile.close();}
+\DoxyCodeLine{00363\ \ \ \ \ \}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T,\ const\ u\textcolor{keywordtype}{int}32\_t\ dim2Sz>}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a2e212a6919279b5740feedc96fbdc02a}{dump2DimSlice}}(\textcolor{keyword}{const}\ T\ buf[][dim2Sz],\ uint32\_t\ rowsNum,}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ columnsNum,\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\&\ sFile,}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::ios\_base::openmode\ mode\ =\ std::ios\_base::trunc)}
+\DoxyCodeLine{00377\ \ \ \ \ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ sFile.\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6}{openSlice}}(mode);}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (...)\ \{\ \textcolor{comment}{//\ ...\ \ -\/\ не\ очень\ хорошо,\ надо\ конкретизировать}}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ rowsNum;\ i++)\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ j\ =\ 0;\ j\ <\ columnsNum;\ j++)}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(sFile,\ buf[i][j],\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ sFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ sFile.close();}
+\DoxyCodeLine{00390\ \ \ \ \ \}}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>\ int32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aedfc02b6d2a9e66c52e942ac94f22438}{isValid}}(T\ value,\ T\ min,\ T\ max,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *descr)}
+\DoxyCodeLine{00402\ \ \ \ \ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <\ min\ ||\ value\ >\ max)\ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ descr\ <<\ \textcolor{stringliteral}{"{}\ =\ "{}}\ <<\ value\ <<\ \textcolor{stringliteral}{"{}\ is\ out\ of\ range\ ("{}}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ min\ <<\ \textcolor{stringliteral}{"{};\ "{}}\ <<\ max\ <<\ \textcolor{stringliteral}{"{})"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00409\ \ \ \ \ \}}
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aec0feb465b3c921b9833a640a3e9b66b}{dumpSumPolars}}(std::vector<std::vector<std::vector<T\ >\ >\ >\&\ sum,}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\&\ sFile)}
+\DoxyCodeLine{00420\ \ \ \ \ \{}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ r\ =\ 0;\ r\ <\ sum.size();\ r++)\ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ sFile.\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a7431731a114091c3e69de0b7096d3b4b}{setPolarType}}(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{SliceFile::none}});}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ sFile.\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a953fba75b5ede3e53ea956c2f441489b}{setRayNum}}(r);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ sFile.\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6}{openSlice}}();}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ k\ =\ 0;\ k\ <\ sum[0].size();\ k++)\ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ n\ =\ 0;\ n\ <\ sum[0][0].size();\ n++)}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{quickPrint}}(sFile,\ sum[r][k][n],\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ sFile.close();}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00432\ \ \ \ \ \}}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \ \ \ \ \textcolor{keyword}{inline}\ std::unique\_ptr<SliceFile>\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_afc1b0912f9bfb3d0b779db63e336afce}{makeSliceFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *slice\_name,}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ texec,}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint\ nstr)}
+\DoxyCodeLine{00437\ \ \ \ \ \{}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ std::unique\_ptr<SliceFile>\ ret\ =\ std::make\_unique<SliceFile>();}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ ret-\/>setSliceName(slice\_name);}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ ret-\/>setTactNum(texec);}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ ret-\/>setStrobeID(nstr);}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ ret-\/>setCrateNum(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{SliceFile::none}});}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ ret-\/>setCellNum(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{SliceFile::none}});}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ ret-\/>setChannelNum(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{SliceFile::none}});}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ ret-\/>setPolarType(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{SliceFile::none}});}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ ret-\/>setStrbIDAppendix(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00450\ \ \ \ \ \}}
+\DoxyCodeLine{00451\ \}\ \textcolor{comment}{//\ namespace\ Helpers}}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HELPERS\_H\_\_}}
+
+\end{DoxyCode}

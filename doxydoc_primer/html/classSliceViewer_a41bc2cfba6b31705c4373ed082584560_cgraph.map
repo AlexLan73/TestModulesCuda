@@ -1,0 +1,21 @@
+<map id="SliceViewer::loadSliceDataFile" name="SliceViewer::loadSliceDataFile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,209,224,234"/>
+<area shape="rect" id="Node000002" href="$classSliceViewer.html#ab0286b773a6de8210be0cc631961c20b" title=" " alt="" coords="283,37,471,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,206,185,150,226,117,271,88,287,80,290,85,273,93,229,122,188,154,130,210"/>
+<area shape="rect" id="Node000005" href="$classSliceViewer.html#a1090bf1d9baa963f919f8ae88d1d4307" title=" " alt="" coords="276,102,479,127"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="135,206,195,172,271,138,299,128,301,133,273,142,197,177,138,211"/>
+<area shape="rect" id="Node000006" href="$classSliceViewer.html#ae8dd2a442c94abf84dec86a6e44e44e2" title=" " alt="" coords="272,151,483,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="173,206,305,177,306,182,174,211"/>
+<area shape="rect" id="Node000007" href="$classSliceViewer.html#acfcbfd831d13dcc6ae81185850f30f4b" title=" " alt="" coords="281,201,473,241"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="224,219,268,219,268,224,224,224"/>
+<area shape="rect" id="Node000008" href="$classSliceViewer.html#ac81fd7fb1b04bf4b6d7c95584dd4a0c2" title=" " alt="" coords="281,265,473,305"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="169,232,282,259,280,265,167,237"/>
+<area shape="rect" id="Node000009" href="$classSliceViewer.html#a118a5747ab2a751c20ed8e6e68f11a32" title=" " alt="" coords="274,329,481,369"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="135,232,195,272,273,315,291,322,289,327,271,320,192,276,132,236"/>
+<area shape="rect" id="Node000010" href="$classSliceViewer.html#a9f8cf4a6fb768f8c07a7778858e023ae" title=" " alt="" coords="274,393,481,433"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="127,233,184,302,226,343,273,379,285,385,282,390,271,384,222,347,180,306,123,236"/>
+<area shape="rect" id="Node000003" href="$classSliceViewer.html#a9bd32e27ab4e3894efdd83fc8cd0d9b1" title=" " alt="" coords="531,5,745,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="471,43,517,38,517,43,472,48"/>
+<area shape="rect" id="Node000004" href="$classSliceViewer.html#a88e888cb9e0a7f6c50934f90972a4f5d" title=" " alt="" coords="545,69,731,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="472,66,531,74,530,79,471,71"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="gnuplotio::TextSender&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, boost::mpl::not_&lt; is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt; &gt;::type &gt;::send" name="gnuplotio::TextSender&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, boost::mpl::not_&lt; is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt; &gt;::type &gt;::send">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,133"/>
+<area shape="rect" id="Node000002" href="$structgnuplotio_1_1TextSender.html#a03b58292dc75a4137d30ad7fffd762c6" title=" " alt="" coords="248,49,411,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,67,234,67,234,72,200,72"/>
+</map>

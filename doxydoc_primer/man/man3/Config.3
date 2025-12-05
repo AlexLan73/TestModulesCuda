@@ -1,0 +1,262 @@
+.TH "Config" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Config
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <config\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfig\fP ()"
+.br
+.ti -1c
+.RI "\fB~Config\fP ()"
+.br
+.ti -1c
+.RI "void \fBload\fP (const char *fName)"
+.br
+.ti -1c
+.RI "void \fBsave\fP (const char *fName)"
+.br
+.ti -1c
+.RI "void \fBsetTactsInfo\fP (const std::vector< \fBTactInfo\fP > &tInfo)"
+.br
+.ti -1c
+.RI "void \fBsetStationParams\fP (const \fBModel::StationParams\fP &stParams)"
+.br
+.ti -1c
+.RI "void \fBsetDPParams\fP (const \fBDPParams\fP &dpParams)"
+.br
+.ti -1c
+.RI "void \fBsetIppaFileName\fP (const char *fName)"
+.br
+.ti -1c
+.RI "void \fBsetMaskFileName\fP (const char *fName)"
+.br
+.ti -1c
+.RI "void \fBsetAfrFileName\fP (const char *fName)"
+.br
+.ti -1c
+.RI "void \fBsetKlbFileName\fP (const char *fName)"
+.br
+.ti -1c
+.RI "const std::vector< \fBTactInfo\fP > & \fBgetTactsInfo\fP () const"
+.br
+.ti -1c
+.RI "const \fBModel::StationParams\fP & \fBgetStationParams\fP () const"
+.br
+.ti -1c
+.RI "const \fBDPParams\fP & \fBgetDPParams\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBgetIppaFileName\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBgetMaskFileName\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBgetAfrFileName\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBgetKlbFileName\fP () const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBparseParsig\fP (const pt::ptree &object, PAR_SIGN &parsig)"
+.br
+.ti -1c
+.RI "void \fBparseObjects\fP (const pt::ptree &strobe, std::vector< \fBObjectInfo\fP > &objects)"
+.br
+.ti -1c
+.RI "void \fBparseUvPg\fP (const pt::ptree &jUvPg, TRay *uvPg)"
+.br
+.ti -1c
+.RI "void \fBparseTrprStrobe\fP (const pt::ptree &strobe, TStrobe &trprStrb)"
+.br
+.ti -1c
+.RI "void \fBparseTrimtsStrobe\fP (const pt::ptree &strobe, ImitStrobe &trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBparseStrobes\fP (const pt::ptree &tact, std::vector< \fBStrobeInfo\fP > &strobes)"
+.br
+.ti -1c
+.RI "void \fBparseStationParams\fP (const pt::ptree &jStParams)"
+.br
+.ti -1c
+.RI "void \fBparseDPParams\fP (const pt::ptree &jDpParams)"
+.br
+.ti -1c
+.RI "void \fBfillParsig\fP (pt::ptree &jParent, PAR_SIGN &parsig)"
+.br
+.ti -1c
+.RI "void \fBfillTrimtsObjects\fP (boost::property_tree::ptree &jObjects, std::vector< \fBObjectInfo\fP > &objects)"
+.br
+.ti -1c
+.RI "void \fBfillUV\fP (pt::ptree &jTrprStrobe, TRay *uvPg)"
+.br
+.ti -1c
+.RI "void \fBfillTrprStrobe\fP (boost::property_tree::ptree &jTrprStrobe, TStrobe &trprStrobe)"
+.br
+.ti -1c
+.RI "void \fBfillTrimtsStrobe\fP (boost::property_tree::ptree &jTrimtsStrobe, ImitStrobe &trimtsStrobe)"
+.br
+.ti -1c
+.RI "void \fBfillStrobes\fP (boost::property_tree::ptree &jStrobes, std::vector< \fBStrobeInfo\fP > &strobes)"
+.br
+.ti -1c
+.RI "void \fBfillTrprTactHeader\fP (pt::ptree &jHeader, SDTRPR &trprHeader)"
+.br
+.ti -1c
+.RI "void \fBfillTrimtsTactHeader\fP (pt::ptree &jHeader, ImitTactDescription &trimtsHeader)"
+.br
+.ti -1c
+.RI "void \fBfillStationsParams\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillDPParams\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillTactHeader\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBTactInfo\fP > \fBtactsInfo\fP"
+.br
+.ti -1c
+.RI "\fBModel::StationParams\fP \fBstationParams\fP"
+.br
+.ti -1c
+.RI "\fBDPParams\fP \fBdirPatParams\fP"
+.br
+.ti -1c
+.RI "std::string \fBippaFileName\fP"
+.br
+.ti -1c
+.RI "std::string \fBmaskFileName\fP"
+.br
+.ti -1c
+.RI "std::string \fBafrFileName\fP"
+.br
+.ti -1c
+.RI "std::string \fBklbFileName\fP"
+.br
+.ti -1c
+.RI "pt::ptree \fBroot\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Config::Config ()"
+
+.SS "Config::~Config ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Config::clear ()\fC [private]\fP"
+
+.SS "void Config::fillDPParams ()\fC [private]\fP"
+
+.SS "void Config::fillParsig (pt::ptree & jParent, PAR_SIGN & parsig)\fC [private]\fP"
+
+.SS "void Config::fillStationsParams ()\fC [private]\fP"
+
+.SS "void Config::fillStrobes (boost::property_tree::ptree & jStrobes, std::vector< \fBStrobeInfo\fP > & strobes)\fC [private]\fP"
+
+.SS "void Config::fillTactHeader ()\fC [private]\fP"
+
+.SS "void Config::fillTrimtsObjects (boost::property_tree::ptree & jObjects, std::vector< \fBObjectInfo\fP > & objects)\fC [private]\fP"
+
+.SS "void Config::fillTrimtsStrobe (boost::property_tree::ptree & jTrimtsStrobe, ImitStrobe & trimtsStrobe)\fC [private]\fP"
+
+.SS "void Config::fillTrimtsTactHeader (pt::ptree & jHeader, ImitTactDescription & trimtsHeader)\fC [private]\fP"
+
+.SS "void Config::fillTrprStrobe (boost::property_tree::ptree & jTrprStrobe, TStrobe & trprStrobe)\fC [private]\fP"
+
+.SS "void Config::fillTrprTactHeader (pt::ptree & jHeader, SDTRPR & trprHeader)\fC [private]\fP"
+
+.SS "void Config::fillUV (pt::ptree & jTrprStrobe, TRay * uvPg)\fC [private]\fP"
+
+.SS "const char * Config::getAfrFileName () const"
+
+.SS "const \fBDPParams\fP & Config::getDPParams () const"
+
+.SS "const char * Config::getIppaFileName () const"
+
+.SS "const char * Config::getKlbFileName () const"
+
+.SS "const char * Config::getMaskFileName () const"
+
+.SS "const \fBModel::StationParams\fP & Config::getStationParams () const"
+
+.SS "const std::vector< \fBTactInfo\fP > & Config::getTactsInfo () const"
+
+.SS "void Config::load (const char * fName)"
+
+.SS "void Config::parseDPParams (const pt::ptree & jDpParams)\fC [private]\fP"
+
+.SS "void Config::parseObjects (const pt::ptree & strobe, std::vector< \fBObjectInfo\fP > & objects)\fC [private]\fP"
+
+.SS "void Config::parseParsig (const pt::ptree & object, PAR_SIGN & parsig)\fC [private]\fP"
+
+.SS "void Config::parseStationParams (const pt::ptree & jStParams)\fC [private]\fP"
+
+.SS "void Config::parseStrobes (const pt::ptree & tact, std::vector< \fBStrobeInfo\fP > & strobes)\fC [private]\fP"
+
+.SS "void Config::parseTrimtsStrobe (const pt::ptree & strobe, ImitStrobe & trimtsStrb)\fC [private]\fP"
+
+.SS "void Config::parseTrprStrobe (const pt::ptree & strobe, TStrobe & trprStrb)\fC [private]\fP"
+
+.SS "void Config::parseUvPg (const pt::ptree & jUvPg, TRay * uvPg)\fC [private]\fP"
+
+.SS "void Config::save (const char * fName)"
+
+.SS "void Config::setAfrFileName (const char * fName)"
+
+.SS "void Config::setDPParams (const \fBDPParams\fP & dpParams)"
+
+.SS "void Config::setIppaFileName (const char * fName)"
+
+.SS "void Config::setKlbFileName (const char * fName)"
+
+.SS "void Config::setMaskFileName (const char * fName)"
+
+.SS "void Config::setStationParams (const \fBModel::StationParams\fP & stParams)"
+
+.SS "void Config::setTactsInfo (const std::vector< \fBTactInfo\fP > & tInfo)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string Config::afrFileName\fC [private]\fP"
+
+.SS "\fBDPParams\fP Config::dirPatParams\fC [private]\fP"
+
+.SS "std::string Config::ippaFileName\fC [private]\fP"
+
+.SS "std::string Config::klbFileName\fC [private]\fP"
+
+.SS "std::string Config::maskFileName\fC [private]\fP"
+
+.SS "pt::ptree Config::root\fC [private]\fP"
+
+.SS "\fBModel::StationParams\fP Config::stationParams\fC [private]\fP"
+
+.SS "std::vector<\fBTactInfo\fP> Config::tactsInfo\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

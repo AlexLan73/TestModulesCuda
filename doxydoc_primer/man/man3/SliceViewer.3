@@ -1,0 +1,330 @@
+.TH "SliceViewer" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SliceViewer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sliceViewer\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFileData\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDataType\fP { \fBreal\fP, \fBcomplex\fP, \fBunknownType\fP }"
+.br
+.ti -1c
+.RI "enum \fBDataSumMethod\fP { \fBnone\fP, \fBdirect\fP, \fBcoherent\fP, \fBincoherent\fP }"
+.br
+.ti -1c
+.RI "enum \fBPartOfData\fP { \fBre\fP, \fBim\fP, \fBnorm\fP, \fBmodulus\fP }"
+.br
+.ti -1c
+.RI "enum \fBErrorCode\fP { \fBok\fP, \fBdimSize\fP, \fBoutOfRange\fP, \fBzeroWindowSize\fP, \fBdiffFilesSize\fP, \fBdiffFilesDataType\fP, \fBbothFilesAreNotComplex\fP }"
+.br
+.ti -1c
+.RI "enum \fBFileIndex\fP { \fBfirstFile\fP = 0, \fBsecondFile\fP = 1, \fBbothFiles\fP = 2 }"
+.br
+.ti -1c
+.RI "enum \fBDataShape\fP { \fBcurve\fP, \fBsurface\fP, \fBunknownShape\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP \fBloadSliceDataFile\fP (\fBconst\fP \fBchar\fP *\fBfName\fP, \fBuint32_t\fP *\fBmaxX\fP, \fBuint32_t\fP *\fBmaxY\fP, \fBDataType\fP *dataType, \fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBcleanSliceData\fP (\fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetMaxXY\fP (\fBFileIndex\fP \fBfIndex\fP, \fBuint32_t\fP *\fBmaxX\fP, \fBuint32_t\fP *\fBmaxY\fP)"
+.br
+.ti -1c
+.RI "\fBErrorCode\fP \fBdrawGraph\fP (\fBDataSumMethod\fP \fBsumMethod\fP, \fBPartOfData\fP \fBpartOfData\fP, \fBuint32_t\fP \fBxOffset\fP, \fBuint32_t\fP \fBxWindowSize\fP, \fBuint32_t\fP \fByOffset\fP, \fBuint32_t\fP \fByWindowSize\fP)"
+.br
+.ti -1c
+.RI "\fBDataShape\fP \fBgetDataShape\fP (\fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetMeans\fP (\fBdouble\fP *\fBaMean\fP, \fBdouble\fP *\fBmedian\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBgetDispersions\fP (\fBdouble\fP *\fBaMeanDispersion1\fP, \fBdouble\fP *\fBmedianDispersion1\fP, \fBdouble\fP *\fBaMeanDispersion2\fP, \fBdouble\fP *\fBmedianDispersion2\fP)"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBgetMaxValueInWindow\fP ()"
+.br
+.ti -1c
+.RI "\fBSliceViewer\fP ()"
+.br
+.ti -1c
+.RI "\fB~SliceViewer\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDataType\fP \fBgetDataFileType\fP (\fBQTextStream\fP &\fBtextStream\fP)"
+.br
+.ti -1c
+.RI "\fBErrorCode\fP \fBvalidateParams\fP (\fBuint32_t\fP \fBxOffset\fP, \fBuint32_t\fP \fBxWindowSize\fP, \fBuint32_t\fP \fByOffset\fP, \fBuint32_t\fP \fByWindowSize\fP)"
+.br
+.ti -1c
+.RI "\fBDataShape\fP \fBanalyzeDataShape\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBanalyzeRealDataShape\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBuint32_t\fP *\fBcolCounter\fP, \fBuint32_t\fP *\fBrowCounter\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBanalyzeComplexDataShape\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBuint32_t\fP *\fBcolCounter\fP, \fBuint32_t\fP *\fBrowCounter\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBloadRealValuesFrom2DFile\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBloadRealValuesFrom3DFile\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBloadComplexValuesFrom2DFile\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBloadComplexValuesFrom3DFile\fP (\fBQTextStream\fP &\fBtextStream\fP, \fBFileIndex\fP \fBfIndex\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBplot2DRealValuesFile\fP (\fBFileIndex\fP \fBfIndex\fP, \fBuint32_t\fP \fBstartPos\fP, \fBuint32_t\fP length)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBplot3DRealValuesFile\fP (\fBFileIndex\fP \fBfIndex\fP, \fBuint32_t\fP \fBxOffset\fP, \fBuint32_t\fP \fBxWindowSize\fP, \fBuint32_t\fP \fByOffset\fP, \fBuint32_t\fP \fByWindowSize\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBplot2DComplexValuesFile\fP (\fBFileIndex\fP \fBfIndex\fP, \fBuint32_t\fP \fBstartPos\fP, \fBuint32_t\fP length, \fBPartOfData\fP \fBpartOfData\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBplot3DComplexValuesFile\fP (\fBFileIndex\fP \fBfIndex\fP, \fBuint32_t\fP \fBxOffset\fP, \fBuint32_t\fP \fBxWindowSize\fP, \fBuint32_t\fP \fByOffset\fP, \fBuint32_t\fP \fByWindowSize\fP, \fBPartOfData\fP \fBpartOfData\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBplot3DSumOf2ComplexFiles\fP (\fBuint32_t\fP \fBxOffset\fP, \fBuint32_t\fP \fBxWindowSize\fP, \fBuint32_t\fP \fByOffset\fP, \fBuint32_t\fP \fByWindowSize\fP, \fBPartOfData\fP \fBpartOfData\fP, \fBDataSumMethod\fP \fBsumMethod\fP)"
+.br
+.ti -1c
+.RI "\fBgnuplotio::Gnuplot\fP * \fBcreateGnuplotioObj\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBcalcMean\fP (\fBDataShape\fP dataShape)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBcalcDispersion\fP ()"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBfindMaxValueOnSurface\fP (\fBuint32_t\fP \fByWindowSize\fP) \fBconst\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstruct\fP \fBSliceViewer::FileData\fP \fBfData\fP [\fBmaxFilesNum\fP]"
+.br
+.ti -1c
+.RI "std::vector< \fBdouble\fP > \fBreadyData2D\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< \fBdouble\fP > > \fBreadyData3D\fP"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBaMean\fP"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBmedian\fP"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBmaxValue\fP"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBaMeanDispersion\fP [2]"
+.br
+.ti -1c
+.RI "\fBdouble\fP \fBmedianDispersion\fP [2]"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstatic\fP \fBconst\fP \fBuint32_t\fP \fBmaxFilesNum\fP = 2"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "\fBenum\fP \fBSliceViewer::DataShape\fP"
+вид графика - кривая или поверхность 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIcurve \fP\fP
+.TP
+\fB\fIsurface \fP\fP
+.TP
+\fB\fIunknownShape \fP\fP
+.SS "\fBenum\fP \fBSliceViewer::DataSumMethod\fP"
+способ суммирования данных файлов 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fInone \fP\fP
+.TP
+\fB\fIdirect \fP\fP
+.TP
+\fB\fIcoherent \fP\fP
+.TP
+\fB\fIincoherent \fP\fP
+.SS "\fBenum\fP \fBSliceViewer::DataType\fP"
+тип данных в файле 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIreal \fP\fP
+.TP
+\fB\fIcomplex \fP\fP
+.TP
+\fB\fIunknownType \fP\fP
+.SS "\fBenum\fP \fBSliceViewer::ErrorCode\fP"
+коды ошибок 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIok \fP\fP
+.TP
+\fB\fIdimSize \fP\fP
+.TP
+\fB\fIoutOfRange \fP\fP
+.TP
+\fB\fIzeroWindowSize \fP\fP
+.TP
+\fB\fIdiffFilesSize \fP\fP
+.TP
+\fB\fIdiffFilesDataType \fP\fP
+.TP
+\fB\fIbothFilesAreNotComplex \fP\fP
+.SS "\fBenum\fP \fBSliceViewer::FileIndex\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIfirstFile \fP\fP
+.TP
+\fB\fIsecondFile \fP\fP
+.TP
+\fB\fIbothFiles \fP\fP
+.SS "\fBenum\fP \fBSliceViewer::PartOfData\fP"
+часть данных для отображения 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIre \fP\fP
+.TP
+\fB\fIim \fP\fP
+.TP
+\fB\fInorm \fP\fP
+.TP
+\fB\fImodulus \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SliceViewer::SliceViewer ()"
+
+.SS "SliceViewer::~SliceViewer ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBvoid\fP SliceViewer::analyzeComplexDataShape (\fBQTextStream\fP & textStream, \fBuint32_t\fP * colCounter, \fBuint32_t\fP * rowCounter)\fC [private]\fP"
+
+.SS "\fBSliceViewer::DataShape\fP SliceViewer::analyzeDataShape (\fBQTextStream\fP & textStream, \fBSliceViewer::FileIndex\fP fIndex)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::analyzeRealDataShape (\fBQTextStream\fP & textStream, \fBuint32_t\fP * colCounter, \fBuint32_t\fP * rowCounter)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::calcDispersion ()\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::calcMean (\fBDataShape\fP dataShape)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::cleanSliceData (\fBSliceViewer::FileIndex\fP fIndex)"
+
+.SS "\fBgnuplotio::Gnuplot\fP * SliceViewer::createGnuplotioObj ()\fC [private]\fP"
+
+.SS "\fBSliceViewer::ErrorCode\fP SliceViewer::drawGraph (\fBDataSumMethod\fP sumMethod, \fBPartOfData\fP partOfData, \fBuint32_t\fP xOffset, \fBuint32_t\fP xWindowSize, \fBuint32_t\fP yOffset, \fBuint32_t\fP yWindowSize)"
+
+.SS "\fBdouble\fP SliceViewer::findMaxValueOnSurface (\fBuint32_t\fP yWindowSize) const\fC [private]\fP"
+
+.SS "\fBSliceViewer::DataType\fP SliceViewer::getDataFileType (\fBQTextStream\fP & textStream)\fC [private]\fP"
+
+.SS "\fBSliceViewer::DataShape\fP SliceViewer::getDataShape (\fBSliceViewer::FileIndex\fP fIndex)"
+
+.SS "\fBvoid\fP SliceViewer::getDispersions (\fBdouble\fP * aMeanDispersion1, \fBdouble\fP * medianDispersion1, \fBdouble\fP * aMeanDispersion2, \fBdouble\fP * medianDispersion2)"
+
+.SS "\fBdouble\fP SliceViewer::getMaxValueInWindow ()"
+
+.SS "\fBvoid\fP SliceViewer::getMaxXY (\fBFileIndex\fP fIndex, \fBuint32_t\fP * maxX, \fBuint32_t\fP * maxY)"
+
+.SS "\fBvoid\fP SliceViewer::getMeans (\fBdouble\fP * aMean, \fBdouble\fP * median)"
+
+.SS "\fBvoid\fP SliceViewer::loadComplexValuesFrom2DFile (\fBQTextStream\fP & textStream, \fBFileIndex\fP fIndex)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::loadComplexValuesFrom3DFile (\fBQTextStream\fP & textStream, \fBFileIndex\fP fIndex)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::loadRealValuesFrom2DFile (\fBQTextStream\fP & textStream, \fBFileIndex\fP fIndex)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::loadRealValuesFrom3DFile (\fBQTextStream\fP & textStream, \fBFileIndex\fP fIndex)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::loadSliceDataFile (\fBconst\fP \fBchar\fP * fName, \fBuint32_t\fP * maxX, \fBuint32_t\fP * maxY, \fBDataType\fP * dataType, \fBFileIndex\fP fIndex)"
+
+.SS "\fBvoid\fP SliceViewer::plot2DComplexValuesFile (\fBFileIndex\fP fIndex, \fBuint32_t\fP startPos, \fBuint32_t\fP length, \fBPartOfData\fP partOfData)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::plot2DRealValuesFile (\fBFileIndex\fP fIndex, \fBuint32_t\fP startPos, \fBuint32_t\fP length)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::plot3DComplexValuesFile (\fBFileIndex\fP fIndex, \fBuint32_t\fP xOffset, \fBuint32_t\fP xWindowSize, \fBuint32_t\fP yOffset, \fBuint32_t\fP yWindowSize, \fBPartOfData\fP partOfData)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::plot3DRealValuesFile (\fBFileIndex\fP fIndex, \fBuint32_t\fP xOffset, \fBuint32_t\fP xWindowSize, \fBuint32_t\fP yOffset, \fBuint32_t\fP yWindowSize)\fC [private]\fP"
+
+.SS "\fBvoid\fP SliceViewer::plot3DSumOf2ComplexFiles (\fBuint32_t\fP xOffset, \fBuint32_t\fP xWindowSize, \fBuint32_t\fP yOffset, \fBuint32_t\fP yWindowSize, \fBPartOfData\fP partOfData, \fBDataSumMethod\fP sumMethod)\fC [private]\fP"
+
+.SS "\fBSliceViewer::ErrorCode\fP SliceViewer::validateParams (\fBuint32_t\fP xOffset, \fBuint32_t\fP xWindowSize, \fBuint32_t\fP yOffset, \fBuint32_t\fP yWindowSize)\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBdouble\fP SliceViewer::aMean\fC [private]\fP"
+
+.SS "\fBdouble\fP SliceViewer::aMeanDispersion[2]\fC [private]\fP"
+
+.SS "\fBstruct\fP \fBSliceViewer::FileData\fP SliceViewer::fData[\fBmaxFilesNum\fP]\fC [private]\fP"
+
+.SS "\fBconst\fP \fBuint32_t\fP SliceViewer::maxFilesNum = 2\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBdouble\fP SliceViewer::maxValue\fC [private]\fP"
+
+.SS "\fBdouble\fP SliceViewer::median\fC [private]\fP"
+
+.SS "\fBdouble\fP SliceViewer::medianDispersion[2]\fC [private]\fP"
+
+.SS "std::vector<\fBdouble\fP> SliceViewer::readyData2D\fC [private]\fP"
+
+.SS "std::vector<std::vector<\fBdouble\fP> > SliceViewer::readyData3D\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

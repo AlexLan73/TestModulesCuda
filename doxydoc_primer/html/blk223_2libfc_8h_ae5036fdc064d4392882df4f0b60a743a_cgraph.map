@@ -1,0 +1,7 @@
+<map id="nrays_total" name="nrays_total">
+<area shape="rect" id="Node000001" title="Полное количество лучей в стробе с учетом автокомпенсации" alt="" coords="5,5,100,31"/>
+<area shape="rect" id="Node000002" href="$blk223_2libfc_8h.html#a8f73d0117aa68f53bf9d09d7661b477e" title="Количество лучей автокомпенсации (0 или 2)" alt="" coords="148,5,241,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,15,134,15,134,21,100,21"/>
+<area shape="rect" id="Node000003" href="$blk223_2libfc_8h.html#a5b8eb03e622148718dd963bc58832918" title="Проверка на соответствие типа строба автокомпенсации." alt="" coords="289,5,465,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="241,15,276,15,276,21,241,21"/>
+</map>

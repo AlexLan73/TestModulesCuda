@@ -1,0 +1,166 @@
+\doxysection{src/mpk1/blk223/blk223fc.h File Reference}
+\hypertarget{blk223fc_8h}{}\label{blk223fc_8h}\index{src/mpk1/blk223/blk223fc.h@{src/mpk1/blk223/blk223fc.h}}
+
+
+Расчет функционального управления для 223-\/й ячейки.  
+
+
+{\ttfamily \#include "{}fcquantum.\+h"{}}\newline
+{\ttfamily \#include "{}model\+\_\+wrapper.\+h"{}}\newline
+Include dependency graph for blk223fc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\+\_\+strobe\+\_\+modes}} \{ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca29666ac6bde785f2e90488149dfff648}{INTERF\+\_\+\+MODE\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca339674c133519bcc51037e3ccea30017}{INTERF\+\_\+\+MODE\+\_\+\+WIDE\+\_\+\+BEAM}} = 1
+, \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca7fd448f3b7e8797852b09f3171db1458}{INTERF\+\_\+\+MODE\+\_\+\+NARROW\+\_\+\+BEAM}} = 2
+, \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca878b303d6fd50d5cc984b2744ccda5af}{INTERF\+\_\+\+MODE\+\_\+\+LEVEL\+\_\+\+MEASURE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Режимы помеховых стробов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+libutils\+::\+Result$<$ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\+\_\+strobe\+\_\+modes}} $>$ \mbox{\hyperlink{blk223fc_8h_a6bc4bd366fc4e96bef4c0a106c8b0ca0}{calc\+\_\+asp\+\_\+mode}} (const unsigned divc, const unsigned rays, const unsigned kgrs, const unsigned nstr)
+\begin{DoxyCompactList}\small\item\em Функция уточняет код режима АСП (ПК) для аппаратуры. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{blk223fc_8h_a1a3d23f57ac040a38ee787c96bb474a1}{compute\+\_\+fcq\+\_\+for\+\_\+hw}} (const std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{modelv\+::\+Control\+Message}} $>$ \&ctrl\+\_\+msgs, \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp)
+\begin{DoxyCompactList}\small\item\em Функция производит расчет и конвертацию ФУ для 223-\/й ячейки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{blk223fc_8h_a4803249bbb22a5880058b73cc13c9953}{print\+\_\+fcq}} (\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp)
+\begin{DoxyCompactList}\small\item\em Функция производит печать рассчитанного для аппаратуры ФУ. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{blk223fc_8h_a69f08e39ea82f1ffdd8f9b018e73c23d}{print\+\_\+fcq\+\_\+dump}} (const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp, FILE \texorpdfstring{$\ast$}{*}=stdout)
+\begin{DoxyCompactList}\small\item\em Функция производит печать "{}сырого"{} дампа всего кванта ФУ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Расчет функционального управления для 223-\/й ячейки. 
+
+Функции расчета ФУ для 223-\/й ячейки и его конвертации для прошивки. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}\label{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac} 
+\index{blk223fc.h@{blk223fc.h}!interf\_strobe\_modes@{interf\_strobe\_modes}}
+\index{interf\_strobe\_modes@{interf\_strobe\_modes}!blk223fc.h@{blk223fc.h}}
+\doxysubsubsection{\texorpdfstring{interf\_strobe\_modes}{interf\_strobe\_modes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\+\_\+strobe\+\_\+modes}}}
+
+
+
+Режимы помеховых стробов. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERF\_MODE\_NONE@{INTERF\_MODE\_NONE}!blk223fc.h@{blk223fc.h}}\index{blk223fc.h@{blk223fc.h}!INTERF\_MODE\_NONE@{INTERF\_MODE\_NONE}}}\Hypertarget{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca29666ac6bde785f2e90488149dfff648}\label{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca29666ac6bde785f2e90488149dfff648} 
+INTERF\+\_\+\+MODE\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERF\_MODE\_WIDE\_BEAM@{INTERF\_MODE\_WIDE\_BEAM}!blk223fc.h@{blk223fc.h}}\index{blk223fc.h@{blk223fc.h}!INTERF\_MODE\_WIDE\_BEAM@{INTERF\_MODE\_WIDE\_BEAM}}}\Hypertarget{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca339674c133519bcc51037e3ccea30017}\label{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca339674c133519bcc51037e3ccea30017} 
+INTERF\+\_\+\+MODE\+\_\+\+WIDE\+\_\+\+BEAM&АСП узким лучом. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERF\_MODE\_NARROW\_BEAM@{INTERF\_MODE\_NARROW\_BEAM}!blk223fc.h@{blk223fc.h}}\index{blk223fc.h@{blk223fc.h}!INTERF\_MODE\_NARROW\_BEAM@{INTERF\_MODE\_NARROW\_BEAM}}}\Hypertarget{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca7fd448f3b7e8797852b09f3171db1458}\label{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca7fd448f3b7e8797852b09f3171db1458} 
+INTERF\+\_\+\+MODE\+\_\+\+NARROW\+\_\+\+BEAM&АСП широким лучом. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERF\_MODE\_LEVEL\_MEASURE@{INTERF\_MODE\_LEVEL\_MEASURE}!blk223fc.h@{blk223fc.h}}\index{blk223fc.h@{blk223fc.h}!INTERF\_MODE\_LEVEL\_MEASURE@{INTERF\_MODE\_LEVEL\_MEASURE}}}\Hypertarget{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca878b303d6fd50d5cc984b2744ccda5af}\label{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca878b303d6fd50d5cc984b2744ccda5af} 
+INTERF\+\_\+\+MODE\+\_\+\+LEVEL\+\_\+\+MEASURE&Измерение уровня (ПК). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{blk223fc_8h_a6bc4bd366fc4e96bef4c0a106c8b0ca0}\label{blk223fc_8h_a6bc4bd366fc4e96bef4c0a106c8b0ca0} 
+\index{blk223fc.h@{blk223fc.h}!calc\_asp\_mode@{calc\_asp\_mode}}
+\index{calc\_asp\_mode@{calc\_asp\_mode}!blk223fc.h@{blk223fc.h}}
+\doxysubsubsection{\texorpdfstring{calc\_asp\_mode()}{calc\_asp\_mode()}}
+{\footnotesize\ttfamily libutils\+::\+Result$<$ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\+\_\+strobe\+\_\+modes}} $>$ calc\+\_\+asp\+\_\+mode (\begin{DoxyParamCaption}\item[{const unsigned}]{divc,  }\item[{const unsigned}]{rays,  }\item[{const unsigned}]{kgrs,  }\item[{const unsigned}]{nstr }\end{DoxyParamCaption})}
+
+
+
+Функция уточняет код режима АСП (ПК) для аппаратуры. 
+
+В зависимости от комбинации входных параметров функция определяет, для какого режима работы АСП они были заданы и возвращает соответствующее значение кода режима АСП. В случае неверно заданных параметров функция возвращает стандартный код ошибки и выводит поясняющий текст ошибки. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em divc} & Коэффициент дробления полотна. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rays} & Количество лучей. \\
+\hline
+\mbox{\texttt{ in}}  & {\em kgrs} & Количество гипотез по скорости. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nstr} & Номер строба. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+В случае успешного расчета возвращает код режима АСП. 
+
+В случае ошибки возвращает стандартный код ошибки. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8h_a1a3d23f57ac040a38ee787c96bb474a1}\label{blk223fc_8h_a1a3d23f57ac040a38ee787c96bb474a1} 
+\index{blk223fc.h@{blk223fc.h}!compute\_fcq\_for\_hw@{compute\_fcq\_for\_hw}}
+\index{compute\_fcq\_for\_hw@{compute\_fcq\_for\_hw}!blk223fc.h@{blk223fc.h}}
+\doxysubsubsection{\texorpdfstring{compute\_fcq\_for\_hw()}{compute\_fcq\_for\_hw()}}
+{\footnotesize\ttfamily int compute\+\_\+fcq\+\_\+for\+\_\+hw (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{modelv\+::\+Control\+Message}} $>$ \&}]{ctrl\+\_\+msgs,  }\item[{\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp }\end{DoxyParamCaption})}
+
+
+
+Функция производит расчет и конвертацию ФУ для 223-\/й ячейки. 
+
+Функция последовательно перебирает имеющиеся управляющие сообщения (УС), для каждого из них производит вызов валидации параметров ФУ, а затем, в случае корректного УС, производит вызов фунций расчета целевого и имитационного ФУ более низкого уровня. В случае ошибки функция отбрасывает данное УС, изменяет счетчик статистики некорректных стробов и переходит к следующему управляющему сообщению. После расчета ФУ в случае необходимости производится печать сформированных стробов ФУ. По завершению всех предыдущих операций производится обязательная конвертация ФУ из внутреннего представления в представление ПЛИС. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ctrl\+\_\+msgs} & Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели. Служит исходными данными для ФУ. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель на структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+При успешном формировании ФУ возвращает EXIT\+\_\+\+SUCCESS. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8h_a4803249bbb22a5880058b73cc13c9953}\label{blk223fc_8h_a4803249bbb22a5880058b73cc13c9953} 
+\index{blk223fc.h@{blk223fc.h}!print\_fcq@{print\_fcq}}
+\index{print\_fcq@{print\_fcq}!blk223fc.h@{blk223fc.h}}
+\doxysubsubsection{\texorpdfstring{print\_fcq()}{print\_fcq()}}
+{\footnotesize\ttfamily void print\+\_\+fcq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp }\end{DoxyParamCaption})}
+
+
+
+Функция производит печать рассчитанного для аппаратуры ФУ. 
+
+Функция производит перебор целевых и имитационных стробов для заданного кванта ФУ и вызывает для них соответствующие функции печати стробов. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель на структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8h_a69f08e39ea82f1ffdd8f9b018e73c23d}\label{blk223fc_8h_a69f08e39ea82f1ffdd8f9b018e73c23d} 
+\index{blk223fc.h@{blk223fc.h}!print\_fcq\_dump@{print\_fcq\_dump}}
+\index{print\_fcq\_dump@{print\_fcq\_dump}!blk223fc.h@{blk223fc.h}}
+\doxysubsubsection{\texorpdfstring{print\_fcq\_dump()}{print\_fcq\_dump()}}
+{\footnotesize\ttfamily void print\+\_\+fcq\+\_\+dump (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{out = {\ttfamily stdout} }\end{DoxyParamCaption})}
+
+
+
+Функция производит печать "{}сырого"{} дампа всего кванта ФУ. 
+
+Функция производит последовательный вывод дампа ФУ, предназначенного для ПЛИС. Формат, в котором выдаются данные, пригодны для моделирования работы прошивки в Model\+Sim. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель на структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}

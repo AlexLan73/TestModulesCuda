@@ -1,0 +1,290 @@
+.TH "ModelNS23817A620S1823::Cell418_01" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Cell418_01
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c418_01\&.h>\fP
+.PP
+Inherits \fBModelNS23817A620S1823::VirtualCell418_01\fP, and \fBModelNS23817A620S1823::Cell418Base\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell418_01\fP (const \fBControlMsg\fP &cmg, int crnum)"
+.br
+.ti -1c
+.RI "void \fBgetResults\fP (\fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBsendAdaptiveVectors2ZCell412\fP (std::complex< int32_t >[][\fBSharedConst::maxChannelsSM\fP])"
+.br
+.ti -1c
+.RI "void \fBresetStopFlag\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBModelNS23817A620S1823::VirtualCell418_01\fP
+.in +1c
+.ti -1c
+.RI "virtual \fB~VirtualCell418_01\fP ()"
+.br
+.ti -1c
+.RI "void \fBsendAdaptiveVectors2ZCell412\fP (std::complex< int32_t >[][\fBSharedConst::maxChannelsSM\fP])"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitSliceFiles\fP ()"
+.br
+.ti -1c
+.RI "void \fBdumpInputSlice\fP (\fBC412_06Result\fP *\fBinData\fP, uint32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBinDataProcessing\fP (uint32_t cellNum, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBpostProcessing\fP (\fBC412_06Result\fP *)"
+.br
+.ti -1c
+.RI "void \fBcollectCellAdaptData\fP (uint32_t cellNum, \fBC412_06Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBcollectCalibrLIMMSourceData\fP (uint32_t cellNum, \fBC412_06Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBantennaPartsProcessing\fP (uint32_t cellInCrateNum, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBdftOfInterfData\fP (uint32_t cellInCrateNum, std::complex< int32_t > data[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcGlobal0ChInCellIndex\fP (uint32_t cellNum) const"
+.br
+.ti -1c
+.RI "void \fBclearInterfDataBuf\fP ()"
+.br
+.ti -1c
+.RI "void \fBsumMrikCellDataInFragment\fP (uint32_t cellInCrateNum)"
+.br
+.in -1c
+
+Private Member Functions inherited from \fBModelNS23817A620S1823::Cell418Base\fP
+.in +1c
+.ti -1c
+.RI "\fBCell418Base\fP (const \fBControlMsg\fP &cmsg)"
+.br
+.ti -1c
+.RI "virtual \fB~Cell418Base\fP ()=0"
+.br
+.ti -1c
+.RI "bool \fBgetStopFlag\fP () const"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "void \fBtargetModeProcessing\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopyOutDataTo\fP (\fBC412_06Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBaccumulateCrateData\fP (std::complex< int32_t > in[][\fBSharedConst::maxSamplesInRay\fP], std::complex< int32_t > out[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBcrateNum\fP"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBinputSlice\fP"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBinterfData\fP [\fBSharedConst::maxCellsInCrateMrik\fP][\fBSharedConst::maxRays\fP][\fBSharedConst::maxSamplesInRay\fP]"
+.br
+.in -1c
+
+Private Attributes inherited from \fBModelNS23817A620S1823::Cell418Base\fP
+.in +1c
+.ti -1c
+.RI "\fBC412_06Result\fP \fBinData\fP"
+.br
+.ti -1c
+.RI "\fBC412_06Result\fP \fBoutData\fP"
+.br
+.ti -1c
+.RI "const \fBControlMsg\fP \fBcontrolMsg\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitStrobe\fP * \fBstrb\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgModelTypes::StationParams\fP * \fBstationParams\fP"
+.br
+.ti -1c
+.RI "bool \fBstopFlag\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Public Attributes inherited from \fBModelNS23817A620S1823::VirtualCell418_01\fP
+.in +1c
+.ti -1c
+.RI "std::vector< std::unique_ptr< \fBVirtualCell412_06\fP > > \fBc412\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс ячейки суммирования данных ячеек крейта 418-01 (234-01 СМ)\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Cell418_01::Cell418_01 (const \fBControlMsg\fP & cmg, int crnum)"
+Конструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Cell418_01::antennaPartsProcessing (uint32_t cellInCrateNum, \fBC412_06Result\fP * result)\fC [private]\fP"
+Обработка фрагментов полотна\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellInCrateNum\fP номер ячейки в крейте 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell418_01::calcGlobal0ChInCellIndex (uint32_t cellNum) const\fC [private]\fP"
+По заданному номеру ячейки в крейте высчитывает сквозной номер нулевого канала этой ячейки в поляризации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+сквозной номер нулевого канала заданной ячейки в поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::clearInterfDataBuf ()\fC [private]\fP"
+Очистка буфера для данных фрагментов\&. 
+.SS "void ModelNS23817A620S1823::Cell418_01::collectCalibrLIMMSourceData (uint32_t cellNum, \fBC412_06Result\fP * result) const\fC [private]\fP"
+Сбор исходных данных для калибровки или РИУШ со всех ячеек крейта в одном массиве, который затем будет отдан в 418-02 (234-02) ячейку\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellNum\fP номер ячейки в крейте 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::collectCellAdaptData (uint32_t cellNum, \fBC412_06Result\fP * result) const\fC [private]\fP"
+Сбор данных для адаптации со всех ячеек крейта в одном массиве, который затем будет отдан в 418-02 (234-02) ячейку\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellNum\fP номер ячейки в крейте 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::dftOfInterfData (uint32_t cellInCrateNum, std::complex< int32_t > data[][SharedConst::maxSamplesInRay])\fC [private]\fP"
+Дискретное преобразование Фурье для данных в помеховом режиме при разбиении антенного полотна на фрагменты в режиме (2;1)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellInCrateNum\fP номер ячейки в крейте 
+.br
+\fIdata\fP указатель на буфер входных данных 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::dumpInputSlice (\fBC412_06Result\fP * inData, uint32_t cellNum)\fC [private]\fP"
+Сохранение входного среза в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinData\fP указатель на объект для результирующих данных 412й ячейки 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::getResults (\fBC412_06Result\fP * result)\fC [virtual]\fP"
+Занесение в память, на которую указывает outData, результата работы ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.PP
+Implements \fBModelNS23817A620S1823::VirtualCell418_01\fP\&.
+.SS "void ModelNS23817A620S1823::Cell418_01::inDataProcessing (uint32_t cellNum, \fBC412_06Result\fP * result)\fC [private]\fP"
+Обработка полученных с каждой ячеки крейта данных при любом типе строба и типе станции\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellNum\fP номер ячейки в крейте 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::initSliceFiles ()\fC [private]\fP"
+Инициализация объектов файлов срезов начальными значениями для дальнейшего формирования правильных имён файлов\&. 
+.SS "void ModelNS23817A620S1823::Cell418_01::postProcessing (\fBC412_06Result\fP *)\fC [private]\fP"
+Завершающая обработка после прохода по всем ячейкам\&. Необходима, т\&.к\&. часть действий над данными должна производиться при наличии результатов со всех ячеек крейта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::resetStopFlag ()\fC [virtual]\fP"
+Сброс флага преждевременной остановки вычислений\&. Необходим, т\&.к\&. объект ячейки может отрабатывать больше одного строба, а никаких признаков, что расчёт был последним в текущем запуске нет\&. 
+.PP
+Implements \fBModelNS23817A620S1823::Cell418Base\fP\&.
+.SS "void ModelNS23817A620S1823::Cell418_01::sendAdaptiveVectors2ZCell412 (std::complex< int32_t >[][SharedConst::maxChannelsSM])"
+Передача адаптивного вектора ПО в объект 412й ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadaptiveVect\fP указатель на массив адаптивных векторов ПО по всем каналам 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_01::sumMrikCellDataInFragment (uint32_t cellInCrateNum)\fC [private]\fP"
+Добавление данных заданной 435й ячейки к данным других ячеек фрагмента при дроблении полотна в МРИКе\&. Используется для режимов (2;4), (4;4), (6;4) и (12;4) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellInCrateNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int32_t ModelNS23817A620S1823::Cell418_01::crateNum\fC [private]\fP"
+текущий номер крейта 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell418_01::inputSlice\fC [private]\fP"
+объект файла среза входа ячейки 418-01 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::Cell418_01::interfData[\fBSharedConst::maxCellsInCrateMrik\fP][\fBSharedConst::maxRays\fP][\fBSharedConst::maxSamplesInRay\fP]\fC [private]\fP"
+массив помеховых данных для МРИКа 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,64 @@
+\doxysection{src/b232.cpp File Reference}
+\hypertarget{b232_8cpp}{}\label{b232_8cpp}\index{src/b232.cpp@{src/b232.cpp}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}b232.\+h"{}}\newline
+{\ttfamily \#include "{}helpers.\+h"{}}\newline
+{\ttfamily \#include "{}c418\+\_\+02\+Result.\+h"{}}\newline
+{\ttfamily \#include $<$model/b232.\+h$>$}\newline
+{\ttfamily \#include $<$model/\+RPC.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/string.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/libmpk.\+h$>$}\newline
+Include dependency graph for b232.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{b232_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model\+NS23817\+A620\+S1823}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{b232_8cpp_a2cd18ad596c4ebb720235f7e7b6b2988}{PRINT\+\_\+\+MARKS}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceModelNS23817A620S1823_aa99a97fb41bda612ab8aabee5ab1b820}{Model\+NS23817\+A620\+S1823\+::divider}} (const TStrobe \&s)
+\item 
+static unique\+\_\+ptr$<$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8d6de8996c75ae6ca318fcc845d8d774}{Model\+NS23817\+A620\+S1823\+::make\+Slice\+File}} (const char \texorpdfstring{$\ast$}{*}slice\+\_\+name, uint64\+\_\+t texec, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobe\+Ext}} \&strb)
+\item 
+static \mbox{\hyperlink{structPolarized}{Polarized}}$<$ \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ complex$<$ double $>$ $>$ $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a9900cfe26fd1e6be8c6418d4bb0a5497}{Model\+NS23817\+A620\+S1823\+::norm\+Complex\+Out\+Tftp\+Rays}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobe\+Ext}} \&strb, const \mbox{\hyperlink{structPolarized}{Polarized}}$<$ \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ complex$<$ double $>$ $>$ $>$ \&tfp\+Rays)
+\item 
+static vector$<$ float $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac7b8dd11398a91520db39dd76bfa6b42}{Model\+NS23817\+A620\+S1823\+::norm\+Target\+Sigmas}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobe\+Ext}} \&strb, const \mbox{\hyperlink{structPolarized}{Polarized}}$<$ vector$<$ uint64\+\_\+t $>$ $>$ \&target\+Sigmas)
+\item 
+{\footnotesize template$<$class T $>$ }\\static void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a22f0c2cf36f91234db24a65e0a982b0e}{Model\+NS23817\+A620\+S1823\+::copy\+Marks2\+Ucopo}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobe\+Ext}} \texorpdfstring{$\ast$}{*}strb, uint8\+\_\+t mark\+Type, uint32\+\_\+t elements\+Num, const std\+::vector$<$ T $>$ \&mark, const vector$<$ float $>$ \&\mbox{\hyperlink{namespaceModelNS23817A620S1823_ac7b8dd11398a91520db39dd76bfa6b42}{norm\+Target\+Sigmas}}, \mbox{\hyperlink{structUcopoMsgBuf}{Ucopo\+Msg\+Buf}} \texorpdfstring{$\ast$}{*}ucopo)
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_abacf4a121b8840742c4b667df8b6b755}{Model\+NS23817\+A620\+S1823\+::copy\+Monomarks}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobe\+Ext}} \texorpdfstring{$\ast$}{*}strb, const std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark}{Monomark}} $>$ \&marks, const vector$<$ float $>$ \&\mbox{\hyperlink{namespaceModelNS23817A620S1823_ac7b8dd11398a91520db39dd76bfa6b42}{norm\+Target\+Sigmas}}, \mbox{\hyperlink{structUcopoMsgBuf}{Ucopo\+Msg\+Buf}} \texorpdfstring{$\ast$}{*}ucopo)
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a478e65b7487d7ca549ad8ff86ddccbd8}{Model\+NS23817\+A620\+S1823\+::copy\+Complex\+Marks}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobe\+Ext}} \texorpdfstring{$\ast$}{*}strb, const std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark}{Complex\+Mark}} $>$ \&marks, const vector$<$ float $>$ \&\mbox{\hyperlink{namespaceModelNS23817A620S1823_ac7b8dd11398a91520db39dd76bfa6b42}{norm\+Target\+Sigmas}}, \mbox{\hyperlink{structUcopoMsgBuf}{Ucopo\+Msg\+Buf}} \texorpdfstring{$\ast$}{*}ucopo)
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a3c9fc25cf38f93dd505f21ca424cc840}{Model\+NS23817\+A620\+S1823\+::do\+TLP}} (const std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TargetStrobeOutputExt}{Target\+Strobe\+Output\+Ext}} $>$ \&outputs, \mbox{\hyperlink{structUcopoMsgBuf}{Ucopo\+Msg\+Buf}} \&ucopo\+Buf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{b232_8cpp_a2cd18ad596c4ebb720235f7e7b6b2988}\label{b232_8cpp_a2cd18ad596c4ebb720235f7e7b6b2988} 
+\index{b232.cpp@{b232.cpp}!PRINT\_MARKS@{PRINT\_MARKS}}
+\index{PRINT\_MARKS@{PRINT\_MARKS}!b232.cpp@{b232.cpp}}
+\doxysubsubsection{\texorpdfstring{PRINT\_MARKS}{PRINT\_MARKS}}
+{\footnotesize\ttfamily \#define PRINT\+\_\+\+MARKS~0}
+

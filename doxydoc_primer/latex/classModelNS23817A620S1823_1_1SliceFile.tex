@@ -1,0 +1,369 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Slice\+File Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1SliceFile}{}\label{classModelNS23817A620S1823_1_1SliceFile}\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+
+
+{\ttfamily \#include $<$slice\+File.\+h$>$}
+
+
+
+Inheritance diagram for Model\+NS23817\+A620\+S1823\+::Slice\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classModelNS23817A620S1823_1_1SliceFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Slice\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classModelNS23817A620S1823_1_1SliceFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Print\+Mode}} \{ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaaded95f3e3ff40fc2d07e2db394564fb3}{in\+Raw}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaa6cfc21513937fcee2cd238afd2d8f79b}{by\+Column}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a127f775b32007e6f96d20cf93ef504f2}{Slice\+File}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6}{open\+Slice}} (std\+::ios\+\_\+base\+::openmode open\+Mode=std\+::ios\+\_\+base\+::trunc)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_af4b7b1fc55b3e2e4a3ac589908ce7932}{set\+Slice\+Name}} (const char \texorpdfstring{$\ast$}{*}name)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a355f3c14d9fc3feb3cde2edcc9cbc4a9}{set\+Tact\+Num}} (uint64\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a72319ed6eff2c83ecd51cd7b3bb51260}{set\+Strobe\+ID}} (int64\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a7431731a114091c3e69de0b7096d3b4b}{set\+Polar\+Type}} (int32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a6ce36f031c7fd556f733b5126d47923f}{set\+Crate\+Num}} (int32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a9690fe910920c14a563706f732f712ca}{set\+Cell\+Num}} (int32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_ad04cf5c29c792912fd2918c931c2d526}{set\+Channel\+Num}} (int32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a5677a42be69bf6c36763fb5f73bccae8}{set\+Print\+Mode}} (\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Print\+Mode}} value)
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Print\+Mode}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96bf8b0f07f33cf5a5420f319fdf830a}{get\+Print\+Mode}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a953fba75b5ede3e53ea956c2f441489b}{set\+Ray\+Num}} (int32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_ade023e95ead5644493bac6a67412a8b4}{set\+Strb\+IDAppendix}} (const char \texorpdfstring{$\ast$}{*}appendix)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{none}} = -\/1
+\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a165d27581e75a0124f24ace43970de61}{prefix}} = "{}data/"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a59059473106ea75ebd893eade2521d3c}{compose\+File\+Name}} (std\+::stringstream \&ss) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_af3a3f828f65bbf4833da93c5a26b0084}{file\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a886f6f6481ceb9386bd74f2ce5ad70a1}{strb\+IDAppendix}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a73c19046a01fff3eae208cd8d13d5045}{slice\+Name}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a53e462586177bc1706d9310c37ce6e08}{tact\+Num}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a545a81f9d74ae85c0a21a1e939f53365}{strobe\+ID}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a3fceb971cb7e9a97e683eebc7c0deabe}{polar\+Type}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96f3f21d6e847805644cfacb039e19d6}{crate\+Num}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a28bd7b27abb6f678643ba26a64e0430f}{cell\+Num}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_ad285ee91071dc8cdc0f1805d7d781e09}{chan\+Num}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a00b2834bd659a53dbae3c78cf869c798}{ray\+Num}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Print\+Mode}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96a5821905b35ca50162d616d3a12941}{print\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс информации о файле среза. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}\label{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!PrintMode@{PrintMode}}
+\index{PrintMode@{PrintMode}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{PrintMode}{PrintMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::\+Print\+Mode}}}
+
+константы формата вывода в файл данных -\/ в строку или в столбец имеет смысл только для одномерных массивов \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inRaw@{inRaw}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!inRaw@{inRaw}}}\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaaded95f3e3ff40fc2d07e2db394564fb3}\label{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaaded95f3e3ff40fc2d07e2db394564fb3} 
+in\+Raw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{byColumn@{byColumn}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!byColumn@{byColumn}}}\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaa6cfc21513937fcee2cd238afd2d8f79b}\label{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaa6cfc21513937fcee2cd238afd2d8f79b} 
+by\+Column&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a127f775b32007e6f96d20cf93ef504f2}\label{classModelNS23817A620S1823_1_1SliceFile_a127f775b32007e6f96d20cf93ef504f2} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!SliceFile@{SliceFile}}
+\index{SliceFile@{SliceFile}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{SliceFile()}{SliceFile()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::\+Slice\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса по умолчанию. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a59059473106ea75ebd893eade2521d3c}\label{classModelNS23817A620S1823_1_1SliceFile_a59059473106ea75ebd893eade2521d3c} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!composeFileName@{composeFileName}}
+\index{composeFileName@{composeFileName}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{composeFileName()}{composeFileName()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::compose\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::stringstream \&}]{ss }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Формирование из полей структуры строки с именем файла. 
+\begin{DoxyParams}{Parameters}
+{\em ss} & ссылка на поток для формирования в нём строки с именем \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a96bf8b0f07f33cf5a5420f319fdf830a}\label{classModelNS23817A620S1823_1_1SliceFile_a96bf8b0f07f33cf5a5420f319fdf830a} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!getPrintMode@{getPrintMode}}
+\index{getPrintMode@{getPrintMode}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{getPrintMode()}{getPrintMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Slice\+File\+::\+Print\+Mode}} Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::get\+Print\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Возвращение типа вывода в файл\+: в строку или в столбец. \begin{DoxyReturn}{Returns}
+тип вывода в файл 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6}\label{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!openSlice@{openSlice}}
+\index{openSlice@{openSlice}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{openSlice()}{openSlice()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::open\+Slice (\begin{DoxyParamCaption}\item[{std\+::ios\+\_\+base\+::openmode}]{open\+Mode = {\ttfamily std\+:\+:ios\+\_\+base\+:\+:trunc} }\end{DoxyParamCaption})}
+
+Открытие файла среза, который описывают поля структуры, с заданным режимом открытия (mode) и закрепляет поток вывода за этим файлом. 
+\begin{DoxyParams}{Parameters}
+{\em open\+Mode} & режим открытия файла\+: std\+::ios\+\_\+base\+::app -\/ открытие с добавлением в конец std\+::ios\+\_\+base\+::trunc -\/ открытие с уничтожением всех данных файла (по умолчанию) \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a9690fe910920c14a563706f732f712ca}\label{classModelNS23817A620S1823_1_1SliceFile_a9690fe910920c14a563706f732f712ca} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setCellNum@{setCellNum}}
+\index{setCellNum@{setCellNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setCellNum()}{setCellNum()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Cell\+Num (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка номера ячейки в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_ad04cf5c29c792912fd2918c931c2d526}\label{classModelNS23817A620S1823_1_1SliceFile_ad04cf5c29c792912fd2918c931c2d526} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setChannelNum@{setChannelNum}}
+\index{setChannelNum@{setChannelNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setChannelNum()}{setChannelNum()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Channel\+Num (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка номера канала в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & номер канала \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a6ce36f031c7fd556f733b5126d47923f}\label{classModelNS23817A620S1823_1_1SliceFile_a6ce36f031c7fd556f733b5126d47923f} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setCrateNum@{setCrateNum}}
+\index{setCrateNum@{setCrateNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setCrateNum()}{setCrateNum()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Crate\+Num (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка номера крейта в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & номер крейта \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a7431731a114091c3e69de0b7096d3b4b}\label{classModelNS23817A620S1823_1_1SliceFile_a7431731a114091c3e69de0b7096d3b4b} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setPolarType@{setPolarType}}
+\index{setPolarType@{setPolarType}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setPolarType()}{setPolarType()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Polar\+Type (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка типа поляризации в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a5677a42be69bf6c36763fb5f73bccae8}\label{classModelNS23817A620S1823_1_1SliceFile_a5677a42be69bf6c36763fb5f73bccae8} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setPrintMode@{setPrintMode}}
+\index{setPrintMode@{setPrintMode}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setPrintMode()}{setPrintMode()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Print\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Print\+Mode}}}]{value }\end{DoxyParamCaption})}
+
+Установка типа вывода в файл\+: в строку или в столбец. 
+\begin{DoxyParams}{Parameters}
+{\em value} & тип вывода в файл \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a953fba75b5ede3e53ea956c2f441489b}\label{classModelNS23817A620S1823_1_1SliceFile_a953fba75b5ede3e53ea956c2f441489b} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setRayNum@{setRayNum}}
+\index{setRayNum@{setRayNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setRayNum()}{setRayNum()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Ray\+Num (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка номера луча в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & номер луча \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_af4b7b1fc55b3e2e4a3ac589908ce7932}\label{classModelNS23817A620S1823_1_1SliceFile_af4b7b1fc55b3e2e4a3ac589908ce7932} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setSliceName@{setSliceName}}
+\index{setSliceName@{setSliceName}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setSliceName()}{setSliceName()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Slice\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})}
+
+Установка имени среза в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em name} & указатель на строку с названием имени файла \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_ade023e95ead5644493bac6a67412a8b4}\label{classModelNS23817A620S1823_1_1SliceFile_ade023e95ead5644493bac6a67412a8b4} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setStrbIDAppendix@{setStrbIDAppendix}}
+\index{setStrbIDAppendix@{setStrbIDAppendix}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setStrbIDAppendix()}{setStrbIDAppendix()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Strb\+IDAppendix (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{appendix }\end{DoxyParamCaption})}
+
+Установка текстовой добавки к имени каталога данных строба. 
+\begin{DoxyParams}{Parameters}
+{\em appendix} & указатель на строку с текстовой добавкой к имени каталога \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a72319ed6eff2c83ecd51cd7b3bb51260}\label{classModelNS23817A620S1823_1_1SliceFile_a72319ed6eff2c83ecd51cd7b3bb51260} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setStrobeID@{setStrobeID}}
+\index{setStrobeID@{setStrobeID}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setStrobeID()}{setStrobeID()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Strobe\+ID (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка идентификатора строба в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & идентификатор строба \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a355f3c14d9fc3feb3cde2edcc9cbc4a9}\label{classModelNS23817A620S1823_1_1SliceFile_a355f3c14d9fc3feb3cde2edcc9cbc4a9} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!setTactNum@{setTactNum}}
+\index{setTactNum@{setTactNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{setTactNum()}{setTactNum()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::set\+Tact\+Num (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Установка номера такта в заданное значение. 
+\begin{DoxyParams}{Parameters}
+{\em value} & номер такта \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a28bd7b27abb6f678643ba26a64e0430f}\label{classModelNS23817A620S1823_1_1SliceFile_a28bd7b27abb6f678643ba26a64e0430f} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!cellNum@{cellNum}}
+\index{cellNum@{cellNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{cellNum}{cellNum}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::cell\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+номер ячейки для имени файла среза \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_ad285ee91071dc8cdc0f1805d7d781e09}\label{classModelNS23817A620S1823_1_1SliceFile_ad285ee91071dc8cdc0f1805d7d781e09} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!chanNum@{chanNum}}
+\index{chanNum@{chanNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{chanNum}{chanNum}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::chan\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+номер канала для имени файла среза \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a96f3f21d6e847805644cfacb039e19d6}\label{classModelNS23817A620S1823_1_1SliceFile_a96f3f21d6e847805644cfacb039e19d6} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!crateNum@{crateNum}}
+\index{crateNum@{crateNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{crateNum}{crateNum}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::crate\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+номер крейта для имени файла среза \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_af3a3f828f65bbf4833da93c5a26b0084}\label{classModelNS23817A620S1823_1_1SliceFile_af3a3f828f65bbf4833da93c5a26b0084} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!fileName@{fileName}}
+\index{fileName@{fileName}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily std\+::string Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::file\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+полное имя файла \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}\label{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!none@{none}}
+\index{none@{none}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{none}{none}}
+{\footnotesize\ttfamily const int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::none = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+код отключения создания каталога с номером строба. Используется только для диаграммы направленности \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a3fceb971cb7e9a97e683eebc7c0deabe}\label{classModelNS23817A620S1823_1_1SliceFile_a3fceb971cb7e9a97e683eebc7c0deabe} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!polarType@{polarType}}
+\index{polarType@{polarType}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{polarType}{polarType}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::polar\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+тип поляризации для имени файла среза \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a165d27581e75a0124f24ace43970de61}\label{classModelNS23817A620S1823_1_1SliceFile_a165d27581e75a0124f24ace43970de61} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!prefix@{prefix}}
+\index{prefix@{prefix}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{prefix}{prefix}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::prefix = "{}data/"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+имя каталога, в котором создаются файлы печати срезов \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a96a5821905b35ca50162d616d3a12941}\label{classModelNS23817A620S1823_1_1SliceFile_a96a5821905b35ca50162d616d3a12941} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!printMode@{printMode}}
+\index{printMode@{printMode}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{printMode}{printMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{Print\+Mode}} Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::print\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+формат вывода в файл данных -\/ в строку или в столбец \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a00b2834bd659a53dbae3c78cf869c798}\label{classModelNS23817A620S1823_1_1SliceFile_a00b2834bd659a53dbae3c78cf869c798} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!rayNum@{rayNum}}
+\index{rayNum@{rayNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{rayNum}{rayNum}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::ray\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+номер луча для имени файла среза \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a73c19046a01fff3eae208cd8d13d5045}\label{classModelNS23817A620S1823_1_1SliceFile_a73c19046a01fff3eae208cd8d13d5045} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!sliceName@{sliceName}}
+\index{sliceName@{sliceName}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{sliceName}{sliceName}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::slice\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+имя среза \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a886f6f6481ceb9386bd74f2ce5ad70a1}\label{classModelNS23817A620S1823_1_1SliceFile_a886f6f6481ceb9386bd74f2ce5ad70a1} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!strbIDAppendix@{strbIDAppendix}}
+\index{strbIDAppendix@{strbIDAppendix}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{strbIDAppendix}{strbIDAppendix}}
+{\footnotesize\ttfamily std\+::string Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::strb\+IDAppendix\hspace{0.3cm}{\ttfamily [private]}}
+
+текстовая добавка к имени каталога строба для данных для особых случаев, например, для адаптации, где два строба имеют одинаковый идентификатор. По умолчанию пустой. \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a545a81f9d74ae85c0a21a1e939f53365}\label{classModelNS23817A620S1823_1_1SliceFile_a545a81f9d74ae85c0a21a1e939f53365} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!strobeID@{strobeID}}
+\index{strobeID@{strobeID}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{strobeID}{strobeID}}
+{\footnotesize\ttfamily int64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::strobe\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+идентификатор строба \Hypertarget{classModelNS23817A620S1823_1_1SliceFile_a53e462586177bc1706d9310c37ce6e08}\label{classModelNS23817A620S1823_1_1SliceFile_a53e462586177bc1706d9310c37ce6e08} 
+\index{ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}!tactNum@{tactNum}}
+\index{tactNum@{tactNum}!ModelNS23817A620S1823::SliceFile@{ModelNS23817A620S1823::SliceFile}}
+\doxysubsubsection{\texorpdfstring{tactNum}{tactNum}}
+{\footnotesize\ttfamily uint64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Slice\+File\+::tact\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+номер такта исполнения для имени файла среза 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{sliceFile_8h}{slice\+File.\+h}}\item 
+src/\mbox{\hyperlink{sliceFile_8cpp}{slice\+File.\+cpp}}\end{DoxyCompactItemize}

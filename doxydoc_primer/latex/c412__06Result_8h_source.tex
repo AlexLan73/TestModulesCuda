@@ -1,0 +1,45 @@
+\doxysection{c412\+\_\+06\+Result.\+h}
+\hypertarget{c412__06Result_8h_source}{}\label{c412__06Result_8h_source}\index{src/c412\_06Result.h@{src/c412\_06Result.h}}
+\mbox{\hyperlink{c412__06Result_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C412\_06RESULT\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C412\_06RESULT\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <complex>}\ \textcolor{comment}{//\ std::complex}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ uint64\_t,\ [u]int32\_t}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}\ \textcolor{comment}{//\ SharedConst::}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sliceFile_8h}{sliceFile.h}}"{}}\ \textcolor{comment}{//\ SliceFile}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ippa_8h}{ippa.h}}"{}}\ \textcolor{comment}{//\ maxActiveInterferences}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_adf14c7babd564a834e41cbbe3820e199}{interfSpectrumNorms}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}*\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{SharedConst::maxDFGroups}}]}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a81c9f430166223e000560449a6f8d972}{SharedConst::maxFragmKgrs}}];}
+\DoxyCodeLine{00023\ \ \ \ \ std::complex<int32\_t>\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ae9de601d3d126633e5578ee73432b9db}{targData}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}]}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}];}
+\DoxyCodeLine{00033\ \ \ \ \ std::complex<int32\_t>\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a6ebdfcb296ddd85c74652e7fc60739e1}{adaptData}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ maxActiveInterferences}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_ad884158d24868f5636889e3cac089247}{SharedConst::sigAdaptExtraRows}}]}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a6be4f6e8eb253d07f3075926a6761618}{SharedConst::maxChannelsInCellSM}}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa73222a674af1c7fae744f40375bcd18}{SharedConst::maxCellsInCrateSM}}];}
+\DoxyCodeLine{00044\ \ \ \ \ std::complex<double>\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ace853e58c07ed7dd7c5c4171098c0be6}{calibrLIMMData}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}];}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ab4966a09c82d9229ab45772708f33d9a}{clear412Results}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a190a4374cdc3036e63c8ea61df75d277}{clearInterfSpectrumNorms}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ab1dd0f8c0120fe1cb9f01a84b76bc28b}{dumpInterfSpectrumNorms}}(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\&\ sFile,\ uint32\_t\ length,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ raysNum);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a10bab54524281f180e408726007d6858}{dumpTargData}}(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\&\ sFile,\ uint32\_t\ raysNum,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ samplesNum);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a6119edac880898c4d13b83b2811acf2a}{clearTargData}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a89fd42809eb19ccdc751fdfc5465f61f}{printCalibrLIMMSourceData}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_aa732e2dfe653b018874b2d76f4441ea8}{C412\_06Result}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ab9f5dcd5b9dcfc707e3d1b2f893d895c}{\string~C412\_06Result}}();}
+\DoxyCodeLine{00074\ \};\ \textcolor{comment}{//\ struct\ C412\_06Result}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C412\_06RESULT\_H\_\_}}
+
+\end{DoxyCode}

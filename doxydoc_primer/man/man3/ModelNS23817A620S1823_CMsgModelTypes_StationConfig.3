@@ -1,0 +1,48 @@
+.TH "ModelNS23817A620S1823::CMsgModelTypes::StationConfig" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::CMsgModelTypes::StationConfig
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <controlMsgModelTypes\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unique_ptr< \fBWlbArray\fP > \fBwlbArray\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBArCoefsArray\fP > \fBarCoefsArray\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBXYChanCoords\fP > \fBxyChanCoords\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBDFGroups\fP > \fBdfGroups\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBModelNS23817A620S1823::ChannelsMask\fP > \fBchMask\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Утилиты для формирования управляющего сообщения\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "std::unique_ptr<\fBArCoefsArray\fP> ModelNS23817A620S1823::CMsgModelTypes::StationConfig::arCoefsArray"
+коэффициенты амплитудного распределения 
+.SS "std::unique_ptr<\fBModelNS23817A620S1823::ChannelsMask\fP> ModelNS23817A620S1823::CMsgModelTypes::StationConfig::chMask"
+маска приёмных каналов 
+.SS "std::unique_ptr<\fBDFGroups\fP> ModelNS23817A620S1823::CMsgModelTypes::StationConfig::dfGroups"
+информация по пеленгационным группам 
+.SS "std::unique_ptr<\fBWlbArray\fP> ModelNS23817A620S1823::CMsgModelTypes::StationConfig::wlbArray"
+массив коэффициентов фильтра нижних частот (aka коэффициенты взвешивания в ЦФНЧ) 
+.SS "std::unique_ptr<\fBXYChanCoords\fP> ModelNS23817A620S1823::CMsgModelTypes::StationConfig::xyChanCoords"
+координаты каналов 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

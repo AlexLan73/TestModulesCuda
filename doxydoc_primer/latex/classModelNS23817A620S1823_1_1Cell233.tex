@@ -1,0 +1,356 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Cell233 Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Cell233}{}\label{classModelNS23817A620S1823_1_1Cell233}\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+
+
+{\ttfamily \#include $<$c233.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Cell233\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a417536f1399b5b5ac45a6786a9490282}{Cell233}} (const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&cmsgV, const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&cmsgH)
+\item 
+\mbox{\hyperlink{minDefs_8h_a034d406bfc0074f302284b42a090aafc}{Strobe\+Result}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a1916443b034e3181f65ea67dbea98756}{get\+Results}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02}{Virtual\+Cell418\+\_\+02}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_ad6739a80489571ec2b3204e279800a13}{c418\+\_\+02v}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02}{Virtual\+Cell418\+\_\+02}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a03db3a18cf476605481fc76920a7e5ea}{c418\+\_\+02h}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a405f5769d6ef0d0c3832ced6b1907296}{gen\+Signal\+MSeq\+Signs}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_af26ef2cb92800e9bec8cf9fd682958bb}{time\+Frequency\+Processing}} (std\+::complex$<$ int32\+\_\+t $>$ data\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{Shared\+Const\+::max\+Samples\+In\+Ray}}\mbox{]}, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a90ec055fe38f3ae23b472970a4be3180}{zeroing\+TFPResult}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a16e0b84fba00d94571a33973ba6d088a}{init\+Slice\+Files}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a6051d21490233ea4b48fe95c8d2a9732}{dump\+Complex\+Out\+Tfp\+Slice}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_aae8aaf09de69bbde9c42234f93705fcd}{trad\+Targ\+Interf\+Strb\+Processing}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} \texorpdfstring{$\ast$}{*}c418\+\_\+02\+Result\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{Strobe\+Output}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_ad96a316b6d79e2a480ba41f52fdb0241}{capture\+Output}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} \texorpdfstring{$\ast$}{*}c418\+\_\+02\+Result\mbox{[}$\,$\mbox{]}) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a14ae46f73087f2b31b2641e4f41919af}{calc\+N1}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a70b42368f494b93377593db3af5b02f4}{calc\+Nd1}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a67ad2c1cd1fd2cfc4eb069efcb1a72f6}{print\+Calibr\+LIMMSource\+Data}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} \texorpdfstring{$\ast$}{*}c418\+\_\+02\+Result\mbox{[}$\,$\mbox{]}) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a38368785762360544082b4b419b52925}{control\+Msg}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_aae2d149092de42bf72c822bee5fef3e2}{control\+MsgV}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a390dc98278b84b4e98c8a2f16b9c0b5a}{c418\+\_\+02\+ResultV}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a988666fa41f2521864d712526bd7c9ed}{c418\+\_\+02\+ResultH}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_ade29602c3fc938065cb78898cf02c17a}{strb}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_afc599f83e680795b8eff4ecaf994fab9}{station\+Params}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a3707d6ee94524f58b3e65bad5334cade}{tfp\+MSeq\+Signs}} \mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a6768890bc9072381f86fd6102bd9cf6b}{tfp\+MSeq\+Signs\+Max}}\mbox{]}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ double $>$ $>$ $>$ $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a96cb04d56877a104a7adfc2c52e9f968}{tfp\+Rays}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a8648c33c399260ed38013422634d232d}{tfp\+Slice\+Pre\+Normalization}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a6768890bc9072381f86fd6102bd9cf6b}{tfp\+MSeq\+Signs\+Max}} = 1 $<$$<$ 18
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс имитации ячейки спецвычислителя 232. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a417536f1399b5b5ac45a6786a9490282}\label{classModelNS23817A620S1823_1_1Cell233_a417536f1399b5b5ac45a6786a9490282} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!Cell233@{Cell233}}
+\index{Cell233@{Cell233}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{Cell233()}{Cell233()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Cell233\+::\+Cell233 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&}]{cmsgV,  }\item[{const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&}]{cmsgH }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_a417536f1399b5b5ac45a6786a9490282_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a14ae46f73087f2b31b2641e4f41919af}\label{classModelNS23817A620S1823_1_1Cell233_a14ae46f73087f2b31b2641e4f41919af} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!calcN1@{calcN1}}
+\index{calcN1@{calcN1}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{calcN1()}{calcN1()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell233\+::calc\+N1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт величины изменения длительности дискрета ФМ в числе выборок частоты Fд/ndec. \begin{DoxyReturn}{Returns}
+величина изменения длительности дискрета ФМ 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a70b42368f494b93377593db3af5b02f4}\label{classModelNS23817A620S1823_1_1Cell233_a70b42368f494b93377593db3af5b02f4} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!calcNd1@{calcNd1}}
+\index{calcNd1@{calcNd1}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{calcNd1()}{calcNd1()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell233\+::calc\+Nd1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт периода изменения длительности дискрета ФМ в числе дискретов фазокодовой манипуляции. \begin{DoxyReturn}{Returns}
+период изменения длительности дискрета ФМ 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_ad96a316b6d79e2a480ba41f52fdb0241}\label{classModelNS23817A620S1823_1_1Cell233_ad96a316b6d79e2a480ba41f52fdb0241} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!captureOutput@{captureOutput}}
+\index{captureOutput@{captureOutput}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{captureOutput()}{captureOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{Strobe\+Output}} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::capture\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} \texorpdfstring{$\ast$}{*}}]{c418\+\_\+02\+Result\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_ad96a316b6d79e2a480ba41f52fdb0241_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a6051d21490233ea4b48fe95c8d2a9732}\label{classModelNS23817A620S1823_1_1Cell233_a6051d21490233ea4b48fe95c8d2a9732} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!dumpComplexOutTfpSlice@{dumpComplexOutTfpSlice}}
+\index{dumpComplexOutTfpSlice@{dumpComplexOutTfpSlice}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{dumpComplexOutTfpSlice()}{dumpComplexOutTfpSlice()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::dump\+Complex\+Out\+Tfp\+Slice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Сохранение среза ЧВО в режиме выдачи обеих поляризаций в комплексном виде в файл. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & тип поляризации \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_a6051d21490233ea4b48fe95c8d2a9732_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a405f5769d6ef0d0c3832ced6b1907296}\label{classModelNS23817A620S1823_1_1Cell233_a405f5769d6ef0d0c3832ced6b1907296} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!genSignalMSeqSigns@{genSignalMSeqSigns}}
+\index{genSignalMSeqSigns@{genSignalMSeqSigns}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{genSignalMSeqSigns()}{genSignalMSeqSigns()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::gen\+Signal\+MSeq\+Signs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация м-\/последовательности для сигнала. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_a405f5769d6ef0d0c3832ced6b1907296_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a1916443b034e3181f65ea67dbea98756}\label{classModelNS23817A620S1823_1_1Cell233_a1916443b034e3181f65ea67dbea98756} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!getResults@{getResults}}
+\index{getResults@{getResults}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{getResults()}{getResults()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{minDefs_8h_a034d406bfc0074f302284b42a090aafc}{Strobe\+Result}} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::get\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_a1916443b034e3181f65ea67dbea98756_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a16e0b84fba00d94571a33973ba6d088a}\label{classModelNS23817A620S1823_1_1Cell233_a16e0b84fba00d94571a33973ba6d088a} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!initSliceFiles@{initSliceFiles}}
+\index{initSliceFiles@{initSliceFiles}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{initSliceFiles()}{initSliceFiles()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::init\+Slice\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Инициализация объектов файлов срезов начальными значениями для дальнейшего формирования правильных имён файлов. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_a16e0b84fba00d94571a33973ba6d088a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a67ad2c1cd1fd2cfc4eb069efcb1a72f6}\label{classModelNS23817A620S1823_1_1Cell233_a67ad2c1cd1fd2cfc4eb069efcb1a72f6} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!printCalibrLIMMSourceData@{printCalibrLIMMSourceData}}
+\index{printCalibrLIMMSourceData@{printCalibrLIMMSourceData}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{printCalibrLIMMSourceData()}{printCalibrLIMMSourceData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::print\+Calibr\+LIMMSource\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} \texorpdfstring{$\ast$}{*}}]{c418\+\_\+02\+Result\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Печать исходных данных для калибровки по всем заданным поляризациям. 
+\begin{DoxyParams}{Parameters}
+{\em c418\+\_\+02\+Result} & указатель на массив данных 418-\/02й ячейки для каждой поляризации \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_a67ad2c1cd1fd2cfc4eb069efcb1a72f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_af26ef2cb92800e9bec8cf9fd682958bb}\label{classModelNS23817A620S1823_1_1Cell233_af26ef2cb92800e9bec8cf9fd682958bb} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!timeFrequencyProcessing@{timeFrequencyProcessing}}
+\index{timeFrequencyProcessing@{timeFrequencyProcessing}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{timeFrequencyProcessing()}{timeFrequencyProcessing()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::time\+Frequency\+Processing (\begin{DoxyParamCaption}\item[{std\+::complex$<$ int32\+\_\+t $>$}]{data\mbox{[}$\,$\mbox{]}\mbox{[}\+Shared\+Const\+::max\+Samples\+In\+Ray\mbox{]},  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+ЧВО (частотно-\/временная обработка). 
+\begin{DoxyParams}{Parameters}
+{\em data} & указатель на массив данных для ЧВО (лучи х выборки) \\
+\hline
+{\em polar} & тип поляризации\\
+\hline
+\end{DoxyParams}
+Тут 8я контрольная точка. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_af26ef2cb92800e9bec8cf9fd682958bb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_aae8aaf09de69bbde9c42234f93705fcd}\label{classModelNS23817A620S1823_1_1Cell233_aae8aaf09de69bbde9c42234f93705fcd} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!tradTargInterfStrbProcessing@{tradTargInterfStrbProcessing}}
+\index{tradTargInterfStrbProcessing@{tradTargInterfStrbProcessing}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{tradTargInterfStrbProcessing()}{tradTargInterfStrbProcessing()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::trad\+Targ\+Interf\+Strb\+Processing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}} \texorpdfstring{$\ast$}{*}}]{c418\+\_\+02\+Result\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Обработка данных в традиционных целевых и помеховых режимах. Включает ЧВО, ПЛО, оценку формы. 
+\begin{DoxyParams}{Parameters}
+{\em c418\+\_\+02\+Result} & указатель на массив данных 418-\/02й ячейки для каждой поляризации \\
+\hline
+{\em ucopo} & указатель на буфер для сообщения УЦОПО \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell233_aae8aaf09de69bbde9c42234f93705fcd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a90ec055fe38f3ae23b472970a4be3180}\label{classModelNS23817A620S1823_1_1Cell233_a90ec055fe38f3ae23b472970a4be3180} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!zeroingTFPResult@{zeroingTFPResult}}
+\index{zeroingTFPResult@{zeroingTFPResult}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{zeroingTFPResult()}{zeroingTFPResult()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell233\+::zeroing\+TFPResult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Зануление данных ЧВО заданной поляризации. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & тип поляризации \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classModelNS23817A620S1823_1_1Cell233_a90ec055fe38f3ae23b472970a4be3180_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a03db3a18cf476605481fc76920a7e5ea}\label{classModelNS23817A620S1823_1_1Cell233_a03db3a18cf476605481fc76920a7e5ea} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!c418\_02h@{c418\_02h}}
+\index{c418\_02h@{c418\_02h}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{c418\_02h}{c418\_02h}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02}{Virtual\+Cell418\+\_\+02}}$>$ Model\+NS23817\+A620\+S1823\+::\+Cell233\+::c418\+\_\+02h}
+
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a988666fa41f2521864d712526bd7c9ed}\label{classModelNS23817A620S1823_1_1Cell233_a988666fa41f2521864d712526bd7c9ed} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!c418\_02ResultH@{c418\_02ResultH}}
+\index{c418\_02ResultH@{c418\_02ResultH}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{c418\_02ResultH}{c418\_02ResultH}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}}$>$ Model\+NS23817\+A620\+S1823\+::\+Cell233\+::c418\+\_\+02\+ResultH\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a390dc98278b84b4e98c8a2f16b9c0b5a}\label{classModelNS23817A620S1823_1_1Cell233_a390dc98278b84b4e98c8a2f16b9c0b5a} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!c418\_02ResultV@{c418\_02ResultV}}
+\index{c418\_02ResultV@{c418\_02ResultV}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{c418\_02ResultV}{c418\_02ResultV}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\+\_\+02\+Result}}$>$ Model\+NS23817\+A620\+S1823\+::\+Cell233\+::c418\+\_\+02\+ResultV\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_ad6739a80489571ec2b3204e279800a13}\label{classModelNS23817A620S1823_1_1Cell233_ad6739a80489571ec2b3204e279800a13} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!c418\_02v@{c418\_02v}}
+\index{c418\_02v@{c418\_02v}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{c418\_02v}{c418\_02v}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02}{Virtual\+Cell418\+\_\+02}}$>$ Model\+NS23817\+A620\+S1823\+::\+Cell233\+::c418\+\_\+02v}
+
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_a38368785762360544082b4b419b52925}\label{classModelNS23817A620S1823_1_1Cell233_a38368785762360544082b4b419b52925} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!controlMsg@{controlMsg}}
+\index{controlMsg@{controlMsg}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{controlMsg}{controlMsg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::control\+Msg\hspace{0.3cm}{\ttfamily [private]}}
+
+сообщение с параметрами управления ячейкой \Hypertarget{classModelNS23817A620S1823_1_1Cell233_aae2d149092de42bf72c822bee5fef3e2}\label{classModelNS23817A620S1823_1_1Cell233_aae2d149092de42bf72c822bee5fef3e2} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!controlMsgV@{controlMsgV}}
+\index{controlMsgV@{controlMsgV}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{controlMsgV}{controlMsgV}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::control\+MsgV\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classModelNS23817A620S1823_1_1Cell233_afc599f83e680795b8eff4ecaf994fab9}\label{classModelNS23817A620S1823_1_1Cell233_afc599f83e680795b8eff4ecaf994fab9} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::station\+Params\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на параметры станции управляющего сообщения \Hypertarget{classModelNS23817A620S1823_1_1Cell233_ade29602c3fc938065cb78898cf02c17a}\label{classModelNS23817A620S1823_1_1Cell233_ade29602c3fc938065cb78898cf02c17a} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!strb@{strb}}
+\index{strb@{strb}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{strb}{strb}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::strb\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на параметры строба управляющего сообщения \Hypertarget{classModelNS23817A620S1823_1_1Cell233_a3707d6ee94524f58b3e65bad5334cade}\label{classModelNS23817A620S1823_1_1Cell233_a3707d6ee94524f58b3e65bad5334cade} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!tfpMSeqSigns@{tfpMSeqSigns}}
+\index{tfpMSeqSigns@{tfpMSeqSigns}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{tfpMSeqSigns}{tfpMSeqSigns}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell233\+::tfp\+MSeq\+Signs\mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233_a6768890bc9072381f86fd6102bd9cf6b}{tfp\+MSeq\+Signs\+Max}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+знаки м-\/последовательности для сигнала для ЧВО \Hypertarget{classModelNS23817A620S1823_1_1Cell233_a6768890bc9072381f86fd6102bd9cf6b}\label{classModelNS23817A620S1823_1_1Cell233_a6768890bc9072381f86fd6102bd9cf6b} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!tfpMSeqSignsMax@{tfpMSeqSignsMax}}
+\index{tfpMSeqSignsMax@{tfpMSeqSignsMax}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{tfpMSeqSignsMax}{tfpMSeqSignsMax}}
+{\footnotesize\ttfamily const int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell233\+::tfp\+MSeq\+Signs\+Max = 1 $<$$<$ 18\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальное количество знаков м-\/последовательности для сигнала для ЧВО \Hypertarget{classModelNS23817A620S1823_1_1Cell233_a96cb04d56877a104a7adfc2c52e9f968}\label{classModelNS23817A620S1823_1_1Cell233_a96cb04d56877a104a7adfc2c52e9f968} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!tfpRays@{tfpRays}}
+\index{tfpRays@{tfpRays}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{tfpRays}{tfpRays}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::vector$<$std\+::complex$<$double$>$ $>$ $>$ $>$ Model\+NS23817\+A620\+S1823\+::\+Cell233\+::tfp\+Rays\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+выход ЧВО \mbox{[}поляризация\mbox{]}\mbox{[}лучи\mbox{]}\mbox{[}дальность\mbox{]}\mbox{[}фильтр\mbox{]} \Hypertarget{classModelNS23817A620S1823_1_1Cell233_a8648c33c399260ed38013422634d232d}\label{classModelNS23817A620S1823_1_1Cell233_a8648c33c399260ed38013422634d232d} 
+\index{ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}!tfpSlicePreNormalization@{tfpSlicePreNormalization}}
+\index{tfpSlicePreNormalization@{tfpSlicePreNormalization}!ModelNS23817A620S1823::Cell233@{ModelNS23817A620S1823::Cell233}}
+\doxysubsubsection{\texorpdfstring{tfpSlicePreNormalization}{tfpSlicePreNormalization}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} Model\+NS23817\+A620\+S1823\+::\+Cell233\+::tfp\+Slice\+Pre\+Normalization\hspace{0.3cm}{\ttfamily [private]}}
+
+объект файла среза ЧВО до нормализации 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{c233_8h}{c233.\+h}}\item 
+src/\mbox{\hyperlink{c233_8cpp}{c233.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\doxysection{src/model\+Main.cpp File Reference}
+\hypertarget{modelMain_8cpp}{}\label{modelMain_8cpp}\index{src/modelMain.cpp@{src/modelMain.cpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$model/e2trimts.\+h$>$}\newline
+{\ttfamily \#include $<$model/\+RPC.\+h$>$}\newline
+{\ttfamily \#include $<$model/b232.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/string.\+h$>$}\newline
+{\ttfamily \#include "{}shared\+Const.\+h"{}}\newline
+{\ttfamily \#include "{}helpers.\+h"{}}\newline
+{\ttfamily \#include "{}xy\+Chan\+Coords.\+h"{}}\newline
+{\ttfamily \#include "{}ar\+Coefs\+Array.\+h"{}}\newline
+{\ttfamily \#include "{}df\+Groups.\+h"{}}\newline
+{\ttfamily \#include "{}model\+Main.\+h"{}}\newline
+{\ttfamily \#include "{}blk978/blk978fc.\+h"{}}\newline
+Include dependency graph for model\+Main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelMain_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model\+NS23817\+A620\+S1823}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{modelMain_8cpp_a922c07feb6bb4c6b916e5562ac75916c}{dump\+As\+Uint32}} (const T \texorpdfstring{$\ast$}{*}p, std\+::ostream \&out)
+\item 
+static void \mbox{\hyperlink{namespaceModelNS23817A620S1823_ad5bff0b087df65ad9186215bf56504e6}{Model\+NS23817\+A620\+S1823\+::fix\+Trpr}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Station\+Params}} \&station\+Params, E2\+TRPR \&trpr)
+\item 
+static optional$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8d1890f52d9a76df83ac2dbfe7ba9f29}{Model\+NS23817\+A620\+S1823\+::form\+Polar\+Control\+Message}} (\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \texorpdfstring{$\ast$}{*}cntrl\+Msg, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint cell\+Num)
+\item 
+static void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a934a1448c3ffa78bc80b3d9f9c3ad662}{Model\+NS23817\+A620\+S1823\+::dump\+FcM}} (\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&cm, uint crate\+Num, uint cell\+Num)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::list$<$ std\+::string $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_adda6b02822eeee17c26f02b368d37998}{Model\+NS23817\+A620\+S1823\+::\+DEFAULT\+\_\+\+DIR\+\_\+\+LIST}}
+\item 
+static const \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{namespaceModelNS23817A620S1823_ab1db51159dba4d37f51e87e80bfd8138}{Model\+NS23817\+A620\+S1823\+::polar\+Types}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modelMain_8cpp_a922c07feb6bb4c6b916e5562ac75916c}\label{modelMain_8cpp_a922c07feb6bb4c6b916e5562ac75916c} 
+\index{modelMain.cpp@{modelMain.cpp}!dumpAsUint32@{dumpAsUint32}}
+\index{dumpAsUint32@{dumpAsUint32}!modelMain.cpp@{modelMain.cpp}}
+\doxysubsubsection{\texorpdfstring{dumpAsUint32()}{dumpAsUint32()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void dump\+As\+Uint32 (\begin{DoxyParamCaption}\item[{const T \texorpdfstring{$\ast$}{*}}]{p,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+

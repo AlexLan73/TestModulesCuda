@@ -1,0 +1,148 @@
+.TH "src/mpk1/blk223/model_wrapper.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk223/model_wrapper.h \- Обертка для расчетной части модели\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <model/modelInterface\&.h>\fP
+.br
+\fC#include 'fcquantum\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmw_init\fP (const enum \fBmodelv::SharedConst::StationType\fP station_type, const enum \fBmodelv::SharedConst::PolarizationTypes\fP polarization_type, const unsigned crate_num, const int rek_num)"
+.br
+.RI "Инициализация обертки модели\&. "
+.ti -1c
+.RI "void \fBmw_free\fP (void)"
+.br
+.RI "Деинициализирует обертку модели\&. "
+.ti -1c
+.RI "void \fBmw_mark_cell_in_ch_mask\fP (const unsigned crate_num, const unsigned cell_num)"
+.br
+.RI "Помечает указанную ячейку в маске каналов\&. "
+.ti -1c
+.RI "unsigned \fBget_first_channel_in_cell\fP (const unsigned crate_num, const unsigned cell_num=0)"
+.br
+.RI "Рассчитывает номер первого канала для заданной ячейки\&. "
+.ti -1c
+.RI "unsigned \fBget_first_channel_in_cell\fP ()"
+.br
+.RI "Рассчитывает номер первого канала для текущей ячейки\&. "
+.ti -1c
+.RI "std::vector< \fBmodelv::ControlMessage\fP > \fBcompute_fc\fP (const \fBfcq\fP *fcqp)"
+.br
+.RI "Формирует УС для всех стробов на ячейки и поляризации, заданные маской\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Обертка для расчетной части модели\&. 
+
+Данная обертка предназначена для упрощенного вызова расчетной части модели в виде, удобного для ФПО\&. 
+.SH "Function Documentation"
+.PP 
+.SS "std::vector< \fBmodelv::ControlMessage\fP > compute_fc (const \fBfcq\fP * fcqp)"
+
+.PP
+Формирует УС для всех стробов на ячейки и поляризации, заданные маской\&. Функция готовит входные данные для расчета УС в модели, вызывает расчет УС и возвращает полученный вектор УС как результат\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfcqp\fP Указатель структуру кванта ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает вектор рассчитанных управляющих сообщений\&. 
+.RE
+.PP
+
+.SS "unsigned get_first_channel_in_cell ()"
+
+.PP
+Рассчитывает номер первого канала для текущей ячейки\&. Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает номер первого канала для текущей ячейки\&. 
+.RE
+.PP
+
+.SS "unsigned get_first_channel_in_cell (const unsigned crate_num, const unsigned cell_num = \fC0\fP)"
+
+.PP
+Рассчитывает номер первого канала для заданной ячейки\&. Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrate_num\fP Номер блока\&. 
+.br
+\fIcell_num\fP Номер ячейки\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает номер первого канала для заданной ячейки\&. 
+.RE
+.PP
+
+.SS "void mw_free (void)"
+
+.PP
+Деинициализирует обертку модели\&. Ввиду статического распределния памяти для обертки модели, принудительного высвобождения какой-то либо памяти не требуется, поэтому данная функция просто сбрасывает признак инициализации обертки модели\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "void mw_init (const enum \fBmodelv::SharedConst::StationType\fP station_type, const enum \fBmodelv::SharedConst::PolarizationTypes\fP polarization_type, const unsigned crate_num, const int rek_num)"
+
+.PP
+Инициализация обертки модели\&. Функция последовательную инициализацию базовых параметров, используемых частью модели: тип станции, тип поляризации, тип используемого фильтра и пр\&. В конце устанавливается признак успешной инициализации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstation_type\fP Тип станции\&. 
+.br
+\fIpolarization_type\fP Тип поляризации\&. 
+.br
+\fIcrate_num\fP Номер блока\&. 
+.br
+\fIrek_num\fP Номер контейнера\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "void mw_mark_cell_in_ch_mask (const unsigned crate_num, const unsigned cell_num)"
+
+.PP
+Помечает указанную ячейку в маске каналов\&. Функция сначала определяет местоположение первого относительного канала в общем списке каналов полотна, а затем, ввиду того, что каналы для отдельных ячеек в массиве расположены последовательно, нужные каналы помечает как используемые\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrate_num\fP Номер блока\&. 
+.br
+\fIcell_num\fP Номер ячейки\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

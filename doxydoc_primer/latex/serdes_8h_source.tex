@@ -1,0 +1,38 @@
+\doxysection{serdes.\+h}
+\hypertarget{serdes_8h_source}{}\label{serdes_8h_source}\index{src/jsonrpc/serdes.h@{src/jsonrpc/serdes.h}}
+\mbox{\hyperlink{serdes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ jsonrpc/serdes.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Nov\ 9,\ 2019}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ vmg}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_MODEL\_JSONRPC\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_MODEL\_JSONRPC\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <libutils/jsonrpc.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{RPC_8h}{model/RPC.h}}>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ libutils::JSONRPC<ModelParams,\ ModelResult>\ \mbox{\hyperlink{serdes_8h_ae5acf590e5399a796f2dfc5d310a74d1}{ModelJsonRpcProto}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Стандартные\ трейты\ сериализации\ для\ JSON\ RPC\ интерфейса\ модели}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelibutils}{libutils}}\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \mbox{\hyperlink{namespacelibutils_a0f42ab78c32763dc1c54b818e38d27ea}{JSONRPC\_SERIALIZATION}}(ModelJsonRpcProto::Request,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelJsonRpcProto::encode);}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{namespacelibutils_a8cbc14a6edf4e1d9993e70deac08e46e}{JSONRPC\_DESERIALIZATION}}(ModelJsonRpcProto::Request,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelJsonRpcProto::decode\_req);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{namespacelibutils_a0f42ab78c32763dc1c54b818e38d27ea}{JSONRPC\_SERIALIZATION}}(ModelJsonRpcProto::Response,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelJsonRpcProto::encode);}
+\DoxyCodeLine{00027\ \mbox{\hyperlink{namespacelibutils_a8cbc14a6edf4e1d9993e70deac08e46e}{JSONRPC\_DESERIALIZATION}}(ModelJsonRpcProto::Response,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ModelJsonRpcProto::decode\_rsp);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \};\ \textcolor{comment}{//\ namespace\ libutils}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_MODEL\_JSONRPC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

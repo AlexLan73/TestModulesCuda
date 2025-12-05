@@ -1,0 +1,102 @@
+\doxysection{src/jsonrpc/server\+\_\+loop.cpp File Reference}
+\hypertarget{server__loop_8cpp}{}\label{server__loop_8cpp}\index{src/jsonrpc/server\_loop.cpp@{src/jsonrpc/server\_loop.cpp}}
+{\ttfamily \#include "{}server\+\_\+loop.\+h"{}}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+Include dependency graph for server\+\_\+loop.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__loop_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structModelWrapper}{Model\+Wrapper}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{server__loop_8cpp_a2da5a2313cb258041ab1a53a00c8a4a8}{execute}} (\mbox{\hyperlink{structModelWrapper}{Model\+Wrapper}} \&w, const \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} \&req, Port\+Out$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ \&reply\+\_\+chan)
+\item 
+static bool \mbox{\hyperlink{server__loop_8cpp_a98213d0d06c8ba5721df510b8493185b}{response\+\_\+is\+\_\+cacheable}} (const Result$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}, Recv\+Error $>$ \&rsp)
+\begin{DoxyCompactList}\small\item\em Response кэшируем, если все стробы такта успешно обсчитаны \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{server__loop_8cpp_ae095105536c600ced5e5a8e6c3862e9b}{accept\+\_\+connection}} (int fd)
+\item 
+pollfd \mbox{\hyperlink{server__loop_8cpp_a891e73ccbb4ffd8526ec1198ebc357ac}{get\+\_\+fd}} (fdistream \texorpdfstring{$\ast$}{*}in)
+\item 
+optional$<$ Result$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}, \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ $>$ \mbox{\hyperlink{server__loop_8cpp_a8197ea61fd7fca4649436b28f447eb33}{recv\+\_\+request}} (istream \texorpdfstring{$\ast$}{*}in)
+\item 
+{\footnotesize template$<$class \mbox{\hyperlink{server__loop_8h_a20ee13cef617c06385156f34446e8eec}{P}} $>$ }\\Result$<$ optional$<$ typename \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{P\+::\+Response}} $>$, Des\+Error $>$ \mbox{\hyperlink{server__loop_8cpp_af51fc0f2140f34cda50a92b9a903844e}{transact}} (const typename \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{P\+::\+Request}} \&req, std\+::ostream \&out, std\+::istream \&in)
+\item 
+void \mbox{\hyperlink{server__loop_8cpp_a6f07b59afdf0670050b50ec4dde6970d}{jsonrpc\+Oneshot}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&inputs, optional$<$ string $>$ out\+Dir\+Path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server__loop_8cpp_ae095105536c600ced5e5a8e6c3862e9b}\label{server__loop_8cpp_ae095105536c600ced5e5a8e6c3862e9b} 
+\index{server\_loop.cpp@{server\_loop.cpp}!accept\_connection@{accept\_connection}}
+\index{accept\_connection@{accept\_connection}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{accept\_connection()}{accept\_connection()}}
+{\footnotesize\ttfamily static int accept\+\_\+connection (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{server__loop_8cpp_a2da5a2313cb258041ab1a53a00c8a4a8}\label{server__loop_8cpp_a2da5a2313cb258041ab1a53a00c8a4a8} 
+\index{server\_loop.cpp@{server\_loop.cpp}!execute@{execute}}
+\index{execute@{execute}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily static void execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelWrapper}{Model\+Wrapper}} \&}]{w,  }\item[{const \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} \&}]{req,  }\item[{Port\+Out$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ \&}]{reply\+\_\+chan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__loop_8cpp_a2da5a2313cb258041ab1a53a00c8a4a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{server__loop_8cpp_a891e73ccbb4ffd8526ec1198ebc357ac}\label{server__loop_8cpp_a891e73ccbb4ffd8526ec1198ebc357ac} 
+\index{server\_loop.cpp@{server\_loop.cpp}!get\_fd@{get\_fd}}
+\index{get\_fd@{get\_fd}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_fd()}{get\_fd()}}
+{\footnotesize\ttfamily pollfd get\+\_\+fd (\begin{DoxyParamCaption}\item[{fdistream \texorpdfstring{$\ast$}{*}}]{in }\end{DoxyParamCaption})}
+
+\Hypertarget{server__loop_8cpp_a6f07b59afdf0670050b50ec4dde6970d}\label{server__loop_8cpp_a6f07b59afdf0670050b50ec4dde6970d} 
+\index{server\_loop.cpp@{server\_loop.cpp}!jsonrpcOneshot@{jsonrpcOneshot}}
+\index{jsonrpcOneshot@{jsonrpcOneshot}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{jsonrpcOneshot()}{jsonrpcOneshot()}}
+{\footnotesize\ttfamily void jsonrpc\+Oneshot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{inputs,  }\item[{optional$<$ string $>$}]{out\+Dir\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__loop_8cpp_a6f07b59afdf0670050b50ec4dde6970d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{server__loop_8cpp_a8197ea61fd7fca4649436b28f447eb33}\label{server__loop_8cpp_a8197ea61fd7fca4649436b28f447eb33} 
+\index{server\_loop.cpp@{server\_loop.cpp}!recv\_request@{recv\_request}}
+\index{recv\_request@{recv\_request}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{recv\_request()}{recv\_request()}}
+{\footnotesize\ttfamily optional$<$ Result$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}, \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ $>$ recv\+\_\+request (\begin{DoxyParamCaption}\item[{istream \texorpdfstring{$\ast$}{*}}]{in }\end{DoxyParamCaption})}
+
+\Hypertarget{server__loop_8cpp_a98213d0d06c8ba5721df510b8493185b}\label{server__loop_8cpp_a98213d0d06c8ba5721df510b8493185b} 
+\index{server\_loop.cpp@{server\_loop.cpp}!response\_is\_cacheable@{response\_is\_cacheable}}
+\index{response\_is\_cacheable@{response\_is\_cacheable}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{response\_is\_cacheable()}{response\_is\_cacheable()}}
+{\footnotesize\ttfamily static bool response\+\_\+is\+\_\+cacheable (\begin{DoxyParamCaption}\item[{const Result$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}, Recv\+Error $>$ \&}]{rsp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Response кэшируем, если все стробы такта успешно обсчитаны 
+
+\Hypertarget{server__loop_8cpp_af51fc0f2140f34cda50a92b9a903844e}\label{server__loop_8cpp_af51fc0f2140f34cda50a92b9a903844e} 
+\index{server\_loop.cpp@{server\_loop.cpp}!transact@{transact}}
+\index{transact@{transact}!server\_loop.cpp@{server\_loop.cpp}}
+\doxysubsubsection{\texorpdfstring{transact()}{transact()}}
+{\footnotesize\ttfamily template$<$class \mbox{\hyperlink{server__loop_8h_a20ee13cef617c06385156f34446e8eec}{P}} $>$ \\
+Result$<$ optional$<$ typename \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{P\+::\+Response}} $>$, Des\+Error $>$ transact (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{P\+::\+Request}} \&}]{req,  }\item[{std\+::ostream \&}]{out,  }\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+

@@ -1,0 +1,39 @@
+\doxysection{messages.\+h}
+\hypertarget{messages_8h_source}{}\label{messages_8h_source}\index{src/gui/messages.h@{src/gui/messages.h}}
+\mbox{\hyperlink{messages_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MESSAGES\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MESSAGES\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ std::vector}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}\ \textcolor{comment}{//\ std::string}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structObjectInfo}{ObjectInfo}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ ImitObject\ \mbox{\hyperlink{structObjectInfo_a74e4e80ef5761d503d975eb95c9aef7b}{obj}};}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ \mbox{\hyperlink{structObjectInfo_a09fcbf04ddd234a20ee2f554bd010616}{descr}};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{structObjectInfo_aaeb7ce52a36f3990d9fedc49531e9f9b}{ObjectInfo}}();}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structStrobeInfo}{StrobeInfo}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ TStrobe\ \mbox{\hyperlink{structStrobeInfo_a6447a94d774b195595cf40a489547f5d}{trprStrb}};}
+\DoxyCodeLine{00018\ \ \ \ \ ImitStrobe\ \mbox{\hyperlink{structStrobeInfo_a1ee84be83d85b2fe8467f31df5a8d301}{trimtsStrb}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structStrobeInfo_a42cecf7c3f7f617ef44be8006ba7be49}{trimtsAvailable}};}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<ObjectInfo>\ \mbox{\hyperlink{structStrobeInfo_a7766b8c302f31097b687426025908197}{object}};}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{structStrobeInfo_a3303c0ab2fd09027d8ecb15c6c7dd63f}{descr}};}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structStrobeInfo_ab7aced5b240ad736df3a7a4918c35a17}{StrobeInfo}}();}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTactInfo}{TactInfo}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ SDTRPR\ \mbox{\hyperlink{structTactInfo_a52e1327027a92263ac1646c3196bfadb}{trprTact}};}
+\DoxyCodeLine{00027\ \ \ \ \ ImitTactDescription\ \mbox{\hyperlink{structTactInfo_ab466bddc24d4f799712ee3cfbcac9ad1}{trimtsTact}};}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<StrobeInfo>\ \mbox{\hyperlink{structTactInfo_a26a38fe04364dad360d73fc483193a91}{strobe}};}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{structTactInfo_a0768c05b858e70d288b3e0a67198bfa9}{descr}};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{structTactInfo_a412cd164c13356b04390d30856b70a8e}{TactInfo}}();}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MESSAGES\_H\_\_}}
+
+\end{DoxyCode}

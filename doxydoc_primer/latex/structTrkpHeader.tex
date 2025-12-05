@@ -1,0 +1,54 @@
+\doxysection{Trkp\+Header Struct Reference}
+\hypertarget{structTrkpHeader}{}\label{structTrkpHeader}\index{TrkpHeader@{TrkpHeader}}
+
+
+{\ttfamily \#include $<$e2trkp.\+h$>$}
+
+
+
+Collaboration diagram for Trkp\+Header\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{structTrkpHeader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structTrkpHeader_a6f18b879f008942084c7d2dfc9e3ff09}{tip}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structTrkpHeader_ac1827fff8116b8717c8dfdb8cbddafcb}{npos}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structTrkpHeader_a7f43a1f9daf09c77edbde4c5f9efb8fe}{rez}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Параметры АФР и КЛБ для разных станций 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structTrkpHeader_ac1827fff8116b8717c8dfdb8cbddafcb}\label{structTrkpHeader_ac1827fff8116b8717c8dfdb8cbddafcb} 
+\index{TrkpHeader@{TrkpHeader}!npos@{npos}}
+\index{npos@{npos}!TrkpHeader@{TrkpHeader}}
+\doxysubsubsection{\texorpdfstring{npos}{npos}}
+{\footnotesize\ttfamily uint8\+\_\+t Trkp\+Header\+::npos}
+
+номер позиции \Hypertarget{structTrkpHeader_a7f43a1f9daf09c77edbde4c5f9efb8fe}\label{structTrkpHeader_a7f43a1f9daf09c77edbde4c5f9efb8fe} 
+\index{TrkpHeader@{TrkpHeader}!rez@{rez}}
+\index{rez@{rez}!TrkpHeader@{TrkpHeader}}
+\doxysubsubsection{\texorpdfstring{rez}{rez}}
+{\footnotesize\ttfamily uint8\+\_\+t Trkp\+Header\+::rez\mbox{[}3\mbox{]}}
+
+\Hypertarget{structTrkpHeader_a6f18b879f008942084c7d2dfc9e3ff09}\label{structTrkpHeader_a6f18b879f008942084c7d2dfc9e3ff09} 
+\index{TrkpHeader@{TrkpHeader}!tip@{tip}}
+\index{tip@{tip}!TrkpHeader@{TrkpHeader}}
+\doxysubsubsection{\texorpdfstring{tip}{tip}}
+{\footnotesize\ttfamily uint32\+\_\+t Trkp\+Header\+::tip}
+
+Заголовок сообщения тип сообщения\+: 0 -\/ калибровочный вектор (КЛБПРМ – результат расчета калибровочных параметров амплитудной и фазовой корректировки приемных подрешеток) 1 -\/ АФР (сообщение используем для АФР) – данные предварительного формирования канальных сигналов с учетом поправок на вышку или КС в режиме калибровки приемных каналов 2 -\/ взвешенный калибровочный вектор -\/ КЛБПРМК – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов приемных блоков; 3 -\/ КЛБПРД – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов передающих блоков 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model/\mbox{\hyperlink{e2trkp_8h}{e2trkp.\+h}}\end{DoxyCompactItemize}

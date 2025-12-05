@@ -1,0 +1,54 @@
+\doxysection{Ucopo\+Msg\+Buf Struct Reference}
+\hypertarget{structUcopoMsgBuf}{}\label{structUcopoMsgBuf}\index{UcopoMsgBuf@{UcopoMsgBuf}}
+
+
+{\ttfamily \#include $<$str\+\_\+uco.\+h$>$}
+
+
+
+Collaboration diagram for Ucopo\+Msg\+Buf\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{structUcopoMsgBuf__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structUcopoMsgBuf_ab983c9840a1c68cf335921df17c5f477}{buf}} \mbox{[}MAX\+\_\+\+UCOPO\+\_\+\+SIZE\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structUcopoMsgBuf_a80f970419558e8a6be088632bf859026}{real\+Size}}
+\item 
+bool \mbox{\hyperlink{structUcopoMsgBuf_a9aeb590c62857606f213310663621da5}{busy\+Flag}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура буфера для сообщения УЦОПО 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structUcopoMsgBuf_ab983c9840a1c68cf335921df17c5f477}\label{structUcopoMsgBuf_ab983c9840a1c68cf335921df17c5f477} 
+\index{UcopoMsgBuf@{UcopoMsgBuf}!buf@{buf}}
+\index{buf@{buf}!UcopoMsgBuf@{UcopoMsgBuf}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily uint8\+\_\+t Ucopo\+Msg\+Buf\+::buf\mbox{[}MAX\+\_\+\+UCOPO\+\_\+\+SIZE\mbox{]}}
+
+буфер для сообщения УЦОПО; \&buf\mbox{[}0\mbox{]} можно преобразовывать в указатель на UCOPO и отсылать в сеть \Hypertarget{structUcopoMsgBuf_a9aeb590c62857606f213310663621da5}\label{structUcopoMsgBuf_a9aeb590c62857606f213310663621da5} 
+\index{UcopoMsgBuf@{UcopoMsgBuf}!busyFlag@{busyFlag}}
+\index{busyFlag@{busyFlag}!UcopoMsgBuf@{UcopoMsgBuf}}
+\doxysubsubsection{\texorpdfstring{busyFlag}{busyFlag}}
+{\footnotesize\ttfamily bool Ucopo\+Msg\+Buf\+::busy\+Flag}
+
+флаг занятости буфера. true -\/ занят, false -\/ свободен \Hypertarget{structUcopoMsgBuf_a80f970419558e8a6be088632bf859026}\label{structUcopoMsgBuf_a80f970419558e8a6be088632bf859026} 
+\index{UcopoMsgBuf@{UcopoMsgBuf}!realSize@{realSize}}
+\index{realSize@{realSize}!UcopoMsgBuf@{UcopoMsgBuf}}
+\doxysubsubsection{\texorpdfstring{realSize}{realSize}}
+{\footnotesize\ttfamily uint32\+\_\+t Ucopo\+Msg\+Buf\+::real\+Size}
+
+реальный размер сообщения УЦОПО в буфере 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model/\mbox{\hyperlink{str__uco_8h}{str\+\_\+uco.\+h}}\end{DoxyCompactItemize}

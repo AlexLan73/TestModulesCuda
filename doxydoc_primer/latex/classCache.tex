@@ -1,0 +1,109 @@
+\doxysection{Cache Class Reference}
+\hypertarget{classCache}{}\label{classCache}\index{Cache@{Cache}}
+
+
+{\ttfamily \#include $<$cache.\+h$>$}
+
+
+
+Collaboration diagram for Cache\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classCache__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCache_a4e42f99a9308b10dd5b91ce0a4395a7b}{Cache}} (uint capcty)
+\item 
+\mbox{\hyperlink{classCache_af8b171a6c49d88d3ba179477484b9d48}{\texorpdfstring{$\sim$}{\string~}\+Cache}} ()
+\item 
+void \mbox{\hyperlink{classCache_afd7f7dce7f449d694cc4b6c8dc360033}{put}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&, const \mbox{\hyperlink{structModelOutput}{Model\+Output}} \&) const
+\item 
+std\+::shared\+\_\+ptr$<$ libutils\+::picojson\+\_\+object $>$ \mbox{\hyperlink{classCache_a488bd0c1e87c6e23b5b6a0c9fa6cc46b}{get}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&) const
+\item 
+uint \mbox{\hyperlink{classCache_a6045f5d0056b3aac2693a2df0d8dbe53}{size}} () const
+\item 
+uint \mbox{\hyperlink{classCache_a1e34d8d53040ba97877d479ab0ccbae5}{capacity}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cache_8h_a7759016100710da0d85e468dd942f5b2}{Cache\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCache_a406fc6023aa8d2aaa2203d1baae5eae4}{data}}
+\item 
+const uint \mbox{\hyperlink{classCache_a5ba5751736a44a6d4b7ed6e376903d4b}{max\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCache_a4e42f99a9308b10dd5b91ce0a4395a7b}\label{classCache_a4e42f99a9308b10dd5b91ce0a4395a7b} 
+\index{Cache@{Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{Cache()}{Cache()}}
+{\footnotesize\ttfamily Cache\+::\+Cache (\begin{DoxyParamCaption}\item[{uint}]{capcty }\end{DoxyParamCaption})}
+
+\Hypertarget{classCache_af8b171a6c49d88d3ba179477484b9d48}\label{classCache_af8b171a6c49d88d3ba179477484b9d48} 
+\index{Cache@{Cache}!````~Cache@{\texorpdfstring{$\sim$}{\string~}Cache}}
+\index{````~Cache@{\texorpdfstring{$\sim$}{\string~}Cache}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cache()}{\string~Cache()}}
+{\footnotesize\ttfamily Cache\+::\texorpdfstring{$\sim$}{\string~}\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCache_a1e34d8d53040ba97877d479ab0ccbae5}\label{classCache_a1e34d8d53040ba97877d479ab0ccbae5} 
+\index{Cache@{Cache}!capacity@{capacity}}
+\index{capacity@{capacity}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily uint Cache\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classCache_a488bd0c1e87c6e23b5b6a0c9fa6cc46b}\label{classCache_a488bd0c1e87c6e23b5b6a0c9fa6cc46b} 
+\index{Cache@{Cache}!get@{get}}
+\index{get@{get}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ picojson\+\_\+object $>$ Cache\+::get (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{i }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCache_afd7f7dce7f449d694cc4b6c8dc360033}\label{classCache_afd7f7dce7f449d694cc4b6c8dc360033} 
+\index{Cache@{Cache}!put@{put}}
+\index{put@{put}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily void Cache\+::put (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{b,  }\item[{const \mbox{\hyperlink{structModelOutput}{Model\+Output}} \&}]{o }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classCache_afd7f7dce7f449d694cc4b6c8dc360033_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCache_a6045f5d0056b3aac2693a2df0d8dbe53}\label{classCache_a6045f5d0056b3aac2693a2df0d8dbe53} 
+\index{Cache@{Cache}!size@{size}}
+\index{size@{size}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint Cache\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCache_a406fc6023aa8d2aaa2203d1baae5eae4}\label{classCache_a406fc6023aa8d2aaa2203d1baae5eae4} 
+\index{Cache@{Cache}!data@{data}}
+\index{data@{data}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cache_8h_a7759016100710da0d85e468dd942f5b2}{Cache\+\_\+t}}\texorpdfstring{$\ast$}{*} Cache\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classCache_a5ba5751736a44a6d4b7ed6e376903d4b}\label{classCache_a5ba5751736a44a6d4b7ed6e376903d4b} 
+\index{Cache@{Cache}!max\_size@{max\_size}}
+\index{max\_size@{max\_size}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{max\_size}{max\_size}}
+{\footnotesize\ttfamily const uint Cache\+::max\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/jsonrpc/\mbox{\hyperlink{cache_8h}{cache.\+h}}\item 
+src/jsonrpc/\mbox{\hyperlink{cache_8cpp}{cache.\+cpp}}\end{DoxyCompactItemize}

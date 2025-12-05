@@ -1,0 +1,38 @@
+\doxysection{ar\+Coefs\+Array.\+h}
+\hypertarget{arCoefsArray_8h_source}{}\label{arCoefsArray_8h_source}\index{src/arCoefsArray.h@{src/arCoefsArray.h}}
+\mbox{\hyperlink{arCoefsArray_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ARCOEFSARRAY\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ARCOEFSARRAY\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelSharedConst_8h}{model/modelSharedConst.h}}>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}\ \textcolor{comment}{//\ maxChannels}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray}{ArCoefsArray}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray}{ArCoefsArray}}(\textcolor{keyword}{const}\ std::list<std::string>\&\ lstDataDirs);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a40a2a26669160a1bff79a02c253a233c}{\string~ArCoefsArray}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_aa494cca2bee9779f1b9f2ccc1644142d}{getArCoef}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ vectNum,\ uint32\_t\ chanNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a1331ccd90b33f73d8d9b537bbf027666}{maxArTypes}}\ =\ 16;}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<std::vector<std::vector<float>\ >\ >\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a27020cd5dc86649a2944c22df481d9e4}{arCoefs}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a69b582eebb9363ad72e2a90a7a84d22a}{loadArCoefs}}(\textcolor{keyword}{const}\ std::list<std::string>\&\ lstDataDirs);}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a9f84d1f0df8975b36b71fdb0d27a9b96}{getStationType}}(std::string\ strHeader);}
+\DoxyCodeLine{00058\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a6b0d4ae0d92f32870f106adb434a0b10}{getArNum}}(std::string\ strHeader);}
+\DoxyCodeLine{00059\ \};\ \textcolor{comment}{//\ class\ ArCoefsArray}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ARCOEFSARRAY\_H\_\_}}
+
+\end{DoxyCode}

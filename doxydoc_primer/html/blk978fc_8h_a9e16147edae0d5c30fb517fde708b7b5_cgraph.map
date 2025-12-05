@@ -1,0 +1,30 @@
+<map id="convertfc" name="convertfc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,327,88,352"/>
+<area shape="rect" id="Node000002" href="$blk978fc_8cpp.html#ac02b7b53c8c193906da7c7e101abad0a" title=" " alt="" coords="136,179,275,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,325,82,272,106,240,134,213,142,208,145,212,138,217,110,244,86,275,56,328"/>
+<area shape="rect" id="Node000003" href="$blk223_2libfc_8cpp.html#a7efff375c8ab74709f6acc10b23a4287" title=" " alt="" coords="143,228,268,253"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="67,324,171,259,174,263,70,329"/>
+<area shape="rect" id="Node000012" href="$blk223_2libfc_8h.html#aea961f54684231b548c159708dcae31d" title="Проверка на соответствие типа строба анализу уровня шумов." alt="" coords="567,351,675,376"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="89,346,194,368,323,386,404,391,485,386,554,376,554,381,486,391,404,396,322,391,193,373,88,351"/>
+<area shape="rect" id="Node000014" href="$blk223_2libfc_8h.html#aa7890e86b6f4ef066be693f71ea63e21" title="Округление числа с плавающей запятой до ближайшего целого." alt="" coords="169,452,241,477"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="60,351,92,389,138,431,160,444,157,448,134,435,88,393,56,354"/>
+<area shape="rect" id="Node000004" href="$blk223_2libfc_8cpp.html#acf7ac68cb0655fe69cf60e98c65d8f61" title=" " alt="" coords="323,5,485,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,226,273,213,288,192,294,171,295,128,297,84,304,62,321,40,325,36,328,40,325,44,309,65,302,85,301,128,300,172,292,195,277,217,259,230"/>
+<area shape="rect" id="Node000005" href="$blk223_2libfc_8cpp.html#aedf73c64578296f15e49f0b3f2941354" title=" " alt="" coords="336,55,472,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="255,226,273,213,285,198,291,183,296,152,300,121,308,105,321,89,326,85,329,89,325,93,312,108,305,123,301,153,296,185,289,201,276,217,258,230"/>
+<area shape="rect" id="Node000006" href="$blk223_2libfc_8cpp.html#ac2effc63cfa3d66da38751a916661a0d" title=" " alt="" coords="377,104,431,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="252,226,273,213,288,195,296,177,304,157,321,139,341,127,362,120,364,125,343,132,324,143,308,160,301,179,293,198,276,217,254,230"/>
+<area shape="rect" id="Node000007" href="$blk223_2libfc_8h.html#a8f73d0117aa68f53bf9d09d7661b477e" title="Количество лучей автокомпенсации (0 или 2)" alt="" coords="357,153,451,179"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="242,226,274,213,322,188,343,180,345,185,324,192,276,218,244,230"/>
+<area shape="rect" id="Node000009" href="$blk223_2libfc_8cpp.html#a762edd2d8c7f72ecd18659ff376ea21d" title=" " alt="" coords="369,203,439,228"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="268,230,355,219,356,224,268,235"/>
+<area shape="rect" id="Node000010" href="$blk223_2libfc_8h.html#a6a371265ce3ce26dc9f50b22eb41240b" title="Проверка на соответствие типа строба помеховому." alt="" coords="329,252,479,277"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="268,246,316,251,315,257,268,251"/>
+<area shape="rect" id="Node000011" href="$blk978_2libfc_8cpp.html#af889ec125463699264ac5356a1ad4bc1" title="Преобразует сетевой код типа строба к коду карты памяти прошивки." alt="" coords="363,301,445,327"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="236,251,324,286,350,295,349,300,322,291,234,256"/>
+<area shape="rect" id="Node000013" href="$blk223_2libfc_8cpp.html#ae5eda4589f2706efaf13730025e2ef73" title=" " alt="" coords="369,351,439,376"/>
+<area shape="poly" id="edge12_Node000003_Node000013" title=" " alt="" coords="221,252,264,293,293,316,324,336,357,349,355,354,321,340,290,320,261,297,217,256"/>
+<area shape="rect" id="Node000008" href="$blk223_2libfc_8h.html#a5b8eb03e622148718dd963bc58832918" title="Проверка на соответствие типа строба автокомпенсации." alt="" coords="533,153,709,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="451,163,519,163,519,169,451,169"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="446,321,555,346,553,351,445,326"/>
+</map>

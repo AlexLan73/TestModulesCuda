@@ -1,0 +1,155 @@
+.TH "ModelNS23817A620S1823::WlbArray" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::WlbArray
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <wlbArray\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWlbArray\fP (const std::list< std::string > &lstDataDirs)"
+.br
+.ti -1c
+.RI "\fB~WlbArray\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetWlb\fP (uint32_t nfil, uint32_t wlbNum, int32_t *wlbBuf) const"
+.br
+.ti -1c
+.RI "double \fBgetWlbNnorm\fP (uint32_t nfil, uint32_t wlbNum) const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBloadWlbCoefs\fP (const std::list< std::string > &lstDataDirs)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetNfil\fP (std::string strHeader)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetWlbNum\fP (std::string strHeader)"
+.br
+.ti -1c
+.RI "int32_t \fBfindNfil\fP (uint32_t nfil) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< std::vector< std::vector< uint32_t > > > \fBwlbCoefs\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const float \fBwlbConst\fP = 65535\&."
+.br
+.ti -1c
+.RI "static const int \fBmaxNumWlbsForOneNfil\fP = 16"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс данных коэффициентов фильтра нижних частот\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::WlbArray::WlbArray (const std::list< std::string > & lstDataDirs)"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::WlbArray::~WlbArray ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int32_t ModelNS23817A620S1823::WlbArray::findNfil (uint32_t nfil) const\fC [private]\fP"
+Поиск индекса длительности импульсной характеристики фильтра нижних частот в массиве wlbCoefs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInfil\fP длительность импульсной характеристики фильтра нижних частот 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+индекс длительности импульсной характеристики фильтра нижних 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::WlbArray::getNfil (std::string strHeader)\fC [private]\fP"
+Выдача длительности импульсной характеристики фильтра нижних частот ПЧВО, считанного из переданной строки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrHeader\fP строка заголовка данных <nfil wlbNum> 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+длительность импульсной характеристики фильтра нижних частот 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::WlbArray::getWlb (uint32_t nfil, uint32_t wlbNum, int32_t * wlbBuf) const"
+Копирование в wlbBuf вектор коэффициентов ФНЧ, длина которого равна nfil\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInfil\fP номер фильтра нижних частот 
+.br
+\fIwlbNum\fP номер импульсной характеристики второго ЦФНЧ в ПЧВО 
+.br
+\fIwlbBuf\fP указатель на буфер, в который будут записаны значения фильтра нижних частот 
+.RE
+.PP
+
+.SS "double ModelNS23817A620S1823::WlbArray::getWlbNnorm (uint32_t nfil, uint32_t wlbNum) const"
+Возврат нормы вектора коэффициентов ФНЧ, длина которого равна nfil\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInfil\fP номер фильтра нижних частот 
+.br
+\fIwlbNum\fP номер импульсной характеристики второго ЦФНЧ в ПЧВО 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+норма вектора коэффициентов ФНЧ 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::WlbArray::getWlbNum (std::string strHeader)\fC [private]\fP"
+Выдача номера импульсной характеристики второго ЦФНЧ в ПЧВО, считанного из переданной строки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrHeader\fP строка заголовка данных <nfil wlbNum> 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер импульсной характеристики второго ЦФНЧ в ПЧВО 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::WlbArray::loadWlbCoefs (const std::list< std::string > & lstDataDirs)\fC [private]\fP"
+Загрузка коэффициентов для всех типов станций из файла wlbCoefs\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "const int ModelNS23817A620S1823::WlbArray::maxNumWlbsForOneNfil = 16\fC [static]\fP, \fC [private]\fP"
+максимальное количество векторов Wlb для одного nfil 
+.SS "std::vector<std::vector<std::vector<uint32_t> > > ModelNS23817A620S1823::WlbArray::wlbCoefs\fC [private]\fP"
+вектора Wlb wlbCoefs[nfil][wlbNum][coefs] 
+.SS "const float ModelNS23817A620S1823::WlbArray::wlbConst = 65535\&.\fC [static]\fP, \fC [private]\fP"
+максимальное значение коэффициента фильтра нижних частот 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

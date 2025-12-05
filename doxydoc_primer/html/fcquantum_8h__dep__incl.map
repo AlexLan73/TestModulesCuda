@@ -1,0 +1,25 @@
+<map id="src/mpk1/blk223/fcquantum.h" name="src/mpk1/blk223/fcquantum.h">
+<area shape="rect" id="Node000001" title="Описание структуры кванта ФУ." alt="" coords="383,5,599,31"/>
+<area shape="rect" id="Node000002" href="$blk223fc_8h.html" title="Расчет функционального управления для 223&#45;й ячейки." alt="" coords="257,174,460,199"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="448,39,418,56,393,80,379,104,370,130,362,174,357,173,365,129,374,102,389,77,415,52,445,34"/>
+<area shape="rect" id="Node000005" href="$fcmgmt_8h.html" title="Планировщик фукнционального управления (ФУ)." alt="" coords="649,86,847,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="542,32,711,83,710,89,541,37"/>
+<area shape="rect" id="Node000007" href="$model__wrapper_8h.html" title="Обертка для расчетной части модели." alt="" coords="403,79,578,119"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="493,44,493,79,488,79,488,44"/>
+<area shape="rect" id="Node000003" href="$blk223fc_8cpp.html" title="Расчет функционального управления для 223&#45;й ячейки." alt="" coords="219,255,437,280"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="352,213,335,255,330,253,347,211"/>
+<area shape="rect" id="Node000004" href="$runModel_8cpp.html" title=" " alt="" coords="461,255,595,280"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="397,203,504,252,502,257,394,207"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="751,126,745,167,737,189,723,208,695,231,663,247,628,258,595,264,594,259,627,253,661,242,692,227,719,205,732,187,740,166,746,125"/>
+<area shape="rect" id="Node000006" href="$fcmgmt_8cpp.html" title="Планировщик фукнционального управления (ФУ)." alt="" coords="785,174,997,199"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="780,116,873,171,870,176,777,121"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="452,128,378,176,375,172,449,124"/>
+<area shape="poly" id="edge13_Node000007_Node000004" title=" " alt="" coords="501,132,528,254,523,255,495,133"/>
+<area shape="rect" id="Node000008" href="$blk223_2libfc_8h.html" title="Вспомогательные функции для работы с ФУ." alt="" coords="58,174,233,199"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="402,125,192,177,191,171,401,119"/>
+<area shape="rect" id="Node000010" href="$model__wrapper_8cpp.html" title="Обертка для расчетной части модели." alt="" coords="535,167,710,207"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="533,124,595,164,592,169,530,129"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="186,202,302,252,300,257,184,207"/>
+<area shape="rect" id="Node000009" href="$blk223_2libfc_8cpp.html" title="Вспомогательные функции для работы с ФУ." alt="" coords="5,255,195,280"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="134,213,109,256,104,253,129,210"/>
+</map>

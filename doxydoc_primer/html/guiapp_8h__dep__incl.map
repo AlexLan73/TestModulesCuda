@@ -1,0 +1,20 @@
+<map id="src/gui/guiapp.h" name="src/gui/guiapp.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="273,5,398,31"/>
+<area shape="rect" id="Node000002" href="$guiapp_8cpp.html" title=" " alt="" coords="5,152,145,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,23,219,28,177,38,137,55,103,81,91,97,83,116,78,152,73,151,78,115,86,94,99,77,135,51,176,33,218,23,259,17"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title=" " alt="" coords="113,79,243,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="299,39,205,81,203,76,296,34"/>
+<area shape="rect" id="Node000004" href="$mainwin_8h.html" title=" " alt="" coords="267,79,404,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="338,44,338,79,333,79,333,44"/>
+<area shape="rect" id="Node000008" href="$modelThread_8cpp.html" title=" " alt="" coords="428,79,611,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="379,33,490,76,488,81,377,38"/>
+<area shape="rect" id="Node000009" href="$progressCallback_8cpp.html" title=" " alt="" coords="635,79,843,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="412,30,675,76,674,81,411,35"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="281,110,118,154,117,149,280,105"/>
+<area shape="rect" id="Node000005" href="$mainwin_8cpp.html" title=" " alt="" coords="170,152,322,177"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="312,115,262,154,259,150,309,110"/>
+<area shape="rect" id="Node000006" href="$mainwinDisplayMsg_8cpp.html" title=" " alt="" coords="347,152,575,177"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="369,108,441,149,439,154,366,113"/>
+<area shape="rect" id="Node000007" href="$mainwinStoreMsg_8cpp.html" title=" " alt="" coords="599,152,813,177"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="409,104,646,149,645,155,408,109"/>
+</map>

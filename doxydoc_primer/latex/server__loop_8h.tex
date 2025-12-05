@@ -1,0 +1,94 @@
+\doxysection{src/jsonrpc/server\+\_\+loop.h File Reference}
+\hypertarget{server__loop_8h}{}\label{server__loop_8h}\index{src/jsonrpc/server\_loop.h@{src/jsonrpc/server\_loop.h}}
+{\ttfamily \#include "{}../input\+Bundle.\+h"{}}\newline
+{\ttfamily \#include "{}serdes.\+h"{}}\newline
+{\ttfamily \#include "{}../run\+Model.\+h"{}}\newline
+{\ttfamily \#include "{}cache.\+h"{}}\newline
+{\ttfamily \#include $<$libutils/fdstream.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/jsonrpc.\+h$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for server\+\_\+loop.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__loop_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__loop_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classServerLoop}{Server\+Loop}}
+\item 
+struct \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Server\+Loop\+::\+Client\+Conn}}
+\item 
+struct \mbox{\hyperlink{structServerLoop_1_1QueuedRequest}{Server\+Loop\+::\+Queued\+Request}}
+\begin{DoxyCompactList}\small\item\em Запрос на вполнение JSON RPC метода (любого), поставленный в очередь. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{serdes_8h_ae5acf590e5399a796f2dfc5d310a74d1}{Model\+Json\+Rpc\+Proto}} \mbox{\hyperlink{server__loop_8h_a20ee13cef617c06385156f34446e8eec}{P}}
+\item 
+typedef P\+::\+Request \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}
+\item 
+typedef P\+::\+Response \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pollfd \mbox{\hyperlink{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7}{get\+\_\+fd}} (libutils\+::fdistream \texorpdfstring{$\ast$}{*}in)
+\item 
+optional$<$ Result$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}, \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ $>$ \mbox{\hyperlink{server__loop_8h_a6b385856ac78a58c0df4f66fa8c2ae00}{recv\+\_\+request}} (std\+::istream \texorpdfstring{$\ast$}{*}in)
+\item 
+void \mbox{\hyperlink{server__loop_8h_a15611fc698997d5d16d2204ad75ed1ce}{jsonrpc\+Oneshot}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&inputs, optional$<$ std\+::string $>$ out\+Dir\+Path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{server__loop_8h_a20ee13cef617c06385156f34446e8eec}\label{server__loop_8h_a20ee13cef617c06385156f34446e8eec} 
+\index{server\_loop.h@{server\_loop.h}!P@{P}}
+\index{P@{P}!server\_loop.h@{server\_loop.h}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{serdes_8h_ae5acf590e5399a796f2dfc5d310a74d1}{Model\+Json\+Rpc\+Proto}} \mbox{\hyperlink{server__loop_8h_a20ee13cef617c06385156f34446e8eec}{P}}}
+
+\Hypertarget{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}\label{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546} 
+\index{server\_loop.h@{server\_loop.h}!Request@{Request}}
+\index{Request@{Request}!server\_loop.h@{server\_loop.h}}
+\doxysubsubsection{\texorpdfstring{Request}{Request}}
+{\footnotesize\ttfamily typedef P\+::\+Request \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}}
+
+\Hypertarget{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}\label{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de} 
+\index{server\_loop.h@{server\_loop.h}!Response@{Response}}
+\index{Response@{Response}!server\_loop.h@{server\_loop.h}}
+\doxysubsubsection{\texorpdfstring{Response}{Response}}
+{\footnotesize\ttfamily typedef P\+::\+Response \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7}\label{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7} 
+\index{server\_loop.h@{server\_loop.h}!get\_fd@{get\_fd}}
+\index{get\_fd@{get\_fd}!server\_loop.h@{server\_loop.h}}
+\doxysubsubsection{\texorpdfstring{get\_fd()}{get\_fd()}}
+{\footnotesize\ttfamily pollfd get\+\_\+fd (\begin{DoxyParamCaption}\item[{libutils\+::fdistream \texorpdfstring{$\ast$}{*}}]{in }\end{DoxyParamCaption})}
+
+\Hypertarget{server__loop_8h_a15611fc698997d5d16d2204ad75ed1ce}\label{server__loop_8h_a15611fc698997d5d16d2204ad75ed1ce} 
+\index{server\_loop.h@{server\_loop.h}!jsonrpcOneshot@{jsonrpcOneshot}}
+\index{jsonrpcOneshot@{jsonrpcOneshot}!server\_loop.h@{server\_loop.h}}
+\doxysubsubsection{\texorpdfstring{jsonrpcOneshot()}{jsonrpcOneshot()}}
+{\footnotesize\ttfamily void jsonrpc\+Oneshot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{inputs,  }\item[{optional$<$ std\+::string $>$}]{out\+Dir\+Path }\end{DoxyParamCaption})}
+
+\Hypertarget{server__loop_8h_a6b385856ac78a58c0df4f66fa8c2ae00}\label{server__loop_8h_a6b385856ac78a58c0df4f66fa8c2ae00} 
+\index{server\_loop.h@{server\_loop.h}!recv\_request@{recv\_request}}
+\index{recv\_request@{recv\_request}!server\_loop.h@{server\_loop.h}}
+\doxysubsubsection{\texorpdfstring{recv\_request()}{recv\_request()}}
+{\footnotesize\ttfamily optional$<$ Result$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}, \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ $>$ recv\+\_\+request (\begin{DoxyParamCaption}\item[{std\+::istream \texorpdfstring{$\ast$}{*}}]{in }\end{DoxyParamCaption})}
+

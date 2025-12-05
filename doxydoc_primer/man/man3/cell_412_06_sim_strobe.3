@@ -1,0 +1,86 @@
+.TH "cell_412_06_sim_strobe" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cell_412_06_sim_strobe \- Данные ячейки 6МЯ-412-06 по имитационному стробу  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <412\-06_fc\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBimit_strobe_begin\fP"
+.br
+.RI "IMIT_STROBE_BEGIN = - Начало имитационного строба\&. "
+.ti -1c
+.RI "uint32_t \fBimit_strobe_length\fP"
+.br
+.RI "IMIT_STROBE_LENGTH = – Длина имитационного строба\&.\&. "
+.ti -1c
+.RI "uint32_t \fBnoise_n_posl_null_0_31\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBnoise_n_posl_null_32_39\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBn_objects\fP"
+.br
+.RI "N_OBJECT (0\&.\&.\&.4 бит) = 1\&.\&.\&.8 – Количество генерируемых обьектов;\&. "
+.ti -1c
+.RI "uint16_t \fBnoise_int\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBafr_int\fP [4]"
+.br
+.RI "AFR_INT_X – интенсивность для X-го канала "
+.ti -1c
+.RI "uint32_t \fBreserved1\fP [2]"
+.br
+.ti -1c
+.RI "struct \fBcell_412_06_sim_object\fP \fBobjects\fP [8]"
+.br
+.ti -1c
+.RI "uint8_t \fBunused_tail\fP [0x1000 \- 384]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Данные ячейки 6МЯ-412-06 по имитационному стробу 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint16_t cell_412_06_sim_strobe::afr_int"
+
+.PP
+AFR_INT_X – интенсивность для X-го канала 
+.SS "uint32_t cell_412_06_sim_strobe::imit_strobe_begin"
+
+.PP
+IMIT_STROBE_BEGIN = - Начало имитационного строба\&. 
+.SS "uint32_t cell_412_06_sim_strobe::imit_strobe_length"
+
+.PP
+IMIT_STROBE_LENGTH = – Длина имитационного строба\&.\&. 
+.SS "uint8_t cell_412_06_sim_strobe::n_objects"
+
+.PP
+N_OBJECT (0\&.\&.\&.4 бит) = 1\&.\&.\&.8 – Количество генерируемых обьектов;\&. 
+.SS "uint16_t cell_412_06_sim_strobe::noise_int"
+
+.SS "uint32_t cell_412_06_sim_strobe::noise_n_posl_null_0_31"
+начальная последовательность для шума называется null, потому что используется только для нулевого канала ячейки (последовательности для шума рассчиываются самой прошивкой на основе последовательности для нулевого канала) у шума фиксированный (в прошивке) полином, но меняется фаза (aka начальная последовательность) 
+.SS "uint8_t cell_412_06_sim_strobe::noise_n_posl_null_32_39"
+
+.SS "struct \fBcell_412_06_sim_object\fP cell_412_06_sim_strobe::objects"
+
+.SS "uint32_t cell_412_06_sim_strobe::reserved1"
+
+.SS "uint8_t cell_412_06_sim_strobe::unused_tail"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

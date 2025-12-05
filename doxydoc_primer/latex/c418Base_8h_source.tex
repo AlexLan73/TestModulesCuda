@@ -1,0 +1,43 @@
+\doxysection{c418\+Base.\+h}
+\hypertarget{c418Base_8h_source}{}\label{c418Base_8h_source}\index{src/c418Base.h@{src/c418Base.h}}
+\mbox{\hyperlink{c418Base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C418BASE\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C418BASE\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ uint32\_t}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c412__06Result_8h}{c412\_06Result.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsg_8h}{controlMsg.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base}{Cell418Base}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base}{Cell418Base}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\&\ cmsg);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a8aa46d4e7da03ec46bd6063be19fabf0}{\string~Cell418Base}}()\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a65335fca5bc72128fc9283914cbfbdff}{resetStopFlag}}()\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a2ce7887d5d342e83d83255325c437552}{getStopFlag}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \textcolor{keyword}{protected}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72}{inData}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a6e6b48e4ea0e0d78978a200ddb5f4ab3}{outData}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_af9ea973e8d3d7238c0a54526f4ee1f86}{controlMsg}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a0498991b7931585f8afb71e7bc5aea7e}{strb}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsgModelTypes::StationParams}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a252603a83f1f1715557830f9f91639c7}{stationParams}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_ab95f22a75c499626b5ff969ea2801bae}{stopFlag}};}
+\DoxyCodeLine{00049\ \textcolor{keyword}{protected}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a2e50b647e74699c0604358c6ec779455}{targetModeProcessing}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a9788ed89cf263a9a00926c1a071df6f0}{copyOutDataTo}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a39c1f6f7d1a3e4bf3819a77e2f0d8b2d}{accumulateCrateData}}(}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ in[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}],}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ out[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}]);}
+\DoxyCodeLine{00065\ \};\ \textcolor{comment}{//\ class\ Cell418Base}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C418BASE\_H\_\_}}
+
+\end{DoxyCode}

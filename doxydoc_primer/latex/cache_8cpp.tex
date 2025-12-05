@@ -1,0 +1,173 @@
+\doxysection{src/jsonrpc/cache.cpp File Reference}
+\hypertarget{cache_8cpp}{}\label{cache_8cpp}\index{src/jsonrpc/cache.cpp@{src/jsonrpc/cache.cpp}}
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trims.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2mask.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2ippa.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/optional.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/serdes.\+h$>$}\newline
+{\ttfamily \#include "{}cache.\+h"{}}\newline
+Include dependency graph for cache.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01ModelInputBundle_01_4}{std\+::hash$<$ Model\+Input\+Bundle $>$}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1equal__to_3_01ModelInputBundle_01_4}{std\+::equal\+\_\+to$<$ Model\+Input\+Bundle $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cache_8cpp_afebe9a14d9d79ae969562c01c7890902}{CMP}}(f)~(a1.\+f == a2.\+f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a5a41bdbb8383ac056d0a475643029d32}{operator==}} (const ISAP \&a1, const ISAP \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_ac2a0bf31c55dceb6714de045d0d8269a}{operator==}} (const E2\+IPPA \&a1, const E2\+IPPA \&a2)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{cache_8cpp_a2a0f66d0c3e77153e701159c4f356e02}{compare\+Trkp}} (const EUTRKP \&m1, const EUTRKP \&m2)
+\item 
+template$<$$>$ bool \mbox{\hyperlink{cache_8cpp_a818831db1f4e1dbe3931f8d3d7c6b188}{compare\+Trkp$<$ EUTRKP\+\_\+\+M\+\_\+\+Rx $>$}} (const EUTRKP \&m1, const EUTRKP \&m2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a41e3d4d107da6d4b106eda9ffdae068b}{operator==}} (const EUTRKP \&a1, const EUTRKP \&a2)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{cache_8cpp_a2898349f978cd02c13922f563ffc84fd}{compare\+Mask}} (const EUMASK \&m1, const EUMASK \&m2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_af86a5e5dacfb07fe7d279e01a6b25400}{operator==}} (const EUMASK \&a1, const EUMASK \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a989b7036c383db79b1f2a3973e4f41ca}{operator==}} (const PAR\+\_\+\+SIGN \&a1, const PAR\+\_\+\+SIGN \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a40400f0829b4c9bfe89008ec481c29f7}{operator==}} (const Imit\+Object \&a1, const Imit\+Object \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a8c28ae915084be497f76281d276b9c7e}{operator==}} (const Imit\+Strobe \&a1, const Imit\+Strobe \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a1b3f221f0537e2fcde6745e65066d639}{operator==}} (const Trimts\+Msg \&a1, const Trimts\+Msg \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a08df91fac911f1b0a4942a6f25897d8f}{operator==}} (const TStrobe \&a1, const TStrobe \&a2)
+\item 
+static bool \mbox{\hyperlink{cache_8cpp_a54983dc8e43545436ad2aebb58548856}{operator==}} (const E2\+TRPR \&a1, const E2\+TRPR \&a2)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{cache_8cpp_ad21f8f38735c06719729c1edd1e52ba8}{cmp\+Opt}} (const optional$<$ T $>$ \&a1, const optional$<$ T $>$ \&a2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{cache_8cpp_afebe9a14d9d79ae969562c01c7890902}\label{cache_8cpp_afebe9a14d9d79ae969562c01c7890902} 
+\index{cache.cpp@{cache.cpp}!CMP@{CMP}}
+\index{CMP@{CMP}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{CMP}{CMP}}
+{\footnotesize\ttfamily \#define CMP(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~(a1.\+f == a2.\+f)}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{cache_8cpp_ad21f8f38735c06719729c1edd1e52ba8}\label{cache_8cpp_ad21f8f38735c06719729c1edd1e52ba8} 
+\index{cache.cpp@{cache.cpp}!cmpOpt@{cmpOpt}}
+\index{cmpOpt@{cmpOpt}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{cmpOpt()}{cmpOpt()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool cmp\+Opt (\begin{DoxyParamCaption}\item[{const optional$<$ T $>$ \&}]{a1,  }\item[{const optional$<$ T $>$ \&}]{a2 }\end{DoxyParamCaption})}
+
+\Hypertarget{cache_8cpp_a2898349f978cd02c13922f563ffc84fd}\label{cache_8cpp_a2898349f978cd02c13922f563ffc84fd} 
+\index{cache.cpp@{cache.cpp}!compareMask@{compareMask}}
+\index{compareMask@{compareMask}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{compareMask()}{compareMask()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool compare\+Mask (\begin{DoxyParamCaption}\item[{const EUMASK \&}]{m1,  }\item[{const EUMASK \&}]{m2 }\end{DoxyParamCaption})}
+
+\Hypertarget{cache_8cpp_a2a0f66d0c3e77153e701159c4f356e02}\label{cache_8cpp_a2a0f66d0c3e77153e701159c4f356e02} 
+\index{cache.cpp@{cache.cpp}!compareTrkp@{compareTrkp}}
+\index{compareTrkp@{compareTrkp}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{compareTrkp()}{compareTrkp()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool compare\+Trkp (\begin{DoxyParamCaption}\item[{const EUTRKP \&}]{m1,  }\item[{const EUTRKP \&}]{m2 }\end{DoxyParamCaption})}
+
+\Hypertarget{cache_8cpp_a818831db1f4e1dbe3931f8d3d7c6b188}\label{cache_8cpp_a818831db1f4e1dbe3931f8d3d7c6b188} 
+\index{cache.cpp@{cache.cpp}!compareTrkp$<$ EUTRKP\_M\_Rx $>$@{compareTrkp$<$ EUTRKP\_M\_Rx $>$}}
+\index{compareTrkp$<$ EUTRKP\_M\_Rx $>$@{compareTrkp$<$ EUTRKP\_M\_Rx $>$}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{compareTrkp$<$ EUTRKP\_M\_Rx $>$()}{compareTrkp< EUTRKP\_M\_Rx >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+bool \mbox{\hyperlink{cache_8cpp_a2a0f66d0c3e77153e701159c4f356e02}{compare\+Trkp}}$<$ EUTRKP\+\_\+\+M\+\_\+\+Rx $>$ (\begin{DoxyParamCaption}\item[{const EUTRKP \&}]{m1,  }\item[{const EUTRKP \&}]{m2 }\end{DoxyParamCaption})}
+
+\Hypertarget{cache_8cpp_ac2a0bf31c55dceb6714de045d0d8269a}\label{cache_8cpp_ac2a0bf31c55dceb6714de045d0d8269a} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const E2\+IPPA \&}]{a1,  }\item[{const E2\+IPPA \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a54983dc8e43545436ad2aebb58548856}\label{cache_8cpp_a54983dc8e43545436ad2aebb58548856} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const E2\+TRPR \&}]{a1,  }\item[{const E2\+TRPR \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_af86a5e5dacfb07fe7d279e01a6b25400}\label{cache_8cpp_af86a5e5dacfb07fe7d279e01a6b25400} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const EUMASK \&}]{a1,  }\item[{const EUMASK \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a41e3d4d107da6d4b106eda9ffdae068b}\label{cache_8cpp_a41e3d4d107da6d4b106eda9ffdae068b} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const EUTRKP \&}]{a1,  }\item[{const EUTRKP \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{cache_8cpp_a41e3d4d107da6d4b106eda9ffdae068b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cache_8cpp_a40400f0829b4c9bfe89008ec481c29f7}\label{cache_8cpp_a40400f0829b4c9bfe89008ec481c29f7} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const Imit\+Object \&}]{a1,  }\item[{const Imit\+Object \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a8c28ae915084be497f76281d276b9c7e}\label{cache_8cpp_a8c28ae915084be497f76281d276b9c7e} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \&}]{a1,  }\item[{const Imit\+Strobe \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a5a41bdbb8383ac056d0a475643029d32}\label{cache_8cpp_a5a41bdbb8383ac056d0a475643029d32} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const ISAP \&}]{a1,  }\item[{const ISAP \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a989b7036c383db79b1f2a3973e4f41ca}\label{cache_8cpp_a989b7036c383db79b1f2a3973e4f41ca} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const PAR\+\_\+\+SIGN \&}]{a1,  }\item[{const PAR\+\_\+\+SIGN \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a1b3f221f0537e2fcde6745e65066d639}\label{cache_8cpp_a1b3f221f0537e2fcde6745e65066d639} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const Trimts\+Msg \&}]{a1,  }\item[{const Trimts\+Msg \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{cache_8cpp_a08df91fac911f1b0a4942a6f25897d8f}\label{cache_8cpp_a08df91fac911f1b0a4942a6f25897d8f} 
+\index{cache.cpp@{cache.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!cache.cpp@{cache.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily static bool operator== (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{a1,  }\item[{const TStrobe \&}]{a2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

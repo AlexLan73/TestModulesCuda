@@ -1,0 +1,9 @@
+<map id="MainWindow::onTreeWidgetItemChanged" name="MainWindow::onTreeWidgetItemChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,208,63"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#ad59eeef4d4e0d76653a0871594edb0af" title=" " alt="" coords="256,31,489,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,41,242,41,242,46,208,46"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#adf31d2f21cd5a1adfa216ea607c9ce52" title=" " alt="" coords="537,5,737,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="489,29,523,26,524,32,490,35"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#a838ad212ad5ef30828aef00e3b3ac5fe" title=" " alt="" coords="540,55,735,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="490,51,526,55,526,60,489,57"/>
+</map>

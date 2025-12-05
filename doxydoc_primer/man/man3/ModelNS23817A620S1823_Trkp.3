@@ -1,0 +1,112 @@
+.TH "ModelNS23817A620S1823::Trkp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Trkp
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <trkp\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTrkp\fP ()"
+.br
+.ti -1c
+.RI "\fB~Trkp\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNewMsg\fP (\fBE2Trkp\fP *trkp)"
+.br
+.ti -1c
+.RI "std::complex< double > \fBgetCoef\fP (uint32_t \fBpolar\fP, uint32_t chanNum) const"
+.br
+.ti -1c
+.RI "void \fBones\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcopyPolarization\fP (uint32_t \fBpolar\fP, uint32_t channelsNum, \fBComplexFloat\fP cValues[])"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBdataType\fP"
+.br
+.ti -1c
+.RI "std::complex< double > \fBcoefs\fP [\fBSharedConst::maxPolars\fP][\fBtrkpCoefsNum\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Сообщение E2TRKP (калибровочные поправки и АФР для МПК)\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Trkp::Trkp ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Trkp::~Trkp ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Trkp::copyPolarization (uint32_t polar, uint32_t channelsNum, \fBComplexFloat\fP cValues[])\fC [private]\fP"
+Копирование комплексных значений коэффициентов для заданного количества каналов одной поляризации во внутренний массив класса\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP тип поляризации 
+.br
+\fIchannelsNum\fP количество каналов 
+.br
+\fIcValues\fP указатель на выходной буфер 
+.RE
+.PP
+
+.SS "std::complex< double > ModelNS23817A620S1823::Trkp::getCoef (uint32_t polar, uint32_t chanNum) const"
+Возврат коэффициента (калибровочного или АФР) для заданных поляризации и канала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP тип поляризации 
+.br
+\fIchanNum\fP номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+значение коэффициента (калибровочного или АФР) для заданных поляризации и канала 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trkp::ones ()"
+Заполнение единицами коэффициентов по всем каналам\&. 
+.SS "void ModelNS23817A620S1823::Trkp::print ()"
+Печать квадратур по обеим поляризациям и по каждому каналу\&. 
+.SS "void ModelNS23817A620S1823::Trkp::setNewMsg (\fBE2Trkp\fP * trkp)"
+Заполнение объекта заданными во входном сообщении Е2ТРКП значениями\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrkp\fP указатель на сетевое сообщение Е2ТРКП 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::complex<double> ModelNS23817A620S1823::Trkp::coefs[\fBSharedConst::maxPolars\fP][\fBtrkpCoefsNum\fP]\fC [private]\fP"
+квадратуры по обеим поляризациям и по каждому каналу 
+.SS "uint32_t ModelNS23817A620S1823::Trkp::dataType\fC [private]\fP"
+тип данных: 0 - калибровочный вектор (КЛБПРМ – результат расчета калибровочных параметров амплитудной и фазовой корректировки приемных подрешеток) 1 - АФР (сообщение используем для АФР) – данные предварительного формирования канальных сигналов с учетом поправок на вышку или КС в режиме калибровки приемных каналов 2 - взвешенный калибровочный вектор - КЛБПРМК – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов приемных блоков; 3 - КЛБПРД – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов передающих блоков 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,5 @@
+<map id="init_clb" name="init_clb">
+<area shape="rect" id="Node000001" title="Функция инициализирует буфер сообщения КЛБ значениями по умолчанию." alt="" coords="5,5,75,31"/>
+<area shape="rect" id="Node000002" href="$fcmgmt_8cpp.html#a0e651fc2b7b544c84761ff195ff44675" title="Функция производит инициализация сообщения Е2ТРКП." alt="" coords="123,5,215,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,15,109,15,109,21,75,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="drop_old_fc" name="drop_old_fc">
+<area shape="rect" id="Node000001" title="Функция удаляет просроченное ФУ из контейнера ФУ." alt="" coords="5,5,103,31"/>
+<area shape="rect" id="Node000002" href="$fcmgmt_8cpp.html#a4bc1f244997267d01a67797efe2a5317" title="Функция удаляет заданный квант ФУ из контейнера ФУ." alt="" coords="151,5,241,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,15,137,15,137,21,103,21"/>
+</map>

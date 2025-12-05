@@ -1,0 +1,7 @@
+<map id="MainWindow::prepareDPParams" name="MainWindow::prepareDPParams">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,235,31"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a16711cbf4abace6364cb7880883ccb4a" title=" " alt="" coords="283,5,508,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,15,269,15,269,21,235,21"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a97fb829c3831b9bf24d0e88bbbab73a9" title=" " alt="" coords="556,5,787,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="508,15,542,15,542,21,508,21"/>
+</map>

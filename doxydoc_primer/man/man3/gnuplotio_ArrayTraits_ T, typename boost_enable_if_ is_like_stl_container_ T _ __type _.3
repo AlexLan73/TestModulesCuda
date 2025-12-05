@@ -1,0 +1,60 @@
+.TH "gnuplotio::ArrayTraits< T, typename boost::enable_if< is_like_stl_container< T > >::type >" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::ArrayTraits< T, typename boost::enable_if< is_like_stl_container< T > >::type >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gnuplot\-iostream\&.h>\fP
+.PP
+Inherits \fBgnuplotio::ArrayTraitsDefaults< T::value_type >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBIteratorRange\fP< typename T::const_iterator, typename T::value_type > \fBrange_type\fP"
+.br
+.in -1c
+
+Public Types inherited from \fBgnuplotio::ArrayTraitsDefaults< T::value_type >\fP
+.in +1c
+.ti -1c
+.RI "typedef T::value_type \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBrange_type\fP \fBget_range\fP (const T &arg)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Static Public Attributes inherited from \fBgnuplotio::ArrayTraitsDefaults< T::value_type >\fP
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP"
+.br
+.ti -1c
+.RI "static const bool \fBallow_auto_unwrap\fP"
+.br
+.ti -1c
+.RI "static const size_t \fBdepth\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename T > typedef \fBIteratorRange\fP<typename T::const_iterator, typename T::value_type> \fBgnuplotio::ArrayTraits\fP< T, typename boost::enable_if< \fBis_like_stl_container\fP< T > >::type >::range_type"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > static \fBrange_type\fP \fBgnuplotio::ArrayTraits\fP< T, typename boost::enable_if< \fBis_like_stl_container\fP< T > >::type >::get_range (const T & arg)\fC [inline]\fP, \fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

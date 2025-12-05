@@ -1,0 +1,391 @@
+\doxysection{src/mpk1/blk223/libfc.cpp File Reference}
+\hypertarget{blk223_2libfc_8cpp}{}\label{blk223_2libfc_8cpp}\index{src/mpk1/blk223/libfc.cpp@{src/mpk1/blk223/libfc.cpp}}
+
+
+Вспомогательные функции для работы с ФУ.  
+
+
+{\ttfamily \#include "{}libfc.\+h"{}}\newline
+{\ttfamily \#include "{}stuff.\+h"{}}\newline
+{\ttfamily \#include $<$libutils/alen.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/libmpk.\+h$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for libfc.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{blk223_2libfc_8cpp_a762edd2d8c7f72ecd18659ff376ea21d}{int\+\_\+abs}} (int v)
+\item 
+unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_ae5eda4589f2706efaf13730025e2ef73}{mylog2}} (unsigned v)
+\item 
+static bool \mbox{\hyperlink{blk223_2libfc_8cpp_ac1c37614f61171677ea83587593efaea}{is\+\_\+power\+\_\+of\+\_\+two}} (unsigned v)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{blk223_2libfc_8cpp_aedf73c64578296f15e49f0b3f2941354}{calc\+\_\+nmassht\+\_\+fm}} (int ndfm, int32\+\_\+t nihs)
+\item 
+static Result$<$ bool $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_abdb763f0552c2b2c602495c6772efce7}{validate\+\_\+parsig}} (const PAR\+\_\+\+SIGN \&parsig)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию блока параметра сигнала. \end{DoxyCompactList}\item 
+static Result$<$ bool $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_ae143dad71473830d592e1fba650499a0}{validate\+\_\+trims\+\_\+object}} (const Imit\+Object \&imobject)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию одного имитируемого объекта строба сообщения ТРИМС. \end{DoxyCompactList}\item 
+static Result$<$ bool $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_afcf32336dd87795abd086548a5d7a9be}{validate\+\_\+trims\+\_\+strobe}} (const Imit\+Strobe \&strobe)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию одного строба сообщения ТРИМС. \end{DoxyCompactList}\item 
+Result$<$ Trimts\+Msg $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_adcc96d2018f8e441d451832066f074dc}{validate\+\_\+trims}} (const Trimts\+Msg \&msg)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию сообщения ТРИМС. \end{DoxyCompactList}\item 
+Result$<$ bool $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_a754f4aeec3b52d50fcdb5203a70bc0db}{validate\+\_\+trpr\+\_\+strobe}} (const TStrobe \&strobe)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию одного строба сообщения ТРПР. \end{DoxyCompactList}\item 
+Result$<$ E2\+TRPR $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_a0af808af10ca49f97f0179d64f48f81e}{validate\+\_\+trpr}} (const E2\+TRPR \&msg, uint rek\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию сообщения ТРПР. \end{DoxyCompactList}\item 
+static tuple$<$ uint8\+\_\+t, uint8\+\_\+t $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_acf7ac68cb0655fe69cf60e98c65d8f61}{assign\+\_\+blk232\+\_\+inputs}} (uint8\+\_\+t mask979, uint8\+\_\+t mask232)
+\item 
+static tuple$<$ uint, uint $>$ \mbox{\hyperlink{blk223_2libfc_8cpp_ac2effc63cfa3d66da38751a916661a0d}{frags}} (const TStrobe \&netstrb, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&unistrb)
+\item 
+void \mbox{\hyperlink{blk223_2libfc_8cpp_a7efff375c8ab74709f6acc10b23a4287}{fill\+\_\+wire\+\_\+header}} (const TStrobe \&netstrb, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&unistrb, cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&wirehd)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a2be6cf3683efb0dffe45260d99fb17be}{MAX\+\_\+\+STRB\+\_\+\+LENGTH}} = 5 \texorpdfstring{$\ast$}{*} (1u $<$$<$ 19)
+\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a28f20e6f50c0bdcd2aa005a6e5240b59}{BLK232\+\_\+\+EN\+\_\+\+IO1}} = 1 $<$$<$ 0
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 1. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a82b460e1659285dd403e843a21242aa5}{BLK232\+\_\+\+EN\+\_\+\+IO2}} = 1 $<$$<$ 1
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 2. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a33fd89e651df3f2096cefaa5bb2de274}{BLK232\+\_\+\+EN\+\_\+\+IO4}} = 1 $<$$<$ 2
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 4. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a85a005f4f43bf158792a596963706653}{BLK232\+\_\+\+EN\+\_\+\+IO5}} = 1 $<$$<$ 3
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 5. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a1393dd69e89c0d9d9c95b30ea65c230b}{BLK979\+\_\+\+HORZ\+\_\+\+UPPER}} = 1 $<$$<$ 3
+\begin{DoxyCompactList}\small\item\em верхний 979 в ГП \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a8cefc3c6c05de3863da333cead6e0665}{BLK979\+\_\+\+HORZ\+\_\+\+LOWER}} = 1 $<$$<$ 2
+\begin{DoxyCompactList}\small\item\em нижний 979 в ВП \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_a1df918d2d05aa76e99254dac7e974a4a}{BLK979\+\_\+\+VERT\+\_\+\+UPPER}} = 1 $<$$<$ 1
+\begin{DoxyCompactList}\small\item\em верхний 979 в ВП \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk223_2libfc_8cpp_adcc2a2ccfb41f10a6b4375a5858d70a1}{BLK979\+\_\+\+VERT\+\_\+\+LOWER}} = 1 $<$$<$ 0
+\begin{DoxyCompactList}\small\item\em нижний 979 в ВП \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Вспомогательные функции для работы с ФУ. 
+
+\begin{DoxyAuthor}{Author}
+vmg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27.\+11.\+2015 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{blk223_2libfc_8cpp_acf7ac68cb0655fe69cf60e98c65d8f61}\label{blk223_2libfc_8cpp_acf7ac68cb0655fe69cf60e98c65d8f61} 
+\index{libfc.cpp@{libfc.cpp}!assign\_blk232\_inputs@{assign\_blk232\_inputs}}
+\index{assign\_blk232\_inputs@{assign\_blk232\_inputs}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{assign\_blk232\_inputs()}{assign\_blk232\_inputs()}}
+{\footnotesize\ttfamily static tuple$<$ uint8\+\_\+t, uint8\+\_\+t $>$ assign\+\_\+blk232\+\_\+inputs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mask979,  }\item[{uint8\+\_\+t}]{mask232 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+заполняет маски управления входами 232 блока (I/O x 233 ячейки) возвращает пару (маска блока232 ВП, маска блока 232 ГП) \Hypertarget{blk223_2libfc_8cpp_aedf73c64578296f15e49f0b3f2941354}\label{blk223_2libfc_8cpp_aedf73c64578296f15e49f0b3f2941354} 
+\index{libfc.cpp@{libfc.cpp}!calc\_nmassht\_fm@{calc\_nmassht\_fm}}
+\index{calc\_nmassht\_fm@{calc\_nmassht\_fm}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_nmassht\_fm()}{calc\_nmassht\_fm()}}
+{\footnotesize\ttfamily static uint32\+\_\+t calc\+\_\+nmassht\+\_\+fm (\begin{DoxyParamCaption}\item[{int}]{ndfm,  }\item[{int32\+\_\+t}]{nihs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Расчет количества повторений знаков ФМ на длительности дискрета фазоманипуляции \Hypertarget{blk223_2libfc_8cpp_a7efff375c8ab74709f6acc10b23a4287}\label{blk223_2libfc_8cpp_a7efff375c8ab74709f6acc10b23a4287} 
+\index{libfc.cpp@{libfc.cpp}!fill\_wire\_header@{fill\_wire\_header}}
+\index{fill\_wire\_header@{fill\_wire\_header}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{fill\_wire\_header()}{fill\_wire\_header()}}
+{\footnotesize\ttfamily void fill\+\_\+wire\+\_\+header (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{netstrb,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&}]{unistrb,  }\item[{cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&}]{wirehd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8cpp_a7efff375c8ab74709f6acc10b23a4287_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8cpp_ac2effc63cfa3d66da38751a916661a0d}\label{blk223_2libfc_8cpp_ac2effc63cfa3d66da38751a916661a0d} 
+\index{libfc.cpp@{libfc.cpp}!frags@{frags}}
+\index{frags@{frags}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{frags()}{frags()}}
+{\footnotesize\ttfamily static tuple$<$ uint, uint $>$ frags (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{netstrb,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&}]{unistrb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Вычисляет количество фрагментов, на которые дробится полотно, и количество некогерентно объединяемых фрагментов (например, если fr == 8 и fruni == 2, то в результате объединения 8 фрагментов получается 4) \Hypertarget{blk223_2libfc_8cpp_a762edd2d8c7f72ecd18659ff376ea21d}\label{blk223_2libfc_8cpp_a762edd2d8c7f72ecd18659ff376ea21d} 
+\index{libfc.cpp@{libfc.cpp}!int\_abs@{int\_abs}}
+\index{int\_abs@{int\_abs}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{int\_abs()}{int\_abs()}}
+{\footnotesize\ttfamily int int\+\_\+abs (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{blk223_2libfc_8cpp_ac1c37614f61171677ea83587593efaea}\label{blk223_2libfc_8cpp_ac1c37614f61171677ea83587593efaea} 
+\index{libfc.cpp@{libfc.cpp}!is\_power\_of\_two@{is\_power\_of\_two}}
+\index{is\_power\_of\_two@{is\_power\_of\_two}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_power\_of\_two()}{is\_power\_of\_two()}}
+{\footnotesize\ttfamily static bool is\+\_\+power\+\_\+of\+\_\+two (\begin{DoxyParamCaption}\item[{unsigned}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{blk223_2libfc_8cpp_ae5eda4589f2706efaf13730025e2ef73}\label{blk223_2libfc_8cpp_ae5eda4589f2706efaf13730025e2ef73} 
+\index{libfc.cpp@{libfc.cpp}!mylog2@{mylog2}}
+\index{mylog2@{mylog2}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{mylog2()}{mylog2()}}
+{\footnotesize\ttfamily unsigned mylog2 (\begin{DoxyParamCaption}\item[{unsigned}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{blk223_2libfc_8cpp_abdb763f0552c2b2c602495c6772efce7}\label{blk223_2libfc_8cpp_abdb763f0552c2b2c602495c6772efce7} 
+\index{libfc.cpp@{libfc.cpp}!validate\_parsig@{validate\_parsig}}
+\index{validate\_parsig@{validate\_parsig}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_parsig()}{validate\_parsig()}}
+{\footnotesize\ttfamily static Result$<$ bool $>$ validate\+\_\+parsig (\begin{DoxyParamCaption}\item[{const PAR\+\_\+\+SIGN \&}]{parsig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Производит базовую валидацию блока параметра сигнала. 
+
+Функция выполняет последовательные проверки ключевых параметров структуры. В случае успешного прохождения всех проверок, функция возвращает true, в случае ошибки выводит подробное сообщение об ошибке и возвращает false. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em parsig} & Ссылка на буфер блока ПАРСИГ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Если блок корректен, вернет true. 
+
+Если блок не прошел валидацию, вернет false. 
+\end{DoxyReturn}
+\Hypertarget{blk223_2libfc_8cpp_adcc96d2018f8e441d451832066f074dc}\label{blk223_2libfc_8cpp_adcc96d2018f8e441d451832066f074dc} 
+\index{libfc.cpp@{libfc.cpp}!validate\_trims@{validate\_trims}}
+\index{validate\_trims@{validate\_trims}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_trims()}{validate\_trims()}}
+{\footnotesize\ttfamily Result$<$ Trimts\+Msg $>$ validate\+\_\+trims (\begin{DoxyParamCaption}\item[{const Trimts\+Msg \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Производит базовую валидацию сообщения ТРИМС. 
+
+Функция производит последовательный перебор стрбов в заданном сетевом сообщении и для каждого вызывает функцию проверки имитационного строба. Если ошибки не были обнаружены, функция вернет true, иначе вернет false. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Ссылка на буфер сообщения ТРИМС. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает сообщение с валидными стробами. 
+
+Возвращает сообщение об ошибке, если валидных стробов нет. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8cpp_adcc96d2018f8e441d451832066f074dc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8cpp_ae143dad71473830d592e1fba650499a0}\label{blk223_2libfc_8cpp_ae143dad71473830d592e1fba650499a0} 
+\index{libfc.cpp@{libfc.cpp}!validate\_trims\_object@{validate\_trims\_object}}
+\index{validate\_trims\_object@{validate\_trims\_object}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_trims\_object()}{validate\_trims\_object()}}
+{\footnotesize\ttfamily static Result$<$ bool $>$ validate\+\_\+trims\+\_\+object (\begin{DoxyParamCaption}\item[{const Imit\+Object \&}]{imobject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Производит базовую валидацию одного имитируемого объекта строба сообщения ТРИМС. 
+
+Функция выполняет последовательные проверки ключевых параметров структуры. В случае успешного прохождения всех проверок, функция возвращает true, в случае ошибки выводит подробное сообщение об ошибке и возвращает false. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em imobject} & Ссылка на буфер объекта строба сообщения ТРИМС. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Если объект корректен, вернет true. 
+
+Если объект не прошел валидацию, вернет false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{blk223_2libfc_8cpp_ae143dad71473830d592e1fba650499a0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8cpp_afcf32336dd87795abd086548a5d7a9be}\label{blk223_2libfc_8cpp_afcf32336dd87795abd086548a5d7a9be} 
+\index{libfc.cpp@{libfc.cpp}!validate\_trims\_strobe@{validate\_trims\_strobe}}
+\index{validate\_trims\_strobe@{validate\_trims\_strobe}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_trims\_strobe()}{validate\_trims\_strobe()}}
+{\footnotesize\ttfamily static Result$<$ bool $>$ validate\+\_\+trims\+\_\+strobe (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \&}]{strobe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Производит базовую валидацию одного строба сообщения ТРИМС. 
+
+Функция выполняет последовательные проверки ключевых параметров структуры. В случае успешного прохождения всех проверок, функция возвращает true, в случае ошибки выводит подробное сообщение об ошибке и возвращает false. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strobe} & Ссылка на буфер строба сообщения ТРИМС. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Если строб корректен, вернет true. 
+
+Если строб не прошел валидацию, вернет false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8cpp_afcf32336dd87795abd086548a5d7a9be_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8cpp_a0af808af10ca49f97f0179d64f48f81e}\label{blk223_2libfc_8cpp_a0af808af10ca49f97f0179d64f48f81e} 
+\index{libfc.cpp@{libfc.cpp}!validate\_trpr@{validate\_trpr}}
+\index{validate\_trpr@{validate\_trpr}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_trpr()}{validate\_trpr()}}
+{\footnotesize\ttfamily Result$<$ E2\+TRPR $>$ validate\+\_\+trpr (\begin{DoxyParamCaption}\item[{const E2\+TRPR \&}]{msg,  }\item[{uint}]{rek\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Производит базовую валидацию сообщения ТРПР. 
+
+Функция производит последовательный перебор стробов в заданном сетевом сообщении и для каждого вызывает функцию проверки целевого строба. Если в стробе ошибки не были обнаружены, то функция копирует этот строб во временную переменную. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Ссылка на буфер сообщения ТРПР. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rek\+\_\+num} & Номер РЭК (стробы, не предназначенные этому РЭК, тихо сливаются -\/ не копирются в результат) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает сообщение с валидными стробами. 
+
+Возвращает сообщение об ошибке, если валидных стробов нет. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8cpp_a0af808af10ca49f97f0179d64f48f81e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8cpp_a754f4aeec3b52d50fcdb5203a70bc0db}\label{blk223_2libfc_8cpp_a754f4aeec3b52d50fcdb5203a70bc0db} 
+\index{libfc.cpp@{libfc.cpp}!validate\_trpr\_strobe@{validate\_trpr\_strobe}}
+\index{validate\_trpr\_strobe@{validate\_trpr\_strobe}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_trpr\_strobe()}{validate\_trpr\_strobe()}}
+{\footnotesize\ttfamily Result$<$ bool $>$ validate\+\_\+trpr\+\_\+strobe (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{strobe }\end{DoxyParamCaption})}
+
+
+
+Производит базовую валидацию одного строба сообщения ТРПР. 
+
+Функция выполняет последовательные проверки ключевых параметров структуры. В случае успешного прохождения всех проверок, функция возвращает true, в случае ошибки выводит подробное сообщение об ошибке и возвращает false. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strobe} & Ссылка на буфер строба сообщения ТРПР. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Если строб корректен, вернет true. 
+
+Если строб не прошел валидацию, вернет false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{blk223_2libfc_8cpp_a754f4aeec3b52d50fcdb5203a70bc0db_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{blk223_2libfc_8cpp_a28f20e6f50c0bdcd2aa005a6e5240b59}\label{blk223_2libfc_8cpp_a28f20e6f50c0bdcd2aa005a6e5240b59} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO1@{BLK232\_EN\_IO1}}
+\index{BLK232\_EN\_IO1@{BLK232\_EN\_IO1}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO1}{BLK232\_EN\_IO1}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO1 = 1 $<$$<$ 0}
+
+
+
+Использовать вход I/O 1. 
+
+На 233 ячейке используются 4 входа (из 5) -\/ I/O 1, I/O 2, I/O 4, I/O 5 (IO3 не используется). На борту каждой поляризации установлено по 1 блоку, "{}своя"{} поляризация"{} подсоединена к I/O 1 и I/O 2 (к I/O 1 подсоединен верхний блок 979, к I/O 2 -\/ нижний); чужая -\/ к I/O 4 и I/O 5 (верхний и нижний блоки 979, соответственно). Выбор используемых входов управляется битовыми масками mode\+\_\+in\+\_\+sfp\+\_\+\{v,g\}p; соответствие битов входам описано ниже.
+
+Битовые маски задают и количество обрабатываемых поляризаций -\/ если включены по 1 входу с разных поляризаций (I/O 1 и I/O 4, например), то 233 ячейка обрабатывает 2 поляризации, иначе -\/ одну (ту, которая подключена к соответствующим входам); от этого зависит формат выдаваемых ПЛИСами данных.
+
+Каждый 232 блок имеет право обрабатывать либо свою поляризацию, либо свою и чужую (хотя есть техническая возможность обрабатывать только чужую, это запрещено); в каждый момент времени могут быть включены не более 2-\/х входов (таким образом, количество единичных битов в mode\+\_\+in\+\_\+sfp\+\_\+\texorpdfstring{$\ast$}{*} соответствует количеству обрабатываемых поляризаций).
+
+Биты mode\+\_\+in\+\_\+sfp\+\_\+\texorpdfstring{$\ast$}{*} задаются на основании битов поля, которое по историческим причинам называется mask232. Это массив из двух байтов\+: mask232\mbox{[}0\mbox{]}-\/ маска 979 блоков, бит 3\+: верхний 979 ГП бит 2\+: нижний 979 ГП бит 1\+: верхний 979 ВП бит 0\+: нижний 979 ВП (т.\+е. нижние блоки соответствуют младшим битам) mask232\mbox{[}1\mbox{]}-\/ маска 232 блоков, бит 1\+: 232 блок ГП бит 0\+: 232 блок ВП Биты в mode\+\_\+in\+\_\+sfp\+\_\+\{v,g\} \Hypertarget{blk223_2libfc_8cpp_a82b460e1659285dd403e843a21242aa5}\label{blk223_2libfc_8cpp_a82b460e1659285dd403e843a21242aa5} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO2@{BLK232\_EN\_IO2}}
+\index{BLK232\_EN\_IO2@{BLK232\_EN\_IO2}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO2}{BLK232\_EN\_IO2}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO2 = 1 $<$$<$ 1}
+
+
+
+Использовать вход I/O 2. 
+
+\Hypertarget{blk223_2libfc_8cpp_a33fd89e651df3f2096cefaa5bb2de274}\label{blk223_2libfc_8cpp_a33fd89e651df3f2096cefaa5bb2de274} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO4@{BLK232\_EN\_IO4}}
+\index{BLK232\_EN\_IO4@{BLK232\_EN\_IO4}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO4}{BLK232\_EN\_IO4}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO4 = 1 $<$$<$ 2}
+
+
+
+Использовать вход I/O 4. 
+
+\Hypertarget{blk223_2libfc_8cpp_a85a005f4f43bf158792a596963706653}\label{blk223_2libfc_8cpp_a85a005f4f43bf158792a596963706653} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO5@{BLK232\_EN\_IO5}}
+\index{BLK232\_EN\_IO5@{BLK232\_EN\_IO5}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO5}{BLK232\_EN\_IO5}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO5 = 1 $<$$<$ 3}
+
+
+
+Использовать вход I/O 5. 
+
+\Hypertarget{blk223_2libfc_8cpp_a8cefc3c6c05de3863da333cead6e0665}\label{blk223_2libfc_8cpp_a8cefc3c6c05de3863da333cead6e0665} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_HORZ\_LOWER@{BLK979\_HORZ\_LOWER}}
+\index{BLK979\_HORZ\_LOWER@{BLK979\_HORZ\_LOWER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_HORZ\_LOWER}{BLK979\_HORZ\_LOWER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+HORZ\+\_\+\+LOWER = 1 $<$$<$ 2}
+
+
+
+нижний 979 в ВП 
+
+\Hypertarget{blk223_2libfc_8cpp_a1393dd69e89c0d9d9c95b30ea65c230b}\label{blk223_2libfc_8cpp_a1393dd69e89c0d9d9c95b30ea65c230b} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_HORZ\_UPPER@{BLK979\_HORZ\_UPPER}}
+\index{BLK979\_HORZ\_UPPER@{BLK979\_HORZ\_UPPER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_HORZ\_UPPER}{BLK979\_HORZ\_UPPER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+HORZ\+\_\+\+UPPER = 1 $<$$<$ 3}
+
+
+
+верхний 979 в ГП 
+
+биты в маске 979 \Hypertarget{blk223_2libfc_8cpp_adcc2a2ccfb41f10a6b4375a5858d70a1}\label{blk223_2libfc_8cpp_adcc2a2ccfb41f10a6b4375a5858d70a1} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_VERT\_LOWER@{BLK979\_VERT\_LOWER}}
+\index{BLK979\_VERT\_LOWER@{BLK979\_VERT\_LOWER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_VERT\_LOWER}{BLK979\_VERT\_LOWER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+VERT\+\_\+\+LOWER = 1 $<$$<$ 0}
+
+
+
+нижний 979 в ВП 
+
+\Hypertarget{blk223_2libfc_8cpp_a1df918d2d05aa76e99254dac7e974a4a}\label{blk223_2libfc_8cpp_a1df918d2d05aa76e99254dac7e974a4a} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_VERT\_UPPER@{BLK979\_VERT\_UPPER}}
+\index{BLK979\_VERT\_UPPER@{BLK979\_VERT\_UPPER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_VERT\_UPPER}{BLK979\_VERT\_UPPER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+VERT\+\_\+\+UPPER = 1 $<$$<$ 1}
+
+
+
+верхний 979 в ВП 
+
+\Hypertarget{blk223_2libfc_8cpp_a2be6cf3683efb0dffe45260d99fb17be}\label{blk223_2libfc_8cpp_a2be6cf3683efb0dffe45260d99fb17be} 
+\index{libfc.cpp@{libfc.cpp}!MAX\_STRB\_LENGTH@{MAX\_STRB\_LENGTH}}
+\index{MAX\_STRB\_LENGTH@{MAX\_STRB\_LENGTH}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_STRB\_LENGTH}{MAX\_STRB\_LENGTH}}
+{\footnotesize\ttfamily const unsigned MAX\+\_\+\+STRB\+\_\+\+LENGTH = 5 \texorpdfstring{$\ast$}{*} (1u $<$$<$ 19)}
+

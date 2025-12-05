@@ -1,0 +1,35 @@
+\doxysection{e2trkp.\+h}
+\hypertarget{e2trkp_8h_source}{}\label{e2trkp_8h_source}\index{include/model/e2trkp.h@{include/model/e2trkp.h}}
+\mbox{\hyperlink{e2trkp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ E2TRKP\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ E2TRKP\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <libvork/rtnetxx.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <libvork/e2trkp.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ максимальное\ количество\ коэффциентов\ для\ всех\ станций\ одинаковое}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{e2trkp_8h_a51169032547efc833cf082394153cd16}{trkpCoefsNum}}\ =\ 1560;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ FloatComplex\ \mbox{\hyperlink{e2trkp_8h_a2b9cc9f0f756c29599ff9c373913153a}{ComplexFloat}};\ \textcolor{comment}{//\ используем\ тип\ из\ libvork}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTrkpHeader}{TrkpHeader}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ THedMess\ headMsg;}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00034\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structTrkpHeader_a6f18b879f008942084c7d2dfc9e3ff09}{tip}};}
+\DoxyCodeLine{00036\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structTrkpHeader_ac1827fff8116b8717c8dfdb8cbddafcb}{npos}};}
+\DoxyCodeLine{00037\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structTrkpHeader_a7f43a1f9daf09c77edbde4c5f9efb8fe}{rez}}[3];}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structE2Trkp}{E2Trkp}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structTrkpHeader}{TrkpHeader}}\ \mbox{\hyperlink{structE2Trkp_adc2dbe6f9f077f339b26dc9a1f69d5e2}{header}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ 2\ -\/\ две\ поляризации}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{e2trkp_8h_a2b9cc9f0f756c29599ff9c373913153a}{ComplexFloat}}\ \mbox{\hyperlink{structE2Trkp_ac36d432a6a861be2b39376521d7c8f8b}{amn}}[2][\mbox{\hyperlink{e2trkp_8h_a51169032547efc833cf082394153cd16}{trkpCoefsNum}}];}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ E2TRKP\_H\_\_}}
+
+\end{DoxyCode}

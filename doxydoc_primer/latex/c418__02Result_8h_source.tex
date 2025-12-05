@@ -1,0 +1,31 @@
+\doxysection{c418\+\_\+02\+Result.\+h}
+\hypertarget{c418__02Result_8h_source}{}\label{c418__02Result_8h_source}\index{src/c418\_02Result.h@{src/c418\_02Result.h}}
+\mbox{\hyperlink{c418__02Result_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C418\_02RESULT\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C418\_02RESULT\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ uint64\_t,\ [u]int32\_t}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}\ \textcolor{comment}{//\ SharedConst::}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sliceFile_8h}{sliceFile.h}}"{}}\ \textcolor{comment}{//\ SliceFile}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c412__06Result_8h}{c412\_06Result.h}}"{}}\ \textcolor{comment}{//\ C412\_06Result}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ippa_8h}{ippa.h}}"{}}\ \textcolor{comment}{//\ maxActiveInterferences}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ предполагается,\ что\ SliceFile\ для\ каждого\ среза\ будет\ заведена}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ своя\ и\ заполнение\ будет\ где-\/нибудь\ в\ функции\ getResult()}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result_af9c4619deb2329e94520eafa6db63bc8}{targetSigmas}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}];}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result_a2a369b7478ca8f08b192a47b48335989}{clear418Results}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result_a5d3de3fb037d85985ff10d61fc728100}{dumpTargetSigmas}}(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\&\ sFile,\ uint32\_t\ raysNum);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result_a970ecd6d0de9955e69b85269923c4978}{C418\_02Result}}();}
+\DoxyCodeLine{00030\ \};\ \textcolor{comment}{//\ struct\ C418\_02Result}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C418\_02RESULT\_H\_\_}}
+
+\end{DoxyCode}

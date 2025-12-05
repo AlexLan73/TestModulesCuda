@@ -1,0 +1,195 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::TStrobe\+Ext Struct Reference}
+\hypertarget{structModelNS23817A620S1823_1_1TStrobeExt}{}\label{structModelNS23817A620S1823_1_1TStrobeExt}\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+
+
+{\ttfamily \#include $<$b232.\+h$>$}
+
+
+
+Inheritance diagram for Model\+NS23817\+A620\+S1823\+::TStrobe\+Ext\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{structModelNS23817A620S1823_1_1TStrobeExt__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::TStrobe\+Ext\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{structModelNS23817A620S1823_1_1TStrobeExt__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3}{Threshold\+Types}} \{ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a706b99ac1324c267f968bc2c0ac1d485}{ABSOLUTE}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a2e53ad16eb9f3e8a6b1359d65c854443}{RELATIVE}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3ade80ff09b35ee2b3e2784ba69a91b5c9}{FLOATING}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a18eb0f28da1a62f9e2d2d2e47eadd3f8}{THRESHOLD\+\_\+\+MASK}} = (ABSOLUTE \texorpdfstring{$\vert$}{|} RELATIVE \texorpdfstring{$\vert$}{|} FLOATING)
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a40037e96150df829fb04a93cd020a966}{TStrobe\+Ext}} (const TStrobe \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a49177b832bd0a7a4f15943023e77207d}{rays}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a2bb519a4325ee70a0d5a0af9a7a114ef}{type}}
+\item 
+bool \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a07a967daf6ccf8f43394d14e889c2684}{form\+Eval\+Perm}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a302a04385c3827eb9336bef3960fa0e0}{impulses\+Number}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a09471decf47f6cc982bde20474afc93c}{th\+Win\+SzR}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a39c2496cdd946304fa51e713cb6642ac}{th\+Win\+SzV}}
+\item 
+bool \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_aaf9be41c745d73b31a318007f85d4a0d}{search\+Local\+Max}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a73040ce09369b21429cc89caca7b11d2}{float\+Thres\+Mult}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a8d1f24baa70ea38ab1d989c3adde4351}{rel\+Fix\+Thres\+Mult}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a44300f849f387e63c22566acc4c7668f}{abs\+Threshold}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a9ed1ff6befc44dee2d063551ffa5c1f2}{samples\+In\+Ray}}
+\item 
+uint \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a3d068d2f1bd31eee1dd26dbe37109561}{polars\+Combining\+Way}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Это подмножество данных \doxylink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}, используемое в ПЛО. Всё это вынесено в отдельную структуру (а константы типа порога вообще продублированы) для того, чтобы ПЛО было полностью отвязано от модели и легко встраивалось в код ФПО. Возможно, это окажется временным решением. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3}\label{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!ThresholdTypes@{ThresholdTypes}}
+\index{ThresholdTypes@{ThresholdTypes}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{ThresholdTypes}{ThresholdTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3}{Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::\+Threshold\+Types}}}
+
+Биты порогов для ПЛО. В ФУ строба может быть указана любая их комбинация. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ABSOLUTE@{ABSOLUTE}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!ABSOLUTE@{ABSOLUTE}}}\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a706b99ac1324c267f968bc2c0ac1d485}\label{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a706b99ac1324c267f968bc2c0ac1d485} 
+ABSOLUTE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELATIVE@{RELATIVE}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!RELATIVE@{RELATIVE}}}\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a2e53ad16eb9f3e8a6b1359d65c854443}\label{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a2e53ad16eb9f3e8a6b1359d65c854443} 
+RELATIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOATING@{FLOATING}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!FLOATING@{FLOATING}}}\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3ade80ff09b35ee2b3e2784ba69a91b5c9}\label{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3ade80ff09b35ee2b3e2784ba69a91b5c9} 
+FLOATING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THRESHOLD\_MASK@{THRESHOLD\_MASK}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!THRESHOLD\_MASK@{THRESHOLD\_MASK}}}\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a18eb0f28da1a62f9e2d2d2e47eadd3f8}\label{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a18eb0f28da1a62f9e2d2d2e47eadd3f8} 
+THRESHOLD\+\_\+\+MASK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a40037e96150df829fb04a93cd020a966}\label{structModelNS23817A620S1823_1_1TStrobeExt_a40037e96150df829fb04a93cd020a966} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!TStrobeExt@{TStrobeExt}}
+\index{TStrobeExt@{TStrobeExt}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{TStrobeExt()}{TStrobeExt()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::\+TStrobe\+Ext (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{s }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structModelNS23817A620S1823_1_1TStrobeExt_a40037e96150df829fb04a93cd020a966_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a44300f849f387e63c22566acc4c7668f}\label{structModelNS23817A620S1823_1_1TStrobeExt_a44300f849f387e63c22566acc4c7668f} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!absThreshold@{absThreshold}}
+\index{absThreshold@{absThreshold}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{absThreshold}{absThreshold}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::abs\+Threshold}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a73040ce09369b21429cc89caca7b11d2}\label{structModelNS23817A620S1823_1_1TStrobeExt_a73040ce09369b21429cc89caca7b11d2} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!floatThresMult@{floatThresMult}}
+\index{floatThresMult@{floatThresMult}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{floatThresMult}{floatThresMult}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::float\+Thres\+Mult}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a07a967daf6ccf8f43394d14e889c2684}\label{structModelNS23817A620S1823_1_1TStrobeExt_a07a967daf6ccf8f43394d14e889c2684} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!formEvalPerm@{formEvalPerm}}
+\index{formEvalPerm@{formEvalPerm}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{formEvalPerm}{formEvalPerm}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::form\+Eval\+Perm}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a302a04385c3827eb9336bef3960fa0e0}\label{structModelNS23817A620S1823_1_1TStrobeExt_a302a04385c3827eb9336bef3960fa0e0} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!impulsesNumber@{impulsesNumber}}
+\index{impulsesNumber@{impulsesNumber}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{impulsesNumber}{impulsesNumber}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::impulses\+Number}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a3d068d2f1bd31eee1dd26dbe37109561}\label{structModelNS23817A620S1823_1_1TStrobeExt_a3d068d2f1bd31eee1dd26dbe37109561} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!polarsCombiningWay@{polarsCombiningWay}}
+\index{polarsCombiningWay@{polarsCombiningWay}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{polarsCombiningWay}{polarsCombiningWay}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::polars\+Combining\+Way}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a49177b832bd0a7a4f15943023e77207d}\label{structModelNS23817A620S1823_1_1TStrobeExt_a49177b832bd0a7a4f15943023e77207d} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!rays@{rays}}
+\index{rays@{rays}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{rays}{rays}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::rays}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a8d1f24baa70ea38ab1d989c3adde4351}\label{structModelNS23817A620S1823_1_1TStrobeExt_a8d1f24baa70ea38ab1d989c3adde4351} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!relFixThresMult@{relFixThresMult}}
+\index{relFixThresMult@{relFixThresMult}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{relFixThresMult}{relFixThresMult}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::rel\+Fix\+Thres\+Mult}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a9ed1ff6befc44dee2d063551ffa5c1f2}\label{structModelNS23817A620S1823_1_1TStrobeExt_a9ed1ff6befc44dee2d063551ffa5c1f2} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!samplesInRay@{samplesInRay}}
+\index{samplesInRay@{samplesInRay}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{samplesInRay}{samplesInRay}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::samples\+In\+Ray}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_aaf9be41c745d73b31a318007f85d4a0d}\label{structModelNS23817A620S1823_1_1TStrobeExt_aaf9be41c745d73b31a318007f85d4a0d} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!searchLocalMax@{searchLocalMax}}
+\index{searchLocalMax@{searchLocalMax}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{searchLocalMax}{searchLocalMax}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::search\+Local\+Max}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a09471decf47f6cc982bde20474afc93c}\label{structModelNS23817A620S1823_1_1TStrobeExt_a09471decf47f6cc982bde20474afc93c} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!thWinSzR@{thWinSzR}}
+\index{thWinSzR@{thWinSzR}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{thWinSzR}{thWinSzR}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::th\+Win\+SzR}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a39c2496cdd946304fa51e713cb6642ac}\label{structModelNS23817A620S1823_1_1TStrobeExt_a39c2496cdd946304fa51e713cb6642ac} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!thWinSzV@{thWinSzV}}
+\index{thWinSzV@{thWinSzV}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{thWinSzV}{thWinSzV}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::th\+Win\+SzV}
+
+\Hypertarget{structModelNS23817A620S1823_1_1TStrobeExt_a2bb519a4325ee70a0d5a0af9a7a114ef}\label{structModelNS23817A620S1823_1_1TStrobeExt_a2bb519a4325ee70a0d5a0af9a7a114ef} 
+\index{ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}!type@{type}}
+\index{type@{type}!ModelNS23817A620S1823::TStrobeExt@{ModelNS23817A620S1823::TStrobeExt}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+TStrobe\+Ext\+::type}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{src_2b232_8h}{b232.\+h}}\item 
+src/\mbox{\hyperlink{b232_8cpp}{b232.\+cpp}}\end{DoxyCompactItemize}

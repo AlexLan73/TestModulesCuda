@@ -1,0 +1,111 @@
+\doxysection{gnuplotio\+::Array\+Traits\texorpdfstring{$<$}{<} std\+::pair\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4}{}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4}\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+
+
+{\ttfamily \#include $<$gnuplot-\/iostream.\+h$>$}
+
+
+
+Collaboration diagram for gnuplotio\+::Array\+Traits\texorpdfstring{$<$}{<} std\+::pair\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>} \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classgnuplotio_1_1PairOfRange}{Pair\+Of\+Range}}$<$ typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$ T $>$\+::range\+\_\+type, typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$ U $>$\+::range\+\_\+type $>$ \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a80b3c6c794a51c78f0c645e5e4c19afc}{range\+\_\+type}}
+\item 
+typedef std\+::pair$<$ typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$ T $>$\+::value\+\_\+type, typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$ U $>$\+::value\+\_\+type $>$ \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a143ab4d4cf6693d33e46fa41d3265aab}{value\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a80b3c6c794a51c78f0c645e5e4c19afc}{range\+\_\+type}} \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_abc84b60061de787f3526163183e186f7}{get\+\_\+range}} (const std\+::pair$<$ T, U $>$ \&arg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a8656ab8094037d88b470f718ff7197e0}{is\+\_\+container}} = \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$T$>$\+::is\+\_\+container \&\& \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$U$>$\+::is\+\_\+container
+\item 
+static const bool \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_afff9ebffb39ab8660bb59ffcc7d8a2e5}{allow\+\_\+auto\+\_\+unwrap}} = false
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc}{l\+\_\+depth}} = \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$T$>$\mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf}{\+::depth}}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546}{r\+\_\+depth}} = \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$U$>$\mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf}{\+::depth}}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf}{depth}} = (\mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc}{l\+\_\+depth}} $<$ \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546}{r\+\_\+depth}}) ? \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc}{l\+\_\+depth}} \+: \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546}{r\+\_\+depth}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a80b3c6c794a51c78f0c645e5e4c19afc}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a80b3c6c794a51c78f0c645e5e4c19afc} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!range\_type@{range\_type}}
+\index{range\_type@{range\_type}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{range\_type}{range\_type}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+typedef \mbox{\hyperlink{classgnuplotio_1_1PairOfRange}{Pair\+Of\+Range}}$<$typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$T$>$\+::range\+\_\+type, typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$U$>$\+::range\+\_\+type$>$ \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::range\+\_\+type}
+
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a143ab4d4cf6693d33e46fa41d3265aab}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a143ab4d4cf6693d33e46fa41d3265aab} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+typedef std\+::pair$<$typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$T$>$\+::value\+\_\+type, typename \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$U$>$\+::value\+\_\+type$>$ \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::value\+\_\+type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_abc84b60061de787f3526163183e186f7}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_abc84b60061de787f3526163183e186f7} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!get\_range@{get\_range}}
+\index{get\_range@{get\_range}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{get\_range()}{get\_range()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+static \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a80b3c6c794a51c78f0c645e5e4c19afc}{range\+\_\+type}} \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::get\+\_\+range (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ T, U $>$ \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_afff9ebffb39ab8660bb59ffcc7d8a2e5}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_afff9ebffb39ab8660bb59ffcc7d8a2e5} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!allow\_auto\_unwrap@{allow\_auto\_unwrap}}
+\index{allow\_auto\_unwrap@{allow\_auto\_unwrap}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{allow\_auto\_unwrap}{allow\_auto\_unwrap}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const bool \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::allow\+\_\+auto\+\_\+unwrap = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!depth@{depth}}
+\index{depth@{depth}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const size\+\_\+t \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::depth = (\mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc}{l\+\_\+depth}} $<$ \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546}{r\+\_\+depth}}) ? \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc}{l\+\_\+depth}} \+: \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546}{r\+\_\+depth}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a8656ab8094037d88b470f718ff7197e0}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a8656ab8094037d88b470f718ff7197e0} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!is\_container@{is\_container}}
+\index{is\_container@{is\_container}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{is\_container}{is\_container}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const bool \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::is\+\_\+container = \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$T$>$\+::is\+\_\+container \&\& \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$U$>$\+::is\+\_\+container\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_ae8be9661c88a8970da3d87c1afc063dc} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!l\_depth@{l\_depth}}
+\index{l\_depth@{l\_depth}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{l\_depth}{l\_depth}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const size\+\_\+t \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::l\+\_\+depth = \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$T$>$\mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf}{\+::depth}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546}\label{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a1b7e7f8976a5d0ed20b93ede3e25a546} 
+\index{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}!r\_depth@{r\_depth}}
+\index{r\_depth@{r\_depth}!gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$@{gnuplotio::ArrayTraits$<$ std::pair$<$ T, U $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{r\_depth}{r\_depth}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const size\+\_\+t \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{gnuplotio\+::\+Array\+Traits}}$<$ std\+::pair$<$ T, U $>$ $>$\+::r\+\_\+depth = \mbox{\hyperlink{classgnuplotio_1_1ArrayTraits}{Array\+Traits}}$<$U$>$\mbox{\hyperlink{classgnuplotio_1_1ArrayTraits_3_01std_1_1pair_3_01T_00_01U_01_4_01_4_a11b3be89ac9506fcfcceb318acc7e2bf}{\+::depth}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{gnuplot-iostream_8h}{gnuplot-\/iostream.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,231 @@
+.TH "SignalTable" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SignalTable
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <signalTable\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSignalInfo\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSignalTable\fP ()"
+.br
+.ti -1c
+.RI "\fB~SignalTable\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBgetNdec\fP (uint32_t sigType) const"
+.br
+.ti -1c
+.RI "int32_t \fBgetNfil\fP (uint32_t sigType) const"
+.br
+.ti -1c
+.RI "int32_t \fBgetDfm\fP (uint32_t sigType) const"
+.br
+.ti -1c
+.RI "double \fBgetNTay\fP (uint32_t sigType) const"
+.br
+.ti -1c
+.RI "int32_t \fBgetMSeqSignQuantity\fP (uint32_t sigType) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetNPoly\fP (uint32_t sigType) const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitM\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitSM\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitMrik\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitShared\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNfilM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNfilSM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNfilMrik\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNfilShared\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdecM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdecSM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdecMrik\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdecShared\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdFmM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdFmSM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdFmMrik\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNdFmShared\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNTayM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNTaySM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNTayMrik\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNTayShared\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillDfmM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillDfmSM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillDfmMrik\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillDfmShared\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNPolyM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNPolySM\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillNPolyMrik\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSignalInfo\fP \fBsignalsInfo\fP [\fBmaxSignals\fP]"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBmaxSignals\fP = 384"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+класс данных таблицы сигналов 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SignalTable::SignalTable ()"
+
+.SS "SignalTable::~SignalTable ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void SignalTable::fillDfmM ()\fC [private]\fP"
+заполнение поля dfm каждого сигнала станции Воронеж-М константными значениями 
+.SS "void SignalTable::fillDfmMrik ()\fC [private]\fP"
+заполнение поля dfm каждого сигнала станции МРИК константными значениями 
+.SS "void SignalTable::fillDfmShared ()\fC [private]\fP"
+заполнение поля dfm каждого общего для всех станций сигнала константными значениями 
+.SS "void SignalTable::fillDfmSM ()\fC [private]\fP"
+заполнение поля dfm каждого сигнала станции Воронеж-СМ константными значениями 
+.SS "void SignalTable::fillNdecM ()\fC [private]\fP"
+заполнение поля ndec каждого сигнала станции Воронеж-М константными значениями 
+.SS "void SignalTable::fillNdecMrik ()\fC [private]\fP"
+заполнение поля ndec каждого сигнала станции МРИК константными значениями 
+.SS "void SignalTable::fillNdecShared ()\fC [private]\fP"
+заполнение поля ndec каждого общего для всех станций сигнала константными значениями 
+.SS "void SignalTable::fillNdecSM ()\fC [private]\fP"
+заполнение поля ndec каждого сигнала станции Воронеж-СМ константными значениями 
+.SS "void SignalTable::fillNdFmM ()\fC [private]\fP"
+заполнение поля ndFm каждого сигнала станции Воронеж-М константными значениями 
+.SS "void SignalTable::fillNdFmMrik ()\fC [private]\fP"
+заполнение поля ndFm каждого сигнала станции МРИК константными значениями 
+.SS "void SignalTable::fillNdFmShared ()\fC [private]\fP"
+заполнение поля ndFm каждого общего для всех станций сигнала константными значениями 
+.SS "void SignalTable::fillNdFmSM ()\fC [private]\fP"
+заполнение поля ndFm каждого сигнала станции Воронеж-СМ константными значениями 
+.SS "void SignalTable::fillNfilM ()\fC [private]\fP"
+заполнение поля nfil каждого сигнала станции Воронеж-М константными значениями 
+.SS "void SignalTable::fillNfilMrik ()\fC [private]\fP"
+заполнение поля nfil каждого сигнала станции МРИК константными значениями 
+.SS "void SignalTable::fillNfilShared ()\fC [private]\fP"
+заполнение поля nfil каждого общего для всех станций сигнала константными значениями 
+.SS "void SignalTable::fillNfilSM ()\fC [private]\fP"
+заполнение поля nfil каждого сигнала станции Воронеж-СМ константными значениями 
+.SS "void SignalTable::fillNPolyM ()\fC [private]\fP"
+заполнение поля nPoly каждого сигнала станции Воронеж-М константными значениями 
+.SS "void SignalTable::fillNPolyMrik ()\fC [private]\fP"
+заполнение поля nPoly каждого сигнала станции МРИК константными значениями 
+.SS "void SignalTable::fillNPolySM ()\fC [private]\fP"
+заполнение поля nPoly каждого сигнала станции Воронеж-CМ константными значениями 
+.SS "void SignalTable::fillNTayM ()\fC [private]\fP"
+заполнение поля nTay каждого сигнала станции Воронеж-М константными значениями 
+.SS "void SignalTable::fillNTayMrik ()\fC [private]\fP"
+заполнение поля nTay каждого сигнала станции МРИК константными значениями 
+.SS "void SignalTable::fillNTayShared ()\fC [private]\fP"
+заполнение поля nTay каждого общего для всех станций сигнала константными значениями 
+.SS "void SignalTable::fillNTaySM ()\fC [private]\fP"
+заполнение поля nTay каждого сигнала станции Воронеж-СМ константными значениями 
+.SS "int32_t SignalTable::getDfm (uint32_t sigType) const"
+возвращает значение девиации частоты для заданного типа сигнала\&. Используется для ЛЧМ-сигналов 
+.SS "int32_t SignalTable::getMSeqSignQuantity (uint32_t sigType) const"
+возвращает число знаков М-последовательности 
+.SS "int32_t SignalTable::getNdec (uint32_t sigType) const"
+возвращает коэффициент прореживания по выходу ПЧВО для указанного типа сигнала 
+.SS "int32_t SignalTable::getNfil (uint32_t sigType) const"
+возвращает размер окна фильтра ПЧВО для указанного типа сигнала 
+.SS "uint32_t SignalTable::getNPoly (uint32_t sigType) const"
+возвращает код полинома для расчёта м-последовательности 
+.SS "double SignalTable::getNTay (uint32_t sigType) const"
+возвращает длительность дискрета ФМ в мкс для заданного типа сигнала 
+.SS "void SignalTable::initM ()\fC [private]\fP"
+заполнение части таблицы сигналов для Воронеж-М 
+.SS "void SignalTable::initMrik ()\fC [private]\fP"
+заполнение части таблицы сигналов для МРИК 
+.SS "void SignalTable::initShared ()\fC [private]\fP"
+заполнение части таблицы сигналов, общих для всех станций 
+.SS "void SignalTable::initSM ()\fC [private]\fP"
+заполнение части таблицы сигналов для Воронеж-СМ 
+.SH "Member Data Documentation"
+.PP 
+.SS "const uint32_t SignalTable::maxSignals = 384\fC [static]\fP, \fC [private]\fP"
+максимальное количество сигналов в таблице сигналов 
+.SS "\fBSignalInfo\fP SignalTable::signalsInfo[\fBmaxSignals\fP]\fC [private]\fP"
+массив информации о каждом сигнале 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

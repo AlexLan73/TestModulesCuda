@@ -1,0 +1,75 @@
+.TH "src/modelMain.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/modelMain.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstring>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <model/e2trimts\&.h>\fP
+.br
+\fC#include <model/RPC\&.h>\fP
+.br
+\fC#include <model/b232\&.h>\fP
+.br
+\fC#include <libutils/string\&.h>\fP
+.br
+\fC#include 'sharedConst\&.h'\fP
+.br
+\fC#include 'helpers\&.h'\fP
+.br
+\fC#include 'xyChanCoords\&.h'\fP
+.br
+\fC#include 'arCoefsArray\&.h'\fP
+.br
+\fC#include 'dfGroups\&.h'\fP
+.br
+\fC#include 'modelMain\&.h'\fP
+.br
+\fC#include 'blk978/blk978fc\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class T > void \fBdumpAsUint32\fP (const T *p, std::ostream &out)"
+.br
+.ti -1c
+.RI "static void \fBModelNS23817A620S1823::fixTrpr\fP (const \fBStationParams\fP &stationParams, E2TRPR &trpr)"
+.br
+.ti -1c
+.RI "static optional< \fBControlMessage\fP > \fBModelNS23817A620S1823::formPolarControlMessage\fP (\fBControlMsg\fP *cntrlMsg, \fBSharedConst::PolarizationTypes\fP \fBpolar\fP, uint cellNum)"
+.br
+.ti -1c
+.RI "static void \fBModelNS23817A620S1823::dumpFcM\fP (\fBControlMsg\fP &cm, uint crateNum, uint cellNum)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::list< std::string > \fBModelNS23817A620S1823::DEFAULT_DIR_LIST\fP"
+.br
+.ti -1c
+.RI "static const \fBSharedConst::PolarizationTypes\fP \fBModelNS23817A620S1823::polarTypes\fP []"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "template<class T > void dumpAsUint32 (const T * p, std::ostream & out)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

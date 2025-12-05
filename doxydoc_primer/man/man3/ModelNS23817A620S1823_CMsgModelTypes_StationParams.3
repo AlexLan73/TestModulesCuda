@@ -1,0 +1,98 @@
+.TH "ModelNS23817A620S1823::CMsgModelTypes::StationParams" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::CMsgModelTypes::StationParams
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <controlMsgModelTypes\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSharedConst::StationType\fP \fBstationType\fP"
+.br
+.ti -1c
+.RI "\fBSharedConst::QuadrCompFormTypes\fP \fBquadrCompFormType\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmaxChannelsInCell\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmaxChannels\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmaxCellsInCrate\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmaxCrates\fP"
+.br
+.ti -1c
+.RI "bool \fBdelayCompensationPerm\fP"
+.br
+.ti -1c
+.RI "double \fBcentralFreq\fP"
+.br
+.ti -1c
+.RI "double \fBsamplingFreq\fP"
+.br
+.ti -1c
+.RI "double \fBfreqPointShift\fP"
+.br
+.ti -1c
+.RI "int32_t \fBnyquistINum\fP"
+.br
+.ti -1c
+.RI "double \fBheterFreqStep\fP"
+.br
+.ti -1c
+.RI "double \fBhardwGenFreqStep\fP"
+.br
+.ti -1c
+.RI "double \fBradiationFreq\fP"
+.br
+.ti -1c
+.RI "\fBSavePermissions\fP \fBsavePerm\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Параметры модели станции\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "double ModelNS23817A620S1823::CMsgModelTypes::StationParams::centralFreq"
+центральная частота для текущей станции (Fп), в Гц 
+.SS "bool ModelNS23817A620S1823::CMsgModelTypes::StationParams::delayCompensationPerm"
+разрешение на компенсацию задержек в ПЧВО 
+.SS "double ModelNS23817A620S1823::CMsgModelTypes::StationParams::freqPointShift"
+размер смещения между частотными точками (ЦМР) 
+.SS "double ModelNS23817A620S1823::CMsgModelTypes::StationParams::hardwGenFreqStep"
+шаг частоты аппаратного генератора синуса для текущей станции, в Гц 
+.SS "double ModelNS23817A620S1823::CMsgModelTypes::StationParams::heterFreqStep"
+шаг по частоте гетеродина для текущей станции 
+.SS "uint32_t ModelNS23817A620S1823::CMsgModelTypes::StationParams::maxCellsInCrate"
+максимальное количество ячеек 412-06, 223 в крейте МПК1 
+.SS "uint32_t ModelNS23817A620S1823::CMsgModelTypes::StationParams::maxChannels"
+максимальное количество каналов в поляризации 
+.SS "uint32_t ModelNS23817A620S1823::CMsgModelTypes::StationParams::maxChannelsInCell"
+количество каналов в ячейке 412-06, 223 
+.SS "uint32_t ModelNS23817A620S1823::CMsgModelTypes::StationParams::maxCrates"
+максимальное количество крейтов МПК1 (418-02/234-01) 
+.SS "int32_t ModelNS23817A620S1823::CMsgModelTypes::StationParams::nyquistINum"
+номер интервала Найквиста 
+.SS "\fBSharedConst::QuadrCompFormTypes\fP ModelNS23817A620S1823::CMsgModelTypes::StationParams::quadrCompFormType"
+тип метода формирования квадратурных составляющих 
+.SS "double ModelNS23817A620S1823::CMsgModelTypes::StationParams::radiationFreq"
+частота излучения Fизл для текущей станции, в Гц 
+.SS "double ModelNS23817A620S1823::CMsgModelTypes::StationParams::samplingFreq"
+частота дискретизации для текущей станции (Fд), в Гц 
+.SS "\fBSavePermissions\fP ModelNS23817A620S1823::CMsgModelTypes::StationParams::savePerm"
+разрешения на сохранение срезов в файлы 
+.SS "\fBSharedConst::StationType\fP ModelNS23817A620S1823::CMsgModelTypes::StationParams::stationType"
+тип станции 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

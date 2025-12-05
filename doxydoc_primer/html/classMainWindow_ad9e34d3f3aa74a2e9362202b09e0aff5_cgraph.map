@@ -1,0 +1,21 @@
+<map id="MainWindow::storeStrobeInfo" name="MainWindow::storeStrobeInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,121,219,147"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a2b2e1a7fcf17b364d9a9979d3cf5a5a5" title=" " alt="" coords="267,96,520,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,122,253,119,253,124,219,127"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a999701ac7d75144d7e86a71bc7392a72" title=" " alt="" coords="275,145,512,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,140,261,144,261,149,218,146"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#a7bd55f5037a5ec1b4aaf1be686c79d44" title=" " alt="" coords="568,145,765,171"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="512,155,554,155,554,161,512,161"/>
+<area shape="rect" id="Node000005" href="$classSignalTable.html#a1a2f33752104dd2c2dcbe1328c2df39d" title=" " alt="" coords="831,5,985,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="679,143,733,94,771,65,812,41,832,33,834,38,815,46,774,70,737,98,682,147"/>
+<area shape="rect" id="Node000006" href="$classSignalTable.html#a410bf403fcceb0b5b3d3e32487c8bd99" title=" " alt="" coords="813,55,1003,95"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="704,143,812,105,834,97,836,102,814,110,705,148"/>
+<area shape="rect" id="Node000007" href="$classSignalTable.html#adabed06a30427e9a8b1cad150f9268b8" title=" " alt="" coords="829,120,987,145"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="765,145,815,140,815,145,766,150"/>
+<area shape="rect" id="Node000008" href="$classSignalTable.html#a0f33c791e19e1926cd01ebbeef2a5c35" title=" " alt="" coords="835,169,981,195"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="766,165,821,171,821,176,765,170"/>
+<area shape="rect" id="Node000009" href="$classSignalTable.html#a0772452ef0edaae71f951bbfe55d2c3a" title=" " alt="" coords="827,219,989,244"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="706,168,814,203,845,212,844,218,813,209,704,173"/>
+<area shape="rect" id="Node000010" href="$classSignalTable.html#a205781d6d062251a9af7a8179e1813ef" title=" " alt="" coords="829,268,987,293"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="685,169,740,210,776,233,814,253,837,261,835,266,812,258,774,238,737,214,682,173"/>
+</map>

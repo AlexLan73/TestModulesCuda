@@ -1,0 +1,502 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Callback Struct Reference}
+\hypertarget{structModelNS23817A620S1823_1_1Callback}{}\label{structModelNS23817A620S1823_1_1Callback}\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+
+
+{\ttfamily \#include $<$callbacks.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Callback\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{structModelNS23817A620S1823_1_1Callback__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_ac58efaf11a43d6a3e333210836583b14}{callback}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_ad581a27390816d02196d538eadfd2217}{Cut}} cut, \mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}} mode, unsigned \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, unsigned idx1, unsigned idx2, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1Value}{Value}} \&val)=0
+\item 
+virtual \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a0db6eeea4d02994bdc136d4891729e80}{\texorpdfstring{$\sim$}{\string~}\+Callback}} ()
+\item 
+virtual \mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a903b811eaac540c033ef3061d71ab074}{get\+Cut\+Mode}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_af4d9cd2ce850abb55149b37a53ae6040}{print\+Dim3\+Data2\+ZStream}} (std\+::ostream \&s, uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t dim1\+Idx, uint32\+\_\+t dim2\+Idx)=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_aeb3719ed461449ac9afa09fe0057b272}{get\+Polars\+Num}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a36529156471d3a2a77e31f2cfd541fec}{get\+Dim1\+Size}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}})=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a4bdeee17d2e682be0b1575598aab4c7e}{get\+Dim2\+Size}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t dim1\+Idx)=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_ae171d519bf85ac08cf94f377c5d4a450}{get\+Dim3\+Size}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t dim1\+Idx, uint32\+\_\+t dim2\+Idx)=0
+\item 
+virtual bool \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_affd78e922fdba938b8a3dcb8e8a17c36}{is\+Data\+Transfer\+Complete}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_aacbeab2a7d8395b8d6ecd4e653f4caec}{set\+Data\+Transfer\+Status}} (bool status)=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a958ea0be49344ccaf81c09458b09028a}{clear}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a011903ee59f67a8df6b4588df2f2d2c5}{set\+General\+Cut\+Params}} (uint64\+\_\+t inp\+Stroke\+Num, uint32\+\_\+t inp\+Strb\+ID, uint32\+\_\+t inp\+Strb\+Type, int32\+\_\+t inp1\+HypR, int32\+\_\+t inp1\+HypV)=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a6e15af33d425e6ec91245bba5f3ccce7}{get\+Stroke\+Num}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a2a14d0b344ecf5e77cd41cf6b70e2a2c}{get\+Strb\+ID}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a2e1a108323b362806a4294d8562c3720}{get\+Strb\+Type}} ()=0
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a34f205a04f5d24d80c3dbb346f1c8f99}{get1\+HypR}} ()=0
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a55e34cf652fe952877f207a4dd8e27a2}{get1\+HypV}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_ac58efaf11a43d6a3e333210836583b14}{callback}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_ad581a27390816d02196d538eadfd2217}{Cut}} cut, \mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}} mode, unsigned \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, unsigned idx1, unsigned idx2, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1Value}{Value}} \&val)=0
+\item 
+virtual \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a0db6eeea4d02994bdc136d4891729e80}{\texorpdfstring{$\sim$}{\string~}\+Callback}} ()
+\item 
+virtual \mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a903b811eaac540c033ef3061d71ab074}{get\+Cut\+Mode}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_af4d9cd2ce850abb55149b37a53ae6040}{print\+Dim3\+Data2\+ZStream}} (std\+::ostream \&s, uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t dim1\+Idx, uint32\+\_\+t dim2\+Idx)=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_aeb3719ed461449ac9afa09fe0057b272}{get\+Polars\+Num}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a36529156471d3a2a77e31f2cfd541fec}{get\+Dim1\+Size}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}})=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a4bdeee17d2e682be0b1575598aab4c7e}{get\+Dim2\+Size}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t dim1\+Idx)=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_ae171d519bf85ac08cf94f377c5d4a450}{get\+Dim3\+Size}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t dim1\+Idx, uint32\+\_\+t dim2\+Idx)=0
+\item 
+virtual bool \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_affd78e922fdba938b8a3dcb8e8a17c36}{is\+Data\+Transfer\+Complete}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_aacbeab2a7d8395b8d6ecd4e653f4caec}{set\+Data\+Transfer\+Status}} (bool status)=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a958ea0be49344ccaf81c09458b09028a}{clear}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a011903ee59f67a8df6b4588df2f2d2c5}{set\+General\+Cut\+Params}} (uint64\+\_\+t inp\+Stroke\+Num, uint32\+\_\+t inp\+Strb\+ID, uint32\+\_\+t inp\+Strb\+Type, int32\+\_\+t inp1\+HypR, int32\+\_\+t inp1\+HypV)=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a6e15af33d425e6ec91245bba5f3ccce7}{get\+Stroke\+Num}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a2a14d0b344ecf5e77cd41cf6b70e2a2c}{get\+Strb\+ID}} ()=0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a2e1a108323b362806a4294d8562c3720}{get\+Strb\+Type}} ()=0
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a34f205a04f5d24d80c3dbb346f1c8f99}{get1\+HypR}} ()=0
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callback_a55e34cf652fe952877f207a4dd8e27a2}{get1\+HypV}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс для объектов, представляющих коллбеки. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a0db6eeea4d02994bdc136d4891729e80}\label{structModelNS23817A620S1823_1_1Callback_a0db6eeea4d02994bdc136d4891729e80} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!````~Callback@{\texorpdfstring{$\sim$}{\string~}Callback}}
+\index{````~Callback@{\texorpdfstring{$\sim$}{\string~}Callback}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Callback()}{\string~Callback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Model\+NS23817\+A620\+S1823\+::\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Деструктор объекта класса. \Hypertarget{structModelNS23817A620S1823_1_1Callback_a0db6eeea4d02994bdc136d4891729e80}\label{structModelNS23817A620S1823_1_1Callback_a0db6eeea4d02994bdc136d4891729e80} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!````~Callback@{\texorpdfstring{$\sim$}{\string~}Callback}}
+\index{````~Callback@{\texorpdfstring{$\sim$}{\string~}Callback}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Callback()}{\string~Callback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Model\+NS23817\+A620\+S1823\+::\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_ac58efaf11a43d6a3e333210836583b14}\label{structModelNS23817A620S1823_1_1Callback_ac58efaf11a43d6a3e333210836583b14} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!callback@{callback}}
+\index{callback@{callback}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_ad581a27390816d02196d538eadfd2217}{Cut}}}]{cut,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}}}]{mode,  }\item[{unsigned}]{polar,  }\item[{unsigned}]{idx1,  }\item[{unsigned}]{idx2,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Занесение одного значения в массив среза, вызывается из модели. 
+\begin{DoxyParams}{Parameters}
+{\em cut} & тип среза \\
+\hline
+{\em mode} & режим среза (по сути указание на формат данных) \\
+\hline
+{\em polar} & тип поляризации (0 -\/ вертикальная, 1 -\/ горизонтальная) \\
+\hline
+{\em idx1} & индекс первой размерности массива данных (0 если нет) \\
+\hline
+{\em idx2} & индекс второй размерности массива данных (0 если нет) \\
+\hline
+{\em val} & ссылка на значение очередного элемента третьей размерности \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_ac58efaf11a43d6a3e333210836583b14}\label{structModelNS23817A620S1823_1_1Callback_ac58efaf11a43d6a3e333210836583b14} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!callback@{callback}}
+\index{callback@{callback}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_ad581a27390816d02196d538eadfd2217}{Cut}}}]{cut,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}}}]{mode,  }\item[{unsigned}]{polar,  }\item[{unsigned}]{idx1,  }\item[{unsigned}]{idx2,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Занесение одного значения в массив среза, вызывается из модели. 
+\begin{DoxyParams}{Parameters}
+{\em cut} & тип среза \\
+\hline
+{\em mode} & режим среза (по сути указание на формат данных) \\
+\hline
+{\em polar} & тип поляризации (0 -\/ вертикальная, 1 -\/ горизонтальная) \\
+\hline
+{\em idx1} & индекс первой размерности массива данных (0 если нет) \\
+\hline
+{\em idx2} & индекс второй размерности массива данных (0 если нет) \\
+\hline
+{\em val} & ссылка на значение очередного элемента третьей размерности \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a958ea0be49344ccaf81c09458b09028a}\label{structModelNS23817A620S1823_1_1Callback_a958ea0be49344ccaf81c09458b09028a} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!clear@{clear}}
+\index{clear@{clear}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Очистка массива данных среза. \Hypertarget{structModelNS23817A620S1823_1_1Callback_a958ea0be49344ccaf81c09458b09028a}\label{structModelNS23817A620S1823_1_1Callback_a958ea0be49344ccaf81c09458b09028a} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!clear@{clear}}
+\index{clear@{clear}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Очистка массива данных среза. \Hypertarget{structModelNS23817A620S1823_1_1Callback_a34f205a04f5d24d80c3dbb346f1c8f99}\label{structModelNS23817A620S1823_1_1Callback_a34f205a04f5d24d80c3dbb346f1c8f99} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!get1HypR@{get1HypR}}
+\index{get1HypR@{get1HypR}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{get1HypR()}{get1HypR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get1\+HypR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат номера первой гипотезы по дальности для данного среза. \begin{DoxyReturn}{Returns}
+номер первой гипотезы по дальности 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a34f205a04f5d24d80c3dbb346f1c8f99}\label{structModelNS23817A620S1823_1_1Callback_a34f205a04f5d24d80c3dbb346f1c8f99} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!get1HypR@{get1HypR}}
+\index{get1HypR@{get1HypR}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{get1HypR()}{get1HypR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get1\+HypR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат номера первой гипотезы по дальности для данного среза. \begin{DoxyReturn}{Returns}
+номер первой гипотезы по дальности 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a55e34cf652fe952877f207a4dd8e27a2}\label{structModelNS23817A620S1823_1_1Callback_a55e34cf652fe952877f207a4dd8e27a2} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!get1HypV@{get1HypV}}
+\index{get1HypV@{get1HypV}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{get1HypV()}{get1HypV()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get1\+HypV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат номера первой гипотезы по скорости для данного среза. \begin{DoxyReturn}{Returns}
+номер первой гипотезы по скорости 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a55e34cf652fe952877f207a4dd8e27a2}\label{structModelNS23817A620S1823_1_1Callback_a55e34cf652fe952877f207a4dd8e27a2} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!get1HypV@{get1HypV}}
+\index{get1HypV@{get1HypV}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{get1HypV()}{get1HypV()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get1\+HypV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат номера первой гипотезы по скорости для данного среза. \begin{DoxyReturn}{Returns}
+номер первой гипотезы по скорости 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a903b811eaac540c033ef3061d71ab074}\label{structModelNS23817A620S1823_1_1Callback_a903b811eaac540c033ef3061d71ab074} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getCutMode@{getCutMode}}
+\index{getCutMode@{getCutMode}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getCutMode()}{getCutMode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}} Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Cut\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Взятие режима работы среза (для понимания, какой формат имеет информация из модели). \begin{DoxyReturn}{Returns}
+режим работы среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a903b811eaac540c033ef3061d71ab074}\label{structModelNS23817A620S1823_1_1Callback_a903b811eaac540c033ef3061d71ab074} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getCutMode@{getCutMode}}
+\index{getCutMode@{getCutMode}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getCutMode()}{getCutMode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceModelNS23817A620S1823_aaea76d2b2e4bb3a9dc36b7223acfa3d2}{Cut\+Mode}} Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Cut\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Взятие режима работы среза (для понимания, какой формат имеет информация из модели). \begin{DoxyReturn}{Returns}
+режим работы среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a36529156471d3a2a77e31f2cfd541fec}\label{structModelNS23817A620S1823_1_1Callback_a36529156471d3a2a77e31f2cfd541fec} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getDim1Size@{getDim1Size}}
+\index{getDim1Size@{getDim1Size}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getDim1Size()}{getDim1Size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Dim1\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача величины первой размерности массива данных среза, т.\+е. единицу для 1 среза, количество ячеек (0-\/47) для 2-\/6 срезов или лучей для среза ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & номер (тип) поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина первой размерности массива данных среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a36529156471d3a2a77e31f2cfd541fec}\label{structModelNS23817A620S1823_1_1Callback_a36529156471d3a2a77e31f2cfd541fec} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getDim1Size@{getDim1Size}}
+\index{getDim1Size@{getDim1Size}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getDim1Size()}{getDim1Size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Dim1\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача величины первой размерности массива данных среза, т.\+е. единицу для 1 среза, количество ячеек (0-\/47) для 2-\/6 срезов или лучей для среза ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & номер (тип) поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина первой размерности массива данных среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a4bdeee17d2e682be0b1575598aab4c7e}\label{structModelNS23817A620S1823_1_1Callback_a4bdeee17d2e682be0b1575598aab4c7e} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getDim2Size@{getDim2Size}}
+\index{getDim2Size@{getDim2Size}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getDim2Size()}{getDim2Size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Dim2\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{dim1\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача величины второй размерности массива данных среза, т.\+е. количество каналов для 1 среза, лучей для 2-\/6 срезов или дальностей для среза ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & номер (тип) поляризации \\
+\hline
+{\em dim1\+Idx} & величина первой размерности массива данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина второй размерности массива данных среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a4bdeee17d2e682be0b1575598aab4c7e}\label{structModelNS23817A620S1823_1_1Callback_a4bdeee17d2e682be0b1575598aab4c7e} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getDim2Size@{getDim2Size}}
+\index{getDim2Size@{getDim2Size}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getDim2Size()}{getDim2Size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Dim2\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{dim1\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача величины второй размерности массива данных среза, т.\+е. количество каналов для 1 среза, лучей для 2-\/6 срезов или дальностей для среза ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & номер (тип) поляризации \\
+\hline
+{\em dim1\+Idx} & величина первой размерности массива данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина второй размерности массива данных среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_ae171d519bf85ac08cf94f377c5d4a450}\label{structModelNS23817A620S1823_1_1Callback_ae171d519bf85ac08cf94f377c5d4a450} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getDim3Size@{getDim3Size}}
+\index{getDim3Size@{getDim3Size}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getDim3Size()}{getDim3Size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Dim3\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{dim1\+Idx,  }\item[{uint32\+\_\+t}]{dim2\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача величины третьей размерности массива данных среза, т.\+е. количество выборок для 1-\/6 срезов или фильтров для среза ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & номер (тип) поляризации \\
+\hline
+{\em dim1\+Idx} & величина первой размерности массива данных \\
+\hline
+{\em dim2\+Idx} & величина второй размерности массива данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина третьей размерности массива данных среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_ae171d519bf85ac08cf94f377c5d4a450}\label{structModelNS23817A620S1823_1_1Callback_ae171d519bf85ac08cf94f377c5d4a450} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getDim3Size@{getDim3Size}}
+\index{getDim3Size@{getDim3Size}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getDim3Size()}{getDim3Size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Dim3\+Size (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{dim1\+Idx,  }\item[{uint32\+\_\+t}]{dim2\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача величины третьей размерности массива данных среза, т.\+е. количество выборок для 1-\/6 срезов или фильтров для среза ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & номер (тип) поляризации \\
+\hline
+{\em dim1\+Idx} & величина первой размерности массива данных \\
+\hline
+{\em dim2\+Idx} & величина второй размерности массива данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина третьей размерности массива данных среза 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_aeb3719ed461449ac9afa09fe0057b272}\label{structModelNS23817A620S1823_1_1Callback_aeb3719ed461449ac9afa09fe0057b272} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getPolarsNum@{getPolarsNum}}
+\index{getPolarsNum@{getPolarsNum}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getPolarsNum()}{getPolarsNum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Polars\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача количества поляризаций, для которых готовы данные. \begin{DoxyReturn}{Returns}
+количество поляризаций 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_aeb3719ed461449ac9afa09fe0057b272}\label{structModelNS23817A620S1823_1_1Callback_aeb3719ed461449ac9afa09fe0057b272} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getPolarsNum@{getPolarsNum}}
+\index{getPolarsNum@{getPolarsNum}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getPolarsNum()}{getPolarsNum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Polars\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача количества поляризаций, для которых готовы данные. \begin{DoxyReturn}{Returns}
+количество поляризаций 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a2a14d0b344ecf5e77cd41cf6b70e2a2c}\label{structModelNS23817A620S1823_1_1Callback_a2a14d0b344ecf5e77cd41cf6b70e2a2c} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getStrbID@{getStrbID}}
+\index{getStrbID@{getStrbID}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getStrbID()}{getStrbID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Strb\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат идентификатора строба для данного среза. \begin{DoxyReturn}{Returns}
+идентификатор строба 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a2a14d0b344ecf5e77cd41cf6b70e2a2c}\label{structModelNS23817A620S1823_1_1Callback_a2a14d0b344ecf5e77cd41cf6b70e2a2c} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getStrbID@{getStrbID}}
+\index{getStrbID@{getStrbID}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getStrbID()}{getStrbID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Strb\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат идентификатора строба для данного среза. \begin{DoxyReturn}{Returns}
+идентификатор строба 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a2e1a108323b362806a4294d8562c3720}\label{structModelNS23817A620S1823_1_1Callback_a2e1a108323b362806a4294d8562c3720} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getStrbType@{getStrbType}}
+\index{getStrbType@{getStrbType}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getStrbType()}{getStrbType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Strb\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат типа строба для данного среза. \begin{DoxyReturn}{Returns}
+тип строба 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a2e1a108323b362806a4294d8562c3720}\label{structModelNS23817A620S1823_1_1Callback_a2e1a108323b362806a4294d8562c3720} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getStrbType@{getStrbType}}
+\index{getStrbType@{getStrbType}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getStrbType()}{getStrbType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Strb\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат типа строба для данного среза. \begin{DoxyReturn}{Returns}
+тип строба 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a6e15af33d425e6ec91245bba5f3ccce7}\label{structModelNS23817A620S1823_1_1Callback_a6e15af33d425e6ec91245bba5f3ccce7} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getStrokeNum@{getStrokeNum}}
+\index{getStrokeNum@{getStrokeNum}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getStrokeNum()}{getStrokeNum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Stroke\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат номера такта для данного среза. \begin{DoxyReturn}{Returns}
+номер такта 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a6e15af33d425e6ec91245bba5f3ccce7}\label{structModelNS23817A620S1823_1_1Callback_a6e15af33d425e6ec91245bba5f3ccce7} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!getStrokeNum@{getStrokeNum}}
+\index{getStrokeNum@{getStrokeNum}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{getStrokeNum()}{getStrokeNum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Callback\+::get\+Stroke\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Возврат номера такта для данного среза. \begin{DoxyReturn}{Returns}
+номер такта 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_affd78e922fdba938b8a3dcb8e8a17c36}\label{structModelNS23817A620S1823_1_1Callback_affd78e922fdba938b8a3dcb8e8a17c36} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!isDataTransferComplete@{isDataTransferComplete}}
+\index{isDataTransferComplete@{isDataTransferComplete}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{isDataTransferComplete()}{isDataTransferComplete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Model\+NS23817\+A620\+S1823\+::\+Callback\+::is\+Data\+Transfer\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача состояния передачи данных среза. \begin{DoxyReturn}{Returns}
+true если передача данных завершена, false в противном случае 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_affd78e922fdba938b8a3dcb8e8a17c36}\label{structModelNS23817A620S1823_1_1Callback_affd78e922fdba938b8a3dcb8e8a17c36} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!isDataTransferComplete@{isDataTransferComplete}}
+\index{isDataTransferComplete@{isDataTransferComplete}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{isDataTransferComplete()}{isDataTransferComplete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Model\+NS23817\+A620\+S1823\+::\+Callback\+::is\+Data\+Transfer\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Выдача состояния передачи данных среза. \begin{DoxyReturn}{Returns}
+true если передача данных завершена, false в противном случае 
+\end{DoxyReturn}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_af4d9cd2ce850abb55149b37a53ae6040}\label{structModelNS23817A620S1823_1_1Callback_af4d9cd2ce850abb55149b37a53ae6040} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!printDim3Data2ZStream@{printDim3Data2ZStream}}
+\index{printDim3Data2ZStream@{printDim3Data2ZStream}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{printDim3Data2ZStream()}{printDim3Data2ZStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::print\+Dim3\+Data2\+ZStream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{s,  }\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{dim1\+Idx,  }\item[{uint32\+\_\+t}]{dim2\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Преобразование всех данные вектора третьей размерности из бинарного вида в строковое для формирования XML-\/файла. 
+\begin{DoxyParams}{Parameters}
+{\em s} & ссылка на поток, куда будут выводиться данные \\
+\hline
+{\em polar} & номер (тип) поляризации \\
+\hline
+{\em dim1\+Idx} & величина первой размерности массива данных \\
+\hline
+{\em dim2\+Idx} & величина второй размерности массива данных \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_af4d9cd2ce850abb55149b37a53ae6040}\label{structModelNS23817A620S1823_1_1Callback_af4d9cd2ce850abb55149b37a53ae6040} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!printDim3Data2ZStream@{printDim3Data2ZStream}}
+\index{printDim3Data2ZStream@{printDim3Data2ZStream}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{printDim3Data2ZStream()}{printDim3Data2ZStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::print\+Dim3\+Data2\+ZStream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{s,  }\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{dim1\+Idx,  }\item[{uint32\+\_\+t}]{dim2\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Преобразование всех данные вектора третьей размерности из бинарного вида в строковое для формирования XML-\/файла. 
+\begin{DoxyParams}{Parameters}
+{\em s} & ссылка на поток, куда будут выводиться данные \\
+\hline
+{\em polar} & номер (тип) поляризации \\
+\hline
+{\em dim1\+Idx} & величина первой размерности массива данных \\
+\hline
+{\em dim2\+Idx} & величина второй размерности массива данных \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_aacbeab2a7d8395b8d6ecd4e653f4caec}\label{structModelNS23817A620S1823_1_1Callback_aacbeab2a7d8395b8d6ecd4e653f4caec} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!setDataTransferStatus@{setDataTransferStatus}}
+\index{setDataTransferStatus@{setDataTransferStatus}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{setDataTransferStatus()}{setDataTransferStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::set\+Data\+Transfer\+Status (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Установка состояния передачи данных среза. 
+\begin{DoxyParams}{Parameters}
+{\em status} & состояние передачи данных среза \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_aacbeab2a7d8395b8d6ecd4e653f4caec}\label{structModelNS23817A620S1823_1_1Callback_aacbeab2a7d8395b8d6ecd4e653f4caec} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!setDataTransferStatus@{setDataTransferStatus}}
+\index{setDataTransferStatus@{setDataTransferStatus}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{setDataTransferStatus()}{setDataTransferStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::set\+Data\+Transfer\+Status (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Установка состояния передачи данных среза. 
+\begin{DoxyParams}{Parameters}
+{\em status} & состояние передачи данных среза \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a011903ee59f67a8df6b4588df2f2d2c5}\label{structModelNS23817A620S1823_1_1Callback_a011903ee59f67a8df6b4588df2f2d2c5} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!setGeneralCutParams@{setGeneralCutParams}}
+\index{setGeneralCutParams@{setGeneralCutParams}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{setGeneralCutParams()}{setGeneralCutParams()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::set\+General\+Cut\+Params (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{inp\+Stroke\+Num,  }\item[{uint32\+\_\+t}]{inp\+Strb\+ID,  }\item[{uint32\+\_\+t}]{inp\+Strb\+Type,  }\item[{int32\+\_\+t}]{inp1\+HypR,  }\item[{int32\+\_\+t}]{inp1\+HypV }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Установка общих параметров среза\+: номера такта, идентификатора строба и типа строба, номера первой гипотезы по дальности и скорости. 
+\begin{DoxyParams}{Parameters}
+{\em inp\+Stroke\+Num} & номер такта \\
+\hline
+{\em inp\+Strb\+ID} & идентификатор строба \\
+\hline
+{\em inp\+Strb\+Type} & тип строба \\
+\hline
+{\em inp1\+HypR} & номер первой гипотезы по дальности \\
+\hline
+{\em inp1\+HypV} & номер первой гипотезы по скорости \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1Callback_a011903ee59f67a8df6b4588df2f2d2c5}\label{structModelNS23817A620S1823_1_1Callback_a011903ee59f67a8df6b4588df2f2d2c5} 
+\index{ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}!setGeneralCutParams@{setGeneralCutParams}}
+\index{setGeneralCutParams@{setGeneralCutParams}!ModelNS23817A620S1823::Callback@{ModelNS23817A620S1823::Callback}}
+\doxysubsubsection{\texorpdfstring{setGeneralCutParams()}{setGeneralCutParams()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Callback\+::set\+General\+Cut\+Params (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{inp\+Stroke\+Num,  }\item[{uint32\+\_\+t}]{inp\+Strb\+ID,  }\item[{uint32\+\_\+t}]{inp\+Strb\+Type,  }\item[{int32\+\_\+t}]{inp1\+HypR,  }\item[{int32\+\_\+t}]{inp1\+HypV }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Установка общих параметров среза\+: номера такта, идентификатора строба и типа строба, номера первой гипотезы по дальности и скорости. 
+\begin{DoxyParams}{Parameters}
+{\em inp\+Stroke\+Num} & номер такта \\
+\hline
+{\em inp\+Strb\+ID} & идентификатор строба \\
+\hline
+{\em inp\+Strb\+Type} & тип строба \\
+\hline
+{\em inp1\+HypR} & номер первой гипотезы по дальности \\
+\hline
+{\em inp1\+HypV} & номер первой гипотезы по скорости \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{callbacks_8h}{callbacks.\+h}}\item 
+src/gui/\mbox{\hyperlink{gui_2callbacks_8h}{callbacks.\+h}}\end{DoxyCompactItemize}

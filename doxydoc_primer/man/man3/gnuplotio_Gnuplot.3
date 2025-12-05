@@ -1,0 +1,163 @@
+.TH "gnuplotio::Gnuplot" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::Gnuplot
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gnuplot\-iostream\&.h>\fP
+.PP
+Inherits \fBgnuplotio::FileHandleWrapper\fP, and boost::iostreams::stream< boost::iostreams::file_descriptor_sink >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGnuplot\fP (const std::string &_cmd='')"
+.br
+.ti -1c
+.RI "\fBGnuplot\fP (FILE *_fh)"
+.br
+.ti -1c
+.RI "\fB~Gnuplot\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearTmpfiles\fP ()"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > \fBGnuplot\fP & \fBsend\fP (const T &arg, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > \fBGnuplot\fP & \fBsendBinary\fP (const T &arg, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > std::string \fBbinfmt\fP (const T &arg, const std::string &\fBarr_or_rec\fP, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > std::string \fBfile\fP (const T &arg, std::string filename, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T , typename OrganizationMode > std::string \fBbinaryFile\fP (const T &arg, std::string filename, const std::string &\fBarr_or_rec\fP, OrganizationMode)"
+.br
+.ti -1c
+.RI "template<typename T > \fBGnuplot\fP \fBGNUPLOT_DEPRECATE\fP ('use send1d or send2d') &\fBsend\fP(const T &arg)"
+.br
+.ti -1c
+.RI "template<typename T > std::string \fBGNUPLOT_DEPRECATE\fP ('use binfmt1d or binfmt2d') \fBbinfmt\fP(const T &arg"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string const std::string & \fBarr_or_rec\fP"
+.br
+.ti -1c
+.RI "std::vector< int > \fBtmp_files\fP"
+.br
+.ti -1c
+.RI "bool \fBdebug_messages\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGnuplot\fP (const \fBGnuplot\fP &)"
+.br
+.ti -1c
+.RI "const \fBGnuplot\fP & \fBoperator=\fP (const \fBGnuplot\fP &)"
+.br
+.ti -1c
+.RI "void \fBdo_flush\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBmake_tmpfile\fP ()"
+.br
+.in -1c
+
+Private Member Functions inherited from \fBgnuplotio::FileHandleWrapper\fP
+.in +1c
+.ti -1c
+.RI "\fBFileHandleWrapper\fP (std::FILE *_fh, bool _should_use_pclose)"
+.br
+.ti -1c
+.RI "void \fBfh_close\fP ()"
+.br
+.ti -1c
+.RI "int \fBfh_fileno\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBget_default_cmd\fP ()"
+.br
+.ti -1c
+.RI "static \fBFileHandleWrapper\fP \fBopen_cmdline\fP (const std::string &in)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Private Attributes inherited from \fBgnuplotio::FileHandleWrapper\fP
+.in +1c
+.ti -1c
+.RI "std::FILE * \fBwrapped_fh\fP"
+.br
+.ti -1c
+.RI "bool \fBshould_use_pclose\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "gnuplotio::Gnuplot::Gnuplot (const std::string & _cmd = \fC''\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.SS "gnuplotio::Gnuplot::Gnuplot (FILE * _fh)\fC [inline]\fP, \fC [explicit]\fP"
+
+.SS "gnuplotio::Gnuplot::Gnuplot (const \fBGnuplot\fP &)\fC [private]\fP"
+
+.SS "gnuplotio::Gnuplot::~Gnuplot ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T , typename OrganizationMode > std::string gnuplotio::Gnuplot::binaryFile (const T & arg, std::string filename, const std::string & arr_or_rec, OrganizationMode)\fC [inline]\fP"
+
+.SS "template<typename T , typename OrganizationMode > std::string gnuplotio::Gnuplot::binfmt (const T & arg, const std::string & arr_or_rec, OrganizationMode)\fC [inline]\fP"
+
+.SS "void gnuplotio::Gnuplot::clearTmpfiles ()\fC [inline]\fP"
+
+.SS "void gnuplotio::Gnuplot::do_flush ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "template<typename T , typename OrganizationMode > std::string gnuplotio::Gnuplot::file (const T & arg, std::string filename, OrganizationMode)\fC [inline]\fP"
+
+.SS "static std::string gnuplotio::Gnuplot::get_default_cmd ()\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.SS "template<typename T > std::string gnuplotio::Gnuplot::GNUPLOT_DEPRECATE ('use binfmt1d or binfmt2d') const &"
+
+.SS "template<typename T > \fBGnuplot\fP gnuplotio::Gnuplot::GNUPLOT_DEPRECATE ('use send1d or send2d') const &\fC [inline]\fP"
+
+.SS "std::string gnuplotio::Gnuplot::make_tmpfile ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "static \fBFileHandleWrapper\fP gnuplotio::Gnuplot::open_cmdline (const std::string & in)\fC [inline]\fP, \fC [static]\fP, \fC [private]\fP"
+
+.SS "const \fBGnuplot\fP & gnuplotio::Gnuplot::operator= (const \fBGnuplot\fP &)\fC [private]\fP"
+
+.SS "template<typename T , typename OrganizationMode > \fBGnuplot\fP & gnuplotio::Gnuplot::send (const T & arg, OrganizationMode)\fC [inline]\fP"
+
+.SS "template<typename T , typename OrganizationMode > \fBGnuplot\fP & gnuplotio::Gnuplot::sendBinary (const T & arg, OrganizationMode)\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string const std::string& gnuplotio::Gnuplot::arr_or_rec"
+
+.SS "bool gnuplotio::Gnuplot::debug_messages"
+
+.SS "std::vector<int> gnuplotio::Gnuplot::tmp_files"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,84 @@
+.TH "src/mpk1/blk223/223fc.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk223/223fc.h \- Описание карты памяти прошивки ячейки 9ДЯ-223\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <libvork/412\-06_wire\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcomplex32\fP"
+.br
+.RI "Структура 32-разрядного комплексного числа\&. "
+.ti -1c
+.RI "struct \fBc223_target_strobe\fP"
+.br
+.RI "Целевой строб ФУ 223-й ячейки\&. "
+.ti -1c
+.RI "struct \fBc223_imit_object_params\fP"
+.br
+.RI "Параметры имитируемого объекта\&. "
+.ti -1c
+.RI "struct \fBc223_imit_strobe\fP"
+.br
+.RI "Имитационный строб ФУ 223-й ячейки\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_STROBES\fP   16"
+.br
+.RI "Максимальное количество стробов "
+.ti -1c
+.RI "#define \fBMAX_NR_CHANNELS\fP   16"
+.br
+.RI "Максимальное количество каналов "
+.ti -1c
+.RI "#define \fBNR_CHANNELS\fP   15"
+.br
+.RI "Количество задействованных каналов "
+.ti -1c
+.RI "#define \fBNR_VECTORS\fP   16"
+.br
+.RI "Максимальное количество векторов "
+.ti -1c
+.RI "#define \fBMAX_NR_BEAMS\fP   12"
+.br
+.RI "Максимальное количество лучей "
+.ti -1c
+.RI "#define \fBMAX_NR_OBJS\fP   8"
+.br
+.RI "Максимальное количество объектов "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint \fBn_objects\fP (const \fBc223_imit_strobe\fP &s)"
+.br
+.ti -1c
+.RI "uint \fBpolar\fP (const \fBc223_imit_strobe\fP &s)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Описание карты памяти прошивки ячейки 9ДЯ-223\&. 
+
+Описание карты памяти прошивки ячейки 9ДЯ-223 в части функционального управления\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

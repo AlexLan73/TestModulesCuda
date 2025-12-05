@@ -1,0 +1,371 @@
+\doxysection{src/mpk1/blk223/libfc.h File Reference}
+\hypertarget{blk223_2libfc_8h}{}\label{blk223_2libfc_8h}\index{src/mpk1/blk223/libfc.h@{src/mpk1/blk223/libfc.h}}
+
+
+Вспомогательные функции для работы с ФУ.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trims.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/libmpk.\+h$>$}\newline
+{\ttfamily \#include "{}model\+\_\+wrapper.\+h"{}}\newline
+Include dependency graph for libfc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{blk223_2libfc_8h_afcb7163f6a01047ac47e90cde2693106}{AUTOCOMPENS\+\_\+\+STRB\+\_\+\+TYPE}}~128
+\item 
+\#define \mbox{\hyperlink{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e}{TFK\+\_\+\+STRB\+\_\+\+TYPE}}~1024
+\begin{DoxyCompactList}\small\item\em Тип строба\+: ТФК. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{blk223_2libfc_8h_a9359db5577ef2862ec780a3766a31b52}{CALIBR\+\_\+\+STRB\+\_\+\+TYPE}}~2048
+\begin{DoxyCompactList}\small\item\em Тип строба\+: калибровки. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{blk223_2libfc_8h_a527e269ab9e91a93d533e6861de509af}{NLA\+\_\+\+STRB\+\_\+\+TYPE}}~2049
+\begin{DoxyCompactList}\small\item\em Тип строба\+: анализ уровня шумов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{blk223_2libfc_8h_a65b71dac9ccbcafe9c75785fbe08eb9b}{is\+\_\+tfk\+\_\+strobe\+\_\+type}} (int strb\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Проверка на соответствие типа строба ТФК. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{blk223_2libfc_8h_aea961f54684231b548c159708dcae31d}{is\+\_\+nla\+\_\+strobe}} (int strb\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Проверка на соответствие типа строба анализу уровня шумов. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{blk223_2libfc_8h_a5b8eb03e622148718dd963bc58832918}{is\+\_\+auto\+\_\+compen\+\_\+strobe}} (int strb\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Проверка на соответствие типа строба автокомпенсации. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{blk223_2libfc_8h_a6a371265ce3ce26dc9f50b22eb41240b}{is\+\_\+jam\+\_\+strobe\+\_\+type}} (int strb\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Проверка на соответствие типа строба помеховому. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{blk223_2libfc_8h_a42db2ab22944747c988a753da2f3ff09}{is\+\_\+tfk\+\_\+strobe}} (const struct TStrobe \texorpdfstring{$\ast$}{*}strb)
+\begin{DoxyCompactList}\small\item\em Проверка на соответствие типа строба ТФК. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{blk223_2libfc_8h_af889ec125463699264ac5356a1ad4bc1}{map\+\_\+tips}} (const struct TStrobe \&s)
+\begin{DoxyCompactList}\small\item\em Преобразует сетевой код типа строба к коду карты памяти прошивки. \end{DoxyCompactList}\item 
+static int32\+\_\+t \mbox{\hyperlink{blk223_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21}{roundflt}} (float value)
+\begin{DoxyCompactList}\small\item\em Округление числа с плавающей запятой до ближайшего целого. \end{DoxyCompactList}\item 
+libutils\+::\+Result$<$ Trimts\+Msg $>$ \mbox{\hyperlink{blk223_2libfc_8h_a45b9ccd991f45c306e605c54ebfae812}{validate\+\_\+trims}} (const Trimts\+Msg \&msg)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию сообщения ТРИМС. \end{DoxyCompactList}\item 
+libutils\+::\+Result$<$ E2\+TRPR $>$ \mbox{\hyperlink{blk223_2libfc_8h_a6083a2db59c14503e1199e63ebe21c37}{validate\+\_\+trpr}} (const E2\+TRPR \&msg, uint rek\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Производит базовую валидацию сообщения ТРПР. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{blk223_2libfc_8h_a8f73d0117aa68f53bf9d09d7661b477e}{get\+\_\+add\+\_\+nl}} (const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&s)
+\begin{DoxyCompactList}\small\item\em Количество лучей автокомпенсации (0 или 2) \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{blk223_2libfc_8h_ae5036fdc064d4392882df4f0b60a743a}{nrays\+\_\+total}} (const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&s)
+\begin{DoxyCompactList}\small\item\em Полное количество лучей в стробе с учетом автокомпенсации \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{blk223_2libfc_8h_a9fd7a03ceeb8dc8812766e4e54a92145}{fill\+\_\+wire\+\_\+header}} (const TStrobe \&netstrb, const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&unistrb, cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&wirehd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Вспомогательные функции для работы с ФУ. 
+
+\begin{DoxyAuthor}{Author}
+vmg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27.\+11.\+2015 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{blk223_2libfc_8h_afcb7163f6a01047ac47e90cde2693106}\label{blk223_2libfc_8h_afcb7163f6a01047ac47e90cde2693106} 
+\index{libfc.h@{libfc.h}!AUTOCOMPENS\_STRB\_TYPE@{AUTOCOMPENS\_STRB\_TYPE}}
+\index{AUTOCOMPENS\_STRB\_TYPE@{AUTOCOMPENS\_STRB\_TYPE}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{AUTOCOMPENS\_STRB\_TYPE}{AUTOCOMPENS\_STRB\_TYPE}}
+{\footnotesize\ttfamily \#define AUTOCOMPENS\+\_\+\+STRB\+\_\+\+TYPE~128}
+
+Тип строба\+: автокомпенсация. Он еще и целевой, поэтому правильнее думать о нем как "{}целевой строб, использующий автокомпенсацию помех"{}. \Hypertarget{blk223_2libfc_8h_a9359db5577ef2862ec780a3766a31b52}\label{blk223_2libfc_8h_a9359db5577ef2862ec780a3766a31b52} 
+\index{libfc.h@{libfc.h}!CALIBR\_STRB\_TYPE@{CALIBR\_STRB\_TYPE}}
+\index{CALIBR\_STRB\_TYPE@{CALIBR\_STRB\_TYPE}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{CALIBR\_STRB\_TYPE}{CALIBR\_STRB\_TYPE}}
+{\footnotesize\ttfamily \#define CALIBR\+\_\+\+STRB\+\_\+\+TYPE~2048}
+
+
+
+Тип строба\+: калибровки. 
+
+\Hypertarget{blk223_2libfc_8h_a527e269ab9e91a93d533e6861de509af}\label{blk223_2libfc_8h_a527e269ab9e91a93d533e6861de509af} 
+\index{libfc.h@{libfc.h}!NLA\_STRB\_TYPE@{NLA\_STRB\_TYPE}}
+\index{NLA\_STRB\_TYPE@{NLA\_STRB\_TYPE}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{NLA\_STRB\_TYPE}{NLA\_STRB\_TYPE}}
+{\footnotesize\ttfamily \#define NLA\+\_\+\+STRB\+\_\+\+TYPE~2049}
+
+
+
+Тип строба\+: анализ уровня шумов. 
+
+\Hypertarget{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e}\label{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e} 
+\index{libfc.h@{libfc.h}!TFK\_STRB\_TYPE@{TFK\_STRB\_TYPE}}
+\index{TFK\_STRB\_TYPE@{TFK\_STRB\_TYPE}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{TFK\_STRB\_TYPE}{TFK\_STRB\_TYPE}}
+{\footnotesize\ttfamily \#define TFK\+\_\+\+STRB\+\_\+\+TYPE~1024}
+
+
+
+Тип строба\+: ТФК. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{blk223_2libfc_8h_a9fd7a03ceeb8dc8812766e4e54a92145}\label{blk223_2libfc_8h_a9fd7a03ceeb8dc8812766e4e54a92145} 
+\index{libfc.h@{libfc.h}!fill\_wire\_header@{fill\_wire\_header}}
+\index{fill\_wire\_header@{fill\_wire\_header}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{fill\_wire\_header()}{fill\_wire\_header()}}
+{\footnotesize\ttfamily void fill\+\_\+wire\+\_\+header (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{netstrb,  }\item[{const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&}]{unistrb,  }\item[{cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&}]{wirehd }\end{DoxyParamCaption})}
+
+\Hypertarget{blk223_2libfc_8h_a8f73d0117aa68f53bf9d09d7661b477e}\label{blk223_2libfc_8h_a8f73d0117aa68f53bf9d09d7661b477e} 
+\index{libfc.h@{libfc.h}!get\_add\_nl@{get\_add\_nl}}
+\index{get\_add\_nl@{get\_add\_nl}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{get\_add\_nl()}{get\_add\_nl()}}
+{\footnotesize\ttfamily uint get\+\_\+add\+\_\+nl (\begin{DoxyParamCaption}\item[{const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Количество лучей автокомпенсации (0 или 2) 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{blk223_2libfc_8h_a8f73d0117aa68f53bf9d09d7661b477e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8h_a5b8eb03e622148718dd963bc58832918}\label{blk223_2libfc_8h_a5b8eb03e622148718dd963bc58832918} 
+\index{libfc.h@{libfc.h}!is\_auto\_compen\_strobe@{is\_auto\_compen\_strobe}}
+\index{is\_auto\_compen\_strobe@{is\_auto\_compen\_strobe}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{is\_auto\_compen\_strobe()}{is\_auto\_compen\_strobe()}}
+{\footnotesize\ttfamily static int is\+\_\+auto\+\_\+compen\+\_\+strobe (\begin{DoxyParamCaption}\item[{int}]{strb\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Проверка на соответствие типа строба автокомпенсации. 
+
+Для типа строба, соответствующего автокомпенсации, функция вернет 1, иначе 0. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strb\+\_\+type} & Тип строба. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+При соответствии типа строба вернет 1. 
+
+При несоответствии типа строба вернет 0. 
+\end{DoxyReturn}
+\Hypertarget{blk223_2libfc_8h_a6a371265ce3ce26dc9f50b22eb41240b}\label{blk223_2libfc_8h_a6a371265ce3ce26dc9f50b22eb41240b} 
+\index{libfc.h@{libfc.h}!is\_jam\_strobe\_type@{is\_jam\_strobe\_type}}
+\index{is\_jam\_strobe\_type@{is\_jam\_strobe\_type}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{is\_jam\_strobe\_type()}{is\_jam\_strobe\_type()}}
+{\footnotesize\ttfamily static int is\+\_\+jam\+\_\+strobe\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{strb\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Проверка на соответствие типа строба помеховому. 
+
+Для типа строба, соответствующего помеховому, функция вернет 1, иначе 0. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strb\+\_\+type} & Тип строба. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+При соответствии типа строба вернет 1. 
+
+При несоответствии типа строба вернет 0. 
+\end{DoxyReturn}
+\Hypertarget{blk223_2libfc_8h_aea961f54684231b548c159708dcae31d}\label{blk223_2libfc_8h_aea961f54684231b548c159708dcae31d} 
+\index{libfc.h@{libfc.h}!is\_nla\_strobe@{is\_nla\_strobe}}
+\index{is\_nla\_strobe@{is\_nla\_strobe}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{is\_nla\_strobe()}{is\_nla\_strobe()}}
+{\footnotesize\ttfamily static int is\+\_\+nla\+\_\+strobe (\begin{DoxyParamCaption}\item[{int}]{strb\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Проверка на соответствие типа строба анализу уровня шумов. 
+
+Для типа строба, соответствующего анализу уровня шумов, функция вернет 1, иначе 0. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strb\+\_\+type} & Тип строба. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+При соответствии типа строба вернет 1. 
+
+При несоответствии типа строба вернет 0. 
+\end{DoxyReturn}
+\Hypertarget{blk223_2libfc_8h_a42db2ab22944747c988a753da2f3ff09}\label{blk223_2libfc_8h_a42db2ab22944747c988a753da2f3ff09} 
+\index{libfc.h@{libfc.h}!is\_tfk\_strobe@{is\_tfk\_strobe}}
+\index{is\_tfk\_strobe@{is\_tfk\_strobe}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{is\_tfk\_strobe()}{is\_tfk\_strobe()}}
+{\footnotesize\ttfamily static int is\+\_\+tfk\+\_\+strobe (\begin{DoxyParamCaption}\item[{const struct TStrobe \texorpdfstring{$\ast$}{*}}]{strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Проверка на соответствие типа строба ТФК. 
+
+Функция возвращает результат вызова аналогичной функции с более общим типом параметра и возвращает результат данного вызова. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strb} & Указатель на буфер строба сообщения ТРПР. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+При соответствии типа строба вернет 1. 
+
+При несоответствии типа строба вернет 0. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{blk223_2libfc_8h_a42db2ab22944747c988a753da2f3ff09_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8h_a65b71dac9ccbcafe9c75785fbe08eb9b}\label{blk223_2libfc_8h_a65b71dac9ccbcafe9c75785fbe08eb9b} 
+\index{libfc.h@{libfc.h}!is\_tfk\_strobe\_type@{is\_tfk\_strobe\_type}}
+\index{is\_tfk\_strobe\_type@{is\_tfk\_strobe\_type}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{is\_tfk\_strobe\_type()}{is\_tfk\_strobe\_type()}}
+{\footnotesize\ttfamily static int is\+\_\+tfk\+\_\+strobe\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{strb\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Проверка на соответствие типа строба ТФК. 
+
+Для типа строба, соответствующего ТФК, функция вернет 1, иначе 0. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em strb\+\_\+type} & Тип строба. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+При соответствии типа строба вернет 1. 
+
+При несоответствии типа строба вернет 0. 
+\end{DoxyReturn}
+\Hypertarget{blk223_2libfc_8h_af889ec125463699264ac5356a1ad4bc1}\label{blk223_2libfc_8h_af889ec125463699264ac5356a1ad4bc1} 
+\index{libfc.h@{libfc.h}!map\_tips@{map\_tips}}
+\index{map\_tips@{map\_tips}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{map\_tips()}{map\_tips()}}
+{\footnotesize\ttfamily int map\+\_\+tips (\begin{DoxyParamCaption}\item[{const struct TStrobe \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Преобразует сетевой код типа строба к коду карты памяти прошивки. 
+
+Функция сопоставляет известные типы строба с переданным в аргументах вызова. Если удалось определить тип строба, возвращается соответствующий тип строба ПЛИС, иначе возбуждается программное исключение. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Ссылка на буфер сообщения ТРПР. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает код типа строба прошивки. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{blk223_2libfc_8h_af889ec125463699264ac5356a1ad4bc1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8h_ae5036fdc064d4392882df4f0b60a743a}\label{blk223_2libfc_8h_ae5036fdc064d4392882df4f0b60a743a} 
+\index{libfc.h@{libfc.h}!nrays\_total@{nrays\_total}}
+\index{nrays\_total@{nrays\_total}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{nrays\_total()}{nrays\_total()}}
+{\footnotesize\ttfamily uint nrays\+\_\+total (\begin{DoxyParamCaption}\item[{const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Полное количество лучей в стробе с учетом автокомпенсации 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8h_ae5036fdc064d4392882df4f0b60a743a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21}\label{blk223_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21} 
+\index{libfc.h@{libfc.h}!roundflt@{roundflt}}
+\index{roundflt@{roundflt}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{roundflt()}{roundflt()}}
+{\footnotesize\ttfamily static int32\+\_\+t roundflt (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Округление числа с плавающей запятой до ближайшего целого. 
+
+Функция производит простую операцию округления переданного значения до ближайшего целого. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & Округляемое значение. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает округленное до целого число. 
+\end{DoxyReturn}
+\Hypertarget{blk223_2libfc_8h_a45b9ccd991f45c306e605c54ebfae812}\label{blk223_2libfc_8h_a45b9ccd991f45c306e605c54ebfae812} 
+\index{libfc.h@{libfc.h}!validate\_trims@{validate\_trims}}
+\index{validate\_trims@{validate\_trims}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{validate\_trims()}{validate\_trims()}}
+{\footnotesize\ttfamily libutils\+::\+Result$<$ Trimts\+Msg $>$ validate\+\_\+trims (\begin{DoxyParamCaption}\item[{const Trimts\+Msg \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Производит базовую валидацию сообщения ТРИМС. 
+
+Функция производит последовательный перебор стрбов в заданном сетевом сообщении и для каждого вызывает функцию проверки имитационного строба. Если ошибки не были обнаружены, функция вернет true, иначе вернет false. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Ссылка на буфер сообщения ТРИМС. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает сообщение с валидными стробами. 
+
+Возвращает сообщение об ошибке, если валидных стробов нет. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8h_a45b9ccd991f45c306e605c54ebfae812_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223_2libfc_8h_a6083a2db59c14503e1199e63ebe21c37}\label{blk223_2libfc_8h_a6083a2db59c14503e1199e63ebe21c37} 
+\index{libfc.h@{libfc.h}!validate\_trpr@{validate\_trpr}}
+\index{validate\_trpr@{validate\_trpr}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{validate\_trpr()}{validate\_trpr()}}
+{\footnotesize\ttfamily libutils\+::\+Result$<$ E2\+TRPR $>$ validate\+\_\+trpr (\begin{DoxyParamCaption}\item[{const E2\+TRPR \&}]{msg,  }\item[{uint}]{rek\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Производит базовую валидацию сообщения ТРПР. 
+
+Функция производит последовательный перебор стробов в заданном сетевом сообщении и для каждого вызывает функцию проверки целевого строба. Если в стробе ошибки не были обнаружены, то функция копирует этот строб во временную переменную. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & Ссылка на буфер сообщения ТРПР. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rek\+\_\+num} & Номер РЭК (стробы, не предназначенные этому РЭК, тихо сливаются -\/ не копирются в результат) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает сообщение с валидными стробами. 
+
+Возвращает сообщение об ошибке, если валидных стробов нет. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223_2libfc_8h_a6083a2db59c14503e1199e63ebe21c37_cgraph}
+\end{center}
+\end{figure}

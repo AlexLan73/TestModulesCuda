@@ -1,0 +1,64 @@
+.TH "ServerLoop::ClientConn" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServerLoop::ClientConn
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClientConn\fP (int fd)"
+.br
+.RI "Создает объект из conneted-сокета fd\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "libutils::fdistream \fBin\fP"
+.br
+.RI "Входной поток (на дескрипторе сокета) "
+.ti -1c
+.RI "libutils::fdostream \fBout\fP"
+.br
+.RI "Выходной поток (на дубликате дескриптора сокета) "
+.ti -1c
+.RI "std::unique_ptr< \fBClientPortIn_t\fP > \fBport_in\fP"
+.br
+.RI "Порт, из которого читаются запросы (сделан поверх in) "
+.ti -1c
+.RI "bool \fBis_open\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Клиентское соединение; по сути потоки данных для В/В из connected-сокета 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ServerLoop::ClientConn::ClientConn (int fd)\fC [inline]\fP"
+
+.PP
+Создает объект из conneted-сокета fd\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "libutils::fdistream ServerLoop::ClientConn::in"
+
+.PP
+Входной поток (на дескрипторе сокета) 
+.SS "bool ServerLoop::ClientConn::is_open"
+Флаг 'соединение является открытым' - сбрасывается, когда обнаруживается закрытие соединения клиентом (сам \fBClientConn\fP уничтожается не в этот момент, а по уничтожению последнего shared_ptr, так что может некоторое время жить с is_open == false); понятно, что после закрытия соединения операции в/в с in и out бесполезны 
+.SS "libutils::fdostream ServerLoop::ClientConn::out"
+
+.PP
+Выходной поток (на дубликате дескриптора сокета) 
+.SS "std::unique_ptr<\fBClientPortIn_t\fP> ServerLoop::ClientConn::port_in"
+
+.PP
+Порт, из которого читаются запросы (сделан поверх in) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,90 @@
+.TH "src/b232.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/b232.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <stdexcept>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include 'b232\&.h'\fP
+.br
+\fC#include 'helpers\&.h'\fP
+.br
+\fC#include 'c418_02Result\&.h'\fP
+.br
+\fC#include <model/b232\&.h>\fP
+.br
+\fC#include <model/RPC\&.h>\fP
+.br
+\fC#include <libutils/string\&.h>\fP
+.br
+\fC#include <libvork/libmpk\&.h>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPRINT_MARKS\fP   0"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBModelNS23817A620S1823::divider\fP (const TStrobe &s)"
+.br
+.ti -1c
+.RI "static unique_ptr< \fBSliceFile\fP > \fBModelNS23817A620S1823::makeSliceFile\fP (const char *slice_name, uint64_t texec, const \fBTStrobeExt\fP &strb)"
+.br
+.ti -1c
+.RI "static \fBPolarized\fP< \fBVector3d\fP< complex< double > > > \fBModelNS23817A620S1823::normComplexOutTftpRays\fP (const \fBTStrobeExt\fP &strb, const \fBPolarized\fP< \fBVector3d\fP< complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "static vector< float > \fBModelNS23817A620S1823::normTargetSigmas\fP (const \fBTStrobeExt\fP &strb, const \fBPolarized\fP< vector< uint64_t > > &targetSigmas)"
+.br
+.ti -1c
+.RI "template<class T > static void \fBModelNS23817A620S1823::copyMarks2Ucopo\fP (const \fBTStrobeExt\fP *strb, uint8_t markType, uint32_t elementsNum, const std::vector< T > &mark, const vector< float > &\fBnormTargetSigmas\fP, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::copyMonomarks\fP (const \fBTStrobeExt\fP *strb, const std::vector< \fBMonomark\fP > &marks, const vector< float > &\fBnormTargetSigmas\fP, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::copyComplexMarks\fP (const \fBTStrobeExt\fP *strb, const std::vector< \fBComplexMark\fP > &marks, const vector< float > &\fBnormTargetSigmas\fP, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::doTLP\fP (const std::vector< \fBTargetStrobeOutputExt\fP > &outputs, \fBUcopoMsgBuf\fP &ucopoBuf)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PRINT_MARKS   0"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

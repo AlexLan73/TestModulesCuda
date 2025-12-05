@@ -1,0 +1,69 @@
+.TH "src/jsonrpc/server_main.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/jsonrpc/server_main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'server_loop\&.h'\fP
+.br
+\fC#include 'serdes\&.h'\fP
+.br
+\fC#include '\&.\&./runModel\&.h'\fP
+.br
+\fC#include <libutils/sockhlp\&.h>\fP
+.br
+\fC#include <libutils/result\&.h>\fP
+.br
+\fC#include <libutils/chan\&.h>\fP
+.br
+\fC#include <libutils/fdstream\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <signal\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBsyslog_ident\fP = 'model_jsonrpc_server'"
+.br
+.ti -1c
+.RI "static const char * \fBusage\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char * argv[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const char* syslog_ident = 'model_jsonrpc_server'"
+
+.SS "const char* usage\fC [static]\fP"
+\fBInitial value:\fP.PP
+.nf
+=
+"\\
+jsonrpc_server [\-c N] [\-s] хост[:порт]\\n\\
+Опции:\\n\\
+    \-c N   cache of size N\\n\\
+    \-s     sloppy cache\\n\\
+"
+.fi
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

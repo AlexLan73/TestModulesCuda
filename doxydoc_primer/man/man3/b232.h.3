@@ -1,0 +1,78 @@
+.TH "src/b232.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/b232.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <model/modelInterface\&.h>\fP
+.br
+\fC#include 'controlMsg\&.h'\fP
+.br
+\fC#include 'c418_02\&.h'\fP
+.br
+\fC#include 'sliceFile\&.h'\fP
+.br
+\fC#include 'c418_02Result\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::Mark\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::Monomark\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::ComplexMark\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::TStrobeExt\fP"
+.br
+.ti -1c
+.RI "class \fBModelNS23817A620S1823::Block232\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::operator>\fP (const \fBMark\fP &m1, const \fBMark\fP &m2)"
+.br
+.ti -1c
+.RI "uint \fBModelNS23817A620S1823::thresholdBits\fP (const TStrobe &s)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::thresholdAbsolute\fP (const \fBTStrobeExt\fP &s)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::thresholdRelative\fP (const \fBTStrobeExt\fP &s)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::thresholdFloating\fP (const \fBTStrobeExt\fP &s)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const int32_t \fBModelNS23817A620S1823::crossValuesNum\fP = 5"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

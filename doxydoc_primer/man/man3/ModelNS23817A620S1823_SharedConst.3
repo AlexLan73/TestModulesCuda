@@ -1,0 +1,421 @@
+.TH "ModelNS23817A620S1823::SharedConst" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::SharedConst
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStationType\fP { \fBvoronezhM\fP, \fBvoronezhSM\fP, \fBmrik\fP }"
+.br
+.ti -1c
+.RI "enum \fBPolarizationTypes\fP { \fBvertical\fP, \fBhorizontal\fP, \fBboth\fP }"
+.br
+.ti -1c
+.RI "enum \fBQuadrCompFormTypes\fP { \fBhilbert\fP, \fBkaiserDPD\fP }"
+.br
+.ti -1c
+.RI "enum \fBObjectTypes\fP { \fBsignal\fP, \fBinterference\fP }"
+.br
+.ti -1c
+.RI "enum \fBPolarsCombining\fP { \fBincoherentSumming\fP, \fBcoherentSummingWTlp\fP }"
+.br
+.ti -1c
+.RI "enum \fBPhasingType\fP { \fBtwoStage\fP = 0, \fBoneStageFromCenter\fP = 1, \fBoneStageByCodes\fP = 2 }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const double \fBlightSpeed\fP = 299792458\&."
+.br
+.ti -1c
+.RI "const double \fBcentralFreq\fP [] = { 158000000\&., \-387500000\&., 375000000\&. }"
+.br
+.ti -1c
+.RI "const double \fBfreqPointShift\fP []"
+.br
+.ti -1c
+.RI "const int32_t \fBtheNyquistIntervNum\fP [] = { 6, \-16, 8 }"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCellsInCrateM\fP = 6"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCellsInCrateSM\fP = 18"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCellsInCrateMrik\fP = 6"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCellsInCrate\fP []"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCratesM\fP = 8"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCratesSM\fP = 4"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCratesMrik\fP = 2"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxCrates\fP [] = { \fBmaxCratesM\fP, \fBmaxCratesSM\fP, \fBmaxCratesMrik\fP }"
+.br
+.ti -1c
+.RI "static const uint32_t \fBdiscretesInTact\fP = 5 * (1LL << 20)"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxInterfBandWidth\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBsamplFreqMultiplier\fP [] = { 6, 1, 1 }"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxSamplesInRay\fP = (1LL << 19)"
+.br
+.ti -1c
+.RI "const uint32_t \fBinterfStrbType\fP = 256"
+.br
+.ti -1c
+.RI "const uint32_t \fBtargetStrbType\fP = 0"
+.br
+.ti -1c
+.RI "const uint32_t \fBfragmStrbType\fP = 256"
+.br
+.ti -1c
+.RI "const uint32_t \fBcoordAdaptStrbType\fP = 512"
+.br
+.ti -1c
+.RI "const uint32_t \fBsignalAdaptStrbType\fP = 513"
+.br
+.ti -1c
+.RI "const uint32_t \fBautocompStrbType\fP = 128"
+.br
+.ti -1c
+.RI "const uint32_t \fBcalibrStrbType\fP = 2048"
+.br
+.ti -1c
+.RI "const uint32_t \fBlimmStrbType\fP = 2049"
+.br
+.ti -1c
+.RI "const uint32_t \fBfirstTfcStrbType\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBtfcStrbTypesNum\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxFragmKgrs\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxKgrs\fP = 8192"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxAntennaParts\fP = \fBmaxCratesMrik\fP * \fBmaxCellsInCrateMrik\fP"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxStationTypes\fP = 3"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxDftNum\fP = 256"
+.br
+.ti -1c
+.RI "const uint32_t \fBsigAdaptExtraRows\fP = 1"
+.br
+.ti -1c
+.RI "const uint32_t \fBsysSensitivityLvl\fP = 5"
+.br
+.ti -1c
+.RI "const float \fBhalfWidthM\fP = 39\&.192"
+.br
+.ti -1c
+.RI "const float \fBhalfHeightM\fP = 17\&.22"
+.br
+.ti -1c
+.RI "const float \fBhalfWidthSM\fP = 9\&.1"
+.br
+.ti -1c
+.RI "const float \fBhalfHeightSM\fP = 6\&.67"
+.br
+.ti -1c
+.RI "const uint32_t \fBsumDiffDF1\fP = 4"
+.br
+.ti -1c
+.RI "const uint32_t \fBsumDiffDF2\fP = 5"
+.br
+.ti -1c
+.RI "const uint32_t \fBautocompBandWidth\fP = 32"
+.br
+.ti -1c
+.RI "const double \fBsamplingFreq\fP [] = { 60000000\&., 50000000\&., 100000000\&. }"
+.br
+.ti -1c
+.RI "const double \fBheterFreqStep\fP []"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsSM\fP = 1080"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsM\fP = 192"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsMrik\fP = 96"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannels\fP []"
+.br
+.ti -1c
+.RI "const double \fBhardwGenFreqStep\fP []"
+.br
+.ti -1c
+.RI "const double \fBradiationFreq\fP []"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsInCellSM\fP = 15"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsInCellM\fP = 4"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsInCellMrik\fP = 8"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxChannelsInCell\fP []"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxPolars\fP = 2"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxRays\fP = 16"
+.br
+.ti -1c
+.RI "const uint32_t \fBmaxDFGroups\fP = 10"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Константы для общего пользования\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::SharedConst::ObjectTypes\fP"
+тип объекта строба (сигнал/помеха) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIsignal \fP\fP
+.TP
+\fB\fIinterference \fP\fP
+.SS "enum \fBModelNS23817A620S1823::SharedConst::PhasingType\fP"
+типы фазирования антенной решётки 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fItwoStage \fP\fP
+.TP
+\fB\fIoneStageFromCenter \fP\fP
+.TP
+\fB\fIoneStageByCodes \fP\fP
+.SS "enum \fBModelNS23817A620S1823::SharedConst::PolarizationTypes\fP"
+тип поляризации 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIvertical \fP\fP
+.TP
+\fB\fIhorizontal \fP\fP
+.TP
+\fB\fIboth \fP\fP
+.SS "enum \fBModelNS23817A620S1823::SharedConst::PolarsCombining\fP"
+способы объединения сигналов поляризаций 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIincoherentSumming \fP\fP
+.TP
+\fB\fIcoherentSummingWTlp \fP\fP
+.SS "enum \fBModelNS23817A620S1823::SharedConst::QuadrCompFormTypes\fP"
+типы методов формирования квадратурных составляющих 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIhilbert \fP\fP
+.TP
+\fB\fIkaiserDPD \fP\fP
+.SS "enum \fBModelNS23817A620S1823::SharedConst::StationType\fP"
+типы станций (для индексации массивов) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIvoronezhM \fP\fP
+.TP
+\fB\fIvoronezhSM \fP\fP
+.TP
+\fB\fImrik \fP\fP
+.SH "Variable Documentation"
+.PP 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::autocompBandWidth = 32"
+размер окна для режима автокомпенсации 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::autocompStrbType = 128"
+тип строба автокомпенсации для расчёта адаптивных векторов, используемых в ячейке 418-02 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::calibrStrbType = 2048"
+тип строба калибровки 
+.SS "const double ModelNS23817A620S1823::SharedConst::centralFreq[] = { 158000000\&., \-387500000\&., 375000000\&. }"
+центральная промежуточная частота на станциях: Воркута, Воронеж СМ, МРИК, в Гц в метровой станции совпадает с несущей (Wпо) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::coordAdaptStrbType = 512"
+тип строба координатной адаптации 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::discretesInTact = 5 * (1LL << 20)\fC [static]\fP"
+количество дискрет на длине такта 2^19 для Воронеж-М, 5*2^19 для Воронеж-СМ, 10*2^19 для МРИК 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::firstTfcStrbType = 1024"
+начальный номер диапазона типов стробов ТФК 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::fragmStrbType = 256"
+тип строба для фрагментации антенного полотна 
+.SS "const double ModelNS23817A620S1823::SharedConst::freqPointShift[]"
+\fBInitial value:\fP.PP
+.nf
+= { 2441\&.40625,
+                                      1000\&.,
+                                      1000 }
+.fi
+размер смещения между частотными точками гетеродина (ЦМР) на станциях: Воркута, Воронеж СМ, МРИК 
+.SS "const float ModelNS23817A620S1823::SharedConst::halfHeightM = 17\&.22"
+половина высоты антенной решётки Воронеж-М, м 
+.SS "const float ModelNS23817A620S1823::SharedConst::halfHeightSM = 6\&.67"
+половина высоты антенной решётки Воронеж-СМ, м 
+.SS "const float ModelNS23817A620S1823::SharedConst::halfWidthM = 39\&.192"
+половина ширины антенной решётки Воронеж-М, м 
+.SS "const float ModelNS23817A620S1823::SharedConst::halfWidthSM = 9\&.1"
+половина ширины антенной решётки Воронеж-СМ, м 
+.SS "const double ModelNS23817A620S1823::SharedConst::hardwGenFreqStep[]"
+\fBInitial value:\fP.PP
+.nf
+= { samplingFreq[voronezhM] / (1<<24),
+                                        samplingFreq[voronezhSM] / (1LL<<32),
+                                        samplingFreq[mrik] / (1LL<<32) }
+.fi
+шаг частоты аппаратного генератора синуса, в Гц 
+.SS "const double ModelNS23817A620S1823::SharedConst::heterFreqStep[]"
+\fBInitial value:\fP.PP
+.nf
+= { samplingFreq[voronezhM] / (1LL << 31),
+                                     samplingFreq[voronezhSM] / (1LL << 32),
+                                     samplingFreq[mrik] / (1LL << 32) }
+.fi
+шаг по частоте гетеродина на станциях Воркута, Воронеж СМ, МРИК 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::interfStrbType = 256"
+помеховый тип строба (Воронеж-М) 
+.SS "const double ModelNS23817A620S1823::SharedConst::lightSpeed = 299792458\&."
+значение скорости света 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::limmStrbType = 2049"
+тип строба РИУШ 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxAntennaParts = \fBmaxCratesMrik\fP * \fBmaxCellsInCrateMrik\fP"
+максимальное количество частей, на которые может быть разделено антенное полотно в помеховом режиме в 418-02й ячейке 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCellsInCrate[]"
+\fBInitial value:\fP.PP
+.nf
+= { maxCellsInCrateM,
+                                         maxCellsInCrateSM,
+                                         maxCellsInCrateMrik }
+.fi
+максимальное количество ячеек 412-06, 223 в крейте МПК1 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCellsInCrateM = 6"
+максимальное количество ячеек 412 в блоке 978 М станции 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCellsInCrateMrik = 6"
+максимальное количество ячеек 435 в крейте станции МРИК На самом деле их там две и крейтов не 12, а 6, но из-за режима дробления полотна (6;4) такое разбиение на 12 крейтов по одной ячейке намного более удобно для реализации 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCellsInCrateSM = 18"
+максимальное количество ячеек 223 в блоке 234_01 СМ станции 16 физических и 2 виртуальных по углам антенны 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannels[]"
+\fBInitial value:\fP.PP
+.nf
+= { maxChannelsM,
+                                     maxChannelsSM,
+                                     maxChannelsMrik }
+.fi
+максимальное количество каналов в поляризации 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsInCell[]"
+\fBInitial value:\fP.PP
+.nf
+= { maxChannelsInCellM,
+                                           maxChannelsInCellSM,
+                                           maxChannelsInCellMrik }
+.fi
+максимальное количество каналов в ячейке 412-06, 223, 435 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsInCellM = 4"
+максимальное количество каналов в ячейке 412 М станции 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsInCellMrik = 8"
+максимальное количество каналов в ячейке 435 станции МРИК 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsInCellSM = 15"
+максимальное количество каналов в ячейке 223 СМ станции 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsM = 192"
+максимальное количество каналов в поляризации в М станции 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsMrik = 96"
+максимальное количество каналов в поляризации в станции МРИК 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxChannelsSM = 1080"
+максимальное количество каналов в поляризации в СМ станции, 64*15=960 нормальных каналов и 8*15=120 - виртуальных, для дополнения решётки до прямоугольника 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCrates[] = { \fBmaxCratesM\fP, \fBmaxCratesSM\fP, \fBmaxCratesMrik\fP }"
+максимальное количество крейтов в одной поляризации (418-01/234-01) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCratesM = 8"
+максимальное количество крейтов МПК1 одной поляризации для метровой станции в Воркуте 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCratesMrik = 2"
+максимальное количество крейтов одной поляризации для МРИК 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxCratesSM = 4"
+максимальное количество блоков 234_01 одной поляризации для Воронеж СМ 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxDFGroups = 10"
+максимальное количество пеленгационных групп в стробе 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxDftNum = 256"
+максимальное значение размерности ДПФ (Воронеж-СМ) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxFragmKgrs = 1024"
+максимальное количество гипотез по радиальной скорости для фрагментов 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxInterfBandWidth = 1024"
+максимальное значение ширины полосы помехи (максимальное М) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxKgrs = 8192"
+максимальное количество гипотез по радиальной скорости для обычных режимов (без фрагментирования) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxPolars = 2"
+максимальное количество поляризаций 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxRays = 16"
+максимальное количество лучей, по идее не больше 12, но для автокомпенсации максимум 16, т\&.к\&. там лучи суммируются с помехами 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxSamplesInRay = (1LL << 19)"
+максимальное количество выборок в луче (на выходе 412й ячейки) 2 x nihs самого длинного сигнала (tips = 132) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::maxStationTypes = 3"
+максимальное количество типов станций, которые поддерживает модель 
+.SS "const double ModelNS23817A620S1823::SharedConst::radiationFreq[]"
+\fBInitial value:\fP.PP
+.nf
+= { 158000000\&.,
+                                     1300000000\&.,
+                                     3750000000\&. }
+.fi
+частота излучения Fизл на станциях Воркута, Воронеж СМ, МРИК, в Гц 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::samplFreqMultiplier[] = { 6, 1, 1 }"
+множитель частоты дискретизации на станциях Воркута, Воронеж СМ, МРИК Используется при преобразовании длин и начал стробов и объектов 
+.SS "const double ModelNS23817A620S1823::SharedConst::samplingFreq[] = { 60000000\&., 50000000\&., 100000000\&. }"
+частота дискретизации на станциях: Воркута, Воронеж СМ, МРИК, в Гц 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::sigAdaptExtraRows = 1"
+количество дополнительных строк данных в каждом канале для сигнальной адаптации (выясняется экспериментальным путём) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::signalAdaptStrbType = 513"
+тип строба сигнальной адаптации 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::sumDiffDF1 = 4"
+тип пеленгации цели для режима суммарно-разностная пеленгация, первый метод 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::sumDiffDF2 = 5"
+тип пеленгации цели для режима суммарно-разностная пеленгация, второй метод 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::sysSensitivityLvl = 5"
+экспериментальное значение для повышения чувствительности системы к остаточной девиации сигнала 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::targetStrbType = 0"
+начало диапазона целевых типов строба (диапазон 0-127) 
+.SS "const uint32_t ModelNS23817A620S1823::SharedConst::tfcStrbTypesNum = 1024"
+количество типов стробов ТФК 
+.SS "const int32_t ModelNS23817A620S1823::SharedConst::theNyquistIntervNum[] = { 6, \-16, 8 }"
+theNyquistIntervNum[N] - это номер интервала Найквиста на станциях Воркута, Воронеж СМ, МРИК (m - в ИД) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

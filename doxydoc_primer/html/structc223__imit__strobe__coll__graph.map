@@ -1,0 +1,5 @@
+<map id="c223_imit_strobe" name="c223_imit_strobe">
+<area shape="rect" id="Node000001" title="Имитационный строб ФУ 223&#45;й ячейки." alt="" coords="27,333,189,539"/>
+<area shape="rect" id="Node000002" href="$structc223__imit__object__params.html" title="Параметры имитируемого объекта." alt="" coords="5,5,211,271"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,271,111,317,105,317,105,271"/>
+</map>

@@ -1,0 +1,67 @@
+\doxysection{df\+Groups.\+h}
+\hypertarget{dfGroups_8h_source}{}\label{dfGroups_8h_source}\index{src/dfGroups.h@{src/dfGroups.h}}
+\mbox{\hyperlink{dfGroups_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DFGROUPS\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DFGROUPS\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{controlMsgSharedTypes_8h}{model/controlMsgSharedTypes.h}}>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelSharedConst_8h}{model/modelSharedConst.h}}>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups}{DFGroups}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1DFGroups_1_1DFGroup}{DFGroup}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1DFGroups_1_1DFGroup_a520e9c477babc8cd42c4570804b4e9c3}{raysQuantity}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1RayCoords}{RayCoords}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1DFGroups_1_1DFGroup_a39019a289aea1036fe5b11a11436ebd5}{raysCoords}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}];}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_abb35911c3f9c4f75633a55e2cf7ea857}{maxDFGroupsQuantity}}\ =\ 96;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a3c580ef2e197515ff2f7e20497daa0f7}{DFGroups}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a7a41c7097d6278d781ef4cbaae895c31}{\string~DFGroups}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a530162e78caf1baaf5fe9750a6a4006b}{getDFGroup}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1DFGroups_1_1DFGroup}{DFGroup}}\ *dfGroup,\ uint8\_t\ targetDFType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a272e6ca72f8b63d7440d0a35e26a5668}{getRaysQuantity}}(uint8\_t\ targetDFType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a63e2579ecd4a32ab97d397e7386a8ea4}{isNotExist}}(uint8\_t\ dfgNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1DFGroups_1_1DFGroup}{DFGroup}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_ac998501d8fdb3f2d6ce5ad90e5ba3b87}{dfGroups}}[\mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_abb35911c3f9c4f75633a55e2cf7ea857}{maxDFGroupsQuantity}}];}
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<uint32\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a98fc825f9d2cece04138d599d1085e06}{dfGroupsIdx}};}
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_ae9a7d37a5fac62a764eec8282eb26069}{clearDFGroups}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a5133c146778bc6a174b9aae7fb58f307}{fillUV}}(int32\_t\ group,\ int32\_t\ ray,\ \textcolor{keywordtype}{double}\ u,\ \textcolor{keywordtype}{double}\ v);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a4673845cc3dac9665d4b17d68da2e3b2}{fill0Group}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_abea537cfebb33a9baa22345baa440d5c}{fill2Group}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a65972d8d657c057b6ebdd957af082567}{fill3Group}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_ae0d8b15f0f7dd168371d257645a0a8f7}{fill4Group}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a86c7faaece86caaa6a18f865cb5e4f56}{fill5Group}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_ab057344c50630dfc11a57ec31784ff76}{fill12Group}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a93bc546a5925407a27647c84f7b91666}{fill15Group}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a84746d12581fc93eb5fd1b7a851acbd4}{fill16Group}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a4f048ab547f35ae11ee807827c3fafa3}{fill32Group}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_ac4ed5802ca7a8cdedb90da0c1b15d947}{fill33Group}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a2d2959a9033787416ec9cace34f6409e}{fill37Group}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a2764d09e457c3e368e26ceeacbf7c6e7}{fill38Group}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a477142d821525a9165e8fde56c51511f}{fill39Group}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a694c76c17a1a50e65939cb9fde3d54b7}{fill40Group}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a20c7bb15983604ae01169ca295306e52}{fill41Group}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a9a66567fb749a904a291f7b164f49ca2}{fill64Group}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a7c4b097da6b9bd1b40a978099e43b17f}{fill65Group}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a0a98172164797e41bbd4dcf36a359865}{fill67Group}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a84195e7f7406900c4661db3272b4a822}{fill68Group}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a38df980578f4ff27a51e9a3880b51048}{fill70Group}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a2901633cd425d45d2e5f083cbf634bf7}{fill71Group}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_aaf9141fa3f3731a055f702b22de28661}{fill72Group}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a32270c8aa76724902cc7ae426a15245e}{fill74Group}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a11e3c83998fa846bfc59fa6848d51bb1}{fill75Group}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups_a70b3c45732fcee6975815fcb5c96ce90}{fill76Group}}();}
+\DoxyCodeLine{00114\ \};\ \textcolor{comment}{//\ class\ DFGroups}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DFGROUPS\_H\_\_}}
+
+\end{DoxyCode}

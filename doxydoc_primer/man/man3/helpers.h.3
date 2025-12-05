@@ -1,0 +1,157 @@
+.TH "src/helpers.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/helpers.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <model/controlMsgSharedTypes\&.h>\fP
+.br
+\fC#include 'sliceFile\&.h'\fP
+.br
+\fC#include 'controlMsgModelTypes\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823::Helpers\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::maybe_terminate\fP (char *s, uint n, char c)"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::quickPrint\fP (std::ostream &s, const std::complex< int32_t > &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::quickPrint\fP (std::ostream &s, const std::complex< double > &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::quickPrint\fP (std::ostream &s, const int32_t &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::quickPrint\fP (std::ostream &s, const int64_t &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::quickPrint\fP (std::ostream &s, const uint64_t &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBModelNS23817A620S1823::quickPrint\fP (std::ostream &s, const double &data, char c='\\0')"
+.br
+.ti -1c
+.RI "template<class T > void \fBModelNS23817A620S1823::quickPrintln\fP (std::ostream &s, const T &v)"
+.br
+.ti -1c
+.RI "static int32_t \fBModelNS23817A620S1823::round_u32\fP (const int s, const uint32_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static int64_t \fBModelNS23817A620S1823::round_u64\fP (const int s, const uint64_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static int32_t \fBModelNS23817A620S1823::round_i32\fP (int32_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static int64_t \fBModelNS23817A620S1823::round_i64\fP (int64_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> int32_t \fBModelNS23817A620S1823::Helpers::rshiftBy\fP (int32_t value)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> int64_t \fBModelNS23817A620S1823::Helpers::rshift64By\fP (int64_t value)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> std::complex< int32_t > \fBModelNS23817A620S1823::Helpers::rshiftBy\fP (const std::complex< int32_t > &value)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> std::complex< int64_t > \fBModelNS23817A620S1823::Helpers::rshift64By\fP (const std::complex< int64_t > &value)"
+.br
+.ti -1c
+.RI "uint32_t \fBModelNS23817A620S1823::Helpers::flp2\fP (uint32_t x)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isInterfModeStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isTargetModeStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isCoordAdaptStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isSignalAdaptStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isAutocompStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isCalibrStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isLIMMStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isFragmStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isTfcStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "uint32_t \fBModelNS23817A620S1823::Helpers::calcSamplesInRay\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "uint32_t \fBModelNS23817A620S1823::Helpers::calcTransientResponseLength\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "uint32_t \fBModelNS23817A620S1823::Helpers::calcAutocompSamplesInRay\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "uint32_t \fBModelNS23817A620S1823::Helpers::calcRaysNum\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "const char * \fBModelNS23817A620S1823::Helpers::getStrobeIDAppendix\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isLastPolarization\fP (\fBSharedConst::PolarizationTypes\fP polarType, uint32_t polarMask)"
+.br
+.ti -1c
+.RI "bool \fBModelNS23817A620S1823::Helpers::isMrikBottomHalf\fP (uint32_t lChanNum)"
+.br
+.ti -1c
+.RI "template<class T > void \fBModelNS23817A620S1823::Helpers::printArr\fP (const T arr[], int32_t length, char direction='r', const char *descr='')"
+.br
+.ti -1c
+.RI "template<class T > void \fBModelNS23817A620S1823::Helpers::dump1DimSlice\fP (const T buf[], uint32_t length, \fBSliceFile\fP &sFile, std::ios_base::openmode mode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "template<class T , const uint32_t dim2Sz> void \fBModelNS23817A620S1823::Helpers::dump2DimSlice\fP (const T buf[][dim2Sz], uint32_t rowsNum, uint32_t columnsNum, \fBSliceFile\fP &sFile, std::ios_base::openmode mode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "template<class T > int32_t \fBModelNS23817A620S1823::Helpers::isValid\fP (T value, T min, T max, const char *descr)"
+.br
+.ti -1c
+.RI "template<class T > void \fBModelNS23817A620S1823::Helpers::dumpSumPolars\fP (std::vector< std::vector< std::vector< T > > > &sum, \fBSliceFile\fP &sFile)"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBSliceFile\fP > \fBModelNS23817A620S1823::Helpers::makeSliceFile\fP (const char *slice_name, uint64_t texec, uint nstr)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

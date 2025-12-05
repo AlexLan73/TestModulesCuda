@@ -1,0 +1,604 @@
+\doxysection{Slice\+Viewer Class Reference}
+\hypertarget{classSliceViewer}{}\label{classSliceViewer}\index{SliceViewer@{SliceViewer}}
+
+
+{\ttfamily \#include $<$slice\+Viewer.\+h$>$}
+
+
+
+Collaboration diagram for Slice\+Viewer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classSliceViewer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSliceViewer_1_1FileData}{File\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}{Data\+Type}} \{ \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a110695053fc416f4c4b028055695e60b}{real}}
+, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{complex}}
+, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a70c20fc78d4f0c0bb9e381d2b775b12d}{unknown\+Type}}
+ \}
+\item 
+enum \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}{Data\+Sum\+Method}} \{ \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566ada3e33b7f4551d2fab279307f4556050}{none}}
+, \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566a7af162a285c8e0bfbdc5b6be9c870490}{direct}}
+, \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566a7ee3c7ee03e633dbd2c88026ac5c84be}{coherent}}
+, \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566abd713d85cede8730b380dcce1e4c80b7}{incoherent}}
+ \}
+\item 
+enum \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}} \{ \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032a11557aa5de5a77cb250031b6be41e467}{re}}
+, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032adcf258caa1135af887179cfda5d5fc4a}{im}}
+, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032af9e26223ef7c5be5d13ccc665da55cd9}{norm}}
+, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032ab1ad0196b0ea58b89e02a0e3d325d9c1}{modulus}}
+ \}
+\item 
+enum \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}{Error\+Code}} \{ \newline
+\mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afab1e9c19878ce54f0fba0cdef02c3a23a}{ok}}
+, \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afa204b252ec1b722a2c86ec4a750708ba9}{dim\+Size}}
+, \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afafaa6ecaa0e24d0240ee826de5d125eaf}{out\+Of\+Range}}
+, \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afaf2ca8bb591c5010848c368487ec258c1}{zero\+Window\+Size}}
+, \newline
+\mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afabbe41acffb5c3ae71a61f6d16f3c8553}{diff\+Files\+Size}}
+, \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afae57a3a7bb6a98b37785e9fbd850ea161}{diff\+Files\+Data\+Type}}
+, \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afa889d4c7c2b4904db57faa081148b94ad}{both\+Files\+Are\+Not\+Complex}}
+ \}
+\item 
+enum \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \{ \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a96af113c05d713844041c4ac1de7d94a}{first\+File}} = 0
+, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a97138e8feec690f09dea3eabdea0ca18}{second\+File}} = 1
+, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a011bec139ca84238188d7039d22cf821}{both\+Files}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Data\+Shape}} \{ \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fa5104e601285cda1409e493ddb5f35430}{curve}}
+, \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fa6353d2745654a47d4b2e637f9ad838ba}{surface}}
+, \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fad7ccccf7ea5c15a74c0d74b84d79379f}{unknown\+Shape}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a41bc2cfba6b31705c4373ed082584560}{load\+Slice\+Data\+File}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{const}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Name}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{maxX}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{maxY}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}{Data\+Type}} \texorpdfstring{$\ast$}{*}data\+Type, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a1090bf1d9baa963f919f8ae88d1d4307}{clean\+Slice\+Data}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a980ccdf2c23db58af0a4720b8a155494}{get\+Max\+XY}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{maxX}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{maxY}})
+\item 
+\mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}{Error\+Code}} \mbox{\hyperlink{classSliceViewer_a1650909c2b779d553c03c73ffd5538c7}{draw\+Graph}} (\mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}{Data\+Sum\+Method}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{sum\+Method}}, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{part\+Of\+Data}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Window\+Size}})
+\item 
+\mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Data\+Shape}} \mbox{\hyperlink{classSliceViewer_aa5bd4ea3f03b4ff6179bd158bfc887f7}{get\+Data\+Shape}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a7536c8fe69a5ad7559da5eba9035246c}{get\+Means}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_a0b72f6bc107899297a090475b5ac2641}{a\+Mean}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_a72a1306c6a65b769c0fa8519aece7194}{median}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a822afe4fda89d5ab519d4dcc9aa01b3a}{get\+Dispersions}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{a\+Mean\+Dispersion1}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{median\+Dispersion1}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{a\+Mean\+Dispersion2}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{median\+Dispersion2}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a8f9e1f6cc907966cdc99794dc7f14cd8}{get\+Max\+Value\+In\+Window}} ()
+\item 
+\mbox{\hyperlink{classSliceViewer_a3d9bf3a7caa52b8ccd059277007d9610}{Slice\+Viewer}} ()
+\item 
+\mbox{\hyperlink{classSliceViewer_a5a202724933cb6915ea90b5dade73ffc}{\texorpdfstring{$\sim$}{\string~}\+Slice\+Viewer}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}{Data\+Type}} \mbox{\hyperlink{classSliceViewer_ae8dd2a442c94abf84dec86a6e44e44e2}{get\+Data\+File\+Type}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}})
+\item 
+\mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}{Error\+Code}} \mbox{\hyperlink{classSliceViewer_ad3088ee296c8a714b43c5cd636047d6f}{validate\+Params}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Window\+Size}})
+\item 
+\mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Data\+Shape}} \mbox{\hyperlink{classSliceViewer_ab0286b773a6de8210be0cc631961c20b}{analyze\+Data\+Shape}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a88e888cb9e0a7f6c50934f90972a4f5d}{analyze\+Real\+Data\+Shape}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{col\+Counter}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{row\+Counter}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a9bd32e27ab4e3894efdd83fc8cd0d9b1}{analyze\+Complex\+Data\+Shape}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{col\+Counter}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{row\+Counter}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a118a5747ab2a751c20ed8e6e68f11a32}{load\+Real\+Values\+From2\+DFile}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a9f8cf4a6fb768f8c07a7778858e023ae}{load\+Real\+Values\+From3\+DFile}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_acfcbfd831d13dcc6ae81185850f30f4b}{load\+Complex\+Values\+From2\+DFile}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_ac81fd7fb1b04bf4b6d7c95584dd4a0c2}{load\+Complex\+Values\+From3\+DFile}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{text\+Stream}}, \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a411a741bdc37050f5f4e445f03a449c7}{plot2\+DReal\+Values\+File}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{start\+Pos}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} length)
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a2c664dce4342723ae43566ab83475f04}{plot3\+DReal\+Values\+File}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Window\+Size}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a3f9620f7af3efb8e7e83d4c254eeb112}{plot2\+DComplex\+Values\+File}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{start\+Pos}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} length, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{part\+Of\+Data}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a838cd2c524ad23758e44350db695dc95}{plot3\+DComplex\+Values\+File}} (\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{f\+Index}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{part\+Of\+Data}})
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a951908ad8b8a6644e3846a80dfc34a16}{plot3\+DSum\+Of2\+Complex\+Files}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{x\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Offset}}, \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Window\+Size}}, \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{part\+Of\+Data}}, \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}{Data\+Sum\+Method}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{sum\+Method}})
+\item 
+\mbox{\hyperlink{classgnuplotio_1_1Gnuplot}{gnuplotio\+::\+Gnuplot}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSliceViewer_a36df36d2c2a19e4bf7736bf7a01f47f3}{create\+Gnuplotio\+Obj}} ()
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_a76a23e6b0d98ff9bef6357815661ebf9}{calc\+Mean}} (\mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Data\+Shape}} data\+Shape)
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} \mbox{\hyperlink{classSliceViewer_ad1ea228809383141161aac98e79ec5c3}{calc\+Dispersion}} ()
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a022a202df6bf3911c2974ff86cf55044}{find\+Max\+Value\+On\+Surface}} (\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{y\+Window\+Size}}) \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{struct}} \mbox{\hyperlink{structSliceViewer_1_1FileData}{Slice\+Viewer\+::\+File\+Data}} \mbox{\hyperlink{classSliceViewer_ac1d21a0970e895b9752187a7d64b0b3e}{f\+Data}} \mbox{[}\mbox{\hyperlink{classSliceViewer_ac4928286ddb4ff4d793101040d4dfa70}{max\+Files\+Num}}\mbox{]}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} $>$ \mbox{\hyperlink{classSliceViewer_a6d4218b28d8b63a46affb58659a8e394}{ready\+Data2D}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} $>$ $>$ \mbox{\hyperlink{classSliceViewer_a5950b01fca751f0f96e0b8eb111f87df}{ready\+Data3D}}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a0b72f6bc107899297a090475b5ac2641}{a\+Mean}}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a72a1306c6a65b769c0fa8519aece7194}{median}}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a0428b29c30b23e21f1ec4cd89d96c332}{max\+Value}}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a68155a7b59a1961370cd732d0f5e04a9}{a\+Mean\+Dispersion}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \mbox{\hyperlink{classSliceViewer_a8055398e160374d8883d11430008c947}{median\+Dispersion}} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{static}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{const}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \mbox{\hyperlink{classSliceViewer_ac4928286ddb4ff4d793101040d4dfa70}{max\+Files\+Num}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}\label{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f} 
+\index{SliceViewer@{SliceViewer}!DataShape@{DataShape}}
+\index{DataShape@{DataShape}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{DataShape}{DataShape}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{enum}} \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Slice\+Viewer\+::\+Data\+Shape}}}
+
+вид графика -\/ кривая или поверхность \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{curve@{curve}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!curve@{curve}}}\Hypertarget{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fa5104e601285cda1409e493ddb5f35430}\label{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fa5104e601285cda1409e493ddb5f35430} 
+curve&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{surface@{surface}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!surface@{surface}}}\Hypertarget{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fa6353d2745654a47d4b2e637f9ad838ba}\label{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fa6353d2745654a47d4b2e637f9ad838ba} 
+surface&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{unknownShape@{unknownShape}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!unknownShape@{unknownShape}}}\Hypertarget{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fad7ccccf7ea5c15a74c0d74b84d79379f}\label{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8fad7ccccf7ea5c15a74c0d74b84d79379f} 
+unknown\+Shape&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}\label{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566} 
+\index{SliceViewer@{SliceViewer}!DataSumMethod@{DataSumMethod}}
+\index{DataSumMethod@{DataSumMethod}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{DataSumMethod}{DataSumMethod}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{enum}} \mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}{Slice\+Viewer\+::\+Data\+Sum\+Method}}}
+
+способ суммирования данных файлов \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!none@{none}}}\Hypertarget{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566ada3e33b7f4551d2fab279307f4556050}\label{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566ada3e33b7f4551d2fab279307f4556050} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{direct@{direct}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!direct@{direct}}}\Hypertarget{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566a7af162a285c8e0bfbdc5b6be9c870490}\label{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566a7af162a285c8e0bfbdc5b6be9c870490} 
+direct&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{coherent@{coherent}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!coherent@{coherent}}}\Hypertarget{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566a7ee3c7ee03e633dbd2c88026ac5c84be}\label{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566a7ee3c7ee03e633dbd2c88026ac5c84be} 
+coherent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{incoherent@{incoherent}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!incoherent@{incoherent}}}\Hypertarget{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566abd713d85cede8730b380dcce1e4c80b7}\label{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566abd713d85cede8730b380dcce1e4c80b7} 
+incoherent&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}\label{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2} 
+\index{SliceViewer@{SliceViewer}!DataType@{DataType}}
+\index{DataType@{DataType}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{DataType}{DataType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{enum}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}{Slice\+Viewer\+::\+Data\+Type}}}
+
+тип данных в файле \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{real@{real}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!real@{real}}}\Hypertarget{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a110695053fc416f4c4b028055695e60b}\label{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a110695053fc416f4c4b028055695e60b} 
+real&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{complex@{complex}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!complex@{complex}}}\Hypertarget{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}\label{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958} 
+complex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{unknownType@{unknownType}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!unknownType@{unknownType}}}\Hypertarget{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a70c20fc78d4f0c0bb9e381d2b775b12d}\label{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a70c20fc78d4f0c0bb9e381d2b775b12d} 
+unknown\+Type&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af} 
+\index{SliceViewer@{SliceViewer}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{enum}} \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}{Slice\+Viewer\+::\+Error\+Code}}}
+
+коды ошибок \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ok@{ok}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!ok@{ok}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afab1e9c19878ce54f0fba0cdef02c3a23a}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afab1e9c19878ce54f0fba0cdef02c3a23a} 
+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dimSize@{dimSize}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!dimSize@{dimSize}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afa204b252ec1b722a2c86ec4a750708ba9}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afa204b252ec1b722a2c86ec4a750708ba9} 
+dim\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{outOfRange@{outOfRange}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!outOfRange@{outOfRange}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afafaa6ecaa0e24d0240ee826de5d125eaf}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afafaa6ecaa0e24d0240ee826de5d125eaf} 
+out\+Of\+Range&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{zeroWindowSize@{zeroWindowSize}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!zeroWindowSize@{zeroWindowSize}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afaf2ca8bb591c5010848c368487ec258c1}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afaf2ca8bb591c5010848c368487ec258c1} 
+zero\+Window\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{diffFilesSize@{diffFilesSize}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!diffFilesSize@{diffFilesSize}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afabbe41acffb5c3ae71a61f6d16f3c8553}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afabbe41acffb5c3ae71a61f6d16f3c8553} 
+diff\+Files\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{diffFilesDataType@{diffFilesDataType}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!diffFilesDataType@{diffFilesDataType}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afae57a3a7bb6a98b37785e9fbd850ea161}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afae57a3a7bb6a98b37785e9fbd850ea161} 
+diff\+Files\+Data\+Type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bothFilesAreNotComplex@{bothFilesAreNotComplex}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!bothFilesAreNotComplex@{bothFilesAreNotComplex}}}\Hypertarget{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afa889d4c7c2b4904db57faa081148b94ad}\label{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684afa889d4c7c2b4904db57faa081148b94ad} 
+both\+Files\+Are\+Not\+Complex&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}\label{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3} 
+\index{SliceViewer@{SliceViewer}!FileIndex@{FileIndex}}
+\index{FileIndex@{FileIndex}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{FileIndex}{FileIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{enum}} \mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{Slice\+Viewer\+::\+File\+Index}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{firstFile@{firstFile}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!firstFile@{firstFile}}}\Hypertarget{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a96af113c05d713844041c4ac1de7d94a}\label{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a96af113c05d713844041c4ac1de7d94a} 
+first\+File&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{secondFile@{secondFile}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!secondFile@{secondFile}}}\Hypertarget{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a97138e8feec690f09dea3eabdea0ca18}\label{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a97138e8feec690f09dea3eabdea0ca18} 
+second\+File&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bothFiles@{bothFiles}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!bothFiles@{bothFiles}}}\Hypertarget{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a011bec139ca84238188d7039d22cf821}\label{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3a011bec139ca84238188d7039d22cf821} 
+both\+Files&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classSliceViewer_ace0e21b489eed69481914788b90c6032}\label{classSliceViewer_ace0e21b489eed69481914788b90c6032} 
+\index{SliceViewer@{SliceViewer}!PartOfData@{PartOfData}}
+\index{PartOfData@{PartOfData}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{PartOfData}{PartOfData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{enum}} \mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Slice\+Viewer\+::\+Part\+Of\+Data}}}
+
+часть данных для отображения \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{re@{re}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!re@{re}}}\Hypertarget{classSliceViewer_ace0e21b489eed69481914788b90c6032a11557aa5de5a77cb250031b6be41e467}\label{classSliceViewer_ace0e21b489eed69481914788b90c6032a11557aa5de5a77cb250031b6be41e467} 
+re&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{im@{im}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!im@{im}}}\Hypertarget{classSliceViewer_ace0e21b489eed69481914788b90c6032adcf258caa1135af887179cfda5d5fc4a}\label{classSliceViewer_ace0e21b489eed69481914788b90c6032adcf258caa1135af887179cfda5d5fc4a} 
+im&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{norm@{norm}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!norm@{norm}}}\Hypertarget{classSliceViewer_ace0e21b489eed69481914788b90c6032af9e26223ef7c5be5d13ccc665da55cd9}\label{classSliceViewer_ace0e21b489eed69481914788b90c6032af9e26223ef7c5be5d13ccc665da55cd9} 
+norm&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{modulus@{modulus}!SliceViewer@{SliceViewer}}\index{SliceViewer@{SliceViewer}!modulus@{modulus}}}\Hypertarget{classSliceViewer_ace0e21b489eed69481914788b90c6032ab1ad0196b0ea58b89e02a0e3d325d9c1}\label{classSliceViewer_ace0e21b489eed69481914788b90c6032ab1ad0196b0ea58b89e02a0e3d325d9c1} 
+modulus&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSliceViewer_a3d9bf3a7caa52b8ccd059277007d9610}\label{classSliceViewer_a3d9bf3a7caa52b8ccd059277007d9610} 
+\index{SliceViewer@{SliceViewer}!SliceViewer@{SliceViewer}}
+\index{SliceViewer@{SliceViewer}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{SliceViewer()}{SliceViewer()}}
+{\footnotesize\ttfamily Slice\+Viewer\+::\+Slice\+Viewer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a3d9bf3a7caa52b8ccd059277007d9610_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a5a202724933cb6915ea90b5dade73ffc}\label{classSliceViewer_a5a202724933cb6915ea90b5dade73ffc} 
+\index{SliceViewer@{SliceViewer}!````~SliceViewer@{\texorpdfstring{$\sim$}{\string~}SliceViewer}}
+\index{````~SliceViewer@{\texorpdfstring{$\sim$}{\string~}SliceViewer}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SliceViewer()}{\string~SliceViewer()}}
+{\footnotesize\ttfamily Slice\+Viewer\+::\texorpdfstring{$\sim$}{\string~}\+Slice\+Viewer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSliceViewer_a9bd32e27ab4e3894efdd83fc8cd0d9b1}\label{classSliceViewer_a9bd32e27ab4e3894efdd83fc8cd0d9b1} 
+\index{SliceViewer@{SliceViewer}!analyzeComplexDataShape@{analyzeComplexDataShape}}
+\index{analyzeComplexDataShape@{analyzeComplexDataShape}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{analyzeComplexDataShape()}{analyzeComplexDataShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::analyze\+Complex\+Data\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{col\+Counter,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{row\+Counter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_ab0286b773a6de8210be0cc631961c20b}\label{classSliceViewer_ab0286b773a6de8210be0cc631961c20b} 
+\index{SliceViewer@{SliceViewer}!analyzeDataShape@{analyzeDataShape}}
+\index{analyzeDataShape@{analyzeDataShape}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{analyzeDataShape()}{analyzeDataShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Slice\+Viewer\+::\+Data\+Shape}} Slice\+Viewer\+::analyze\+Data\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{Slice\+Viewer\+::\+File\+Index}}}]{f\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_ab0286b773a6de8210be0cc631961c20b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a88e888cb9e0a7f6c50934f90972a4f5d}\label{classSliceViewer_a88e888cb9e0a7f6c50934f90972a4f5d} 
+\index{SliceViewer@{SliceViewer}!analyzeRealDataShape@{analyzeRealDataShape}}
+\index{analyzeRealDataShape@{analyzeRealDataShape}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{analyzeRealDataShape()}{analyzeRealDataShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::analyze\+Real\+Data\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{col\+Counter,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{row\+Counter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_ad1ea228809383141161aac98e79ec5c3}\label{classSliceViewer_ad1ea228809383141161aac98e79ec5c3} 
+\index{SliceViewer@{SliceViewer}!calcDispersion@{calcDispersion}}
+\index{calcDispersion@{calcDispersion}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{calcDispersion()}{calcDispersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::calc\+Dispersion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a76a23e6b0d98ff9bef6357815661ebf9}\label{classSliceViewer_a76a23e6b0d98ff9bef6357815661ebf9} 
+\index{SliceViewer@{SliceViewer}!calcMean@{calcMean}}
+\index{calcMean@{calcMean}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{calcMean()}{calcMean()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::calc\+Mean (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Data\+Shape}}}]{data\+Shape }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a1090bf1d9baa963f919f8ae88d1d4307}\label{classSliceViewer_a1090bf1d9baa963f919f8ae88d1d4307} 
+\index{SliceViewer@{SliceViewer}!cleanSliceData@{cleanSliceData}}
+\index{cleanSliceData@{cleanSliceData}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{cleanSliceData()}{cleanSliceData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::clean\+Slice\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{Slice\+Viewer\+::\+File\+Index}}}]{f\+Index }\end{DoxyParamCaption})}
+
+\Hypertarget{classSliceViewer_a36df36d2c2a19e4bf7736bf7a01f47f3}\label{classSliceViewer_a36df36d2c2a19e4bf7736bf7a01f47f3} 
+\index{SliceViewer@{SliceViewer}!createGnuplotioObj@{createGnuplotioObj}}
+\index{createGnuplotioObj@{createGnuplotioObj}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{createGnuplotioObj()}{createGnuplotioObj()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgnuplotio_1_1Gnuplot}{gnuplotio\+::\+Gnuplot}} \texorpdfstring{$\ast$}{*} Slice\+Viewer\+::create\+Gnuplotio\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a1650909c2b779d553c03c73ffd5538c7}\label{classSliceViewer_a1650909c2b779d553c03c73ffd5538c7} 
+\index{SliceViewer@{SliceViewer}!drawGraph@{drawGraph}}
+\index{drawGraph@{drawGraph}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{drawGraph()}{drawGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}{Slice\+Viewer\+::\+Error\+Code}} Slice\+Viewer\+::draw\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}{Data\+Sum\+Method}}}]{sum\+Method,  }\item[{\mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}}}]{part\+Of\+Data,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Window\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a1650909c2b779d553c03c73ffd5538c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a022a202df6bf3911c2974ff86cf55044}\label{classSliceViewer_a022a202df6bf3911c2974ff86cf55044} 
+\index{SliceViewer@{SliceViewer}!findMaxValueOnSurface@{findMaxValueOnSurface}}
+\index{findMaxValueOnSurface@{findMaxValueOnSurface}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{findMaxValueOnSurface()}{findMaxValueOnSurface()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::find\+Max\+Value\+On\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Window\+Size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_ae8dd2a442c94abf84dec86a6e44e44e2}\label{classSliceViewer_ae8dd2a442c94abf84dec86a6e44e44e2} 
+\index{SliceViewer@{SliceViewer}!getDataFileType@{getDataFileType}}
+\index{getDataFileType@{getDataFileType}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{getDataFileType()}{getDataFileType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}{Slice\+Viewer\+::\+Data\+Type}} Slice\+Viewer\+::get\+Data\+File\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_aa5bd4ea3f03b4ff6179bd158bfc887f7}\label{classSliceViewer_aa5bd4ea3f03b4ff6179bd158bfc887f7} 
+\index{SliceViewer@{SliceViewer}!getDataShape@{getDataShape}}
+\index{getDataShape@{getDataShape}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{getDataShape()}{getDataShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_a6d31e54ef68d3cfe831e9ba6f4385a8f}{Slice\+Viewer\+::\+Data\+Shape}} Slice\+Viewer\+::get\+Data\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{Slice\+Viewer\+::\+File\+Index}}}]{f\+Index }\end{DoxyParamCaption})}
+
+\Hypertarget{classSliceViewer_a822afe4fda89d5ab519d4dcc9aa01b3a}\label{classSliceViewer_a822afe4fda89d5ab519d4dcc9aa01b3a} 
+\index{SliceViewer@{SliceViewer}!getDispersions@{getDispersions}}
+\index{getDispersions@{getDispersions}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{getDispersions()}{getDispersions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::get\+Dispersions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}}]{a\+Mean\+Dispersion1,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}}]{median\+Dispersion1,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}}]{a\+Mean\+Dispersion2,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}}]{median\+Dispersion2 }\end{DoxyParamCaption})}
+
+\Hypertarget{classSliceViewer_a8f9e1f6cc907966cdc99794dc7f14cd8}\label{classSliceViewer_a8f9e1f6cc907966cdc99794dc7f14cd8} 
+\index{SliceViewer@{SliceViewer}!getMaxValueInWindow@{getMaxValueInWindow}}
+\index{getMaxValueInWindow@{getMaxValueInWindow}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{getMaxValueInWindow()}{getMaxValueInWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::get\+Max\+Value\+In\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classSliceViewer_a980ccdf2c23db58af0a4720b8a155494}\label{classSliceViewer_a980ccdf2c23db58af0a4720b8a155494} 
+\index{SliceViewer@{SliceViewer}!getMaxXY@{getMaxXY}}
+\index{getMaxXY@{getMaxXY}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{getMaxXY()}{getMaxXY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::get\+Max\+XY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{maxX,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{maxY }\end{DoxyParamCaption})}
+
+\Hypertarget{classSliceViewer_a7536c8fe69a5ad7559da5eba9035246c}\label{classSliceViewer_a7536c8fe69a5ad7559da5eba9035246c} 
+\index{SliceViewer@{SliceViewer}!getMeans@{getMeans}}
+\index{getMeans@{getMeans}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{getMeans()}{getMeans()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::get\+Means (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}}]{a\+Mean,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} \texorpdfstring{$\ast$}{*}}]{median }\end{DoxyParamCaption})}
+
+\Hypertarget{classSliceViewer_acfcbfd831d13dcc6ae81185850f30f4b}\label{classSliceViewer_acfcbfd831d13dcc6ae81185850f30f4b} 
+\index{SliceViewer@{SliceViewer}!loadComplexValuesFrom2DFile@{loadComplexValuesFrom2DFile}}
+\index{loadComplexValuesFrom2DFile@{loadComplexValuesFrom2DFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{loadComplexValuesFrom2DFile()}{loadComplexValuesFrom2DFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::load\+Complex\+Values\+From2\+DFile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_ac81fd7fb1b04bf4b6d7c95584dd4a0c2}\label{classSliceViewer_ac81fd7fb1b04bf4b6d7c95584dd4a0c2} 
+\index{SliceViewer@{SliceViewer}!loadComplexValuesFrom3DFile@{loadComplexValuesFrom3DFile}}
+\index{loadComplexValuesFrom3DFile@{loadComplexValuesFrom3DFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{loadComplexValuesFrom3DFile()}{loadComplexValuesFrom3DFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::load\+Complex\+Values\+From3\+DFile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a118a5747ab2a751c20ed8e6e68f11a32}\label{classSliceViewer_a118a5747ab2a751c20ed8e6e68f11a32} 
+\index{SliceViewer@{SliceViewer}!loadRealValuesFrom2DFile@{loadRealValuesFrom2DFile}}
+\index{loadRealValuesFrom2DFile@{loadRealValuesFrom2DFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{loadRealValuesFrom2DFile()}{loadRealValuesFrom2DFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::load\+Real\+Values\+From2\+DFile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a9f8cf4a6fb768f8c07a7778858e023ae}\label{classSliceViewer_a9f8cf4a6fb768f8c07a7778858e023ae} 
+\index{SliceViewer@{SliceViewer}!loadRealValuesFrom3DFile@{loadRealValuesFrom3DFile}}
+\index{loadRealValuesFrom3DFile@{loadRealValuesFrom3DFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{loadRealValuesFrom3DFile()}{loadRealValuesFrom3DFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::load\+Real\+Values\+From3\+DFile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{QText\+Stream}} \&}]{text\+Stream,  }\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a41bc2cfba6b31705c4373ed082584560}\label{classSliceViewer_a41bc2cfba6b31705c4373ed082584560} 
+\index{SliceViewer@{SliceViewer}!loadSliceDataFile@{loadSliceDataFile}}
+\index{loadSliceDataFile@{loadSliceDataFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{loadSliceDataFile()}{loadSliceDataFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::load\+Slice\+Data\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{const}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{char}} \texorpdfstring{$\ast$}{*}}]{f\+Name,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{maxX,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{maxY,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2}{Data\+Type}} \texorpdfstring{$\ast$}{*}}]{data\+Type,  }\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a41bc2cfba6b31705c4373ed082584560_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a3f9620f7af3efb8e7e83d4c254eeb112}\label{classSliceViewer_a3f9620f7af3efb8e7e83d4c254eeb112} 
+\index{SliceViewer@{SliceViewer}!plot2DComplexValuesFile@{plot2DComplexValuesFile}}
+\index{plot2DComplexValuesFile@{plot2DComplexValuesFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{plot2DComplexValuesFile()}{plot2DComplexValuesFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::plot2\+DComplex\+Values\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{start\+Pos,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{length,  }\item[{\mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}}}]{part\+Of\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a3f9620f7af3efb8e7e83d4c254eeb112_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a411a741bdc37050f5f4e445f03a449c7}\label{classSliceViewer_a411a741bdc37050f5f4e445f03a449c7} 
+\index{SliceViewer@{SliceViewer}!plot2DRealValuesFile@{plot2DRealValuesFile}}
+\index{plot2DRealValuesFile@{plot2DRealValuesFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{plot2DRealValuesFile()}{plot2DRealValuesFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::plot2\+DReal\+Values\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{start\+Pos,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a411a741bdc37050f5f4e445f03a449c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a838cd2c524ad23758e44350db695dc95}\label{classSliceViewer_a838cd2c524ad23758e44350db695dc95} 
+\index{SliceViewer@{SliceViewer}!plot3DComplexValuesFile@{plot3DComplexValuesFile}}
+\index{plot3DComplexValuesFile@{plot3DComplexValuesFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{plot3DComplexValuesFile()}{plot3DComplexValuesFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::plot3\+DComplex\+Values\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}}}]{part\+Of\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a838cd2c524ad23758e44350db695dc95_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a2c664dce4342723ae43566ab83475f04}\label{classSliceViewer_a2c664dce4342723ae43566ab83475f04} 
+\index{SliceViewer@{SliceViewer}!plot3DRealValuesFile@{plot3DRealValuesFile}}
+\index{plot3DRealValuesFile@{plot3DRealValuesFile}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{plot3DRealValuesFile()}{plot3DRealValuesFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::plot3\+DReal\+Values\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{File\+Index}}}]{f\+Index,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Window\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a2c664dce4342723ae43566ab83475f04_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_a951908ad8b8a6644e3846a80dfc34a16}\label{classSliceViewer_a951908ad8b8a6644e3846a80dfc34a16} 
+\index{SliceViewer@{SliceViewer}!plot3DSumOf2ComplexFiles@{plot3DSumOf2ComplexFiles}}
+\index{plot3DSumOf2ComplexFiles@{plot3DSumOf2ComplexFiles}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{plot3DSumOf2ComplexFiles()}{plot3DSumOf2ComplexFiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{void}} Slice\+Viewer\+::plot3\+DSum\+Of2\+Complex\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_ace0e21b489eed69481914788b90c6032}{Part\+Of\+Data}}}]{part\+Of\+Data,  }\item[{\mbox{\hyperlink{classSliceViewer_a7a03ac8e48c9573d820c1b0a82ea8566}{Data\+Sum\+Method}}}]{sum\+Method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSliceViewer_a951908ad8b8a6644e3846a80dfc34a16_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSliceViewer_ad3088ee296c8a714b43c5cd636047d6f}\label{classSliceViewer_ad3088ee296c8a714b43c5cd636047d6f} 
+\index{SliceViewer@{SliceViewer}!validateParams@{validateParams}}
+\index{validateParams@{validateParams}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{validateParams()}{validateParams()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_a53666d36ec4a5bf4a672e1eafbc684af}{Slice\+Viewer\+::\+Error\+Code}} Slice\+Viewer\+::validate\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{x\+Window\+Size,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Offset,  }\item[{\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}}}]{y\+Window\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classSliceViewer_a0b72f6bc107899297a090475b5ac2641}\label{classSliceViewer_a0b72f6bc107899297a090475b5ac2641} 
+\index{SliceViewer@{SliceViewer}!aMean@{aMean}}
+\index{aMean@{aMean}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{aMean}{aMean}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::a\+Mean\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a68155a7b59a1961370cd732d0f5e04a9}\label{classSliceViewer_a68155a7b59a1961370cd732d0f5e04a9} 
+\index{SliceViewer@{SliceViewer}!aMeanDispersion@{aMeanDispersion}}
+\index{aMeanDispersion@{aMeanDispersion}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{aMeanDispersion}{aMeanDispersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::a\+Mean\+Dispersion\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_ac1d21a0970e895b9752187a7d64b0b3e}\label{classSliceViewer_ac1d21a0970e895b9752187a7d64b0b3e} 
+\index{SliceViewer@{SliceViewer}!fData@{fData}}
+\index{fData@{fData}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{fData}{fData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{struct}} \mbox{\hyperlink{structSliceViewer_1_1FileData}{Slice\+Viewer\+::\+File\+Data}} Slice\+Viewer\+::f\+Data\mbox{[}\mbox{\hyperlink{classSliceViewer_ac4928286ddb4ff4d793101040d4dfa70}{max\+Files\+Num}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_ac4928286ddb4ff4d793101040d4dfa70}\label{classSliceViewer_ac4928286ddb4ff4d793101040d4dfa70} 
+\index{SliceViewer@{SliceViewer}!maxFilesNum@{maxFilesNum}}
+\index{maxFilesNum@{maxFilesNum}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{maxFilesNum}{maxFilesNum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{const}} \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{uint32\+\_\+t}} Slice\+Viewer\+::max\+Files\+Num = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a0428b29c30b23e21f1ec4cd89d96c332}\label{classSliceViewer_a0428b29c30b23e21f1ec4cd89d96c332} 
+\index{SliceViewer@{SliceViewer}!maxValue@{maxValue}}
+\index{maxValue@{maxValue}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{maxValue}{maxValue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::max\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a72a1306c6a65b769c0fa8519aece7194}\label{classSliceViewer_a72a1306c6a65b769c0fa8519aece7194} 
+\index{SliceViewer@{SliceViewer}!median@{median}}
+\index{median@{median}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{median}{median}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::median\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a8055398e160374d8883d11430008c947}\label{classSliceViewer_a8055398e160374d8883d11430008c947} 
+\index{SliceViewer@{SliceViewer}!medianDispersion@{medianDispersion}}
+\index{medianDispersion@{medianDispersion}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{medianDispersion}{medianDispersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}} Slice\+Viewer\+::median\+Dispersion\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a6d4218b28d8b63a46affb58659a8e394}\label{classSliceViewer_a6d4218b28d8b63a46affb58659a8e394} 
+\index{SliceViewer@{SliceViewer}!readyData2D@{readyData2D}}
+\index{readyData2D@{readyData2D}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{readyData2D}{readyData2D}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}}$>$ Slice\+Viewer\+::ready\+Data2D\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classSliceViewer_a5950b01fca751f0f96e0b8eb111f87df}\label{classSliceViewer_a5950b01fca751f0f96e0b8eb111f87df} 
+\index{SliceViewer@{SliceViewer}!readyData3D@{readyData3D}}
+\index{readyData3D@{readyData3D}!SliceViewer@{SliceViewer}}
+\doxysubsubsection{\texorpdfstring{readyData3D}{readyData3D}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classSliceViewer_afe82ef4824c40b770e924c11407cb6b2a0468534bddd4b8d98ec42a8b464b0958}{double}}$>$ $>$ Slice\+Viewer\+::ready\+Data3D\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{sliceViewer_8h}{slice\+Viewer.\+h}}\item 
+src/gui/\mbox{\hyperlink{sliceViewer_8cpp}{slice\+Viewer.\+cpp}}\end{DoxyCompactItemize}

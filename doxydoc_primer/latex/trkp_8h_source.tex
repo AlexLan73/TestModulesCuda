@@ -1,0 +1,38 @@
+\doxysection{trkp.\+h}
+\hypertarget{trkp_8h_source}{}\label{trkp_8h_source}\index{src/trkp.h@{src/trkp.h}}
+\mbox{\hyperlink{trkp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRKP\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRKP\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{e2trkp_8h}{model/e2trkp.h}}>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp}{Trkp}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_a595b55cc80192085d3616a4aad263a0f}{Trkp}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_abc2a22e30c16e3c0ee15d44465327670}{\string~Trkp}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_ac29f825497259d9eb7f83b1a42ec478a}{setNewMsg}}(\mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *trkp);}
+\DoxyCodeLine{00032\ \ \ \ \ std::complex<double>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_a3b391510efaa0670c75d398641b72cd2}{getCoef}}(uint32\_t\ \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}},\ uint32\_t\ chanNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_acba74a7d271e4687dffb6a9ea43598db}{ones}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_aade5801e9e0c1f7f0e235888d115da4d}{print}}();}
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00053\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_ac17f3c6339b4d7e43b3d130b6efe452e}{dataType}};}
+\DoxyCodeLine{00055\ \ \ \ \ std::complex<double>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_a7f27e219f8cefc5debc5744d34b46265}{coefs}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{SharedConst::maxPolars}}][\mbox{\hyperlink{e2trkp_8h_a51169032547efc833cf082394153cd16}{trkpCoefsNum}}];}
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_aedc56012d777bd9bdec639fb5be24879}{copyPolarization}}(uint32\_t\ \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}},\ uint32\_t\ channelsNum,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{e2trkp_8h_a2b9cc9f0f756c29599ff9c373913153a}{ComplexFloat}}\ cValues[]);}
+\DoxyCodeLine{00065\ \};\ \textcolor{comment}{//\ class\ Trkp}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ E2TRKP\_H\_\_}}
+
+\end{DoxyCode}

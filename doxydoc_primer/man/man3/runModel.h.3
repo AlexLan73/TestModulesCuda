@@ -1,0 +1,52 @@
+.TH "src/runModel.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/runModel.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <libvork/e2trpr\&.h>\fP
+.br
+\fC#include <libvork/e2trims\&.h>\fP
+.br
+\fC#include <libvork/e2mask\&.h>\fP
+.br
+\fC#include <libvork/e2trkp\&.h>\fP
+.br
+\fC#include <libvork/e2ippa\&.h>\fP
+.br
+\fC#include 'inputBundle\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBResourceUsage\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBExists\fP (std::string path)"
+.br
+.ti -1c
+.RI "Result< \fBModelInputBundle\fP > \fBLoadInputMessages\fP (const optional< std::string > &fcDirPath)"
+.br
+.ti -1c
+.RI "Result< \fBModelOutput\fP > \fBRunModel\fP (const \fBModelInputBundle\fP &in, optional< std::string > outDirPath, bool *\fBstopFlag\fP=nullptr)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool Exists (std::string path)"
+
+.SS "Result< \fBModelInputBundle\fP > LoadInputMessages (const optional< std::string > & fcDirPath)"
+
+.SS "Result< \fBModelOutput\fP > RunModel (const \fBModelInputBundle\fP & in, optional< std::string > outDirPath, bool * stopFlag = \fCnullptr\fP)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

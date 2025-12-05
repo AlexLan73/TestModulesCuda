@@ -1,0 +1,77 @@
+\doxysection{Server\+Loop\+::Queued\+Request Struct Reference}
+\hypertarget{structServerLoop_1_1QueuedRequest}{}\label{structServerLoop_1_1QueuedRequest}\index{ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}}
+
+
+Запрос на вполнение JSON RPC метода (любого), поставленный в очередь.  
+
+
+
+
+Collaboration diagram for Server\+Loop\+::Queued\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structServerLoop_1_1QueuedRequest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ad09169d9e84f453b2bf6e888e79987a7}{Queued\+Request}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} $>$ r, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$ c)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} $>$ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}{req}}
+\begin{DoxyCompactList}\small\item\em Собственно JSON RPC запрос \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ad710c90e0ff61b1be28eaf92f9261b10}{conn}}
+\begin{DoxyCompactList}\small\item\em Клиентское соединение, от которого пришел запрос \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ab27ec03dc68a84f7a44fef88c8f5266d}{in\+\_\+bundle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Запрос на вполнение JSON RPC метода (любого), поставленный в очередь. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structServerLoop_1_1QueuedRequest_ad09169d9e84f453b2bf6e888e79987a7}\label{structServerLoop_1_1QueuedRequest_ad09169d9e84f453b2bf6e888e79987a7} 
+\index{ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}!QueuedRequest@{QueuedRequest}}
+\index{QueuedRequest@{QueuedRequest}!ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}}
+\doxysubsubsection{\texorpdfstring{QueuedRequest()}{QueuedRequest()}}
+{\footnotesize\ttfamily Server\+Loop\+::\+Queued\+Request\+::\+Queued\+Request (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} $>$}]{r,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structServerLoop_1_1QueuedRequest_ad710c90e0ff61b1be28eaf92f9261b10}\label{structServerLoop_1_1QueuedRequest_ad710c90e0ff61b1be28eaf92f9261b10} 
+\index{ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}!conn@{conn}}
+\index{conn@{conn}!ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}}$>$ Server\+Loop\+::\+Queued\+Request\+::conn}
+
+
+
+Клиентское соединение, от которого пришел запрос 
+
+\Hypertarget{structServerLoop_1_1QueuedRequest_ab27ec03dc68a84f7a44fef88c8f5266d}\label{structServerLoop_1_1QueuedRequest_ab27ec03dc68a84f7a44fef88c8f5266d} 
+\index{ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}!in\_bundle@{in\_bundle}}
+\index{in\_bundle@{in\_bundle}!ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}}
+\doxysubsubsection{\texorpdfstring{in\_bundle}{in\_bundle}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}}\texorpdfstring{$\ast$}{*} Server\+Loop\+::\+Queued\+Request\+::in\+\_\+bundle}
+
+Если req -\/ запрос на вычисление выдачи модели (compute\+Planes), это указатель на входное ФУ модели (внутри req), иначе nullptr \Hypertarget{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}\label{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04} 
+\index{ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}!req@{req}}
+\index{req@{req}!ServerLoop::QueuedRequest@{ServerLoop::QueuedRequest}}
+\doxysubsubsection{\texorpdfstring{req}{req}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}$>$ Server\+Loop\+::\+Queued\+Request\+::req}
+
+
+
+Собственно JSON RPC запрос 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/jsonrpc/\mbox{\hyperlink{server__loop_8h}{server\+\_\+loop.\+h}}\end{DoxyCompactItemize}

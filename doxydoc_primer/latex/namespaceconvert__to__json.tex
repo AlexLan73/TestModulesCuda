@@ -1,0 +1,78 @@
+\doxysection{convert\+\_\+to\+\_\+json Namespace Reference}
+\hypertarget{namespaceconvert__to__json}{}\label{namespaceconvert__to__json}\index{convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553}{convert\+\_\+format}} (p)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_aaa876e2eefef86ed8396b209c054fbad}{re\+\_\+int}} = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(\texorpdfstring{$\vert$}{|}-\/)\mbox{[}0-\/9\mbox{]}+\$"{})
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a10337a51604d52829dc773c1432e51b9}{re\+\_\+float}} = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(\texorpdfstring{$\vert$}{|}-\/)\mbox{[}0-\/9\mbox{]}+.\mbox{[}0-\/9\mbox{]}\texorpdfstring{$\ast$}{*}\$"{})
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_aff17435cf3cc85f09fa5133bd16af1c3}{re\+\_\+bool}} = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(true\texorpdfstring{$\vert$}{|}false)\$"{})
+\item 
+int \mbox{\hyperlink{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d}{inp}} = file(sys.\+argv\mbox{[}1\mbox{]}) if len(sys.\+argv) $>$ 1 else sys.\+stdin
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a10dcb0eadf7cd708fea92ef6156aa37d}{j}} = json.\+load(\mbox{\hyperlink{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d}{inp}}, object\+\_\+pairs\+\_\+hook = \mbox{\hyperlink{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553}{convert\+\_\+format}})
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_adcb696a4a666c252daadfe84c4af2b48}{stdout}}
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a8b88973f5ec7087035fbe1edcd4cd59c}{indent}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553}\label{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553} 
+\index{convert\_to\_json@{convert\_to\_json}!convert\_format@{convert\_format}}
+\index{convert\_format@{convert\_format}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{convert\_format()}{convert\_format()}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+convert\+\_\+format (\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceconvert__to__json_a8b88973f5ec7087035fbe1edcd4cd59c}\label{namespaceconvert__to__json_a8b88973f5ec7087035fbe1edcd4cd59c} 
+\index{convert\_to\_json@{convert\_to\_json}!indent@{indent}}
+\index{indent@{indent}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{indent}{indent}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+indent}
+
+\Hypertarget{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d}\label{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d} 
+\index{convert\_to\_json@{convert\_to\_json}!inp@{inp}}
+\index{inp@{inp}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{inp}{inp}}
+{\footnotesize\ttfamily int convert\+\_\+to\+\_\+json.\+inp = file(sys.\+argv\mbox{[}1\mbox{]}) if len(sys.\+argv) $>$ 1 else sys.\+stdin}
+
+\Hypertarget{namespaceconvert__to__json_a10dcb0eadf7cd708fea92ef6156aa37d}\label{namespaceconvert__to__json_a10dcb0eadf7cd708fea92ef6156aa37d} 
+\index{convert\_to\_json@{convert\_to\_json}!j@{j}}
+\index{j@{j}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+j = json.\+load(\mbox{\hyperlink{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d}{inp}}, object\+\_\+pairs\+\_\+hook = \mbox{\hyperlink{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553}{convert\+\_\+format}})}
+
+\Hypertarget{namespaceconvert__to__json_aff17435cf3cc85f09fa5133bd16af1c3}\label{namespaceconvert__to__json_aff17435cf3cc85f09fa5133bd16af1c3} 
+\index{convert\_to\_json@{convert\_to\_json}!re\_bool@{re\_bool}}
+\index{re\_bool@{re\_bool}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{re\_bool}{re\_bool}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+re\+\_\+bool = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(true\texorpdfstring{$\vert$}{|}false)\$"{})}
+
+\Hypertarget{namespaceconvert__to__json_a10337a51604d52829dc773c1432e51b9}\label{namespaceconvert__to__json_a10337a51604d52829dc773c1432e51b9} 
+\index{convert\_to\_json@{convert\_to\_json}!re\_float@{re\_float}}
+\index{re\_float@{re\_float}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{re\_float}{re\_float}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+re\+\_\+float = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(\texorpdfstring{$\vert$}{|}-\/)\mbox{[}0-\/9\mbox{]}+.\mbox{[}0-\/9\mbox{]}\texorpdfstring{$\ast$}{*}\$"{})}
+
+\Hypertarget{namespaceconvert__to__json_aaa876e2eefef86ed8396b209c054fbad}\label{namespaceconvert__to__json_aaa876e2eefef86ed8396b209c054fbad} 
+\index{convert\_to\_json@{convert\_to\_json}!re\_int@{re\_int}}
+\index{re\_int@{re\_int}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{re\_int}{re\_int}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+re\+\_\+int = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(\texorpdfstring{$\vert$}{|}-\/)\mbox{[}0-\/9\mbox{]}+\$"{})}
+
+\Hypertarget{namespaceconvert__to__json_adcb696a4a666c252daadfe84c4af2b48}\label{namespaceconvert__to__json_adcb696a4a666c252daadfe84c4af2b48} 
+\index{convert\_to\_json@{convert\_to\_json}!stdout@{stdout}}
+\index{stdout@{stdout}!convert\_to\_json@{convert\_to\_json}}
+\doxysubsubsection{\texorpdfstring{stdout}{stdout}}
+{\footnotesize\ttfamily convert\+\_\+to\+\_\+json.\+stdout}
+

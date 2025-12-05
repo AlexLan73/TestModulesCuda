@@ -1,0 +1,174 @@
+\doxysection{min\+Defs.\+h}
+\hypertarget{minDefs_8h_source}{}\label{minDefs_8h_source}\index{include/model/minDefs.h@{include/model/minDefs.h}}
+\mbox{\hyperlink{minDefs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ minDefs.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 11,\ 2019}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ vmg}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_MODEL\_MINDEFS\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INCLUDE\_MODEL\_MINDEFS\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <sys/types.h>}\ \textcolor{comment}{//\ uint\ на\ Debian\ 5}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <libutils/sumtype.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <libutils/result.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ в\ C++11\ это\ было\ бы\ template<T>\ using\ Vector2d<T>\ =\ vector<vector<T>>}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVector2d}{Vector2d}}\ :\ \textcolor{keyword}{public}\ std::vector<std::vector<T>>\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{typedef}\ std::vector<std::vector<T>>\ \mbox{\hyperlink{structVector2d_a1440c56d1fa5053865833853199a8342}{Base}};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structVector2d_a031f71698a21b096efffec65c9adfd76}{Vector2d}}()\ \{\}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structVector2d_aa7162fbfa53acd1fd7c761a8cbd22612}{Vector2d}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVector2d_a1440c56d1fa5053865833853199a8342}{Base}}\&\ oth)\ :\ \mbox{\hyperlink{structVector2d_a1440c56d1fa5053865833853199a8342}{Base}}(oth)\ \{\}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structVector2d_a25cf7016339e7a49f403e99aa78b4262}{Vector2d}}(\mbox{\hyperlink{structVector2d_a1440c56d1fa5053865833853199a8342}{Base}}\&\&\ oth)\ :\ \mbox{\hyperlink{structVector2d_a1440c56d1fa5053865833853199a8342}{Base}}(\mbox{\hyperlink{namespacestd}{std}}::move(oth))\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structVector2d}{Vector2d<T>}}\ \mbox{\hyperlink{structVector2d_ab7fb4deee6abec6bf1f520011f6706b7}{make}}(uint\ d1,\ uint\ d2)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \mbox{\hyperlink{structVector2d}{Vector2d<T>}}\ ret;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint\ i\ =\ 0;\ i\ <\ d1;\ i++)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ ret.push\_back(std::vector<T>(d2));}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::move(ret);}
+\DoxyCodeLine{00032\ \ \ \ \}}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ в\ C++11\ это\ было\ бы\ template<T>\ using\ Vector3d<T>\ =\ vector<vector<vector<T>>>}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVector3d}{Vector3d}}\ :\ \textcolor{keyword}{public}\ std::vector<std::vector<std::vector<T>>>\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{typedef}\ std::vector<std::vector<std::vector<T>>>\ \mbox{\hyperlink{structVector3d_a91d3f5e2de569c0ceba7d7a901f9cfc6}{Base}};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structVector3d_acc23557ad7cf4ffa9f34851b5b70f3b6}{Vector3d}}()\ \{\}}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{structVector3d_a09969d43adc0df34e4fdd77d4ac0b584}{Vector3d}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVector3d_a91d3f5e2de569c0ceba7d7a901f9cfc6}{Base}}\&\ oth)\ :\ \mbox{\hyperlink{structVector3d_a91d3f5e2de569c0ceba7d7a901f9cfc6}{Base}}(oth)\ \{\}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{structVector3d_a8909620a95f9db2ca0212cb4b7948e90}{Vector3d}}(\mbox{\hyperlink{structVector3d_a91d3f5e2de569c0ceba7d7a901f9cfc6}{Base}}\&\&\ oth)\ :\ \mbox{\hyperlink{structVector3d_a91d3f5e2de569c0ceba7d7a901f9cfc6}{Base}}(\mbox{\hyperlink{namespacestd}{std}}::move(oth))\ \{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structVector3d}{Vector3d<T>}}\ \mbox{\hyperlink{structVector3d_a39a86ac7c114b725f1fea04c9fbc00f9}{make}}(uint\ d1,\ uint\ d2,\ uint\ d3)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structVector3d}{Vector3d<T>}}\ ret;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint\ i\ =\ 0;\ i\ <\ d1;\ i++)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ ret.push\_back(\mbox{\hyperlink{structVector2d}{Vector2d<T>::make}}(d2,\ d3));}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::move(ret);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00056\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPolarized}{Polarized}}\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ T\ \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}},\ \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}};}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{structPolarized_a7bb2df70d82bab741648d46f4d4a827a}{Polarized}}()\ \{\}}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{structPolarized_a8a8e03c614a3d0f50c9cea82467af324}{Polarized}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized<T>}}\&\ p)\ :\ \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}(p.\mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}),\ \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}}(p.\mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}})\ \{\}}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{structPolarized_a7c67a125e6ae9daaa8eb5f77b12b9b30}{Polarized}}(\textcolor{keyword}{const}\ T\&\ v,\ \textcolor{keyword}{const}\ T\&\ h)\ :\ \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}(v),\ \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}}(h)\ \{\}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{structPolarized_a3c2480108adaf682eb9c16a6fe8e12e4}{Polarized}}(T\&\&\ v,\ T\&\&\ h)\ :\ \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}(\mbox{\hyperlink{namespacestd}{std}}::move(v)),\ \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}}(\mbox{\hyperlink{namespacestd}{std}}::move(h))\ \{\}}
+\DoxyCodeLine{00062\ \ \ \ \ T\&\ \mbox{\hyperlink{structPolarized_a88535ad6ee7d295dc364d9b303efcd13}{operator[]\ }}(\textcolor{keywordtype}{unsigned}\ n)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ assert(n\ <\ 2);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n\ ==\ 0\ ?\ \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}\ :\ \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \mbox{\hyperlink{structPolarized_a88535ad6ee7d295dc364d9b303efcd13}{operator[]\ }}(\textcolor{keywordtype}{unsigned}\ n)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ assert(n\ <\ 2);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n\ ==\ 0\ ?\ \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}\ :\ \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}};}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}...\ A>}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structPolarized}{Polarized<T>}}\ \mbox{\hyperlink{structPolarized_a3abe058b7bcfc8873e4c88b31fd8c59f}{make}}(A...\ args)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structPolarized_a7bb2df70d82bab741648d46f4d4a827a}{Polarized}}(T::make(std::forward<A>(args)...),}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T::make(std::forward<A>(args)...));}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\_dims}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVector3d}{Vector3d<T>}}\&\ a)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{const}\ uint\ d1\ =\ a[0].size();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{const}\ uint\ d2\ =\ a[0][0].size();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ проверяем,\ что\ a\ -\/\ на\ самом\ деле\ a[x][d1][d2]}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint\ i\ =\ 1;\ i\ <\ a.size();\ i++)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a[i].size()\ !=\ d1)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint\ j\ =\ 1;\ j\ <\ d1;\ j++)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a[i][j].size()\ !=\ d2)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\_dims}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVector3d}{Vector3d<T>}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVector3d}{Vector3d<T>}}\&\ b)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\_dims}}(a)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\_dims}}(b)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \&\&\ a.size()\ ==\ b.size()}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \&\&\ a[0].size()\ ==\ b[0].size()}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \&\&\ a[0][0].size()\ ==\ b[0][0].size();}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\_dims}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized<T>}}\&\ a)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return}\ a.\mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}}.size()\ >\ 0\ \&\&\ a.\mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}.size()\ >\ 0\ \&\&\ \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\_dims}}(a.\mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}},\ a.\mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}});}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTargetStrobeOutput}{TargetStrobeOutput}}\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structTargetStrobeOutput_ad68f324df5e4a4e4b38c2e7faa8c26df}{nstr}};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ Модель\ внутри\ себя\ хранит\ 4-\/мерный\ вектор\ [поляр][луч][дальн][скор]}}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<Vector3d<std::complex<double>}}>>\ \mbox{\hyperlink{structTargetStrobeOutput_ac6c2dc2335df1533a8fb6963264d948c}{planes}};}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<std::vector<uint64\_t>}}>\ \mbox{\hyperlink{structTargetStrobeOutput_aa45134ee50305f8a8c345d7247dbd921}{sigmas}};}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structInterfStrobeOutput}{InterfStrobeOutput}}\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structInterfStrobeOutput_a7bb09c2432c3fda621396a8cfb22ad0b}{nstr}};}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//\ "{}квадраты\ модулей\ спектральных\ составляющих,\ усредненные}}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ за\ время\ наблюдения"{}}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//\ [N][M][K],\ N\ -\/\ число\ пел.\ групп,\ M\ -\/\ число\ лучей,\ K\ -\/\ число\ гип.\ по\ скор.}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ число\ пеленгационных\ групп\ ==\ числу\ фрагментов\ полотна}}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<Vector3d<float>}}>\ \mbox{\hyperlink{structInterfStrobeOutput_aa2c056fec099735804d7c2fec7997d4b}{data}};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ пока\ что\ сюда\ заносятся\ сигмы,\ которые\ модель\ считает\ по\ \_цели\_}}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<std::vector<uint64\_t>}}>\ \mbox{\hyperlink{structInterfStrobeOutput_a7388d71b954d25d93f374a04a64b9ba8}{sigmas}};}
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCalibStrobeOutput}{CalibStrobeOutput}}\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structCalibStrobeOutput_a70be1d6a12390c5ef58f967f882fdc05}{nstr}};}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//\ "{}векторы\ амплитудно-\/фазового\ распределения"{}\ по\ одной\ поляризации;}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//\ для\ СМ,\ в\ векторе\ 960\ элементов\ -\/\ только\ для\ невиртуальных\ каналов,}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ 15\ каналов\ на\ ячейку\ (т.е.\ нулевых\ значений\ 16\ канала,\ передающихся}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ в\ проводах,\ тоже\ нет)}}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<std::vector<std::complex<double>}}>>\ \mbox{\hyperlink{structCalibStrobeOutput_adbd9cc36a4f943bbda49e8b28ec4d355}{calib\_nonvirt}};}
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{typedef}\ libutils::SumType<\mbox{\hyperlink{structTargetStrobeOutput}{TargetStrobeOutput}},}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInterfStrobeOutput}{InterfStrobeOutput}},}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCalibStrobeOutput}{CalibStrobeOutput}}>\ \mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{StrobeOutput}};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{typedef}\ libutils::Result<StrobeOutput,\ libutils::ErrMsg>\ \mbox{\hyperlink{minDefs_8h_a034d406bfc0074f302284b42a090aafc}{StrobeResult}};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{namespace\ }SharedConst\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{StationType}}\ \{\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bbae78c97d208e82f0b158cac554dcdd80d}{voronezhM}},\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bba27d49506cd2e63c327f455ae41a346a1}{voronezhSM}},\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bba8f8042586aff8cd443c80f9fdc0d1ec5}{mrik}},\ \};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{PolarizationTypes}}\ \{\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38a1a046190c0b47878ec3638ecaa0d1820}{vertical}},\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38a784f5f1e534464b27c65eac1c31335fb}{horizontal}},\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38a10c2bec9896f009207af44ea5316c0c6}{both}}\ \};}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588}{QuadrCompFormTypes}}\ \{\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588a11eb961586e1eb63ed6389bf2cc7791a}{hilbert}},\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588a40867b571e9184195156884b542d5f99}{kaiserDPD}}\ \};}
+\DoxyCodeLine{00162\ \}\ \textcolor{comment}{//\ namespace\ SharedConst}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions}{SavePermissions}}\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a5bba2049fa21d8e87e9fcc5bbc47b716}{adcSlice}};}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_ab5ec92ecfddb673f1cbc6c6d6856c8e5}{quadrCompFormSlice}};}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a76b83c8dee092f89dc180e177c61073d}{pftpSlice}};}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_ad01001a3a26ca3d5b96acd7a20198eea}{pspSlice}};}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a3e582949670e941ec6590ef375750283}{c418\_01InputSlice}};}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_ac9cc40b1ce7414f1203df459ce5926e4}{c418\_02InputSlice}};}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a5c3ab37541d06984a4fe0eb506c95b7a}{c418\_02OutputSlice}};}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a0b8ee2b48f64f4e56e868c3d32f741b1}{tfpSlice}};}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a118c29bd7ec30cf6726fdfb27d959057}{directivityPattern}};}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions_a021382debc9a441889d998ab98e01357}{saveToFilesPerm}};}
+\DoxyCodeLine{00189\ \};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00192\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{StationParams}}\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams_a9e81928b451751a884e5af931700805f}{stationType}};}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//enum\ QuadrCompFormTypes\ \{\ hilbert,\ kaiserDPD\ \};}}
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588}{SharedConst::QuadrCompFormTypes}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams_a8fe3e051acb72f7746dcb122f765b023}{quadrCompFormType}};}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams_a76862df5b8b4d971e35d81d20ae945e4}{delayCompensationPerm}};}
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions}{SavePermissions}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams_afae820e1aaedec3922c0ca7d7571a2c4}{savePerm}};}
+\DoxyCodeLine{00206\ \};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \};\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INCLUDE\_MODEL\_MINDEFS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

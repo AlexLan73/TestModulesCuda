@@ -1,0 +1,180 @@
+\doxysection{src/mpk1/blk223/model\+\_\+wrapper.h File Reference}
+\hypertarget{model__wrapper_8h}{}\label{model__wrapper_8h}\index{src/mpk1/blk223/model\_wrapper.h@{src/mpk1/blk223/model\_wrapper.h}}
+
+
+Обертка для расчетной части модели.  
+
+
+{\ttfamily \#include $<$model/model\+Interface.\+h$>$}\newline
+{\ttfamily \#include "{}fcquantum.\+h"{}}\newline
+Include dependency graph for model\+\_\+wrapper.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model__wrapper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model__wrapper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{model__wrapper_8h_a05415f5272da5b957e9e487a41655f76}{mw\+\_\+init}} (const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{modelv\+::\+Shared\+Const\+::\+Station\+Type}} station\+\_\+type, const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{modelv\+::\+Shared\+Const\+::\+Polarization\+Types}} polarization\+\_\+type, const unsigned crate\+\_\+num, const int rek\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Инициализация обертки модели. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model__wrapper_8h_a850931dbc17e18bd5101b8b159efd31c}{mw\+\_\+free}} (void)
+\begin{DoxyCompactList}\small\item\em Деинициализирует обертку модели. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model__wrapper_8h_af2fd66fc046cfbd338094a55f08a462d}{mw\+\_\+mark\+\_\+cell\+\_\+in\+\_\+ch\+\_\+mask}} (const unsigned crate\+\_\+num, const unsigned cell\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Помечает указанную ячейку в маске каналов. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{model__wrapper_8h_ac5aed725958fa3009f979ce45832634f}{get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell}} (const unsigned crate\+\_\+num, const unsigned cell\+\_\+num=0)
+\begin{DoxyCompactList}\small\item\em Рассчитывает номер первого канала для заданной ячейки. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{model__wrapper_8h_ab32de23dea6bf0a72185933abcc6d818}{get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell}} ()
+\begin{DoxyCompactList}\small\item\em Рассчитывает номер первого канала для текущей ячейки. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{modelv\+::\+Control\+Message}} $>$ \mbox{\hyperlink{model__wrapper_8h_a1f5fcfd6d386c1b60985eba9ccba5e3f}{compute\+\_\+fc}} (const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp)
+\begin{DoxyCompactList}\small\item\em Формирует УС для всех стробов на ячейки и поляризации, заданные маской. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Обертка для расчетной части модели. 
+
+Данная обертка предназначена для упрощенного вызова расчетной части модели в виде, удобного для ФПО. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{model__wrapper_8h_a1f5fcfd6d386c1b60985eba9ccba5e3f}\label{model__wrapper_8h_a1f5fcfd6d386c1b60985eba9ccba5e3f} 
+\index{model\_wrapper.h@{model\_wrapper.h}!compute\_fc@{compute\_fc}}
+\index{compute\_fc@{compute\_fc}!model\_wrapper.h@{model\_wrapper.h}}
+\doxysubsubsection{\texorpdfstring{compute\_fc()}{compute\_fc()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{modelv\+::\+Control\+Message}} $>$ compute\+\_\+fc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp }\end{DoxyParamCaption})}
+
+
+
+Формирует УС для всех стробов на ячейки и поляризации, заданные маской. 
+
+Функция готовит входные данные для расчета УС в модели, вызывает расчет УС и возвращает полученный вектор УС как результат. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель структуру кванта ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает вектор рассчитанных управляющих сообщений. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{model__wrapper_8h_a1f5fcfd6d386c1b60985eba9ccba5e3f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model__wrapper_8h_ab32de23dea6bf0a72185933abcc6d818}\label{model__wrapper_8h_ab32de23dea6bf0a72185933abcc6d818} 
+\index{model\_wrapper.h@{model\_wrapper.h}!get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}}
+\index{get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}!model\_wrapper.h@{model\_wrapper.h}}
+\doxysubsubsection{\texorpdfstring{get\_first\_channel\_in\_cell()}{get\_first\_channel\_in\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает номер первого канала для текущей ячейки. 
+
+Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата. \begin{DoxyReturn}{Returns}
+Возвращает номер первого канала для текущей ячейки. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{model__wrapper_8h_ab32de23dea6bf0a72185933abcc6d818_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model__wrapper_8h_ac5aed725958fa3009f979ce45832634f}\label{model__wrapper_8h_ac5aed725958fa3009f979ce45832634f} 
+\index{model\_wrapper.h@{model\_wrapper.h}!get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}}
+\index{get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}!model\_wrapper.h@{model\_wrapper.h}}
+\doxysubsubsection{\texorpdfstring{get\_first\_channel\_in\_cell()}{get\_first\_channel\_in\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell (\begin{DoxyParamCaption}\item[{const unsigned}]{crate\+\_\+num,  }\item[{const unsigned}]{cell\+\_\+num = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает номер первого канала для заданной ячейки. 
+
+Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em crate\+\_\+num} & Номер блока. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+\_\+num} & Номер ячейки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает номер первого канала для заданной ячейки. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8h_a850931dbc17e18bd5101b8b159efd31c}\label{model__wrapper_8h_a850931dbc17e18bd5101b8b159efd31c} 
+\index{model\_wrapper.h@{model\_wrapper.h}!mw\_free@{mw\_free}}
+\index{mw\_free@{mw\_free}!model\_wrapper.h@{model\_wrapper.h}}
+\doxysubsubsection{\texorpdfstring{mw\_free()}{mw\_free()}}
+{\footnotesize\ttfamily void mw\+\_\+free (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Деинициализирует обертку модели. 
+
+Ввиду статического распределния памяти для обертки модели, принудительного высвобождения какой-\/то либо памяти не требуется, поэтому данная функция просто сбрасывает признак инициализации обертки модели. \begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8h_a05415f5272da5b957e9e487a41655f76}\label{model__wrapper_8h_a05415f5272da5b957e9e487a41655f76} 
+\index{model\_wrapper.h@{model\_wrapper.h}!mw\_init@{mw\_init}}
+\index{mw\_init@{mw\_init}!model\_wrapper.h@{model\_wrapper.h}}
+\doxysubsubsection{\texorpdfstring{mw\_init()}{mw\_init()}}
+{\footnotesize\ttfamily void mw\+\_\+init (\begin{DoxyParamCaption}\item[{const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{modelv\+::\+Shared\+Const\+::\+Station\+Type}}}]{station\+\_\+type,  }\item[{const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{modelv\+::\+Shared\+Const\+::\+Polarization\+Types}}}]{polarization\+\_\+type,  }\item[{const unsigned}]{crate\+\_\+num,  }\item[{const int}]{rek\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Инициализация обертки модели. 
+
+Функция последовательную инициализацию базовых параметров, используемых частью модели\+: тип станции, тип поляризации, тип используемого фильтра и пр. В конце устанавливается признак успешной инициализации. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em station\+\_\+type} & Тип станции. \\
+\hline
+\mbox{\texttt{ in}}  & {\em polarization\+\_\+type} & Тип поляризации. \\
+\hline
+\mbox{\texttt{ in}}  & {\em crate\+\_\+num} & Номер блока. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rek\+\_\+num} & Номер контейнера. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8h_af2fd66fc046cfbd338094a55f08a462d}\label{model__wrapper_8h_af2fd66fc046cfbd338094a55f08a462d} 
+\index{model\_wrapper.h@{model\_wrapper.h}!mw\_mark\_cell\_in\_ch\_mask@{mw\_mark\_cell\_in\_ch\_mask}}
+\index{mw\_mark\_cell\_in\_ch\_mask@{mw\_mark\_cell\_in\_ch\_mask}!model\_wrapper.h@{model\_wrapper.h}}
+\doxysubsubsection{\texorpdfstring{mw\_mark\_cell\_in\_ch\_mask()}{mw\_mark\_cell\_in\_ch\_mask()}}
+{\footnotesize\ttfamily void mw\+\_\+mark\+\_\+cell\+\_\+in\+\_\+ch\+\_\+mask (\begin{DoxyParamCaption}\item[{const unsigned}]{crate\+\_\+num,  }\item[{const unsigned}]{cell\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Помечает указанную ячейку в маске каналов. 
+
+Функция сначала определяет местоположение первого относительного канала в общем списке каналов полотна, а затем, ввиду того, что каналы для отдельных ячеек в массиве расположены последовательно, нужные каналы помечает как используемые. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em crate\+\_\+num} & Номер блока. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+\_\+num} & Номер ячейки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model__wrapper_8h_af2fd66fc046cfbd338094a55f08a462d_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,59 @@
+\doxysection{src/run\+Model.h File Reference}
+\hypertarget{runModel_8h}{}\label{runModel_8h}\index{src/runModel.h@{src/runModel.h}}
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trims.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2mask.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trkp.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2ippa.\+h$>$}\newline
+{\ttfamily \#include "{}input\+Bundle.\+h"{}}\newline
+Include dependency graph for run\+Model.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runModel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runModel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structResourceUsage}{Resource\+Usage}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{runModel_8h_aeac29ccc9826d6d89801038cb315c783}{Exists}} (std\+::string path)
+\item 
+Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ \mbox{\hyperlink{runModel_8h_a3eb9a1bc30f77730680e63df274929f4}{Load\+Input\+Messages}} (const optional$<$ std\+::string $>$ \&fc\+Dir\+Path)
+\item 
+Result$<$ \mbox{\hyperlink{structModelOutput}{Model\+Output}} $>$ \mbox{\hyperlink{runModel_8h_ab609332a9e2b380c47fdc9f3a53132c8}{Run\+Model}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&in, optional$<$ std\+::string $>$ out\+Dir\+Path, bool \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{runModel_8cpp_a143332c5a40204465fa2e750dc305d18}{stop\+Flag}}=nullptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{runModel_8h_aeac29ccc9826d6d89801038cb315c783}\label{runModel_8h_aeac29ccc9826d6d89801038cb315c783} 
+\index{runModel.h@{runModel.h}!Exists@{Exists}}
+\index{Exists@{Exists}!runModel.h@{runModel.h}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily bool Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8h_a3eb9a1bc30f77730680e63df274929f4}\label{runModel_8h_a3eb9a1bc30f77730680e63df274929f4} 
+\index{runModel.h@{runModel.h}!LoadInputMessages@{LoadInputMessages}}
+\index{LoadInputMessages@{LoadInputMessages}!runModel.h@{runModel.h}}
+\doxysubsubsection{\texorpdfstring{LoadInputMessages()}{LoadInputMessages()}}
+{\footnotesize\ttfamily Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ Load\+Input\+Messages (\begin{DoxyParamCaption}\item[{const optional$<$ std\+::string $>$ \&}]{fc\+Dir\+Path }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8h_ab609332a9e2b380c47fdc9f3a53132c8}\label{runModel_8h_ab609332a9e2b380c47fdc9f3a53132c8} 
+\index{runModel.h@{runModel.h}!RunModel@{RunModel}}
+\index{RunModel@{RunModel}!runModel.h@{runModel.h}}
+\doxysubsubsection{\texorpdfstring{RunModel()}{RunModel()}}
+{\footnotesize\ttfamily Result$<$ \mbox{\hyperlink{structModelOutput}{Model\+Output}} $>$ Run\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{in,  }\item[{optional$<$ std\+::string $>$}]{out\+Dir\+Path,  }\item[{bool \texorpdfstring{$\ast$}{*}}]{stop\+Flag = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+

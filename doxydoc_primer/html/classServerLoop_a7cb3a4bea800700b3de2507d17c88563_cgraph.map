@@ -1,0 +1,102 @@
+<map id="ServerLoop::oneshot" name="ServerLoop::oneshot">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,677,160,703"/>
+<area shape="rect" id="Node000002" href="$classServerLoop.html#ac2a99e3872db66dbb5d9ad7bef3d5526" title=" " alt="" coords="208,677,355,703"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,687,194,687,194,693,160,693"/>
+<area shape="rect" id="Node000003" href="$classServerLoop.html#ad22434b6a2fe29896b3faa9a963dbfb1" title=" " alt="" coords="403,677,565,703"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,687,389,687,389,693,355,693"/>
+<area shape="rect" id="Node000004" href="$classServerLoop.html#a36e98f3be02fb71963be2e1e01ed6ac4" title=" " alt="" coords="631,453,802,479"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="487,676,502,639,528,588,564,535,587,510,612,489,623,482,626,487,615,493,590,514,569,538,533,591,507,641,492,678"/>
+<area shape="rect" id="Node000005" href="$classServerLoop.html#a056775dfeb9bd0224ccc1185e5d3286c" title="Если ответ содержит пригодную к кэшированию выдачу модели, кэшируем его" alt="" coords="613,503,820,528"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="491,675,536,610,571,572,612,540,630,531,632,535,615,544,574,576,540,614,495,679"/>
+<area shape="rect" id="Node000010" href="$classServerLoop.html#aef0a09bfb495c03ea06de7fcfbb7ea23" title=" " alt="" coords="629,553,804,579"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="497,675,545,633,577,609,612,589,633,580,635,585,615,594,580,614,548,637,500,679"/>
+<area shape="rect" id="Node000011" href="$server__loop_8cpp.html#a2da5a2313cb258041ab1a53a00c8a4a8" title=" " alt="" coords="680,603,753,628"/>
+<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="515,675,613,638,666,624,667,629,614,643,516,680"/>
+<area shape="rect" id="Node000065" href="$classServerLoop.html#ae6c7fba19272651d813cbc86f879645d" title=" " alt="" coords="631,652,802,677"/>
+<area shape="poly" id="edge44_Node000003_Node000065" title=" " alt="" coords="565,678,617,673,618,678,566,684"/>
+<area shape="rect" id="Node000066" href="$classServerLoop.html#a1dd0d0634cb65322fd9f208fd5253e17" title=" " alt="" coords="628,701,805,727"/>
+<area shape="poly" id="edge45_Node000003_Node000066" title=" " alt="" coords="566,696,615,701,614,706,565,701"/>
+<area shape="rect" id="Node000068" href="$classServerLoop.html#a67ea005cd84f35c2efa7d6484a5fb2de" title=" " alt="" coords="627,751,807,776"/>
+<area shape="poly" id="edge47_Node000003_Node000068" title=" " alt="" coords="516,700,614,737,643,745,641,750,613,742,514,705"/>
+<area shape="rect" id="Node000069" href="$classServerLoop.html#a0f2460ce67974de7a27e89e0ec8f9496" title=" " alt="" coords="643,801,791,841"/>
+<area shape="poly" id="edge48_Node000003_Node000069" title=" " alt="" coords="500,701,548,742,580,766,615,786,631,794,629,799,612,791,577,770,545,746,497,705"/>
+<area shape="rect" id="Node000070" href="$classServerLoop.html#a643334cde5788ced913b4e5b64411e5c" title=" " alt="" coords="649,865,784,891"/>
+<area shape="poly" id="edge49_Node000003_Node000070" title=" " alt="" coords="494,702,511,732,538,773,573,815,615,850,637,862,635,866,612,855,569,819,533,776,506,735,489,704"/>
+<area shape="rect" id="Node000071" href="$classServerLoop.html#a79a9ef83f24537fee702f067799f7bbc" title=" " alt="" coords="623,915,810,955"/>
+<area shape="poly" id="edge50_Node000003_Node000071" title=" " alt="" coords="492,702,506,741,532,795,568,852,590,878,615,901,622,906,619,911,612,905,586,882,563,855,527,797,501,743,487,704"/>
+<area shape="rect" id="Node000006" href="$classCache.html#a1e34d8d53040ba97877d479ab0ccbae5" title=" " alt="" coords="918,403,1043,428"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="793,500,819,489,833,477,842,464,851,451,867,438,903,424,905,428,869,443,855,455,846,467,837,481,821,494,796,505"/>
+<area shape="rect" id="Node000007" href="$classCache.html#afd7f7dce7f449d694cc4b6c8dc360033" title=" " alt="" coords="935,452,1026,477"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="783,500,921,473,922,478,784,505"/>
+<area shape="rect" id="Node000008" href="$classCache.html#a6045f5d0056b3aac2693a2df0d8dbe53" title=" " alt="" coords="1141,477,1237,503"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="820,507,1127,491,1128,496,821,512"/>
+<area shape="rect" id="Node000009" href="$server__loop_8cpp.html#a98213d0d06c8ba5721df510b8493185b" title="Response кэшируем, если все стробы такта успешно обсчитаны" alt="" coords="895,553,1067,579"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="784,525,901,548,900,553,783,531"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1027,467,1128,480,1127,485,1026,473"/>
+<area shape="rect" id="Node000012" href="$structModelWrapper.html#a89e3dea632df52cc85abf0872ed2848e" title=" " alt="" coords="868,603,1093,628"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="754,613,854,613,854,618,754,618"/>
+<area shape="rect" id="Node000064" href="$structModelWrapper.html#a9230a8ab9cdbade29c4e28e4e95a2467" title=" " alt="" coords="877,652,1085,677"/>
+<area shape="poly" id="edge43_Node000011_Node000064" title=" " alt="" coords="754,619,899,647,898,652,753,625"/>
+<area shape="rect" id="Node000013" href="$runModel_8cpp.html#a9ac9129cade2e165ab70a12dd0161afb" title=" " alt="" coords="1146,603,1233,628"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="1093,613,1132,613,1132,618,1093,618"/>
+<area shape="rect" id="Node000014" href="$runModel_8cpp.html#a7033363c1fcce87abee40337840d7cca" title=" " alt="" coords="1290,101,1482,127"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1196,601,1216,563,1235,515,1241,478,1244,431,1247,321,1249,264,1255,213,1266,169,1283,138,1288,133,1292,137,1287,141,1271,171,1260,214,1254,265,1252,321,1250,431,1246,479,1240,516,1221,565,1201,603"/>
+<area shape="rect" id="Node000015" href="$model__wrapper_8cpp.html#a744b2067b76d7d31d18b0b534d32099b" title="Формирует УС для всех стробов на ячейки и поляризации, заданные маской." alt="" coords="1337,151,1435,176"/>
+<area shape="poly" id="edge15_Node000013_Node000015" title=" " alt="" coords="1196,601,1215,563,1235,515,1245,470,1248,431,1245,361,1245,328,1249,294,1261,258,1283,219,1306,196,1333,179,1335,184,1309,200,1287,222,1266,261,1254,296,1250,329,1250,361,1253,431,1250,471,1240,516,1220,565,1201,603"/>
+<area shape="rect" id="Node000020" href="$blk223fc_8cpp.html#a1526b84fe27fe5076e79397f0841fe2b" title="Функция инициирует расчет и конвертацию ФУ для аппаратуры." alt="" coords="1307,232,1465,257"/>
+<area shape="poly" id="edge20_Node000013_Node000020" title=" " alt="" coords="1196,601,1215,563,1235,515,1244,477,1246,444,1243,383,1243,355,1248,327,1260,298,1283,268,1294,259,1297,263,1287,272,1265,301,1253,328,1248,355,1248,383,1251,444,1249,478,1240,516,1220,565,1200,603"/>
+<area shape="rect" id="Node000042" href="$runModel_8cpp.html#a016714f148864f87cd92aa098c87c1cc" title=" " alt="" coords="1319,281,1453,307"/>
+<area shape="poly" id="edge24_Node000013_Node000042" title=" " alt="" coords="1195,601,1215,563,1235,514,1243,485,1246,458,1246,409,1248,387,1253,364,1264,341,1284,317,1305,303,1308,307,1287,321,1269,344,1258,366,1253,387,1251,410,1251,458,1248,486,1240,516,1220,565,1200,603"/>
+<area shape="rect" id="Node000043" href="$runModel_8cpp.html#adc150c787646d7177d79a010872b6a08" title=" " alt="" coords="1302,331,1470,356"/>
+<area shape="poly" id="edge25_Node000013_Node000043" title=" " alt="" coords="1195,601,1235,514,1246,472,1249,435,1258,401,1268,384,1283,367,1291,361,1294,365,1287,371,1272,387,1263,403,1255,436,1251,473,1240,516,1200,604"/>
+<area shape="rect" id="Node000044" href="$fcmgmt_8cpp.html#a424692426d955fe06ee372a2414d2389" title="Функция возвращает указатель на структуру ФУ для заданного номера такта." alt="" coords="1333,380,1439,405"/>
+<area shape="poly" id="edge26_Node000013_Node000044" title=" " alt="" coords="1194,601,1283,416,1300,405,1318,398,1320,403,1303,410,1287,420,1199,604"/>
+<area shape="rect" id="Node000045" href="$fcmgmt_8cpp.html#ab720f842010408b2ffb6231ea8c4a19d" title="Инициализация данных ФУ по умолчанию при старте ФПО." alt="" coords="1325,429,1447,455"/>
+<area shape="poly" id="edge27_Node000013_Node000045" title=" " alt="" coords="1193,601,1204,573,1223,536,1250,498,1284,465,1310,451,1313,456,1287,470,1254,501,1228,539,1209,575,1198,603"/>
+<area shape="rect" id="Node000050" href="$runModel_8cpp.html#a4f224942b9b568cb91a0d29a18483a71" title=" " alt="" coords="1321,479,1451,504"/>
+<area shape="poly" id="edge30_Node000013_Node000050" title=" " alt="" coords="1197,601,1232,558,1256,534,1284,514,1306,504,1309,509,1287,519,1260,539,1235,562,1201,604"/>
+<area shape="rect" id="Node000051" href="$runModel_8cpp.html#a16608318702fe8d430292230288839fd" title=" " alt="" coords="1319,528,1453,553"/>
+<area shape="poly" id="edge31_Node000013_Node000051" title=" " alt="" coords="1211,600,1245,582,1284,564,1311,555,1313,560,1286,568,1247,586,1213,605"/>
+<area shape="rect" id="Node000052" href="$runModel_8cpp.html#a836e96b7389ef7ff3c11ec4ae3d5ffd4" title=" " alt="" coords="1323,577,1449,603"/>
+<area shape="poly" id="edge32_Node000013_Node000052" title=" " alt="" coords="1232,607,1309,597,1309,603,1233,612"/>
+<area shape="rect" id="Node000053" href="$runModel_8cpp.html#a19dbf72a3e875fed81d9611e323c7c60" title=" " alt="" coords="1316,627,1456,652"/>
+<area shape="poly" id="edge33_Node000013_Node000053" title=" " alt="" coords="1233,618,1303,627,1302,632,1232,623"/>
+<area shape="rect" id="Node000054" href="$runModel_8cpp.html#ac94c83f40d51808ef01b3fe42b5b7039" title=" " alt="" coords="1287,676,1485,701"/>
+<area shape="poly" id="edge34_Node000013_Node000054" title=" " alt="" coords="1213,626,1247,644,1286,662,1309,670,1308,675,1284,667,1244,649,1210,630"/>
+<area shape="rect" id="Node000055" href="$runModel_8cpp.html#ad2bca18f9cd2c903734948a9aa9ab068" title=" " alt="" coords="1307,725,1465,751"/>
+<area shape="poly" id="edge35_Node000013_Node000055" title=" " alt="" coords="1201,626,1235,669,1259,692,1287,712,1300,718,1298,723,1284,716,1256,696,1231,673,1197,630"/>
+<area shape="rect" id="Node000056" href="$namespaceModelNS23817A620S1823_1_1Helpers.html#afc1b0912f9bfb3d0b779db63e336afce" title=" " alt="" coords="1289,775,1483,815"/>
+<area shape="poly" id="edge36_Node000013_Node000056" title=" " alt="" coords="1198,627,1229,691,1254,729,1287,761,1294,766,1291,771,1284,765,1250,732,1224,694,1193,629"/>
+<area shape="rect" id="Node000057" href="$namespaceModelNS23817A620S1823.html#a2dce01ac19bdb098b7d1e28f1c85d37c" title=" " alt="" coords="1289,839,1483,879"/>
+<area shape="poly" id="edge37_Node000013_Node000057" title=" " alt="" coords="1195,628,1204,667,1220,720,1248,776,1266,802,1287,825,1293,830,1289,834,1284,829,1262,806,1243,779,1215,722,1199,668,1190,629"/>
+<area shape="rect" id="Node000058" href="$model__wrapper_8cpp.html#a27f903d02e80fd7e7c4a27c84870cad8" title="Инициализация обертки модели." alt="" coords="1349,904,1423,929"/>
+<area shape="poly" id="edge38_Node000013_Node000058" title=" " alt="" coords="1194,628,1198,677,1211,748,1223,786,1239,824,1260,859,1287,889,1310,903,1336,911,1334,916,1307,908,1284,893,1256,862,1235,826,1218,788,1206,749,1193,677,1188,628"/>
+<area shape="rect" id="Node000060" href="$model__wrapper_8cpp.html#af2fd66fc046cfbd338094a55f08a462d" title="Помечает указанную ячейку в маске каналов." alt="" coords="1285,953,1487,979"/>
+<area shape="poly" id="edge39_Node000013_Node000060" title=" " alt="" coords="1193,628,1194,685,1205,769,1216,816,1233,861,1257,903,1287,940,1292,944,1288,948,1283,944,1252,906,1228,863,1211,817,1200,770,1189,686,1188,628"/>
+<area shape="rect" id="Node000061" href="$runModel_8cpp.html#af8ce9a0637deade413cf5f7d285408a2" title=" " alt="" coords="1343,1003,1429,1028"/>
+<area shape="poly" id="edge40_Node000013_Node000061" title=" " alt="" coords="1195,628,1205,702,1224,812,1252,920,1269,962,1287,989,1307,1003,1330,1010,1329,1015,1305,1007,1283,993,1264,964,1247,921,1219,813,1199,703,1189,629"/>
+<area shape="rect" id="Node000062" href="$blk223fc_8cpp.html#a32bacd42b9ac708bcc478cb6be5b5f80" title="Функция производит печать &quot;сырого&quot; дампа всего кванта ФУ." alt="" coords="1325,1052,1447,1077"/>
+<area shape="poly" id="edge41_Node000013_Node000062" title=" " alt="" coords="1194,628,1203,711,1221,835,1233,900,1249,959,1267,1007,1287,1039,1313,1055,1310,1059,1283,1043,1262,1009,1244,960,1228,901,1215,836,1198,711,1189,628"/>
+<area shape="rect" id="Node000063" href="$classModelNS23817A620S1823_1_1Interface.html#a072b0b4492b4cf8621ee4586231cc69a" title=" " alt="" coords="1288,1102,1484,1142"/>
+<area shape="poly" id="edge42_Node000013_Node000063" title=" " alt="" coords="1194,628,1202,719,1219,857,1231,930,1247,996,1266,1051,1287,1088,1290,1091,1287,1095,1283,1092,1261,1053,1242,998,1226,931,1214,858,1197,719,1189,628"/>
+<area shape="rect" id="Node000016" href="$model__wrapper_8cpp.html#aa51192ab7c2bc41e6cbedad0d8a8d121" title="Пересечение множеств маски используемых и требуемых каналов." alt="" coords="1538,5,1725,31"/>
+<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="1435,158,1461,150,1485,137,1496,126,1502,115,1508,90,1514,65,1521,52,1533,40,1540,35,1543,39,1536,44,1526,55,1519,67,1513,91,1507,117,1500,129,1488,141,1463,155,1436,163"/>
+<area shape="rect" id="Node000017" href="$model__wrapper_8cpp.html#a45c408761988c26e1f9fc1ad30384fe1" title="Функция конвертирует структуру сообщения Е2ТРКП в формат модели." alt="" coords="1543,55,1720,80"/>
+<area shape="poly" id="edge17_Node000015_Node000017" title=" " alt="" coords="1435,155,1461,148,1485,137,1500,126,1509,114,1518,101,1533,89,1547,82,1549,87,1536,94,1522,105,1513,117,1503,130,1488,142,1463,153,1436,160"/>
+<area shape="rect" id="Node000018" href="$classModelNS23817A620S1823_1_1Interface.html#a5f0b1f05c85df381b4ae72f679f9ec10" title=" " alt="" coords="1535,104,1728,159"/>
+<area shape="poly" id="edge18_Node000015_Node000018" title=" " alt="" coords="1436,154,1520,143,1521,148,1436,160"/>
+<area shape="rect" id="Node000019" href="$model__wrapper_8cpp.html#a27f05b2e715f2b803fbdfc8ba96cc8c4" title="Пересечение множеств маски используемых и требуемых каналов." alt="" coords="1567,183,1696,208"/>
+<area shape="poly" id="edge19_Node000015_Node000019" title=" " alt="" coords="1436,167,1553,183,1553,188,1436,172"/>
+<area shape="rect" id="Node000021" href="$blk223fc_8cpp.html#ae67c96e774fd9bece7b9b30de230bd06" title="Функция производит расчет имитационных параметров заданного строба ФУ." alt="" coords="1553,232,1710,257"/>
+<area shape="poly" id="edge21_Node000020_Node000021" title=" " alt="" coords="1465,242,1539,242,1539,247,1465,247"/>
+<area shape="rect" id="Node000027" href="$blk223fc_8cpp.html#ad5c7f86265919f558fad17cdc31ab9fe" title="Функция производит расчет целевых параметров заданного строба ФУ." alt="" coords="1546,281,1717,307"/>
+<area shape="poly" id="edge22_Node000020_Node000027" title=" " alt="" coords="1450,255,1554,276,1553,281,1449,260"/>
+<area shape="rect" id="Node000040" href="$blk223fc_8cpp.html#a153e0d4f2701c145559f16c31b5fee64" title="Функция производит валидацию целевых параметров строба СМ." alt="" coords="1557,331,1706,371"/>
+<area shape="poly" id="edge23_Node000020_Node000040" title=" " alt="" coords="1459,255,1488,268,1504,280,1513,293,1522,305,1536,317,1547,323,1544,328,1533,322,1518,309,1509,296,1500,284,1485,272,1457,260"/>
+<area shape="rect" id="Node000046" href="$fcmgmt_8cpp.html#a96ad63e1ddcacd46ac249f429b44d5a8" title="Функция инициализирует буфер сообщения АФР значениями по умолчанию." alt="" coords="1597,413,1665,439"/>
+<area shape="poly" id="edge28_Node000045_Node000046" title=" " alt="" coords="1448,435,1584,426,1584,432,1448,441"/>
+<area shape="rect" id="Node000048" href="$fcmgmt_8cpp.html#a0dcf170b614d5e05cae2e493795d0d4d" title="Функция инициализирует буфер сообщения КЛБ значениями по умолчанию." alt="" coords="1597,463,1666,488"/>
+<area shape="poly" id="edge29_Node000045_Node000048" title=" " alt="" coords="1448,448,1584,466,1583,472,1448,453"/>
+<area shape="rect" id="Node000067" href="$classCache.html#a488bd0c1e87c6e23b5b6a0c9fa6cc46b" title=" " alt="" coords="935,701,1026,727"/>
+<area shape="poly" id="edge46_Node000066_Node000067" title=" " alt="" coords="805,711,922,711,922,717,805,717"/>
+</map>

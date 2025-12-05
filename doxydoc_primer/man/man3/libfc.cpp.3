@@ -1,0 +1,168 @@
+.TH "src/mpk1/blk978/libfc.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk978/libfc.cpp \- Вспомогательные функции для работы с ФУ\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'libfc\&.h'\fP
+.br
+\fC#include <libvork/parsig\&.h>\fP
+.br
+\fC#include <tuple>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBint_abs\fP (int v)"
+.br
+.ti -1c
+.RI "unsigned \fBmylog2\fP (unsigned v)"
+.br
+.ti -1c
+.RI "static uint32_t \fBcalc_nmassht_fm\fP (int ndfm, int32_t nihs)"
+.br
+.ti -1c
+.RI "int \fBmap_tips\fP (const struct TStrobe &s)"
+.br
+.RI "Преобразует сетевой код типа строба к коду карты памяти прошивки\&. "
+.ti -1c
+.RI "static tuple< uint8_t, uint8_t > \fBassign_blk232_inputs\fP (uint8_t mask979, uint8_t mask232)"
+.br
+.ti -1c
+.RI "static tuple< uint, uint > \fBfrags\fP (const TStrobe &netstrb, const \fBCMsgSharedTypes::ImitStrobe\fP &unistrb)"
+.br
+.ti -1c
+.RI "void \fBfill_wire_header\fP (const TStrobe &netstrb, const \fBCMsgSharedTypes::ImitStrobe\fP &unistrb, const \fBCMsgSharedTypes::ImitTact\fP &unitact, cell_412_06_wire_header &wirehd)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const unsigned \fBBLK232_EN_IO1\fP = 1 << 0"
+.br
+.RI "Использовать вход I/O 1\&. "
+.ti -1c
+.RI "const unsigned \fBBLK232_EN_IO2\fP = 1 << 1"
+.br
+.RI "Использовать вход I/O 2\&. "
+.ti -1c
+.RI "const unsigned \fBBLK232_EN_IO4\fP = 1 << 2"
+.br
+.RI "Использовать вход I/O 4\&. "
+.ti -1c
+.RI "const unsigned \fBBLK232_EN_IO5\fP = 1 << 3"
+.br
+.RI "Использовать вход I/O 5\&. "
+.ti -1c
+.RI "const unsigned \fBBLK979_HORZ_UPPER\fP = 1 << 3"
+.br
+.RI "верхний 979 в ГП "
+.ti -1c
+.RI "const unsigned \fBBLK979_HORZ_LOWER\fP = 1 << 2"
+.br
+.RI "нижний 979 в ВП "
+.ti -1c
+.RI "const unsigned \fBBLK979_VERT_UPPER\fP = 1 << 1"
+.br
+.RI "верхний 979 в ВП "
+.ti -1c
+.RI "const unsigned \fBBLK979_VERT_LOWER\fP = 1 << 0"
+.br
+.RI "нижний 979 в ВП "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Вспомогательные функции для работы с ФУ\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+vmg 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+27\&.11\&.2015 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "static tuple< uint8_t, uint8_t > assign_blk232_inputs (uint8_t mask979, uint8_t mask232)\fC [static]\fP"
+заполняет маски управления входами 232 блока (I/O x 233 ячейки) возвращает пару (маска блока232 ВП, маска блока 232 ГП) 
+.SS "static uint32_t calc_nmassht_fm (int ndfm, int32_t nihs)\fC [static]\fP"
+Расчет количества повторений знаков ФМ на длительности дискрета фазоманипуляции 
+.SS "void fill_wire_header (const TStrobe & netstrb, const \fBCMsgSharedTypes::ImitStrobe\fP & unistrb, const \fBCMsgSharedTypes::ImitTact\fP & unitact, cell_412_06_wire_header & wirehd)"
+
+.SS "static tuple< uint, uint > frags (const TStrobe & netstrb, const \fBCMsgSharedTypes::ImitStrobe\fP & unistrb)\fC [static]\fP"
+Вычисляет количество фрагментов, на которые дробится полотно, и количество некогерентно объединяемых фрагментов (например, если fr == 8 и fruni == 2, то в результате объединения 8 фрагментов получается 4) 
+.SS "int int_abs (int v)\fC [inline]\fP"
+
+.SS "int map_tips (const struct TStrobe & s)"
+
+.PP
+Преобразует сетевой код типа строба к коду карты памяти прошивки\&. Функция сопоставляет известные типы строба с переданным в аргументах вызова\&. Если удалось определить тип строба, возвращается соответствующий тип строба ПЛИС, иначе возбуждается программное исключение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP Ссылка на буфер сообщения ТРПР\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает код типа строба прошивки\&. 
+.RE
+.PP
+
+.SS "unsigned mylog2 (unsigned v)\fC [inline]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const unsigned BLK232_EN_IO1 = 1 << 0"
+
+.PP
+Использовать вход I/O 1\&. На 233 ячейке используются 4 входа (из 5) - I/O 1, I/O 2, I/O 4, I/O 5 (IO3 не используется)\&. На борту каждой поляризации установлено по 1 блоку, 'своя' поляризация" подсоединена к I/O 1 и I/O 2 (к I/O 1 подсоединен верхний блок 979, к I/O 2 - нижний); чужая - к I/O 4 и I/O 5 (верхний и нижний блоки 979, соответственно)\&. Выбор используемых входов управляется битовыми масками mode_in_sfp_{v,g}p; соответствие битов входам описано ниже\&.
+.PP
+Битовые маски задают и количество обрабатываемых поляризаций - если включены по 1 входу с разных поляризаций (I/O 1 и I/O 4, например), то 233 ячейка обрабатывает 2 поляризации, иначе - одну (ту, которая подключена к соответствующим входам); от этого зависит формат выдаваемых ПЛИСами данных\&.
+.PP
+Каждый 232 блок имеет право обрабатывать либо свою поляризацию, либо свою и чужую (хотя есть техническая возможность обрабатывать только чужую, это запрещено); в каждый момент времени могут быть включены не более 2-х входов (таким образом, количество единичных битов в mode_in_sfp_* соответствует количеству обрабатываемых поляризаций)\&.
+.PP
+Биты mode_in_sfp_* задаются на основании битов поля, которое по историческим причинам называется mask232\&. Это массив из двух байтов: mask232[0]- маска 979 блоков, бит 3: верхний 979 ГП бит 2: нижний 979 ГП бит 1: верхний 979 ВП бит 0: нижний 979 ВП (т\&.е\&. нижние блоки соответствуют младшим битам) mask232[1]- маска 232 блоков, бит 1: 232 блок ГП бит 0: 232 блок ВП Биты в mode_in_sfp_{v,g} 
+.SS "const unsigned BLK232_EN_IO2 = 1 << 1"
+
+.PP
+Использовать вход I/O 2\&. 
+.SS "const unsigned BLK232_EN_IO4 = 1 << 2"
+
+.PP
+Использовать вход I/O 4\&. 
+.SS "const unsigned BLK232_EN_IO5 = 1 << 3"
+
+.PP
+Использовать вход I/O 5\&. 
+.SS "const unsigned BLK979_HORZ_LOWER = 1 << 2"
+
+.PP
+нижний 979 в ВП 
+.SS "const unsigned BLK979_HORZ_UPPER = 1 << 3"
+
+.PP
+верхний 979 в ГП биты в маске 979 
+.SS "const unsigned BLK979_VERT_LOWER = 1 << 0"
+
+.PP
+нижний 979 в ВП 
+.SS "const unsigned BLK979_VERT_UPPER = 1 << 1"
+
+.PP
+верхний 979 в ВП 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

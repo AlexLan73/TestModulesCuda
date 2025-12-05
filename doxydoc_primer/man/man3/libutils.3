@@ -1,0 +1,102 @@
+.TH "libutils" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libutils
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFromJSON< CalibStrobeOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< InterfStrobeOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< Model::StationParams >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< ModelInputBundle >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< ModelOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< Polarized< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< SetOutputDirParams >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< TargetStrobeOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBFromJSON< Vector3d< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< CalibStrobeOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< InterfStrobeOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< ModelInputBundle >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< ModelOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< Polarized< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< SetOutputDirParams >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< TargetStrobeOutput >\fP"
+.br
+.ti -1c
+.RI "struct \fBToJSON< Vector3d< T > >\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBnoop_deleter\fP (istream *)"
+.br
+.ti -1c
+.RI "static string \fBpath_concat\fP (const string &dir, const string &fname)"
+.br
+.ti -1c
+.RI "\fBJSONRPC_SERIALIZATION\fP (ModelJsonRpcProto::Request, ModelJsonRpcProto::encode)"
+.br
+.ti -1c
+.RI "\fBJSONRPC_DESERIALIZATION\fP (ModelJsonRpcProto::Request, ModelJsonRpcProto::decode_req)"
+.br
+.ti -1c
+.RI "\fBJSONRPC_SERIALIZATION\fP (ModelJsonRpcProto::Response, ModelJsonRpcProto::encode)"
+.br
+.ti -1c
+.RI "\fBJSONRPC_DESERIALIZATION\fP (ModelJsonRpcProto::Response, ModelJsonRpcProto::decode_rsp)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "libutils::JSONRPC_DESERIALIZATION (ModelJsonRpcProto::Request, ModelJsonRpcProto::decode_req)"
+
+.SS "libutils::JSONRPC_DESERIALIZATION (ModelJsonRpcProto::Response, ModelJsonRpcProto::decode_rsp)"
+
+.SS "libutils::JSONRPC_SERIALIZATION (ModelJsonRpcProto::Request, ModelJsonRpcProto::encode)"
+
+.SS "libutils::JSONRPC_SERIALIZATION (ModelJsonRpcProto::Response, ModelJsonRpcProto::encode)"
+
+.SS "static void libutils::noop_deleter (istream *)\fC [static]\fP"
+
+.SS "static string libutils::path_concat (const string & dir, const string & fname)\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

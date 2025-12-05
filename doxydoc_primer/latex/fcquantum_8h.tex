@@ -1,0 +1,75 @@
+\doxysection{src/mpk1/blk223/fcquantum.h File Reference}
+\hypertarget{fcquantum_8h}{}\label{fcquantum_8h}\index{src/mpk1/blk223/fcquantum.h@{src/mpk1/blk223/fcquantum.h}}
+
+
+Описание структуры кванта ФУ.  
+
+
+{\ttfamily \#include $<$libvork/e2mask.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trkp.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trims.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2ippa.\+h$>$}\newline
+{\ttfamily \#include "{}223fc.\+h"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for fcquantum.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcquantum_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcquantum_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfcq}{fcq}}
+\begin{DoxyCompactList}\small\item\em Квант ФУ для ячейки (тип). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef EUMASK\+\_\+\+CM \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}}
+\item 
+typedef EUTRKP\+\_\+\+CM\+\_\+\+Rx \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}}
+\item 
+typedef std\+::map$<$ int64\+\_\+t, \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em Контейнер для хранения массива ФУ для ячейки (тип). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Описание структуры кванта ФУ. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}\label{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69} 
+\index{fcquantum.h@{fcquantum.h}!fc\_map@{fc\_map}}
+\index{fc\_map@{fc\_map}!fcquantum.h@{fcquantum.h}}
+\doxysubsubsection{\texorpdfstring{fc\_map}{fc\_map}}
+{\footnotesize\ttfamily typedef std\+::map$<$int64\+\_\+t, \mbox{\hyperlink{structfcq}{fcq}}\texorpdfstring{$\ast$}{*}$>$ \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}}}
+
+
+
+Контейнер для хранения массива ФУ для ячейки (тип). 
+
+\Hypertarget{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}\label{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f} 
+\index{fcquantum.h@{fcquantum.h}!MASK@{MASK}}
+\index{MASK@{MASK}!fcquantum.h@{fcquantum.h}}
+\doxysubsubsection{\texorpdfstring{MASK}{MASK}}
+{\footnotesize\ttfamily typedef EUMASK\+\_\+\+CM \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}}}
+
+\Hypertarget{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}\label{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107} 
+\index{fcquantum.h@{fcquantum.h}!TRKP@{TRKP}}
+\index{TRKP@{TRKP}!fcquantum.h@{fcquantum.h}}
+\doxysubsubsection{\texorpdfstring{TRKP}{TRKP}}
+{\footnotesize\ttfamily typedef EUTRKP\+\_\+\+CM\+\_\+\+Rx \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}}}
+

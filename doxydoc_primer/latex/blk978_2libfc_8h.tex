@@ -1,0 +1,72 @@
+\doxysection{src/mpk1/blk978/libfc.h File Reference}
+\hypertarget{blk978_2libfc_8h}{}\label{blk978_2libfc_8h}\index{src/mpk1/blk978/libfc.h@{src/mpk1/blk978/libfc.h}}
+
+
+Вспомогательные функции для работы с ФУ.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/libmpk.\+h$>$}\newline
+{\ttfamily \#include $<$model/model\+Interface.\+h$>$}\newline
+{\ttfamily \#include $<$mpk/412-\/06\+\_\+fc.\+h$>$}\newline
+Include dependency graph for libfc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk978_2libfc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk978_2libfc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{blk978_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21}{roundflt}} (float value)
+\begin{DoxyCompactList}\small\item\em Округление числа с плавающей запятой до ближайшего целого. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{blk978_2libfc_8h_ab4511519123c70803f5506bb35f8bdf6}{fill\+\_\+wire\+\_\+header}} (const TStrobe \&netstrb, const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&unistrb, const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Tact \&unitact, cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&wirehd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Вспомогательные функции для работы с ФУ. 
+
+\begin{DoxyAuthor}{Author}
+vmg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27.\+11.\+2015 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{blk978_2libfc_8h_ab4511519123c70803f5506bb35f8bdf6}\label{blk978_2libfc_8h_ab4511519123c70803f5506bb35f8bdf6} 
+\index{libfc.h@{libfc.h}!fill\_wire\_header@{fill\_wire\_header}}
+\index{fill\_wire\_header@{fill\_wire\_header}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{fill\_wire\_header()}{fill\_wire\_header()}}
+{\footnotesize\ttfamily void fill\+\_\+wire\+\_\+header (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{netstrb,  }\item[{const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Strobe \&}]{unistrb,  }\item[{const modelv\+::\+CMsg\+Shared\+Types\+::\+Imit\+Tact \&}]{unitact,  }\item[{cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&}]{wirehd }\end{DoxyParamCaption})}
+
+\Hypertarget{blk978_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21}\label{blk978_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21} 
+\index{libfc.h@{libfc.h}!roundflt@{roundflt}}
+\index{roundflt@{roundflt}!libfc.h@{libfc.h}}
+\doxysubsubsection{\texorpdfstring{roundflt()}{roundflt()}}
+{\footnotesize\ttfamily static int32\+\_\+t roundflt (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Округление числа с плавающей запятой до ближайшего целого. 
+
+Функция производит простую операцию округления переданного значения до ближайшего целого. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em value} & Округляемое значение. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает округленное до целого число. 
+\end{DoxyReturn}

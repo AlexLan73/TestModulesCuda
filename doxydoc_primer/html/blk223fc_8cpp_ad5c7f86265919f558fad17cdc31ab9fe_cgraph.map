@@ -1,0 +1,28 @@
+<map id="calc_target_fctl_strobe" name="calc_target_fctl_strobe">
+<area shape="rect" id="Node000001" title="Функция производит расчет целевых параметров заданного строба ФУ." alt="" coords="5,153,176,179"/>
+<area shape="rect" id="Node000002" href="$blk223_2libfc_8cpp.html#a7efff375c8ab74709f6acc10b23a4287" title=" " alt="" coords="228,153,353,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,163,214,163,214,169,176,169"/>
+<area shape="rect" id="Node000006" href="$blk223_2libfc_8h.html#a8f73d0117aa68f53bf9d09d7661b477e" title="Количество лучей автокомпенсации (0 или 2)" alt="" coords="440,5,533,31"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="121,151,244,100,404,39,426,32,428,37,406,45,246,105,123,156"/>
+<area shape="rect" id="Node000013" href="$blk223fc_8cpp.html#aba572646ab9c8bd2c02bc661c75f5855" title=" " alt="" coords="224,203,357,228"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="143,176,226,197,225,202,142,181"/>
+<area shape="rect" id="Node000003" href="$blk223_2libfc_8cpp.html#acf7ac68cb0655fe69cf60e98c65d8f61" title=" " alt="" coords="405,55,568,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,151,349,120,404,89,421,82,423,87,407,94,352,125,310,155"/>
+<area shape="rect" id="Node000004" href="$blk223_2libfc_8cpp.html#aedf73c64578296f15e49f0b3f2941354" title=" " alt="" coords="419,104,555,129"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="341,151,421,130,423,135,342,156"/>
+<area shape="rect" id="Node000005" href="$blk223_2libfc_8cpp.html#ac2effc63cfa3d66da38751a916661a0d" title=" " alt="" coords="459,153,514,179"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="354,163,446,163,446,169,354,169"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="300,151,351,91,380,60,404,40,426,29,428,34,407,44,384,64,355,94,304,155"/>
+<area shape="rect" id="Node000008" href="$blk223_2libfc_8cpp.html#a762edd2d8c7f72ecd18659ff376ea21d" title=" " alt="" coords="452,203,521,228"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="342,176,439,201,438,206,341,181"/>
+<area shape="rect" id="Node000009" href="$blk223_2libfc_8h.html#a6a371265ce3ce26dc9f50b22eb41240b" title="Проверка на соответствие типа строба помеховому." alt="" coords="412,252,561,277"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="336,176,359,188,374,201,383,213,392,225,407,237,421,244,418,249,404,242,389,229,379,216,370,204,356,192,334,181"/>
+<area shape="rect" id="Node000010" href="$blk978_2libfc_8cpp.html#af889ec125463699264ac5356a1ad4bc1" title="Преобразует сетевой код типа строба к коду карты памяти прошивки." alt="" coords="445,301,528,327"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="342,177,359,188,377,214,384,239,390,263,396,275,407,287,433,301,431,306,404,291,392,278,385,265,378,240,372,216,355,192,339,181"/>
+<area shape="rect" id="Node000012" href="$blk223_2libfc_8cpp.html#ae5eda4589f2706efaf13730025e2ef73" title=" " alt="" coords="451,351,522,376"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="344,177,359,188,374,208,381,227,383,265,386,302,393,320,407,337,422,348,439,355,437,360,419,353,403,341,389,322,381,303,378,265,376,228,369,210,355,192,340,181"/>
+<area shape="rect" id="Node000007" href="$blk223_2libfc_8h.html#a5b8eb03e622148718dd963bc58832918" title="Проверка на соответствие типа строба автокомпенсации." alt="" coords="616,5,792,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="534,15,602,15,602,21,534,21"/>
+<area shape="rect" id="Node000011" href="$blk223_2libfc_8h.html#aea961f54684231b548c159708dcae31d" title="Проверка на соответствие типа строба анализу уровня шумов." alt="" coords="650,301,758,327"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="528,311,636,311,636,317,528,317"/>
+</map>

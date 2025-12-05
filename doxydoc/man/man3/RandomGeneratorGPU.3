@@ -1,0 +1,88 @@
+.TH "RandomGeneratorGPU" 3 "Test modules CUDA" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RandomGeneratorGPU
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RandomGeneratorGPU\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRandomGeneratorGPU\fP (unsigned long long seed, float max_random, size_t num_points)"
+.br
+.ti -1c
+.RI "\fB~RandomGeneratorGPU\fP ()"
+.br
+.ti -1c
+.RI "void \fBgenerate\fP ()"
+.br
+.ti -1c
+.RI "void \fBapplyLowPassConvolution\fP (int kernel_size)"
+.br
+.ti -1c
+.RI "int \fBgetSum\fP () const"
+.br
+.ti -1c
+.RI "std::vector< int16_t > \fBgetRandomNumbers\fP () const"
+.br
+.ti -1c
+.RI "void \fBprintFirst10\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned long long \fBseed_\fP"
+.br
+.ti -1c
+.RI "size_t \fBnum_points_\fP"
+.br
+.ti -1c
+.RI "int16_t * \fBd_random_numbers_\fP"
+.br
+.ti -1c
+.RI "float \fBmax_random_\fP"
+.br
+.ti -1c
+.RI "std::vector< int16_t > \fBh_random_numbers_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RandomGeneratorGPU::RandomGeneratorGPU (unsigned long long seed, float max_random, size_t num_points)"
+
+.SS "RandomGeneratorGPU::~RandomGeneratorGPU ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void RandomGeneratorGPU::applyLowPassConvolution (int kernel_size)"
+
+.SS "void RandomGeneratorGPU::generate ()"
+
+.SS "std::vector< int16_t > RandomGeneratorGPU::getRandomNumbers () const"
+
+.SS "int RandomGeneratorGPU::getSum () const"
+
+.SS "void RandomGeneratorGPU::printFirst10 () const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int16_t* RandomGeneratorGPU::d_random_numbers_\fC [private]\fP"
+
+.SS "std::vector<int16_t> RandomGeneratorGPU::h_random_numbers_\fC [private]\fP"
+
+.SS "float RandomGeneratorGPU::max_random_\fC [private]\fP"
+
+.SS "size_t RandomGeneratorGPU::num_points_\fC [private]\fP"
+
+.SS "unsigned long long RandomGeneratorGPU::seed_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test modules CUDA from the source code\&.

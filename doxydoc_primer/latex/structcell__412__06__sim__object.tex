@@ -1,0 +1,176 @@
+\doxysection{cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object Struct Reference}
+\hypertarget{structcell__412__06__sim__object}{}\label{structcell__412__06__sim__object}\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+
+
+Данные ячейки 6МЯ-\/412-\/06 по имитируемом объекту  
+
+
+
+
+{\ttfamily \#include $<$412-\/06\+\_\+fc.\+h$>$}
+
+
+
+Collaboration diagram for cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{structcell__412__06__sim__object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_ab1eade402ac4789644d7349dfec24052}{begin}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_ad28b53e5a6dd02526ce6be231d2c9ce7}{length}}
+\begin{DoxyCompactList}\small\item\em OBJECT\+\_\+\+X\+\_\+\+LENGTH – длина сигнала, где X – номер сигнала. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a7322f0c785377e562e8a3afa4f1e7b2d}{n\+\_\+poly\+\_\+0\+\_\+31}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a3de2839e50cf8eb7e06aebdf9a7e32f8}{n\+\_\+poly\+\_\+32\+\_\+40}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a44ff8a8617b0ee5a405aa07ac9d72bd2}{h\+\_\+band}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a896bea864aa8ad38f4960e74f164ba07}{type}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_aabf8289da88e4dbd1e3ddc418d1e8a11}{reserved}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a62109a280ee2137539e845147b43217f}{n\+\_\+posl\+\_\+0\+\_\+31}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a9342e82512b28060574fcf9a81d951d0}{n\+\_\+posl\+\_\+32\+\_\+40}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a2c8b787e4e3ca9b9d3534cfcacb7a630}{mseq\+\_\+diskret\+\_\+length}} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em OBJECT\+\_\+\+X\+\_\+\+M\+\_\+\+DISKRET\+\_\+\+LENGTH – длина одного знака М-\/последовательности. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_ad713e47f1738250b3f3f0ff1a33995db}{mseq\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em OBJECT\+\_\+\+X\+\_\+\+M\+\_\+\+LENGTH – длина формируемой М-\/последовательности в битах \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a81d8dba740abe728054bcea142f3c1cb}{intens}}
+\begin{DoxyCompactList}\small\item\em OBJECT\+\_\+\+X\+\_\+\+INT – интенсивность для X-\/го обьекта. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a79d8df0dcf882ab84ac3de1bfd07de77}{dds\+\_\+step}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a4da80a037afb535dd15196bdebf37c24}{dds\+\_\+phase}} \mbox{[}4\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__sim__object_a64fab9920b64bbef636a07c334791641}{delay}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em задержка формирования объекта в дискретах (по каналам) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Данные ячейки 6МЯ-\/412-\/06 по имитируемом объекту 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcell__412__06__sim__object_ab1eade402ac4789644d7349dfec24052}\label{structcell__412__06__sim__object_ab1eade402ac4789644d7349dfec24052} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!begin@{begin}}
+\index{begin@{begin}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{begin}{begin}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::begin}
+
+OBJECT\+\_\+\+X\+\_\+\+BEGIN – начало сигнала, где X – номер сигнала. пока что время задается относительно начала такта, потом будет относительно начала строба имитации \Hypertarget{structcell__412__06__sim__object_a4da80a037afb535dd15196bdebf37c24}\label{structcell__412__06__sim__object_a4da80a037afb535dd15196bdebf37c24} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!dds\_phase@{dds\_phase}}
+\index{dds\_phase@{dds\_phase}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{dds\_phase}{dds\_phase}}
+{\footnotesize\ttfamily uint16\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::dds\+\_\+phase}
+
+OBJECT\+\_\+\+X\+\_\+\+DDS\+\_\+\+FAZA – фаза X-\/го канала старшие 16 бит из значащих 24-\/бит \Hypertarget{structcell__412__06__sim__object_a79d8df0dcf882ab84ac3de1bfd07de77}\label{structcell__412__06__sim__object_a79d8df0dcf882ab84ac3de1bfd07de77} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!dds\_step@{dds\_step}}
+\index{dds\_step@{dds\_step}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{dds\_step}{dds\_step}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::dds\+\_\+step}
+
+OBJECT\+\_\+\+X\+\_\+\+DDS\+\_\+\+STEP – шаг частоты DDS X-\/го обьекта. ЦМР 60МГц/2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}24 (3.\+57Гц) значение 24-\/битовое \Hypertarget{structcell__412__06__sim__object_a64fab9920b64bbef636a07c334791641}\label{structcell__412__06__sim__object_a64fab9920b64bbef636a07c334791641} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!delay@{delay}}
+\index{delay@{delay}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::delay}
+
+
+
+задержка формирования объекта в дискретах (по каналам) 
+
+\Hypertarget{structcell__412__06__sim__object_a44ff8a8617b0ee5a405aa07ac9d72bd2}\label{structcell__412__06__sim__object_a44ff8a8617b0ee5a405aa07ac9d72bd2} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!h\_band@{h\_band}}
+\index{h\_band@{h\_band}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{h\_band}{h\_band}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::h\+\_\+band}
+
+OBJECT\+\_\+\+X\+\_\+\+H\+\_\+\+BAND – длинна окна для формирования помехи обьекта. (тоже только помеха) \Hypertarget{structcell__412__06__sim__object_a81d8dba740abe728054bcea142f3c1cb}\label{structcell__412__06__sim__object_a81d8dba740abe728054bcea142f3c1cb} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!intens@{intens}}
+\index{intens@{intens}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{intens}{intens}}
+{\footnotesize\ttfamily uint16\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::intens}
+
+
+
+OBJECT\+\_\+\+X\+\_\+\+INT – интенсивность для X-\/го обьекта. 
+
+\Hypertarget{structcell__412__06__sim__object_ad28b53e5a6dd02526ce6be231d2c9ce7}\label{structcell__412__06__sim__object_ad28b53e5a6dd02526ce6be231d2c9ce7} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!length@{length}}
+\index{length@{length}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::length}
+
+
+
+OBJECT\+\_\+\+X\+\_\+\+LENGTH – длина сигнала, где X – номер сигнала. 
+
+\Hypertarget{structcell__412__06__sim__object_a2c8b787e4e3ca9b9d3534cfcacb7a630}\label{structcell__412__06__sim__object_a2c8b787e4e3ca9b9d3534cfcacb7a630} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!mseq\_diskret\_length@{mseq\_diskret\_length}}
+\index{mseq\_diskret\_length@{mseq\_diskret\_length}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{mseq\_diskret\_length}{mseq\_diskret\_length}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::mseq\+\_\+diskret\+\_\+length}
+
+
+
+OBJECT\+\_\+\+X\+\_\+\+M\+\_\+\+DISKRET\+\_\+\+LENGTH – длина одного знака М-\/последовательности. 
+
+\Hypertarget{structcell__412__06__sim__object_ad713e47f1738250b3f3f0ff1a33995db}\label{structcell__412__06__sim__object_ad713e47f1738250b3f3f0ff1a33995db} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!mseq\_length@{mseq\_length}}
+\index{mseq\_length@{mseq\_length}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{mseq\_length}{mseq\_length}}
+{\footnotesize\ttfamily uint16\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::mseq\+\_\+length}
+
+
+
+OBJECT\+\_\+\+X\+\_\+\+M\+\_\+\+LENGTH – длина формируемой М-\/последовательности в битах 
+
+\Hypertarget{structcell__412__06__sim__object_a7322f0c785377e562e8a3afa4f1e7b2d}\label{structcell__412__06__sim__object_a7322f0c785377e562e8a3afa4f1e7b2d} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!n\_poly\_0\_31@{n\_poly\_0\_31}}
+\index{n\_poly\_0\_31@{n\_poly\_0\_31}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{n\_poly\_0\_31}{n\_poly\_0\_31}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::n\+\_\+poly\+\_\+0\+\_\+31}
+
+OBJECT\+\_\+\+X\+\_\+\+N\+\_\+\+POLY – полином М-\/последовательости для X-\/го обьекта. (и для помехи, и для объекта) у помехи 8 фиксированных (хранимых в ФПО) полиномов, выбираются по номеру объекта \Hypertarget{structcell__412__06__sim__object_a3de2839e50cf8eb7e06aebdf9a7e32f8}\label{structcell__412__06__sim__object_a3de2839e50cf8eb7e06aebdf9a7e32f8} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!n\_poly\_32\_40@{n\_poly\_32\_40}}
+\index{n\_poly\_32\_40@{n\_poly\_32\_40}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{n\_poly\_32\_40}{n\_poly\_32\_40}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::n\+\_\+poly\+\_\+32\+\_\+40}
+
+\Hypertarget{structcell__412__06__sim__object_a62109a280ee2137539e845147b43217f}\label{structcell__412__06__sim__object_a62109a280ee2137539e845147b43217f} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!n\_posl\_0\_31@{n\_posl\_0\_31}}
+\index{n\_posl\_0\_31@{n\_posl\_0\_31}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{n\_posl\_0\_31}{n\_posl\_0\_31}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::n\+\_\+posl\+\_\+0\+\_\+31}
+
+OBJECT\+\_\+\+X\+\_\+\+N\+\_\+\+POSL – начальная фаза М-\/последовательности для X-\/го обьекта. (только для помехи) \Hypertarget{structcell__412__06__sim__object_a9342e82512b28060574fcf9a81d951d0}\label{structcell__412__06__sim__object_a9342e82512b28060574fcf9a81d951d0} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!n\_posl\_32\_40@{n\_posl\_32\_40}}
+\index{n\_posl\_32\_40@{n\_posl\_32\_40}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{n\_posl\_32\_40}{n\_posl\_32\_40}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::n\+\_\+posl\+\_\+32\+\_\+40}
+
+\Hypertarget{structcell__412__06__sim__object_aabf8289da88e4dbd1e3ddc418d1e8a11}\label{structcell__412__06__sim__object_aabf8289da88e4dbd1e3ddc418d1e8a11} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!reserved@{reserved}}
+\index{reserved@{reserved}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::reserved}
+
+\Hypertarget{structcell__412__06__sim__object_a896bea864aa8ad38f4960e74f164ba07}\label{structcell__412__06__sim__object_a896bea864aa8ad38f4960e74f164ba07} 
+\index{cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}!type@{type}}
+\index{type@{type}!cell\_412\_06\_sim\_object@{cell\_412\_06\_sim\_object}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+sim\+\_\+object\+::type}
+
+OBJECT\+\_\+\+X\+\_\+\+TYPE – тип обьекта (сигнал или помеха). на будущее, 0 -\/ помеха, 1 -\/ сигнал 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/mpk1/blk223/mpk/\mbox{\hyperlink{blk223_2mpk_2412-06__fc_8h}{412-\/06\+\_\+fc.\+h}}\item 
+src/mpk1/blk978/mpk/\mbox{\hyperlink{blk978_2mpk_2412-06__fc_8h}{412-\/06\+\_\+fc.\+h}}\end{DoxyCompactItemize}

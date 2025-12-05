@@ -1,0 +1,64 @@
+.TH "src/modelDumper.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/modelDumper.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <libutils/getenv\&.h>\fP
+.br
+\fC#include <libvork/simhelpers\&.h>\fP
+.br
+\fC#include <libutils/fdstream\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <sys/timeb\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include 'jsonrpc/server_loop\&.h'\fP
+.br
+\fC#include 'runModel\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBIsDir\fP (std::string path)"
+.br
+.ti -1c
+.RI "static void \fBUsage\fP ()"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBsyslog_ident\fP = 'model_dumper'"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static bool IsDir (std::string path)\fC [static]\fP"
+
+.SS "int main (int argc, char * argv[])"
+
+.SS "static void Usage ()\fC [static]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const char* syslog_ident = 'model_dumper'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

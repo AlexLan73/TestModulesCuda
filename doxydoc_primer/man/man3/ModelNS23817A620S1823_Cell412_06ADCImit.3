@@ -1,0 +1,263 @@
+.TH "ModelNS23817A620S1823::Cell412_06ADCImit" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Cell412_06ADCImit
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c412_06ADCImitator\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell412_06ADCImit\fP ()"
+.br
+.ti -1c
+.RI "\fB~Cell412_06ADCImit\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetChannelData\fP (uint32_t chanNum, int32_t channelData[])"
+.br
+.ti -1c
+.RI "void \fBsetControlMessage\fP (const \fBControlMsg\fP &\fBcontrolMsg\fP)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgenSelfNoise\fP (uint32_t chanNum, int32_t channelData[])"
+.br
+.ti -1c
+.RI "void \fBgenInterfNoise\fP (int32_t channelData[], uint32_t interfIndex)"
+.br
+.ti -1c
+.RI "uint32_t \fBgenInterfImage\fP (uint32_t objNum)"
+.br
+.ti -1c
+.RI "uint32_t \fBgenSignalImage\fP (uint32_t objNum)"
+.br
+.ti -1c
+.RI "uint32_t \fBgenObject\fP (uint32_t objNum, uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBgenCarrierFreq\fP (uint32_t objNum, uint32_t chanNum, uint32_t objLength)"
+.br
+.ti -1c
+.RI "int32_t \fBcalcNk\fP (uint32_t objNum) const"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcNdk\fP (uint32_t objNum) const"
+.br
+.ti -1c
+.RI "uint32_t \fBapplyKaiserOnSignal\fP (uint32_t currLength)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBobjectData\fP [\fBmaxObjLength\fP]"
+.br
+.ti -1c
+.RI "int32_t \fBobjectImage\fP [\fBmaxObjLength\fP]"
+.br
+.ti -1c
+.RI "int32_t \fBinterfImageTmp\fP [\fBSharedConst::maxInterfBandWidth\fP]"
+.br
+.ti -1c
+.RI "\fBControlMsg\fP \fBcontrolMsg\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitStrobe\fP * \fBstrb\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgModelTypes::StationParams\fP * \fBstationParams\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitObject\fP * \fBimitObjects\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBmaxObjLength\fP = 3500000"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс имитатора выхода АЦП ячейки расчёта каналов 412-06\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Cell412_06ADCImit::Cell412_06ADCImit ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Cell412_06ADCImit::~Cell412_06ADCImit ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06ADCImit::applyKaiserOnSignal (uint32_t currLength)\fC [private]\fP"
+Наложение фильтра Кайзера на образ сигнала\&. Используется только для Воронеж-М\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrLength\fP текущая длина сигнала 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+длина сигнала после наложения фильтра 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06ADCImit::calcNdk (uint32_t objNum) const\fC [private]\fP"
+Расчёт периода, через который меняется количество отсчётов на дискрете\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP порядковый номер объекта в стробе 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина периода, через который меняется количество отсчётов на дискрете 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Cell412_06ADCImit::calcNk (uint32_t objNum) const\fC [private]\fP"
+Расчёт величины изменения длительности дискрета в числе выборок частоты Fд\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP порядковый номер объекта в стробе 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина изменения длительности дискрета 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06ADCImit::genCarrierFreq (uint32_t objNum, uint32_t chanNum, uint32_t objLength)\fC [private]\fP"
+Генерация несущей частоты для objNum`ого объекта исходя из типа станции\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP порядковый номер объекта в стробе 
+.br
+\fIchanNum\fP номер канала в ячейке 
+.br
+\fIobjLength\fP длина объекта, в дискретах 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06ADCImit::genInterfImage (uint32_t objNum)\fC [private]\fP"
+Генерация образа objNum`ой помехи\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP порядковый номер объекта (помехи) в стробе 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+длина помехи
+.RE
+.PP
+Генерация образа помехи 
+.SS "void ModelNS23817A620S1823::Cell412_06ADCImit::genInterfNoise (int32_t channelData[], uint32_t interfIndex)\fC [private]\fP"
+Генерация шума для расчёта помехи с заданным номером (interfIndex) в массив channelData\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchannelData\fP указатель на массив для результирующих данных 
+.br
+\fIinterfIndex\fP порядковый номер помехи (объекта) в стробе 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06ADCImit::genObject (uint32_t objNum, uint32_t chanNum)\fC [private]\fP"
+Генерация objNum`ого объекта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP порядковый номер объекта в стробе 
+.br
+\fIchanNum\fP номер канала в ячейке 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+новая длина объекта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06ADCImit::genSelfNoise (uint32_t chanNum, int32_t channelData[])\fC [private]\fP"
+Генерация собственного шума для заданного канала (chanNum) в массив channelData\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала на полотне в нумерации антенны 
+.br
+\fIchannelData\fP указатель на массив для результирующих данных 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06ADCImit::genSignalImage (uint32_t objNum)\fC [private]\fP"
+Генерация образа objNum`ого сигнала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP порядковый номер объекта (помехи) в стробе 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+длина сигнала 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06ADCImit::getChannelData (uint32_t chanNum, int32_t channelData[])"
+Занесение сгенерированных значений выборок выхода АЦП заданного канала (chanNum) в массив channelData\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала на полотне в нумерации модели 
+.br
+\fIchannelData\fP указатель на массив для результирующих данных 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06ADCImit::setControlMessage (const \fBControlMsg\fP & controlMsg)"
+Обновление параметров управления ячейкой\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrolMsg\fP указатель на объект управляющего сообщения 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBControlMsg\fP ModelNS23817A620S1823::Cell412_06ADCImit::controlMsg\fC [private]\fP"
+сообщение с параметрами управления ячейкой 
+.SS "const \fBCMsgSharedTypes::ImitObject\fP* ModelNS23817A620S1823::Cell412_06ADCImit::imitObjects\fC [private]\fP"
+указатель на массив объектов строба управляющего сообщения 
+.SS "int32_t ModelNS23817A620S1823::Cell412_06ADCImit::interfImageTmp[\fBSharedConst::maxInterfBandWidth\fP]\fC [private]\fP"
+массив для хранения сумм выборок помехи на ширине полосы помехи 
+.SS "const uint32_t ModelNS23817A620S1823::Cell412_06ADCImit::maxObjLength = 3500000\fC [static]\fP, \fC [private]\fP"
+максимальная длина объекта 
+.SS "int32_t ModelNS23817A620S1823::Cell412_06ADCImit::objectData[\fBmaxObjLength\fP]\fC [private]\fP"
+данные объекта (сигнала/помехи, временный массив) 
+.SS "int32_t ModelNS23817A620S1823::Cell412_06ADCImit::objectImage[\fBmaxObjLength\fP]\fC [private]\fP"
+образ сигнала/помехи 
+.SS "const \fBCMsgModelTypes::StationParams\fP* ModelNS23817A620S1823::Cell412_06ADCImit::stationParams\fC [private]\fP"
+указатель на параметры станции управляющего сообщения 
+.SS "const \fBCMsgSharedTypes::ImitStrobe\fP* ModelNS23817A620S1823::Cell412_06ADCImit::strb\fC [private]\fP"
+указатель на параметры строба управляющего сообщения 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

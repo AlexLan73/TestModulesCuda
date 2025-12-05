@@ -1,0 +1,38 @@
+.TH "TrkpHeader" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TrkpHeader
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <e2trkp\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBtip\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBnpos\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBrez\fP [3]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Параметры АФР и КЛБ для разных станций 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t TrkpHeader::npos"
+номер позиции 
+.SS "uint8_t TrkpHeader::rez[3]"
+
+.SS "uint32_t TrkpHeader::tip"
+Заголовок сообщения тип сообщения: 0 - калибровочный вектор (КЛБПРМ – результат расчета калибровочных параметров амплитудной и фазовой корректировки приемных подрешеток) 1 - АФР (сообщение используем для АФР) – данные предварительного формирования канальных сигналов с учетом поправок на вышку или КС в режиме калибровки приемных каналов 2 - взвешенный калибровочный вектор - КЛБПРМК – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов приемных блоков; 3 - КЛБПРД – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов передающих блоков 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

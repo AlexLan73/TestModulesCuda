@@ -1,0 +1,380 @@
+\doxysection{cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe Struct Reference}
+\hypertarget{structcell__412__06__target__strobe}{}\label{structcell__412__06__target__strobe}\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+
+
+Данные ячейки 6МЯ-\/412-\/06 по целевому стробу  
+
+
+
+
+{\ttfamily \#include $<$412-\/06\+\_\+fc.\+h$>$}
+
+
+
+Collaboration diagram for cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{structcell__412__06__target__strobe__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_af850a57b841b5c77f6a5f0eaa1719d3f}{target\+\_\+strobe\+\_\+begin}}
+\begin{DoxyCompactList}\small\item\em TARGET\+\_\+\+STROBE\+\_\+\+BEGIN – начало целевого строба в 60 МГц дискретах. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a836b8b94605e7b7232baca1c4733c3af}{target\+\_\+strobe\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em TARGET\+\_\+\+STROBE\+\_\+\+LENGTH – длина целевого строба в 60 МГц дискретах. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_aca089c8df17518a88ae6d223a12cd9c1}{n\+\_\+dec}}
+\begin{DoxyCompactList}\small\item\em N\+\_\+\+DEC – коэффициент прореживания в ПЧВО. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_aaac27c360f45f1bddd4fdcf8bcb0b4c4}{norm}}
+\begin{DoxyCompactList}\small\item\em NORM – коэффициент нормировки. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a9b93b838f73b045377572759db132f8e}{reserved1}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a4890280bb1caf9be8a282c47b46bd970}{reg}}
+\begin{DoxyCompactList}\small\item\em REG – признак регистрации сигнала по всем срезам тракта обработки. XXX все сразу? \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a91739e50e45cf6224da48594d4e10475}{k}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a4831841f10264c3d8bf48f9bf07f1c2e}{n\+\_\+shift}}
+\begin{DoxyCompactList}\small\item\em сдвиг для режима калибровки и РИУШ (типстроба 2049) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_ac5b78a1d8bf321183488b5c28e52c3e0}{mode}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a47c493923a21660f9e2f4900e8af8361}{tippc\+\_\+nl}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_aea54b6f0aa816057a06de6e4b9ce4250}{tips\+\_\+n}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_ab29bd5f40c847b8337ce6e803f9292f9}{nfft}}
+\begin{DoxyCompactList}\small\item\em NFFT – 3...10 степень размерности БПФ. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_af3be64f259d95e1f02fa98338aa50def}{Wob}}
+\begin{DoxyCompactList}\small\item\em Wob – количество обучающих векторов. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a84f3c9d228077fc6cb569a844595cba3}{reserved3}} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a495c421c62ca62954d4b9a35a5359c59}{delay\+\_\+ch}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em DELAY\+\_\+\+CHX – компенсация задержки в каналах ПЧВО в тактах, для X-\/го канала \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_ab84672b7e1903241a85791d977e3dd54}{reserved4}} \mbox{[}3\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a0830142ac0f4b555d09e13cad1363f50}{het\+\_\+dds\+\_\+step}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a7ea30b4b351e21f6c03c7b00fb15542c}{het\+\_\+dds\+\_\+phase}}
+\begin{DoxyCompactList}\small\item\em HET\+\_\+\+DDS\+\_\+\+PHASE – фаза DDS для цифрового гетеродина ПЧВО \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a2f686b9104854ba776117d852fe1a3c4}{hilbert\+\_\+corr\+\_\+freq}}
+\begin{DoxyCompactList}\small\item\em GILBERT\+\_\+\+Corr\+Freq – корректирующий коэффициент для преобразования гилберта \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a7f287c8127dd8e3591f59928ff24277f}{reserved5}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>int32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894}{re}}\\
+\>int32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_a77501f9c54f3b91b045f7647b0777cb6}{im}}\\
+\} \mbox{\hyperlink{structcell__412__06__target__strobe_a4ecf066038f46c1ba278caef808b4e73}{w\_po}} \mbox{[}12\mbox{]}\mbox{[}4\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_ab27acfb63f073ffe9e098b75486e43b5}{re}}\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952}{im}}\\
+\} \mbox{\hyperlink{structcell__412__06__target__strobe_a4cf742e0c28e2c18b598010230b3b8ff}{w\_clb}} \mbox{[}4\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_ab27acfb63f073ffe9e098b75486e43b5}{re}}\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952}{im}}\\
+\} \mbox{\hyperlink{structcell__412__06__target__strobe_a29bab95e7dbc04bd7413e3c8d786b9fa}{w\_train}} \mbox{[}30\mbox{]}\mbox{[}4\mbox{]}\\
+
+\end{tabbing}\item 
+char \mbox{\hyperlink{structcell__412__06__target__strobe_a41692e9e569c3ac069b71a605451ab2e}{reserved5\+\_\+1}} \mbox{[}96\mbox{]}
+\item 
+struct cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \mbox{\hyperlink{structcell__412__06__target__strobe_a0bc55bc5f440a45201ace7ffd868a636}{wirehd}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_a393aa3f9f49c4d8852345836ec4c90bf}{unused\+\_\+tail}} \mbox{[}0x1000 -\/ 1632\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structcell__412__06__target__strobe_abe20905d25919b6397df807941cc6784}{hilbert\+\_\+corr\+\_\+freq}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>int32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894}{re}}\\
+\>int32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_a77501f9c54f3b91b045f7647b0777cb6}{im}}\\
+\} \mbox{\hyperlink{structcell__412__06__target__strobe_a450a99502071828195d8962144f8f10e}{w\_po}} \mbox{[}12\mbox{]}\mbox{[}4\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_ab27acfb63f073ffe9e098b75486e43b5}{re}}\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952}{im}}\\
+\} \mbox{\hyperlink{structcell__412__06__target__strobe_a008bb729d7da2f90dff2d8732d673124}{w\_clb}} \mbox{[}4\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_ab27acfb63f073ffe9e098b75486e43b5}{re}}\\
+\>uint32\_t \mbox{\hyperlink{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952}{im}}\\
+\} \mbox{\hyperlink{structcell__412__06__target__strobe_a0cd7d85149970a785568297e0649ccd7}{w\_train}} \mbox{[}30\mbox{]}\mbox{[}4\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Данные ячейки 6МЯ-\/412-\/06 по целевому стробу 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structcell__412__06__target__strobe_a495c421c62ca62954d4b9a35a5359c59}\label{structcell__412__06__target__strobe_a495c421c62ca62954d4b9a35a5359c59} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!delay\_ch@{delay\_ch}}
+\index{delay\_ch@{delay\_ch}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{delay\_ch}{delay\_ch}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::delay\+\_\+ch}
+
+
+
+DELAY\+\_\+\+CHX – компенсация задержки в каналах ПЧВО в тактах, для X-\/го канала 
+
+\Hypertarget{structcell__412__06__target__strobe_a7ea30b4b351e21f6c03c7b00fb15542c}\label{structcell__412__06__target__strobe_a7ea30b4b351e21f6c03c7b00fb15542c} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!het\_dds\_phase@{het\_dds\_phase}}
+\index{het\_dds\_phase@{het\_dds\_phase}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{het\_dds\_phase}{het\_dds\_phase}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::het\+\_\+dds\+\_\+phase}
+
+
+
+HET\+\_\+\+DDS\+\_\+\+PHASE – фаза DDS для цифрового гетеродина ПЧВО 
+
+\Hypertarget{structcell__412__06__target__strobe_a0830142ac0f4b555d09e13cad1363f50}\label{structcell__412__06__target__strobe_a0830142ac0f4b555d09e13cad1363f50} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!het\_dds\_step@{het\_dds\_step}}
+\index{het\_dds\_step@{het\_dds\_step}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{het\_dds\_step}{het\_dds\_step}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::het\+\_\+dds\+\_\+step}
+
+HET\+\_\+\+DDS\+\_\+\+STEP – шаг DDS для цифрового гетеродина ПЧВО 0,02794Гц -\/ цена младшего разряда этого поля старший бит -\/ знак \Hypertarget{structcell__412__06__target__strobe_a2f686b9104854ba776117d852fe1a3c4}\label{structcell__412__06__target__strobe_a2f686b9104854ba776117d852fe1a3c4} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!hilbert\_corr\_freq@{hilbert\_corr\_freq}}
+\index{hilbert\_corr\_freq@{hilbert\_corr\_freq}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{hilbert\_corr\_freq}{hilbert\_corr\_freq}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::hilbert\+\_\+corr\+\_\+freq}
+
+
+
+GILBERT\+\_\+\+Corr\+Freq – корректирующий коэффициент для преобразования гилберта 
+
+\Hypertarget{structcell__412__06__target__strobe_abe20905d25919b6397df807941cc6784}\label{structcell__412__06__target__strobe_abe20905d25919b6397df807941cc6784} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!hilbert\_corr\_freq@{hilbert\_corr\_freq}}
+\index{hilbert\_corr\_freq@{hilbert\_corr\_freq}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{hilbert\_corr\_freq}{hilbert\_corr\_freq}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::hilbert\+\_\+corr\+\_\+freq}
+
+GILBERT\+\_\+\+Corr\+Freq – корректирующий коэффициент для преобразования гилберта (учитываются только младшие 16 бит) \Hypertarget{structcell__412__06__target__strobe_a77501f9c54f3b91b045f7647b0777cb6}\label{structcell__412__06__target__strobe_a77501f9c54f3b91b045f7647b0777cb6} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!im@{im}}
+\index{im@{im}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{im}{im}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::im}
+
+\Hypertarget{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952}\label{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!im@{im}}
+\index{im@{im}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{im}{im}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::im}
+
+\Hypertarget{structcell__412__06__target__strobe_a91739e50e45cf6224da48594d4e10475}\label{structcell__412__06__target__strobe_a91739e50e45cf6224da48594d4e10475} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!k@{k}}
+\index{k@{k}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::k}
+
+K – маска коммутации данных АЦП/Имитатор на вход гетеродина. 0-\/й бит включает АЦП, 1-\/й бит -\/ имитатор \Hypertarget{structcell__412__06__target__strobe_ac5b78a1d8bf321183488b5c28e52c3e0}\label{structcell__412__06__target__strobe_ac5b78a1d8bf321183488b5c28e52c3e0} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!mode@{mode}}
+\index{mode@{mode}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::mode}
+
+подрежим работы помехового канала , определяет фрагментацию полотна и способ некогерентного объединения фрагментов mode\mbox{[}0\+:3\mbox{]} -\/ код количества фрагментов; фрагмент -\/ часть полотна, в которой производится когерентное сложение подрешеток; подрешетки каждого фрагмента сфазированы в своем угловом направлении (1 -\/ 1фр, 2 -\/ 2фр, 4 -\/ 4фр, 8 -\/ 8фр, 0 -\/ 192фр) mode\mbox{[}4\+:7\mbox{]} -\/ код способа некогерентного объединения фрагментов (TStrobe\+::kpg, кроме случая количества фрагментов == 192, когда он == 0) \Hypertarget{structcell__412__06__target__strobe_aca089c8df17518a88ae6d223a12cd9c1}\label{structcell__412__06__target__strobe_aca089c8df17518a88ae6d223a12cd9c1} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!n\_dec@{n\_dec}}
+\index{n\_dec@{n\_dec}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{n\_dec}{n\_dec}}
+{\footnotesize\ttfamily uint16\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::n\+\_\+dec}
+
+
+
+N\+\_\+\+DEC – коэффициент прореживания в ПЧВО. 
+
+\Hypertarget{structcell__412__06__target__strobe_a4831841f10264c3d8bf48f9bf07f1c2e}\label{structcell__412__06__target__strobe_a4831841f10264c3d8bf48f9bf07f1c2e} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!n\_shift@{n\_shift}}
+\index{n\_shift@{n\_shift}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{n\_shift}{n\_shift}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::n\+\_\+shift}
+
+
+
+сдвиг для режима калибровки и РИУШ (типстроба 2049) 
+
+\Hypertarget{structcell__412__06__target__strobe_ab29bd5f40c847b8337ce6e803f9292f9}\label{structcell__412__06__target__strobe_ab29bd5f40c847b8337ce6e803f9292f9} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!nfft@{nfft}}
+\index{nfft@{nfft}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{nfft}{nfft}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::nfft}
+
+
+
+NFFT – 3...10 степень размерности БПФ. 
+
+\Hypertarget{structcell__412__06__target__strobe_aaac27c360f45f1bddd4fdcf8bcb0b4c4}\label{structcell__412__06__target__strobe_aaac27c360f45f1bddd4fdcf8bcb0b4c4} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!norm@{norm}}
+\index{norm@{norm}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{norm}{norm}}
+{\footnotesize\ttfamily uint16\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::norm}
+
+
+
+NORM – коэффициент нормировки. 
+
+\Hypertarget{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894}\label{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!re@{re}}
+\index{re@{re}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{re}{re}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::re}
+
+\Hypertarget{structcell__412__06__target__strobe_ab27acfb63f073ffe9e098b75486e43b5}\label{structcell__412__06__target__strobe_ab27acfb63f073ffe9e098b75486e43b5} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!re@{re}}
+\index{re@{re}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{re}{re}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::re}
+
+\Hypertarget{structcell__412__06__target__strobe_a4890280bb1caf9be8a282c47b46bd970}\label{structcell__412__06__target__strobe_a4890280bb1caf9be8a282c47b46bd970} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!reg@{reg}}
+\index{reg@{reg}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reg}{reg}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::reg}
+
+
+
+REG – признак регистрации сигнала по всем срезам тракта обработки. XXX все сразу? 
+
+\Hypertarget{structcell__412__06__target__strobe_a9b93b838f73b045377572759db132f8e}\label{structcell__412__06__target__strobe_a9b93b838f73b045377572759db132f8e} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!reserved1@{reserved1}}
+\index{reserved1@{reserved1}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reserved1}{reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::reserved1}
+
+\Hypertarget{structcell__412__06__target__strobe_a84f3c9d228077fc6cb569a844595cba3}\label{structcell__412__06__target__strobe_a84f3c9d228077fc6cb569a844595cba3} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!reserved3@{reserved3}}
+\index{reserved3@{reserved3}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reserved3}{reserved3}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::reserved3}
+
+\Hypertarget{structcell__412__06__target__strobe_ab84672b7e1903241a85791d977e3dd54}\label{structcell__412__06__target__strobe_ab84672b7e1903241a85791d977e3dd54} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!reserved4@{reserved4}}
+\index{reserved4@{reserved4}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reserved4}{reserved4}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::reserved4}
+
+\Hypertarget{structcell__412__06__target__strobe_a7f287c8127dd8e3591f59928ff24277f}\label{structcell__412__06__target__strobe_a7f287c8127dd8e3591f59928ff24277f} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!reserved5@{reserved5}}
+\index{reserved5@{reserved5}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reserved5}{reserved5}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::reserved5}
+
+\Hypertarget{structcell__412__06__target__strobe_a41692e9e569c3ac069b71a605451ab2e}\label{structcell__412__06__target__strobe_a41692e9e569c3ac069b71a605451ab2e} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!reserved5\_1@{reserved5\_1}}
+\index{reserved5\_1@{reserved5\_1}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reserved5\_1}{reserved5\_1}}
+{\footnotesize\ttfamily char cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::reserved5\+\_\+1}
+
+\Hypertarget{structcell__412__06__target__strobe_af850a57b841b5c77f6a5f0eaa1719d3f}\label{structcell__412__06__target__strobe_af850a57b841b5c77f6a5f0eaa1719d3f} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!target\_strobe\_begin@{target\_strobe\_begin}}
+\index{target\_strobe\_begin@{target\_strobe\_begin}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{target\_strobe\_begin}{target\_strobe\_begin}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::target\+\_\+strobe\+\_\+begin}
+
+
+
+TARGET\+\_\+\+STROBE\+\_\+\+BEGIN – начало целевого строба в 60 МГц дискретах. 
+
+\Hypertarget{structcell__412__06__target__strobe_a836b8b94605e7b7232baca1c4733c3af}\label{structcell__412__06__target__strobe_a836b8b94605e7b7232baca1c4733c3af} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!target\_strobe\_length@{target\_strobe\_length}}
+\index{target\_strobe\_length@{target\_strobe\_length}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{target\_strobe\_length}{target\_strobe\_length}}
+{\footnotesize\ttfamily uint32\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::target\+\_\+strobe\+\_\+length}
+
+
+
+TARGET\+\_\+\+STROBE\+\_\+\+LENGTH – длина целевого строба в 60 МГц дискретах. 
+
+\Hypertarget{structcell__412__06__target__strobe_a47c493923a21660f9e2f4900e8af8361}\label{structcell__412__06__target__strobe_a47c493923a21660f9e2f4900e8af8361} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!tippc\_nl@{tippc\_nl}}
+\index{tippc\_nl@{tippc\_nl}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{tippc\_nl}{tippc\_nl}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::tippc\+\_\+nl}
+
+TIPPC\+\_\+\+NL – 1 .. 12 -\/ количество лучей. При любом АСП стробе NL = 1! \Hypertarget{structcell__412__06__target__strobe_aea54b6f0aa816057a06de6e4b9ce4250}\label{structcell__412__06__target__strobe_aea54b6f0aa816057a06de6e4b9ce4250} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!tips\_n@{tips\_n}}
+\index{tips\_n@{tips\_n}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{tips\_n}{tips\_n}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::tips\+\_\+n}
+
+TIPS\+\_\+N – тип строба. 1 – целевой (0, 257 – АСП в узком луче) 2 – ПК10 (256) 3 – ПК20 (256) 4 – ПК40 (256) 5 – АСП (258 – в широком луче) 6 – адаптация (513) 7 – калибровка (2048) 8 – анализ уровня шумов (2049) \Hypertarget{structcell__412__06__target__strobe_a393aa3f9f49c4d8852345836ec4c90bf}\label{structcell__412__06__target__strobe_a393aa3f9f49c4d8852345836ec4c90bf} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!unused\_tail@{unused\_tail}}
+\index{unused\_tail@{unused\_tail}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{unused\_tail}{unused\_tail}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::unused\+\_\+tail}
+
+\Hypertarget{structcell__412__06__target__strobe_a4cf742e0c28e2c18b598010230b3b8ff}\label{structcell__412__06__target__strobe_a4cf742e0c28e2c18b598010230b3b8ff} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!w\_clb@{w\_clb}}
+\index{w\_clb@{w\_clb}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::w\+\_\+clb\mbox{[}4\mbox{]}}
+
+W\+\_\+clb\+\_\+\+Re\+\_\+X, W\+\_\+clb\+\_\+\+Im\+\_\+X -\/ Re и Im калибровочные вектора W\+\_\+\+Clb X = 1..4 – номер канала; \Hypertarget{structcell__412__06__target__strobe_a008bb729d7da2f90dff2d8732d673124}\label{structcell__412__06__target__strobe_a008bb729d7da2f90dff2d8732d673124} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!w\_clb@{w\_clb}}
+\index{w\_clb@{w\_clb}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::w\+\_\+clb\mbox{[}4\mbox{]}}
+
+W\+\_\+clb\+\_\+\+Re\+\_\+X, W\+\_\+clb\+\_\+\+Im\+\_\+X -\/ Re и Im калибровочные вектора W\+\_\+\+Clb X = 1..4 – номер канала; \Hypertarget{structcell__412__06__target__strobe_a4ecf066038f46c1ba278caef808b4e73}\label{structcell__412__06__target__strobe_a4ecf066038f46c1ba278caef808b4e73} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!w\_po@{w\_po}}
+\index{w\_po@{w\_po}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::w\+\_\+po\mbox{[}12\mbox{]}\mbox{[}4\mbox{]}}
+
+W\+\_\+po\+\_\+\+Re\+\_\+\+X\+\_\+Y, W\+\_\+po\+\_\+\+Re\+\_\+\+X\+\_\+Y – Re и Im диаграммообразующего вектора W\+\_\+\+Po\+: X = 1..4 – номер канала; Y = 1..12 – номер луча 20 разрядов \Hypertarget{structcell__412__06__target__strobe_a450a99502071828195d8962144f8f10e}\label{structcell__412__06__target__strobe_a450a99502071828195d8962144f8f10e} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!w\_po@{w\_po}}
+\index{w\_po@{w\_po}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::w\+\_\+po\mbox{[}12\mbox{]}\mbox{[}4\mbox{]}}
+
+W\+\_\+po\+\_\+\+Re\+\_\+\+X\+\_\+Y, W\+\_\+po\+\_\+\+Re\+\_\+\+X\+\_\+Y – Re и Im диаграммообразующего вектора W\+\_\+\+Po\+: X = 1..4 – номер канала; Y = 1..12 – номер луча 20 разрядов \Hypertarget{structcell__412__06__target__strobe_a29bab95e7dbc04bd7413e3c8d786b9fa}\label{structcell__412__06__target__strobe_a29bab95e7dbc04bd7413e3c8d786b9fa} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!w\_train@{w\_train}}
+\index{w\_train@{w\_train}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::w\+\_\+train\mbox{[}30\mbox{]}\mbox{[}4\mbox{]}}
+
+W\+\_\+ob\+\_\+\+Re\+\_\+\+X\+\_\+Y, W\+\_\+ob\+\_\+\+Re\+\_\+\+X\+\_\+ -\/ Re и Im обучающие вектора W\+\_\+\+Po X = 1..4 – номер канала; Y = 1..30 – номер вектора. \Hypertarget{structcell__412__06__target__strobe_a0cd7d85149970a785568297e0649ccd7}\label{structcell__412__06__target__strobe_a0cd7d85149970a785568297e0649ccd7} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!w\_train@{w\_train}}
+\index{w\_train@{w\_train}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct  \{ ... \}  cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::w\+\_\+train\mbox{[}30\mbox{]}\mbox{[}4\mbox{]}}
+
+W\+\_\+ob\+\_\+\+Re\+\_\+\+X\+\_\+Y, W\+\_\+ob\+\_\+\+Re\+\_\+\+X\+\_\+ -\/ Re и Im обучающие вектора W\+\_\+\+Po X = 1..4 – номер канала; Y = 1..30 – номер вектора. \Hypertarget{structcell__412__06__target__strobe_a0bc55bc5f440a45201ace7ffd868a636}\label{structcell__412__06__target__strobe_a0bc55bc5f440a45201ace7ffd868a636} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!wirehd@{wirehd}}
+\index{wirehd@{wirehd}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{wirehd}{wirehd}}
+{\footnotesize\ttfamily struct cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::wirehd}
+
+\Hypertarget{structcell__412__06__target__strobe_af3be64f259d95e1f02fa98338aa50def}\label{structcell__412__06__target__strobe_af3be64f259d95e1f02fa98338aa50def} 
+\index{cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}!Wob@{Wob}}
+\index{Wob@{Wob}!cell\_412\_06\_target\_strobe@{cell\_412\_06\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{Wob}{Wob}}
+{\footnotesize\ttfamily uint8\+\_\+t cell\+\_\+412\+\_\+06\+\_\+target\+\_\+strobe\+::\+Wob}
+
+
+
+Wob – количество обучающих векторов. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/mpk1/blk223/mpk/\mbox{\hyperlink{blk223_2mpk_2412-06__fc_8h}{412-\/06\+\_\+fc.\+h}}\item 
+src/mpk1/blk978/mpk/\mbox{\hyperlink{blk978_2mpk_2412-06__fc_8h}{412-\/06\+\_\+fc.\+h}}\end{DoxyCompactItemize}

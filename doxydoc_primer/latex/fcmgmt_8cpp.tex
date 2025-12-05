@@ -1,0 +1,464 @@
+\doxysection{src/mpk1/blk223/fcmgmt.cpp File Reference}
+\hypertarget{fcmgmt_8cpp}{}\label{fcmgmt_8cpp}\index{src/mpk1/blk223/fcmgmt.cpp@{src/mpk1/blk223/fcmgmt.cpp}}
+
+
+Планировщик фукнционального управления (ФУ).  
+
+
+{\ttfamily \#include "{}fcmgmt.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}cmath"{}}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+Include dependency graph for fcmgmt.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcmgmt_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fcmgmt_8cpp_a1ccaefdca2f9e156823acf6c65cc6372}{direct\+\_\+trpr\+\_\+to\+\_\+fc}} (const E2\+TRPR \&msg\+\_\+trpr, \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&fcmap)
+\begin{DoxyCompactList}\small\item\em Функция перенаправляет сообщение ТРПР в контейнер ФУ. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fcmgmt_8cpp_a3775d8ce0ffa5a17d90c6529901a271b}{direct\+\_\+trims\+\_\+to\+\_\+fc}} (const Trimts\+Msg \&msg\+\_\+trims, \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&fcmap)
+\begin{DoxyCompactList}\small\item\em Функция перенаправляет сообщение ТРИМС в контейнер ФУ. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{fcmgmt_8cpp_a194a7319374b49414c786ef75ea301fe}{init\+\_\+e2mask}} (\mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \&msg\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Функция сбрасывает маску каналов на значения по умолчанию. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{fcmgmt_8cpp_a0e651fc2b7b544c84761ff195ff44675}{init\+\_\+e2trkp}} (\mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&msg\+\_\+trkp)
+\begin{DoxyCompactList}\small\item\em Функция производит инициализация сообщения Е2ТРКП. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{fcmgmt_8cpp_a96ad63e1ddcacd46ac249f429b44d5a8}{init\+\_\+afr}} (\mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&msg\+\_\+afr)
+\begin{DoxyCompactList}\small\item\em Функция инициализирует буфер сообщения АФР значениями по умолчанию. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{fcmgmt_8cpp_a0dcf170b614d5e05cae2e493795d0d4d}{init\+\_\+clb}} (\mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&msg\+\_\+clb)
+\begin{DoxyCompactList}\small\item\em Функция инициализирует буфер сообщения КЛБ значениями по умолчанию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fcmgmt_8cpp_a202f0094a9f6a5fdb5f76a22a25be64a}{update\+\_\+afr}} (const \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&msg\+\_\+afr)
+\begin{DoxyCompactList}\small\item\em Функция обновляет хранимую структуру АФР новыми данными. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fcmgmt_8cpp_a3422890153935d99b4cf08d0e2761623}{update\+\_\+clb}} (const \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&msg\+\_\+clb)
+\begin{DoxyCompactList}\small\item\em Функция обновляет хранимую структуру КЛБ новыми данными. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fcmgmt_8cpp_adf747cacfde5eae18cd044558c218725}{update\+\_\+mask}} (const \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \&msg\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Функция обновляет хранимую маску каналов новыми данными. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fcmgmt_8cpp_a462e981e09b71f3785e253ce62a827db}{update\+\_\+ippa}} (const E2\+IPPA \texorpdfstring{$\ast$}{*}msg\+\_\+ippa)
+\begin{DoxyCompactList}\small\item\em Функция обновляет хранимое сообщение Е2ИППА новыми данными. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fcmgmt_8cpp_ab720f842010408b2ffb6231ea8c4a19d}{init\+\_\+fc\+\_\+defaults}} ()
+\begin{DoxyCompactList}\small\item\em Инициализация данных ФУ по умолчанию при старте ФПО. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fcmgmt_8cpp_a93e56ef6ee59014729c7c323c60656e9}{drop\+\_\+old\+\_\+fc}} (\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&fcmap, int64\+\_\+t stroke)
+\begin{DoxyCompactList}\small\item\em Функция удаляет просроченное ФУ из контейнера ФУ. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fcmgmt_8cpp_a6f70565b4f324406d4bd3720fd3b66e3}{drop\+\_\+fc\+\_\+exceeded\+\_\+queue\+\_\+limit}} (\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&fcmap)
+\begin{DoxyCompactList}\small\item\em Функция удаляет ФУ, превышающее допустимый размер очереди ФУ. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fcmgmt_8cpp_a4bc1f244997267d01a67797efe2a5317}{delete\+\_\+fcq}} (const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp)
+\begin{DoxyCompactList}\small\item\em Функция удаляет заданный квант ФУ из контейнера ФУ. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fcmgmt_8cpp_a0054d01d93810ada68b9921b91834e39}{extract\+\_\+fc}} (\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&fcmap, int64\+\_\+t stroke)
+\begin{DoxyCompactList}\small\item\em Функция извлекает заданный квант ФУ из контейнера ФУ. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fcmgmt_8cpp_a424692426d955fe06ee372a2414d2389}{get\+\_\+fc\+\_\+quant}} (\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&fcmap, int64\+\_\+t stroke)
+\begin{DoxyCompactList}\small\item\em Функция возвращает указатель на структуру ФУ для заданного номера такта. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \mbox{\hyperlink{fcmgmt_8cpp_a8f09cc577eb09cd4910d08a7f94413da}{FC\+\_\+\+QUEUE\+\_\+\+LIMIT}} = 10
+\begin{DoxyCompactList}\small\item\em Максимальный размер очереди ФУ. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \mbox{\hyperlink{fcmgmt_8cpp_a11720649386a0a8c28a535f7615fa6d7}{last\+\_\+afr}}
+\item 
+static \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \mbox{\hyperlink{fcmgmt_8cpp_af2b2b080a14edec6ed22e4f62b8ee7b5}{last\+\_\+clb}}
+\item 
+static \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \mbox{\hyperlink{fcmgmt_8cpp_a7bea3fea3382f8e3ada06190bb9d2f4b}{last\+\_\+mask}}
+\item 
+static E2\+IPPA \mbox{\hyperlink{fcmgmt_8cpp_af3c0ab8f5415be4646f4648b8bdedf5c}{last\+\_\+ippa}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Планировщик фукнционального управления (ФУ). 
+
+Функции для формирования квантов ФУ, их поиска и удаления. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{fcmgmt_8cpp_a4bc1f244997267d01a67797efe2a5317}\label{fcmgmt_8cpp_a4bc1f244997267d01a67797efe2a5317} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!delete\_fcq@{delete\_fcq}}
+\index{delete\_fcq@{delete\_fcq}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{delete\_fcq()}{delete\_fcq()}}
+{\footnotesize\ttfamily void delete\+\_\+fcq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp }\end{DoxyParamCaption})}
+
+
+
+Функция удаляет заданный квант ФУ из контейнера ФУ. 
+
+Функция производит высвобождение блока памяти, которое занимает указанный квант ФУ. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель на квант ФУ, подлежащий удалению. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_a3775d8ce0ffa5a17d90c6529901a271b}\label{fcmgmt_8cpp_a3775d8ce0ffa5a17d90c6529901a271b} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!direct\_trims\_to\_fc@{direct\_trims\_to\_fc}}
+\index{direct\_trims\_to\_fc@{direct\_trims\_to\_fc}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{direct\_trims\_to\_fc()}{direct\_trims\_to\_fc()}}
+{\footnotesize\ttfamily int direct\+\_\+trims\+\_\+to\+\_\+fc (\begin{DoxyParamCaption}\item[{const Trimts\+Msg \&}]{msg\+\_\+trims,  }\item[{\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&}]{fcmap }\end{DoxyParamCaption})}
+
+
+
+Функция перенаправляет сообщение ТРИМС в контейнер ФУ. 
+
+Функция получает указатель на квант ФУ в контейнере ФУ для нужного такта (при необходимости он создается) и копирует входящее сообщение ТРИМС в данный квант на нужный такт. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+trims} & Данные сообщения ТРИМС. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fcmap} & Ссылка на контейнер ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+В случае успешной обработки ТРИМС вернет EXIT\+\_\+\+SUCCESS. 
+
+В случае ошибки вернет EXIT\+\_\+\+FAILURE. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{fcmgmt_8cpp_a3775d8ce0ffa5a17d90c6529901a271b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a1ccaefdca2f9e156823acf6c65cc6372}\label{fcmgmt_8cpp_a1ccaefdca2f9e156823acf6c65cc6372} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!direct\_trpr\_to\_fc@{direct\_trpr\_to\_fc}}
+\index{direct\_trpr\_to\_fc@{direct\_trpr\_to\_fc}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{direct\_trpr\_to\_fc()}{direct\_trpr\_to\_fc()}}
+{\footnotesize\ttfamily int direct\+\_\+trpr\+\_\+to\+\_\+fc (\begin{DoxyParamCaption}\item[{const E2\+TRPR \&}]{msg\+\_\+trpr,  }\item[{\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&}]{fcmap }\end{DoxyParamCaption})}
+
+
+
+Функция перенаправляет сообщение ТРПР в контейнер ФУ. 
+
+Функция получает указатель на квант ФУ в контейнере ФУ для нужного такта (при необходимости он создается) и копирует входящее сообщение ТРПР в данный квант на нужный такт. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+trpr} & Данные сообщения ТРПР. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fcmap} & Ссылка на контейнер ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+В случае успешной обработки ТРПР вернет EXIT\+\_\+\+SUCCESS. 
+
+В случае ошибки вернет EXIT\+\_\+\+FAILURE. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{fcmgmt_8cpp_a1ccaefdca2f9e156823acf6c65cc6372_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a6f70565b4f324406d4bd3720fd3b66e3}\label{fcmgmt_8cpp_a6f70565b4f324406d4bd3720fd3b66e3} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!drop\_fc\_exceeded\_queue\_limit@{drop\_fc\_exceeded\_queue\_limit}}
+\index{drop\_fc\_exceeded\_queue\_limit@{drop\_fc\_exceeded\_queue\_limit}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{drop\_fc\_exceeded\_queue\_limit()}{drop\_fc\_exceeded\_queue\_limit()}}
+{\footnotesize\ttfamily int drop\+\_\+fc\+\_\+exceeded\+\_\+queue\+\_\+limit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&}]{fcmap }\end{DoxyParamCaption})}
+
+
+
+Функция удаляет ФУ, превышающее допустимый размер очереди ФУ. 
+
+Функция удаляет кванты ФУ, превышающие допустимый размер очереди ФУ. В первую очередь удаляются самые старые кванты ФУ (по номеру такта исполнения). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcmap} & Ссылка на контейнер ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает количество удаленных квантов ФУ. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{fcmgmt_8cpp_a6f70565b4f324406d4bd3720fd3b66e3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a93e56ef6ee59014729c7c323c60656e9}\label{fcmgmt_8cpp_a93e56ef6ee59014729c7c323c60656e9} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!drop\_old\_fc@{drop\_old\_fc}}
+\index{drop\_old\_fc@{drop\_old\_fc}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{drop\_old\_fc()}{drop\_old\_fc()}}
+{\footnotesize\ttfamily int drop\+\_\+old\+\_\+fc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&}]{fcmap,  }\item[{int64\+\_\+t}]{stroke }\end{DoxyParamCaption})}
+
+
+
+Функция удаляет просроченное ФУ из контейнера ФУ. 
+
+Функция производит последовательный перебор всех квантов ФУ, хранящихся в контенейре ФУ. Для каждого найденного кванта производится сравнение текущего номера такта и номера такта сообщения. Если номер такта сообщения меньше текущего номера такта (ФУ просрочено), то данный квант удаляется, в журнал добавляется соответствующая запись, а также увеличивается счетчик просроченных сообщений в блоке статистики. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcmap} & Ссылка на контейнер ФУ. \\
+\hline
+\mbox{\texttt{ in}}  & {\em stroke} & Текущий номер такта. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает количество удаленных просроченных ФУ. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{fcmgmt_8cpp_a93e56ef6ee59014729c7c323c60656e9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a0054d01d93810ada68b9921b91834e39}\label{fcmgmt_8cpp_a0054d01d93810ada68b9921b91834e39} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!extract\_fc@{extract\_fc}}
+\index{extract\_fc@{extract\_fc}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{extract\_fc()}{extract\_fc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*} extract\+\_\+fc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&}]{fcmap,  }\item[{int64\+\_\+t}]{stroke }\end{DoxyParamCaption})}
+
+
+
+Функция извлекает заданный квант ФУ из контейнера ФУ. 
+
+Функция производит поиск в контейнере ФУ кванта на заданный такт. Если такой квант найден, он копируется в новый объект, который и будет возвращен функцией, а квант ФУ в контейнере ФУ уничтожается. Если же квант ФУ на заданный такт не найден, функция возвращает NULL. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcmap} & Ссылка на контейнер ФУ. \\
+\hline
+\mbox{\texttt{ in}}  & {\em stroke} & Текущий номер такта. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает указатель на найденный квант ФУ. 
+
+Возвращает NULL, если ФУ на заданный такт не найдено. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_a424692426d955fe06ee372a2414d2389}\label{fcmgmt_8cpp_a424692426d955fe06ee372a2414d2389} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!get\_fc\_quant@{get\_fc\_quant}}
+\index{get\_fc\_quant@{get\_fc\_quant}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_fc\_quant()}{get\_fc\_quant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*} get\+\_\+fc\+\_\+quant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\+\_\+map}} \&}]{fcmap,  }\item[{int64\+\_\+t}]{stroke }\end{DoxyParamCaption})}
+
+
+
+Функция возвращает указатель на структуру ФУ для заданного номера такта. 
+
+Функция производит поиск в контейнере ФУ кванта на заданный такт. Если такой квант найден, он копируется в новый объект, который и будет возвращен функцией. Если же квант ФУ на заданный такт не найден, распределяется память под новый объект кванта ФУ, в данном объекте инициализируются маски каналов актуальной маской, распределяется память под буферы сообщений Е2ТРПР и Е2ТРИМС и итоговый квант ФУ помещается в контейнер-\/очередь ФУ. Также увеличивается счетчик статистики созданных квантов ФУ. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcmap} & Ссылка на контейнер ФУ. \\
+\hline
+\mbox{\texttt{ in}}  & {\em stroke} & Текущий номер такта. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает указатель на найденный квант ФУ. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_a96ad63e1ddcacd46ac249f429b44d5a8}\label{fcmgmt_8cpp_a96ad63e1ddcacd46ac249f429b44d5a8} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!init\_afr@{init\_afr}}
+\index{init\_afr@{init\_afr}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_afr()}{init\_afr()}}
+{\footnotesize\ttfamily static void init\+\_\+afr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&}]{msg\+\_\+afr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция инициализирует буфер сообщения АФР значениями по умолчанию. 
+
+Функция заполняет буфер сообщения единицами, устанавливает корректный номер позиции и заголовок для данного типа сообщения. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em msg\+\_\+afr} & Ссылка на структуру сообщения ТРКП. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{fcmgmt_8cpp_a96ad63e1ddcacd46ac249f429b44d5a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a0dcf170b614d5e05cae2e493795d0d4d}\label{fcmgmt_8cpp_a0dcf170b614d5e05cae2e493795d0d4d} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!init\_clb@{init\_clb}}
+\index{init\_clb@{init\_clb}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_clb()}{init\_clb()}}
+{\footnotesize\ttfamily static void init\+\_\+clb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&}]{msg\+\_\+clb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция инициализирует буфер сообщения КЛБ значениями по умолчанию. 
+
+Функция заполняет буфер сообщения единицами, устанавливает корректный номер позиции и заголовок для данного типа сообщения. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em msg\+\_\+clb} & Ссылка на структуру сообщения ТРКП. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{fcmgmt_8cpp_a0dcf170b614d5e05cae2e493795d0d4d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a194a7319374b49414c786ef75ea301fe}\label{fcmgmt_8cpp_a194a7319374b49414c786ef75ea301fe} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!init\_e2mask@{init\_e2mask}}
+\index{init\_e2mask@{init\_e2mask}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_e2mask()}{init\_e2mask()}}
+{\footnotesize\ttfamily static void init\+\_\+e2mask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \&}]{msg\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция сбрасывает маску каналов на значения по умолчанию. 
+
+Функция заполняет буфер сообщения единицами, таким образом включая все реальные каналы (960)(по умолчанию все каналы разрешены). \begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_a0e651fc2b7b544c84761ff195ff44675}\label{fcmgmt_8cpp_a0e651fc2b7b544c84761ff195ff44675} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!init\_e2trkp@{init\_e2trkp}}
+\index{init\_e2trkp@{init\_e2trkp}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_e2trkp()}{init\_e2trkp()}}
+{\footnotesize\ttfamily static void init\+\_\+e2trkp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&}]{msg\+\_\+trkp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция производит инициализация сообщения Е2ТРКП. 
+
+Функция производит инициализация сообщения Е2ТРКП значениями по умолчанию. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em msg\+\_\+trkp} & Ссылка на структуру сообщения ТРКП. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_ab720f842010408b2ffb6231ea8c4a19d}\label{fcmgmt_8cpp_ab720f842010408b2ffb6231ea8c4a19d} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!init\_fc\_defaults@{init\_fc\_defaults}}
+\index{init\_fc\_defaults@{init\_fc\_defaults}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_fc\_defaults()}{init\_fc\_defaults()}}
+{\footnotesize\ttfamily void init\+\_\+fc\+\_\+defaults (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Инициализация данных ФУ по умолчанию при старте ФПО. 
+
+Функция производит сброс используемых масок каналов. \begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fcmgmt_8cpp_ab720f842010408b2ffb6231ea8c4a19d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{fcmgmt_8cpp_a202f0094a9f6a5fdb5f76a22a25be64a}\label{fcmgmt_8cpp_a202f0094a9f6a5fdb5f76a22a25be64a} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!update\_afr@{update\_afr}}
+\index{update\_afr@{update\_afr}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_afr()}{update\_afr()}}
+{\footnotesize\ttfamily void update\+\_\+afr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&}]{msg\+\_\+afr }\end{DoxyParamCaption})}
+
+
+
+Функция обновляет хранимую структуру АФР новыми данными. 
+
+Функция копирует содержимое входящего сообщения АФР во внутреннюю структуру хранения. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+afr} & Данные сообщения АФР. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_a3422890153935d99b4cf08d0e2761623}\label{fcmgmt_8cpp_a3422890153935d99b4cf08d0e2761623} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!update\_clb@{update\_clb}}
+\index{update\_clb@{update\_clb}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_clb()}{update\_clb()}}
+{\footnotesize\ttfamily void update\+\_\+clb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&}]{msg\+\_\+clb }\end{DoxyParamCaption})}
+
+
+
+Функция обновляет хранимую структуру КЛБ новыми данными. 
+
+Функция копирует содержимое входящего сообщения КЛБ во внутреннюю структуру хранения. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+clb} & Данные сообщения КЛБ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_a462e981e09b71f3785e253ce62a827db}\label{fcmgmt_8cpp_a462e981e09b71f3785e253ce62a827db} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!update\_ippa@{update\_ippa}}
+\index{update\_ippa@{update\_ippa}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_ippa()}{update\_ippa()}}
+{\footnotesize\ttfamily void update\+\_\+ippa (\begin{DoxyParamCaption}\item[{const E2\+IPPA \texorpdfstring{$\ast$}{*}}]{msg\+\_\+ippa }\end{DoxyParamCaption})}
+
+
+
+Функция обновляет хранимое сообщение Е2ИППА новыми данными. 
+
+Функция копирует содержимое входящего сообщения Е2ИППА во внутреннюю структуру хранения. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+mask} & Данные сообщения ИППА. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{fcmgmt_8cpp_adf747cacfde5eae18cd044558c218725}\label{fcmgmt_8cpp_adf747cacfde5eae18cd044558c218725} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!update\_mask@{update\_mask}}
+\index{update\_mask@{update\_mask}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_mask()}{update\_mask()}}
+{\footnotesize\ttfamily void update\+\_\+mask (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \&}]{msg\+\_\+mask }\end{DoxyParamCaption})}
+
+
+
+Функция обновляет хранимую маску каналов новыми данными. 
+
+Функция копирует содержимое входящего сообщения Е2МАСК во внутреннюю структуру хранения. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+mask} & Данные сообщения МАСК. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{fcmgmt_8cpp_a8f09cc577eb09cd4910d08a7f94413da}\label{fcmgmt_8cpp_a8f09cc577eb09cd4910d08a7f94413da} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!FC\_QUEUE\_LIMIT@{FC\_QUEUE\_LIMIT}}
+\index{FC\_QUEUE\_LIMIT@{FC\_QUEUE\_LIMIT}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{FC\_QUEUE\_LIMIT}{FC\_QUEUE\_LIMIT}}
+{\footnotesize\ttfamily const unsigned FC\+\_\+\+QUEUE\+\_\+\+LIMIT = 10}
+
+
+
+Максимальный размер очереди ФУ. 
+
+\Hypertarget{fcmgmt_8cpp_a11720649386a0a8c28a535f7615fa6d7}\label{fcmgmt_8cpp_a11720649386a0a8c28a535f7615fa6d7} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!last\_afr@{last\_afr}}
+\index{last\_afr@{last\_afr}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{last\_afr}{last\_afr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} last\+\_\+afr\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{fcmgmt_8cpp_af2b2b080a14edec6ed22e4f62b8ee7b5}\label{fcmgmt_8cpp_af2b2b080a14edec6ed22e4f62b8ee7b5} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!last\_clb@{last\_clb}}
+\index{last\_clb@{last\_clb}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{last\_clb}{last\_clb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} last\+\_\+clb\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{fcmgmt_8cpp_af3c0ab8f5415be4646f4648b8bdedf5c}\label{fcmgmt_8cpp_af3c0ab8f5415be4646f4648b8bdedf5c} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!last\_ippa@{last\_ippa}}
+\index{last\_ippa@{last\_ippa}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{last\_ippa}{last\_ippa}}
+{\footnotesize\ttfamily E2\+IPPA last\+\_\+ippa\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{fcmgmt_8cpp_a7bea3fea3382f8e3ada06190bb9d2f4b}\label{fcmgmt_8cpp_a7bea3fea3382f8e3ada06190bb9d2f4b} 
+\index{fcmgmt.cpp@{fcmgmt.cpp}!last\_mask@{last\_mask}}
+\index{last\_mask@{last\_mask}!fcmgmt.cpp@{fcmgmt.cpp}}
+\doxysubsubsection{\texorpdfstring{last\_mask}{last\_mask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} last\+\_\+mask\hspace{0.3cm}{\ttfamily [static]}}
+

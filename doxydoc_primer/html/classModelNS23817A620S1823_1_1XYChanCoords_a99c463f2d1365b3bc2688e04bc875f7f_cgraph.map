@@ -1,0 +1,19 @@
+<map id="ModelNS23817A620S1823::XYChanCoords::XYChanCoords" name="ModelNS23817A620S1823::XYChanCoords::XYChanCoords">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,170,232,210"/>
+<area shape="rect" id="Node000002" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a95a7684a416a2859a80d47b46cec59a6" title=" " alt="" coords="280,170,473,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,187,266,187,266,193,232,193"/>
+<area shape="rect" id="Node000003" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#ad9dd3b5a68d88cfb08747bb12f72e2fc" title=" " alt="" coords="531,5,758,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,168,449,119,483,92,520,69,531,63,534,68,523,74,486,97,452,123,399,172"/>
+<area shape="rect" id="Node000005" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#afc112032721a7fd24626fe67a342927f" title=" " alt="" coords="535,84,754,139"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="445,167,537,140,538,145,446,173"/>
+<area shape="rect" id="Node000006" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a81e1b2ff9f6a92a00dd8f731815f986c" title=" " alt="" coords="535,163,754,217"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="473,187,522,187,522,193,473,193"/>
+<area shape="rect" id="Node000007" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#ac8db104a0c702f0fead3b3e524546292" title=" " alt="" coords="521,242,768,282"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="453,207,557,236,555,241,451,213"/>
+<area shape="rect" id="Node000008" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a8e22424b24b9f639e208dddb220a872d" title=" " alt="" coords="521,306,768,346"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="402,208,455,250,488,273,522,292,539,299,537,304,520,296,485,277,452,255,398,212"/>
+<area shape="rect" id="Node000004" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a7ee636b6fbae986c49cc91e9afad4854" title=" " alt="" coords="816,5,1041,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="758,30,802,30,802,35,758,35"/>
+<area shape="rect" id="Node000009" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a87f02fc0372865b7fb7f385811746f19" title=" " alt="" coords="816,299,1041,353"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="768,323,802,323,802,329,768,329"/>
+</map>

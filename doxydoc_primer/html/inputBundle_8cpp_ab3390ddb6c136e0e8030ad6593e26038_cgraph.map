@@ -1,0 +1,9 @@
+<map id="extractBundle" name="extractBundle">
+<area shape="rect" id="Node000001" title="Десериализовать данные, сохраненные из GUI, в ТРПР и ТРИМС" alt="" coords="5,55,119,80"/>
+<area shape="rect" id="Node000002" href="$inputBundle_8cpp.html#a5e75f994f2908ec4259016ac99acc41a" title=" " alt="" coords="167,5,305,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,52,176,32,178,37,108,57"/>
+<area shape="rect" id="Node000003" href="$inputBundle_8cpp.html#a26a386d58618a7b058abc87c5c656c67" title=" " alt="" coords="183,55,289,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,65,169,65,169,70,119,70"/>
+<area shape="rect" id="Node000004" href="$inputBundle_8cpp.html#a53b4e999de04f0c33df2f357281919c4" title=" " alt="" coords="183,104,289,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,77,178,98,176,103,107,83"/>
+</map>

@@ -1,0 +1,231 @@
+.TH "GuiApp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GuiApp
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <guiapp\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonMessagesAreReady\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, QList< \fBIppaUV\fP > *ippaUVList, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBonStartDPIteration\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, \fBDPParams\fP *dpParams, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBonModelWorkComplete\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartModelPthreadTermination\fP ()"
+.br
+.ti -1c
+.RI "void \fBonCell412Changed\fP ()"
+.br
+.ti -1c
+.RI "void \fBonProgressBarMaxChanged\fP (unsigned maxValue)"
+.br
+.ti -1c
+.RI "void \fBstopCalculations\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBmessagesAreReady\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, QList< \fBIppaUV\fP > *ippaUVList, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBstartDPIteration\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, \fBDPParams\fP *dpParams, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBmodelWorkComplete\fP ()"
+.br
+.ti -1c
+.RI "void \fBcell412Changed\fP ()"
+.br
+.ti -1c
+.RI "void \fBprogressBarMaxChanged\fP (unsigned maxValue)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB~GuiApp\fP ()"
+.br
+.ti -1c
+.RI "void \fBsendMessagesAreReady\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, QList< \fBIppaUV\fP > *ippaUVList, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBsendStartDPIteration\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, \fBDPParams\fP *dpParams, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBsendModelWorkComplete\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddModelPtid\fP (pthread_t ptid)"
+.br
+.ti -1c
+.RI "void \fBgetModelInputMessages\fP (\fBModel::ExternalMessages\fP *extMsgs)"
+.br
+.ti -1c
+.RI "bool \fBsendCell412Changed\fP ()"
+.br
+.ti -1c
+.RI "void \fBsendProgressBarMaxChanged\fP (uint32_t maxValue)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGuiApp\fP * \fBinstance\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcopyMessages\fP (\fBTactInfo\fP *tactInfo, \fBModel::StationParams\fP *\fBstationParams\fP, \fBModel::ChannelsMask\fP *\fBchMask\fP, QList< \fBIppaUV\fP > *ippaUVList, \fBE2Trkp\fP *\fBafr\fP, \fBE2Trkp\fP *\fBklb\fP)"
+.br
+.ti -1c
+.RI "void \fBfillIppaMsg\fP (QList< \fBIppaUV\fP > *ippaUVList)"
+.br
+.ti -1c
+.RI "\fBGuiApp\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMainWindow\fP * \fBmainWin\fP"
+.br
+.ti -1c
+.RI "\fBModel::Trpr\fP \fBtrpr\fP"
+.br
+.ti -1c
+.RI "\fBModel::Ippa\fP \fBippa\fP"
+.br
+.ti -1c
+.RI "TrimtsMsg \fBtrimts\fP"
+.br
+.ti -1c
+.RI "\fBE2Trkp\fP \fBafr\fP"
+.br
+.ti -1c
+.RI "\fBE2Trkp\fP \fBklb\fP"
+.br
+.ti -1c
+.RI "\fBModel::StationParams\fP \fBstationParams\fP"
+.br
+.ti -1c
+.RI "\fBModel::ChannelsMask\fP \fBchMask\fP"
+.br
+.ti -1c
+.RI "pthread_t \fBmodelPtid\fP"
+.br
+.ti -1c
+.RI "QTime \fBworkTime\fP"
+.br
+.ti -1c
+.RI "pthread_mutex_t \fBstopMutex\fP"
+.br
+.ti -1c
+.RI "bool \fBstopCalculationsFlag\fP"
+.br
+.ti -1c
+.RI "QShortcut * \fBshortcut\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GuiApp::~GuiApp ()"
+
+.SS "GuiApp::GuiApp ()\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void GuiApp::addModelPtid (pthread_t ptid)"
+
+.SS "void GuiApp::cell412Changed ()\fC [signal]\fP"
+
+.SS "void GuiApp::copyMessages (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, QList< \fBIppaUV\fP > * ippaUVList, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)\fC [private]\fP"
+копирует сформированные сетевые сообщения из внутренних буферов в те, которые будут отданы в модель\&. Лишние стробы и объекты выкидываются 
+.SS "void GuiApp::fillIppaMsg (QList< \fBIppaUV\fP > * ippaUVList)\fC [private]\fP"
+
+.SS "void GuiApp::getModelInputMessages (\fBModel::ExternalMessages\fP * extMsgs)"
+
+.SS "\fBGuiApp\fP * GuiApp::instance ()\fC [static]\fP"
+
+.SS "void GuiApp::messagesAreReady (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, QList< \fBIppaUV\fP > * ippaUVList, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)\fC [signal]\fP"
+
+.SS "void GuiApp::modelWorkComplete ()\fC [signal]\fP"
+
+.SS "void GuiApp::onCell412Changed ()\fC [slot]\fP"
+
+.SS "void GuiApp::onMessagesAreReady (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, QList< \fBIppaUV\fP > * ippaUVList, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)\fC [slot]\fP"
+
+.SS "void GuiApp::onModelWorkComplete ()\fC [slot]\fP"
+
+.SS "void GuiApp::onProgressBarMaxChanged (unsigned maxValue)\fC [slot]\fP"
+
+.SS "void GuiApp::onStartDPIteration (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, \fBDPParams\fP * dpParams, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)\fC [slot]\fP"
+
+.SS "void GuiApp::progressBarMaxChanged (unsigned maxValue)\fC [signal]\fP"
+
+.SS "bool GuiApp::sendCell412Changed ()"
+
+.SS "void GuiApp::sendMessagesAreReady (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, QList< \fBIppaUV\fP > * ippaUVList, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)"
+
+.SS "void GuiApp::sendModelWorkComplete ()"
+
+.SS "void GuiApp::sendProgressBarMaxChanged (uint32_t maxValue)"
+
+.SS "void GuiApp::sendStartDPIteration (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, \fBDPParams\fP * dpParams, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)"
+
+.SS "void GuiApp::startDPIteration (\fBTactInfo\fP * tactInfo, \fBModel::StationParams\fP * stationParams, \fBModel::ChannelsMask\fP * chMask, \fBDPParams\fP * dpParams, \fBE2Trkp\fP * afr, \fBE2Trkp\fP * klb)\fC [signal]\fP"
+
+.SS "void GuiApp::startModelPthreadTermination ()\fC [slot]\fP"
+
+.SS "void GuiApp::stopCalculations ()\fC [slot]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBE2Trkp\fP GuiApp::afr\fC [private]\fP"
+
+.SS "\fBModel::ChannelsMask\fP GuiApp::chMask\fC [private]\fP"
+
+.SS "\fBModel::Ippa\fP GuiApp::ippa\fC [private]\fP"
+
+.SS "\fBE2Trkp\fP GuiApp::klb\fC [private]\fP"
+
+.SS "\fBMainWindow\fP* GuiApp::mainWin\fC [private]\fP"
+
+.SS "pthread_t GuiApp::modelPtid\fC [private]\fP"
+
+.SS "QShortcut* GuiApp::shortcut\fC [private]\fP"
+
+.SS "\fBModel::StationParams\fP GuiApp::stationParams\fC [private]\fP"
+
+.SS "bool GuiApp::stopCalculationsFlag\fC [private]\fP"
+флаг преждевременной остановки расчётов true - остановить расчёты false - не останавливать 
+.SS "pthread_mutex_t GuiApp::stopMutex\fC [private]\fP"
+
+.SS "TrimtsMsg GuiApp::trimts\fC [private]\fP"
+
+.SS "\fBModel::Trpr\fP GuiApp::trpr\fC [private]\fP"
+
+.SS "QTime GuiApp::workTime\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

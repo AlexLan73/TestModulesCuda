@@ -1,0 +1,72 @@
+\doxysection{src/model\+Dumper.cpp File Reference}
+\hypertarget{modelDumper_8cpp}{}\label{modelDumper_8cpp}\index{src/modelDumper.cpp@{src/modelDumper.cpp}}
+{\ttfamily \#include $<$libutils/getenv.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/simhelpers.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/fdstream.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sys/timeb.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include "{}jsonrpc/server\+\_\+loop.\+h"{}}\newline
+{\ttfamily \#include "{}run\+Model.\+h"{}}\newline
+Include dependency graph for model\+Dumper.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelDumper_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{modelDumper_8cpp_a2703194eb2999d2a8df94dbb0d90c8d9}{Is\+Dir}} (std\+::string path)
+\item 
+static void \mbox{\hyperlink{modelDumper_8cpp_ae28fba57a1edfa47dfb0ed05fb38131c}{Usage}} ()
+\item 
+int \mbox{\hyperlink{modelDumper_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{modelDumper_8cpp_a912d2203355798c86a376cf4cb1d6128}{syslog\+\_\+ident}} = "{}model\+\_\+dumper"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modelDumper_8cpp_a2703194eb2999d2a8df94dbb0d90c8d9}\label{modelDumper_8cpp_a2703194eb2999d2a8df94dbb0d90c8d9} 
+\index{modelDumper.cpp@{modelDumper.cpp}!IsDir@{IsDir}}
+\index{IsDir@{IsDir}!modelDumper.cpp@{modelDumper.cpp}}
+\doxysubsubsection{\texorpdfstring{IsDir()}{IsDir()}}
+{\footnotesize\ttfamily static bool Is\+Dir (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{modelDumper_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{modelDumper_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{modelDumper.cpp@{modelDumper.cpp}!main@{main}}
+\index{main@{main}!modelDumper.cpp@{modelDumper.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelDumper_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{modelDumper_8cpp_ae28fba57a1edfa47dfb0ed05fb38131c}\label{modelDumper_8cpp_ae28fba57a1edfa47dfb0ed05fb38131c} 
+\index{modelDumper.cpp@{modelDumper.cpp}!Usage@{Usage}}
+\index{Usage@{Usage}!modelDumper.cpp@{modelDumper.cpp}}
+\doxysubsubsection{\texorpdfstring{Usage()}{Usage()}}
+{\footnotesize\ttfamily static void Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{modelDumper_8cpp_a912d2203355798c86a376cf4cb1d6128}\label{modelDumper_8cpp_a912d2203355798c86a376cf4cb1d6128} 
+\index{modelDumper.cpp@{modelDumper.cpp}!syslog\_ident@{syslog\_ident}}
+\index{syslog\_ident@{syslog\_ident}!modelDumper.cpp@{modelDumper.cpp}}
+\doxysubsubsection{\texorpdfstring{syslog\_ident}{syslog\_ident}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} syslog\+\_\+ident = "{}model\+\_\+dumper"{}}
+

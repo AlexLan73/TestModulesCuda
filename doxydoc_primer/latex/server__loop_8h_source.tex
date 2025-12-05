@@ -1,0 +1,147 @@
+\doxysection{server\+\_\+loop.\+h}
+\hypertarget{server__loop_8h_source}{}\label{server__loop_8h_source}\index{src/jsonrpc/server\_loop.h@{src/jsonrpc/server\_loop.h}}
+\mbox{\hyperlink{server__loop_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_MODEL\_JSONRPCHELPERS\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_MODEL\_JSONRPCHELPERS\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../inputBundle.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{serdes_8h}{serdes.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../runModel.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cache_8h}{cache.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <libutils/fdstream.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <libutils/jsonrpc.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }std::experimental::optional;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }libutils::Result;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{serdes_8h_ae5acf590e5399a796f2dfc5d310a74d1}{ModelJsonRpcProto}}\ \mbox{\hyperlink{server__loop_8h_a20ee13cef617c06385156f34446e8eec}{P}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ P::Request\ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ P::Response\ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ pollfd\ \mbox{\hyperlink{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7}{get\_fd}}(libutils::fdistream\ *in);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ optional<Result<Request,\ Response>>}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{server__loop_8h_a6b385856ac78a58c0df4f66fa8c2ae00}{recv\_request}}(std::istream\ *in);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Основной\ цикл\ работы\ JSON\ RPC\ сервера.\ Принимает\ на\ указанный\ сокет}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ TCP-\/соединение\ и\ обслуживает\ его,\ пока\ оно\ не\ закроется.\ Пытается\ получить}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ запрос,\ разобрать\ его,\ и\ исполнить;\ ошибки\ разбора/исполнения\ сообщаются}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ штатными\ средствами\ JSОN\ RPC.\ Выполнение\ запроса\ (расчет\ данных\ моделью)}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ запускается\ в\ отдельной\ нити\ (чтобы\ во\ время\ расчета\ можно\ было\ принимать}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ входящие\ соединения\ от\ новых\ клиентов),\ с\ начала\ выполнения\ до\ его\ окончания}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ новые\ запросы\ \ на\ расчет\ стробов\ стоят\ в\ очереди.\ Множественные\ запросы}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ (в\ том\ числе\ от\ разных\ клиентов)\ обслуживаются\ в\ порядке\ поступления.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ АХТУНГ!\ Серевер\ не\ пытается\ защищаться\ от\ неправильного\ поведения\ клиентов.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ Наверное,\ если\ клиент\ внезапно\ зависнет\ на\ середине\ вычитывания\ ответа,}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ сервер\ остановится\ (возможно,\ напловину\ отосланный\ запрос\ или\ еще}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ какое-\/то\ еще\ неожиданное\ поведение\ клиента\ тоже\ сломает\ сервер).\ Но}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ пока\ мы\ расчитываем\ на\ хорошее\ поведение\ клиента.}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServerLoop}{ServerLoop}}\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{typedef}\ libutils::FDPortIn<optional<Result<Request,\ Response>>,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ libutils::fdistream\ *,\ \mbox{\hyperlink{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7}{get\_fd}}>\ \mbox{\hyperlink{classServerLoop_af056a2ec76f3ce64931945277302e4be}{ClientPortIn\_t}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structServerLoop_1_1ClientConn}{ClientConn}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ libutils::fdistream\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_ae6dc598202f87d9cf448ba873a597fac}{in}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ libutils::fdostream\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_af1ab91a383fcde121ce26fcbd4c96351}{out}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::unique\_ptr<ClientPortIn\_t>\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_a943cb7294cbb8c6e1b2bb8373cd32c30}{port\_in}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_a25102547037362a1f3e91acd27241919}{is\_open}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structServerLoop_1_1ClientConn_ad75d3612f65aa09a4f9d1cd440528a7f}{ClientConn}}(\textcolor{keywordtype}{int}\ fd)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_ae6dc598202f87d9cf448ba873a597fac}{in}}(fd)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_af1ab91a383fcde121ce26fcbd4c96351}{out}}(dup(fd))\ \textcolor{comment}{//\ dup,\ т.к.\ деструктору\ каждого\ объекта\ нужно\ что-\/то\ закрыть}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_a943cb7294cbb8c6e1b2bb8373cd32c30}{port\_in}}(\mbox{\hyperlink{namespacestd}{std}}::make\_unique<\mbox{\hyperlink{classServerLoop_af056a2ec76f3ce64931945277302e4be}{ClientPortIn\_t}}>(\&\mbox{\hyperlink{structServerLoop_1_1ClientConn_ae6dc598202f87d9cf448ba873a597fac}{in}},\ \mbox{\hyperlink{server__loop_8h_a6b385856ac78a58c0df4f66fa8c2ae00}{recv\_request}}))}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{structServerLoop_1_1ClientConn_a25102547037362a1f3e91acd27241919}{is\_open}}(true)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00074\ \ \ \ \ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structServerLoop_1_1QueuedRequest}{QueuedRequest}}\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::unique\_ptr<Request>\ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}{req}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::shared\_ptr<ClientConn>\ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ad710c90e0ff61b1be28eaf92f9261b10}{conn}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\ *\mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ab27ec03dc68a84f7a44fef88c8f5266d}{in\_bundle}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ad09169d9e84f453b2bf6e888e79987a7}{QueuedRequest}}(std::unique\_ptr<Request>\ r,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<ClientConn>\ c)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}{req}}(\mbox{\hyperlink{namespacestd}{std}}::move(r))}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ad710c90e0ff61b1be28eaf92f9261b10}{conn}}(c)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ab27ec03dc68a84f7a44fef88c8f5266d}{in\_bundle}}(nullptr)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valued(\mbox{\hyperlink{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}{req}}-\/>params)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}{req}}-\/>params.value().is<\mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}>())}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structServerLoop_1_1QueuedRequest_ab27ec03dc68a84f7a44fef88c8f5266d}{in\_bundle}}\ =\ \&\mbox{\hyperlink{structServerLoop_1_1QueuedRequest_a0f8607ef1224b89109229cc369529e04}{req}}-\/>params.value().as<\mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}>();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::list<std::shared\_ptr<ClientConn>>\ \mbox{\hyperlink{classServerLoop_a9f49c065f4a6043f028944725555bf70}{clients}};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{classCache}{Cache}}\&\ \mbox{\hyperlink{classServerLoop_a3ee87ca5fbb90c4aca642403f00ef5c1}{cache}};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \ \ \ \ uint\ \mbox{\hyperlink{classServerLoop_a6b6f37773461b7febd2d65057ebf1909}{nrequests}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ \ \ \ \ uint\ \mbox{\hyperlink{classServerLoop_a81368a2f9afb3fa2065616bea526883a}{ncachehits}};}
+\DoxyCodeLine{00111\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a3d9b7918e7ae1f2aa188a34006c700a3}{ServerLoop}}(\mbox{\hyperlink{classCache}{Cache}}\&\ c)\ :\ \mbox{\hyperlink{classServerLoop_a3ee87ca5fbb90c4aca642403f00ef5c1}{cache}}(c)\ \{\}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerLoop_a955eef2b52f4d62f9086b33b28bf4a7e}{serve}}(\textcolor{keywordtype}{int}\ listenfd);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerLoop_ac2a99e3872db66dbb5d9ad7bef3d5526}{serve1}}(\textcolor{keywordtype}{int}\ connfd);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{static}}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}}
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a7cb3a4bea800700b3de2507d17c88563}{oneshot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\&\ inputs,\ optional<std::string>\ outDirPath);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerLoop_ad22434b6a2fe29896b3faa9a963dbfb1}{do\_serve}}(libutils::PortIn<int>\&\ conn\_in,\ \textcolor{keywordtype}{bool}\ forever);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ ClientConn\&\ \mbox{\hyperlink{classServerLoop_a36e98f3be02fb71963be2e1e01ed6ac4}{add\_client}}(libutils::PortIn<int>\&\ conn\_in);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ std::shared\_ptr<ClientConn>}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classServerLoop_ae6c7fba19272651d813cbc86f879645d}{find\_client}}(\textcolor{keyword}{const}\ libutils::ReadyPorts\&\ ports)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerLoop_aef0a09bfb495c03ea06de7fcfbb7ea23}{drop\_client}}(std::shared\_ptr<ClientConn>\ client);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ мы\ не\ умеем\ убирать\ порты\ из\ Select,\ поэтому}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ пересоздаем\ его\ каждую\ итерацию\ по\ списку\ клиентов}}
+\DoxyCodeLine{00135\ \ \ \ \ std::unique\_ptr<libutils::Select>}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a0f2460ce67974de7a27e89e0ec8f9496}{rebuild\_select}}(libutils::PortIn<int>\&\ conn\_in,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ libutils::PortIn<Response>\&\ rsp\_in)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{static}}
+\DoxyCodeLine{00140\ \ \ \ \ std::tuple<std::unique\_ptr<Request>,\ \textcolor{keywordtype}{bool}>}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a67ea005cd84f35c2efa7d6484a5fb2de}{get\_request}}(ClientConn\&\ c);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerLoop_a643334cde5788ced913b4e5b64411e5c}{send}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}\&\ rsp,\ ClientConn\&\ client)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ std::shared\_ptr<libutils::picojson\_object>}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a1dd0d0634cb65322fd9f208fd5253e17}{get\_cached}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}\ *req)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ Если\ ответ\ содержит\ выдачу\ модели,\ заносим\ его\ в\ кэш}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a056775dfeb9bd0224ccc1185e5d3286c}{cache\_response}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\ *in\_bundle,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Result<Response,\ libutils::RecvError>\&\ rsp);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{classServerLoop_a79a9ef83f24537fee702f067799f7bbc}{send\_cached\_json\_object}}(std::shared\_ptr<libutils::picojson\_object>\ cached\_rsp,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QueuedRequest\&\ qreq)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{static}\ pollfd\ \mbox{\hyperlink{classServerLoop_a443051fd6f1607583b3409dfcc302dbc}{make\_null\_pollfd}}(\textcolor{keywordtype}{int}\ fd);}
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00161\ \mbox{\hyperlink{server__loop_8h_a15611fc698997d5d16d2204ad75ed1ce}{jsonrpcOneshot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\&\ inputs,}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ optional<std::string>\ outDirPath);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_MODEL\_JSONRPCHELPERS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

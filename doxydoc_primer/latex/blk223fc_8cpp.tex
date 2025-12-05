@@ -1,0 +1,353 @@
+\doxysection{src/mpk1/blk223/blk223fc.cpp File Reference}
+\hypertarget{blk223fc_8cpp}{}\label{blk223fc_8cpp}\index{src/mpk1/blk223/blk223fc.cpp@{src/mpk1/blk223/blk223fc.cpp}}
+
+
+Расчет функционального управления для 223-\/й ячейки.  
+
+
+{\ttfamily \#include "{}blk223fc.\+h"{}}\newline
+{\ttfamily \#include "{}../control\+Msg.\+h"{}}\newline
+{\ttfamily \#include "{}libfc.\+h"{}}\newline
+{\ttfamily \#include "{}stuff.\+h"{}}\newline
+{\ttfamily \#include "{}mpk/c223.\+h"{}}\newline
+{\ttfamily \#include $<$libutils/boconv.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for blk223fc.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{blk223fc_8cpp_aba572646ab9c8bd2c02bc661c75f5855}{get\+\_\+quarter\+\_\+num}} (uint32\+\_\+t cell\+Num)
+\item 
+Result$<$ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\+\_\+strobe\+\_\+modes}} $>$ \mbox{\hyperlink{blk223fc_8cpp_a8a85adfb0e95e7444f67c03fcbaa04b5}{calc\+\_\+asp\+\_\+mode}} (const unsigned divc, const unsigned rays, const unsigned kgrs, const unsigned nstr)
+\begin{DoxyCompactList}\small\item\em Функция уточняет код режима АСП (ПК) для аппаратуры. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{blk223fc_8cpp_ad5c7f86265919f558fad17cdc31ab9fe}{calc\+\_\+target\+\_\+fctl\+\_\+strobe}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} \texorpdfstring{$\ast$}{*}ctrl\+\_\+msg, const int strobe\+\_\+id, \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcp)
+\begin{DoxyCompactList}\small\item\em Функция производит расчет целевых параметров заданного строба ФУ. \end{DoxyCompactList}\item 
+static uint64\+\_\+t \mbox{\hyperlink{blk223fc_8cpp_a27b36ab3398f3ac3e15d3c8e6fa4af99}{calc\+\_\+noise\+\_\+n\+\_\+posl}} (const uint64\+\_\+t texec, const uint32\+\_\+t strobe\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Функция производит расчет сдвигового регистра для шума. \end{DoxyCompactList}\item 
+static uint64\+\_\+t \mbox{\hyperlink{blk223fc_8cpp_ad43ea22e3e3797c99497816197dbfb45}{calc\+\_\+interf\+\_\+n\+\_\+posl}} (const uint64\+\_\+t texec, const uint32\+\_\+t strobe\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Функция производит расчет сдвигового регистра для помехи. \end{DoxyCompactList}\item 
+static uint64\+\_\+t \mbox{\hyperlink{blk223fc_8cpp_a57200be7b5e839af9578f0fe53c324b2}{get\+\_\+interf\+\_\+poly}} (const int interf\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Функция выбирает полином для помехи по заданному номеру. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{blk223fc_8cpp_ae67c96e774fd9bece7b9b30de230bd06}{calc\+\_\+imit\+\_\+fctl\+\_\+strobe}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} \texorpdfstring{$\ast$}{*}ctrl\+\_\+msg, const int strobe\+\_\+id, \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcp)
+\begin{DoxyCompactList}\small\item\em Функция производит расчет имитационных параметров заданного строба ФУ. \end{DoxyCompactList}\item 
+Result$<$ bool $>$ \mbox{\hyperlink{blk223fc_8cpp_a153e0d4f2701c145559f16c31b5fee64}{validate\+\_\+target\+\_\+fctl\+\_\+strobe}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} \texorpdfstring{$\ast$}{*}ctrl\+\_\+msg, const int strobe\+\_\+id, \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcp)
+\begin{DoxyCompactList}\small\item\em Функция производит валидацию целевых параметров строба СМ. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{blk223fc_8cpp_a1526b84fe27fe5076e79397f0841fe2b}{compute\+\_\+fcq\+\_\+for\+\_\+hw}} (const vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&ctrl\+\_\+msgs, \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp)
+\begin{DoxyCompactList}\small\item\em Функция инициирует расчет и конвертацию ФУ для аппаратуры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{blk223fc_8cpp_a32bacd42b9ac708bcc478cb6be5b5f80}{print\+\_\+fcq\+\_\+dump}} (const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp, FILE \texorpdfstring{$\ast$}{*}out)
+\begin{DoxyCompactList}\small\item\em Функция производит печать "{}сырого"{} дампа всего кванта ФУ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{blk223fc_8cpp_aca165ac92c3b2ce148ac85e2b6b58b20}{ADDR\+\_\+\+SPACE\+\_\+\+DDS}} = 1024.
+\item 
+const float \mbox{\hyperlink{blk223fc_8cpp_adb1897fdc60c4a52692d0fe76aa40e97}{SHGRS\+\_\+\+TS}} = 0.\+5
+\item 
+const unsigned \mbox{\hyperlink{blk223fc_8cpp_a83a7254b6b372e573fc7d8f2da456e6b}{FULL\+\_\+\+PLANE\+\_\+\+CM}} = 72
+\item 
+const int \mbox{\hyperlink{blk223fc_8cpp_a0b694050fcb0cb9c6b4c5c5f06d81694}{FW\+\_\+\+STROBE\+\_\+\+TYPE\+\_\+\+INTERF\+\_\+\+WIDE}} = 5
+\begin{DoxyCompactList}\small\item\em Тип строба\+: АСП ШЛ \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{blk223fc_8cpp_af29f8335045152227b8e3c83b07d916e}{FW\+\_\+\+STROBE\+\_\+\+TYPE\+\_\+\+INTERF\+\_\+\+NARROW}} = 5
+\begin{DoxyCompactList}\small\item\em Тип строба\+: АСП УЛ \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{blk223fc_8cpp_a53bdc256d7d401c83158da437cc26791}{FW\+\_\+\+STROBE\+\_\+\+TYPE\+\_\+\+INTERF\+\_\+\+LEVEL}} = 2
+\begin{DoxyCompactList}\small\item\em Тип строба\+: ПК \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Расчет функционального управления для 223-\/й ячейки. 
+
+Функции расчета ФУ для 223-\/й ячейки и его конвертации для прошивки. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{blk223fc_8cpp_a8a85adfb0e95e7444f67c03fcbaa04b5}\label{blk223fc_8cpp_a8a85adfb0e95e7444f67c03fcbaa04b5} 
+\index{blk223fc.cpp@{blk223fc.cpp}!calc\_asp\_mode@{calc\_asp\_mode}}
+\index{calc\_asp\_mode@{calc\_asp\_mode}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_asp\_mode()}{calc\_asp\_mode()}}
+{\footnotesize\ttfamily Result$<$ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\+\_\+strobe\+\_\+modes}} $>$ calc\+\_\+asp\+\_\+mode (\begin{DoxyParamCaption}\item[{const unsigned}]{divc,  }\item[{const unsigned}]{rays,  }\item[{const unsigned}]{kgrs,  }\item[{const unsigned}]{nstr }\end{DoxyParamCaption})}
+
+
+
+Функция уточняет код режима АСП (ПК) для аппаратуры. 
+
+В зависимости от комбинации входных параметров функция определяет, для какого режима работы АСП они были заданы и возвращает соответствующее значение кода режима АСП. В случае неверно заданных параметров функция возвращает стандартный код ошибки и выводит поясняющий текст ошибки. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em divc} & Коэффициент дробления полотна. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rays} & Количество лучей. \\
+\hline
+\mbox{\texttt{ in}}  & {\em kgrs} & Количество гипотез по скорости. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nstr} & Номер строба. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+В случае успешного расчета возвращает код режима АСП. 
+
+В случае ошибки возвращает стандартный код ошибки. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8cpp_ae67c96e774fd9bece7b9b30de230bd06}\label{blk223fc_8cpp_ae67c96e774fd9bece7b9b30de230bd06} 
+\index{blk223fc.cpp@{blk223fc.cpp}!calc\_imit\_fctl\_strobe@{calc\_imit\_fctl\_strobe}}
+\index{calc\_imit\_fctl\_strobe@{calc\_imit\_fctl\_strobe}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_imit\_fctl\_strobe()}{calc\_imit\_fctl\_strobe()}}
+{\footnotesize\ttfamily static int calc\+\_\+imit\+\_\+fctl\+\_\+strobe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} \texorpdfstring{$\ast$}{*}}]{ctrl\+\_\+msg,  }\item[{const int}]{strobe\+\_\+id,  }\item[{\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция производит расчет имитационных параметров заданного строба ФУ. 
+
+Функция производит пересчет управляющего сообщения, сформированного частью модели, в структуру параметров заданного имитационного строба ФУ в соответствии с требованиями карты памяти ПЛИС. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ctrl\+\_\+msg} & Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели. \\
+\hline
+\mbox{\texttt{ in}}  & {\em strobe\+\_\+id} & Номер строба в пределах такта (с 0). \\
+\hline
+\mbox{\texttt{ out}}  & {\em fcp} & Указатель на выходную структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает 0 как показатель успешного пересчета. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8cpp_ae67c96e774fd9bece7b9b30de230bd06_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223fc_8cpp_ad43ea22e3e3797c99497816197dbfb45}\label{blk223fc_8cpp_ad43ea22e3e3797c99497816197dbfb45} 
+\index{blk223fc.cpp@{blk223fc.cpp}!calc\_interf\_n\_posl@{calc\_interf\_n\_posl}}
+\index{calc\_interf\_n\_posl@{calc\_interf\_n\_posl}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_interf\_n\_posl()}{calc\_interf\_n\_posl()}}
+{\footnotesize\ttfamily static uint64\+\_\+t calc\+\_\+interf\+\_\+n\+\_\+posl (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{texec,  }\item[{const uint32\+\_\+t}]{strobe\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция производит расчет сдвигового регистра для помехи. 
+
+Функция производит расчет и возвращает полученное значение. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em texec} & Такт исполнения. \\
+\hline
+\mbox{\texttt{ in}}  & {\em strobe\+\_\+id} & Номер строба (глобальный, не в такте). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает рассчитанное значение сдвигового регистра. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8cpp_a27b36ab3398f3ac3e15d3c8e6fa4af99}\label{blk223fc_8cpp_a27b36ab3398f3ac3e15d3c8e6fa4af99} 
+\index{blk223fc.cpp@{blk223fc.cpp}!calc\_noise\_n\_posl@{calc\_noise\_n\_posl}}
+\index{calc\_noise\_n\_posl@{calc\_noise\_n\_posl}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_noise\_n\_posl()}{calc\_noise\_n\_posl()}}
+{\footnotesize\ttfamily static uint64\+\_\+t calc\+\_\+noise\+\_\+n\+\_\+posl (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{texec,  }\item[{const uint32\+\_\+t}]{strobe\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция производит расчет сдвигового регистра для шума. 
+
+Функция производит расчет и возвращает полученное значение. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em texec} & Такт исполнения. \\
+\hline
+\mbox{\texttt{ in}}  & {\em strobe\+\_\+id} & Номер строба (глобальный, а не в такте). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает рассчитанное значение сдвигового регистра. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8cpp_a27b36ab3398f3ac3e15d3c8e6fa4af99_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223fc_8cpp_ad5c7f86265919f558fad17cdc31ab9fe}\label{blk223fc_8cpp_ad5c7f86265919f558fad17cdc31ab9fe} 
+\index{blk223fc.cpp@{blk223fc.cpp}!calc\_target\_fctl\_strobe@{calc\_target\_fctl\_strobe}}
+\index{calc\_target\_fctl\_strobe@{calc\_target\_fctl\_strobe}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_target\_fctl\_strobe()}{calc\_target\_fctl\_strobe()}}
+{\footnotesize\ttfamily static int calc\+\_\+target\+\_\+fctl\+\_\+strobe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} \texorpdfstring{$\ast$}{*}}]{ctrl\+\_\+msg,  }\item[{const int}]{strobe\+\_\+id,  }\item[{\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция производит расчет целевых параметров заданного строба ФУ. 
+
+Функция производит пересчет управляющего сообщения, сформированного частью модели, в структуру параметров заданного целевого строба ФУ в соответствии с требованиями карты памяти ПЛИС. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ctrl\+\_\+msg} & Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели. \\
+\hline
+\mbox{\texttt{ in}}  & {\em strobe\+\_\+id} & Номер строба. \\
+\hline
+\mbox{\texttt{ out}}  & {\em fcp} & Указатель на выходную структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает 0 как показатель успешного пересчета. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8cpp_ad5c7f86265919f558fad17cdc31ab9fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223fc_8cpp_a1526b84fe27fe5076e79397f0841fe2b}\label{blk223fc_8cpp_a1526b84fe27fe5076e79397f0841fe2b} 
+\index{blk223fc.cpp@{blk223fc.cpp}!compute\_fcq\_for\_hw@{compute\_fcq\_for\_hw}}
+\index{compute\_fcq\_for\_hw@{compute\_fcq\_for\_hw}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{compute\_fcq\_for\_hw()}{compute\_fcq\_for\_hw()}}
+{\footnotesize\ttfamily int compute\+\_\+fcq\+\_\+for\+\_\+hw (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&}]{ctrl\+\_\+msgs,  }\item[{\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp }\end{DoxyParamCaption})}
+
+
+
+Функция инициирует расчет и конвертацию ФУ для аппаратуры. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk223fc_8cpp_a1526b84fe27fe5076e79397f0841fe2b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk223fc_8cpp_a57200be7b5e839af9578f0fe53c324b2}\label{blk223fc_8cpp_a57200be7b5e839af9578f0fe53c324b2} 
+\index{blk223fc.cpp@{blk223fc.cpp}!get\_interf\_poly@{get\_interf\_poly}}
+\index{get\_interf\_poly@{get\_interf\_poly}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_interf\_poly()}{get\_interf\_poly()}}
+{\footnotesize\ttfamily static uint64\+\_\+t get\+\_\+interf\+\_\+poly (\begin{DoxyParamCaption}\item[{const int}]{interf\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция выбирает полином для помехи по заданному номеру. 
+
+Функция производит расчет и возвращает полученное значение. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em interf\+\_\+index} & Индекс помехи. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает полином для требуемой помехи. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8cpp_aba572646ab9c8bd2c02bc661c75f5855}\label{blk223fc_8cpp_aba572646ab9c8bd2c02bc661c75f5855} 
+\index{blk223fc.cpp@{blk223fc.cpp}!get\_quarter\_num@{get\_quarter\_num}}
+\index{get\_quarter\_num@{get\_quarter\_num}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_quarter\_num()}{get\_quarter\_num()}}
+{\footnotesize\ttfamily static uint8\+\_\+t get\+\_\+quarter\+\_\+num (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Вычисление номера четверти полотна по номеру ячейки 
+\begin{DoxyParams}{Parameters}
+{\em cell\+Num} & = -\/ номер ячейки на полотне (0..71) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер четверти (0..3) 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8cpp_a32bacd42b9ac708bcc478cb6be5b5f80}\label{blk223fc_8cpp_a32bacd42b9ac708bcc478cb6be5b5f80} 
+\index{blk223fc.cpp@{blk223fc.cpp}!print\_fcq\_dump@{print\_fcq\_dump}}
+\index{print\_fcq\_dump@{print\_fcq\_dump}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_fcq\_dump()}{print\_fcq\_dump()}}
+{\footnotesize\ttfamily void print\+\_\+fcq\+\_\+dump (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{out = {\ttfamily stdout} }\end{DoxyParamCaption})}
+
+
+
+Функция производит печать "{}сырого"{} дампа всего кванта ФУ. 
+
+Функция производит последовательный вывод дампа ФУ, предназначенного для ПЛИС. Формат, в котором выдаются данные, пригодны для моделирования работы прошивки в Model\+Sim. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель на структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{blk223fc_8cpp_a153e0d4f2701c145559f16c31b5fee64}\label{blk223fc_8cpp_a153e0d4f2701c145559f16c31b5fee64} 
+\index{blk223fc.cpp@{blk223fc.cpp}!validate\_target\_fctl\_strobe@{validate\_target\_fctl\_strobe}}
+\index{validate\_target\_fctl\_strobe@{validate\_target\_fctl\_strobe}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{validate\_target\_fctl\_strobe()}{validate\_target\_fctl\_strobe()}}
+{\footnotesize\ttfamily Result$<$ bool $>$ validate\+\_\+target\+\_\+fctl\+\_\+strobe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} \texorpdfstring{$\ast$}{*}}]{ctrl\+\_\+msg,  }\item[{const int}]{strobe\+\_\+id,  }\item[{\mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcp }\end{DoxyParamCaption})}
+
+
+
+Функция производит валидацию целевых параметров строба СМ. 
+
+Функция производит как общие проверки на диапазоны допустимых значений в заданном стробе входящего сетевого сообщения ТРПР, так и проверки, зависящие от определенного типа строба и режима работы. В случае неверно заданных параметров функция возвращает стандартный код ошибки и выводит поясняющий текст ошибки. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ctrl\+\_\+msg} & Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели. \\
+\hline
+\mbox{\texttt{ in}}  & {\em strobe\+\_\+id} & Номер строба. \\
+\hline
+\mbox{\texttt{ out}}  & {\em fcp} & Указатель на выходную структуру блока ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+В случае успешного расчета возвращает is\+\_\+ok. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{blk223fc_8cpp_a153e0d4f2701c145559f16c31b5fee64_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{blk223fc_8cpp_aca165ac92c3b2ce148ac85e2b6b58b20}\label{blk223fc_8cpp_aca165ac92c3b2ce148ac85e2b6b58b20} 
+\index{blk223fc.cpp@{blk223fc.cpp}!ADDR\_SPACE\_DDS@{ADDR\_SPACE\_DDS}}
+\index{ADDR\_SPACE\_DDS@{ADDR\_SPACE\_DDS}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{ADDR\_SPACE\_DDS}{ADDR\_SPACE\_DDS}}
+{\footnotesize\ttfamily const float ADDR\+\_\+\+SPACE\+\_\+\+DDS = 1024.}
+
+Длина DDS коррелятора. На данный момент она равна 1024, но КЛМ планирует в будущем получить гораздо большие величины\+: 4096, 8192, и даже 16384. \Hypertarget{blk223fc_8cpp_a83a7254b6b372e573fc7d8f2da456e6b}\label{blk223fc_8cpp_a83a7254b6b372e573fc7d8f2da456e6b} 
+\index{blk223fc.cpp@{blk223fc.cpp}!FULL\_PLANE\_CM@{FULL\_PLANE\_CM}}
+\index{FULL\_PLANE\_CM@{FULL\_PLANE\_CM}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{FULL\_PLANE\_CM}{FULL\_PLANE\_CM}}
+{\footnotesize\ttfamily const unsigned FULL\+\_\+\+PLANE\+\_\+\+CM = 72}
+
+Коэффициент деления полотна СМ, соответствующий дроблению на минимальные фрагменты (ячейки 223 в СМ). \Hypertarget{blk223fc_8cpp_a53bdc256d7d401c83158da437cc26791}\label{blk223fc_8cpp_a53bdc256d7d401c83158da437cc26791} 
+\index{blk223fc.cpp@{blk223fc.cpp}!FW\_STROBE\_TYPE\_INTERF\_LEVEL@{FW\_STROBE\_TYPE\_INTERF\_LEVEL}}
+\index{FW\_STROBE\_TYPE\_INTERF\_LEVEL@{FW\_STROBE\_TYPE\_INTERF\_LEVEL}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{FW\_STROBE\_TYPE\_INTERF\_LEVEL}{FW\_STROBE\_TYPE\_INTERF\_LEVEL}}
+{\footnotesize\ttfamily const int FW\+\_\+\+STROBE\+\_\+\+TYPE\+\_\+\+INTERF\+\_\+\+LEVEL = 2\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Тип строба\+: ПК 
+
+\Hypertarget{blk223fc_8cpp_af29f8335045152227b8e3c83b07d916e}\label{blk223fc_8cpp_af29f8335045152227b8e3c83b07d916e} 
+\index{blk223fc.cpp@{blk223fc.cpp}!FW\_STROBE\_TYPE\_INTERF\_NARROW@{FW\_STROBE\_TYPE\_INTERF\_NARROW}}
+\index{FW\_STROBE\_TYPE\_INTERF\_NARROW@{FW\_STROBE\_TYPE\_INTERF\_NARROW}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{FW\_STROBE\_TYPE\_INTERF\_NARROW}{FW\_STROBE\_TYPE\_INTERF\_NARROW}}
+{\footnotesize\ttfamily const int FW\+\_\+\+STROBE\+\_\+\+TYPE\+\_\+\+INTERF\+\_\+\+NARROW = 5\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Тип строба\+: АСП УЛ 
+
+\Hypertarget{blk223fc_8cpp_a0b694050fcb0cb9c6b4c5c5f06d81694}\label{blk223fc_8cpp_a0b694050fcb0cb9c6b4c5c5f06d81694} 
+\index{blk223fc.cpp@{blk223fc.cpp}!FW\_STROBE\_TYPE\_INTERF\_WIDE@{FW\_STROBE\_TYPE\_INTERF\_WIDE}}
+\index{FW\_STROBE\_TYPE\_INTERF\_WIDE@{FW\_STROBE\_TYPE\_INTERF\_WIDE}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{FW\_STROBE\_TYPE\_INTERF\_WIDE}{FW\_STROBE\_TYPE\_INTERF\_WIDE}}
+{\footnotesize\ttfamily const int FW\+\_\+\+STROBE\+\_\+\+TYPE\+\_\+\+INTERF\+\_\+\+WIDE = 5\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Тип строба\+: АСП ШЛ 
+
+\Hypertarget{blk223fc_8cpp_adb1897fdc60c4a52692d0fe76aa40e97}\label{blk223fc_8cpp_adb1897fdc60c4a52692d0fe76aa40e97} 
+\index{blk223fc.cpp@{blk223fc.cpp}!SHGRS\_TS@{SHGRS\_TS}}
+\index{SHGRS\_TS@{SHGRS\_TS}!blk223fc.cpp@{blk223fc.cpp}}
+\doxysubsubsection{\texorpdfstring{SHGRS\_TS}{SHGRS\_TS}}
+{\footnotesize\ttfamily const float SHGRS\+\_\+\+TS = 0.\+5}
+
+Шаг расстановки гипотез на длительности сигнала. Пока что это значение константное (причем мы не используем параметр из ТРПР, но в будущем планируется прикрутить формулу 0.\+5 / ts). 

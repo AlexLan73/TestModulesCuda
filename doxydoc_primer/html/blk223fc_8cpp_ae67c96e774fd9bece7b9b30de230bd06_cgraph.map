@@ -1,0 +1,14 @@
+<map id="calc_imit_fctl_strobe" name="calc_imit_fctl_strobe">
+<area shape="rect" id="Node000001" title="Функция производит расчет имитационных параметров заданного строба ФУ." alt="" coords="5,80,163,105"/>
+<area shape="rect" id="Node000002" href="$blk223fc_8cpp.html#ad43ea22e3e3797c99497816197dbfb45" title="Функция производит расчет сдвигового регистра для помехи." alt="" coords="211,5,349,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,78,210,40,228,33,229,38,212,44,117,82"/>
+<area shape="rect" id="Node000003" href="$blk223fc_8cpp.html#a27b36ab3398f3ac3e15d3c8e6fa4af99" title="Функция производит расчет сдвигового регистра для шума." alt="" coords="211,55,349,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,80,197,75,197,81,163,85"/>
+<area shape="rect" id="Node000005" href="$blk223fc_8cpp.html#a57200be7b5e839af9578f0fe53c324b2" title="Функция выбирает полином для помехи по заданному номеру." alt="" coords="220,104,340,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="163,100,207,105,206,110,163,105"/>
+<area shape="rect" id="Node000006" href="$group___xD1_x81223__fctl.html#ga437f25a6ee93028a30bbfbfc135e6634" title=" " alt="" coords="238,153,322,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="119,103,212,138,233,146,231,151,210,143,117,108"/>
+<area shape="rect" id="Node000004" href="$model__wrapper_8cpp.html#ab32de23dea6bf0a72185933abcc6d818" title="Рассчитывает номер первого канала для текущей ячейки." alt="" coords="397,55,580,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="349,65,383,65,383,70,349,70"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="455,56,447,46,451,36,465,30,489,28,518,32,529,41,526,45,516,37,489,33,467,35,455,40,452,46,459,53"/>
+</map>

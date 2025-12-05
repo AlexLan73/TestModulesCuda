@@ -1,0 +1,216 @@
+.TH "ModelNS23817A620S1823::Cell233" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Cell233
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c233\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell233\fP (const \fBControlMsg\fP &cmsgV, const \fBControlMsg\fP &cmsgH)"
+.br
+.ti -1c
+.RI "\fBStrobeResult\fP \fBgetResults\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unique_ptr< \fBVirtualCell418_02\fP > \fBc418_02v\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBVirtualCell418_02\fP > \fBc418_02h\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgenSignalMSeqSigns\fP ()"
+.br
+.ti -1c
+.RI "void \fBtimeFrequencyProcessing\fP (std::complex< int32_t > data[][\fBSharedConst::maxSamplesInRay\fP], \fBSharedConst::PolarizationTypes\fP \fBpolar\fP)"
+.br
+.ti -1c
+.RI "void \fBzeroingTFPResult\fP (\fBSharedConst::PolarizationTypes\fP \fBpolar\fP)"
+.br
+.ti -1c
+.RI "void \fBinitSliceFiles\fP ()"
+.br
+.ti -1c
+.RI "void \fBdumpComplexOutTfpSlice\fP (\fBSharedConst::PolarizationTypes\fP \fBpolar\fP)"
+.br
+.ti -1c
+.RI "void \fBtradTargInterfStrbProcessing\fP (\fBC418_02Result\fP *c418_02Result[])"
+.br
+.ti -1c
+.RI "\fBStrobeOutput\fP \fBcaptureOutput\fP (\fBC418_02Result\fP *c418_02Result[]) const"
+.br
+.ti -1c
+.RI "int32_t \fBcalcN1\fP () const"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcNd1\fP () const"
+.br
+.ti -1c
+.RI "void \fBprintCalibrLIMMSourceData\fP (\fBC418_02Result\fP *c418_02Result[]) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBControlMsg\fP \fBcontrolMsg\fP"
+.br
+.ti -1c
+.RI "\fBControlMsg\fP \fBcontrolMsgV\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBC418_02Result\fP > \fBc418_02ResultV\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBC418_02Result\fP > \fBc418_02ResultH\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitStrobe\fP * \fBstrb\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgModelTypes::StationParams\fP * \fBstationParams\fP"
+.br
+.ti -1c
+.RI "int32_t \fBtfpMSeqSigns\fP [\fBtfpMSeqSignsMax\fP]"
+.br
+.ti -1c
+.RI "std::vector< std::vector< std::vector< std::complex< double > > > > \fBtfpRays\fP [\fBSharedConst::maxPolars\fP]"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBtfpSlicePreNormalization\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const int32_t \fBtfpMSeqSignsMax\fP = 1 << 18"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс имитации ячейки спецвычислителя 232\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Cell233::Cell233 (const \fBControlMsg\fP & cmsgV, const \fBControlMsg\fP & cmsgH)"
+Конструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int32_t ModelNS23817A620S1823::Cell233::calcN1 () const\fC [private]\fP"
+Расчёт величины изменения длительности дискрета ФМ в числе выборок частоты Fд/ndec\&. 
+.PP
+\fBReturns\fP
+.RS 4
+величина изменения длительности дискрета ФМ 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell233::calcNd1 () const\fC [private]\fP"
+Расчёт периода изменения длительности дискрета ФМ в числе дискретов фазокодовой манипуляции\&. 
+.PP
+\fBReturns\fP
+.RS 4
+период изменения длительности дискрета ФМ 
+.RE
+.PP
+
+.SS "\fBStrobeOutput\fP ModelNS23817A620S1823::Cell233::captureOutput (\fBC418_02Result\fP * c418_02Result[]) const\fC [private]\fP"
+
+.SS "void ModelNS23817A620S1823::Cell233::dumpComplexOutTfpSlice (\fBSharedConst::PolarizationTypes\fP polar)\fC [private]\fP"
+Сохранение среза ЧВО в режиме выдачи обеих поляризаций в комплексном виде в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP тип поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell233::genSignalMSeqSigns ()\fC [private]\fP"
+Генерация м-последовательности для сигнала\&. 
+.SS "\fBStrobeResult\fP ModelNS23817A620S1823::Cell233::getResults ()"
+
+.SS "void ModelNS23817A620S1823::Cell233::initSliceFiles ()\fC [private]\fP"
+Инициализация объектов файлов срезов начальными значениями для дальнейшего формирования правильных имён файлов\&. 
+.SS "void ModelNS23817A620S1823::Cell233::printCalibrLIMMSourceData (\fBC418_02Result\fP * c418_02Result[]) const\fC [private]\fP"
+Печать исходных данных для калибровки по всем заданным поляризациям\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell233::timeFrequencyProcessing (std::complex< int32_t > data[][SharedConst::maxSamplesInRay], \fBSharedConst::PolarizationTypes\fP polar)\fC [private]\fP"
+ЧВО (частотно-временная обработка)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP указатель на массив данных для ЧВО (лучи х выборки) 
+.br
+\fIpolar\fP тип поляризации
+.RE
+.PP
+Тут 8я контрольная точка\&. 
+.SS "void ModelNS23817A620S1823::Cell233::tradTargInterfStrbProcessing (\fBC418_02Result\fP * c418_02Result[])\fC [private]\fP"
+Обработка данных в традиционных целевых и помеховых режимах\&. Включает ЧВО, ПЛО, оценку формы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.br
+\fIucopo\fP указатель на буфер для сообщения УЦОПО 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell233::zeroingTFPResult (\fBSharedConst::PolarizationTypes\fP polar)\fC [private]\fP"
+Зануление данных ЧВО заданной поляризации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP тип поляризации 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::unique_ptr<\fBVirtualCell418_02\fP> ModelNS23817A620S1823::Cell233::c418_02h"
+
+.SS "std::unique_ptr<\fBC418_02Result\fP> ModelNS23817A620S1823::Cell233::c418_02ResultH\fC [private]\fP"
+
+.SS "std::unique_ptr<\fBC418_02Result\fP> ModelNS23817A620S1823::Cell233::c418_02ResultV\fC [private]\fP"
+
+.SS "std::unique_ptr<\fBVirtualCell418_02\fP> ModelNS23817A620S1823::Cell233::c418_02v"
+
+.SS "\fBControlMsg\fP ModelNS23817A620S1823::Cell233::controlMsg\fC [private]\fP"
+сообщение с параметрами управления ячейкой 
+.SS "\fBControlMsg\fP ModelNS23817A620S1823::Cell233::controlMsgV\fC [private]\fP"
+
+.SS "const \fBCMsgModelTypes::StationParams\fP* ModelNS23817A620S1823::Cell233::stationParams\fC [private]\fP"
+указатель на параметры станции управляющего сообщения 
+.SS "const \fBCMsgSharedTypes::ImitStrobe\fP* ModelNS23817A620S1823::Cell233::strb\fC [private]\fP"
+указатель на параметры строба управляющего сообщения 
+.SS "int32_t ModelNS23817A620S1823::Cell233::tfpMSeqSigns[\fBtfpMSeqSignsMax\fP]\fC [private]\fP"
+знаки м-последовательности для сигнала для ЧВО 
+.SS "const int32_t ModelNS23817A620S1823::Cell233::tfpMSeqSignsMax = 1 << 18\fC [static]\fP, \fC [private]\fP"
+максимальное количество знаков м-последовательности для сигнала для ЧВО 
+.SS "std::vector<std::vector<std::vector<std::complex<double> > > > ModelNS23817A620S1823::Cell233::tfpRays[\fBSharedConst::maxPolars\fP]\fC [private]\fP"
+выход ЧВО [поляризация][лучи][дальность][фильтр] 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell233::tfpSlicePreNormalization\fC [private]\fP"
+объект файла среза ЧВО до нормализации 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

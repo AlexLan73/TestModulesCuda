@@ -1,0 +1,267 @@
+.TH "ModelNS23817A620S1823::DFGroups" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::DFGroups
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dfGroups\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDFGroup\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDFGroups\fP ()"
+.br
+.ti -1c
+.RI "\fB~DFGroups\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetDFGroup\fP (\fBDFGroup\fP *dfGroup, uint8_t targetDFType) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetRaysQuantity\fP (uint8_t targetDFType) const"
+.br
+.ti -1c
+.RI "bool \fBisNotExist\fP (uint8_t dfgNum) const"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBmaxDFGroupsQuantity\fP = 96"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclearDFGroups\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillUV\fP (int32_t group, int32_t ray, double u, double v)"
+.br
+.ti -1c
+.RI "void \fBfill0Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill2Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill3Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill4Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill5Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill12Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill15Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill16Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill32Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill33Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill37Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill38Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill39Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill40Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill41Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill64Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill65Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill67Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill68Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill70Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill71Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill72Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill74Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill75Group\fP ()"
+.br
+.ti -1c
+.RI "void \fBfill76Group\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDFGroup\fP \fBdfGroups\fP [\fBmaxDFGroupsQuantity\fP]"
+.br
+.ti -1c
+.RI "std::vector< uint32_t > \fBdfGroupsIdx\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс информации о пеленгационных группах\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::DFGroups::DFGroups ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::DFGroups::~DFGroups ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::DFGroups::clearDFGroups ()\fC [private]\fP"
+Обнуление данных в массиве пеленгационных групп\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill0Group ()\fC [private]\fP"
+Заполнение пеленгационной группы сопровождения, 5 лучей\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill12Group ()\fC [private]\fP"
+Заполнение пеленгационной группы с одним лучом\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill15Group ()\fC [private]\fP"
+Заполнение пеленгационной группы поиска АП\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill16Group ()\fC [private]\fP"
+Заполнение пеленгационной группы захвата АП\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill2Group ()\fC [private]\fP"
+Заполнение пеленгационной группы ПБЛ\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill32Group ()\fC [private]\fP"
+Заполнение пеленгационной группы сопровождения (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill33Group ()\fC [private]\fP"
+Заполнение пеленгационной группы обнаружения (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill37Group ()\fC [private]\fP"
+Заполнение пеленгационной группы ПК4-поиск (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill38Group ()\fC [private]\fP"
+Заполнение пеленгационной группы ПК5-подтверждение (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill39Group ()\fC [private]\fP"
+Заполнение пеленгационной группы ПК4-подтверждение (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill3Group ()\fC [private]\fP"
+Заполнение пеленгационной группы поиска, 11 лучей\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill40Group ()\fC [private]\fP"
+Заполнение пеленгационной группы ПК10-захват (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill41Group ()\fC [private]\fP"
+Заполнение пеленгационной группы ПК10-поиск (СМ)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill4Group ()\fC [private]\fP"
+Заполнение пеленгационной группы СРП\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill5Group ()\fC [private]\fP"
+Заполнение пеленгационной группы СРП-2\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill64Group ()\fC [private]\fP"
+Заполнение пеленгационной группы с одним лучом (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill65Group ()\fC [private]\fP"
+Заполнение пеленгационной группы сопровождения, 5 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill67Group ()\fC [private]\fP"
+Заполнение пеленгационной группы поиска, 8 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill68Group ()\fC [private]\fP"
+Заполнение пеленгационной группы поиск АП, 10 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill70Group ()\fC [private]\fP"
+Заполнение пеленгационной группы захват АП, 10 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill71Group ()\fC [private]\fP"
+Заполнение пеленгационной группы подтверждения АП, 5 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill72Group ()\fC [private]\fP"
+Заполнение пеленгационной группы подтверждения АП, 4 луча (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill74Group ()\fC [private]\fP"
+Заполнение пеленгационной группы поиска АП, 10 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill75Group ()\fC [private]\fP"
+Заполнение пеленгационной группы захвата АП, 10 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fill76Group ()\fC [private]\fP"
+Заполнение пеленгационной группы сопровождения АП, 5 лучей (МРИК)\&. 
+.SS "void ModelNS23817A620S1823::DFGroups::fillUV (int32_t group, int32_t ray, double u, double v)\fC [private]\fP"
+Заполнение координат одного луча заданной группы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP номер (тип) пеленгационной группы 
+.br
+\fIray\fP номер луча в ПГ 
+.br
+\fIu\fP координата u 
+.br
+\fIv\fP координата v 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::DFGroups::getDFGroup (\fBDFGroup\fP * dfGroup, uint8_t targetDFType) const"
+Выдача информации о пеленгационной группе в буфер (dfGroup), исходя из типа пеленгационной группы (targetDFType)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdfGroup\fP указатель на объект, описывающий пеленгационную группу 
+.br
+\fItargetDFType\fP тип (номер) пеленгационной группы 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::DFGroups::getRaysQuantity (uint8_t targetDFType) const"
+Возврат количества лучей в группе исходя из типа пеленгационной группы (targetDFType)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItargetDFType\fP тип (номер) пеленгационной группы 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество лучей в заданной пеленгационной группе 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::DFGroups::isNotExist (uint8_t dfgNum) const"
+Поиск указанной группы расстановок лучей в списке известных\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdfgNum\fP тип пеленгационной группы 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданная группа не найдена, false - если найдена 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDFGroup\fP ModelNS23817A620S1823::DFGroups::dfGroups[\fBmaxDFGroupsQuantity\fP]\fC [private]\fP"
+массив информации о пеленгационных группах 
+.SS "std::vector<uint32_t> ModelNS23817A620S1823::DFGroups::dfGroupsIdx\fC [private]\fP"
+список индексов существующих групп расстановок лучей 
+.SS "const uint32_t ModelNS23817A620S1823::DFGroups::maxDFGroupsQuantity = 96\fC [static]\fP"
+максимальное количество пеленгационных групп 0-31 - Воркута-М, 32-63 - Воркута-СМ, 64-95 - МРИК 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

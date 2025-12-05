@@ -1,0 +1,9 @@
+<map id="gnuplotio::Gnuplot::send" name="gnuplotio::Gnuplot::send">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,148,77"/>
+<area shape="rect" id="Node000002" href="$classgnuplotio_1_1Gnuplot.html#a0fe1681b2ae4a372b683de488e340faa" title=" " alt="" coords="200,5,343,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,43,186,37,187,42,149,48"/>
+<area shape="rect" id="Node000003" href="$namespacegnuplotio.html#a1e452d861932700749421ce103ef8d48" title=" " alt="" coords="196,69,347,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,66,183,72,182,77,148,72"/>
+<area shape="rect" id="Node000004" href="$namespacegnuplotio.html#af809657552a53c3b17f0400a5c210a7f" title=" " alt="" coords="395,77,645,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="347,87,381,87,381,92,347,92"/>
+</map>

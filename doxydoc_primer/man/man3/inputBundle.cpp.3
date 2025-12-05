@@ -1,0 +1,113 @@
+.TH "src/inputBundle.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/inputBundle.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'inputBundle\&.h'\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <libutils/string\&.h>\fP
+.br
+\fC#include <libutils/panic\&.h>\fP
+.br
+\fC#include <libutils/serdes\&.h>\fP
+.br
+\fC#include <libvork/e2trpr\&.h>\fP
+.br
+\fC#include <libvork/e2trims\&.h>\fP
+.br
+\fC#include <model/modelInterface\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSavedStationParams\fP"
+.br
+.ti -1c
+.RI "struct \fBlibutils::FromJSON< Model::StationParams >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBlibutils\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBlibutils::noop_deleter\fP (istream *)"
+.br
+.ti -1c
+.RI "static string \fBlibutils::path_concat\fP (const string &dir, const string &fname)"
+.br
+.ti -1c
+.RI "static void \fBpatch_strobe\fP (picojson::value &strobe_val, uint npoz)"
+.br
+.ti -1c
+.RI "static void \fBpatch_imit_object\fP (picojson::value &im_object_val)"
+.br
+.ti -1c
+.RI "static void \fBpatch_parsig\fP (picojson::value &parsig_val)"
+.br
+.ti -1c
+.RI "static Result< \fBModelInputBundle\fP > \fBextractBundle\fP (picojson::value &v)"
+.br
+.RI "Десериализовать данные, сохраненные из GUI, в ТРПР и ТРИМС "
+.ti -1c
+.RI "template<class T > optional< EUMASK > \fBLoadMaskData\fP (const string &fcDirName, const string &maskFileName)"
+.br
+.ti -1c
+.RI "static optional< E2IPPA > \fBLoadIppaData\fP (const string &fcDirName, const string &ippaFileName, uint npos)"
+.br
+.ti -1c
+.RI "template<class T > optional< EUTRKP > \fBLoadTrkpData\fP (const string &, const string &, uint)"
+.br
+.ti -1c
+.RI "optional< Result< \fBModelInputBundle\fP > > \fBLoadBundle\fP (const optional< string > &optFcDirPath)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const int64_t \fBzero64\fP = 0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static Result< \fBModelInputBundle\fP > extractBundle (picojson::value & v)\fC [static]\fP"
+
+.PP
+Десериализовать данные, сохраненные из GUI, в ТРПР и ТРИМС 
+.SS "optional< Result< \fBModelInputBundle\fP > > LoadBundle (const optional< string > & optFcDirPath)"
+
+.SS "static optional< E2IPPA > LoadIppaData (const string & fcDirName, const string & ippaFileName, uint npos)\fC [static]\fP"
+
+.SS "template<class T > optional< EUMASK > LoadMaskData (const string & fcDirName, const string & maskFileName)"
+
+.SS "template<class T > optional< EUTRKP > LoadTrkpData (const string &, const string &, uint)"
+
+.SS "static void patch_imit_object (picojson::value & im_object_val)\fC [static]\fP"
+
+.SS "static void patch_parsig (picojson::value & parsig_val)\fC [static]\fP"
+
+.SS "static void patch_strobe (picojson::value & strobe_val, uint npoz)\fC [static]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const int64_t zero64 = 0\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

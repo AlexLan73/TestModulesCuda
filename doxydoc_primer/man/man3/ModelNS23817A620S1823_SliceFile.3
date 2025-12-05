@@ -1,0 +1,285 @@
+.TH "ModelNS23817A620S1823::SliceFile" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::SliceFile
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sliceFile\&.h>\fP
+.PP
+Inherits std::ofstream\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPrintMode\fP { \fBinRaw\fP, \fBbyColumn\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSliceFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenSlice\fP (std::ios_base::openmode openMode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "void \fBsetSliceName\fP (const char *name)"
+.br
+.ti -1c
+.RI "void \fBsetTactNum\fP (uint64_t value)"
+.br
+.ti -1c
+.RI "void \fBsetStrobeID\fP (int64_t value)"
+.br
+.ti -1c
+.RI "void \fBsetPolarType\fP (int32_t value)"
+.br
+.ti -1c
+.RI "void \fBsetCrateNum\fP (int32_t value)"
+.br
+.ti -1c
+.RI "void \fBsetCellNum\fP (int32_t value)"
+.br
+.ti -1c
+.RI "void \fBsetChannelNum\fP (int32_t value)"
+.br
+.ti -1c
+.RI "void \fBsetPrintMode\fP (\fBPrintMode\fP value)"
+.br
+.ti -1c
+.RI "\fBPrintMode\fP \fBgetPrintMode\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetRayNum\fP (int32_t value)"
+.br
+.ti -1c
+.RI "void \fBsetStrbIDAppendix\fP (const char *appendix)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const int32_t \fBnone\fP = \-1"
+.br
+.ti -1c
+.RI "static const char * \fBprefix\fP = 'data/'"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcomposeFileName\fP (std::stringstream &ss) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBfileName\fP"
+.br
+.ti -1c
+.RI "std::string \fBstrbIDAppendix\fP"
+.br
+.ti -1c
+.RI "const char * \fBsliceName\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBtactNum\fP"
+.br
+.ti -1c
+.RI "int64_t \fBstrobeID\fP"
+.br
+.ti -1c
+.RI "int32_t \fBpolarType\fP"
+.br
+.ti -1c
+.RI "int32_t \fBcrateNum\fP"
+.br
+.ti -1c
+.RI "int32_t \fBcellNum\fP"
+.br
+.ti -1c
+.RI "int32_t \fBchanNum\fP"
+.br
+.ti -1c
+.RI "int32_t \fBrayNum\fP"
+.br
+.ti -1c
+.RI "\fBPrintMode\fP \fBprintMode\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс информации о файле среза\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::SliceFile::PrintMode\fP"
+константы формата вывода в файл данных - в строку или в столбец имеет смысл только для одномерных массивов 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIinRaw \fP\fP
+.TP
+\fB\fIbyColumn \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::SliceFile::SliceFile ()"
+Конструктор объекта класса по умолчанию\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::SliceFile::composeFileName (std::stringstream & ss) const\fC [private]\fP"
+Формирование из полей структуры строки с именем файла\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIss\fP ссылка на поток для формирования в нём строки с именем 
+.RE
+.PP
+
+.SS "\fBSliceFile::PrintMode\fP ModelNS23817A620S1823::SliceFile::getPrintMode () const"
+Возвращение типа вывода в файл: в строку или в столбец\&. 
+.PP
+\fBReturns\fP
+.RS 4
+тип вывода в файл 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::openSlice (std::ios_base::openmode openMode = \fCstd::ios_base::trunc\fP)"
+Открытие файла среза, который описывают поля структуры, с заданным режимом открытия (mode) и закрепляет поток вывода за этим файлом\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIopenMode\fP режим открытия файла: std::ios_base::app - открытие с добавлением в конец std::ios_base::trunc - открытие с уничтожением всех данных файла (по умолчанию) 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setCellNum (int32_t value)"
+Установка номера ячейки в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setChannelNum (int32_t value)"
+Установка номера канала в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP номер канала 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setCrateNum (int32_t value)"
+Установка номера крейта в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP номер крейта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setPolarType (int32_t value)"
+Установка типа поляризации в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP тип поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setPrintMode (\fBPrintMode\fP value)"
+Установка типа вывода в файл: в строку или в столбец\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP тип вывода в файл 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setRayNum (int32_t value)"
+Установка номера луча в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP номер луча 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setSliceName (const char * name)"
+Установка имени среза в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP указатель на строку с названием имени файла 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setStrbIDAppendix (const char * appendix)"
+Установка текстовой добавки к имени каталога данных строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIappendix\fP указатель на строку с текстовой добавкой к имени каталога 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setStrobeID (int64_t value)"
+Установка идентификатора строба в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP идентификатор строба 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::SliceFile::setTactNum (uint64_t value)"
+Установка номера такта в заданное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP номер такта 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int32_t ModelNS23817A620S1823::SliceFile::cellNum\fC [private]\fP"
+номер ячейки для имени файла среза 
+.SS "int32_t ModelNS23817A620S1823::SliceFile::chanNum\fC [private]\fP"
+номер канала для имени файла среза 
+.SS "int32_t ModelNS23817A620S1823::SliceFile::crateNum\fC [private]\fP"
+номер крейта для имени файла среза 
+.SS "std::string ModelNS23817A620S1823::SliceFile::fileName\fC [private]\fP"
+полное имя файла 
+.SS "const int32_t ModelNS23817A620S1823::SliceFile::none = \-1\fC [static]\fP"
+код отключения создания каталога с номером строба\&. Используется только для диаграммы направленности 
+.SS "int32_t ModelNS23817A620S1823::SliceFile::polarType\fC [private]\fP"
+тип поляризации для имени файла среза 
+.SS "const char * ModelNS23817A620S1823::SliceFile::prefix = 'data/'\fC [static]\fP"
+имя каталога, в котором создаются файлы печати срезов 
+.SS "\fBPrintMode\fP ModelNS23817A620S1823::SliceFile::printMode\fC [private]\fP"
+формат вывода в файл данных - в строку или в столбец 
+.SS "int32_t ModelNS23817A620S1823::SliceFile::rayNum\fC [private]\fP"
+номер луча для имени файла среза 
+.SS "const char* ModelNS23817A620S1823::SliceFile::sliceName\fC [private]\fP"
+имя среза 
+.SS "std::string ModelNS23817A620S1823::SliceFile::strbIDAppendix\fC [private]\fP"
+текстовая добавка к имени каталога строба для данных для особых случаев, например, для адаптации, где два строба имеют одинаковый идентификатор\&. По умолчанию пустой\&. 
+.SS "int64_t ModelNS23817A620S1823::SliceFile::strobeID\fC [private]\fP"
+идентификатор строба 
+.SS "uint64_t ModelNS23817A620S1823::SliceFile::tactNum\fC [private]\fP"
+номер такта исполнения для имени файла среза 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

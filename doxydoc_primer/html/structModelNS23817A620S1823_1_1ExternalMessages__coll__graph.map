@@ -1,0 +1,15 @@
+<map id="ModelNS23817A620S1823::ExternalMessages" name="ModelNS23817A620S1823::ExternalMessages">
+<area shape="rect" id="Node000001" title=" " alt="" coords="179,525,365,665"/>
+<area shape="rect" id="Node000002" href="$structE2Trkp.html" title=" " alt="" coords="21,355,78,421"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,419,91,446,128,482,168,516,164,520,125,486,87,450,66,423"/>
+<area shape="rect" id="Node000003" href="$structTrkpHeader.html" title=" " alt="" coords="5,83,93,188"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="52,188,52,339,47,339,47,188"/>
+<area shape="rect" id="Node000004" href="$structModelNS23817A620S1823_1_1ChannelsMask.html" title=" " alt="" coords="102,348,287,428"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,427,243,509,238,511,207,429"/>
+<area shape="rect" id="Node000005" href="$structModelNS23817A620S1823_1_1StationParams.html" title=" " alt="" coords="311,328,505,448"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="371,450,329,513,325,510,366,447"/>
+<area shape="rect" id="Node000006" href="$structModelNS23817A620S1823_1_1SavePermissions.html" title=" " alt="" coords="315,5,501,265"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="411,266,411,311,405,311,405,266"/>
+<area shape="rect" id="Node000007" href="$structUcopoMsgBuf.html" title=" " alt="" coords="529,335,633,441"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="537,443,505,474,468,504,426,530,381,553,379,548,423,525,465,499,501,470,534,439"/>
+</map>

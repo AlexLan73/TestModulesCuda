@@ -1,0 +1,66 @@
+\doxysection{src/mpk1/blk223/223fc.h File Reference}
+\hypertarget{223fc_8h}{}\label{223fc_8h}\index{src/mpk1/blk223/223fc.h@{src/mpk1/blk223/223fc.h}}
+
+
+Описание карты памяти прошивки ячейки 9ДЯ-\/223.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/412-\/06\+\_\+wire.\+h$>$}\newline
+Include dependency graph for 223fc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{223fc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{223fc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcomplex32}{complex32}}
+\begin{DoxyCompactList}\small\item\em Структура 32-\/разрядного комплексного числа. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structc223__target__strobe}{c223\+\_\+target\+\_\+strobe}}
+\begin{DoxyCompactList}\small\item\em Целевой строб ФУ 223-\/й ячейки. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structc223__imit__object__params}{c223\+\_\+imit\+\_\+object\+\_\+params}}
+\begin{DoxyCompactList}\small\item\em Параметры имитируемого объекта. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structc223__imit__strobe}{c223\+\_\+imit\+\_\+strobe}}
+\begin{DoxyCompactList}\small\item\em Имитационный строб ФУ 223-\/й ячейки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___xD1_x81223__fctl_ga162aaa77779ed1353043b439cf7bde77}{MAX\+\_\+\+STROBES}}~16
+\begin{DoxyCompactList}\small\item\em Максимальное количество стробов \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}~16
+\begin{DoxyCompactList}\small\item\em Максимальное количество каналов \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___xD1_x81223__fctl_ga18202a0d8cae256a03d369d25d82e586}{NR\+\_\+\+CHANNELS}}~15
+\begin{DoxyCompactList}\small\item\em Количество задействованных каналов \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___xD1_x81223__fctl_ga00688ff65110d31b64f74f0f54736d09}{NR\+\_\+\+VECTORS}}~16
+\begin{DoxyCompactList}\small\item\em Максимальное количество векторов \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___xD1_x81223__fctl_gaf8ed06aa2f10022bc52c8a06b2a2a419}{MAX\+\_\+\+NR\+\_\+\+BEAMS}}~12
+\begin{DoxyCompactList}\small\item\em Максимальное количество лучей \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___xD1_x81223__fctl_ga99c494682ae79225b3fa5cef2fb92b1a}{MAX\+\_\+\+NR\+\_\+\+OBJS}}~8
+\begin{DoxyCompactList}\small\item\em Максимальное количество объектов \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{group___xD1_x81223__fctl_ga437f25a6ee93028a30bbfbfc135e6634}{n\+\_\+objects}} (const \mbox{\hyperlink{structc223__imit__strobe}{c223\+\_\+imit\+\_\+strobe}} \&s)
+\item 
+uint \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}} (const \mbox{\hyperlink{structc223__imit__strobe}{c223\+\_\+imit\+\_\+strobe}} \&s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Описание карты памяти прошивки ячейки 9ДЯ-\/223. 
+
+Описание карты памяти прошивки ячейки 9ДЯ-\/223 в части функционального управления. 

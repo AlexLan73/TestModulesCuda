@@ -1,0 +1,17 @@
+<map id="MainWindow::storeObjectInfo" name="MainWindow::storeObjectInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,145,219,171"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a7bd55f5037a5ec1b4aaf1be686c79d44" title=" " alt="" coords="267,145,464,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,155,253,155,253,161,219,161"/>
+<area shape="rect" id="Node000003" href="$classSignalTable.html#a1a2f33752104dd2c2dcbe1328c2df39d" title=" " alt="" coords="530,5,683,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,143,432,94,470,65,511,41,530,33,532,38,513,46,473,70,435,98,381,147"/>
+<area shape="rect" id="Node000004" href="$classSignalTable.html#a410bf403fcceb0b5b3d3e32487c8bd99" title=" " alt="" coords="512,55,701,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="402,143,511,105,533,97,534,102,513,110,404,148"/>
+<area shape="rect" id="Node000005" href="$classSignalTable.html#adabed06a30427e9a8b1cad150f9268b8" title=" " alt="" coords="527,120,686,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="464,145,513,140,514,145,464,150"/>
+<area shape="rect" id="Node000006" href="$classSignalTable.html#a0f33c791e19e1926cd01ebbeef2a5c35" title=" " alt="" coords="533,169,680,195"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="464,165,520,171,519,176,464,170"/>
+<area shape="rect" id="Node000007" href="$classSignalTable.html#a0772452ef0edaae71f951bbfe55d2c3a" title=" " alt="" coords="525,219,688,244"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="404,168,513,203,544,212,542,218,511,209,403,173"/>
+<area shape="rect" id="Node000008" href="$classSignalTable.html#a205781d6d062251a9af7a8179e1813ef" title=" " alt="" coords="528,268,685,293"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="384,169,439,210,475,233,513,253,535,261,533,266,511,258,472,238,436,214,381,173"/>
+</map>

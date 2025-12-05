@@ -1,0 +1,127 @@
+.TH "ModelNS23817A620S1823::Cell418Base" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Cell418Base
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c418Base\&.h>\fP
+.PP
+Inherited by \fBModelNS23817A620S1823::Cell418_01\fP\fC [private]\fP, and \fBModelNS23817A620S1823::Cell418_02\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell418Base\fP (const \fBControlMsg\fP &cmsg)"
+.br
+.ti -1c
+.RI "virtual \fB~Cell418Base\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBresetStopFlag\fP ()=0"
+.br
+.ti -1c
+.RI "bool \fBgetStopFlag\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtargetModeProcessing\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopyOutDataTo\fP (\fBC412_06Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBaccumulateCrateData\fP (std::complex< int32_t > in[][\fBSharedConst::maxSamplesInRay\fP], std::complex< int32_t > out[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBC412_06Result\fP \fBinData\fP"
+.br
+.ti -1c
+.RI "\fBC412_06Result\fP \fBoutData\fP"
+.br
+.ti -1c
+.RI "const \fBControlMsg\fP \fBcontrolMsg\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitStrobe\fP * \fBstrb\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgModelTypes::StationParams\fP * \fBstationParams\fP"
+.br
+.ti -1c
+.RI "bool \fBstopFlag\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Базовый класс суммирования ячеек и крейтов 418-XX\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Cell418Base::Cell418Base (const \fBControlMsg\fP & cmsg)"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Cell418Base::~Cell418Base ()\fC [pure virtual]\fP"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Cell418Base::accumulateCrateData (std::complex< int32_t > in[][SharedConst::maxSamplesInRay], std::complex< int32_t > out[][SharedConst::maxSamplesInRay])\fC [protected]\fP"
+Накопление в массив out элементов массива in, т\&.е\&. к каждому элементу массива out суммируется соответствующий элемент массива in\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIin\fP указатель на входной массив 
+.br
+\fIout\fP указатель на выходной массив 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418Base::copyOutDataTo (\fBC412_06Result\fP * result) const\fC [protected]\fP"
+Копирование результата работы ячейки в заданный объект, исходя из режима работы (типа строба)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект выходных данных 412й/418-01й ячейки 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Cell418Base::getStopFlag () const"
+Проверка флага преждевременной остановки вычислений\&. 
+.PP
+\fBReturns\fP
+.RS 4
+значение флага преждевременной остановки вычислений 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Cell418Base::resetStopFlag ()\fC [pure virtual]\fP"
+Сброс флага преждевременной остановки вычислений\&. Необходим, т\&.к\&. объект ячейки может отрабатывать больше одного строба, а никаких признаков, что расчёт был последним в текущем запуске нет\&. 
+.PP
+Implemented in \fBModelNS23817A620S1823::Cell418_01\fP, and \fBModelNS23817A620S1823::Cell418_02\fP\&.
+.SS "void ModelNS23817A620S1823::Cell418Base::targetModeProcessing ()\fC [protected]\fP"
+Обработка в целевом режиме\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBControlMsg\fP ModelNS23817A620S1823::Cell418Base::controlMsg\fC [protected]\fP"
+управляющее сообщение 
+.SS "\fBC412_06Result\fP ModelNS23817A620S1823::Cell418Base::inData\fC [protected]\fP"
+входной массив 418 ячейки Предполагается, что данные с каждой ячейки (или крейта) в него будут заноситься по очереди 
+.SS "\fBC412_06Result\fP ModelNS23817A620S1823::Cell418Base::outData\fC [protected]\fP"
+выходной массив 418й ячейки 
+.SS "const \fBCMsgModelTypes::StationParams\fP* ModelNS23817A620S1823::Cell418Base::stationParams\fC [protected]\fP"
+указатель на параметры станции управляющего сообщения 
+.SS "bool ModelNS23817A620S1823::Cell418Base::stopFlag\fC [protected]\fP"
+флаг преждевременной остановки расчётов true - остановить расчёты false - не останавливать 
+.SS "const \fBCMsgSharedTypes::ImitStrobe\fP* ModelNS23817A620S1823::Cell418Base::strb\fC [protected]\fP"
+указатель на параметры строба управляющего сообщения 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

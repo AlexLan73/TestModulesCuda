@@ -1,0 +1,119 @@
+.TH "ModelNS23817A620S1823::ArCoefsArray" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::ArCoefsArray
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <arCoefsArray\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArCoefsArray\fP (const std::list< std::string > &lstDataDirs)"
+.br
+.ti -1c
+.RI "\fB~ArCoefsArray\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetArCoef\fP (\fBSharedConst::StationType\fP stType, uint32_t vectNum, uint32_t chanNum) const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBloadArCoefs\fP (const std::list< std::string > &lstDataDirs)"
+.br
+.ti -1c
+.RI "\fBSharedConst::StationType\fP \fBgetStationType\fP (std::string strHeader)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetArNum\fP (std::string strHeader)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< std::vector< std::vector< float > > > \fBarCoefs\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBmaxArTypes\fP = 16"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс данных амплитудного распределения по антенне\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::ArCoefsArray::ArCoefsArray (const std::list< std::string > & lstDataDirs)"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::ArCoefsArray::~ArCoefsArray ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "float ModelNS23817A620S1823::ArCoefsArray::getArCoef (\fBSharedConst::StationType\fP stType, uint32_t vectNum, uint32_t chanNum) const"
+Взятие по заданным параметрам коэффициента амплитудного распределения по антенне\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.br
+\fIvectNum\fP номер вектора коэффициентов амплитудного распределения 
+.br
+\fIchanNum\fP номером канала коэффициентов амплитудного распределения 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+коэффициент амплитудного распределения по антенне для заданного номера вектора и номера канала 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ArCoefsArray::getArNum (std::string strHeader)\fC [private]\fP"
+Выдача номера амплитудного распределения, заданного в строке заголовка данных, в виде целого значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrHeader\fP строка заголовка данных по одному виду амплитудного распределения 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+тип станции 
+.RE
+.PP
+
+.SS "\fBSharedConst::StationType\fP ModelNS23817A620S1823::ArCoefsArray::getStationType (std::string strHeader)\fC [private]\fP"
+Выдача типа станции по строке заголовка данных одного вида амплитудного распределения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrHeader\fP строка заголовка данных по одному виду амплитудного распределения 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+тип станции 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ArCoefsArray::loadArCoefs (const std::list< std::string > & lstDataDirs)\fC [private]\fP"
+Загрузка векторов амплитудного распределения по антенне из файла\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<std::vector<std::vector<float> > > ModelNS23817A620S1823::ArCoefsArray::arCoefs\fC [private]\fP"
+вектора амплитудного распределения по антенне от 0\&. до 1\&. arCoefs[тип станции][номер АР][коэффициенты] 
+.SS "const uint32_t ModelNS23817A620S1823::ArCoefsArray::maxArTypes = 16\fC [static]\fP, \fC [private]\fP"
+максимальное количество векторов амплитудного распределения по антенне\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

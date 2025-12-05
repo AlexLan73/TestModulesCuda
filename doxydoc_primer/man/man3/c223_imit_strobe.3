@@ -1,0 +1,101 @@
+.TH "c223_imit_strobe" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+c223_imit_strobe \- Имитационный строб ФУ 223-й ячейки\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <223fc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBc223_imit_strobe\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBstrobe_begin\fP"
+.br
+.RI "Начало строба в дискретах\&. "
+.ti -1c
+.RI "uint32_t \fBstrobe_length\fP"
+.br
+.RI "Длина строба в дискретах\&. "
+.ti -1c
+.RI "uint32_t \fBnoise_n_posl_l\fP"
+.br
+.RI "Начальная последовательность для шума (младшая часть 40-битной последовательности)\&. "
+.ti -1c
+.RI "uint8_t \fBnoise_n_posl_h\fP"
+.br
+.RI "Начальная последовательность для шума (старшая часть 40-битной последовательности)\&. "
+.ti -1c
+.RI "uint8_t \fBpolar_and_n_objects\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBnoise_int\fP"
+.br
+.RI "Интенсивность шума в стробе\&. "
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP [4]"
+.br
+.ti -1c
+.RI "uint16_t \fBafr_int\fP [\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Интенсивность в каждом канале\&. "
+.ti -1c
+.RI "\fBc223_imit_object_params\fP \fBobjects\fP [\fBMAX_NR_OBJS\fP]"
+.br
+.RI "Имитируемые в стробе объекты\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Имитационный строб ФУ 223-й ячейки\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "c223_imit_strobe::c223_imit_strobe ()\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t c223_imit_strobe::_reserved0[4]"
+
+.SS "uint16_t c223_imit_strobe::afr_int[\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Интенсивность в каждом канале\&. 
+.SS "uint16_t c223_imit_strobe::noise_int"
+
+.PP
+Интенсивность шума в стробе\&. 
+.SS "uint8_t c223_imit_strobe::noise_n_posl_h"
+
+.PP
+Начальная последовательность для шума (старшая часть 40-битной последовательности)\&. 
+.SS "uint32_t c223_imit_strobe::noise_n_posl_l"
+
+.PP
+Начальная последовательность для шума (младшая часть 40-битной последовательности)\&. 
+.SS "\fBc223_imit_object_params\fP c223_imit_strobe::objects[\fBMAX_NR_OBJS\fP]"
+
+.PP
+Имитируемые в стробе объекты\&. 
+.SS "uint8_t c223_imit_strobe::polar_and_n_objects"
+Количество объектов в стробе (мл\&. 4 бита) и поляризация, которой принадлежит ячейка (ст\&. 4 бита), 0 - горизонтальная, 1 - вертикальная; по значению поляризации прошивка выбирает свой внутренний полином шума, разный для поляризаций\&. 
+.SS "uint32_t c223_imit_strobe::strobe_begin"
+
+.PP
+Начало строба в дискретах\&. 
+.SS "uint32_t c223_imit_strobe::strobe_length"
+
+.PP
+Длина строба в дискретах\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

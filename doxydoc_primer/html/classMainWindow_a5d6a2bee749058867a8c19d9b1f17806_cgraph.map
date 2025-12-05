@@ -1,0 +1,13 @@
+<map id="MainWindow::onRemoveItemBtnClicked" name="MainWindow::onRemoveItemBtnClicked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,219,79"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a3f900fc0b0134d599674b20f783788f1" title=" " alt="" coords="267,17,525,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,45,259,41,260,46,219,50"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#ad59eeef4d4e0d76653a0871594edb0af" title=" " alt="" coords="279,70,513,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,65,266,69,265,74,219,70"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a8af7fa91c7aa93ef056975924fc16938" title=" " alt="" coords="573,5,776,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="526,25,559,24,560,30,526,30"/>
+<area shape="rect" id="Node000005" href="$classMainWindow.html#adf31d2f21cd5a1adfa216ea607c9ce52" title=" " alt="" coords="575,70,775,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="513,80,561,80,561,85,513,85"/>
+<area shape="rect" id="Node000006" href="$classMainWindow.html#a838ad212ad5ef30828aef00e3b3ac5fe" title=" " alt="" coords="577,119,772,145"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="469,93,589,114,588,119,468,98"/>
+</map>

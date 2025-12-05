@@ -1,0 +1,32 @@
+\doxysection{Random\+Generator\+GPU.\+h}
+\hypertarget{RandomGeneratorGPU_8h_source}{}\label{RandomGeneratorGPU_8h_source}\index{src/RandomGeneratorGPU.h@{src/RandomGeneratorGPU.h}}
+\mbox{\hyperlink{RandomGeneratorGPU_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RANDOM\_GENERATOR\_GPU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RANDOM\_GENERATOR\_GPU\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRandomGeneratorGPU}{RandomGeneratorGPU}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classRandomGeneratorGPU_ada6ea0a3b8926b64a25bd94f440cd3bd}{RandomGeneratorGPU}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ seed,\ \textcolor{keywordtype}{float}\ max\_random,\ \textcolor{keywordtype}{size\_t}\ num\_points);}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classRandomGeneratorGPU_ac1742faec3b761e3c9c8e08d76f43de5}{\string~RandomGeneratorGPU}}();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRandomGeneratorGPU_ae72d80d8b71e065c089d8697f913c543}{generate}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRandomGeneratorGPU_ad94dfd7933340db320da7b37e91ea871}{applyLowPassConvolution}}(\textcolor{keywordtype}{int}\ kernel\_size);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRandomGeneratorGPU_a30a84f115b9b296bc22860eba30cefe6}{getSum}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<int16\_t>\ \mbox{\hyperlink{classRandomGeneratorGPU_a6d3f2f7b78e7ccd13d97340804f6e83b}{getRandomNumbers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRandomGeneratorGPU_a34130c770c19d4ba2c193bebe75cf2d3}{printFirst10}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classRandomGeneratorGPU_a1945c867c63fa245fb0bf2e8e5d408d9}{seed\_}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classRandomGeneratorGPU_afa8c7ecb5c7642e8de6b59d8a9c83382}{num\_points\_}};}
+\DoxyCodeLine{00021\ \ \ \ \ int16\_t*\ \mbox{\hyperlink{classRandomGeneratorGPU_a90d4662b3b932d22e16aecd55a80cdb3}{d\_random\_numbers\_}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRandomGeneratorGPU_aaad4e363eb9928944ab08d75db74a278}{max\_random\_}};}
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<int16\_t>\ \mbox{\hyperlink{classRandomGeneratorGPU_ad496dd4787e4028f46eee0aefed1d0ef}{h\_random\_numbers\_}};}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RANDOM\_GENERATOR\_GPU\_H}}
+
+\end{DoxyCode}

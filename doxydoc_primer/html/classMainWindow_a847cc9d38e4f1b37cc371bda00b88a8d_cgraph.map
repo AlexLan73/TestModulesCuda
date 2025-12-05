@@ -1,0 +1,11 @@
+<map id="MainWindow::displayTrprStrobeInfo" name="MainWindow::displayTrprStrobeInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,77,256,102"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a2f1b5bc08908e032fe8b9c249d6de779" title=" " alt="" coords="335,5,527,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,74,323,46,324,51,192,79"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#ab83b55e47063e052d072a5e9180c40a5" title=" " alt="" coords="311,69,552,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,87,297,87,297,92,256,92"/>
+<area shape="rect" id="Node000005" href="$classMainWindow.html#ac329254891477d655f502e938a716f01" title=" " alt="" coords="304,133,559,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="192,99,324,128,323,133,191,105"/>
+<area shape="rect" id="Node000004" href="$classMainWindow.html#a97fb829c3831b9bf24d0e88bbbab73a9" title=" " alt="" coords="607,77,837,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="552,87,593,87,593,92,552,92"/>
+</map>

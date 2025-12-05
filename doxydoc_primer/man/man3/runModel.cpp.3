@@ -1,0 +1,180 @@
+.TH "src/runModel.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/runModel.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <libutils/getenv\&.h>\fP
+.br
+\fC#include <libvork/simhelpers\&.h>\fP
+.br
+\fC#include <libutils/serdes\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <sys/resource\&.h>\fP
+.br
+\fC#include <sys/time\&.h>\fP
+.br
+\fC#include 'modelMain\&.h'\fP
+.br
+\fC#include 'sliceFile\&.h'\fP
+.br
+\fC#include 'runModel\&.h'\fP
+.br
+\fC#include 'helpers\&.h'\fP
+.br
+\fC#include 'blk223/blk223fc\&.h'\fP
+.br
+\fC#include 'blk223/model_wrapper\&.h'\fP
+.br
+\fC#include 'blk223/fcmgmt\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class A , class V > bool \fBopt_sum_is\fP (const optional< V > &optv)"
+.br
+.ti -1c
+.RI "static bool \fBpCallback\fP ()"
+.br
+.ti -1c
+.RI "bool \fBExists\fP (std::string path)"
+.br
+.ti -1c
+.RI "static \fBResourceUsage\fP \fBmakeResourceUsage\fP (const rusage &baseRusage, const rusage &finalRusage, const timeval &baseTime, const timeval &finalTime)"
+.br
+.ti -1c
+.RI "template<typename outT , typename inT > void \fBConvertForModel\fP (outT &out, const inT &in)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBConvertTrkpForModel\fP (\fBE2Trkp\fP &out, const T &in)"
+.br
+.ti -1c
+.RI "template<> void \fBConvertForModel\fP (\fBE2Trkp\fP &out, const EUTRKP_M_Rx &in)"
+.br
+.ti -1c
+.RI "template<> void \fBConvertForModel\fP (\fBE2Trkp\fP &out, const EUTRKP_CM_Rx &in)"
+.br
+.ti -1c
+.RI "template<> void \fBConvertForModel\fP (\fBE2Trkp\fP &out, const EUTRKP_MRIK_Rx &in)"
+.br
+.ti -1c
+.RI "template<> void \fBConvertForModel\fP (\fBE2Trkp\fP &out, const EUTRKP &in)"
+.br
+.ti -1c
+.RI "template<class T > uint \fBConvertMaskForModel\fP (\fBChannelsMask\fP &out, const T &in)"
+.br
+.ti -1c
+.RI "static uint \fBConvertMaskForModel\fP (\fBChannelsMask\fP &out, const EUMASK &in)"
+.br
+.ti -1c
+.RI "static E2IPPA \fBMakeDefaultIPPA\fP ()"
+.br
+.ti -1c
+.RI "template<class T > T \fBMakeDefaultKlb\fP ()"
+.br
+.ti -1c
+.RI "template<class T > T \fBMakeDefaultAfr\fP ()"
+.br
+.ti -1c
+.RI "EUTRKP \fBMakeDefaultKlb\fP (PositionNumber pos)"
+.br
+.ti -1c
+.RI "static EUTRKP \fBMakeDefaultAFR\fP (PositionNumber pos)"
+.br
+.ti -1c
+.RI "template<class T > T \fBMakeDefaultMask\fP ()"
+.br
+.ti -1c
+.RI "EUMASK \fBMakeDefaultMask\fP (PositionNumber pos)"
+.br
+.ti -1c
+.RI "static \fBStationParams\fP \fBMakeDefaultStationParams\fP (PositionNumber pos)"
+.br
+.ti -1c
+.RI "template<typename T > Result< optional< T > > \fBLoadMsg\fP (const std::string &file_path)"
+.br
+.ti -1c
+.RI "static Result< \fBModelInputBundle\fP > \fBLoadSeparateMessages\fP (const string &fcDirPath)"
+.br
+.ti -1c
+.RI "Result< \fBModelInputBundle\fP > \fBLoadInputMessages\fP (const optional< string > &optFcDirPath)"
+.br
+.ti -1c
+.RI "static Result< void > \fBcheckStationTypeIdentical\fP (const \fBModelInputBundle\fP &in)"
+.br
+.ti -1c
+.RI "Result< \fBModelOutput\fP > \fBRunModel\fP (const \fBModelInputBundle\fP &in, optional< string > outDirPath, bool *\fBstopFlag\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static bool * \fBstopFlag\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static Result< void > checkStationTypeIdentical (const \fBModelInputBundle\fP & in)\fC [static]\fP"
+
+.SS "template<> void ConvertForModel (\fBE2Trkp\fP & out, const EUTRKP & in)"
+
+.SS "template<> void ConvertForModel (\fBE2Trkp\fP & out, const EUTRKP_CM_Rx & in)"
+
+.SS "template<> void ConvertForModel (\fBE2Trkp\fP & out, const EUTRKP_M_Rx & in)"
+
+.SS "template<> void ConvertForModel (\fBE2Trkp\fP & out, const EUTRKP_MRIK_Rx & in)"
+
+.SS "template<typename outT , typename inT > void ConvertForModel (outT & out, const inT & in)"
+
+.SS "static uint ConvertMaskForModel (\fBChannelsMask\fP & out, const EUMASK & in)\fC [static]\fP"
+
+.SS "template<class T > uint ConvertMaskForModel (\fBChannelsMask\fP & out, const T & in)"
+
+.SS "template<typename T > void ConvertTrkpForModel (\fBE2Trkp\fP & out, const T & in)"
+
+.SS "bool Exists (std::string path)"
+
+.SS "Result< \fBModelInputBundle\fP > LoadInputMessages (const optional< string > & optFcDirPath)"
+
+.SS "template<typename T > Result< optional< T > > LoadMsg (const std::string & file_path)"
+
+.SS "static Result< \fBModelInputBundle\fP > LoadSeparateMessages (const string & fcDirPath)\fC [static]\fP"
+
+.SS "template<class T > T MakeDefaultAfr ()"
+
+.SS "static EUTRKP MakeDefaultAFR (PositionNumber pos)\fC [static]\fP"
+
+.SS "static E2IPPA MakeDefaultIPPA ()\fC [static]\fP"
+
+.SS "template<class T > T MakeDefaultKlb ()"
+
+.SS "EUTRKP MakeDefaultKlb (PositionNumber pos)"
+
+.SS "template<class T > T MakeDefaultMask ()"
+
+.SS "EUMASK MakeDefaultMask (PositionNumber pos)"
+
+.SS "static \fBStationParams\fP MakeDefaultStationParams (PositionNumber pos)\fC [static]\fP"
+
+.SS "static \fBResourceUsage\fP makeResourceUsage (const rusage & baseRusage, const rusage & finalRusage, const timeval & baseTime, const timeval & finalTime)\fC [static]\fP"
+
+.SS "template<class A , class V > bool opt_sum_is (const optional< V > & optv)"
+
+.SS "static bool pCallback ()\fC [static]\fP"
+
+.SS "Result< \fBModelOutput\fP > RunModel (const \fBModelInputBundle\fP & in, optional< string > outDirPath, bool * stopFlag)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "bool* stopFlag\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

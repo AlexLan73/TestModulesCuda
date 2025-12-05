@@ -1,0 +1,7 @@
+<map id="SliceViewer::analyzeDataShape" name="SliceViewer::analyzeDataShape">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,193,77"/>
+<area shape="rect" id="Node000002" href="$classSliceViewer.html#a9bd32e27ab4e3894efdd83fc8cd0d9b1" title=" " alt="" coords="241,5,456,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,43,227,38,228,43,194,48"/>
+<area shape="rect" id="Node000003" href="$classSliceViewer.html#a88e888cb9e0a7f6c50934f90972a4f5d" title=" " alt="" coords="255,69,442,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,67,242,73,242,78,193,72"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MainWindow::getItemPlacement" name="MainWindow::getItemPlacement">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,239,56"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#adf31d2f21cd5a1adfa216ea607c9ce52" title=" " alt="" coords="287,5,487,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,29,272,26,273,32,239,35"/>
+<area shape="rect" id="Node000003" href="$classMainWindow.html#a838ad212ad5ef30828aef00e3b3ac5fe" title=" " alt="" coords="289,55,484,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,51,276,55,275,60,239,57"/>
+</map>

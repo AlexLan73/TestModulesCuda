@@ -1,0 +1,7 @@
+<map id="validate_target_fctl_strobe" name="validate_target_fctl_strobe">
+<area shape="rect" id="Node000001" title="Функция производит валидацию целевых параметров строба СМ." alt="" coords="5,23,155,63"/>
+<area shape="rect" id="Node000002" href="$blk223fc_8cpp.html#a8a85adfb0e95e7444f67c03fcbaa04b5" title="Функция уточняет код режима АСП (ПК) для аппаратуры." alt="" coords="216,5,339,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,31,202,25,203,30,155,36"/>
+<area shape="rect" id="Node000003" href="$blk223_2libfc_8h.html#a6a371265ce3ce26dc9f50b22eb41240b" title="Проверка на соответствие типа строба помеховому." alt="" coords="203,55,352,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,50,189,54,189,59,155,55"/>
+</map>

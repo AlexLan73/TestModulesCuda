@@ -1,0 +1,227 @@
+\doxysection{src/mpk1/blk978/libfc.cpp File Reference}
+\hypertarget{blk978_2libfc_8cpp}{}\label{blk978_2libfc_8cpp}\index{src/mpk1/blk978/libfc.cpp@{src/mpk1/blk978/libfc.cpp}}
+
+
+Вспомогательные функции для работы с ФУ.  
+
+
+{\ttfamily \#include "{}libfc.\+h"{}}\newline
+{\ttfamily \#include $<$libvork/parsig.\+h$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for libfc.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk978_2libfc_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{blk978_2libfc_8cpp_a762edd2d8c7f72ecd18659ff376ea21d}{int\+\_\+abs}} (int v)
+\item 
+unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_ae5eda4589f2706efaf13730025e2ef73}{mylog2}} (unsigned v)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{blk978_2libfc_8cpp_aedf73c64578296f15e49f0b3f2941354}{calc\+\_\+nmassht\+\_\+fm}} (int ndfm, int32\+\_\+t nihs)
+\item 
+int \mbox{\hyperlink{blk978_2libfc_8cpp_af889ec125463699264ac5356a1ad4bc1}{map\+\_\+tips}} (const struct TStrobe \&s)
+\begin{DoxyCompactList}\small\item\em Преобразует сетевой код типа строба к коду карты памяти прошивки. \end{DoxyCompactList}\item 
+static tuple$<$ uint8\+\_\+t, uint8\+\_\+t $>$ \mbox{\hyperlink{blk978_2libfc_8cpp_acf7ac68cb0655fe69cf60e98c65d8f61}{assign\+\_\+blk232\+\_\+inputs}} (uint8\+\_\+t mask979, uint8\+\_\+t mask232)
+\item 
+static tuple$<$ uint, uint $>$ \mbox{\hyperlink{blk978_2libfc_8cpp_ac2effc63cfa3d66da38751a916661a0d}{frags}} (const TStrobe \&netstrb, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&unistrb)
+\item 
+void \mbox{\hyperlink{blk978_2libfc_8cpp_ae0a6da62c837f3cb9961b27a74d1cc3d}{fill\+\_\+wire\+\_\+header}} (const TStrobe \&netstrb, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&unistrb, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsg\+Shared\+Types\+::\+Imit\+Tact}} \&unitact, cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&wirehd)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a28f20e6f50c0bdcd2aa005a6e5240b59}{BLK232\+\_\+\+EN\+\_\+\+IO1}} = 1 $<$$<$ 0
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 1. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a82b460e1659285dd403e843a21242aa5}{BLK232\+\_\+\+EN\+\_\+\+IO2}} = 1 $<$$<$ 1
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 2. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a33fd89e651df3f2096cefaa5bb2de274}{BLK232\+\_\+\+EN\+\_\+\+IO4}} = 1 $<$$<$ 2
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 4. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a85a005f4f43bf158792a596963706653}{BLK232\+\_\+\+EN\+\_\+\+IO5}} = 1 $<$$<$ 3
+\begin{DoxyCompactList}\small\item\em Использовать вход I/O 5. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a1393dd69e89c0d9d9c95b30ea65c230b}{BLK979\+\_\+\+HORZ\+\_\+\+UPPER}} = 1 $<$$<$ 3
+\begin{DoxyCompactList}\small\item\em верхний 979 в ГП \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a8cefc3c6c05de3863da333cead6e0665}{BLK979\+\_\+\+HORZ\+\_\+\+LOWER}} = 1 $<$$<$ 2
+\begin{DoxyCompactList}\small\item\em нижний 979 в ВП \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_a1df918d2d05aa76e99254dac7e974a4a}{BLK979\+\_\+\+VERT\+\_\+\+UPPER}} = 1 $<$$<$ 1
+\begin{DoxyCompactList}\small\item\em верхний 979 в ВП \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{blk978_2libfc_8cpp_adcc2a2ccfb41f10a6b4375a5858d70a1}{BLK979\+\_\+\+VERT\+\_\+\+LOWER}} = 1 $<$$<$ 0
+\begin{DoxyCompactList}\small\item\em нижний 979 в ВП \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Вспомогательные функции для работы с ФУ. 
+
+\begin{DoxyAuthor}{Author}
+vmg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27.\+11.\+2015 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{blk978_2libfc_8cpp_acf7ac68cb0655fe69cf60e98c65d8f61}\label{blk978_2libfc_8cpp_acf7ac68cb0655fe69cf60e98c65d8f61} 
+\index{libfc.cpp@{libfc.cpp}!assign\_blk232\_inputs@{assign\_blk232\_inputs}}
+\index{assign\_blk232\_inputs@{assign\_blk232\_inputs}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{assign\_blk232\_inputs()}{assign\_blk232\_inputs()}}
+{\footnotesize\ttfamily static tuple$<$ uint8\+\_\+t, uint8\+\_\+t $>$ assign\+\_\+blk232\+\_\+inputs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mask979,  }\item[{uint8\+\_\+t}]{mask232 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+заполняет маски управления входами 232 блока (I/O x 233 ячейки) возвращает пару (маска блока232 ВП, маска блока 232 ГП) \Hypertarget{blk978_2libfc_8cpp_aedf73c64578296f15e49f0b3f2941354}\label{blk978_2libfc_8cpp_aedf73c64578296f15e49f0b3f2941354} 
+\index{libfc.cpp@{libfc.cpp}!calc\_nmassht\_fm@{calc\_nmassht\_fm}}
+\index{calc\_nmassht\_fm@{calc\_nmassht\_fm}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{calc\_nmassht\_fm()}{calc\_nmassht\_fm()}}
+{\footnotesize\ttfamily static uint32\+\_\+t calc\+\_\+nmassht\+\_\+fm (\begin{DoxyParamCaption}\item[{int}]{ndfm,  }\item[{int32\+\_\+t}]{nihs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Расчет количества повторений знаков ФМ на длительности дискрета фазоманипуляции \Hypertarget{blk978_2libfc_8cpp_ae0a6da62c837f3cb9961b27a74d1cc3d}\label{blk978_2libfc_8cpp_ae0a6da62c837f3cb9961b27a74d1cc3d} 
+\index{libfc.cpp@{libfc.cpp}!fill\_wire\_header@{fill\_wire\_header}}
+\index{fill\_wire\_header@{fill\_wire\_header}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{fill\_wire\_header()}{fill\_wire\_header()}}
+{\footnotesize\ttfamily void fill\+\_\+wire\+\_\+header (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{netstrb,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&}]{unistrb,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsg\+Shared\+Types\+::\+Imit\+Tact}} \&}]{unitact,  }\item[{cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \&}]{wirehd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blk978_2libfc_8cpp_ae0a6da62c837f3cb9961b27a74d1cc3d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk978_2libfc_8cpp_ac2effc63cfa3d66da38751a916661a0d}\label{blk978_2libfc_8cpp_ac2effc63cfa3d66da38751a916661a0d} 
+\index{libfc.cpp@{libfc.cpp}!frags@{frags}}
+\index{frags@{frags}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{frags()}{frags()}}
+{\footnotesize\ttfamily static tuple$<$ uint, uint $>$ frags (\begin{DoxyParamCaption}\item[{const TStrobe \&}]{netstrb,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&}]{unistrb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Вычисляет количество фрагментов, на которые дробится полотно, и количество некогерентно объединяемых фрагментов (например, если fr == 8 и fruni == 2, то в результате объединения 8 фрагментов получается 4) \Hypertarget{blk978_2libfc_8cpp_a762edd2d8c7f72ecd18659ff376ea21d}\label{blk978_2libfc_8cpp_a762edd2d8c7f72ecd18659ff376ea21d} 
+\index{libfc.cpp@{libfc.cpp}!int\_abs@{int\_abs}}
+\index{int\_abs@{int\_abs}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{int\_abs()}{int\_abs()}}
+{\footnotesize\ttfamily int int\+\_\+abs (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{blk978_2libfc_8cpp_af889ec125463699264ac5356a1ad4bc1}\label{blk978_2libfc_8cpp_af889ec125463699264ac5356a1ad4bc1} 
+\index{libfc.cpp@{libfc.cpp}!map\_tips@{map\_tips}}
+\index{map\_tips@{map\_tips}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{map\_tips()}{map\_tips()}}
+{\footnotesize\ttfamily int map\+\_\+tips (\begin{DoxyParamCaption}\item[{const struct TStrobe \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Преобразует сетевой код типа строба к коду карты памяти прошивки. 
+
+Функция сопоставляет известные типы строба с переданным в аргументах вызова. Если удалось определить тип строба, возвращается соответствующий тип строба ПЛИС, иначе возбуждается программное исключение. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Ссылка на буфер сообщения ТРПР. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает код типа строба прошивки. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{blk978_2libfc_8cpp_af889ec125463699264ac5356a1ad4bc1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{blk978_2libfc_8cpp_ae5eda4589f2706efaf13730025e2ef73}\label{blk978_2libfc_8cpp_ae5eda4589f2706efaf13730025e2ef73} 
+\index{libfc.cpp@{libfc.cpp}!mylog2@{mylog2}}
+\index{mylog2@{mylog2}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{mylog2()}{mylog2()}}
+{\footnotesize\ttfamily unsigned mylog2 (\begin{DoxyParamCaption}\item[{unsigned}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{blk978_2libfc_8cpp_a28f20e6f50c0bdcd2aa005a6e5240b59}\label{blk978_2libfc_8cpp_a28f20e6f50c0bdcd2aa005a6e5240b59} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO1@{BLK232\_EN\_IO1}}
+\index{BLK232\_EN\_IO1@{BLK232\_EN\_IO1}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO1}{BLK232\_EN\_IO1}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO1 = 1 $<$$<$ 0}
+
+
+
+Использовать вход I/O 1. 
+
+На 233 ячейке используются 4 входа (из 5) -\/ I/O 1, I/O 2, I/O 4, I/O 5 (IO3 не используется). На борту каждой поляризации установлено по 1 блоку, "{}своя"{} поляризация"{} подсоединена к I/O 1 и I/O 2 (к I/O 1 подсоединен верхний блок 979, к I/O 2 -\/ нижний); чужая -\/ к I/O 4 и I/O 5 (верхний и нижний блоки 979, соответственно). Выбор используемых входов управляется битовыми масками mode\+\_\+in\+\_\+sfp\+\_\+\{v,g\}p; соответствие битов входам описано ниже.
+
+Битовые маски задают и количество обрабатываемых поляризаций -\/ если включены по 1 входу с разных поляризаций (I/O 1 и I/O 4, например), то 233 ячейка обрабатывает 2 поляризации, иначе -\/ одну (ту, которая подключена к соответствующим входам); от этого зависит формат выдаваемых ПЛИСами данных.
+
+Каждый 232 блок имеет право обрабатывать либо свою поляризацию, либо свою и чужую (хотя есть техническая возможность обрабатывать только чужую, это запрещено); в каждый момент времени могут быть включены не более 2-\/х входов (таким образом, количество единичных битов в mode\+\_\+in\+\_\+sfp\+\_\+\texorpdfstring{$\ast$}{*} соответствует количеству обрабатываемых поляризаций).
+
+Биты mode\+\_\+in\+\_\+sfp\+\_\+\texorpdfstring{$\ast$}{*} задаются на основании битов поля, которое по историческим причинам называется mask232. Это массив из двух байтов\+: mask232\mbox{[}0\mbox{]}-\/ маска 979 блоков, бит 3\+: верхний 979 ГП бит 2\+: нижний 979 ГП бит 1\+: верхний 979 ВП бит 0\+: нижний 979 ВП (т.\+е. нижние блоки соответствуют младшим битам) mask232\mbox{[}1\mbox{]}-\/ маска 232 блоков, бит 1\+: 232 блок ГП бит 0\+: 232 блок ВП Биты в mode\+\_\+in\+\_\+sfp\+\_\+\{v,g\} \Hypertarget{blk978_2libfc_8cpp_a82b460e1659285dd403e843a21242aa5}\label{blk978_2libfc_8cpp_a82b460e1659285dd403e843a21242aa5} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO2@{BLK232\_EN\_IO2}}
+\index{BLK232\_EN\_IO2@{BLK232\_EN\_IO2}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO2}{BLK232\_EN\_IO2}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO2 = 1 $<$$<$ 1}
+
+
+
+Использовать вход I/O 2. 
+
+\Hypertarget{blk978_2libfc_8cpp_a33fd89e651df3f2096cefaa5bb2de274}\label{blk978_2libfc_8cpp_a33fd89e651df3f2096cefaa5bb2de274} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO4@{BLK232\_EN\_IO4}}
+\index{BLK232\_EN\_IO4@{BLK232\_EN\_IO4}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO4}{BLK232\_EN\_IO4}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO4 = 1 $<$$<$ 2}
+
+
+
+Использовать вход I/O 4. 
+
+\Hypertarget{blk978_2libfc_8cpp_a85a005f4f43bf158792a596963706653}\label{blk978_2libfc_8cpp_a85a005f4f43bf158792a596963706653} 
+\index{libfc.cpp@{libfc.cpp}!BLK232\_EN\_IO5@{BLK232\_EN\_IO5}}
+\index{BLK232\_EN\_IO5@{BLK232\_EN\_IO5}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK232\_EN\_IO5}{BLK232\_EN\_IO5}}
+{\footnotesize\ttfamily const unsigned BLK232\+\_\+\+EN\+\_\+\+IO5 = 1 $<$$<$ 3}
+
+
+
+Использовать вход I/O 5. 
+
+\Hypertarget{blk978_2libfc_8cpp_a8cefc3c6c05de3863da333cead6e0665}\label{blk978_2libfc_8cpp_a8cefc3c6c05de3863da333cead6e0665} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_HORZ\_LOWER@{BLK979\_HORZ\_LOWER}}
+\index{BLK979\_HORZ\_LOWER@{BLK979\_HORZ\_LOWER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_HORZ\_LOWER}{BLK979\_HORZ\_LOWER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+HORZ\+\_\+\+LOWER = 1 $<$$<$ 2}
+
+
+
+нижний 979 в ВП 
+
+\Hypertarget{blk978_2libfc_8cpp_a1393dd69e89c0d9d9c95b30ea65c230b}\label{blk978_2libfc_8cpp_a1393dd69e89c0d9d9c95b30ea65c230b} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_HORZ\_UPPER@{BLK979\_HORZ\_UPPER}}
+\index{BLK979\_HORZ\_UPPER@{BLK979\_HORZ\_UPPER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_HORZ\_UPPER}{BLK979\_HORZ\_UPPER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+HORZ\+\_\+\+UPPER = 1 $<$$<$ 3}
+
+
+
+верхний 979 в ГП 
+
+биты в маске 979 \Hypertarget{blk978_2libfc_8cpp_adcc2a2ccfb41f10a6b4375a5858d70a1}\label{blk978_2libfc_8cpp_adcc2a2ccfb41f10a6b4375a5858d70a1} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_VERT\_LOWER@{BLK979\_VERT\_LOWER}}
+\index{BLK979\_VERT\_LOWER@{BLK979\_VERT\_LOWER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_VERT\_LOWER}{BLK979\_VERT\_LOWER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+VERT\+\_\+\+LOWER = 1 $<$$<$ 0}
+
+
+
+нижний 979 в ВП 
+
+\Hypertarget{blk978_2libfc_8cpp_a1df918d2d05aa76e99254dac7e974a4a}\label{blk978_2libfc_8cpp_a1df918d2d05aa76e99254dac7e974a4a} 
+\index{libfc.cpp@{libfc.cpp}!BLK979\_VERT\_UPPER@{BLK979\_VERT\_UPPER}}
+\index{BLK979\_VERT\_UPPER@{BLK979\_VERT\_UPPER}!libfc.cpp@{libfc.cpp}}
+\doxysubsubsection{\texorpdfstring{BLK979\_VERT\_UPPER}{BLK979\_VERT\_UPPER}}
+{\footnotesize\ttfamily const unsigned BLK979\+\_\+\+VERT\+\_\+\+UPPER = 1 $<$$<$ 1}
+
+
+
+верхний 979 в ВП 
+

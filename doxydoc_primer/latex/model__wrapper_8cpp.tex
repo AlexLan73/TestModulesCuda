@@ -1,0 +1,365 @@
+\doxysection{src/mpk1/blk223/model\+\_\+wrapper.cpp File Reference}
+\hypertarget{model__wrapper_8cpp}{}\label{model__wrapper_8cpp}\index{src/mpk1/blk223/model\_wrapper.cpp@{src/mpk1/blk223/model\_wrapper.cpp}}
+
+
+Обертка для расчетной части модели.  
+
+
+{\ttfamily \#include "{}model\+\_\+wrapper.\+h"{}}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$libutils/ptime.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/optional.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/defs.\+h$>$}\newline
+Include dependency graph for model\+\_\+wrapper.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model__wrapper_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{model__wrapper_8cpp_aa786fc43d4857c3ab9f2c777b4e6f9c5}{DPRINTF}}(...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{model__wrapper_8cpp_a27f903d02e80fd7e7c4a27c84870cad8}{mw\+\_\+init}} (const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} station\+\_\+type, const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polarization\+\_\+type, const unsigned crate\+\_\+num, const int rek\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Инициализация обертки модели. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model__wrapper_8cpp_a850931dbc17e18bd5101b8b159efd31c}{mw\+\_\+free}} (void)
+\begin{DoxyCompactList}\small\item\em Деинициализирует обертку модели. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{model__wrapper_8cpp_a27f05b2e715f2b803fbdfc8ba96cc8c4}{intersect\+\_\+masks}} (const \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \texorpdfstring{$\ast$}{*}e2mask, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}res\+\_\+masks)
+\begin{DoxyCompactList}\small\item\em Пересечение множеств маски используемых и требуемых каналов. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{model__wrapper_8cpp_aa51192ab7c2bc41e6cbedad0d8a8d121}{convert\+\_\+mask\+\_\+for\+\_\+model}} (const \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \texorpdfstring{$\ast$}{*}e2mask, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}res\+\_\+mask)
+\begin{DoxyCompactList}\small\item\em Пересечение множеств маски используемых и требуемых каналов. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{model__wrapper_8cpp_a083c71b8bb5c0fb2195db586ab64449f}{get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell}} (const unsigned crate\+\_\+num, const unsigned cell\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Рассчитывает номер первого канала для заданной ячейки. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{model__wrapper_8cpp_ab32de23dea6bf0a72185933abcc6d818}{get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell}} ()
+\begin{DoxyCompactList}\small\item\em Рассчитывает номер первого канала для текущей ячейки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model__wrapper_8cpp_a45c408761988c26e1f9fc1ad30384fe1}{convert\+\_\+trkp\+\_\+for\+\_\+model}} (const \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&in, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&out)
+\begin{DoxyCompactList}\small\item\em Функция конвертирует структуру сообщения Е2ТРКП в формат модели. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \mbox{\hyperlink{model__wrapper_8cpp_a744b2067b76d7d31d18b0b534d32099b}{compute\+\_\+fc}} (const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}fcqp)
+\begin{DoxyCompactList}\small\item\em Формирует УС для всех стробов на ячейки и поляризации, заданные маской. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model__wrapper_8cpp_af2fd66fc046cfbd338094a55f08a462d}{mw\+\_\+mark\+\_\+cell\+\_\+in\+\_\+ch\+\_\+mask}} (const unsigned crate\+\_\+num, const unsigned cell\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Помечает указанную ячейку в маске каналов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} \mbox{\hyperlink{model__wrapper_8cpp_aeb5dabe4851071484f4cbfae8896c034}{g\+\_\+station\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Тип станции. \end{DoxyCompactList}\item 
+static enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{model__wrapper_8cpp_a7c25349817780a9ffc344e42c16c7ac3}{g\+\_\+polarization\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Тип поляризации. \end{DoxyCompactList}\item 
+static unsigned \mbox{\hyperlink{model__wrapper_8cpp_af4806d2736c9a4ad6ada46318a25f447}{g\+\_\+crate\+\_\+num}} = 0
+\begin{DoxyCompactList}\small\item\em Номер блока. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{model__wrapper_8cpp_ab4edb767fffd1acffd4fe13d3b40855c}{g\+\_\+rek\+\_\+number}} = 1
+\begin{DoxyCompactList}\small\item\em Номер контейнера. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \mbox{\hyperlink{model__wrapper_8cpp_a2ebf215817a2ca7b910ab60764efc225}{g\+\_\+ch\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Текущая маска каналов. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{model__wrapper_8cpp_aedeffc7d23da25d52b9a50045189fe2b}{initialized}} = false
+\begin{DoxyCompactList}\small\item\em Признак инициализации обертки. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Station\+Params}} \mbox{\hyperlink{model__wrapper_8cpp_a85478481b32c056e22c07da9beff1cdb}{station\+\_\+params}}
+\begin{DoxyCompactList}\small\item\em Параметры станции. \end{DoxyCompactList}\item 
+static vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \mbox{\hyperlink{model__wrapper_8cpp_a9e49c7c5e804407d8d849083509c58df}{result\+\_\+cmsgs}}
+\begin{DoxyCompactList}\small\item\em Набор управляющих сообщений. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{model__wrapper_8cpp_a32069b8dcb53d6a13ca8841265d1d218}{model}}
+\begin{DoxyCompactList}\small\item\em Объект модели. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Обертка для расчетной части модели. 
+
+Данная обертка предназначена для упрощенного вызова расчетной части модели в виде, удобного для ФПО. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{model__wrapper_8cpp_aa786fc43d4857c3ab9f2c777b4e6f9c5}\label{model__wrapper_8cpp_aa786fc43d4857c3ab9f2c777b4e6f9c5} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!DPRINTF@{DPRINTF}}
+\index{DPRINTF@{DPRINTF}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{DPRINTF}{DPRINTF}}
+{\footnotesize\ttfamily \#define DPRINTF(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{model__wrapper_8cpp_a744b2067b76d7d31d18b0b534d32099b}\label{model__wrapper_8cpp_a744b2067b76d7d31d18b0b534d32099b} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!compute\_fc@{compute\_fc}}
+\index{compute\_fc@{compute\_fc}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{compute\_fc()}{compute\_fc()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ compute\+\_\+fc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structfcq}{fcq}} \texorpdfstring{$\ast$}{*}}]{fcqp }\end{DoxyParamCaption})}
+
+
+
+Формирует УС для всех стробов на ячейки и поляризации, заданные маской. 
+
+Функция готовит входные данные для расчета УС в модели, вызывает расчет УС и возвращает полученный вектор УС как результат. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fcqp} & Указатель структуру кванта ФУ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает вектор рассчитанных управляющих сообщений. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{model__wrapper_8cpp_a744b2067b76d7d31d18b0b534d32099b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model__wrapper_8cpp_aa51192ab7c2bc41e6cbedad0d8a8d121}\label{model__wrapper_8cpp_aa51192ab7c2bc41e6cbedad0d8a8d121} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!convert\_mask\_for\_model@{convert\_mask\_for\_model}}
+\index{convert\_mask\_for\_model@{convert\_mask\_for\_model}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{convert\_mask\_for\_model()}{convert\_mask\_for\_model()}}
+{\footnotesize\ttfamily static void convert\+\_\+mask\+\_\+for\+\_\+model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \texorpdfstring{$\ast$}{*}}]{e2mask,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{res\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Пересечение множеств маски используемых и требуемых каналов. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em e2mask} & Указатель на буфер сообщения МАСК. \\
+\hline
+\mbox{\texttt{ out}}  & {\em res\+\_\+masks} & Указатель на результирующую маску каналов. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8cpp_a45c408761988c26e1f9fc1ad30384fe1}\label{model__wrapper_8cpp_a45c408761988c26e1f9fc1ad30384fe1} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!convert\_trkp\_for\_model@{convert\_trkp\_for\_model}}
+\index{convert\_trkp\_for\_model@{convert\_trkp\_for\_model}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{convert\_trkp\_for\_model()}{convert\_trkp\_for\_model()}}
+{\footnotesize\ttfamily void convert\+\_\+trkp\+\_\+for\+\_\+model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}} \&}]{in,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Функция конвертирует структуру сообщения Е2ТРКП в формат модели. 
+
+Функция конвертирует входящую структуру сообщения Е2ТРКП из формата библиотеки libvork в формат модели. Технически обе структуры одинаковы, разница существует лишь в их описании\+: структура модели сделана иерархической с вынесенным заголовком, структура libvork же сделана плоской. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in} & Структура сообщения в формате libvork. \\
+\hline
+\mbox{\texttt{ out}}  & {\em out} & Структура сообщения в формате модели. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8cpp_ab32de23dea6bf0a72185933abcc6d818}\label{model__wrapper_8cpp_ab32de23dea6bf0a72185933abcc6d818} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}}
+\index{get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_first\_channel\_in\_cell()}{get\_first\_channel\_in\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает номер первого канала для текущей ячейки. 
+
+Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата. \begin{DoxyReturn}{Returns}
+Возвращает номер первого канала для текущей ячейки. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{model__wrapper_8cpp_ab32de23dea6bf0a72185933abcc6d818_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model__wrapper_8cpp_a083c71b8bb5c0fb2195db586ab64449f}\label{model__wrapper_8cpp_a083c71b8bb5c0fb2195db586ab64449f} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}}
+\index{get\_first\_channel\_in\_cell@{get\_first\_channel\_in\_cell}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_first\_channel\_in\_cell()}{get\_first\_channel\_in\_cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned get\+\_\+first\+\_\+channel\+\_\+in\+\_\+cell (\begin{DoxyParamCaption}\item[{const unsigned}]{crate\+\_\+num,  }\item[{const unsigned}]{cell\+\_\+num = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает номер первого канала для заданной ячейки. 
+
+Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em crate\+\_\+num} & Номер блока. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+\_\+num} & Номер ячейки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает номер первого канала для заданной ячейки. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8cpp_a27f05b2e715f2b803fbdfc8ba96cc8c4}\label{model__wrapper_8cpp_a27f05b2e715f2b803fbdfc8ba96cc8c4} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!intersect\_masks@{intersect\_masks}}
+\index{intersect\_masks@{intersect\_masks}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{intersect\_masks()}{intersect\_masks()}}
+{\footnotesize\ttfamily static void intersect\+\_\+masks (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}} \texorpdfstring{$\ast$}{*}}]{e2mask,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{res\+\_\+masks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Пересечение множеств маски используемых и требуемых каналов. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em e2mask} & Указатель на буфер сообщения МАСК. \\
+\hline
+\mbox{\texttt{ out}}  & {\em res\+\_\+masks} & Указатель на результирующую маску каналов. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8cpp_a850931dbc17e18bd5101b8b159efd31c}\label{model__wrapper_8cpp_a850931dbc17e18bd5101b8b159efd31c} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!mw\_free@{mw\_free}}
+\index{mw\_free@{mw\_free}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{mw\_free()}{mw\_free()}}
+{\footnotesize\ttfamily void mw\+\_\+free (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Деинициализирует обертку модели. 
+
+Ввиду статического распределния памяти для обертки модели, принудительного высвобождения какой-\/то либо памяти не требуется, поэтому данная функция просто сбрасывает признак инициализации обертки модели. \begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+\Hypertarget{model__wrapper_8cpp_a27f903d02e80fd7e7c4a27c84870cad8}\label{model__wrapper_8cpp_a27f903d02e80fd7e7c4a27c84870cad8} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!mw\_init@{mw\_init}}
+\index{mw\_init@{mw\_init}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{mw\_init()}{mw\_init()}}
+{\footnotesize\ttfamily void mw\+\_\+init (\begin{DoxyParamCaption}\item[{const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{station\+\_\+type,  }\item[{const enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polarization\+\_\+type,  }\item[{const unsigned}]{crate\+\_\+num,  }\item[{const int}]{rek\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Инициализация обертки модели. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{model__wrapper_8cpp_a27f903d02e80fd7e7c4a27c84870cad8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model__wrapper_8cpp_af2fd66fc046cfbd338094a55f08a462d}\label{model__wrapper_8cpp_af2fd66fc046cfbd338094a55f08a462d} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!mw\_mark\_cell\_in\_ch\_mask@{mw\_mark\_cell\_in\_ch\_mask}}
+\index{mw\_mark\_cell\_in\_ch\_mask@{mw\_mark\_cell\_in\_ch\_mask}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{mw\_mark\_cell\_in\_ch\_mask()}{mw\_mark\_cell\_in\_ch\_mask()}}
+{\footnotesize\ttfamily void mw\+\_\+mark\+\_\+cell\+\_\+in\+\_\+ch\+\_\+mask (\begin{DoxyParamCaption}\item[{const unsigned}]{crate\+\_\+num,  }\item[{const unsigned}]{cell\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Помечает указанную ячейку в маске каналов. 
+
+Функция сначала определяет местоположение первого относительного канала в общем списке каналов полотна, а затем, ввиду того, что каналы для отдельных ячеек в массиве расположены последовательно, нужные каналы помечает как используемые. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em crate\+\_\+num} & Номер блока. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+\_\+num} & Номер ячейки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ничего не возвращает. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model__wrapper_8cpp_af2fd66fc046cfbd338094a55f08a462d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{model__wrapper_8cpp_a2ebf215817a2ca7b910ab60764efc225}\label{model__wrapper_8cpp_a2ebf215817a2ca7b910ab60764efc225} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!g\_ch\_mask@{g\_ch\_mask}}
+\index{g\_ch\_mask@{g\_ch\_mask}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_ch\_mask}{g\_ch\_mask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} g\+\_\+ch\+\_\+mask\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Текущая маска каналов. 
+
+\Hypertarget{model__wrapper_8cpp_af4806d2736c9a4ad6ada46318a25f447}\label{model__wrapper_8cpp_af4806d2736c9a4ad6ada46318a25f447} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!g\_crate\_num@{g\_crate\_num}}
+\index{g\_crate\_num@{g\_crate\_num}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_crate\_num}{g\_crate\_num}}
+{\footnotesize\ttfamily unsigned g\+\_\+crate\+\_\+num = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Номер блока. 
+
+\Hypertarget{model__wrapper_8cpp_a7c25349817780a9ffc344e42c16c7ac3}\label{model__wrapper_8cpp_a7c25349817780a9ffc344e42c16c7ac3} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!g\_polarization\_type@{g\_polarization\_type}}
+\index{g\_polarization\_type@{g\_polarization\_type}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_polarization\_type}{g\_polarization\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} g\+\_\+polarization\+\_\+type\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Тип поляризации. 
+
+\Hypertarget{model__wrapper_8cpp_ab4edb767fffd1acffd4fe13d3b40855c}\label{model__wrapper_8cpp_ab4edb767fffd1acffd4fe13d3b40855c} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!g\_rek\_number@{g\_rek\_number}}
+\index{g\_rek\_number@{g\_rek\_number}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_rek\_number}{g\_rek\_number}}
+{\footnotesize\ttfamily int g\+\_\+rek\+\_\+number = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Номер контейнера. 
+
+\Hypertarget{model__wrapper_8cpp_aeb5dabe4851071484f4cbfae8896c034}\label{model__wrapper_8cpp_aeb5dabe4851071484f4cbfae8896c034} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!g\_station\_type@{g\_station\_type}}
+\index{g\_station\_type@{g\_station\_type}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_station\_type}{g\_station\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} g\+\_\+station\+\_\+type\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Тип станции. 
+
+\Hypertarget{model__wrapper_8cpp_aedeffc7d23da25d52b9a50045189fe2b}\label{model__wrapper_8cpp_aedeffc7d23da25d52b9a50045189fe2b} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!initialized@{initialized}}
+\index{initialized@{initialized}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily bool initialized = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Признак инициализации обертки. 
+
+\Hypertarget{model__wrapper_8cpp_a32069b8dcb53d6a13ca8841265d1d218}\label{model__wrapper_8cpp_a32069b8dcb53d6a13ca8841265d1d218} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!model@{model}}
+\index{model@{model}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Interface}}\texorpdfstring{$\ast$}{*} model\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объект модели. 
+
+\Hypertarget{model__wrapper_8cpp_a9e49c7c5e804407d8d849083509c58df}\label{model__wrapper_8cpp_a9e49c7c5e804407d8d849083509c58df} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!result\_cmsgs@{result\_cmsgs}}
+\index{result\_cmsgs@{result\_cmsgs}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{result\_cmsgs}{result\_cmsgs}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}}$>$ result\+\_\+cmsgs\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Набор управляющих сообщений. 
+
+\Hypertarget{model__wrapper_8cpp_a85478481b32c056e22c07da9beff1cdb}\label{model__wrapper_8cpp_a85478481b32c056e22c07da9beff1cdb} 
+\index{model\_wrapper.cpp@{model\_wrapper.cpp}!station\_params@{station\_params}}
+\index{station\_params@{station\_params}!model\_wrapper.cpp@{model\_wrapper.cpp}}
+\doxysubsubsection{\texorpdfstring{station\_params}{station\_params}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Station\+Params}} station\+\_\+params\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Параметры станции. 
+

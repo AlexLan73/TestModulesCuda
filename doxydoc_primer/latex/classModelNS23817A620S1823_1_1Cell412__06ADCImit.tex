@@ -1,0 +1,347 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Cell412\+\_\+06\+ADCImit Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit}{}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit}\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+
+
+{\ttfamily \#include $<$c412\+\_\+06\+ADCImitator.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Cell412\+\_\+06\+ADCImit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a2e1f9e7f669ea0eab296468b269a0a8d}{Cell412\+\_\+06\+ADCImit}} ()
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ab910d6498e4074ff7f8a241ed7b92e18}{\texorpdfstring{$\sim$}{\string~}\+Cell412\+\_\+06\+ADCImit}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0d372bb16bf1cafb0018f921f05c46b1}{get\+Channel\+Data}} (uint32\+\_\+t chan\+Num, int32\+\_\+t channel\+Data\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a6a01ca1f670170b1658abcf2583a5070}{set\+Control\+Message}} (const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a36db21e11dd5e83c27dbe4d881e72105}{control\+Msg}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ac27f80eb95cb8d8e47c621975c07c864}{gen\+Self\+Noise}} (uint32\+\_\+t chan\+Num, int32\+\_\+t channel\+Data\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a10caa9df4b7bce33eb9483c38bf67e8a}{gen\+Interf\+Noise}} (int32\+\_\+t channel\+Data\mbox{[}$\,$\mbox{]}, uint32\+\_\+t interf\+Index)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a4d2b0820c238d4acb2708b00a5b7ab5c}{gen\+Interf\+Image}} (uint32\+\_\+t obj\+Num)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ad563b8e792379098f6192753fd59adb7}{gen\+Signal\+Image}} (uint32\+\_\+t obj\+Num)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a00b8c891ef76042b22997f9ec4c70495}{gen\+Object}} (uint32\+\_\+t obj\+Num, uint32\+\_\+t chan\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0a92e0e23b25681d6f13ae59c09bd87d}{gen\+Carrier\+Freq}} (uint32\+\_\+t obj\+Num, uint32\+\_\+t chan\+Num, uint32\+\_\+t obj\+Length)
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_afed2a557f6971b66dfb9ef8a5598cfbb}{calc\+Nk}} (uint32\+\_\+t obj\+Num) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abbfcd98598a977247f4f8fc6d6b7d25a}{calc\+Ndk}} (uint32\+\_\+t obj\+Num) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a5d84eba988fd6d880d9bf1f296df18d7}{apply\+Kaiser\+On\+Signal}} (uint32\+\_\+t curr\+Length)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a288079c0e8135b1e313769c2086bc864}{object\+Data}} \mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{max\+Obj\+Length}}\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a25fa52e8c5032e5cc271fa8ebd2cb831}{object\+Image}} \mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{max\+Obj\+Length}}\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_acffa25bfb8c4995028ef28146d92137f}{interf\+Image\+Tmp}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a5449c6568ae7abe0cdc19abedf1c0284}{Shared\+Const\+::max\+Interf\+Band\+Width}}\mbox{]}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a36db21e11dd5e83c27dbe4d881e72105}{control\+Msg}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0557cb1ae37b7c16f70db2915496fabe}{strb}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ae116d50bdf0bc8b84ef56a6998a6a162}{station\+Params}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsg\+Shared\+Types\+::\+Imit\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abb9807c2795f03506b525fbfa70be6a0}{imit\+Objects}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{max\+Obj\+Length}} = 3500000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс имитатора выхода АЦП ячейки расчёта каналов 412-\/06. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a2e1f9e7f669ea0eab296468b269a0a8d}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a2e1f9e7f669ea0eab296468b269a0a8d} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!Cell412\_06ADCImit@{Cell412\_06ADCImit}}
+\index{Cell412\_06ADCImit@{Cell412\_06ADCImit}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{Cell412\_06ADCImit()}{Cell412\_06ADCImit()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::\+Cell412\+\_\+06\+ADCImit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ab910d6498e4074ff7f8a241ed7b92e18}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ab910d6498e4074ff7f8a241ed7b92e18} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!````~Cell412\_06ADCImit@{\texorpdfstring{$\sim$}{\string~}Cell412\_06ADCImit}}
+\index{````~Cell412\_06ADCImit@{\texorpdfstring{$\sim$}{\string~}Cell412\_06ADCImit}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cell412\_06ADCImit()}{\string~Cell412\_06ADCImit()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::\texorpdfstring{$\sim$}{\string~}\+Cell412\+\_\+06\+ADCImit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a5d84eba988fd6d880d9bf1f296df18d7}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a5d84eba988fd6d880d9bf1f296df18d7} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!applyKaiserOnSignal@{applyKaiserOnSignal}}
+\index{applyKaiserOnSignal@{applyKaiserOnSignal}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{applyKaiserOnSignal()}{applyKaiserOnSignal()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::apply\+Kaiser\+On\+Signal (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{curr\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Наложение фильтра Кайзера на образ сигнала. Используется только для Воронеж-\/М. 
+\begin{DoxyParams}{Parameters}
+{\em curr\+Length} & текущая длина сигнала \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+длина сигнала после наложения фильтра 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abbfcd98598a977247f4f8fc6d6b7d25a}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abbfcd98598a977247f4f8fc6d6b7d25a} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!calcNdk@{calcNdk}}
+\index{calcNdk@{calcNdk}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{calcNdk()}{calcNdk()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::calc\+Ndk (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{obj\+Num }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт периода, через который меняется количество отсчётов на дискрете. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & порядковый номер объекта в стробе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина периода, через который меняется количество отсчётов на дискрете 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_afed2a557f6971b66dfb9ef8a5598cfbb}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_afed2a557f6971b66dfb9ef8a5598cfbb} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!calcNk@{calcNk}}
+\index{calcNk@{calcNk}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{calcNk()}{calcNk()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::calc\+Nk (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{obj\+Num }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт величины изменения длительности дискрета в числе выборок частоты Fд. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & порядковый номер объекта в стробе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+величина изменения длительности дискрета 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0a92e0e23b25681d6f13ae59c09bd87d}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0a92e0e23b25681d6f13ae59c09bd87d} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!genCarrierFreq@{genCarrierFreq}}
+\index{genCarrierFreq@{genCarrierFreq}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{genCarrierFreq()}{genCarrierFreq()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::gen\+Carrier\+Freq (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{obj\+Num,  }\item[{uint32\+\_\+t}]{chan\+Num,  }\item[{uint32\+\_\+t}]{obj\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация несущей частоты для obj\+Num\`{}ого объекта исходя из типа станции. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & порядковый номер объекта в стробе \\
+\hline
+{\em chan\+Num} & номер канала в ячейке \\
+\hline
+{\em obj\+Length} & длина объекта, в дискретах \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a4d2b0820c238d4acb2708b00a5b7ab5c}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a4d2b0820c238d4acb2708b00a5b7ab5c} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!genInterfImage@{genInterfImage}}
+\index{genInterfImage@{genInterfImage}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{genInterfImage()}{genInterfImage()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::gen\+Interf\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{obj\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация образа obj\+Num\`{}ой помехи. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & порядковый номер объекта (помехи) в стробе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+длина помехи
+\end{DoxyReturn}
+Генерация образа помехи Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a4d2b0820c238d4acb2708b00a5b7ab5c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a10caa9df4b7bce33eb9483c38bf67e8a}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a10caa9df4b7bce33eb9483c38bf67e8a} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!genInterfNoise@{genInterfNoise}}
+\index{genInterfNoise@{genInterfNoise}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{genInterfNoise()}{genInterfNoise()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::gen\+Interf\+Noise (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{channel\+Data\mbox{[}$\,$\mbox{]},  }\item[{uint32\+\_\+t}]{interf\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация шума для расчёта помехи с заданным номером (interf\+Index) в массив channel\+Data. 
+\begin{DoxyParams}{Parameters}
+{\em channel\+Data} & указатель на массив для результирующих данных \\
+\hline
+{\em interf\+Index} & порядковый номер помехи (объекта) в стробе \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a10caa9df4b7bce33eb9483c38bf67e8a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a00b8c891ef76042b22997f9ec4c70495}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a00b8c891ef76042b22997f9ec4c70495} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!genObject@{genObject}}
+\index{genObject@{genObject}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{genObject()}{genObject()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::gen\+Object (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{obj\+Num,  }\item[{uint32\+\_\+t}]{chan\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация obj\+Num\`{}ого объекта. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & порядковый номер объекта в стробе \\
+\hline
+{\em chan\+Num} & номер канала в ячейке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+новая длина объекта 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a00b8c891ef76042b22997f9ec4c70495_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ac27f80eb95cb8d8e47c621975c07c864}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ac27f80eb95cb8d8e47c621975c07c864} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!genSelfNoise@{genSelfNoise}}
+\index{genSelfNoise@{genSelfNoise}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{genSelfNoise()}{genSelfNoise()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::gen\+Self\+Noise (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{chan\+Num,  }\item[{int32\+\_\+t}]{channel\+Data\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация собственного шума для заданного канала (chan\+Num) в массив channel\+Data. 
+\begin{DoxyParams}{Parameters}
+{\em chan\+Num} & номер канала на полотне в нумерации антенны \\
+\hline
+{\em channel\+Data} & указатель на массив для результирующих данных \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ac27f80eb95cb8d8e47c621975c07c864_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ad563b8e792379098f6192753fd59adb7}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ad563b8e792379098f6192753fd59adb7} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!genSignalImage@{genSignalImage}}
+\index{genSignalImage@{genSignalImage}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{genSignalImage()}{genSignalImage()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::gen\+Signal\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{obj\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Генерация образа obj\+Num\`{}ого сигнала. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & порядковый номер объекта (помехи) в стробе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+длина сигнала 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ad563b8e792379098f6192753fd59adb7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0d372bb16bf1cafb0018f921f05c46b1}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0d372bb16bf1cafb0018f921f05c46b1} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!getChannelData@{getChannelData}}
+\index{getChannelData@{getChannelData}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{getChannelData()}{getChannelData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::get\+Channel\+Data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{chan\+Num,  }\item[{int32\+\_\+t}]{channel\+Data\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Занесение сгенерированных значений выборок выхода АЦП заданного канала (chan\+Num) в массив channel\+Data. 
+\begin{DoxyParams}{Parameters}
+{\em chan\+Num} & номер канала на полотне в нумерации модели \\
+\hline
+{\em channel\+Data} & указатель на массив для результирующих данных \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0d372bb16bf1cafb0018f921f05c46b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a6a01ca1f670170b1658abcf2583a5070}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a6a01ca1f670170b1658abcf2583a5070} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!setControlMessage@{setControlMessage}}
+\index{setControlMessage@{setControlMessage}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{setControlMessage()}{setControlMessage()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::set\+Control\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&}]{control\+Msg }\end{DoxyParamCaption})}
+
+Обновление параметров управления ячейкой. 
+\begin{DoxyParams}{Parameters}
+{\em control\+Msg} & указатель на объект управляющего сообщения \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a36db21e11dd5e83c27dbe4d881e72105}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a36db21e11dd5e83c27dbe4d881e72105} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!controlMsg@{controlMsg}}
+\index{controlMsg@{controlMsg}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{controlMsg}{controlMsg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::control\+Msg\hspace{0.3cm}{\ttfamily [private]}}
+
+сообщение с параметрами управления ячейкой \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abb9807c2795f03506b525fbfa70be6a0}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_abb9807c2795f03506b525fbfa70be6a0} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!imitObjects@{imitObjects}}
+\index{imitObjects@{imitObjects}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{imitObjects}{imitObjects}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsg\+Shared\+Types\+::\+Imit\+Object}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::imit\+Objects\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на массив объектов строба управляющего сообщения \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_acffa25bfb8c4995028ef28146d92137f}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_acffa25bfb8c4995028ef28146d92137f} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!interfImageTmp@{interfImageTmp}}
+\index{interfImageTmp@{interfImageTmp}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{interfImageTmp}{interfImageTmp}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::interf\+Image\+Tmp\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a5449c6568ae7abe0cdc19abedf1c0284}{Shared\+Const\+::max\+Interf\+Band\+Width}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+массив для хранения сумм выборок помехи на ширине полосы помехи \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!maxObjLength@{maxObjLength}}
+\index{maxObjLength@{maxObjLength}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{maxObjLength}{maxObjLength}}
+{\footnotesize\ttfamily const uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::max\+Obj\+Length = 3500000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальная длина объекта \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a288079c0e8135b1e313769c2086bc864}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a288079c0e8135b1e313769c2086bc864} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!objectData@{objectData}}
+\index{objectData@{objectData}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{objectData}{objectData}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::object\+Data\mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{max\+Obj\+Length}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+данные объекта (сигнала/помехи, временный массив) \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a25fa52e8c5032e5cc271fa8ebd2cb831}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a25fa52e8c5032e5cc271fa8ebd2cb831} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!objectImage@{objectImage}}
+\index{objectImage@{objectImage}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{objectImage}{objectImage}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::object\+Image\mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a9350d6490edd2e94c16ea4763a923bf3}{max\+Obj\+Length}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+образ сигнала/помехи \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ae116d50bdf0bc8b84ef56a6998a6a162}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_ae116d50bdf0bc8b84ef56a6998a6a162} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::station\+Params\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на параметры станции управляющего сообщения \Hypertarget{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0557cb1ae37b7c16f70db2915496fabe}\label{classModelNS23817A620S1823_1_1Cell412__06ADCImit_a0557cb1ae37b7c16f70db2915496fabe} 
+\index{ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}!strb@{strb}}
+\index{strb@{strb}!ModelNS23817A620S1823::Cell412\_06ADCImit@{ModelNS23817A620S1823::Cell412\_06ADCImit}}
+\doxysubsubsection{\texorpdfstring{strb}{strb}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell412\+\_\+06\+ADCImit\+::strb\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на параметры строба управляющего сообщения 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{c412__06ADCImitator_8h}{c412\+\_\+06\+ADCImitator.\+h}}\item 
+src/\mbox{\hyperlink{c412__06ADCImitator_8cpp}{c412\+\_\+06\+ADCImitator.\+cpp}}\end{DoxyCompactItemize}

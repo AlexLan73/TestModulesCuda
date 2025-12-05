@@ -1,0 +1,5 @@
+<map id="c223_target_strobe" name="c223_target_strobe">
+<area shape="rect" id="Node000001" title="Целевой строб ФУ 223&#45;й ячейки." alt="" coords="5,183,169,448"/>
+<area shape="rect" id="Node000002" href="$structcomplex32.html" title="Структура 32&#45;разрядного комплексного числа." alt="" coords="44,5,131,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,91,90,166,85,166,85,91"/>
+</map>

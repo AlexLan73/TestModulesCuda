@@ -1,0 +1,86 @@
+\doxysection{Model\+Input\+Bundle Struct Reference}
+\hypertarget{structModelInputBundle}{}\label{structModelInputBundle}\index{ModelInputBundle@{ModelInputBundle}}
+
+
+{\ttfamily \#include $<$RPC.\+h$>$}
+
+
+
+Collaboration diagram for Model\+Input\+Bundle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structModelInputBundle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+E2\+TRPR \mbox{\hyperlink{structModelInputBundle_ad3b8b4d9d30c2cfad817efb08d3c2800}{trpr}}
+\item 
+Trimts\+Msg \mbox{\hyperlink{structModelInputBundle_ab9d0c6da6426cb00d0d1e5147b4843eb}{trimts}}
+\item 
+optional$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+NS23817\+A620\+S1823\+::\+Station\+Params}} $>$ \mbox{\hyperlink{structModelInputBundle_a4884c9a8886b0b9f1acd96c6de50ec30}{station\+Params}}
+\item 
+optional$<$ E2\+IPPA $>$ \mbox{\hyperlink{structModelInputBundle_a9a4d9a5331a6e5ae40e6d8114311c566}{opt\+\_\+ippa}}
+\item 
+optional$<$ libvork\+::\+EUMASK $>$ \mbox{\hyperlink{structModelInputBundle_aa6166190fea84afdbf847badc0931004}{opt\+\_\+mask}}
+\item 
+optional$<$ libvork\+::\+EUTRKP $>$ \mbox{\hyperlink{structModelInputBundle_a599601df64e88e5649b114204a5272bc}{opt\+\_\+klb}}
+\item 
+optional$<$ libvork\+::\+EUTRKP $>$ \mbox{\hyperlink{structModelInputBundle_a78a96f0fab9a5558c04c629b65ba8454}{opt\+\_\+afr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Пакет параметров для вычисления выдачи модели по для такта. Обязательными явдяются только ТРПР и ТРИМС, при отсутствии остальных используются разумные дефолты (все эти сообщения передаются прямо в модель). 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structModelInputBundle_a78a96f0fab9a5558c04c629b65ba8454}\label{structModelInputBundle_a78a96f0fab9a5558c04c629b65ba8454} 
+\index{ModelInputBundle@{ModelInputBundle}!opt\_afr@{opt\_afr}}
+\index{opt\_afr@{opt\_afr}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{opt\_afr}{opt\_afr}}
+{\footnotesize\ttfamily optional$<$libvork\+::\+EUTRKP$>$ Model\+Input\+Bundle\+::opt\+\_\+afr}
+
+\Hypertarget{structModelInputBundle_a9a4d9a5331a6e5ae40e6d8114311c566}\label{structModelInputBundle_a9a4d9a5331a6e5ae40e6d8114311c566} 
+\index{ModelInputBundle@{ModelInputBundle}!opt\_ippa@{opt\_ippa}}
+\index{opt\_ippa@{opt\_ippa}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{opt\_ippa}{opt\_ippa}}
+{\footnotesize\ttfamily optional$<$E2\+IPPA$>$ Model\+Input\+Bundle\+::opt\+\_\+ippa}
+
+\Hypertarget{structModelInputBundle_a599601df64e88e5649b114204a5272bc}\label{structModelInputBundle_a599601df64e88e5649b114204a5272bc} 
+\index{ModelInputBundle@{ModelInputBundle}!opt\_klb@{opt\_klb}}
+\index{opt\_klb@{opt\_klb}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{opt\_klb}{opt\_klb}}
+{\footnotesize\ttfamily optional$<$libvork\+::\+EUTRKP$>$ Model\+Input\+Bundle\+::opt\+\_\+klb}
+
+\Hypertarget{structModelInputBundle_aa6166190fea84afdbf847badc0931004}\label{structModelInputBundle_aa6166190fea84afdbf847badc0931004} 
+\index{ModelInputBundle@{ModelInputBundle}!opt\_mask@{opt\_mask}}
+\index{opt\_mask@{opt\_mask}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{opt\_mask}{opt\_mask}}
+{\footnotesize\ttfamily optional$<$libvork\+::\+EUMASK$>$ Model\+Input\+Bundle\+::opt\+\_\+mask}
+
+\Hypertarget{structModelInputBundle_a4884c9a8886b0b9f1acd96c6de50ec30}\label{structModelInputBundle_a4884c9a8886b0b9f1acd96c6de50ec30} 
+\index{ModelInputBundle@{ModelInputBundle}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily optional$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+NS23817\+A620\+S1823\+::\+Station\+Params}}$>$ Model\+Input\+Bundle\+::station\+Params}
+
+\Hypertarget{structModelInputBundle_ab9d0c6da6426cb00d0d1e5147b4843eb}\label{structModelInputBundle_ab9d0c6da6426cb00d0d1e5147b4843eb} 
+\index{ModelInputBundle@{ModelInputBundle}!trimts@{trimts}}
+\index{trimts@{trimts}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{trimts}{trimts}}
+{\footnotesize\ttfamily Trimts\+Msg Model\+Input\+Bundle\+::trimts}
+
+\Hypertarget{structModelInputBundle_ad3b8b4d9d30c2cfad817efb08d3c2800}\label{structModelInputBundle_ad3b8b4d9d30c2cfad817efb08d3c2800} 
+\index{ModelInputBundle@{ModelInputBundle}!trpr@{trpr}}
+\index{trpr@{trpr}!ModelInputBundle@{ModelInputBundle}}
+\doxysubsubsection{\texorpdfstring{trpr}{trpr}}
+{\footnotesize\ttfamily E2\+TRPR Model\+Input\+Bundle\+::trpr}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model/\mbox{\hyperlink{RPC_8h}{RPC.\+h}}\end{DoxyCompactItemize}

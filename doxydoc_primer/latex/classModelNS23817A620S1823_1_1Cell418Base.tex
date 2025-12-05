@@ -1,0 +1,192 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Cell418\+Base Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Cell418Base}{}\label{classModelNS23817A620S1823_1_1Cell418Base}\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+
+
+{\ttfamily \#include $<$c418\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Model\+NS23817\+A620\+S1823\+::Cell418\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classModelNS23817A620S1823_1_1Cell418Base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Cell418\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell418Base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a7f87565286b788d64efb39e6161d2c07}{Cell418\+Base}} (const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&cmsg)
+\item 
+virtual \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a8aa46d4e7da03ec46bd6063be19fabf0}{\texorpdfstring{$\sim$}{\string~}\+Cell418\+Base}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a65335fca5bc72128fc9283914cbfbdff}{reset\+Stop\+Flag}} ()=0
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a2ce7887d5d342e83d83255325c437552}{get\+Stop\+Flag}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a2e50b647e74699c0604358c6ec779455}{target\+Mode\+Processing}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a9788ed89cf263a9a00926c1a071df6f0}{copy\+Out\+Data\+To}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\+\_\+06\+Result}} \texorpdfstring{$\ast$}{*}result) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a39c1f6f7d1a3e4bf3819a77e2f0d8b2d}{accumulate\+Crate\+Data}} (std\+::complex$<$ int32\+\_\+t $>$ in\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{Shared\+Const\+::max\+Samples\+In\+Ray}}\mbox{]}, std\+::complex$<$ int32\+\_\+t $>$ out\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{Shared\+Const\+::max\+Samples\+In\+Ray}}\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\+\_\+06\+Result}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72}{in\+Data}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\+\_\+06\+Result}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a6e6b48e4ea0e0d78978a200ddb5f4ab3}{out\+Data}}
+\item 
+const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_af9ea973e8d3d7238c0a54526f4ee1f86}{control\+Msg}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a0498991b7931585f8afb71e7bc5aea7e}{strb}}
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a252603a83f1f1715557830f9f91639c7}{station\+Params}}
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_ab95f22a75c499626b5ff969ea2801bae}{stop\+Flag}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс суммирования ячеек и крейтов 418-\/XX. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a7f87565286b788d64efb39e6161d2c07}\label{classModelNS23817A620S1823_1_1Cell418Base_a7f87565286b788d64efb39e6161d2c07} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!Cell418Base@{Cell418Base}}
+\index{Cell418Base@{Cell418Base}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{Cell418Base()}{Cell418Base()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::\+Cell418\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \&}]{cmsg }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. \Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a8aa46d4e7da03ec46bd6063be19fabf0}\label{classModelNS23817A620S1823_1_1Cell418Base_a8aa46d4e7da03ec46bd6063be19fabf0} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!````~Cell418Base@{\texorpdfstring{$\sim$}{\string~}Cell418Base}}
+\index{````~Cell418Base@{\texorpdfstring{$\sim$}{\string~}Cell418Base}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cell418Base()}{\string~Cell418Base()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Cell418\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a39c1f6f7d1a3e4bf3819a77e2f0d8b2d}\label{classModelNS23817A620S1823_1_1Cell418Base_a39c1f6f7d1a3e4bf3819a77e2f0d8b2d} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!accumulateCrateData@{accumulateCrateData}}
+\index{accumulateCrateData@{accumulateCrateData}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{accumulateCrateData()}{accumulateCrateData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::accumulate\+Crate\+Data (\begin{DoxyParamCaption}\item[{std\+::complex$<$ int32\+\_\+t $>$}]{in\mbox{[}$\,$\mbox{]}\mbox{[}\+Shared\+Const\+::max\+Samples\+In\+Ray\mbox{]},  }\item[{std\+::complex$<$ int32\+\_\+t $>$}]{out\mbox{[}$\,$\mbox{]}\mbox{[}\+Shared\+Const\+::max\+Samples\+In\+Ray\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Накопление в массив out элементов массива in, т.\+е. к каждому элементу массива out суммируется соответствующий элемент массива in. 
+\begin{DoxyParams}{Parameters}
+{\em in} & указатель на входной массив \\
+\hline
+{\em out} & указатель на выходной массив \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell418Base_a39c1f6f7d1a3e4bf3819a77e2f0d8b2d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a9788ed89cf263a9a00926c1a071df6f0}\label{classModelNS23817A620S1823_1_1Cell418Base_a9788ed89cf263a9a00926c1a071df6f0} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!copyOutDataTo@{copyOutDataTo}}
+\index{copyOutDataTo@{copyOutDataTo}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{copyOutDataTo()}{copyOutDataTo()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::copy\+Out\+Data\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\+\_\+06\+Result}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Копирование результата работы ячейки в заданный объект, исходя из режима работы (типа строба). 
+\begin{DoxyParams}{Parameters}
+{\em result} & указатель на объект выходных данных 412й/418-\/01й ячейки \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a2ce7887d5d342e83d83255325c437552}\label{classModelNS23817A620S1823_1_1Cell418Base_a2ce7887d5d342e83d83255325c437552} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!getStopFlag@{getStopFlag}}
+\index{getStopFlag@{getStopFlag}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{getStopFlag()}{getStopFlag()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::get\+Stop\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Проверка флага преждевременной остановки вычислений. \begin{DoxyReturn}{Returns}
+значение флага преждевременной остановки вычислений 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a65335fca5bc72128fc9283914cbfbdff}\label{classModelNS23817A620S1823_1_1Cell418Base_a65335fca5bc72128fc9283914cbfbdff} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!resetStopFlag@{resetStopFlag}}
+\index{resetStopFlag@{resetStopFlag}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{resetStopFlag()}{resetStopFlag()}}
+{\footnotesize\ttfamily virtual void Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::reset\+Stop\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Сброс флага преждевременной остановки вычислений. Необходим, т.\+к. объект ячейки может отрабатывать больше одного строба, а никаких признаков, что расчёт был последним в текущем запуске нет. 
+
+Implemented in \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__01_a055496efb9393e31ec71513e0be2ec65}{Model\+NS23817\+A620\+S1823\+::\+Cell418\+\_\+01}}, and \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ab4c70fa6e11e5c9034843ae273d4df16}{Model\+NS23817\+A620\+S1823\+::\+Cell418\+\_\+02}}.
+
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a2e50b647e74699c0604358c6ec779455}\label{classModelNS23817A620S1823_1_1Cell418Base_a2e50b647e74699c0604358c6ec779455} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!targetModeProcessing@{targetModeProcessing}}
+\index{targetModeProcessing@{targetModeProcessing}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{targetModeProcessing()}{targetModeProcessing()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::target\+Mode\+Processing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Обработка в целевом режиме. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Cell418Base_a2e50b647e74699c0604358c6ec779455_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_af9ea973e8d3d7238c0a54526f4ee1f86}\label{classModelNS23817A620S1823_1_1Cell418Base_af9ea973e8d3d7238c0a54526f4ee1f86} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!controlMsg@{controlMsg}}
+\index{controlMsg@{controlMsg}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{controlMsg}{controlMsg}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::control\+Msg\hspace{0.3cm}{\ttfamily [protected]}}
+
+управляющее сообщение \Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72}\label{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!inData@{inData}}
+\index{inData@{inData}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{inData}{inData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\+\_\+06\+Result}} Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::in\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+входной массив 418 ячейки Предполагается, что данные с каждой ячейки (или крейта) в него будут заноситься по очереди \Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a6e6b48e4ea0e0d78978a200ddb5f4ab3}\label{classModelNS23817A620S1823_1_1Cell418Base_a6e6b48e4ea0e0d78978a200ddb5f4ab3} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!outData@{outData}}
+\index{outData@{outData}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{outData}{outData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\+\_\+06\+Result}} Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::out\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+выходной массив 418й ячейки \Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a252603a83f1f1715557830f9f91639c7}\label{classModelNS23817A620S1823_1_1Cell418Base_a252603a83f1f1715557830f9f91639c7} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::station\+Params\hspace{0.3cm}{\ttfamily [protected]}}
+
+указатель на параметры станции управляющего сообщения \Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_ab95f22a75c499626b5ff969ea2801bae}\label{classModelNS23817A620S1823_1_1Cell418Base_ab95f22a75c499626b5ff969ea2801bae} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!stopFlag@{stopFlag}}
+\index{stopFlag@{stopFlag}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{stopFlag}{stopFlag}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::stop\+Flag\hspace{0.3cm}{\ttfamily [protected]}}
+
+флаг преждевременной остановки расчётов true -\/ остановить расчёты false -\/ не останавливать \Hypertarget{classModelNS23817A620S1823_1_1Cell418Base_a0498991b7931585f8afb71e7bc5aea7e}\label{classModelNS23817A620S1823_1_1Cell418Base_a0498991b7931585f8afb71e7bc5aea7e} 
+\index{ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}!strb@{strb}}
+\index{strb@{strb}!ModelNS23817A620S1823::Cell418Base@{ModelNS23817A620S1823::Cell418Base}}
+\doxysubsubsection{\texorpdfstring{strb}{strb}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}}\texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Cell418\+Base\+::strb\hspace{0.3cm}{\ttfamily [protected]}}
+
+указатель на параметры строба управляющего сообщения 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{c418Base_8h}{c418\+Base.\+h}}\item 
+src/\mbox{\hyperlink{c418Base_8cpp}{c418\+Base.\+cpp}}\end{DoxyCompactItemize}

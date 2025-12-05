@@ -1,0 +1,6 @@
+<map id="calc_noise_n_posl" name="calc_noise_n_posl">
+<area shape="rect" id="Node000001" title="Функция производит расчет сдвигового регистра для шума." alt="" coords="5,29,144,55"/>
+<area shape="rect" id="Node000002" href="$model__wrapper_8cpp.html#ab32de23dea6bf0a72185933abcc6d818" title="Рассчитывает номер первого канала для текущей ячейки." alt="" coords="192,29,375,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,39,178,39,178,45,144,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="249,31,242,21,246,11,260,5,283,3,312,6,324,15,320,20,310,11,283,8,261,10,249,15,247,20,253,28"/>
+</map>

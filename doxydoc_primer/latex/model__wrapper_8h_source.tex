@@ -1,0 +1,33 @@
+\doxysection{model\+\_\+wrapper.\+h}
+\hypertarget{model__wrapper_8h_source}{}\label{model__wrapper_8h_source}\index{src/mpk1/blk223/model\_wrapper.h@{src/mpk1/blk223/model\_wrapper.h}}
+\mbox{\hyperlink{model__wrapper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_MODEL\_WRAPPER\_H\_\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_MODEL\_WRAPPER\_H\_\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelInterface_8h}{model/modelInterface.h}}>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fcquantum_8h}{fcquantum.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{modelv}}\ =\ \mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model__wrapper_8h_a05415f5272da5b957e9e487a41655f76}{mw\_init}}(\textcolor{keyword}{const}\ \textcolor{keyword}{enum}\ modelv::SharedConst::StationType\ station\_type,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{enum}\ modelv::SharedConst::PolarizationTypes\ polarization\_type,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ crate\_num,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ rek\_num);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model__wrapper_8h_a850931dbc17e18bd5101b8b159efd31c}{mw\_free}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model__wrapper_8h_af2fd66fc046cfbd338094a55f08a462d}{mw\_mark\_cell\_in\_ch\_mask}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ crate\_num,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ cell\_num);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{model__wrapper_8h_ab32de23dea6bf0a72185933abcc6d818}{get\_first\_channel\_in\_cell}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ crate\_num,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ cell\_num\ =\ 0);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{model__wrapper_8h_ab32de23dea6bf0a72185933abcc6d818}{get\_first\_channel\_in\_cell}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ std::vector<modelv::ControlMessage>\ \mbox{\hyperlink{model__wrapper_8h_a1f5fcfd6d386c1b60985eba9ccba5e3f}{compute\_fc}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structfcq}{fcq}}\ *fcqp);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

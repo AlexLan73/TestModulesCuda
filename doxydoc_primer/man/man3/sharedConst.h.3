@@ -1,0 +1,150 @@
+.TH "src/sharedConst.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/sharedConst.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <model/modelSharedConst\&.h>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823::SharedConst\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const double \fBModelNS23817A620S1823::SharedConst::lightSpeed\fP = 299792458\&."
+.br
+.ti -1c
+.RI "const double \fBModelNS23817A620S1823::SharedConst::centralFreq\fP [] = { 158000000\&., \-387500000\&., 375000000\&. }"
+.br
+.ti -1c
+.RI "const double \fBModelNS23817A620S1823::SharedConst::freqPointShift\fP []"
+.br
+.ti -1c
+.RI "const int32_t \fBModelNS23817A620S1823::SharedConst::theNyquistIntervNum\fP [] = { 6, \-16, 8 }"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCellsInCrateM\fP = 6"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCellsInCrateSM\fP = 18"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCellsInCrateMrik\fP = 6"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCellsInCrate\fP []"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCratesM\fP = 8"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCratesSM\fP = 4"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCratesMrik\fP = 2"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxCrates\fP [] = { \fBmaxCratesM\fP, \fBmaxCratesSM\fP, \fBmaxCratesMrik\fP }"
+.br
+.ti -1c
+.RI "static const uint32_t \fBModelNS23817A620S1823::SharedConst::discretesInTact\fP = 5 * (1LL << 20)"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxInterfBandWidth\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::samplFreqMultiplier\fP [] = { 6, 1, 1 }"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxSamplesInRay\fP = (1LL << 19)"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::interfStrbType\fP = 256"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::targetStrbType\fP = 0"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::fragmStrbType\fP = 256"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::coordAdaptStrbType\fP = 512"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::signalAdaptStrbType\fP = 513"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::autocompStrbType\fP = 128"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::calibrStrbType\fP = 2048"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::limmStrbType\fP = 2049"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::firstTfcStrbType\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::tfcStrbTypesNum\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxFragmKgrs\fP = 1024"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxKgrs\fP = 8192"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxAntennaParts\fP = \fBmaxCratesMrik\fP * \fBmaxCellsInCrateMrik\fP"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxStationTypes\fP = 3"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::maxDftNum\fP = 256"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::sigAdaptExtraRows\fP = 1"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::sysSensitivityLvl\fP = 5"
+.br
+.ti -1c
+.RI "const float \fBModelNS23817A620S1823::SharedConst::halfWidthM\fP = 39\&.192"
+.br
+.ti -1c
+.RI "const float \fBModelNS23817A620S1823::SharedConst::halfHeightM\fP = 17\&.22"
+.br
+.ti -1c
+.RI "const float \fBModelNS23817A620S1823::SharedConst::halfWidthSM\fP = 9\&.1"
+.br
+.ti -1c
+.RI "const float \fBModelNS23817A620S1823::SharedConst::halfHeightSM\fP = 6\&.67"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::sumDiffDF1\fP = 4"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::sumDiffDF2\fP = 5"
+.br
+.ti -1c
+.RI "const uint32_t \fBModelNS23817A620S1823::SharedConst::autocompBandWidth\fP = 32"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

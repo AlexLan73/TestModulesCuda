@@ -1,0 +1,105 @@
+\doxysection{c418\+\_\+02.\+h}
+\hypertarget{c418__02_8h_source}{}\label{c418__02_8h_source}\index{src/c418\_02.h@{src/c418\_02.h}}
+\mbox{\hyperlink{c418__02_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C418\_02\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C418\_02\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}\ \textcolor{comment}{//\ maxActiveInterferences}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418__01_8h}{c418\_01.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418Base_8h}{c418Base.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418__02Result_8h}{c418\_02Result.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sliceFile_8h}{sliceFile.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{adaptiveSpatProcVect_8h}{adaptiveSpatProcVect.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02}{VirtualCell418\_02}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02_abdcfe2e60a8f8fdd77f9175234fd56ba}{\string~VirtualCell418\_02}}()\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02_a4b73ac4a6f45a2de2dd1d6ccc3510baf}{getResults}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ =\ 0;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<std::unique\_ptr<VirtualCell418\_01>>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02_aaaf9bb7580d6ccd30c1b93240985ec62}{c418\_01}};}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02}{Cell418\_02}}\ :\ \textcolor{keyword}{public}\ \textcolor{comment}{/*implements*/}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1VirtualCell418__02}{VirtualCell418\_02}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base}{Cell418Base}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02}{Cell418\_02}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\&);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a4037fad61fe6320c62604fde24edcf32}{getResults}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ab4c70fa6e11e5c9034843ae273d4df16}{resetStopFlag}}();}
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00045\ \ \ \ \ std::complex<int32\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a8ad440bc33ede5c941054085776ce38b}{interfData}}\ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a594cf615330a3f0b02c575c982d560e7}{SharedConst::maxAntennaParts}}]}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}]}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}];}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a63da37577cb5bef11d8022d81570cae6}{inputSlice}};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a6a14c0702eacf1a5905b2366e9391821}{outputSlice}};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a0e78c037dfcaf018925b497444bad6f1}{outputSliceHex}};}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a0e0c6945dab85c1d8a7c4f72b966e2f3}{inputSliceAutocomp}};}
+\DoxyCodeLine{00061\ \ \ \ \ std::complex<int32\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ae8f14a941ce9b89a62fc5e458e048325}{adaptData}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ maxActiveInterferences}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_ad884158d24868f5636889e3cac089247}{SharedConst::sigAdaptExtraRows}}]}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}];}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect}{AdaptiveSpatProcVect}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a69978ac2cfc92f4838d2d76777d31431}{autocompCoefs}};}
+\DoxyCodeLine{00070\ \ \ \ \ std::complex<double>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ab20a6d39c233983124c4a50a8a1e12d5}{autocompK0}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ maxActiveInterferences]}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [maxActiveInterferences];}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ad70b1b50ec32b07d5efb52b94181f193}{autocompK1}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}\ *\ maxActiveInterferences]}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [maxActiveInterferences];}
+\DoxyCodeLine{00081\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a0c09a78c8215e876a0db87e7b180a770}{autocompIdx}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}][maxActiveInterferences];}
+\DoxyCodeLine{00082\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a430b54cecae430955cb2e720267bc8bf}{postTargetModeProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a781683d5213c8912a8ca2299f430c055}{runBlanking}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a0f567ffba7b4739ceaeb3ee1740f8718}{clearInterfData}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a01b62293e708075e128321164ca1c7d2}{clearAdaptData}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a473c93cfbf1d2485de836e96ad1592b9}{digSpatPostProcessing}}(}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ in[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}],}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ out[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}])\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a0c25fd17c13a93b6a42e8d12d46dffa7}{initSliceFiles}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_aba1c64b14787633ae89c2d8a2fe75833}{dumpInputSlice}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72}{inData}},\ uint32\_t\ crateNum);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a23d2a3c0b8bc9bc2db82fb26067665f2}{dumpInputSliceIntoFile}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result}{C412\_06Result}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418Base_a5652ec518531cd9804ebbae1e90cac72}{inData}},\ uint32\_t\ crateNum,}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ rays,\ uint32\_t\ samplesNum);}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a9148fee5c3331d8a74026c2f2bb62f97}{dumpOutputSlice}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a9655c25cb3bfb30bd6862e237efbbcb2}{dumpOutputSliceIntoFile}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result,\ uint32\_t\ rays,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ samplesNum);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a25da99e5ab4051de1fece78bd062fa56}{inDataProcessing}}(uint32\_t\ crateNum,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a6c2b7698feeb54f3897b0d67236b807f}{postProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_acb2d251765d4575602c7bd5a8c461ea0}{amspStrbPostProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a12f89a1eaf812d3d585d9ce57d48fefe}{copyMatrixInfo2ZOutputArray}}(uint32\_t\ crateNum);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ac3904eedda045b679558b74829da4047}{amtpStrbPostProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ae5120f940c6bc91376f5e71ef0bf9d39}{collectCrateAdaptData}}(uint32\_t\ crateNum);}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a9845df89de18ea9a034cfcd06d081841}{collectCalibrLIMMSourceData}}(uint32\_t\ crateNum,}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_aac618824ef2e5a1bbd3ead7883a829e9}{printCalibrLimmCoefs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ac0997aece64cc8c84dd31bc7c393299b}{printTargetSigma}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ab9e49ab4baaebbefdc1cd710da28f797}{diagFormVectAdaptation}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a92a006c254dd76c7d4d845430ed372d3}{calcAdaptC023}}(uint32\_t\ m)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00199\ \ \ \ \ std::complex<double>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_aa95be0ae6ffab2a77c77f2e6bc4cfe21}{calcAdaptC1}}(uint32\_t\ n,\ uint32\_t\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_aecd5da62dcccb320c8f8084b17531583}{antennaPartsProcessing}}(uint32\_t\ crateNum,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a1ea08f28ea9c0cbbbcb3ed21f594df2d}{sumCratesDataInFragments}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a58aaa1f45db78da12cff1b974f966cbd}{dftOfInterfData}}(uint32\_t\ fragmentsNum);}
+\DoxyCodeLine{00221\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_ad7853e6dbf4189591468c792c176138b}{calcDFGroup4DftData}}(uint32\_t\ fragmentsNum,}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ fragmNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a93fc929be8c7e53101275be91c4f8c96}{sumDftResultInDFGroups}}(uint32\_t\ fragmentsNum,}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_acf68c83995606dc08b366f1cc1d78117}{postInterfFragmModeProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a35a9cce28c7ea2db4f7b5dcda67ba5f4}{runAutocompensation}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a3c904f35554a3b93e62e67dc96fdcb01}{applyK0ToZTargetData}}(}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ buf[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{SharedConst::maxSamplesInRay}}]);}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a8309c5a6e8d28e9cd73bd922414fa9ba}{sortDescendingOrder}}(std::pair<uint32\_t,\ double>\ i,}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::pair<uint32\_t,\ double>\ j);}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_a1b82c5cdc4a239aaf8d01d0f91373342}{copyAutocompInputDataToTempBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result);}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell418__02_af762d07a6963c9691b62d62b13603926}{copyAutocompResultToOutBuffer}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *result)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \};\ \textcolor{comment}{//\ class\ Cell418\_02}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C418\_02\_H\_\_}}
+
+\end{DoxyCode}

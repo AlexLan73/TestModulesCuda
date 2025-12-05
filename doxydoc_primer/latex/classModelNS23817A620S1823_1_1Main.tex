@@ -1,0 +1,353 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Main Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Main}{}\label{classModelNS23817A620S1823_1_1Main}\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+
+
+{\ttfamily \#include $<$model\+Main.\+h$>$}
+
+
+
+Inheritance diagram for Model\+NS23817\+A620\+S1823\+::Main\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classModelNS23817A620S1823_1_1Main__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Main\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Main__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3}{Errors}} \{ \newline
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}{ok}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}{locked}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a43df00ed3a365249a3d8bf71ca4d64ea}{not\+Fully\+Initialized}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3ac98746454f0bf8d16b34b9abb3222709}{bad\+Msgs}}
+, \newline
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a8b7fcd6b4f5ac29ee03b4348258b8cca}{masked}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+NS23817\+A620\+S1823\+::\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739}{Init\+Level}} \{ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739a4c73bcba4a5bab17bf798b2313c7cdb6}{control\+Msgs\+Only}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739aac48c9b6ef2010aee18a8f8a3e6dc6ea}{full\+Init}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a930f06a05fac9e1b7fc923fe0cc64a5f}{Main}} (optional$<$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_aab68dbb441fab74eb0d2f82e83efe4d4}{Tree\+Constructor\+Fun\+\_\+t}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a594e0ae3a89fda234965ae9fea1c0d14}{opt\+Tree\+Ctor}}, const std\+::list$<$ std\+::string $>$ \&lst\+Data\+Dirs=\mbox{\hyperlink{namespaceModelNS23817A620S1823_adda6b02822eeee17c26f02b368d37998}{DEFAULT\+\_\+\+DIR\+\_\+\+LIST}})
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a76f1b3eb091f22b4c99e423f4aa6eaa7}{\texorpdfstring{$\sim$}{\string~}\+Main}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a5c4ce562f37b044cec79356f6df0b7f1}{form\+All\+Control\+Messages}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}lattice\+Mask, std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&cntrl\+Msgs)
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_aeb9e16b44bbe2550bf6dc3f9f927e72c}{start\+Processing}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs, \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}cbacks)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+NS23817\+A620\+S1823\+::\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_aaf6eac83fc27f36c0cb6c7477e51155c}{\texorpdfstring{$\sim$}{\string~}\+Interface}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_ac317b36365dbff00e8070958201c8ae5}{convert\+External\+Messages}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs)
+\item 
+Result$<$ void $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_add4a94f03ace167c05381ca795827ccc}{check\+Strobe}} (uint32\+\_\+t trpr\+Strb\+Idx, int32\+\_\+t trimts\+Strb\+Idx)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a227f93ec625ecec4a73194c7e0c55450}{init\+Utils\+And\+CMsg}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}cbacks)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a2a0955be6f0b7e760c281c91d5cdfcf6}{form\+Polar\+Control\+Messages}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} station\+Type, uint32\+\_\+t strb\+Num, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_ac73551cf2bb0df62ab7301f1a2717829}{cntrl\+Msg}}, std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&out\+Cntrl\+Msgs) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_add543303f4fc4bb62f98219bc1ae48ea}{are\+Ext\+Msgs\+Valid}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a3744a37387af729fde7ae4b3eb8bc433}{process\+Strobes}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs)
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a6bc2fbfbc173e519f33a3c3c101e5b56}{find\+Trimts\+Strb\+Index}} (uint32\+\_\+t trpr\+Strb\+Idx)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+optional$<$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_aab68dbb441fab74eb0d2f82e83efe4d4}{Tree\+Constructor\+Fun\+\_\+t}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a594e0ae3a89fda234965ae9fea1c0d14}{opt\+Tree\+Ctor}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_ac73551cf2bb0df62ab7301f1a2717829}{cntrl\+Msg}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationConfig}{CMsg\+Model\+Types\+::\+Station\+Config}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a04525f95e2bde6c2e46987861f8366a3}{conf}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1InputMessages}{CMsg\+Model\+Types\+::\+Input\+Messages}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_abad3203ff946818aef8795b2e6dd2840}{input\+Msgs}}
+\item 
+std\+::vector$<$ int32\+\_\+t $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a03df431e33dd9628c97890a35c6a7c0f}{trimts\+Used\+Strobe\+Indexes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс модели. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3}\label{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!Errors@{Errors}}
+\index{Errors@{Errors}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{Errors}{Errors}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3}{Model\+NS23817\+A620\+S1823\+::\+Main\+::\+Errors}}}
+
+коды ошибок/возврата для интерфейсных функций. Выдаются с минусом \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ok@{ok}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!ok@{ok}}}\Hypertarget{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}\label{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1} 
+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{locked@{locked}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!locked@{locked}}}\Hypertarget{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}\label{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1} 
+locked&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{notFullyInitialized@{notFullyInitialized}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!notFullyInitialized@{notFullyInitialized}}}\Hypertarget{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a43df00ed3a365249a3d8bf71ca4d64ea}\label{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a43df00ed3a365249a3d8bf71ca4d64ea} 
+not\+Fully\+Initialized&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{badMsgs@{badMsgs}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!badMsgs@{badMsgs}}}\Hypertarget{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3ac98746454f0bf8d16b34b9abb3222709}\label{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3ac98746454f0bf8d16b34b9abb3222709} 
+bad\+Msgs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{masked@{masked}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!masked@{masked}}}\Hypertarget{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a8b7fcd6b4f5ac29ee03b4348258b8cca}\label{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a8b7fcd6b4f5ac29ee03b4348258b8cca} 
+masked&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a930f06a05fac9e1b7fc923fe0cc64a5f}\label{classModelNS23817A620S1823_1_1Main_a930f06a05fac9e1b7fc923fe0cc64a5f} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!Main@{Main}}
+\index{Main@{Main}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Main\+::\+Main (\begin{DoxyParamCaption}\item[{optional$<$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_aab68dbb441fab74eb0d2f82e83efe4d4}{Tree\+Constructor\+Fun\+\_\+t}} $>$}]{opt\+Tree\+Ctor,  }\item[{const std\+::list$<$ std\+::string $>$ \&}]{lst\+Data\+Dirs = {\ttfamily \mbox{\hyperlink{namespaceModelNS23817A620S1823_adda6b02822eeee17c26f02b368d37998}{DEFAULT\+\_\+\+DIR\+\_\+\+LIST}}} }\end{DoxyParamCaption})}
+
+Конструктор выделяет память для УС (по умолчанию) \Hypertarget{classModelNS23817A620S1823_1_1Main_a76f1b3eb091f22b4c99e423f4aa6eaa7}\label{classModelNS23817A620S1823_1_1Main_a76f1b3eb091f22b4c99e423f4aa6eaa7} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!````~Main@{\texorpdfstring{$\sim$}{\string~}Main}}
+\index{````~Main@{\texorpdfstring{$\sim$}{\string~}Main}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Main()}{\string~Main()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Main\+::\texorpdfstring{$\sim$}{\string~}\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_add543303f4fc4bb62f98219bc1ae48ea}\label{classModelNS23817A620S1823_1_1Main_add543303f4fc4bb62f98219bc1ae48ea} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!areExtMsgsValid@{areExtMsgsValid}}
+\index{areExtMsgsValid@{areExtMsgsValid}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{areExtMsgsValid()}{areExtMsgsValid()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Main\+::are\+Ext\+Msgs\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка полей пришедших сетевых сообщений на граничные значения. \begin{DoxyReturn}{Returns}
+true если ошибок не найдено, false в противном случае 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_add4a94f03ace167c05381ca795827ccc}\label{classModelNS23817A620S1823_1_1Main_add4a94f03ace167c05381ca795827ccc} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!checkStrobe@{checkStrobe}}
+\index{checkStrobe@{checkStrobe}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{checkStrobe()}{checkStrobe()}}
+{\footnotesize\ttfamily Result$<$ void $>$ Model\+NS23817\+A620\+S1823\+::\+Main\+::check\+Strobe (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{trpr\+Strb\+Idx,  }\item[{int32\+\_\+t}]{trimts\+Strb\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка полей строба на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em trpr\+Strb\+Idx} & порядковый номер строба в сетевом сообщении (индекс в массиве) ТРПР \\
+\hline
+{\em trpr\+Strb\+Idx} & порядковый номер строба в сетевом сообщении (индекс в массиве) ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None если в результате проверок не найдено ошибок, в противном случае -\/ Err\+Msg с описанием ошибки 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_ac317b36365dbff00e8070958201c8ae5}\label{classModelNS23817A620S1823_1_1Main_ac317b36365dbff00e8070958201c8ae5} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!convertExternalMessages@{convertExternalMessages}}
+\index{convertExternalMessages@{convertExternalMessages}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{convertExternalMessages()}{convertExternalMessages()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Main\+::convert\+External\+Messages (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Конвертация входных параметров во внутренние структуры модели. 
+\begin{DoxyParams}{Parameters}
+{\em ext\+Msgs} & указатель на объект структуры входных сообщений \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Main_ac317b36365dbff00e8070958201c8ae5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a6bc2fbfbc173e519f33a3c3c101e5b56}\label{classModelNS23817A620S1823_1_1Main_a6bc2fbfbc173e519f33a3c3c101e5b56} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!findTrimtsStrbIndex@{findTrimtsStrbIndex}}
+\index{findTrimtsStrbIndex@{findTrimtsStrbIndex}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{findTrimtsStrbIndex()}{findTrimtsStrbIndex()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Main\+::find\+Trimts\+Strb\+Index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{trpr\+Strb\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Поиск индекса строба в ТРИМЦ с таким же идентификатором как и строб ТРПР с заданным номером. 
+\begin{DoxyParams}{Parameters}
+{\em trpr\+Strb\+Idx} & индекс строба в ТРПР \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+индекс строба в ТРИМЦ если поиск завершился удачно, -\/1 -\/ если строб не был найден 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a5c4ce562f37b044cec79356f6df0b7f1}\label{classModelNS23817A620S1823_1_1Main_a5c4ce562f37b044cec79356f6df0b7f1} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!formAllControlMessages@{formAllControlMessages}}
+\index{formAllControlMessages@{formAllControlMessages}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{formAllControlMessages()}{formAllControlMessages()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Main\+::form\+All\+Control\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{lattice\+Mask,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&}]{cntrl\+Msgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Формирование УС для всех стробов такта, поляризаций и всех ячеек Передаваемые сетевые сообщения должны просуществовать до завершения функции. 
+\begin{DoxyParams}{Parameters}
+{\em ext\+Msgs} & указатель на объект структуры входных сообщений \\
+\hline
+{\em cntrl\+Msgs} & ссылка на объект управляющего сообщения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}{Main\+::ok} (0) если модель завершила расчёт УС, \doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}{Main\+::locked} (1) в противном случае 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a5f0b1f05c85df381b4ae72f679f9ec10}{Model\+NS23817\+A620\+S1823\+::\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Main_a5c4ce562f37b044cec79356f6df0b7f1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a2a0955be6f0b7e760c281c91d5cdfcf6}\label{classModelNS23817A620S1823_1_1Main_a2a0955be6f0b7e760c281c91d5cdfcf6} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!formPolarControlMessages@{formPolarControlMessages}}
+\index{formPolarControlMessages@{formPolarControlMessages}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{formPolarControlMessages()}{formPolarControlMessages()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Main\+::form\+Polar\+Control\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{station\+Type,  }\item[{uint32\+\_\+t}]{strb\+Num,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar,  }\item[{\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}} \texorpdfstring{$\ast$}{*}}]{cntrl\+Msg,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&}]{out\+Cntrl\+Msgs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Формирование УС для всех 412х ячеек заданной поляризации для указанного строба. 
+\begin{DoxyParams}{Parameters}
+{\em station\+Type} & тип станции \\
+\hline
+{\em strb\+Num} & порядковый номер строба в сетевом сообщении (индекс в массиве) \\
+\hline
+{\em polar} & тип поляризации \\
+\hline
+{\em cntrl\+Msg} & указатель на объект управляющего сообщения \\
+\hline
+{\em out\+Cntrl\+Msgs} & ссылка на массив для сгенерированных объектов управляющих сообщений \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Main_a2a0955be6f0b7e760c281c91d5cdfcf6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a227f93ec625ecec4a73194c7e0c55450}\label{classModelNS23817A620S1823_1_1Main_a227f93ec625ecec4a73194c7e0c55450} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!initUtilsAndCMsg@{initUtilsAndCMsg}}
+\index{initUtilsAndCMsg@{initUtilsAndCMsg}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{initUtilsAndCMsg()}{initUtilsAndCMsg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Main\+::init\+Utils\+And\+CMsg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}}]{cbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Подготовка утилит для формирования УС, исходя из переданных в класс модели сетевых сообщений, а так же инициализация независящих от строба данных УС. 
+\begin{DoxyParams}{Parameters}
+{\em cbacks} & указатель на объект структуры коллбэков для срезов \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a3744a37387af729fde7ae4b3eb8bc433}\label{classModelNS23817A620S1823_1_1Main_a3744a37387af729fde7ae4b3eb8bc433} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!processStrobes@{processStrobes}}
+\index{processStrobes@{processStrobes}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{processStrobes()}{processStrobes()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Main\+::process\+Strobes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Цикл обсчёта всех парных стробов ТРПР-\/ТРИМЦ. Для работы берутся только те стробы из ТРПР, для идентификатора которых в ТРИМЦ есть парный с таким же номером, остальные пропускаются. Последнее необходимо, т.\+к. в реальной работе задание на имитацию может отсутствовать или не совпадать с заданием на приём. 
+\begin{DoxyParams}{Parameters}
+{\em ext\+Msgs} & указатель на объект структуры входных сообщений \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Main_a3744a37387af729fde7ae4b3eb8bc433_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_aeb9e16b44bbe2550bf6dc3f9f927e72c}\label{classModelNS23817A620S1823_1_1Main_aeb9e16b44bbe2550bf6dc3f9f927e72c} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!startProcessing@{startProcessing}}
+\index{startProcessing@{startProcessing}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{startProcessing()}{startProcessing()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Main\+::start\+Processing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}}]{cbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Запуск модели для расчёта одного такта работы приёмника станции. Передаваемые сетевые сообщения должны просуществовать как минимум до конца формирования УС. 
+\begin{DoxyParams}{Parameters}
+{\em ext\+Msgs} & указатель на объект структуры входных сообщений \\
+\hline
+{\em cbacks} & указатель на объект структуры коллбэков для срезов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}{Main\+::ok} (0) если модель завершила расчёт, \doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}{Main\+::locked} (1) в противном случае 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a072b0b4492b4cf8621ee4586231cc69a}{Model\+NS23817\+A620\+S1823\+::\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Main_aeb9e16b44bbe2550bf6dc3f9f927e72c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Main_ac73551cf2bb0df62ab7301f1a2717829}\label{classModelNS23817A620S1823_1_1Main_ac73551cf2bb0df62ab7301f1a2717829} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!cntrlMsg@{cntrlMsg}}
+\index{cntrlMsg@{cntrlMsg}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{cntrlMsg}{cntrlMsg}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{Control\+Msg}}$>$ Model\+NS23817\+A620\+S1823\+::\+Main\+::cntrl\+Msg\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на объект управляющего сообщения \Hypertarget{classModelNS23817A620S1823_1_1Main_a04525f95e2bde6c2e46987861f8366a3}\label{classModelNS23817A620S1823_1_1Main_a04525f95e2bde6c2e46987861f8366a3} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!conf@{conf}}
+\index{conf@{conf}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{conf}{conf}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationConfig}{CMsg\+Model\+Types\+::\+Station\+Config}}$>$ Model\+NS23817\+A620\+S1823\+::\+Main\+::conf\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на объект утилит \Hypertarget{classModelNS23817A620S1823_1_1Main_abad3203ff946818aef8795b2e6dd2840}\label{classModelNS23817A620S1823_1_1Main_abad3203ff946818aef8795b2e6dd2840} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!inputMsgs@{inputMsgs}}
+\index{inputMsgs@{inputMsgs}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{inputMsgs}{inputMsgs}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1InputMessages}{CMsg\+Model\+Types\+::\+Input\+Messages}}$>$ Model\+NS23817\+A620\+S1823\+::\+Main\+::input\+Msgs\hspace{0.3cm}{\ttfamily [private]}}
+
+указатель на объект входных сообщений \Hypertarget{classModelNS23817A620S1823_1_1Main_a594e0ae3a89fda234965ae9fea1c0d14}\label{classModelNS23817A620S1823_1_1Main_a594e0ae3a89fda234965ae9fea1c0d14} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!optTreeCtor@{optTreeCtor}}
+\index{optTreeCtor@{optTreeCtor}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{optTreeCtor}{optTreeCtor}}
+{\footnotesize\ttfamily optional$<$\mbox{\hyperlink{namespaceModelNS23817A620S1823_aab68dbb441fab74eb0d2f82e83efe4d4}{Tree\+Constructor\+Fun\+\_\+t}}$>$ Model\+NS23817\+A620\+S1823\+::\+Main\+::opt\+Tree\+Ctor\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classModelNS23817A620S1823_1_1Main_a03df431e33dd9628c97890a35c6a7c0f}\label{classModelNS23817A620S1823_1_1Main_a03df431e33dd9628c97890a35c6a7c0f} 
+\index{ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}!trimtsUsedStrobeIndexes@{trimtsUsedStrobeIndexes}}
+\index{trimtsUsedStrobeIndexes@{trimtsUsedStrobeIndexes}!ModelNS23817A620S1823::Main@{ModelNS23817A620S1823::Main}}
+\doxysubsubsection{\texorpdfstring{trimtsUsedStrobeIndexes}{trimtsUsedStrobeIndexes}}
+{\footnotesize\ttfamily std\+::vector$<$int32\+\_\+t$>$ Model\+NS23817\+A620\+S1823\+::\+Main\+::trimts\+Used\+Strobe\+Indexes\hspace{0.3cm}{\ttfamily [private]}}
+
+массив индексов использованных стробов ТРИМЦ, т.\+е. тех, что уже поучаствовали в расчётах 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{modelMain_8h}{model\+Main.\+h}}\item 
+src/\mbox{\hyperlink{modelMain_8cpp}{model\+Main.\+cpp}}\end{DoxyCompactItemize}

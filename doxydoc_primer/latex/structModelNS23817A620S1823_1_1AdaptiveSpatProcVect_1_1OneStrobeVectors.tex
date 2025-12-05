@@ -1,0 +1,78 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Adaptive\+Spat\+Proc\+Vect\+::One\+Strobe\+Vectors Struct Reference}
+\hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+
+
+{\ttfamily \#include $<$adaptive\+Spat\+Proc\+Vect.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Adaptive\+Spat\+Proc\+Vect\+::One\+Strobe\+Vectors\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_afe5fe47d31f9800eb43ea6155c825928}{t\+Exec\+Num}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8c171080a3a17c730b52f3ca702b39a3}{strb\+ID}}
+\item 
+bool \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a0db49ef849c4541f567b96aac2986720}{is\+Busy}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}{Mode}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a72a85370826934fe8050fe91bd4220b7}{adapt\+Mode}}
+\item 
+bool \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_ad7fd222f9fee50327ab9b28c80af0608}{polar\+Is\+Ready}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}
+\item 
+std\+::complex$<$ int32\+\_\+t $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8851121b97db82d9a7420bb8c1654802}{adaptive\+Spat\+Proc\+Vect}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{Shared\+Const\+::max\+Channels\+SM}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура данных для хранения в себе адаптивных векторов ПО одного строба. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8851121b97db82d9a7420bb8c1654802}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8851121b97db82d9a7420bb8c1654802} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}!adaptiveSpatProcVect@{adaptiveSpatProcVect}}
+\index{adaptiveSpatProcVect@{adaptiveSpatProcVect}!ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+\doxysubsubsection{\texorpdfstring{adaptiveSpatProcVect}{adaptiveSpatProcVect}}
+{\footnotesize\ttfamily std\+::complex$<$int32\+\_\+t$>$ Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors\+::adaptive\+Spat\+Proc\+Vect\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{Shared\+Const\+::max\+Channels\+SM}}\mbox{]}}
+
+вектора ПО, рассчитанные при адаптации (адаптивные). Каналы в массиве расположены по порядку нумерации ячеек в крейте. Количество каналов взято как для сантиметровой станции, т.\+к. в ней их больше, чем в метровой и МРИК. \Hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a72a85370826934fe8050fe91bd4220b7}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a72a85370826934fe8050fe91bd4220b7} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}!adaptMode@{adaptMode}}
+\index{adaptMode@{adaptMode}!ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+\doxysubsubsection{\texorpdfstring{adaptMode}{adaptMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}{Mode}} Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors\+::adapt\+Mode}
+
+вид адаптации, вектора которого находятся в структуре. \Hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a0db49ef849c4541f567b96aac2986720}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a0db49ef849c4541f567b96aac2986720} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}!isBusy@{isBusy}}
+\index{isBusy@{isBusy}!ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+\doxysubsubsection{\texorpdfstring{isBusy}{isBusy}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors\+::is\+Busy}
+
+флаг заполненности массива данными. \Hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_ad7fd222f9fee50327ab9b28c80af0608}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_ad7fd222f9fee50327ab9b28c80af0608} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}!polarIsReady@{polarIsReady}}
+\index{polarIsReady@{polarIsReady}!ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+\doxysubsubsection{\texorpdfstring{polarIsReady}{polarIsReady}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors\+::polar\+Is\+Ready\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}}
+
+флаги готовности адаптивных векторов для поляризаций. \Hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8c171080a3a17c730b52f3ca702b39a3}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8c171080a3a17c730b52f3ca702b39a3} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}!strbID@{strbID}}
+\index{strbID@{strbID}!ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+\doxysubsubsection{\texorpdfstring{strbID}{strbID}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors\+::strb\+ID}
+
+идентификатор строба, для которого предназначены адаптивные вектора ПО. \Hypertarget{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_afe5fe47d31f9800eb43ea6155c825928}\label{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_afe5fe47d31f9800eb43ea6155c825928} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}!tExecNum@{tExecNum}}
+\index{tExecNum@{tExecNum}!ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors@{ModelNS23817A620S1823::AdaptiveSpatProcVect::OneStrobeVectors}}
+\doxysubsubsection{\texorpdfstring{tExecNum}{tExecNum}}
+{\footnotesize\ttfamily uint64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors\+::t\+Exec\+Num}
+
+номер исполнения такта. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{adaptiveSpatProcVect_8h}{adaptive\+Spat\+Proc\+Vect.\+h}}\end{DoxyCompactItemize}

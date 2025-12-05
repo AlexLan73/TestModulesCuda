@@ -1,0 +1,11 @@
+<map id="InterfStrobeOutput" name="InterfStrobeOutput">
+<area shape="rect" id="Node000001" title=" " alt="" coords="119,620,254,685"/>
+<area shape="rect" id="Node000002" href="$structPolarized.html" title=" " alt="" coords="25,347,172,547"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,547,169,604,164,606,139,549"/>
+<area shape="rect" id="Node000003" href="$structVector3d.html" title=" " alt="" coords="33,135,164,260"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,260,101,331,96,331,96,260"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,192,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,99,101,134,96,134,96,99"/>
+<area shape="rect" id="Node000005" href="$structPolarized.html" title=" " alt="" coords="197,337,355,557"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="231,558,214,597,210,606,206,604,210,595,227,556"/>
+</map>

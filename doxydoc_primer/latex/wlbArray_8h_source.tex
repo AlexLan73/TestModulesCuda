@@ -1,0 +1,38 @@
+\doxysection{wlb\+Array.\+h}
+\hypertarget{wlbArray_8h_source}{}\label{wlbArray_8h_source}\index{src/wlbArray.h@{src/wlbArray.h}}
+\mbox{\hyperlink{wlbArray_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WLBARRAY\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WLBARRAY\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray}{WlbArray}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray}{WlbArray}}(\textcolor{keyword}{const}\ std::list<std::string>\&\ lstDataDirs);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a481a1422a9794f7f8330011ed970080e}{\string~WlbArray}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a66d2e1af081800bce8e13d9d456a166c}{getWlb}}(uint32\_t\ nfil,\ uint32\_t\ wlbNum,\ int32\_t\ *wlbBuf)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a1bc20b2ac0f5dd262ff9d17fd7498d26}{getWlbNnorm}}(uint32\_t\ nfil,\ uint32\_t\ wlbNum)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a77b5bab038801c2cb92c7c6812f686cd}{wlbConst}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a4948fc00ee26098b191968c461a7412c}{maxNumWlbsForOneNfil}}\ =\ 16;}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<std::vector<std::vector<uint32\_t>\ >\ >\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a5462f0a3c2e0aed3a7b7cbcc45687374}{wlbCoefs}};}
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_afa905906159157375f73a06a64801ac0}{loadWlbCoefs}}(\textcolor{keyword}{const}\ std::list<std::string>\&\ lstDataDirs);}
+\DoxyCodeLine{00051\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a79e6f139bd4e5ffc2fc297e101f1f433}{getNfil}}(std::string\ strHeader);}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_aac889ad6f50c18c6a1438ffe36d91918}{getWlbNum}}(std::string\ strHeader);}
+\DoxyCodeLine{00064\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a7d591c4b3a09a3d29f8a06dc9c380bd9}{findNfil}}(uint32\_t\ nfil)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \};\ \textcolor{comment}{//\ class\ WlbArray}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WLBARRAY\_H\_\_}}
+
+\end{DoxyCode}

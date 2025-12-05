@@ -1,0 +1,58 @@
+.TH "ModelInputBundle" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelInputBundle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RPC\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "E2TRPR \fBtrpr\fP"
+.br
+.ti -1c
+.RI "TrimtsMsg \fBtrimts\fP"
+.br
+.ti -1c
+.RI "optional< \fBModelNS23817A620S1823::StationParams\fP > \fBstationParams\fP"
+.br
+.ti -1c
+.RI "optional< E2IPPA > \fBopt_ippa\fP"
+.br
+.ti -1c
+.RI "optional< libvork::EUMASK > \fBopt_mask\fP"
+.br
+.ti -1c
+.RI "optional< libvork::EUTRKP > \fBopt_klb\fP"
+.br
+.ti -1c
+.RI "optional< libvork::EUTRKP > \fBopt_afr\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Пакет параметров для вычисления выдачи модели по для такта\&. Обязательными явдяются только ТРПР и ТРИМС, при отсутствии остальных используются разумные дефолты (все эти сообщения передаются прямо в модель)\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "optional<libvork::EUTRKP> ModelInputBundle::opt_afr"
+
+.SS "optional<E2IPPA> ModelInputBundle::opt_ippa"
+
+.SS "optional<libvork::EUTRKP> ModelInputBundle::opt_klb"
+
+.SS "optional<libvork::EUMASK> ModelInputBundle::opt_mask"
+
+.SS "optional<\fBModelNS23817A620S1823::StationParams\fP> ModelInputBundle::stationParams"
+
+.SS "TrimtsMsg ModelInputBundle::trimts"
+
+.SS "E2TRPR ModelInputBundle::trpr"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

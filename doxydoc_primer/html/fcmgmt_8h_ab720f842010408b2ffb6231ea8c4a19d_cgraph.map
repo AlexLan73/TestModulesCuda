@@ -1,0 +1,12 @@
+<map id="init_fc_defaults" name="init_fc_defaults">
+<area shape="rect" id="Node000001" title="Инициализация данных ФУ по умолчанию при старте ФПО." alt="" coords="5,55,128,80"/>
+<area shape="rect" id="Node000002" href="$fcmgmt_8cpp.html#a96ad63e1ddcacd46ac249f429b44d5a8" title="Функция инициализирует буфер сообщения АФР значениями по умолчанию." alt="" coords="193,5,261,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,52,179,30,180,35,109,57"/>
+<area shape="rect" id="Node000004" href="$fcmgmt_8cpp.html#a0dcf170b614d5e05cae2e493795d0d4d" title="Функция инициализирует буфер сообщения КЛБ значениями по умолчанию." alt="" coords="193,55,262,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="128,65,179,65,179,70,128,70"/>
+<area shape="rect" id="Node000005" href="$fcmgmt_8cpp.html#a194a7319374b49414c786ef75ea301fe" title="Функция сбрасывает маску каналов на значения по умолчанию." alt="" coords="176,104,279,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="109,77,173,97,171,102,108,83"/>
+<area shape="rect" id="Node000003" href="$fcmgmt_8cpp.html#a0e651fc2b7b544c84761ff195ff44675" title="Функция производит инициализация сообщения Е2ТРКП." alt="" coords="327,31,419,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,21,314,30,313,36,261,26"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="262,59,312,51,313,56,263,64"/>
+</map>

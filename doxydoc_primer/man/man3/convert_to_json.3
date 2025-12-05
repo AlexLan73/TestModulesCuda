@@ -1,0 +1,63 @@
+.TH "convert_to_json" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+convert_to_json
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBconvert_format\fP (p)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBre_int\fP = re\&.compile('^(|\-)[0\-9]+$')"
+.br
+.ti -1c
+.RI "\fBre_float\fP = re\&.compile('^(|\-)[0\-9]+\&.[0\-9]*$')"
+.br
+.ti -1c
+.RI "\fBre_bool\fP = re\&.compile('^(true|false)$')"
+.br
+.ti -1c
+.RI "int \fBinp\fP = file(sys\&.argv[1]) if len(sys\&.argv) > 1 else sys\&.stdin"
+.br
+.ti -1c
+.RI "\fBj\fP = json\&.load(\fBinp\fP, object_pairs_hook = \fBconvert_format\fP)"
+.br
+.ti -1c
+.RI "\fBstdout\fP"
+.br
+.ti -1c
+.RI "\fBindent\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "convert_to_json\&.convert_format ( p)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "convert_to_json\&.indent"
+
+.SS "int convert_to_json\&.inp = file(sys\&.argv[1]) if len(sys\&.argv) > 1 else sys\&.stdin"
+
+.SS "convert_to_json\&.j = json\&.load(\fBinp\fP, object_pairs_hook = \fBconvert_format\fP)"
+
+.SS "convert_to_json\&.re_bool = re\&.compile('^(true|false)$')"
+
+.SS "convert_to_json\&.re_float = re\&.compile('^(|\-)[0\-9]+\&.[0\-9]*$')"
+
+.SS "convert_to_json\&.re_int = re\&.compile('^(|\-)[0\-9]+$')"
+
+.SS "convert_to_json\&.stdout"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

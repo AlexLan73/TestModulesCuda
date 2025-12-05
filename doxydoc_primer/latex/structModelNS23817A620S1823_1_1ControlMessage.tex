@@ -1,0 +1,78 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Control\+Message Struct Reference}
+\hypertarget{structModelNS23817A620S1823_1_1ControlMessage}{}\label{structModelNS23817A620S1823_1_1ControlMessage}\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+
+
+{\ttfamily \#include $<$model\+Interface.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Control\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structModelNS23817A620S1823_1_1ControlMessage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_a88b7b29b49635b8a67b78ce8dc9de62a}{strb\+Num}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_a3cd9ed3bdd334f5d82c130f01aefb60c}{polar\+Num}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_aef5a67f87fa251d435b173fb5511fa8f}{cell412\+Num}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsg\+Shared\+Types\+::\+Imit\+Tact}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_aa2611e1865d1cf7ebb000bdc7b538dc4}{tact\+Header}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_a2d06a085982f892d56b47ad678632ad3}{strb}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsg\+Shared\+Types\+::\+Imit\+Object}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_ae5902c67e1d9f363e5852b7b850a72b1}{imit\+Objects}} \mbox{[}\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{max\+Imit\+Objects}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Интерфейсная структура данных управляющего сообщения на одну 412ю ячейку 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1ControlMessage_aef5a67f87fa251d435b173fb5511fa8f}\label{structModelNS23817A620S1823_1_1ControlMessage_aef5a67f87fa251d435b173fb5511fa8f} 
+\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}!cell412Num@{cell412Num}}
+\index{cell412Num@{cell412Num}!ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+\doxysubsubsection{\texorpdfstring{cell412Num}{cell412Num}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Message\+::cell412\+Num}
+
+порядковый номер 412й ячейки, для которой сформировано УС \Hypertarget{structModelNS23817A620S1823_1_1ControlMessage_ae5902c67e1d9f363e5852b7b850a72b1}\label{structModelNS23817A620S1823_1_1ControlMessage_ae5902c67e1d9f363e5852b7b850a72b1} 
+\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}!imitObjects@{imitObjects}}
+\index{imitObjects@{imitObjects}!ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+\doxysubsubsection{\texorpdfstring{imitObjects}{imitObjects}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsg\+Shared\+Types\+::\+Imit\+Object}} Model\+NS23817\+A620\+S1823\+::\+Control\+Message\+::imit\+Objects\mbox{[}\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{max\+Imit\+Objects}}\mbox{]}}
+
+массив параметров объектов для имитации \Hypertarget{structModelNS23817A620S1823_1_1ControlMessage_a3cd9ed3bdd334f5d82c130f01aefb60c}\label{structModelNS23817A620S1823_1_1ControlMessage_a3cd9ed3bdd334f5d82c130f01aefb60c} 
+\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}!polarNum@{polarNum}}
+\index{polarNum@{polarNum}!ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+\doxysubsubsection{\texorpdfstring{polarNum}{polarNum}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Message\+::polar\+Num}
+
+номер поляризации, для которого сформировано УС \Hypertarget{structModelNS23817A620S1823_1_1ControlMessage_a2d06a085982f892d56b47ad678632ad3}\label{structModelNS23817A620S1823_1_1ControlMessage_a2d06a085982f892d56b47ad678632ad3} 
+\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}!strb@{strb}}
+\index{strb@{strb}!ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+\doxysubsubsection{\texorpdfstring{strb}{strb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} Model\+NS23817\+A620\+S1823\+::\+Control\+Message\+::strb}
+
+объект строба тактового расписания \Hypertarget{structModelNS23817A620S1823_1_1ControlMessage_a88b7b29b49635b8a67b78ce8dc9de62a}\label{structModelNS23817A620S1823_1_1ControlMessage_a88b7b29b49635b8a67b78ce8dc9de62a} 
+\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}!strbNum@{strbNum}}
+\index{strbNum@{strbNum}!ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+\doxysubsubsection{\texorpdfstring{strbNum}{strbNum}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Message\+::strb\+Num}
+
+порядковый номер строба в ТРПР, для которого сформировано УС \Hypertarget{structModelNS23817A620S1823_1_1ControlMessage_aa2611e1865d1cf7ebb000bdc7b538dc4}\label{structModelNS23817A620S1823_1_1ControlMessage_aa2611e1865d1cf7ebb000bdc7b538dc4} 
+\index{ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}!tactHeader@{tactHeader}}
+\index{tactHeader@{tactHeader}!ModelNS23817A620S1823::ControlMessage@{ModelNS23817A620S1823::ControlMessage}}
+\doxysubsubsection{\texorpdfstring{tactHeader}{tactHeader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsg\+Shared\+Types\+::\+Imit\+Tact}} Model\+NS23817\+A620\+S1823\+::\+Control\+Message\+::tact\+Header}
+
+объект заголовка тактового расписания 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model/\mbox{\hyperlink{modelInterface_8h}{model\+Interface.\+h}}\end{DoxyCompactItemize}

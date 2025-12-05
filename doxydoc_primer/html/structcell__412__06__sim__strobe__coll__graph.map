@@ -1,0 +1,5 @@
+<map id="cell_412_06_sim_strobe" name="cell_412_06_sim_strobe">
+<area shape="rect" id="Node000001" title="Данные ячейки 6МЯ&#45;412&#45;06 по имитационному стробу" alt="" coords="5,413,195,639"/>
+<area shape="rect" id="Node000002" href="$structcell__412__06__sim__object.html" title="Данные ячейки 6МЯ&#45;412&#45;06 по имитируемом объекту" alt="" coords="15,5,185,351"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,351,103,397,97,397,97,351"/>
+</map>

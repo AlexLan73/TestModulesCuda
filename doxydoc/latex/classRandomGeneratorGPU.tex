@@ -1,0 +1,132 @@
+\doxysection{Random\+Generator\+GPU Class Reference}
+\hypertarget{classRandomGeneratorGPU}{}\label{classRandomGeneratorGPU}\index{RandomGeneratorGPU@{RandomGeneratorGPU}}
+
+
+{\ttfamily \#include $<$Random\+Generator\+GPU.\+h$>$}
+
+
+
+Collaboration diagram for Random\+Generator\+GPU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classRandomGeneratorGPU__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRandomGeneratorGPU_ada6ea0a3b8926b64a25bd94f440cd3bd}{Random\+Generator\+GPU}} (unsigned long long seed, float max\+\_\+random, size\+\_\+t num\+\_\+points)
+\item 
+\mbox{\hyperlink{classRandomGeneratorGPU_ac1742faec3b761e3c9c8e08d76f43de5}{\texorpdfstring{$\sim$}{\string~}\+Random\+Generator\+GPU}} ()
+\item 
+void \mbox{\hyperlink{classRandomGeneratorGPU_ae72d80d8b71e065c089d8697f913c543}{generate}} ()
+\item 
+void \mbox{\hyperlink{classRandomGeneratorGPU_ad94dfd7933340db320da7b37e91ea871}{apply\+Low\+Pass\+Convolution}} (int kernel\+\_\+size)
+\item 
+int \mbox{\hyperlink{classRandomGeneratorGPU_a30a84f115b9b296bc22860eba30cefe6}{get\+Sum}} () const
+\item 
+std\+::vector$<$ int16\+\_\+t $>$ \mbox{\hyperlink{classRandomGeneratorGPU_a6d3f2f7b78e7ccd13d97340804f6e83b}{get\+Random\+Numbers}} () const
+\item 
+void \mbox{\hyperlink{classRandomGeneratorGPU_a34130c770c19d4ba2c193bebe75cf2d3}{print\+First10}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long long \mbox{\hyperlink{classRandomGeneratorGPU_a1945c867c63fa245fb0bf2e8e5d408d9}{seed\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classRandomGeneratorGPU_afa8c7ecb5c7642e8de6b59d8a9c83382}{num\+\_\+points\+\_\+}}
+\item 
+int16\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRandomGeneratorGPU_a90d4662b3b932d22e16aecd55a80cdb3}{d\+\_\+random\+\_\+numbers\+\_\+}}
+\item 
+float \mbox{\hyperlink{classRandomGeneratorGPU_aaad4e363eb9928944ab08d75db74a278}{max\+\_\+random\+\_\+}}
+\item 
+std\+::vector$<$ int16\+\_\+t $>$ \mbox{\hyperlink{classRandomGeneratorGPU_ad496dd4787e4028f46eee0aefed1d0ef}{h\+\_\+random\+\_\+numbers\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRandomGeneratorGPU_ada6ea0a3b8926b64a25bd94f440cd3bd}\label{classRandomGeneratorGPU_ada6ea0a3b8926b64a25bd94f440cd3bd} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{RandomGeneratorGPU()}{RandomGeneratorGPU()}}
+{\footnotesize\ttfamily Random\+Generator\+GPU\+::\+Random\+Generator\+GPU (\begin{DoxyParamCaption}\item[{unsigned long long}]{seed,  }\item[{float}]{max\+\_\+random,  }\item[{size\+\_\+t}]{num\+\_\+points }\end{DoxyParamCaption})}
+
+\Hypertarget{classRandomGeneratorGPU_ac1742faec3b761e3c9c8e08d76f43de5}\label{classRandomGeneratorGPU_ac1742faec3b761e3c9c8e08d76f43de5} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!````~RandomGeneratorGPU@{\texorpdfstring{$\sim$}{\string~}RandomGeneratorGPU}}
+\index{````~RandomGeneratorGPU@{\texorpdfstring{$\sim$}{\string~}RandomGeneratorGPU}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RandomGeneratorGPU()}{\string~RandomGeneratorGPU()}}
+{\footnotesize\ttfamily Random\+Generator\+GPU\+::\texorpdfstring{$\sim$}{\string~}\+Random\+Generator\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRandomGeneratorGPU_ad94dfd7933340db320da7b37e91ea871}\label{classRandomGeneratorGPU_ad94dfd7933340db320da7b37e91ea871} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!applyLowPassConvolution@{applyLowPassConvolution}}
+\index{applyLowPassConvolution@{applyLowPassConvolution}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{applyLowPassConvolution()}{applyLowPassConvolution()}}
+{\footnotesize\ttfamily void Random\+Generator\+GPU\+::apply\+Low\+Pass\+Convolution (\begin{DoxyParamCaption}\item[{int}]{kernel\+\_\+size }\end{DoxyParamCaption})}
+
+\Hypertarget{classRandomGeneratorGPU_ae72d80d8b71e065c089d8697f913c543}\label{classRandomGeneratorGPU_ae72d80d8b71e065c089d8697f913c543} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!generate@{generate}}
+\index{generate@{generate}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily void Random\+Generator\+GPU\+::generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classRandomGeneratorGPU_a6d3f2f7b78e7ccd13d97340804f6e83b}\label{classRandomGeneratorGPU_a6d3f2f7b78e7ccd13d97340804f6e83b} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!getRandomNumbers@{getRandomNumbers}}
+\index{getRandomNumbers@{getRandomNumbers}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{getRandomNumbers()}{getRandomNumbers()}}
+{\footnotesize\ttfamily std\+::vector$<$ int16\+\_\+t $>$ Random\+Generator\+GPU\+::get\+Random\+Numbers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRandomGeneratorGPU_a30a84f115b9b296bc22860eba30cefe6}\label{classRandomGeneratorGPU_a30a84f115b9b296bc22860eba30cefe6} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!getSum@{getSum}}
+\index{getSum@{getSum}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{getSum()}{getSum()}}
+{\footnotesize\ttfamily int Random\+Generator\+GPU\+::get\+Sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRandomGeneratorGPU_a34130c770c19d4ba2c193bebe75cf2d3}\label{classRandomGeneratorGPU_a34130c770c19d4ba2c193bebe75cf2d3} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!printFirst10@{printFirst10}}
+\index{printFirst10@{printFirst10}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{printFirst10()}{printFirst10()}}
+{\footnotesize\ttfamily void Random\+Generator\+GPU\+::print\+First10 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classRandomGeneratorGPU_a90d4662b3b932d22e16aecd55a80cdb3}\label{classRandomGeneratorGPU_a90d4662b3b932d22e16aecd55a80cdb3} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!d\_random\_numbers\_@{d\_random\_numbers\_}}
+\index{d\_random\_numbers\_@{d\_random\_numbers\_}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{d\_random\_numbers\_}{d\_random\_numbers\_}}
+{\footnotesize\ttfamily int16\+\_\+t\texorpdfstring{$\ast$}{*} Random\+Generator\+GPU\+::d\+\_\+random\+\_\+numbers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRandomGeneratorGPU_ad496dd4787e4028f46eee0aefed1d0ef}\label{classRandomGeneratorGPU_ad496dd4787e4028f46eee0aefed1d0ef} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!h\_random\_numbers\_@{h\_random\_numbers\_}}
+\index{h\_random\_numbers\_@{h\_random\_numbers\_}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{h\_random\_numbers\_}{h\_random\_numbers\_}}
+{\footnotesize\ttfamily std\+::vector$<$int16\+\_\+t$>$ Random\+Generator\+GPU\+::h\+\_\+random\+\_\+numbers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRandomGeneratorGPU_aaad4e363eb9928944ab08d75db74a278}\label{classRandomGeneratorGPU_aaad4e363eb9928944ab08d75db74a278} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!max\_random\_@{max\_random\_}}
+\index{max\_random\_@{max\_random\_}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{max\_random\_}{max\_random\_}}
+{\footnotesize\ttfamily float Random\+Generator\+GPU\+::max\+\_\+random\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRandomGeneratorGPU_afa8c7ecb5c7642e8de6b59d8a9c83382}\label{classRandomGeneratorGPU_afa8c7ecb5c7642e8de6b59d8a9c83382} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!num\_points\_@{num\_points\_}}
+\index{num\_points\_@{num\_points\_}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{num\_points\_}{num\_points\_}}
+{\footnotesize\ttfamily size\+\_\+t Random\+Generator\+GPU\+::num\+\_\+points\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classRandomGeneratorGPU_a1945c867c63fa245fb0bf2e8e5d408d9}\label{classRandomGeneratorGPU_a1945c867c63fa245fb0bf2e8e5d408d9} 
+\index{RandomGeneratorGPU@{RandomGeneratorGPU}!seed\_@{seed\_}}
+\index{seed\_@{seed\_}!RandomGeneratorGPU@{RandomGeneratorGPU}}
+\doxysubsubsection{\texorpdfstring{seed\_}{seed\_}}
+{\footnotesize\ttfamily unsigned long long Random\+Generator\+GPU\+::seed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{RandomGeneratorGPU_8h}{Random\+Generator\+GPU.\+h}}\end{DoxyCompactItemize}

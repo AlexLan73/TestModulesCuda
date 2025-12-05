@@ -1,0 +1,467 @@
+.TH "ModelNS23817A620S1823::Helpers" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Helpers
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<unsigned capacity> int32_t \fBrshiftBy\fP (int32_t value)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> int64_t \fBrshift64By\fP (int64_t value)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> std::complex< int32_t > \fBrshiftBy\fP (const std::complex< int32_t > &value)"
+.br
+.ti -1c
+.RI "template<unsigned capacity> std::complex< int64_t > \fBrshift64By\fP (const std::complex< int64_t > &value)"
+.br
+.ti -1c
+.RI "uint32_t \fBflp2\fP (uint32_t x)"
+.br
+.ti -1c
+.RI "bool \fBisInterfModeStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisTargetModeStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisCoordAdaptStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisSignalAdaptStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisAutocompStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisCalibrStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisLIMMStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisFragmStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisTfcStrb\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcSamplesInRay\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcTransientResponseLength\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcAutocompSamplesInRay\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcRaysNum\fP (const \fBCMsgSharedTypes::ImitStrobe\fP *strb)"
+.br
+.ti -1c
+.RI "const char * \fBgetStrobeIDAppendix\fP (uint32_t strbType)"
+.br
+.ti -1c
+.RI "bool \fBisLastPolarization\fP (\fBSharedConst::PolarizationTypes\fP polarType, uint32_t polarMask)"
+.br
+.ti -1c
+.RI "bool \fBisMrikBottomHalf\fP (uint32_t lChanNum)"
+.br
+.ti -1c
+.RI "template<class T > void \fBprintArr\fP (const T arr[], int32_t length, char direction='r', const char *descr='')"
+.br
+.ti -1c
+.RI "template<class T > void \fBdump1DimSlice\fP (const T buf[], uint32_t length, \fBSliceFile\fP &sFile, std::ios_base::openmode mode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "template<class T , const uint32_t dim2Sz> void \fBdump2DimSlice\fP (const T buf[][dim2Sz], uint32_t rowsNum, uint32_t columnsNum, \fBSliceFile\fP &sFile, std::ios_base::openmode mode=std::ios_base::trunc)"
+.br
+.ti -1c
+.RI "template<class T > int32_t \fBisValid\fP (T value, T min, T max, const char *descr)"
+.br
+.ti -1c
+.RI "template<class T > void \fBdumpSumPolars\fP (std::vector< std::vector< std::vector< T > > > &sum, \fBSliceFile\fP &sFile)"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBSliceFile\fP > \fBmakeSliceFile\fP (const char *slice_name, uint64_t texec, uint nstr)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Область имён вспомогательных функций и типов данных\&. 
+.SH "Function Documentation"
+.PP 
+.SS "uint32_t ModelNS23817A620S1823::Helpers::calcAutocompSamplesInRay (const \fBCMsgSharedTypes::ImitStrobe\fP * strb)"
+Расчёт количества выборок в луче без дополнительных для избавления от влияния переходных процессов при автокомпенсации\&. Вычисление ведётся исходя из данных строба управляющего сообщения\&. Используется только для ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrb\fP указатель на строб имитации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество имеющих значение выборок в луче 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Helpers::calcRaysNum (const \fBCMsgSharedTypes::ImitStrobe\fP * strb)"
+Расчёт количества лучей исходя из типа строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrb\fP указатель на строб имитации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество лучей 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Helpers::calcSamplesInRay (const \fBCMsgSharedTypes::ImitStrobe\fP * strb)"
+Расчёт количества выборок в луче исходя из данных строба управляющего сообщения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrb\fP указатель на строб имитации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество выборок в луче 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Helpers::calcTransientResponseLength (const \fBCMsgSharedTypes::ImitStrobe\fP * strb)"
+Увеличение длины строба для избавления от влияния переходных процессов при автокомпенсации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrb\fP указатель на строб имитации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество дополнительных выборок в луче 
+.RE
+.PP
+
+.SS "template<class T > void ModelNS23817A620S1823::Helpers::dump1DimSlice (const T buf[], uint32_t length, \fBSliceFile\fP & sFile, std::ios_base::openmode mode = \fCstd::ios_base::trunc\fP)"
+Шаблон для сохранения в файл одномерного среза\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP тип элементов буфера 
+.br
+\fIbuf\fP указатель на буфер, содержимое которого нужно печатать 
+.br
+\fIlength\fP длина выводимых данных 
+.br
+\fIsFile\fP ссылка на файл среза 
+.br
+\fImode\fP режим открытия файла среза 
+.RE
+.PP
+
+.SS "template<class T , const uint32_t dim2Sz> void ModelNS23817A620S1823::Helpers::dump2DimSlice (const T buf[][dim2Sz], uint32_t rowsNum, uint32_t columnsNum, \fBSliceFile\fP & sFile, std::ios_base::openmode mode = \fCstd::ios_base::trunc\fP)"
+Шаблон для сохранения в файл двумерного среза\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP тип элементов буфера 
+.br
+\fIdim2Sz\fP величина второй размерности буфера 
+.br
+\fIrowsNum\fP количество строк буфера 
+.br
+\fIcolumnsNum\fP количество столбцов буфера 
+.br
+\fIsFile\fP ссылка на файл среза 
+.br
+\fImode\fP режим открытия файла среза 
+.RE
+.PP
+
+.SS "template<class T > void ModelNS23817A620S1823::Helpers::dumpSumPolars (std::vector< std::vector< std::vector< T > > > & sum, \fBSliceFile\fP & sFile)"
+Шаблон функции сохранения среза ЧВО при режимах когерентного и некогерентного сложения поляризаций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP тип элементов массива данных среза 
+.br
+\fIsum\fP ссылка на массив данных среза 
+.br
+\fIsFile\fP ссылка на файл среза 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Helpers::flp2 (uint32_t x)"
+Поиск наибольшей степени двойки, не превосходящей значение x\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP исходное значение 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+наибольшая степень двойки, не превосходящая значение x 
+.RE
+.PP
+
+.SS "const char * ModelNS23817A620S1823::Helpers::getStrobeIDAppendix (uint32_t strbType)"
+Возврат, в зависимости от заданного типа строба, суффикса для названия соответствующего каталога, т\&.к\&. в адаптационных режимах идентификаторы в стробе, где считаются вектора/коэффициенты, будут одинаковыми и если не добавить суффикс, то данные адаптационного строба перезапишутся данными строба, где вектора/коэффициенты применяются\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+указатель на строку с суффиксом для названия каталога лог-файлов 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isAutocompStrb (uint32_t strbType)"
+Проверка типа строба на то, что он задаёт автокомпенсацию\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - автокомпенсация, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isCalibrStrb (uint32_t strbType)"
+Проверка типа строба на то, что он калибровочный\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - калибровочный, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isCoordAdaptStrb (uint32_t strbType)"
+Проверка типа строба на то, что он задаёт координатную адаптацию\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - координатная адаптация, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isFragmStrb (uint32_t strbType)"
+Проверка типа строба на то, что он для работы с фрагментированным полотном\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба для работы с фрагментированным полотном, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isInterfModeStrb (uint32_t strbType)"
+Проверка типа строба на то, что он является помеховым\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - помеховый, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isLastPolarization (\fBSharedConst::PolarizationTypes\fP polarType, uint32_t polarMask)"
+Определение, исходя из входных данных, является ли текущая поляризация последней для расчёта строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolarType\fP тип поляризации 
+.br
+\fIpolarMask\fP маска поляризаций 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true - если текущая поляризация последняя для расчёта строба, false - если не последняя 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isLIMMStrb (uint32_t strbType)"
+Проверка типа строба на то, что он РИУШ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - РИУШ, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isMrikBottomHalf (uint32_t lChanNum)"
+Определение, исходя из номера канала на полотне МРИК, находится ли он в нижней части антенной решётки (true) или в верхней (false)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlChanNum\fP номер канала в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true - если канал находится в нижней части решётки, false - если в верхней 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isSignalAdaptStrb (uint32_t strbType)"
+Проверка типа строба на то, что он задаёт сигнальную адаптацию\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - сигнальная адаптация, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isTargetModeStrb (uint32_t strbType)"
+Проверка типа строба на то, что он является целевым\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - целевой, false для остальных 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Helpers::isTfcStrb (uint32_t strbType)"
+Проверка типа строба на то, что он ТФК\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный тип строба - ТФК, false для остальных 
+.RE
+.PP
+
+.SS "template<class T > int32_t ModelNS23817A620S1823::Helpers::isValid (T value, T min, T max, const char * descr)"
+Шаблон для проверки заданного значения на выход за заданные границы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP тип элементов 
+.br
+\fIvalue\fP элемент для проверки 
+.br
+\fImin\fP минимально возможное значение элемента 
+.br
+\fImax\fP максимально возможное значение элемента 
+.br
+\fIdescr\fP указатель на строковое описание элемента 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 если значение элемента выходит за пределы [min, max], 0 - если не выходит 
+.RE
+.PP
+
+.SS "std::unique_ptr< \fBSliceFile\fP > ModelNS23817A620S1823::Helpers::makeSliceFile (const char * slice_name, uint64_t texec, uint nstr)\fC [inline]\fP"
+
+.SS "template<class T > void ModelNS23817A620S1823::Helpers::printArr (const T arr[], int32_t length, char direction = \fC'r'\fP, const char * descr = \fC''\fP)"
+Шаблон для печати одномерного массива\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP тип элементов буфера 
+.br
+\fIarr\fP указатель на буфер, содержимое которого нужно печатать 
+.br
+\fIlength\fP длина выводимых данных 
+.br
+\fIdirection\fP направление печати (r - в строку, c - в столбец) 
+.br
+\fIdescr\fP указатель на строку с допонительным описанием 
+.RE
+.PP
+
+.SS "template<unsigned capacity> std::complex< int64_t > ModelNS23817A620S1823::Helpers::rshift64By (const std::complex< int64_t > & value)\fC [inline]\fP"
+
+.SS "template<unsigned capacity> int64_t ModelNS23817A620S1823::Helpers::rshift64By (int64_t value)\fC [inline]\fP"
+Сдвиг 64-разрядного целого вправо на capacity разрядов с округлением результата (округление away from zero)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP исходное значение 
+.br
+\fIcapacity\fP количество разрядов, на которое нужно сдвинуть число 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+округлённое на capacity разрядов значение 
+.RE
+.PP
+
+.SS "template<unsigned capacity> std::complex< int32_t > ModelNS23817A620S1823::Helpers::rshiftBy (const std::complex< int32_t > & value)\fC [inline]\fP"
+
+.SS "template<unsigned capacity> int32_t ModelNS23817A620S1823::Helpers::rshiftBy (int32_t value)\fC [inline]\fP"
+Сдвиг 32-разрядного целого вправо на capacity разрядов с округлением результата (округление away from zero)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP исходное значение 
+.br
+\fIcapacity\fP количество разрядов, на которое нужно сдвинуть число 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+округлённое на capacity разрядов значение 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,38 @@
+.TH "UcopoMsgBuf" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UcopoMsgBuf
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <str_uco\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBbuf\fP [MAX_UCOPO_SIZE]"
+.br
+.ti -1c
+.RI "uint32_t \fBrealSize\fP"
+.br
+.ti -1c
+.RI "bool \fBbusyFlag\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Структура буфера для сообщения УЦОПО 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t UcopoMsgBuf::buf[MAX_UCOPO_SIZE]"
+буфер для сообщения УЦОПО; &buf[0] можно преобразовывать в указатель на UCOPO и отсылать в сеть 
+.SS "bool UcopoMsgBuf::busyFlag"
+флаг занятости буфера\&. true - занят, false - свободен 
+.SS "uint32_t UcopoMsgBuf::realSize"
+реальный размер сообщения УЦОПО в буфере 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

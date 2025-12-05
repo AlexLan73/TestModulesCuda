@@ -1,0 +1,72 @@
+.TH "gnuplotio::ArrayTraits< std::pair< T, U > >" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::ArrayTraits< std::pair< T, U > >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gnuplot\-iostream\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPairOfRange\fP< typename \fBArrayTraits\fP< T >::range_type, typename \fBArrayTraits\fP< U >::range_type > \fBrange_type\fP"
+.br
+.ti -1c
+.RI "typedef std::pair< typename \fBArrayTraits\fP< T >::value_type, typename \fBArrayTraits\fP< U >::value_type > \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBrange_type\fP \fBget_range\fP (const std::pair< T, U > &arg)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP = \fBArrayTraits\fP<T>::is_container && \fBArrayTraits\fP<U>::is_container"
+.br
+.ti -1c
+.RI "static const bool \fBallow_auto_unwrap\fP = false"
+.br
+.ti -1c
+.RI "static const size_t \fBl_depth\fP = \fBArrayTraits\fP<T>\fB::depth\fP"
+.br
+.ti -1c
+.RI "static const size_t \fBr_depth\fP = \fBArrayTraits\fP<U>\fB::depth\fP"
+.br
+.ti -1c
+.RI "static const size_t \fBdepth\fP = (\fBl_depth\fP < \fBr_depth\fP) ? \fBl_depth\fP : \fBr_depth\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename T , typename U > typedef \fBPairOfRange\fP<typename \fBArrayTraits\fP<T>::range_type, typename \fBArrayTraits\fP<U>::range_type> \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::range_type"
+
+.SS "template<typename T , typename U > typedef std::pair<typename \fBArrayTraits\fP<T>::value_type, typename \fBArrayTraits\fP<U>::value_type> \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::value_type"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T , typename U > static \fBrange_type\fP \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::get_range (const std::pair< T, U > & arg)\fC [inline]\fP, \fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename T , typename U > const bool \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::allow_auto_unwrap = false\fC [static]\fP"
+
+.SS "template<typename T , typename U > const size_t \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::depth = (\fBl_depth\fP < \fBr_depth\fP) ? \fBl_depth\fP : \fBr_depth\fP\fC [static]\fP"
+
+.SS "template<typename T , typename U > const bool \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::is_container = \fBArrayTraits\fP<T>::is_container && \fBArrayTraits\fP<U>::is_container\fC [static]\fP"
+
+.SS "template<typename T , typename U > const size_t \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::l_depth = \fBArrayTraits\fP<T>\fB::depth\fP\fC [static]\fP"
+
+.SS "template<typename T , typename U > const size_t \fBgnuplotio::ArrayTraits\fP< std::pair< T, U > >::r_depth = \fBArrayTraits\fP<U>\fB::depth\fP\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

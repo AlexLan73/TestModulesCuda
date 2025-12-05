@@ -1,0 +1,59 @@
+\doxysection{adaptive\+Spat\+Proc\+Vect.\+h}
+\hypertarget{adaptiveSpatProcVect_8h_source}{}\label{adaptiveSpatProcVect_8h_source}\index{src/adaptiveSpatProcVect.h@{src/adaptiveSpatProcVect.h}}
+\mbox{\hyperlink{adaptiveSpatProcVect_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ADAPTIVESPATPROCVECT\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ADAPTIVESPATPROCVECT\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <complex>}\ \textcolor{comment}{//\ std::complex<>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ [u]intNN\_t}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ippa_8h}{ippa.h}}"{}}\ \textcolor{comment}{//\ maxActiveInterferences}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect}{AdaptiveSpatProcVect}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}{Mode}}\ \{\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9aa747d8d1edf70803f86f9ae22d7d2439}{signalCoord}}\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{OneStrobeVectors}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_afe5fe47d31f9800eb43ea6155c825928}{tExecNum}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8c171080a3a17c730b52f3ca702b39a3}{strbID}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a0db49ef849c4541f567b96aac2986720}{isBusy}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}{Mode}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a72a85370826934fe8050fe91bd4220b7}{adaptMode}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_ad7fd222f9fee50327ab9b28c80af0608}{polarIsReady}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{SharedConst::maxPolars}}];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors_a8851121b97db82d9a7420bb8c1654802}{adaptiveSpatProcVect}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{SharedConst::maxPolars}}]}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}]}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}];}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a3ab4690d552893db24b6304cc52eacf1}{add}}(uint32\_t\ strbID,\ uint32\_t\ maxChannels,\ uint64\_t\ tExecNum,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{SharedConst::PolarizationTypes}}\ polarType,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ std::complex<int32\_t>\ adaptiveVect[][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}]);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_aad3162319c7b64332b7d9ccc641e8dba}{rm}}(uint32\_t\ strbID);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{OneStrobeVectors}}*\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af2612b5073682d02ca576cf86e1c3c28}{get}}(uint32\_t\ strbID)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a090561f709b914641938e20d6fb17750}{print}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a22b3de0bd7f1b052cb49652bd4daaeea}{AdaptiveSpatProcVect}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ad0d8c7326d36fcc2e39cb5e8bafab879}{\string~AdaptiveSpatProcVect}}();}
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:\ \textcolor{comment}{//data}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648}{maxAdaptStrobes}}\ =\ 10;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0588f944fe4792c18981f08e3cd82c45}{adaptDataStoreTime}}\ =\ 2;}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{OneStrobeVectors}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af68c22ba2218d2640ef425626512c285}{strobes}}[\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648}{maxAdaptStrobes}}];}
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00092\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a7d71d0889a231f83799a6c83c134eefb}{findFreeQuantIndex}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ab5f968d1d3cc0d7210829254a975b969}{clear}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a1a012ab43a136c99750e3601415d6767}{isStrbIdExistAlready}}(uint32\_t\ strbID,\ int32\_t\ *strbIndex)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a8b2bda84dcab1717b99144f36c2fafa8}{purge}}(uint64\_t\ tExecNum);}
+\DoxyCodeLine{00117\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0163b861484fb7d2bd88f379ea2269c2}{findFreeQuantOrRightStrobe}}(}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ strbID,\ uint64\_t\ tExecNum,}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{SharedConst::PolarizationTypes}}\ polarType);}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a858e837013cc7f8daca36b4aa30d37b5}{printSignalCoordData}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ s)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00128\ \};\ \textcolor{comment}{//\ class\ AdaptiveSpatProcVect}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ADAPTIVESPATPROCVECT\_H\_\_}}
+
+\end{DoxyCode}

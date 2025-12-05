@@ -1,0 +1,54 @@
+.TH "ServerLoop::QueuedRequest" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServerLoop::QueuedRequest \- Запрос на вполнение JSON RPC метода (любого), поставленный в очередь\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQueuedRequest\fP (std::unique_ptr< \fBRequest\fP > r, std::shared_ptr< \fBClientConn\fP > c)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unique_ptr< \fBRequest\fP > \fBreq\fP"
+.br
+.RI "Собственно JSON RPC запрос "
+.ti -1c
+.RI "std::shared_ptr< \fBClientConn\fP > \fBconn\fP"
+.br
+.RI "Клиентское соединение, от которого пришел запрос "
+.ti -1c
+.RI "const \fBModelInputBundle\fP * \fBin_bundle\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Запрос на вполнение JSON RPC метода (любого), поставленный в очередь\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ServerLoop::QueuedRequest::QueuedRequest (std::unique_ptr< \fBRequest\fP > r, std::shared_ptr< \fBClientConn\fP > c)\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::shared_ptr<\fBClientConn\fP> ServerLoop::QueuedRequest::conn"
+
+.PP
+Клиентское соединение, от которого пришел запрос 
+.SS "const \fBModelInputBundle\fP* ServerLoop::QueuedRequest::in_bundle"
+Если req - запрос на вычисление выдачи модели (computePlanes), это указатель на входное ФУ модели (внутри req), иначе nullptr 
+.SS "std::unique_ptr<\fBRequest\fP> ServerLoop::QueuedRequest::req"
+
+.PP
+Собственно JSON RPC запрос 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

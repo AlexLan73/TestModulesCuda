@@ -1,0 +1,303 @@
+\doxysection{src/run\+Model.cpp File Reference}
+\hypertarget{runModel_8cpp}{}\label{runModel_8cpp}\index{src/runModel.cpp@{src/runModel.cpp}}
+{\ttfamily \#include $<$libutils/getenv.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/simhelpers.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/serdes.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/resource.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include "{}model\+Main.\+h"{}}\newline
+{\ttfamily \#include "{}slice\+File.\+h"{}}\newline
+{\ttfamily \#include "{}run\+Model.\+h"{}}\newline
+{\ttfamily \#include "{}helpers.\+h"{}}\newline
+{\ttfamily \#include "{}blk223/blk223fc.\+h"{}}\newline
+{\ttfamily \#include "{}blk223/model\+\_\+wrapper.\+h"{}}\newline
+{\ttfamily \#include "{}blk223/fcmgmt.\+h"{}}\newline
+Include dependency graph for run\+Model.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runModel_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class A , class V $>$ }\\bool \mbox{\hyperlink{runModel_8cpp_a796d193e8beb2b0c11b7f7ec8cab452e}{opt\+\_\+sum\+\_\+is}} (const optional$<$ V $>$ \&optv)
+\item 
+static bool \mbox{\hyperlink{runModel_8cpp_af8ce9a0637deade413cf5f7d285408a2}{p\+Callback}} ()
+\item 
+bool \mbox{\hyperlink{runModel_8cpp_aeac29ccc9826d6d89801038cb315c783}{Exists}} (std\+::string path)
+\item 
+static \mbox{\hyperlink{structResourceUsage}{Resource\+Usage}} \mbox{\hyperlink{runModel_8cpp_ad2bca18f9cd2c903734948a9aa9ab068}{make\+Resource\+Usage}} (const rusage \&base\+Rusage, const rusage \&final\+Rusage, const timeval \&base\+Time, const timeval \&final\+Time)
+\item 
+{\footnotesize template$<$typename outT , typename inT $>$ }\\void \mbox{\hyperlink{runModel_8cpp_a016714f148864f87cd92aa098c87c1cc}{Convert\+For\+Model}} (outT \&out, const inT \&in)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{runModel_8cpp_a3e76d5cabb30fefa0024b935a91b2249}{Convert\+Trkp\+For\+Model}} (\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&out, const T \&in)
+\item 
+template$<$$>$ void \mbox{\hyperlink{runModel_8cpp_a82923279cf3dad1ef8cb96d8bd5ca9ae}{Convert\+For\+Model}} (\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&out, const EUTRKP\+\_\+\+M\+\_\+\+Rx \&in)
+\item 
+template$<$$>$ void \mbox{\hyperlink{runModel_8cpp_a7e7e0a26eb37907bd12b588c8dfb9023}{Convert\+For\+Model}} (\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&out, const EUTRKP\+\_\+\+CM\+\_\+\+Rx \&in)
+\item 
+template$<$$>$ void \mbox{\hyperlink{runModel_8cpp_a817a24ff172b19dea3c038d9205a426d}{Convert\+For\+Model}} (\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&out, const EUTRKP\+\_\+\+MRIK\+\_\+\+Rx \&in)
+\item 
+template$<$$>$ void \mbox{\hyperlink{runModel_8cpp_ae89410c61a29edc06189abee643c39f6}{Convert\+For\+Model}} (\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&out, const EUTRKP \&in)
+\item 
+{\footnotesize template$<$class T $>$ }\\uint \mbox{\hyperlink{runModel_8cpp_adc150c787646d7177d79a010872b6a08}{Convert\+Mask\+For\+Model}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \&out, const T \&in)
+\item 
+static uint \mbox{\hyperlink{runModel_8cpp_ad5fb8b374d3c786ee2d723475303826d}{Convert\+Mask\+For\+Model}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \&out, const EUMASK \&in)
+\item 
+static E2\+IPPA \mbox{\hyperlink{runModel_8cpp_a16608318702fe8d430292230288839fd}{Make\+Default\+IPPA}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{runModel_8cpp_a836e96b7389ef7ff3c11ec4ae3d5ffd4}{Make\+Default\+Klb}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{runModel_8cpp_a2c9413ecd4278074c1b3c138d474ae73}{Make\+Default\+Afr}} ()
+\item 
+EUTRKP \mbox{\hyperlink{runModel_8cpp_ade345b5a79df4aa56bb8a1a9f75e5c47}{Make\+Default\+Klb}} (Position\+Number pos)
+\item 
+static EUTRKP \mbox{\hyperlink{runModel_8cpp_a4f224942b9b568cb91a0d29a18483a71}{Make\+Default\+AFR}} (Position\+Number pos)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{runModel_8cpp_a19dbf72a3e875fed81d9611e323c7c60}{Make\+Default\+Mask}} ()
+\item 
+EUMASK \mbox{\hyperlink{runModel_8cpp_afe52405fefd0584e6f5ff90689539d79}{Make\+Default\+Mask}} (Position\+Number pos)
+\item 
+static \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Station\+Params}} \mbox{\hyperlink{runModel_8cpp_ac94c83f40d51808ef01b3fe42b5b7039}{Make\+Default\+Station\+Params}} (Position\+Number pos)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Result$<$ optional$<$ T $>$ $>$ \mbox{\hyperlink{runModel_8cpp_a451c6313b79cfa4627e4394dcdb1e9d2}{Load\+Msg}} (const std\+::string \&file\+\_\+path)
+\item 
+static Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ \mbox{\hyperlink{runModel_8cpp_a78819d97c8dfac16aa743b0bd2d74bff}{Load\+Separate\+Messages}} (const string \&fc\+Dir\+Path)
+\item 
+Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ \mbox{\hyperlink{runModel_8cpp_a106b95023a0ca0823a64e3a2281220dd}{Load\+Input\+Messages}} (const optional$<$ string $>$ \&opt\+Fc\+Dir\+Path)
+\item 
+static Result$<$ void $>$ \mbox{\hyperlink{runModel_8cpp_a7033363c1fcce87abee40337840d7cca}{check\+Station\+Type\+Identical}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&in)
+\item 
+Result$<$ \mbox{\hyperlink{structModelOutput}{Model\+Output}} $>$ \mbox{\hyperlink{runModel_8cpp_a9ac9129cade2e165ab70a12dd0161afb}{Run\+Model}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&in, optional$<$ string $>$ out\+Dir\+Path, bool \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{runModel_8cpp_a143332c5a40204465fa2e750dc305d18}{stop\+Flag}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{runModel_8cpp_a143332c5a40204465fa2e750dc305d18}{stop\+Flag}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{runModel_8cpp_a7033363c1fcce87abee40337840d7cca}\label{runModel_8cpp_a7033363c1fcce87abee40337840d7cca} 
+\index{runModel.cpp@{runModel.cpp}!checkStationTypeIdentical@{checkStationTypeIdentical}}
+\index{checkStationTypeIdentical@{checkStationTypeIdentical}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{checkStationTypeIdentical()}{checkStationTypeIdentical()}}
+{\footnotesize\ttfamily static Result$<$ void $>$ check\+Station\+Type\+Identical (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_ae89410c61a29edc06189abee643c39f6}\label{runModel_8cpp_ae89410c61a29edc06189abee643c39f6} 
+\index{runModel.cpp@{runModel.cpp}!ConvertForModel@{ConvertForModel}}
+\index{ConvertForModel@{ConvertForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertForModel()}{ConvertForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Convert\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&}]{out,  }\item[{const EUTRKP \&}]{in }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{runModel_8cpp_ae89410c61a29edc06189abee643c39f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{runModel_8cpp_a7e7e0a26eb37907bd12b588c8dfb9023}\label{runModel_8cpp_a7e7e0a26eb37907bd12b588c8dfb9023} 
+\index{runModel.cpp@{runModel.cpp}!ConvertForModel@{ConvertForModel}}
+\index{ConvertForModel@{ConvertForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertForModel()}{ConvertForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Convert\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&}]{out,  }\item[{const EUTRKP\+\_\+\+CM\+\_\+\+Rx \&}]{in }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{runModel_8cpp_a7e7e0a26eb37907bd12b588c8dfb9023_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{runModel_8cpp_a82923279cf3dad1ef8cb96d8bd5ca9ae}\label{runModel_8cpp_a82923279cf3dad1ef8cb96d8bd5ca9ae} 
+\index{runModel.cpp@{runModel.cpp}!ConvertForModel@{ConvertForModel}}
+\index{ConvertForModel@{ConvertForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertForModel()}{ConvertForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Convert\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&}]{out,  }\item[{const EUTRKP\+\_\+\+M\+\_\+\+Rx \&}]{in }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{runModel_8cpp_a82923279cf3dad1ef8cb96d8bd5ca9ae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{runModel_8cpp_a817a24ff172b19dea3c038d9205a426d}\label{runModel_8cpp_a817a24ff172b19dea3c038d9205a426d} 
+\index{runModel.cpp@{runModel.cpp}!ConvertForModel@{ConvertForModel}}
+\index{ConvertForModel@{ConvertForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertForModel()}{ConvertForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void Convert\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&}]{out,  }\item[{const EUTRKP\+\_\+\+MRIK\+\_\+\+Rx \&}]{in }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{runModel_8cpp_a817a24ff172b19dea3c038d9205a426d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{runModel_8cpp_a016714f148864f87cd92aa098c87c1cc}\label{runModel_8cpp_a016714f148864f87cd92aa098c87c1cc} 
+\index{runModel.cpp@{runModel.cpp}!ConvertForModel@{ConvertForModel}}
+\index{ConvertForModel@{ConvertForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertForModel()}{ConvertForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename outT , typename inT $>$ \\
+void Convert\+For\+Model (\begin{DoxyParamCaption}\item[{outT \&}]{out,  }\item[{const inT \&}]{in }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_ad5fb8b374d3c786ee2d723475303826d}\label{runModel_8cpp_ad5fb8b374d3c786ee2d723475303826d} 
+\index{runModel.cpp@{runModel.cpp}!ConvertMaskForModel@{ConvertMaskForModel}}
+\index{ConvertMaskForModel@{ConvertMaskForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertMaskForModel()}{ConvertMaskForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static uint Convert\+Mask\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \&}]{out,  }\item[{const EUMASK \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_adc150c787646d7177d79a010872b6a08}\label{runModel_8cpp_adc150c787646d7177d79a010872b6a08} 
+\index{runModel.cpp@{runModel.cpp}!ConvertMaskForModel@{ConvertMaskForModel}}
+\index{ConvertMaskForModel@{ConvertMaskForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertMaskForModel()}{ConvertMaskForModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+uint Convert\+Mask\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \&}]{out,  }\item[{const T \&}]{in }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_a3e76d5cabb30fefa0024b935a91b2249}\label{runModel_8cpp_a3e76d5cabb30fefa0024b935a91b2249} 
+\index{runModel.cpp@{runModel.cpp}!ConvertTrkpForModel@{ConvertTrkpForModel}}
+\index{ConvertTrkpForModel@{ConvertTrkpForModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertTrkpForModel()}{ConvertTrkpForModel()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Convert\+Trkp\+For\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \&}]{out,  }\item[{const T \&}]{in }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_aeac29ccc9826d6d89801038cb315c783}\label{runModel_8cpp_aeac29ccc9826d6d89801038cb315c783} 
+\index{runModel.cpp@{runModel.cpp}!Exists@{Exists}}
+\index{Exists@{Exists}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily bool Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_a106b95023a0ca0823a64e3a2281220dd}\label{runModel_8cpp_a106b95023a0ca0823a64e3a2281220dd} 
+\index{runModel.cpp@{runModel.cpp}!LoadInputMessages@{LoadInputMessages}}
+\index{LoadInputMessages@{LoadInputMessages}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadInputMessages()}{LoadInputMessages()}}
+{\footnotesize\ttfamily Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ Load\+Input\+Messages (\begin{DoxyParamCaption}\item[{const optional$<$ string $>$ \&}]{opt\+Fc\+Dir\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runModel_8cpp_a106b95023a0ca0823a64e3a2281220dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{runModel_8cpp_a451c6313b79cfa4627e4394dcdb1e9d2}\label{runModel_8cpp_a451c6313b79cfa4627e4394dcdb1e9d2} 
+\index{runModel.cpp@{runModel.cpp}!LoadMsg@{LoadMsg}}
+\index{LoadMsg@{LoadMsg}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadMsg()}{LoadMsg()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Result$<$ optional$<$ T $>$ $>$ Load\+Msg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_a78819d97c8dfac16aa743b0bd2d74bff}\label{runModel_8cpp_a78819d97c8dfac16aa743b0bd2d74bff} 
+\index{runModel.cpp@{runModel.cpp}!LoadSeparateMessages@{LoadSeparateMessages}}
+\index{LoadSeparateMessages@{LoadSeparateMessages}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadSeparateMessages()}{LoadSeparateMessages()}}
+{\footnotesize\ttfamily static Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ Load\+Separate\+Messages (\begin{DoxyParamCaption}\item[{const string \&}]{fc\+Dir\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_a2c9413ecd4278074c1b3c138d474ae73}\label{runModel_8cpp_a2c9413ecd4278074c1b3c138d474ae73} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultAfr@{MakeDefaultAfr}}
+\index{MakeDefaultAfr@{MakeDefaultAfr}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultAfr()}{MakeDefaultAfr()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Make\+Default\+Afr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_a4f224942b9b568cb91a0d29a18483a71}\label{runModel_8cpp_a4f224942b9b568cb91a0d29a18483a71} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultAFR@{MakeDefaultAFR}}
+\index{MakeDefaultAFR@{MakeDefaultAFR}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultAFR()}{MakeDefaultAFR()}}
+{\footnotesize\ttfamily static EUTRKP Make\+Default\+AFR (\begin{DoxyParamCaption}\item[{Position\+Number}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_a16608318702fe8d430292230288839fd}\label{runModel_8cpp_a16608318702fe8d430292230288839fd} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultIPPA@{MakeDefaultIPPA}}
+\index{MakeDefaultIPPA@{MakeDefaultIPPA}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultIPPA()}{MakeDefaultIPPA()}}
+{\footnotesize\ttfamily static E2\+IPPA Make\+Default\+IPPA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_a836e96b7389ef7ff3c11ec4ae3d5ffd4}\label{runModel_8cpp_a836e96b7389ef7ff3c11ec4ae3d5ffd4} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultKlb@{MakeDefaultKlb}}
+\index{MakeDefaultKlb@{MakeDefaultKlb}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultKlb()}{MakeDefaultKlb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Make\+Default\+Klb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_ade345b5a79df4aa56bb8a1a9f75e5c47}\label{runModel_8cpp_ade345b5a79df4aa56bb8a1a9f75e5c47} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultKlb@{MakeDefaultKlb}}
+\index{MakeDefaultKlb@{MakeDefaultKlb}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultKlb()}{MakeDefaultKlb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily EUTRKP Make\+Default\+Klb (\begin{DoxyParamCaption}\item[{Position\+Number}]{pos }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_a19dbf72a3e875fed81d9611e323c7c60}\label{runModel_8cpp_a19dbf72a3e875fed81d9611e323c7c60} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultMask@{MakeDefaultMask}}
+\index{MakeDefaultMask@{MakeDefaultMask}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultMask()}{MakeDefaultMask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Make\+Default\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_afe52405fefd0584e6f5ff90689539d79}\label{runModel_8cpp_afe52405fefd0584e6f5ff90689539d79} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultMask@{MakeDefaultMask}}
+\index{MakeDefaultMask@{MakeDefaultMask}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultMask()}{MakeDefaultMask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily EUMASK Make\+Default\+Mask (\begin{DoxyParamCaption}\item[{Position\+Number}]{pos }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_ac94c83f40d51808ef01b3fe42b5b7039}\label{runModel_8cpp_ac94c83f40d51808ef01b3fe42b5b7039} 
+\index{runModel.cpp@{runModel.cpp}!MakeDefaultStationParams@{MakeDefaultStationParams}}
+\index{MakeDefaultStationParams@{MakeDefaultStationParams}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultStationParams()}{MakeDefaultStationParams()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Station\+Params}} Make\+Default\+Station\+Params (\begin{DoxyParamCaption}\item[{Position\+Number}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_ad2bca18f9cd2c903734948a9aa9ab068}\label{runModel_8cpp_ad2bca18f9cd2c903734948a9aa9ab068} 
+\index{runModel.cpp@{runModel.cpp}!makeResourceUsage@{makeResourceUsage}}
+\index{makeResourceUsage@{makeResourceUsage}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{makeResourceUsage()}{makeResourceUsage()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structResourceUsage}{Resource\+Usage}} make\+Resource\+Usage (\begin{DoxyParamCaption}\item[{const rusage \&}]{base\+Rusage,  }\item[{const rusage \&}]{final\+Rusage,  }\item[{const timeval \&}]{base\+Time,  }\item[{const timeval \&}]{final\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_a796d193e8beb2b0c11b7f7ec8cab452e}\label{runModel_8cpp_a796d193e8beb2b0c11b7f7ec8cab452e} 
+\index{runModel.cpp@{runModel.cpp}!opt\_sum\_is@{opt\_sum\_is}}
+\index{opt\_sum\_is@{opt\_sum\_is}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{opt\_sum\_is()}{opt\_sum\_is()}}
+{\footnotesize\ttfamily template$<$class A , class V $>$ \\
+bool opt\+\_\+sum\+\_\+is (\begin{DoxyParamCaption}\item[{const optional$<$ V $>$ \&}]{optv }\end{DoxyParamCaption})}
+
+\Hypertarget{runModel_8cpp_af8ce9a0637deade413cf5f7d285408a2}\label{runModel_8cpp_af8ce9a0637deade413cf5f7d285408a2} 
+\index{runModel.cpp@{runModel.cpp}!pCallback@{pCallback}}
+\index{pCallback@{pCallback}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{pCallback()}{pCallback()}}
+{\footnotesize\ttfamily static bool p\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{runModel_8cpp_a9ac9129cade2e165ab70a12dd0161afb}\label{runModel_8cpp_a9ac9129cade2e165ab70a12dd0161afb} 
+\index{runModel.cpp@{runModel.cpp}!RunModel@{RunModel}}
+\index{RunModel@{RunModel}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{RunModel()}{RunModel()}}
+{\footnotesize\ttfamily Result$<$ \mbox{\hyperlink{structModelOutput}{Model\+Output}} $>$ Run\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{in,  }\item[{optional$<$ string $>$}]{out\+Dir\+Path,  }\item[{bool \texorpdfstring{$\ast$}{*}}]{stop\+Flag }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runModel_8cpp_a9ac9129cade2e165ab70a12dd0161afb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{runModel_8cpp_a143332c5a40204465fa2e750dc305d18}\label{runModel_8cpp_a143332c5a40204465fa2e750dc305d18} 
+\index{runModel.cpp@{runModel.cpp}!stopFlag@{stopFlag}}
+\index{stopFlag@{stopFlag}!runModel.cpp@{runModel.cpp}}
+\doxysubsubsection{\texorpdfstring{stopFlag}{stopFlag}}
+{\footnotesize\ttfamily bool\texorpdfstring{$\ast$}{*} stop\+Flag\hspace{0.3cm}{\ttfamily [static]}}
+

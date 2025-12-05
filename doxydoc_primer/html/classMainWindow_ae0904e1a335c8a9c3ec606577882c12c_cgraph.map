@@ -1,0 +1,9 @@
+<map id="MainWindow::showMeanDispersionMaxValue" name="MainWindow::showMeanDispersionMaxValue">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,257,95"/>
+<area shape="rect" id="Node000002" href="$classSliceViewer.html#a822afe4fda89d5ab519d4dcc9aa01b3a" title=" " alt="" coords="305,5,508,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,53,331,31,332,36,229,58"/>
+<area shape="rect" id="Node000003" href="$classSliceViewer.html#a8f9e1f6cc907966cdc99794dc7f14cd8" title=" " alt="" coords="311,55,502,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="257,73,298,73,298,78,257,78"/>
+<area shape="rect" id="Node000004" href="$classSliceViewer.html#a7536c8fe69a5ad7559da5eba9035246c" title=" " alt="" coords="321,120,492,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="229,93,332,115,331,120,227,98"/>
+</map>

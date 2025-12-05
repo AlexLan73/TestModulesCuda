@@ -1,0 +1,5 @@
+<map id="get_add_nl" name="get_add_nl">
+<area shape="rect" id="Node000001" title="Количество лучей автокомпенсации (0 или 2)" alt="" coords="5,5,99,31"/>
+<area shape="rect" id="Node000002" href="$blk223_2libfc_8h.html#a5b8eb03e622148718dd963bc58832918" title="Проверка на соответствие типа строба автокомпенсации." alt="" coords="147,5,323,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,15,133,15,133,21,99,21"/>
+</map>

@@ -1,0 +1,654 @@
+.TH "ModelNS23817A620S1823" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBCMsgModelTypes\fP"
+.br
+.ti -1c
+.RI "namespace \fBCMsgSharedTypes\fP"
+.br
+.ti -1c
+.RI "namespace \fBHelpers\fP"
+.br
+.ti -1c
+.RI "namespace \fBIsDivMode\fP"
+.br
+.ti -1c
+.RI "namespace \fBSharedConst\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAdaptiveSpatProcVect\fP"
+.br
+.ti -1c
+.RI "class \fBArCoefsArray\fP"
+.br
+.ti -1c
+.RI "class \fBBlock232\fP"
+.br
+.ti -1c
+.RI "struct \fBC412_06Result\fP"
+.br
+.ti -1c
+.RI "struct \fBC418_02Result\fP"
+.br
+.ti -1c
+.RI "struct \fBCallback\fP"
+.br
+.ti -1c
+.RI "struct \fBCallbacks\fP"
+.br
+.ti -1c
+.RI "class \fBCell233\fP"
+.br
+.ti -1c
+.RI "class \fBCell412_06\fP"
+.br
+.ti -1c
+.RI "class \fBCell412_06ADCImit\fP"
+.br
+.ti -1c
+.RI "class \fBCell418_01\fP"
+.br
+.ti -1c
+.RI "class \fBCell418_02\fP"
+.br
+.ti -1c
+.RI "class \fBCell418Base\fP"
+.br
+.ti -1c
+.RI "struct \fBChannelsMask\fP"
+.br
+.ti -1c
+.RI "struct \fBComplex32x32df\fP"
+.br
+.ti -1c
+.RI "struct \fBComplex32x32i\fP"
+.br
+.ti -1c
+.RI "struct \fBComplexMark\fP"
+.br
+.ti -1c
+.RI "struct \fBControlMessage\fP"
+.br
+.ti -1c
+.RI "class \fBControlMsg\fP"
+.br
+.ti -1c
+.RI "class \fBDFGroups\fP"
+.br
+.ti -1c
+.RI "struct \fBExternalMessages\fP"
+.br
+.ti -1c
+.RI "class \fBInterface\fP"
+.br
+.ti -1c
+.RI "class \fBIppa\fP"
+.br
+.ti -1c
+.RI "class \fBMain\fP"
+.br
+.ti -1c
+.RI "struct \fBMark\fP"
+.br
+.ti -1c
+.RI "struct \fBMonomark\fP"
+.br
+.ti -1c
+.RI "struct \fBRayCoords\fP"
+.br
+.ti -1c
+.RI "struct \fBRetainer\fP"
+.br
+.ti -1c
+.RI "struct \fBSavePermissions\fP"
+.br
+.ti -1c
+.RI "class \fBSliceFile\fP"
+.br
+.ti -1c
+.RI "struct \fBStationParams\fP"
+.br
+.ti -1c
+.RI "struct \fBStationTree\fP"
+.br
+.ti -1c
+.RI "struct \fBTargetStrobeOutputExt\fP"
+.br
+.ti -1c
+.RI "class \fBTrimts\fP"
+.br
+.ti -1c
+.RI "class \fBTrkp\fP"
+.br
+.ti -1c
+.RI "class \fBTrpr\fP"
+.br
+.ti -1c
+.RI "struct \fBTStrobeExt\fP"
+.br
+.ti -1c
+.RI "struct \fBValue\fP"
+.br
+.ti -1c
+.RI "class \fBVirtualCell412_06\fP"
+.br
+.ti -1c
+.RI "class \fBVirtualCell418_01\fP"
+.br
+.ti -1c
+.RI "class \fBVirtualCell418_02\fP"
+.br
+.ti -1c
+.RI "class \fBWlbArray\fP"
+.br
+.ti -1c
+.RI "class \fBWrappedLocalCell412_06\fP"
+.br
+.ti -1c
+.RI "class \fBWrappedLocalCell418_01\fP"
+.br
+.ti -1c
+.RI "class \fBWrappedLocalCell418_02\fP"
+.br
+.ti -1c
+.RI "class \fBXYChanCoords\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::function< std::unique_ptr< \fBStationTree\fP >(const \fBControlMsg\fP &, const \fBControlMsg\fP &)> \fBTreeConstructorFun_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCut\fP { \fBCUT_ADC\fP = 1, \fBCUT_QUADR\fP = 2, \fBCUT_PFTP\fP = 3, \fBCUT_PSP\fP = 4, \fBCUT_418_01_OUTPUT\fP = 6, \fBCUT_418_02_OUTPUT\fP = 8, \fBCUT_232_OUTPUT\fP = 10, \fBCUT_ADC\fP = 1, \fBCUT_QUADR\fP = 2, \fBCUT_PFTP\fP = 3, \fBCUT_PSP\fP = 4, \fBCUT_418_01_OUTPUT\fP = 6, \fBCUT_418_02_OUTPUT\fP = 8, \fBCUT_232_OUTPUT\fP = 10 }"
+.br
+.ti -1c
+.RI "enum \fBCutMode\fP { \fBtfpComplexOutBoth\fP = 2, \fBcutModeNone\fP = 10000, \fBtfpComplexOutBoth\fP = 2, \fBcutModeNone\fP = 10000 }"
+.br
+.ti -1c
+.RI "enum \fBCut\fP { \fBCUT_ADC\fP = 1, \fBCUT_QUADR\fP = 2, \fBCUT_PFTP\fP = 3, \fBCUT_PSP\fP = 4, \fBCUT_418_01_OUTPUT\fP = 6, \fBCUT_418_02_OUTPUT\fP = 8, \fBCUT_232_OUTPUT\fP = 10, \fBCUT_ADC\fP = 1, \fBCUT_QUADR\fP = 2, \fBCUT_PFTP\fP = 3, \fBCUT_PSP\fP = 4, \fBCUT_418_01_OUTPUT\fP = 6, \fBCUT_418_02_OUTPUT\fP = 8, \fBCUT_232_OUTPUT\fP = 10 }"
+.br
+.ti -1c
+.RI "enum \fBCutMode\fP { \fBtfpComplexOutBoth\fP = 2, \fBcutModeNone\fP = 10000, \fBtfpComplexOutBoth\fP = 2, \fBcutModeNone\fP = 10000 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBdivider\fP (const TStrobe &s)"
+.br
+.ti -1c
+.RI "static unique_ptr< \fBSliceFile\fP > \fBmakeSliceFile\fP (const char *slice_name, uint64_t texec, const \fBTStrobeExt\fP &strb)"
+.br
+.ti -1c
+.RI "static \fBPolarized\fP< \fBVector3d\fP< complex< double > > > \fBnormComplexOutTftpRays\fP (const \fBTStrobeExt\fP &strb, const \fBPolarized\fP< \fBVector3d\fP< complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "static vector< float > \fBnormTargetSigmas\fP (const \fBTStrobeExt\fP &strb, const \fBPolarized\fP< vector< uint64_t > > &targetSigmas)"
+.br
+.ti -1c
+.RI "template<class T > static void \fBcopyMarks2Ucopo\fP (const \fBTStrobeExt\fP *strb, uint8_t markType, uint32_t elementsNum, const std::vector< T > &mark, const vector< float > &\fBnormTargetSigmas\fP, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "void \fBcopyMonomarks\fP (const \fBTStrobeExt\fP *strb, const std::vector< \fBMonomark\fP > &marks, const vector< float > &\fBnormTargetSigmas\fP, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "void \fBcopyComplexMarks\fP (const \fBTStrobeExt\fP *strb, const std::vector< \fBComplexMark\fP > &marks, const vector< float > &\fBnormTargetSigmas\fP, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "void \fBdoTLP\fP (const std::vector< \fBTargetStrobeOutputExt\fP > &outputs, \fBUcopoMsgBuf\fP &ucopoBuf)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBMark\fP &m1, const \fBMark\fP &m2)"
+.br
+.ti -1c
+.RI "uint \fBthresholdBits\fP (const TStrobe &s)"
+.br
+.ti -1c
+.RI "bool \fBthresholdAbsolute\fP (const \fBTStrobeExt\fP &s)"
+.br
+.ti -1c
+.RI "bool \fBthresholdRelative\fP (const \fBTStrobeExt\fP &s)"
+.br
+.ti -1c
+.RI "bool \fBthresholdFloating\fP (const \fBTStrobeExt\fP &s)"
+.br
+.ti -1c
+.RI "uint64_t \fBoddBitCount\fP (uint64_t v)"
+.br
+.ti -1c
+.RI "int32_t \fBcalcFullByteSum\fP (uint64_t shiftReg)"
+.br
+.ti -1c
+.RI "int32_t \fBcalcHalfByteSum\fP (uint64_t shiftReg)"
+.br
+.ti -1c
+.RI "void \fBgenNewStateOfShiftReg\fP (uint64_t polynomial, uint64_t *shiftReg)"
+.br
+.ti -1c
+.RI "int32_t \fBgenOneNoiseSample\fP (uint64_t polynomial, uint64_t *shiftReg)"
+.br
+.ti -1c
+.RI "uint8_t \fBgenOneSign\fP (uint64_t polynomial, uint64_t *shiftReg)"
+.br
+.ti -1c
+.RI "static void \fBzeroDelays\fP (\fBCMsgSharedTypes::ImitStrobe\fP &strb, \fBCMsgSharedTypes::ImitObject\fP imitObjects[])"
+.br
+.ti -1c
+.RI "void \fBmaybe_terminate\fP (char *s, uint n, char c)"
+.br
+.ti -1c
+.RI "void \fBquickPrint\fP (std::ostream &s, const std::complex< int32_t > &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBquickPrint\fP (std::ostream &s, const std::complex< double > &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBquickPrint\fP (std::ostream &s, const int32_t &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBquickPrint\fP (std::ostream &s, const int64_t &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBquickPrint\fP (std::ostream &s, const uint64_t &data, char c='\\0')"
+.br
+.ti -1c
+.RI "void \fBquickPrint\fP (std::ostream &s, const double &data, char c='\\0')"
+.br
+.ti -1c
+.RI "template<class T > void \fBquickPrintln\fP (std::ostream &s, const T &v)"
+.br
+.ti -1c
+.RI "static int32_t \fBround_u32\fP (const int s, const uint32_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static int64_t \fBround_u64\fP (const int s, const uint64_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static int32_t \fBround_i32\fP (int32_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static int64_t \fBround_i64\fP (int64_t x, const unsigned n)"
+.br
+.ti -1c
+.RI "static void \fBfixTrpr\fP (const \fBStationParams\fP &stationParams, E2TRPR &trpr)"
+.br
+.ti -1c
+.RI "static optional< \fBControlMessage\fP > \fBformPolarControlMessage\fP (\fBControlMsg\fP *cntrlMsg, \fBSharedConst::PolarizationTypes\fP \fBpolar\fP, uint cellNum)"
+.br
+.ti -1c
+.RI "static void \fBdumpFcM\fP (\fBControlMsg\fP &cm, uint crateNum, uint cellNum)"
+.br
+.ti -1c
+.RI "template<class C > unique_ptr< \fBCell233\fP > \fBmakeStationTreeGeneric\fP (const \fBControlMsg\fP &cmsgV, const \fBControlMsg\fP &cmsgH)"
+.br
+.ti -1c
+.RI "unique_ptr< \fBStationTree\fP > \fBmakeStationTreeLocal\fP (const \fBControlMsg\fP &cmsgV, const \fBControlMsg\fP &cmsgH)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const int32_t \fBcrossValuesNum\fP = 5"
+.br
+.ti -1c
+.RI "static const double \fBrayWidthByUForM\fP = 0\&.0205"
+.br
+.ti -1c
+.RI "static const double \fBrayWidthByUForSM\fP = 0\&.011"
+.br
+.ti -1c
+.RI "static const double \fBrayWidthByUForMrik\fP = 0\&.008"
+.br
+.ti -1c
+.RI "static const double \fBrayWidthByVForM\fP = 0\&.0426"
+.br
+.ti -1c
+.RI "static const double \fBrayWidthByVForSM\fP = 0\&.0141"
+.br
+.ti -1c
+.RI "static const double \fBrayWidthByVForMrik\fP = 0\&.0118"
+.br
+.ti -1c
+.RI "const std::list< std::string > \fBDEFAULT_DIR_LIST\fP"
+.br
+.ti -1c
+.RI "static const \fBSharedConst::PolarizationTypes\fP \fBpolarTypes\fP []"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::function< std::unique_ptr<\fBStationTree\fP>(const \fBControlMsg\fP&, const \fBControlMsg\fP&)> \fBModelNS23817A620S1823::TreeConstructorFun_t\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::Cut\fP"
+Интерфейсный список типов срезов 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICUT_ADC \fP\fP
+срез 1 - АЦП 
+.TP
+\fB\fICUT_QUADR \fP\fP
+срез 2 - формирование квадратур 
+.TP
+\fB\fICUT_PFTP \fP\fP
+срез 3 - выход ПЧВО 
+.TP
+\fB\fICUT_PSP \fP\fP
+срез 4 - выход ППО (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_01_OUTPUT \fP\fP
+срез 5 - выход 418-01 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_02_OUTPUT \fP\fP
+срез 6 - выход 418-02 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_232_OUTPUT \fP\fP
+срез 7 - выход 232 (содержимое зависит от режима?) 
+.TP
+\fB\fICUT_ADC \fP\fP
+срез 1 - АЦП 
+.TP
+\fB\fICUT_QUADR \fP\fP
+срез 2 - формирование квадратур 
+.TP
+\fB\fICUT_PFTP \fP\fP
+срез 3 - выход ПЧВО 
+.TP
+\fB\fICUT_PSP \fP\fP
+срез 4 - выход ППО (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_01_OUTPUT \fP\fP
+срез 5 - выход 418-01 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_02_OUTPUT \fP\fP
+срез 6 - выход 418-02 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_232_OUTPUT \fP\fP
+срез 7 - выход 232 (содержимое зависит от режима?) 
+.SS "enum \fBModelNS23817A620S1823::Cut\fP"
+Интерфейсный список типов срезов 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICUT_ADC \fP\fP
+срез 1 - АЦП 
+.TP
+\fB\fICUT_QUADR \fP\fP
+срез 2 - формирование квадратур 
+.TP
+\fB\fICUT_PFTP \fP\fP
+срез 3 - выход ПЧВО 
+.TP
+\fB\fICUT_PSP \fP\fP
+срез 4 - выход ППО (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_01_OUTPUT \fP\fP
+срез 5 - выход 418-01 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_02_OUTPUT \fP\fP
+срез 6 - выход 418-02 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_232_OUTPUT \fP\fP
+срез 7 - выход 232 (содержимое зависит от режима?) 
+.TP
+\fB\fICUT_ADC \fP\fP
+срез 1 - АЦП 
+.TP
+\fB\fICUT_QUADR \fP\fP
+срез 2 - формирование квадратур 
+.TP
+\fB\fICUT_PFTP \fP\fP
+срез 3 - выход ПЧВО 
+.TP
+\fB\fICUT_PSP \fP\fP
+срез 4 - выход ППО (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_01_OUTPUT \fP\fP
+срез 5 - выход 418-01 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_418_02_OUTPUT \fP\fP
+срез 6 - выход 418-02 (содержимое зависит от режима) 
+.TP
+\fB\fICUT_232_OUTPUT \fP\fP
+срез 7 - выход 232 (содержимое зависит от режима?) 
+.SS "enum \fBModelNS23817A620S1823::CutMode\fP"
+Интерфейсный список видов данных в срезе 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fItfpComplexOutBoth \fP\fP
+ЧВО, обе поляризации по отдельности 
+.TP
+\fB\fIcutModeNone \fP\fP
+заглушка 
+.TP
+\fB\fItfpComplexOutBoth \fP\fP
+ЧВО, обе поляризации по отдельности 
+.TP
+\fB\fIcutModeNone \fP\fP
+заглушка 
+.SS "enum \fBModelNS23817A620S1823::CutMode\fP"
+Интерфейсный список видов данных в срезе 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fItfpComplexOutBoth \fP\fP
+ЧВО, обе поляризации по отдельности 
+.TP
+\fB\fIcutModeNone \fP\fP
+заглушка 
+.TP
+\fB\fItfpComplexOutBoth \fP\fP
+ЧВО, обе поляризации по отдельности 
+.TP
+\fB\fIcutModeNone \fP\fP
+заглушка 
+.SH "Function Documentation"
+.PP 
+.SS "int32_t ModelNS23817A620S1823::calcFullByteSum (uint64_t shiftReg)\fC [inline]\fP"
+Расчёт суммы всех байт сдвигового регистра\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshiftReg\fP начальное значение сдвигового регистра 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+сумма всех байт сдвигового регистра 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::calcHalfByteSum (uint64_t shiftReg)\fC [inline]\fP"
+Расчёт суммы всех полубайт сдвигового регистра\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshiftReg\fP начальное значение сдвигового регистра 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+сумма всех полубайт сдвигового регистра 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::copyComplexMarks (const \fBTStrobeExt\fP * strb, const std::vector< \fBComplexMark\fP > & marks, const vector< float > & normTargetSigmas, \fBUcopoMsgBuf\fP * ucopo)"
+
+.SS "template<class T > static void ModelNS23817A620S1823::copyMarks2Ucopo (const \fBTStrobeExt\fP * strb, uint8_t markType, uint32_t elementsNum, const std::vector< T > & mark, const vector< float > & normTargetSigmas, \fBUcopoMsgBuf\fP * ucopo)\fC [static]\fP"
+Шаблон метода копирования данных [комплексных, моно]отметок в буфер УЦОПО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImarkType\fP тип отметки (0 - моноотметка, 1 - комплексная) 
+.br
+\fIelementsNum\fP количество фильтров (для моноотметки) или точек в кресте (для комплексной отметки) 
+.br
+\fImark\fP ссылка на объект вектора данных отметок типа T 
+.br
+\fInormTargetSigmas\fP вектор нормализованных сигм по лучам 
+.br
+\fIucopo\fP указатель на буфер для сообщения УЦОПО 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::copyMonomarks (const \fBTStrobeExt\fP * strb, const std::vector< \fBMonomark\fP > & marks, const vector< float > & normTargetSigmas, \fBUcopoMsgBuf\fP * ucopo)"
+
+.SS "int ModelNS23817A620S1823::divider (const TStrobe & s)\fC [inline]\fP"
+
+.SS "void ModelNS23817A620S1823::doTLP (const std::vector< \fBTargetStrobeOutputExt\fP > & outputs, \fBUcopoMsgBuf\fP & ucopoBuf)"
+
+.SS "static void ModelNS23817A620S1823::dumpFcM (\fBControlMsg\fP & cm, uint crateNum, uint cellNum)\fC [static]\fP"
+
+.SS "static void ModelNS23817A620S1823::fixTrpr (const \fBStationParams\fP & stationParams, E2TRPR & trpr)\fC [static]\fP"
+
+.SS "static optional< \fBControlMessage\fP > ModelNS23817A620S1823::formPolarControlMessage (\fBControlMsg\fP * cntrlMsg, \fBSharedConst::PolarizationTypes\fP polar, uint cellNum)\fC [static]\fP"
+
+.SS "void ModelNS23817A620S1823::genNewStateOfShiftReg (uint64_t polynomial, uint64_t * shiftReg)\fC [inline]\fP"
+Генерация нового состояния регистра для получения очередной выборки шума/помехи\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolynomial\fP полином 
+.br
+\fIshiftReg\fP указатель на сдвиговый регистр 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::genOneNoiseSample (uint64_t polynomial, uint64_t * shiftReg)\fC [inline]\fP"
+Генерация одной шумовой выборки по заданным параметрам\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolynomial\fP полином 
+.br
+\fIshiftReg\fP указатель на сдвиговый регистр 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+значение шумовой выборки 
+.RE
+.PP
+
+.SS "uint8_t ModelNS23817A620S1823::genOneSign (uint64_t polynomial, uint64_t * shiftReg)\fC [inline]\fP"
+Генерация одного знака м-последовательности для сигнала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolynomial\fP полином 
+.br
+\fIshiftReg\fP указатель на сдвиговый регистр 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+значение знака м-последовательности (0 или 1) 
+.RE
+.PP
+
+.SS "static unique_ptr< \fBSliceFile\fP > ModelNS23817A620S1823::makeSliceFile (const char * slice_name, uint64_t texec, const \fBTStrobeExt\fP & strb)\fC [static]\fP"
+
+.SS "template<class C > unique_ptr< \fBCell233\fP > ModelNS23817A620S1823::makeStationTreeGeneric (const \fBControlMsg\fP & cmsgV, const \fBControlMsg\fP & cmsgH)"
+
+.SS "std::unique_ptr< \fBStationTree\fP > ModelNS23817A620S1823::makeStationTreeLocal (const \fBControlMsg\fP & cmsgV, const \fBControlMsg\fP & cmsgH)"
+
+.SS "void ModelNS23817A620S1823::maybe_terminate (char * s, uint n, char c)\fC [inline]\fP"
+
+.SS "static \fBPolarized\fP< \fBVector3d\fP< complex< double > > > ModelNS23817A620S1823::normComplexOutTftpRays (const \fBTStrobeExt\fP & strb, const \fBPolarized\fP< \fBVector3d\fP< complex< double > > > & tfpRays)\fC [static]\fP"
+
+.SS "static vector< float > ModelNS23817A620S1823::normTargetSigmas (const \fBTStrobeExt\fP & strb, const \fBPolarized\fP< vector< uint64_t > > & targetSigmas)\fC [static]\fP"
+
+.SS "uint64_t ModelNS23817A620S1823::oddBitCount (uint64_t v)\fC [inline]\fP"
+1, если кол-во единичных бит нечётное, иначе 0 
+.SS "bool ModelNS23817A620S1823::operator> (const \fBMark\fP & m1, const \fBMark\fP & m2)\fC [inline]\fP"
+
+.SS "void ModelNS23817A620S1823::quickPrint (std::ostream & s, const double & data, char c = \fC'\\0'\fP)\fC [inline]\fP"
+
+.SS "void ModelNS23817A620S1823::quickPrint (std::ostream & s, const int32_t & data, char c = \fC'\\0'\fP)\fC [inline]\fP"
+
+.SS "void ModelNS23817A620S1823::quickPrint (std::ostream & s, const int64_t & data, char c = \fC'\\0'\fP)"
+
+.SS "void ModelNS23817A620S1823::quickPrint (std::ostream & s, const std::complex< double > & data, char c = \fC'\\0'\fP)\fC [inline]\fP"
+
+.SS "void ModelNS23817A620S1823::quickPrint (std::ostream & s, const std::complex< int32_t > & data, char c = \fC'\\0'\fP)\fC [inline]\fP"
+
+.SS "void ModelNS23817A620S1823::quickPrint (std::ostream & s, const uint64_t & data, char c = \fC'\\0'\fP)\fC [inline]\fP"
+
+.SS "template<class T > void ModelNS23817A620S1823::quickPrintln (std::ostream & s, const T & v)"
+
+.SS "static int32_t ModelNS23817A620S1823::round_i32 (int32_t x, const unsigned n)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static int64_t ModelNS23817A620S1823::round_i64 (int64_t x, const unsigned n)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static int32_t ModelNS23817A620S1823::round_u32 (const int s, const uint32_t x, const unsigned n)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static int64_t ModelNS23817A620S1823::round_u64 (const int s, const uint64_t x, const unsigned n)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "bool ModelNS23817A620S1823::thresholdAbsolute (const \fBTStrobeExt\fP & s)\fC [inline]\fP"
+
+.SS "uint ModelNS23817A620S1823::thresholdBits (const TStrobe & s)\fC [inline]\fP"
+
+.SS "bool ModelNS23817A620S1823::thresholdFloating (const \fBTStrobeExt\fP & s)\fC [inline]\fP"
+
+.SS "bool ModelNS23817A620S1823::thresholdRelative (const \fBTStrobeExt\fP & s)\fC [inline]\fP"
+
+.SS "static void ModelNS23817A620S1823::zeroDelays (\fBCMsgSharedTypes::ImitStrobe\fP & strb, \fBCMsgSharedTypes::ImitObject\fP imitObjects[])\fC [static]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const int32_t ModelNS23817A620S1823::crossValuesNum = 5"
+количество точек в кресте, по которым нужно хранить значения\&. 
+.SS "const std::list< std::string > ModelNS23817A620S1823::DEFAULT_DIR_LIST"
+/передача этого объекта в конструктор означает 'использовать дефолтный
+список каталогов' (который состоит из '\&.') 
+.SS "const \fBSharedConst::PolarizationTypes\fP ModelNS23817A620S1823::polarTypes[]\fC [static]\fP"
+\fBInitial value:\fP.PP
+.nf
+= {
+    SharedConst::vertical, SharedConst::horizontal
+}
+.fi
+
+.SS "const double ModelNS23817A620S1823::rayWidthByUForM = 0\&.0205\fC [static]\fP"
+ширина луча по U для Воронеж-М 
+.SS "const double ModelNS23817A620S1823::rayWidthByUForMrik = 0\&.008\fC [static]\fP"
+ширина луча по U для МРИК 
+.SS "const double ModelNS23817A620S1823::rayWidthByUForSM = 0\&.011\fC [static]\fP"
+ширина луча по U для Воронеж-СМ 
+.SS "const double ModelNS23817A620S1823::rayWidthByVForM = 0\&.0426\fC [static]\fP"
+ширина луча по V для Воронеж-СМ 
+.SS "const double ModelNS23817A620S1823::rayWidthByVForMrik = 0\&.0118\fC [static]\fP"
+ширина луча по V для МРИК 
+.SS "const double ModelNS23817A620S1823::rayWidthByVForSM = 0\&.0141\fC [static]\fP"
+ширина луча по V 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

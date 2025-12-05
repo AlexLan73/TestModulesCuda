@@ -1,0 +1,80 @@
+.TH "gnuplotio::ArrayTraits< T, typename boost::enable_if< boost::mpl::and_< is_boost_tuple< T >, boost::mpl::not_< is_boost_tuple_nulltype< typename T::tail_type > > > >::type >" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::ArrayTraits< T, typename boost::enable_if< boost::mpl::and_< is_boost_tuple< T >, boost::mpl::not_< is_boost_tuple_nulltype< typename T::tail_type > > > >::type >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gnuplot\-iostream\&.h>\fP
+.PP
+Inherits \fBgnuplotio::ArrayTraits< std::pair< T::head_type, T::tail_type > >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef T::head_type \fBHT\fP"
+.br
+.ti -1c
+.RI "typedef T::tail_type \fBTT\fP"
+.br
+.ti -1c
+.RI "typedef \fBArrayTraits\fP< typename std::pair< \fBHT\fP, \fBTT\fP > > \fBparent\fP"
+.br
+.in -1c
+
+Public Types inherited from \fBgnuplotio::ArrayTraits< std::pair< T::head_type, T::tail_type > >\fP
+.in +1c
+.ti -1c
+.RI "typedef \fBError_WasNotContainer\fP \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBError_WasNotContainer\fP \fBrange_type\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBparent::range_type\fP \fBget_range\fP (const T &arg)"
+.br
+.in -1c
+
+Static Public Member Functions inherited from \fBgnuplotio::ArrayTraits< std::pair< T::head_type, T::tail_type > >\fP
+.in +1c
+.ti -1c
+.RI "static \fBrange_type\fP \fBget_range\fP (const std::pair< T::head_type, T::tail_type > &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Static Public Attributes inherited from \fBgnuplotio::ArrayTraits< std::pair< T::head_type, T::tail_type > >\fP
+.in +1c
+.ti -1c
+.RI "static const bool \fBis_container\fP"
+.br
+.ti -1c
+.RI "static const bool \fBallow_auto_unwrap\fP"
+.br
+.ti -1c
+.RI "static const size_t \fBdepth\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename T > typedef T::head_type \fBgnuplotio::ArrayTraits\fP< T, typename boost::enable_if< boost::mpl::and_< \fBis_boost_tuple\fP< T >, boost::mpl::not_< \fBis_boost_tuple_nulltype\fP< typename T::tail_type > > > >::type >::HT"
+
+.SS "template<typename T > typedef \fBArrayTraits\fP<typename std::pair<\fBHT\fP, \fBTT\fP> > \fBgnuplotio::ArrayTraits\fP< T, typename boost::enable_if< boost::mpl::and_< \fBis_boost_tuple\fP< T >, boost::mpl::not_< \fBis_boost_tuple_nulltype\fP< typename T::tail_type > > > >::type >::parent"
+
+.SS "template<typename T > typedef T::tail_type \fBgnuplotio::ArrayTraits\fP< T, typename boost::enable_if< boost::mpl::and_< \fBis_boost_tuple\fP< T >, boost::mpl::not_< \fBis_boost_tuple_nulltype\fP< typename T::tail_type > > > >::type >::TT"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > static \fBparent::range_type\fP \fBgnuplotio::ArrayTraits\fP< T, typename boost::enable_if< boost::mpl::and_< \fBis_boost_tuple\fP< T >, boost::mpl::not_< \fBis_boost_tuple_nulltype\fP< typename T::tail_type > > > >::type >::get_range (const T & arg)\fC [inline]\fP, \fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

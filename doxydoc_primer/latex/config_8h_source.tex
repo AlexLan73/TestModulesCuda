@@ -1,0 +1,80 @@
+\doxysection{config.\+h}
+\hypertarget{config_8h_source}{}\label{config_8h_source}\index{src/gui/config.h@{src/gui/config.h}}
+\mbox{\hyperlink{config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONFIG\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONFIG\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <boost/property\_tree/ptree.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <boost/property\_tree/json\_parser.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <boost/foreach.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <libvork/parsig.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelInterface_8h}{model/modelInterface.h}}>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{messages_8h}{messages.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dpParams_8h}{dpParams.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model}}\ =\ \mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }pt\ =\ boost::property\_tree;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConfig}{Config}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classConfig_a543dce59b66475c5108088ee4ce1cdfc}{\string~Config}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a48ae7a7ca4b6c9dfaa2a40b8977eac54}{load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fName);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a55563d4972ce4e59f520f3babd5ef3dd}{save}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fName);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a8c2764739f6a7228d1585683f2ed9b9d}{setTactsInfo}}(\textcolor{keyword}{const}\ std::vector<TactInfo>\&\ tInfo);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_ac5b507cc02b67784913dc3692a1d5a78}{setStationParams}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\&\ stParams);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_aa633a36093849030485ac8438d9ac6d8}{setDPParams}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structDPParams}{DPParams}}\ \&dpParams);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a6ff22291122d30f0e70febfbcc05c451}{setIppaFileName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fName);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a671ccaff6611308ca5404f8dd16024ed}{setMaskFileName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fName);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_ae1e933b33290ae8cec4322606cb8fb36}{setAfrFileName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fName);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a6201705f1f7435be6fa14db060b411b1}{setKlbFileName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fName);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<TactInfo>\&\ \mbox{\hyperlink{classConfig_a1db1f0826e26155ee3fd093f5eb23b77}{getTactsInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\&\ \mbox{\hyperlink{classConfig_a0ba26bcb431e7f0658bf2d806f085149}{getStationParams}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structDPParams}{DPParams}}\&\ \mbox{\hyperlink{classConfig_af7ccf87acc08375960e6a747e43362b5}{getDPParams}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classConfig_a9a43012c04b5443a4bf352af857f99b4}{getIppaFileName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classConfig_a1e032b141e87f031790d36139b3b4dfc}{getMaskFileName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classConfig_a143cef34c28c89d4fabb1ba2ef1181ac}{getAfrFileName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classConfig_a174dabd555c0c41a42f8efdd098e3344}{getKlbFileName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00043\ \ \ \ \ std::vector<TactInfo>\ \mbox{\hyperlink{classConfig_a60a19e72e761ead0c7e479676e31acab}{tactsInfo}};}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ \mbox{\hyperlink{classConfig_a212a726b32b260e6d5feecdaf1e8571d}{stationParams}};}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{structDPParams}{DPParams}}\ \mbox{\hyperlink{classConfig_ada220b16ae15dde9cf0ebe56f9d80ecf}{dirPatParams}};}
+\DoxyCodeLine{00046\ \ \ \ \ std::string\ \mbox{\hyperlink{classConfig_afb192714634345f1a764b4f41d6784e8}{ippaFileName}};}
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ \mbox{\hyperlink{classConfig_a6c8533ab25e4f00b79fedf53985ddb08}{maskFileName}};}
+\DoxyCodeLine{00048\ \ \ \ \ std::string\ \mbox{\hyperlink{classConfig_ac776621b78398d82b862db10921bc17b}{afrFileName}};}
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{classConfig_a0c773813a9aa6f1479dcc737e111ca1a}{klbFileName}};}
+\DoxyCodeLine{00050\ \ \ \ \ pt::ptree\ \mbox{\hyperlink{classConfig_a626ad1f3cf579c5bdc0c90821e5c762c}{root}};}
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a4d4698876d10131043806b0ddd690eb3}{clear}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a5a2f36ead0d4d510efb7ebb9fe0cdc30}{parseParsig}}(\textcolor{keyword}{const}\ pt::ptree\&\ \textcolor{keywordtype}{object},\ PAR\_SIGN\&\ parsig);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_af5a82b91953dd44f453465d303f3d2b8}{parseObjects}}(\textcolor{keyword}{const}\ pt::ptree\&\ strobe,\ std::vector<ObjectInfo>\&\ objects);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a162852065616d1f54687b8fc22abb5a9}{parseUvPg}}(\textcolor{keyword}{const}\ pt::ptree\&\ jUvPg,\ TRay\ *uvPg);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a809ed75fe1cf9a4414f4adfaed64d268}{parseTrprStrobe}}(\textcolor{keyword}{const}\ pt::ptree\&\ strobe,\ TStrobe\&\ trprStrb);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a59b5282abe40760bb6901592428333b8}{parseTrimtsStrobe}}(\textcolor{keyword}{const}\ pt::ptree\&\ strobe,\ ImitStrobe\&\ trimtsStrb);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a900682fdf7d56a432f6852f004221603}{parseStrobes}}(\textcolor{keyword}{const}\ pt::ptree\&\ tact,\ std::vector<StrobeInfo>\&\ strobes);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_af427c2c67dedb790ba0b30d7c85abd25}{parseStationParams}}(\textcolor{keyword}{const}\ pt::ptree\&\ jStParams);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a98e7b0109e9ae2fe5b2aece4eb8f8542}{parseDPParams}}(\textcolor{keyword}{const}\ pt::ptree\&\ jDpParams);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a72e4e7f083e9c8f7551bad1f8500b41d}{fillParsig}}(pt::ptree\ \&jParent,\ PAR\_SIGN\ \&parsig);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_aecc1b40c3ef8d01b184d5fcf75821f8e}{fillTrimtsObjects}}(boost::property\_tree::ptree\ \&jObjects,\ std::vector<ObjectInfo>\ \&objects);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_aba8565031b117b9dbd14b95cd7302e9f}{fillUV}}(pt::ptree\ \&jTrprStrobe,\ TRay\ *uvPg);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_abaf7b1163697cbb1a71c85160ae27e06}{fillTrprStrobe}}(boost::property\_tree::ptree\ \&jTrprStrobe,\ TStrobe\ \&trprStrobe);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_ad0da9f01d7bfe563b574587054e4d0d1}{fillTrimtsStrobe}}(boost::property\_tree::ptree\ \&jTrimtsStrobe,\ ImitStrobe\ \&trimtsStrobe);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a69cc658d2c1fc9dceb15c9422394e445}{fillStrobes}}(boost::property\_tree::ptree\ \&jStrobes,\ std::vector<StrobeInfo>\ \&strobes);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a2f48b0c1f6250ef534d38327cf114eb6}{fillTrprTactHeader}}(pt::ptree\ \&jHeader,\ SDTRPR\&\ trprHeader);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_a73524d125debbfcc85ad5d754dc81979}{fillTrimtsTactHeader}}(pt::ptree\ \&jHeader,\ ImitTactDescription\ \&trimtsHeader);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_ae0e2ab1586e1e54e525acf83bccc73e8}{fillStationsParams}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_abfc5b9f7ee1fc0652e8caf63c7dc5759}{fillDPParams}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classConfig_aaf251f175f2dceeb45959a7d8634493d}{fillTactHeader}}();}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONFIG\_H\_\_}}
+
+\end{DoxyCode}

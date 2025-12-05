@@ -1,0 +1,47 @@
+\doxysection{src/mpk1/blk223/stuff.h File Reference}
+\hypertarget{stuff_8h}{}\label{stuff_8h}\index{src/mpk1/blk223/stuff.h@{src/mpk1/blk223/stuff.h}}
+
+
+Модуль вспомогательных функций и макросов.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stuff_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stuff_8h_ae40b5f4199977aa7c0fab30df921f32c}{CHECK\+\_\+\+UP}}(cond, ...)
+\begin{DoxyCompactList}\small\item\em Проверка условия, печать сообщения об ошибке, если оно неверно и возврат из функции с кодом ошибки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Модуль вспомогательных функций и макросов. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{stuff_8h_ae40b5f4199977aa7c0fab30df921f32c}\label{stuff_8h_ae40b5f4199977aa7c0fab30df921f32c} 
+\index{stuff.h@{stuff.h}!CHECK\_UP@{CHECK\_UP}}
+\index{CHECK\_UP@{CHECK\_UP}!stuff.h@{stuff.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_UP}{CHECK\_UP}}
+{\footnotesize\ttfamily \#define CHECK\+\_\+\+UP(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!(cond))\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ msgbuf[256];\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ snprintf(msgbuf,\ \textcolor{keyword}{sizeof}(msgbuf),\ \_\_VA\_ARGS\_\_);\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ErrMsg(msgbuf);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Проверка условия, печать сообщения об ошибке, если оно неверно и возврат из функции с кодом ошибки. 
+

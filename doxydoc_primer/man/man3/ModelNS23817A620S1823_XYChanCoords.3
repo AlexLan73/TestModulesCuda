@@ -1,0 +1,392 @@
+.TH "ModelNS23817A620S1823::XYChanCoords" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::XYChanCoords
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <xyChanCoords\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCalcType\fP { \fBzeroInCenter\fP, \fBzeroInLeftBottom\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXYChanCoords\fP ()"
+.br
+.ti -1c
+.RI "\fB~XYChanCoords\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetXYCoords\fP (uint32_t chanNum, double *\fBx\fP, double *\fBy\fP) const"
+.br
+.ti -1c
+.RI "\fBSharedConst::StationType\fP \fBgetCurrentStationType\fP () const"
+.br
+.ti -1c
+.RI "void \fBcalcXY\fP (\fBSharedConst::StationType\fP stType, \fBCalcType\fP calcType=\fBzeroInCenter\fP)"
+.br
+.ti -1c
+.RI "uint32_t \fBmodelCh2Lattice\fP (uint32_t mCh) const"
+.br
+.ti -1c
+.RI "uint32_t \fBmodelCl2Lattice\fP (uint32_t mCl) const"
+.br
+.ti -1c
+.RI "uint32_t \fBmodelCr2Lattice\fP (uint32_t mCr) const"
+.br
+.ti -1c
+.RI "uint32_t \fBlatticeCh2Model\fP (uint32_t lCh) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint32_t \fBmodel2LatticeSM\fP (uint32_t mCh, uint32_t *lCh, uint32_t *lCl)"
+.br
+.ti -1c
+.RI "static uint32_t \fBmodel2LatticeMrik\fP (uint32_t mCh)"
+.br
+.ti -1c
+.RI "static uint32_t \fBmodelCrClCh2LatticeChM\fP (uint32_t crateNum, uint32_t cellInCrateNum, uint32_t chanInCellNum)"
+.br
+.ti -1c
+.RI "static uint32_t \fBmodelCrClCh2LatticeChMrik\fP (uint32_t crateNum, uint32_t cellInCrateNum, uint32_t chanInCellNum)"
+.br
+.ti -1c
+.RI "static uint32_t \fBmodel2LatticeM\fP (uint32_t mCh)"
+.br
+.ti -1c
+.RI "static uint32_t \fBlattice2ModelSM\fP (uint32_t lCh, uint32_t *mCl)"
+.br
+.ti -1c
+.RI "static uint32_t \fBlattice2ModelM\fP (uint32_t lCh)"
+.br
+.ti -1c
+.RI "static uint32_t \fBlattice2ModelMrik\fP (uint32_t lCh)"
+.br
+.ti -1c
+.RI "static bool \fBisVirtualChannelSM\fP (uint32_t mCh)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcalcXY00InCorner\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcXY00InCenter\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcSMChansCoords\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcSMChansCenteredCoords\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcMrikChansCenteredCoords\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   float \fBx\fP"
+.br
+.ti -1c
+.RI "   float \fBy\fP"
+.br
+.ti -1c
+.RI "} \fBxyChanCoords\fP [\fBSharedConst::maxChannelsSM\fP]"
+.br
+.ti -1c
+.RI "\fBSharedConst::StationType\fP \fBstationType\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс данных координат каналов приёмника на антенном полотне\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::XYChanCoords::CalcType\fP"
+признак расположения точки (0; 0) на антенном полотне 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIzeroInCenter \fP\fP
+.TP
+\fB\fIzeroInLeftBottom \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::XYChanCoords::XYChanCoords ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::XYChanCoords::~XYChanCoords ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::XYChanCoords::calcMrikChansCenteredCoords ()\fC [private]\fP"
+Расчёт координат каналов относительно центра полотна\&. Тут стоит помнить, что полотно состоит из двух половин (верхней и нижней) разного размера с разными расстояниями между фазовращателями\&. Все размеры в метрах\&. 
+.SS "void ModelNS23817A620S1823::XYChanCoords::calcSMChansCenteredCoords ()\fC [private]\fP"
+Пересчёт координат каналов с точкой (0; 0) в левом нижнем углу нулевого блока в центрированные (с точкой (0; 0) в центре антенного полотна), для Воронеж-СМ\&. 
+.SS "void ModelNS23817A620S1823::XYChanCoords::calcSMChansCoords ()\fC [private]\fP"
+Расчёт координат каналов для Воронеж-СМ с точкой (0; 0) в левом нижнем углу нулевого блока\&. 
+.SS "void ModelNS23817A620S1823::XYChanCoords::calcXY (\fBSharedConst::StationType\fP stType, \fBCalcType\fP calcType = \fC\fBzeroInCenter\fP\fP)"
+Расчёт координат каналов заданным методом\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.br
+\fIcalcType\fP место расположение точки (0; 0), по умолчанию в центре полотна 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::XYChanCoords::calcXY00InCenter ()\fC [private]\fP"
+Расчёт координат каналов\&. Точка (0, 0) находится в центре антенного полотна\&. 
+.SS "void ModelNS23817A620S1823::XYChanCoords::calcXY00InCorner ()\fC [private]\fP"
+Расчёт координат каналов\&. Точка (0, 0) находится в левом нижнем углу антенного полотна\&. 
+.SS "\fBSharedConst::StationType\fP ModelNS23817A620S1823::XYChanCoords::getCurrentStationType () const"
+Возврат типа станции, для которого на текущий момент рассчитаны координаты\&. 
+.PP
+\fBReturns\fP
+.RS 4
+тип станции 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::XYChanCoords::getXYCoords (uint32_t chanNum, double * x, double * y) const"
+Занесение в (x, y) соответствующих координат на антенном полотне канала chanNum (номер в поляризации в глобальной нумерации, т\&.е\&. [0-191](Воронеж-М))\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в нумерации модели 
+.br
+\fIx\fP указатель на буфер для координаты канала x 
+.br
+\fIy\fP указатель на буфер для координаты канала y 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::XYChanCoords::isVirtualChannelSM (uint32_t mCh)\fC [static]\fP"
+Проверка номера канала на то, что он принадлежит виртуальной ячейке\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP сквозной номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если канал находится в виртуальной ячейке, false в противном случае 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::lattice2ModelM (uint32_t lCh)\fC [static]\fP"
+Перевод номера канала из нумерации полотна в нумерацию модели Только для Воронеж-М\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlCh\fP номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации в нумерации модели 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::lattice2ModelMrik (uint32_t lCh)\fC [static]\fP"
+Перевод номера канала из нумерации полотна в нумерацию модели Только для МРИК\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlCh\fP номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации в нумерации модели 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::lattice2ModelSM (uint32_t lCh, uint32_t * mCl = \fC0\fP)\fC [static]\fP"
+Перевод номера канала из нумерации полотна в нумерацию модели\&. Только для Воронеж-СМ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlCh\fP номер канала в поляризации в нумерации полотна 
+.br
+\fImCl\fP указатель на буфер для результирующего номера ячейки в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации в нумерации модели 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::latticeCh2Model (uint32_t lCh) const"
+Перевод номера канала из нумерации полотна в нумерацию модели Общая для всех станций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlCh\fP номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации в нумерации модели 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::model2LatticeM (uint32_t mCh)\fC [static]\fP"
+Пересчёт внутреннего сквозного номера канала модели в сквозной номер канала как на полотне\&. Только для Воронеж-М\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP номер канала в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации на полотне 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::model2LatticeMrik (uint32_t mCh)\fC [static]\fP"
+Пересчёт внутреннего сквозного номера канала модели в сквозной номер канала как на полотне\&. Только для МРИК\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP номер канала в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации на полотне 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::model2LatticeSM (uint32_t mCh, uint32_t * lCh = \fC0\fP, uint32_t * lCl = \fC0\fP)\fC [static]\fP"
+Пересчёт внутреннего номера канала/ячейки/фрагмента(2;1) модели в номер как на полотне\&. Только для Воронеж-СМ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP номер канала в поляризации в нумерации модели 
+.br
+\fIlCh\fP указатель на буфер для результирующего номера канала в поляризации в нумерации полотна 
+.br
+\fIlCl\fP указатель на буфер для результирующего номера ячейки в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации на полотне 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::modelCh2Lattice (uint32_t mCh) const"
+Пересчёт внутреннего номера канала модели в номер как на полотне\&. Общая для всех станций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP номер канала в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::modelCl2Lattice (uint32_t mCl) const"
+Пересчёт внутреннего номера ячейки модели в номер как на полотне\&. Общая для всех станций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCl\fP номер ячейки в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер ячейки в поляризации в нумерации полотна 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::modelCr2Lattice (uint32_t mCr) const"
+Пересчёт внутреннего номера крейта модели в номер как на полотне\&. Общая для всех станций, но актуальна только для МРИКа\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCr\fP номер крейта в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер крейта в поляризации в нумерации полотна 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::modelCrClCh2LatticeChM (uint32_t crateNum, uint32_t cellInCrateNum, uint32_t chanInCellNum)\fC [static]\fP"
+Пересчёт внутреннего номера крейта, ячейки и канала модели в сквозной номер канала как на полотне\&. Только для Воронеж-М\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellInCrateNum\fP номер ячейки в крейте 
+.br
+\fIchanInCellNum\fP номер канала в ячейке 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации на полотне 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::XYChanCoords::modelCrClCh2LatticeChMrik (uint32_t crateNum, uint32_t cellInCrateNum, uint32_t chanInCellNum)\fC [static]\fP"
+Пересчёт внутреннего номера крейта (предполагается, что в каждом 1 ячейка), ячейки и канала модели в сквозной номер канала как на полотне\&. Только для МРИК\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellInCrateNum\fP номер ячейки в крейте 
+.br
+\fIchanInCellNum\fP номер канала в ячейке 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в поляризации на полотне 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSharedConst::StationType\fP ModelNS23817A620S1823::XYChanCoords::stationType\fC [private]\fP"
+тип станции, для которой рассчитаны координаты каналов 
+.SS "float ModelNS23817A620S1823::XYChanCoords::x"
+координата канала по X, м 
+.SS "struct  { \&.\&.\&. }  ModelNS23817A620S1823::XYChanCoords::xyChanCoords[\fBSharedConst::maxChannelsSM\fP]\fC [private]\fP"
+массив координат каждого канала приёмника на антенном полотне Количество каналов взято наибольшее среди трёх станций 
+.SS "float ModelNS23817A620S1823::XYChanCoords::y"
+координата канала по Y, м 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

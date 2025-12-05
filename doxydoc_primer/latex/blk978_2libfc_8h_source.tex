@@ -1,0 +1,37 @@
+\doxysection{libfc.\+h}
+\hypertarget{blk978_2libfc_8h_source}{}\label{blk978_2libfc_8h_source}\index{src/mpk1/blk978/libfc.h@{src/mpk1/blk978/libfc.h}}
+\mbox{\hyperlink{blk978_2libfc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ LIBFC\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ LIBFC\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <libvork/libmpk.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelInterface_8h}{model/modelInterface.h}}>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <mpk/412-\/06\_fc.h>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{modelv}}\ =\ \mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\_t\ \mbox{\hyperlink{blk223_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21}{roundflt}}(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <\ 0)}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (int32\_t)(value\ -\/\ 0.5);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ >\ 0)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (int32\_t)(value\ +\ 0.5);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{blk223_2libfc_8h_a9fd7a03ceeb8dc8812766e4e54a92145}{fill\_wire\_header}}(\textcolor{keyword}{const}\ TStrobe\&\ netstrb,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ modelv::CMsgSharedTypes::ImitStrobe\&\ unistrb,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ modelv::CMsgSharedTypes::ImitTact\&\ unitact,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cell\_412\_06\_wire\_header\&\ wirehd);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LIBFC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

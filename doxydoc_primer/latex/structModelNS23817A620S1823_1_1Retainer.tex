@@ -1,0 +1,85 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Retainer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structModelNS23817A620S1823_1_1Retainer}{}\label{structModelNS23817A620S1823_1_1Retainer}\index{ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Retainer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{structModelNS23817A620S1823_1_1Retainer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef unique\+\_\+ptr$<$ T, std\+::function$<$ void(T \texorpdfstring{$\ast$}{*})$>$ $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer_a195ceebc152d209da9f8a928f9ac4362}{pointer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class... Args$>$ }\\\mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer_a195ceebc152d209da9f8a928f9ac4362}{pointer}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer_a3ca9b2c1c9251390d50b95bb8931d60d}{get}} (Args... args)
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer_a3a9a83125cb4667b47b1c9afd9e73b27}{put}} (T \texorpdfstring{$\ast$}{*}p)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ T \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer_aa3d93c9800869eb93cd4b43e57f72982}{pool}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+struct Model\+NS23817\+A620\+S1823\+::\+Retainer$<$ T $>$}
+Простейший пул, предназначенный для того, чтобы {\itshape не отдавать} память. При работе модели с деревом станции постоянно создаются и уничтожаются объекты ячеек (\doxylink{classModelNS23817A620S1823_1_1Cell412__06}{Cell412\+\_\+06} и прочие), и, судя по выдаче time (значения sys в десятки раз больше, чем без дерева), постоянное выделение и освобождение блоков памяти в сотни мегабайт очень дорого по времени (real, реальному времени, хотя user меняется мало). Поэтому делаем пул, который на самом деле не освобождает память, а придерживает ее для последующего переиспользования. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1Retainer_a195ceebc152d209da9f8a928f9ac4362}\label{structModelNS23817A620S1823_1_1Retainer_a195ceebc152d209da9f8a928f9ac4362} 
+\index{ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef unique\+\_\+ptr$<$T, std\+::function$<$void (T \texorpdfstring{$\ast$}{*})$>$ $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer}{Model\+NS23817\+A620\+S1823\+::\+Retainer}}$<$ T $>$\+::pointer}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1Retainer_a3ca9b2c1c9251390d50b95bb8931d60d}\label{structModelNS23817A620S1823_1_1Retainer_a3ca9b2c1c9251390d50b95bb8931d60d} 
+\index{ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}!get@{get}}
+\index{get@{get}!ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class... Args$>$ \\
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer_a195ceebc152d209da9f8a928f9ac4362}{pointer}} \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer}{Model\+NS23817\+A620\+S1823\+::\+Retainer}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structModelNS23817A620S1823_1_1Retainer_a3ca9b2c1c9251390d50b95bb8931d60d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{structModelNS23817A620S1823_1_1Retainer_a3a9a83125cb4667b47b1c9afd9e73b27}\label{structModelNS23817A620S1823_1_1Retainer_a3a9a83125cb4667b47b1c9afd9e73b27} 
+\index{ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}!put@{put}}
+\index{put@{put}!ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer}{Model\+NS23817\+A620\+S1823\+::\+Retainer}}$<$ T $>$\+::put (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1Retainer_aa3d93c9800869eb93cd4b43e57f72982}\label{structModelNS23817A620S1823_1_1Retainer_aa3d93c9800869eb93cd4b43e57f72982} 
+\index{ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}!pool@{pool}}
+\index{pool@{pool}!ModelNS23817A620S1823::Retainer$<$ T $>$@{ModelNS23817A620S1823::Retainer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::list$<$T \texorpdfstring{$\ast$}{*}$>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Retainer}{Model\+NS23817\+A620\+S1823\+::\+Retainer}}$<$ T $>$\+::pool}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{stationTree_8cpp}{station\+Tree.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+<map id="ModelNS23817A620S1823::XYChanCoords::modelCh2Lattice" name="ModelNS23817A620S1823::XYChanCoords::modelCh2Lattice">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,87,248,127"/>
+<area shape="rect" id="Node000002" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#ae2dfc832dbd9a06157f815dd519db48a" title=" " alt="" coords="305,19,542,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,85,322,60,323,65,215,90"/>
+<area shape="rect" id="Node000004" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a424dacde867f0eae80aac4a16f320039" title=" " alt="" coords="296,87,551,127"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="248,105,282,105,282,110,248,110"/>
+<area shape="rect" id="Node000006" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a55a867ebd5b347d3e8bfd7e17ccf6bc1" title=" " alt="" coords="301,151,546,191"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="221,125,317,146,316,151,220,130"/>
+<area shape="rect" id="Node000003" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a87f02fc0372865b7fb7f385811746f19" title=" " alt="" coords="599,5,824,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="542,34,585,33,585,38,542,39"/>
+<area shape="rect" id="Node000005" href="$classModelNS23817A620S1823_1_1XYChanCoords.html#a7ee636b6fbae986c49cc91e9afad4854" title=" " alt="" coords="599,84,824,139"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="551,106,585,107,585,112,551,112"/>
+</map>

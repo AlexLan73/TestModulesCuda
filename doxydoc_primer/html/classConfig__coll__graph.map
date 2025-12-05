@@ -1,0 +1,9 @@
+<map id="Config" name="Config">
+<area shape="rect" id="Node000001" title=" " alt="" coords="135,656,304,1241"/>
+<area shape="rect" id="Node000002" href="$structModelNS23817A620S1823_1_1StationParams.html" title=" " alt="" coords="5,401,199,521"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,520,148,639,142,640,114,522"/>
+<area shape="rect" id="Node000003" href="$structModelNS23817A620S1823_1_1SavePermissions.html" title=" " alt="" coords="9,5,195,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,266,105,384,99,384,99,266"/>
+<area shape="rect" id="Node000004" href="$structDPParams.html" title=" " alt="" coords="223,328,352,593"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="272,594,265,640,260,639,266,593"/>
+</map>

@@ -1,0 +1,387 @@
+\doxysection{Signal\+Table Class Reference}
+\hypertarget{classSignalTable}{}\label{classSignalTable}\index{SignalTable@{SignalTable}}
+
+
+{\ttfamily \#include $<$signal\+Table.\+h$>$}
+
+
+
+Collaboration diagram for Signal\+Table\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classSignalTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSignalTable_1_1SignalInfo}{Signal\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSignalTable_a05bc91ad325bce1f774b18b4c167cd37}{Signal\+Table}} ()
+\item 
+\mbox{\hyperlink{classSignalTable_a1b2039da9cfcc2806f6fd38d5d96f39e}{\texorpdfstring{$\sim$}{\string~}\+Signal\+Table}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classSignalTable_adabed06a30427e9a8b1cad150f9268b8}{get\+Ndec}} (uint32\+\_\+t sig\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classSignalTable_a0f33c791e19e1926cd01ebbeef2a5c35}{get\+Nfil}} (uint32\+\_\+t sig\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classSignalTable_a1a2f33752104dd2c2dcbe1328c2df39d}{get\+Dfm}} (uint32\+\_\+t sig\+Type) const
+\item 
+double \mbox{\hyperlink{classSignalTable_a205781d6d062251a9af7a8179e1813ef}{get\+NTay}} (uint32\+\_\+t sig\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classSignalTable_a410bf403fcceb0b5b3d3e32487c8bd99}{get\+MSeq\+Sign\+Quantity}} (uint32\+\_\+t sig\+Type) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classSignalTable_a0772452ef0edaae71f951bbfe55d2c3a}{get\+NPoly}} (uint32\+\_\+t sig\+Type) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSignalTable_a4b4ea398b9b0f6c1ff43ae80b482ce0b}{initM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a9d87debd6af0eb9f77cddc34820ec80f}{init\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_ac350ad165375d14bbab74e00d9320678}{init\+Mrik}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_afca469ebe86e773b567d60c73235a531}{init\+Shared}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a88e7726f3205c86bf955ed89846488cc}{fill\+NfilM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_abfed2b0e94f89f3e7f962108ea560bda}{fill\+Nfil\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_aa76660ecfc062427359901789ead51cf}{fill\+Nfil\+Mrik}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a9640389d872e24db1712b44be3663223}{fill\+Nfil\+Shared}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_ab46f724aa5be3a3374dca3858c914493}{fill\+NdecM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_ad00e731cb125a8c5d787e7cf10470b8a}{fill\+Ndec\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_afe283f97dc9348bbbf4d3c7e6ac02f74}{fill\+Ndec\+Mrik}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a20b0fde7e1a5c125f8588bf87d439827}{fill\+Ndec\+Shared}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a562eb467a240118529feba79ceec58c8}{fill\+Nd\+FmM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a6ea9f2a7de6d6cf1d56db07a96484d39}{fill\+Nd\+Fm\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_aa4975e70887b247f102eddb9ddba9f88}{fill\+Nd\+Fm\+Mrik}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_adc661db421ec0dd423e0d33f986c06db}{fill\+Nd\+Fm\+Shared}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a91e0d05782efda694eed96b89042a95b}{fill\+NTayM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a13177e68b49bdb8b1c3aa3d24daa24f9}{fill\+NTay\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a510e345dbf2aef4b4625aed8fac0264c}{fill\+NTay\+Mrik}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a26e7165e362e2213aae141dfdc95913d}{fill\+NTay\+Shared}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_af53e2251b6d85fc6999987eb71bf43b8}{fill\+DfmM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a6403bfb3f0f81357c7e28bff2d25b6b4}{fill\+Dfm\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a49ddb4a2da8579f667ed2f73871deaf2}{fill\+Dfm\+Mrik}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a983406c9b093d496175e5193142408cd}{fill\+Dfm\+Shared}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a7edeb5922c8bacf430b5b35c082a28ce}{fill\+NPolyM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_ae73c14e3406a65f6ed7fcd3468938f3a}{fill\+NPoly\+SM}} ()
+\item 
+void \mbox{\hyperlink{classSignalTable_a9a5f4395e2c74e91044258b309cbac0e}{fill\+NPoly\+Mrik}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSignalTable_1_1SignalInfo}{Signal\+Info}} \mbox{\hyperlink{classSignalTable_aa51e8f7f91dad46ddbbdd04f31fc1067}{signals\+Info}} \mbox{[}\mbox{\hyperlink{classSignalTable_a40b2f89a228150faffeeab8a74205788}{max\+Signals}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classSignalTable_a40b2f89a228150faffeeab8a74205788}{max\+Signals}} = 384
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+класс данных таблицы сигналов 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSignalTable_a05bc91ad325bce1f774b18b4c167cd37}\label{classSignalTable_a05bc91ad325bce1f774b18b4c167cd37} 
+\index{SignalTable@{SignalTable}!SignalTable@{SignalTable}}
+\index{SignalTable@{SignalTable}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{SignalTable()}{SignalTable()}}
+{\footnotesize\ttfamily Signal\+Table\+::\+Signal\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classSignalTable_a05bc91ad325bce1f774b18b4c167cd37_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSignalTable_a1b2039da9cfcc2806f6fd38d5d96f39e}\label{classSignalTable_a1b2039da9cfcc2806f6fd38d5d96f39e} 
+\index{SignalTable@{SignalTable}!````~SignalTable@{\texorpdfstring{$\sim$}{\string~}SignalTable}}
+\index{````~SignalTable@{\texorpdfstring{$\sim$}{\string~}SignalTable}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SignalTable()}{\string~SignalTable()}}
+{\footnotesize\ttfamily Signal\+Table\+::\texorpdfstring{$\sim$}{\string~}\+Signal\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSignalTable_af53e2251b6d85fc6999987eb71bf43b8}\label{classSignalTable_af53e2251b6d85fc6999987eb71bf43b8} 
+\index{SignalTable@{SignalTable}!fillDfmM@{fillDfmM}}
+\index{fillDfmM@{fillDfmM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillDfmM()}{fillDfmM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+DfmM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля dfm каждого сигнала станции Воронеж-\/М константными значениями \Hypertarget{classSignalTable_a49ddb4a2da8579f667ed2f73871deaf2}\label{classSignalTable_a49ddb4a2da8579f667ed2f73871deaf2} 
+\index{SignalTable@{SignalTable}!fillDfmMrik@{fillDfmMrik}}
+\index{fillDfmMrik@{fillDfmMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillDfmMrik()}{fillDfmMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Dfm\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля dfm каждого сигнала станции МРИК константными значениями \Hypertarget{classSignalTable_a983406c9b093d496175e5193142408cd}\label{classSignalTable_a983406c9b093d496175e5193142408cd} 
+\index{SignalTable@{SignalTable}!fillDfmShared@{fillDfmShared}}
+\index{fillDfmShared@{fillDfmShared}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillDfmShared()}{fillDfmShared()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Dfm\+Shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля dfm каждого общего для всех станций сигнала константными значениями \Hypertarget{classSignalTable_a6403bfb3f0f81357c7e28bff2d25b6b4}\label{classSignalTable_a6403bfb3f0f81357c7e28bff2d25b6b4} 
+\index{SignalTable@{SignalTable}!fillDfmSM@{fillDfmSM}}
+\index{fillDfmSM@{fillDfmSM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillDfmSM()}{fillDfmSM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Dfm\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля dfm каждого сигнала станции Воронеж-\/СМ константными значениями \Hypertarget{classSignalTable_ab46f724aa5be3a3374dca3858c914493}\label{classSignalTable_ab46f724aa5be3a3374dca3858c914493} 
+\index{SignalTable@{SignalTable}!fillNdecM@{fillNdecM}}
+\index{fillNdecM@{fillNdecM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdecM()}{fillNdecM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NdecM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля ndec каждого сигнала станции Воронеж-\/М константными значениями \Hypertarget{classSignalTable_afe283f97dc9348bbbf4d3c7e6ac02f74}\label{classSignalTable_afe283f97dc9348bbbf4d3c7e6ac02f74} 
+\index{SignalTable@{SignalTable}!fillNdecMrik@{fillNdecMrik}}
+\index{fillNdecMrik@{fillNdecMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdecMrik()}{fillNdecMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Ndec\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля ndec каждого сигнала станции МРИК константными значениями \Hypertarget{classSignalTable_a20b0fde7e1a5c125f8588bf87d439827}\label{classSignalTable_a20b0fde7e1a5c125f8588bf87d439827} 
+\index{SignalTable@{SignalTable}!fillNdecShared@{fillNdecShared}}
+\index{fillNdecShared@{fillNdecShared}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdecShared()}{fillNdecShared()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Ndec\+Shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля ndec каждого общего для всех станций сигнала константными значениями \Hypertarget{classSignalTable_ad00e731cb125a8c5d787e7cf10470b8a}\label{classSignalTable_ad00e731cb125a8c5d787e7cf10470b8a} 
+\index{SignalTable@{SignalTable}!fillNdecSM@{fillNdecSM}}
+\index{fillNdecSM@{fillNdecSM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdecSM()}{fillNdecSM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Ndec\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля ndec каждого сигнала станции Воронеж-\/СМ константными значениями \Hypertarget{classSignalTable_a562eb467a240118529feba79ceec58c8}\label{classSignalTable_a562eb467a240118529feba79ceec58c8} 
+\index{SignalTable@{SignalTable}!fillNdFmM@{fillNdFmM}}
+\index{fillNdFmM@{fillNdFmM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdFmM()}{fillNdFmM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nd\+FmM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nd\+Fm каждого сигнала станции Воронеж-\/М константными значениями \Hypertarget{classSignalTable_aa4975e70887b247f102eddb9ddba9f88}\label{classSignalTable_aa4975e70887b247f102eddb9ddba9f88} 
+\index{SignalTable@{SignalTable}!fillNdFmMrik@{fillNdFmMrik}}
+\index{fillNdFmMrik@{fillNdFmMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdFmMrik()}{fillNdFmMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nd\+Fm\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nd\+Fm каждого сигнала станции МРИК константными значениями \Hypertarget{classSignalTable_adc661db421ec0dd423e0d33f986c06db}\label{classSignalTable_adc661db421ec0dd423e0d33f986c06db} 
+\index{SignalTable@{SignalTable}!fillNdFmShared@{fillNdFmShared}}
+\index{fillNdFmShared@{fillNdFmShared}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdFmShared()}{fillNdFmShared()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nd\+Fm\+Shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nd\+Fm каждого общего для всех станций сигнала константными значениями \Hypertarget{classSignalTable_a6ea9f2a7de6d6cf1d56db07a96484d39}\label{classSignalTable_a6ea9f2a7de6d6cf1d56db07a96484d39} 
+\index{SignalTable@{SignalTable}!fillNdFmSM@{fillNdFmSM}}
+\index{fillNdFmSM@{fillNdFmSM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNdFmSM()}{fillNdFmSM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nd\+Fm\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nd\+Fm каждого сигнала станции Воронеж-\/СМ константными значениями \Hypertarget{classSignalTable_a88e7726f3205c86bf955ed89846488cc}\label{classSignalTable_a88e7726f3205c86bf955ed89846488cc} 
+\index{SignalTable@{SignalTable}!fillNfilM@{fillNfilM}}
+\index{fillNfilM@{fillNfilM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNfilM()}{fillNfilM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NfilM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nfil каждого сигнала станции Воронеж-\/М константными значениями \Hypertarget{classSignalTable_aa76660ecfc062427359901789ead51cf}\label{classSignalTable_aa76660ecfc062427359901789ead51cf} 
+\index{SignalTable@{SignalTable}!fillNfilMrik@{fillNfilMrik}}
+\index{fillNfilMrik@{fillNfilMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNfilMrik()}{fillNfilMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nfil\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nfil каждого сигнала станции МРИК константными значениями \Hypertarget{classSignalTable_a9640389d872e24db1712b44be3663223}\label{classSignalTable_a9640389d872e24db1712b44be3663223} 
+\index{SignalTable@{SignalTable}!fillNfilShared@{fillNfilShared}}
+\index{fillNfilShared@{fillNfilShared}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNfilShared()}{fillNfilShared()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nfil\+Shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nfil каждого общего для всех станций сигнала константными значениями \Hypertarget{classSignalTable_abfed2b0e94f89f3e7f962108ea560bda}\label{classSignalTable_abfed2b0e94f89f3e7f962108ea560bda} 
+\index{SignalTable@{SignalTable}!fillNfilSM@{fillNfilSM}}
+\index{fillNfilSM@{fillNfilSM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNfilSM()}{fillNfilSM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+Nfil\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля nfil каждого сигнала станции Воронеж-\/СМ константными значениями \Hypertarget{classSignalTable_a7edeb5922c8bacf430b5b35c082a28ce}\label{classSignalTable_a7edeb5922c8bacf430b5b35c082a28ce} 
+\index{SignalTable@{SignalTable}!fillNPolyM@{fillNPolyM}}
+\index{fillNPolyM@{fillNPolyM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNPolyM()}{fillNPolyM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NPolyM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Poly каждого сигнала станции Воронеж-\/М константными значениями \Hypertarget{classSignalTable_a9a5f4395e2c74e91044258b309cbac0e}\label{classSignalTable_a9a5f4395e2c74e91044258b309cbac0e} 
+\index{SignalTable@{SignalTable}!fillNPolyMrik@{fillNPolyMrik}}
+\index{fillNPolyMrik@{fillNPolyMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNPolyMrik()}{fillNPolyMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NPoly\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Poly каждого сигнала станции МРИК константными значениями \Hypertarget{classSignalTable_ae73c14e3406a65f6ed7fcd3468938f3a}\label{classSignalTable_ae73c14e3406a65f6ed7fcd3468938f3a} 
+\index{SignalTable@{SignalTable}!fillNPolySM@{fillNPolySM}}
+\index{fillNPolySM@{fillNPolySM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNPolySM()}{fillNPolySM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NPoly\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Poly каждого сигнала станции Воронеж-\/\+CМ константными значениями \Hypertarget{classSignalTable_a91e0d05782efda694eed96b89042a95b}\label{classSignalTable_a91e0d05782efda694eed96b89042a95b} 
+\index{SignalTable@{SignalTable}!fillNTayM@{fillNTayM}}
+\index{fillNTayM@{fillNTayM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNTayM()}{fillNTayM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NTayM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Tay каждого сигнала станции Воронеж-\/М константными значениями \Hypertarget{classSignalTable_a510e345dbf2aef4b4625aed8fac0264c}\label{classSignalTable_a510e345dbf2aef4b4625aed8fac0264c} 
+\index{SignalTable@{SignalTable}!fillNTayMrik@{fillNTayMrik}}
+\index{fillNTayMrik@{fillNTayMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNTayMrik()}{fillNTayMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NTay\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Tay каждого сигнала станции МРИК константными значениями \Hypertarget{classSignalTable_a26e7165e362e2213aae141dfdc95913d}\label{classSignalTable_a26e7165e362e2213aae141dfdc95913d} 
+\index{SignalTable@{SignalTable}!fillNTayShared@{fillNTayShared}}
+\index{fillNTayShared@{fillNTayShared}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNTayShared()}{fillNTayShared()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NTay\+Shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Tay каждого общего для всех станций сигнала константными значениями \Hypertarget{classSignalTable_a13177e68b49bdb8b1c3aa3d24daa24f9}\label{classSignalTable_a13177e68b49bdb8b1c3aa3d24daa24f9} 
+\index{SignalTable@{SignalTable}!fillNTaySM@{fillNTaySM}}
+\index{fillNTaySM@{fillNTaySM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{fillNTaySM()}{fillNTaySM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::fill\+NTay\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение поля n\+Tay каждого сигнала станции Воронеж-\/СМ константными значениями \Hypertarget{classSignalTable_a1a2f33752104dd2c2dcbe1328c2df39d}\label{classSignalTable_a1a2f33752104dd2c2dcbe1328c2df39d} 
+\index{SignalTable@{SignalTable}!getDfm@{getDfm}}
+\index{getDfm@{getDfm}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{getDfm()}{getDfm()}}
+{\footnotesize\ttfamily int32\+\_\+t Signal\+Table\+::get\+Dfm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sig\+Type }\end{DoxyParamCaption}) const}
+
+возвращает значение девиации частоты для заданного типа сигнала. Используется для ЛЧМ-\/сигналов \Hypertarget{classSignalTable_a410bf403fcceb0b5b3d3e32487c8bd99}\label{classSignalTable_a410bf403fcceb0b5b3d3e32487c8bd99} 
+\index{SignalTable@{SignalTable}!getMSeqSignQuantity@{getMSeqSignQuantity}}
+\index{getMSeqSignQuantity@{getMSeqSignQuantity}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{getMSeqSignQuantity()}{getMSeqSignQuantity()}}
+{\footnotesize\ttfamily int32\+\_\+t Signal\+Table\+::get\+MSeq\+Sign\+Quantity (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sig\+Type }\end{DoxyParamCaption}) const}
+
+возвращает число знаков М-\/последовательности \Hypertarget{classSignalTable_adabed06a30427e9a8b1cad150f9268b8}\label{classSignalTable_adabed06a30427e9a8b1cad150f9268b8} 
+\index{SignalTable@{SignalTable}!getNdec@{getNdec}}
+\index{getNdec@{getNdec}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{getNdec()}{getNdec()}}
+{\footnotesize\ttfamily int32\+\_\+t Signal\+Table\+::get\+Ndec (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sig\+Type }\end{DoxyParamCaption}) const}
+
+возвращает коэффициент прореживания по выходу ПЧВО для указанного типа сигнала \Hypertarget{classSignalTable_a0f33c791e19e1926cd01ebbeef2a5c35}\label{classSignalTable_a0f33c791e19e1926cd01ebbeef2a5c35} 
+\index{SignalTable@{SignalTable}!getNfil@{getNfil}}
+\index{getNfil@{getNfil}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{getNfil()}{getNfil()}}
+{\footnotesize\ttfamily int32\+\_\+t Signal\+Table\+::get\+Nfil (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sig\+Type }\end{DoxyParamCaption}) const}
+
+возвращает размер окна фильтра ПЧВО для указанного типа сигнала \Hypertarget{classSignalTable_a0772452ef0edaae71f951bbfe55d2c3a}\label{classSignalTable_a0772452ef0edaae71f951bbfe55d2c3a} 
+\index{SignalTable@{SignalTable}!getNPoly@{getNPoly}}
+\index{getNPoly@{getNPoly}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{getNPoly()}{getNPoly()}}
+{\footnotesize\ttfamily uint32\+\_\+t Signal\+Table\+::get\+NPoly (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sig\+Type }\end{DoxyParamCaption}) const}
+
+возвращает код полинома для расчёта м-\/последовательности \Hypertarget{classSignalTable_a205781d6d062251a9af7a8179e1813ef}\label{classSignalTable_a205781d6d062251a9af7a8179e1813ef} 
+\index{SignalTable@{SignalTable}!getNTay@{getNTay}}
+\index{getNTay@{getNTay}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{getNTay()}{getNTay()}}
+{\footnotesize\ttfamily double Signal\+Table\+::get\+NTay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sig\+Type }\end{DoxyParamCaption}) const}
+
+возвращает длительность дискрета ФМ в мкс для заданного типа сигнала \Hypertarget{classSignalTable_a4b4ea398b9b0f6c1ff43ae80b482ce0b}\label{classSignalTable_a4b4ea398b9b0f6c1ff43ae80b482ce0b} 
+\index{SignalTable@{SignalTable}!initM@{initM}}
+\index{initM@{initM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{initM()}{initM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::initM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение части таблицы сигналов для Воронеж-\/М Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classSignalTable_a4b4ea398b9b0f6c1ff43ae80b482ce0b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSignalTable_ac350ad165375d14bbab74e00d9320678}\label{classSignalTable_ac350ad165375d14bbab74e00d9320678} 
+\index{SignalTable@{SignalTable}!initMrik@{initMrik}}
+\index{initMrik@{initMrik}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{initMrik()}{initMrik()}}
+{\footnotesize\ttfamily void Signal\+Table\+::init\+Mrik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение части таблицы сигналов для МРИК Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSignalTable_ac350ad165375d14bbab74e00d9320678_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSignalTable_afca469ebe86e773b567d60c73235a531}\label{classSignalTable_afca469ebe86e773b567d60c73235a531} 
+\index{SignalTable@{SignalTable}!initShared@{initShared}}
+\index{initShared@{initShared}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{initShared()}{initShared()}}
+{\footnotesize\ttfamily void Signal\+Table\+::init\+Shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение части таблицы сигналов, общих для всех станций Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSignalTable_afca469ebe86e773b567d60c73235a531_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSignalTable_a9d87debd6af0eb9f77cddc34820ec80f}\label{classSignalTable_a9d87debd6af0eb9f77cddc34820ec80f} 
+\index{SignalTable@{SignalTable}!initSM@{initSM}}
+\index{initSM@{initSM}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{initSM()}{initSM()}}
+{\footnotesize\ttfamily void Signal\+Table\+::init\+SM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+заполнение части таблицы сигналов для Воронеж-\/СМ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSignalTable_a9d87debd6af0eb9f77cddc34820ec80f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classSignalTable_a40b2f89a228150faffeeab8a74205788}\label{classSignalTable_a40b2f89a228150faffeeab8a74205788} 
+\index{SignalTable@{SignalTable}!maxSignals@{maxSignals}}
+\index{maxSignals@{maxSignals}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{maxSignals}{maxSignals}}
+{\footnotesize\ttfamily const uint32\+\_\+t Signal\+Table\+::max\+Signals = 384\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальное количество сигналов в таблице сигналов \Hypertarget{classSignalTable_aa51e8f7f91dad46ddbbdd04f31fc1067}\label{classSignalTable_aa51e8f7f91dad46ddbbdd04f31fc1067} 
+\index{SignalTable@{SignalTable}!signalsInfo@{signalsInfo}}
+\index{signalsInfo@{signalsInfo}!SignalTable@{SignalTable}}
+\doxysubsubsection{\texorpdfstring{signalsInfo}{signalsInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSignalTable_1_1SignalInfo}{Signal\+Info}} Signal\+Table\+::signals\+Info\mbox{[}\mbox{\hyperlink{classSignalTable_a40b2f89a228150faffeeab8a74205788}{max\+Signals}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+массив информации о каждом сигнале 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{signalTable_8h}{signal\+Table.\+h}}\item 
+src/gui/\mbox{\hyperlink{signalTable_8cpp}{signal\+Table.\+cpp}}\end{DoxyCompactItemize}

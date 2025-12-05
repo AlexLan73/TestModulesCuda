@@ -1,0 +1,58 @@
+\doxysection{slice\+File.\+h}
+\hypertarget{sliceFile_8h_source}{}\label{sliceFile_8h_source}\index{src/sliceFile.h@{src/sliceFile.h}}
+\mbox{\hyperlink{sliceFile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SLICEFILE\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SLICEFILE\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}\ \textcolor{comment}{//\ std::ofstream}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}\ \textcolor{comment}{//\ std::string}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}\ \textcolor{comment}{//\ std::stringstream}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Тут\ стоит\ помнить,\ что\ в\ std::ofstream\ нет\ виртуального\ деструктора,\ а}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ это\ может\ повлечь\ за\ собой\ утечку\ памяти\ при\ удалении\ объекта\ через}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ указатель\ на\ базовый\ класс!\ Поэтому\ нужно\ удалять\ только\ объект\ SliceFile!}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{SliceFile}}:\ \textcolor{keyword}{public}\ std::ofstream\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{PrintMode}}\ \{\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaaded95f3e3ff40fc2d07e2db394564fb3}{inRaw}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfaa6cfc21513937fcee2cd238afd2d8f79b}{byColumn}}\ \};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a576e78947157433c691d133244b5b1e8}{none}}\ =\ -\/1;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a165d27581e75a0124f24ace43970de61}{prefix}};}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a127f775b32007e6f96d20cf93ef504f2}{SliceFile}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a17c9ffb574af394ffb230cbcf049a9e6}{openSlice}}(std::ios\_base::openmode\ openMode\ =\ std::ios\_base::trunc);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_af4b7b1fc55b3e2e4a3ac589908ce7932}{setSliceName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a355f3c14d9fc3feb3cde2edcc9cbc4a9}{setTactNum}}(uint64\_t\ value);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a72319ed6eff2c83ecd51cd7b3bb51260}{setStrobeID}}(int64\_t\ value);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a7431731a114091c3e69de0b7096d3b4b}{setPolarType}}(int32\_t\ value);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a6ce36f031c7fd556f733b5126d47923f}{setCrateNum}}(int32\_t\ value);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a9690fe910920c14a563706f732f712ca}{setCellNum}}(int32\_t\ value);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_ad04cf5c29c792912fd2918c931c2d526}{setChannelNum}}(int32\_t\ value);}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a5677a42be69bf6c36763fb5f73bccae8}{setPrintMode}}(\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{PrintMode}}\ value);}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{PrintMode}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96bf8b0f07f33cf5a5420f319fdf830a}{getPrintMode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a953fba75b5ede3e53ea956c2f441489b}{setRayNum}}(int32\_t\ value);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_ade023e95ead5644493bac6a67412a8b4}{setStrbIDAppendix}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *appendix);}
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00088\ \ \ \ \ std::string\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_af3a3f828f65bbf4833da93c5a26b0084}{fileName}};}
+\DoxyCodeLine{00093\ \ \ \ \ std::string\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a886f6f6481ceb9386bd74f2ce5ad70a1}{strbIDAppendix}};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a73c19046a01fff3eae208cd8d13d5045}{sliceName}};}
+\DoxyCodeLine{00097\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a53e462586177bc1706d9310c37ce6e08}{tactNum}};}
+\DoxyCodeLine{00099\ \ \ \ \ int64\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a545a81f9d74ae85c0a21a1e939f53365}{strobeID}};}
+\DoxyCodeLine{00101\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a3fceb971cb7e9a97e683eebc7c0deabe}{polarType}};}
+\DoxyCodeLine{00103\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96f3f21d6e847805644cfacb039e19d6}{crateNum}};}
+\DoxyCodeLine{00105\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a28bd7b27abb6f678643ba26a64e0430f}{cellNum}};}
+\DoxyCodeLine{00107\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_ad285ee91071dc8cdc0f1805d7d781e09}{chanNum}};}
+\DoxyCodeLine{00109\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a00b2834bd659a53dbae3c78cf869c798}{rayNum}};}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a067bd63d015190d9352a6ee2935e3bfa}{PrintMode}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a96a5821905b35ca50162d616d3a12941}{printMode}};}
+\DoxyCodeLine{00112\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile_a59059473106ea75ebd893eade2521d3c}{composeFileName}}(std::stringstream\&\ ss)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \};\ \textcolor{comment}{//\ class\ SliceFile}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SLICEFILE\_H\_\_}}
+
+\end{DoxyCode}

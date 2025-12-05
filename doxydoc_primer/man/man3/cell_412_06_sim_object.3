@@ -1,0 +1,114 @@
+.TH "cell_412_06_sim_object" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cell_412_06_sim_object \- Данные ячейки 6МЯ-412-06 по имитируемом объекту  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <412\-06_fc\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBbegin\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBlength\fP"
+.br
+.RI "OBJECT_X_LENGTH – длина сигнала, где X – номер сигнала\&. "
+.ti -1c
+.RI "uint32_t \fBn_poly_0_31\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBn_poly_32_40\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBh_band\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtype\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBreserved\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBn_posl_0_31\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBn_posl_32_40\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBmseq_diskret_length\fP [3]"
+.br
+.RI "OBJECT_X_M_DISKRET_LENGTH – длина одного знака М-последовательности\&. "
+.ti -1c
+.RI "uint16_t \fBmseq_length\fP"
+.br
+.RI "OBJECT_X_M_LENGTH – длина формируемой М-последовательности в битах "
+.ti -1c
+.RI "uint16_t \fBintens\fP"
+.br
+.RI "OBJECT_X_INT – интенсивность для X-го обьекта\&. "
+.ti -1c
+.RI "uint32_t \fBdds_step\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBdds_phase\fP [4]"
+.br
+.ti -1c
+.RI "uint8_t \fBdelay\fP [4]"
+.br
+.RI "задержка формирования объекта в дискретах (по каналам) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Данные ячейки 6МЯ-412-06 по имитируемом объекту 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t cell_412_06_sim_object::begin"
+OBJECT_X_BEGIN – начало сигнала, где X – номер сигнала\&. пока что время задается относительно начала такта, потом будет относительно начала строба имитации 
+.SS "uint16_t cell_412_06_sim_object::dds_phase"
+OBJECT_X_DDS_FAZA – фаза X-го канала старшие 16 бит из значащих 24-бит 
+.SS "uint32_t cell_412_06_sim_object::dds_step"
+OBJECT_X_DDS_STEP – шаг частоты DDS X-го обьекта\&. ЦМР 60МГц/2**24 (3\&.57Гц) значение 24-битовое 
+.SS "uint8_t cell_412_06_sim_object::delay"
+
+.PP
+задержка формирования объекта в дискретах (по каналам) 
+.SS "uint8_t cell_412_06_sim_object::h_band"
+OBJECT_X_H_BAND – длинна окна для формирования помехи обьекта\&. (тоже только помеха) 
+.SS "uint16_t cell_412_06_sim_object::intens"
+
+.PP
+OBJECT_X_INT – интенсивность для X-го обьекта\&. 
+.SS "uint32_t cell_412_06_sim_object::length"
+
+.PP
+OBJECT_X_LENGTH – длина сигнала, где X – номер сигнала\&. 
+.SS "uint8_t cell_412_06_sim_object::mseq_diskret_length"
+
+.PP
+OBJECT_X_M_DISKRET_LENGTH – длина одного знака М-последовательности\&. 
+.SS "uint16_t cell_412_06_sim_object::mseq_length"
+
+.PP
+OBJECT_X_M_LENGTH – длина формируемой М-последовательности в битах 
+.SS "uint32_t cell_412_06_sim_object::n_poly_0_31"
+OBJECT_X_N_POLY – полином М-последовательости для X-го обьекта\&. (и для помехи, и для объекта) у помехи 8 фиксированных (хранимых в ФПО) полиномов, выбираются по номеру объекта 
+.SS "uint8_t cell_412_06_sim_object::n_poly_32_40"
+
+.SS "uint32_t cell_412_06_sim_object::n_posl_0_31"
+OBJECT_X_N_POSL – начальная фаза М-последовательности для X-го обьекта\&. (только для помехи) 
+.SS "uint8_t cell_412_06_sim_object::n_posl_32_40"
+
+.SS "uint8_t cell_412_06_sim_object::reserved"
+
+.SS "uint8_t cell_412_06_sim_object::type"
+OBJECT_X_TYPE – тип обьекта (сигнал или помеха)\&. на будущее, 0 - помеха, 1 - сигнал 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

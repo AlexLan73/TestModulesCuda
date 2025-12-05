@@ -1,0 +1,7 @@
+<map id="validate_trims_strobe" name="validate_trims_strobe">
+<area shape="rect" id="Node000001" title="Производит базовую валидацию одного строба сообщения ТРИМС." alt="" coords="5,5,169,31"/>
+<area shape="rect" id="Node000002" href="$blk223_2libfc_8cpp.html#ae143dad71473830d592e1fba650499a0" title="Производит базовую валидацию одного имитируемого объекта строба сообщения ТРИМС." alt="" coords="217,5,380,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,15,204,15,204,21,169,21"/>
+<area shape="rect" id="Node000003" href="$blk223_2libfc_8cpp.html#abdb763f0552c2b2c602495c6772efce7" title="Производит базовую валидацию блока параметра сигнала." alt="" coords="428,5,551,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,15,414,15,414,21,380,21"/>
+</map>

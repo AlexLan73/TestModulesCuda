@@ -1,0 +1,295 @@
+.TH "src/mpk1/blk223/model_wrapper.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk223/model_wrapper.cpp \- Обертка для расчетной части модели\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'model_wrapper\&.h'\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <libutils/ptime\&.h>\fP
+.br
+\fC#include <libutils/optional\&.h>\fP
+.br
+\fC#include <libvork/defs\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDPRINTF\fP(\&.\&.\&.)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmw_init\fP (const enum \fBSharedConst::StationType\fP station_type, const enum \fBSharedConst::PolarizationTypes\fP polarization_type, const unsigned crate_num, const int rek_num)"
+.br
+.RI "Инициализация обертки модели\&. "
+.ti -1c
+.RI "void \fBmw_free\fP (void)"
+.br
+.RI "Деинициализирует обертку модели\&. "
+.ti -1c
+.RI "static void \fBintersect_masks\fP (const \fBMASK\fP *e2mask, \fBChannelsMask\fP *res_masks)"
+.br
+.RI "Пересечение множеств маски используемых и требуемых каналов\&. "
+.ti -1c
+.RI "static void \fBconvert_mask_for_model\fP (const \fBMASK\fP *e2mask, \fBChannelsMask\fP *res_mask)"
+.br
+.RI "Пересечение множеств маски используемых и требуемых каналов\&. "
+.ti -1c
+.RI "unsigned \fBget_first_channel_in_cell\fP (const unsigned crate_num, const unsigned cell_num)"
+.br
+.RI "Рассчитывает номер первого канала для заданной ячейки\&. "
+.ti -1c
+.RI "unsigned \fBget_first_channel_in_cell\fP ()"
+.br
+.RI "Рассчитывает номер первого канала для текущей ячейки\&. "
+.ti -1c
+.RI "void \fBconvert_trkp_for_model\fP (const \fBTRKP\fP &in, \fBE2Trkp\fP &out)"
+.br
+.RI "Функция конвертирует структуру сообщения Е2ТРКП в формат модели\&. "
+.ti -1c
+.RI "vector< \fBControlMessage\fP > \fBcompute_fc\fP (const \fBfcq\fP *fcqp)"
+.br
+.RI "Формирует УС для всех стробов на ячейки и поляризации, заданные маской\&. "
+.ti -1c
+.RI "void \fBmw_mark_cell_in_ch_mask\fP (const unsigned crate_num, const unsigned cell_num)"
+.br
+.RI "Помечает указанную ячейку в маске каналов\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static enum \fBSharedConst::StationType\fP \fBg_station_type\fP"
+.br
+.RI "Тип станции\&. "
+.ti -1c
+.RI "static enum \fBSharedConst::PolarizationTypes\fP \fBg_polarization_type\fP"
+.br
+.RI "Тип поляризации\&. "
+.ti -1c
+.RI "static unsigned \fBg_crate_num\fP = 0"
+.br
+.RI "Номер блока\&. "
+.ti -1c
+.RI "static int \fBg_rek_number\fP = 1"
+.br
+.RI "Номер контейнера\&. "
+.ti -1c
+.RI "static \fBChannelsMask\fP \fBg_ch_mask\fP"
+.br
+.RI "Текущая маска каналов\&. "
+.ti -1c
+.RI "static bool \fBinitialized\fP = false"
+.br
+.RI "Признак инициализации обертки\&. "
+.ti -1c
+.RI "static \fBStationParams\fP \fBstation_params\fP"
+.br
+.RI "Параметры станции\&. "
+.ti -1c
+.RI "static vector< \fBControlMessage\fP > \fBresult_cmsgs\fP"
+.br
+.RI "Набор управляющих сообщений\&. "
+.ti -1c
+.RI "static \fBInterface\fP * \fBmodel\fP"
+.br
+.RI "Объект модели\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Обертка для расчетной части модели\&. 
+
+Данная обертка предназначена для упрощенного вызова расчетной части модели в виде, удобного для ФПО\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DPRINTF( \&.\&.\&.)"
+
+.SH "Function Documentation"
+.PP 
+.SS "vector< \fBControlMessage\fP > compute_fc (const \fBfcq\fP * fcqp)"
+
+.PP
+Формирует УС для всех стробов на ячейки и поляризации, заданные маской\&. Функция готовит входные данные для расчета УС в модели, вызывает расчет УС и возвращает полученный вектор УС как результат\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfcqp\fP Указатель структуру кванта ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает вектор рассчитанных управляющих сообщений\&. 
+.RE
+.PP
+
+.SS "static void convert_mask_for_model (const \fBMASK\fP * e2mask, \fBChannelsMask\fP * res_mask)\fC [static]\fP"
+
+.PP
+Пересечение множеств маски используемых и требуемых каналов\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe2mask\fP Указатель на буфер сообщения МАСК\&. 
+.br
+\fIres_masks\fP Указатель на результирующую маску каналов\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "void convert_trkp_for_model (const \fBTRKP\fP & in, \fBE2Trkp\fP & out)"
+
+.PP
+Функция конвертирует структуру сообщения Е2ТРКП в формат модели\&. Функция конвертирует входящую структуру сообщения Е2ТРКП из формата библиотеки libvork в формат модели\&. Технически обе структуры одинаковы, разница существует лишь в их описании: структура модели сделана иерархической с вынесенным заголовком, структура libvork же сделана плоской\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIin\fP Структура сообщения в формате libvork\&. 
+.br
+\fIout\fP Структура сообщения в формате модели\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "unsigned get_first_channel_in_cell ()"
+
+.PP
+Рассчитывает номер первого канала для текущей ячейки\&. Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает номер первого канала для текущей ячейки\&. 
+.RE
+.PP
+
+.SS "unsigned get_first_channel_in_cell (const unsigned crate_num, const unsigned cell_num = \fC0\fP)"
+
+.PP
+Рассчитывает номер первого канала для заданной ячейки\&. Функция производит расчет первого используемого канала в общем списке каналов полотна в зависимости от типа станции, и возвращает полученное значение в качестве результата\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrate_num\fP Номер блока\&. 
+.br
+\fIcell_num\fP Номер ячейки\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает номер первого канала для заданной ячейки\&. 
+.RE
+.PP
+
+.SS "static void intersect_masks (const \fBMASK\fP * e2mask, \fBChannelsMask\fP * res_masks)\fC [static]\fP"
+
+.PP
+Пересечение множеств маски используемых и требуемых каналов\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe2mask\fP Указатель на буфер сообщения МАСК\&. 
+.br
+\fIres_masks\fP Указатель на результирующую маску каналов\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "void mw_free (void)"
+
+.PP
+Деинициализирует обертку модели\&. Ввиду статического распределния памяти для обертки модели, принудительного высвобождения какой-то либо памяти не требуется, поэтому данная функция просто сбрасывает признак инициализации обертки модели\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "void mw_init (const enum \fBSharedConst::StationType\fP station_type, const enum \fBSharedConst::PolarizationTypes\fP polarization_type, const unsigned crate_num, const int rek_num)"
+
+.PP
+Инициализация обертки модели\&. 
+.SS "void mw_mark_cell_in_ch_mask (const unsigned crate_num, const unsigned cell_num)"
+
+.PP
+Помечает указанную ячейку в маске каналов\&. Функция сначала определяет местоположение первого относительного канала в общем списке каналов полотна, а затем, ввиду того, что каналы для отдельных ячеек в массиве расположены последовательно, нужные каналы помечает как используемые\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrate_num\fP Номер блока\&. 
+.br
+\fIcell_num\fP Номер ячейки\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBChannelsMask\fP g_ch_mask\fC [static]\fP"
+
+.PP
+Текущая маска каналов\&. 
+.SS "unsigned g_crate_num = 0\fC [static]\fP"
+
+.PP
+Номер блока\&. 
+.SS "enum \fBSharedConst::PolarizationTypes\fP g_polarization_type\fC [static]\fP"
+
+.PP
+Тип поляризации\&. 
+.SS "int g_rek_number = 1\fC [static]\fP"
+
+.PP
+Номер контейнера\&. 
+.SS "enum \fBSharedConst::StationType\fP g_station_type\fC [static]\fP"
+
+.PP
+Тип станции\&. 
+.SS "bool initialized = false\fC [static]\fP"
+
+.PP
+Признак инициализации обертки\&. 
+.SS "\fBInterface\fP* model\fC [static]\fP"
+
+.PP
+Объект модели\&. 
+.SS "vector<\fBControlMessage\fP> result_cmsgs\fC [static]\fP"
+
+.PP
+Набор управляющих сообщений\&. 
+.SS "\fBStationParams\fP station_params\fC [static]\fP"
+
+.PP
+Параметры станции\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

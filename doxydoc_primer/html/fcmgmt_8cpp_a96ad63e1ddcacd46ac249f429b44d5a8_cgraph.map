@@ -1,0 +1,5 @@
+<map id="init_afr" name="init_afr">
+<area shape="rect" id="Node000001" title="Функция инициализирует буфер сообщения АФР значениями по умолчанию." alt="" coords="5,5,73,31"/>
+<area shape="rect" id="Node000002" href="$fcmgmt_8cpp.html#a0e651fc2b7b544c84761ff195ff44675" title="Функция производит инициализация сообщения Е2ТРКП." alt="" coords="121,5,213,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,15,108,15,108,21,74,21"/>
+</map>

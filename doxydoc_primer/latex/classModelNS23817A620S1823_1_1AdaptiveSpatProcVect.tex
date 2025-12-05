@@ -1,0 +1,306 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Adaptive\+Spat\+Proc\+Vect Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect}{}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect}\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+
+
+{\ttfamily \#include $<$adaptive\+Spat\+Proc\+Vect.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Adaptive\+Spat\+Proc\+Vect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{One\+Strobe\+Vectors}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}{Mode}} \{ \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9aa747d8d1edf70803f86f9ae22d7d2439}{signal\+Coord}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a3ab4690d552893db24b6304cc52eacf1}{add}} (uint32\+\_\+t strb\+ID, uint32\+\_\+t max\+Channels, uint64\+\_\+t t\+Exec\+Num, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type, std\+::complex$<$ int32\+\_\+t $>$ adaptive\+Vect\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{Shared\+Const\+::max\+Channels\+SM}}\mbox{]})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_aad3162319c7b64332b7d9ccc641e8dba}{rm}} (uint32\+\_\+t strb\+ID)
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{One\+Strobe\+Vectors}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af2612b5073682d02ca576cf86e1c3c28}{get}} (uint32\+\_\+t strb\+ID) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a090561f709b914641938e20d6fb17750}{print}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a22b3de0bd7f1b052cb49652bd4daaeea}{Adaptive\+Spat\+Proc\+Vect}} ()
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ad0d8c7326d36fcc2e39cb5e8bafab879}{\texorpdfstring{$\sim$}{\string~}\+Adaptive\+Spat\+Proc\+Vect}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a7d71d0889a231f83799a6c83c134eefb}{find\+Free\+Quant\+Index}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ab5f968d1d3cc0d7210829254a975b969}{clear}} ()
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a1a012ab43a136c99750e3601415d6767}{is\+Strb\+Id\+Exist\+Already}} (uint32\+\_\+t strb\+ID, int32\+\_\+t \texorpdfstring{$\ast$}{*}strb\+Index) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a8b2bda84dcab1717b99144f36c2fafa8}{purge}} (uint64\+\_\+t t\+Exec\+Num)
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0163b861484fb7d2bd88f379ea2269c2}{find\+Free\+Quant\+Or\+Right\+Strobe}} (uint32\+\_\+t strb\+ID, uint64\+\_\+t t\+Exec\+Num, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a858e837013cc7f8daca36b4aa30d37b5}{print\+Signal\+Coord\+Data}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type, uint32\+\_\+t s) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{One\+Strobe\+Vectors}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af68c22ba2218d2640ef425626512c285}{strobes}} \mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648}{max\+Adapt\+Strobes}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648}{max\+Adapt\+Strobes}} = 10
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0588f944fe4792c18981f08e3cd82c45}{adapt\+Data\+Store\+Time}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс адаптивных векторов пространственной обработки. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!Mode@{Mode}}
+\index{Mode@{Mode}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9}{Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+Mode}}}
+
+Виды адаптаций\+:
+\begin{DoxyItemize}
+\item signal\+Coord -\/ сигнальная и координатная; 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{signalCoord@{signalCoord}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!signalCoord@{signalCoord}}}\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9aa747d8d1edf70803f86f9ae22d7d2439}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a54f3a1d0467e7978d2aaf81248bee4e9aa747d8d1edf70803f86f9ae22d7d2439} 
+signal\+Coord&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a22b3de0bd7f1b052cb49652bd4daaeea}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a22b3de0bd7f1b052cb49652bd4daaeea} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!AdaptiveSpatProcVect@{AdaptiveSpatProcVect}}
+\index{AdaptiveSpatProcVect@{AdaptiveSpatProcVect}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{AdaptiveSpatProcVect()}{AdaptiveSpatProcVect()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\+Adaptive\+Spat\+Proc\+Vect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a22b3de0bd7f1b052cb49652bd4daaeea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ad0d8c7326d36fcc2e39cb5e8bafab879}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ad0d8c7326d36fcc2e39cb5e8bafab879} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!````~AdaptiveSpatProcVect@{\texorpdfstring{$\sim$}{\string~}AdaptiveSpatProcVect}}
+\index{````~AdaptiveSpatProcVect@{\texorpdfstring{$\sim$}{\string~}AdaptiveSpatProcVect}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AdaptiveSpatProcVect()}{\string~AdaptiveSpatProcVect()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::\texorpdfstring{$\sim$}{\string~}\+Adaptive\+Spat\+Proc\+Vect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a3ab4690d552893db24b6304cc52eacf1}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a3ab4690d552893db24b6304cc52eacf1} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!add@{add}}
+\index{add@{add}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::add (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+ID,  }\item[{uint32\+\_\+t}]{max\+Channels,  }\item[{uint64\+\_\+t}]{t\+Exec\+Num,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type,  }\item[{std\+::complex$<$ int32\+\_\+t $>$}]{adaptive\+Vect\mbox{[}$\,$\mbox{]}\mbox{[}\+Shared\+Const\+::max\+Channels\+SM\mbox{]} }\end{DoxyParamCaption})}
+
+Сохранение адаптивных векторов ПО из adaptive\+Vect внутри объекта. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+ID} & идентификатор (номер) строба \\
+\hline
+{\em max\+Channels} & максимальное количество каналов в поляризации для текущей станции \\
+\hline
+{\em t\+Exec\+Num} & номер такта исполнения \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+{\em adaptive\+Vect} & массив адаптивных векторов \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a3ab4690d552893db24b6304cc52eacf1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ab5f968d1d3cc0d7210829254a975b969}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_ab5f968d1d3cc0d7210829254a975b969} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!clear@{clear}}
+\index{clear@{clear}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Очищение всех данных объекта. \Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a7d71d0889a231f83799a6c83c134eefb}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a7d71d0889a231f83799a6c83c134eefb} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!findFreeQuantIndex@{findFreeQuantIndex}}
+\index{findFreeQuantIndex@{findFreeQuantIndex}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{findFreeQuantIndex()}{findFreeQuantIndex()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::find\+Free\+Quant\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Поиск свободного кванта для хранения адаптивных векторов ПО. \begin{DoxyReturn}{Returns}
+индекс свободного элемента в массиве данных для хранения адаптивных векторов ПО. Если все элементы заняты, то возвращает минус единицу 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0163b861484fb7d2bd88f379ea2269c2}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0163b861484fb7d2bd88f379ea2269c2} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!findFreeQuantOrRightStrobe@{findFreeQuantOrRightStrobe}}
+\index{findFreeQuantOrRightStrobe@{findFreeQuantOrRightStrobe}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{findFreeQuantOrRightStrobe()}{findFreeQuantOrRightStrobe()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::find\+Free\+Quant\+Or\+Right\+Strobe (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+ID,  }\item[{uint64\+\_\+t}]{t\+Exec\+Num,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Поиск свободного кванта или уже ранее занятого для строба с идентификатором strb\+ID, но со свободным буфером для поляризации polar\+Type. Если всё занято, то запускается чистка. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+ID} & идентификатор (номер) строба \\
+\hline
+{\em t\+Exec\+Num} & номер такта исполнения \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+индекс свободного кванта или -\/1 если кванта для заданных входных данных не обнаружено 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0163b861484fb7d2bd88f379ea2269c2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af2612b5073682d02ca576cf86e1c3c28}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af2612b5073682d02ca576cf86e1c3c28} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!get@{get}}
+\index{get@{get}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{Adaptive\+Spat\+Proc\+Vect\+::\+One\+Strobe\+Vectors}} \texorpdfstring{$\ast$}{*} Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+ID }\end{DoxyParamCaption}) const}
+
+Получение адаптивных векторов ПО для заданного идентификатора строба. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+ID} & идентификатор (номер) строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на массив адаптивных векторов ПО для строба strb\+ID 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a1a012ab43a136c99750e3601415d6767}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a1a012ab43a136c99750e3601415d6767} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!isStrbIdExistAlready@{isStrbIdExistAlready}}
+\index{isStrbIdExistAlready@{isStrbIdExistAlready}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{isStrbIdExistAlready()}{isStrbIdExistAlready()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::is\+Strb\+Id\+Exist\+Already (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+ID,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{strb\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка наличия адаптивных векторов на заданный строб. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+ID} & идентификатор (номер) строба \\
+\hline
+{\em strb\+Index} & указатель на переменную, через который отдаётся индекс найденного занятого строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если адаптивные вектора для заданного номера строба уже есть в массиве, false в противном случае 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a090561f709b914641938e20d6fb17750}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a090561f709b914641938e20d6fb17750} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!print@{print}}
+\index{print@{print}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const}
+
+Печать в поток вывода готовых векторов и коэццициентов по всем хранящимся стробам. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a090561f709b914641938e20d6fb17750_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a858e837013cc7f8daca36b4aa30d37b5}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a858e837013cc7f8daca36b4aa30d37b5} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!printSignalCoordData@{printSignalCoordData}}
+\index{printSignalCoordData@{printSignalCoordData}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{printSignalCoordData()}{printSignalCoordData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::print\+Signal\+Coord\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type,  }\item[{uint32\+\_\+t}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Печать в поток вывода готовых адаптивных векторов сигнальной или координатной адаптации для заданного кванта. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+{\em s} & порядковый номер строба (кванта) в массиве адаптивных векторов strobes \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a8b2bda84dcab1717b99144f36c2fafa8}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a8b2bda84dcab1717b99144f36c2fafa8} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!purge@{purge}}
+\index{purge@{purge}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{purge()}{purge()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::purge (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{t\+Exec\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Чистка набора адаптивных векторов от устаревших. 
+\begin{DoxyParams}{Parameters}
+{\em t\+Exec\+Num} & номер такта исполнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество свободных квантов или -\/1 если свободных нет 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a8b2bda84dcab1717b99144f36c2fafa8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_aad3162319c7b64332b7d9ccc641e8dba}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_aad3162319c7b64332b7d9ccc641e8dba} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!rm@{rm}}
+\index{rm@{rm}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{rm()}{rm()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::rm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+ID }\end{DoxyParamCaption})}
+
+Удаление адаптивных векторов ПО для строба strb\+ID из объекта. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+ID} & идентификатор (номер) строба \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0588f944fe4792c18981f08e3cd82c45}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a0588f944fe4792c18981f08e3cd82c45} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!adaptDataStoreTime@{adaptDataStoreTime}}
+\index{adaptDataStoreTime@{adaptDataStoreTime}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{adaptDataStoreTime}{adaptDataStoreTime}}
+{\footnotesize\ttfamily const uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::adapt\+Data\+Store\+Time = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+время хранения адаптивных векторов, в тактах. \Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!maxAdaptStrobes@{maxAdaptStrobes}}
+\index{maxAdaptStrobes@{maxAdaptStrobes}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{maxAdaptStrobes}{maxAdaptStrobes}}
+{\footnotesize\ttfamily const uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::max\+Adapt\+Strobes = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальное количество стробов, для которых можно одновременно хранить данные в объекте класса. \Hypertarget{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af68c22ba2218d2640ef425626512c285}\label{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_af68c22ba2218d2640ef425626512c285} 
+\index{ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}!strobes@{strobes}}
+\index{strobes@{strobes}!ModelNS23817A620S1823::AdaptiveSpatProcVect@{ModelNS23817A620S1823::AdaptiveSpatProcVect}}
+\doxysubsubsection{\texorpdfstring{strobes}{strobes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1AdaptiveSpatProcVect_1_1OneStrobeVectors}{One\+Strobe\+Vectors}} Model\+NS23817\+A620\+S1823\+::\+Adaptive\+Spat\+Proc\+Vect\+::strobes\mbox{[}\mbox{\hyperlink{classModelNS23817A620S1823_1_1AdaptiveSpatProcVect_a47bc065fa92ab2416d32e4bbf81ff648}{max\+Adapt\+Strobes}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+массив данных для хранения адаптивных векторов ПО и коэффициентов корреляции нескольких стробов. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{adaptiveSpatProcVect_8h}{adaptive\+Spat\+Proc\+Vect.\+h}}\item 
+src/\mbox{\hyperlink{adaptiveSpatProcVect_8cpp}{adaptive\+Spat\+Proc\+Vect.\+cpp}}\end{DoxyCompactItemize}

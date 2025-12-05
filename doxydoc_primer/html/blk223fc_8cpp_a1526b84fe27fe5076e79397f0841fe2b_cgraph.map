@@ -1,0 +1,48 @@
+<map id="compute_fcq_for_hw" name="compute_fcq_for_hw">
+<area shape="rect" id="Node000001" title="Функция инициирует расчет и конвертацию ФУ для аппаратуры." alt="" coords="5,255,163,280"/>
+<area shape="rect" id="Node000002" href="$blk223fc_8cpp.html#ae67c96e774fd9bece7b9b30de230bd06" title="Функция производит расчет имитационных параметров заданного строба ФУ." alt="" coords="217,104,375,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,252,264,135,267,140,105,257"/>
+<area shape="rect" id="Node000008" href="$blk223fc_8cpp.html#ad5c7f86265919f558fad17cdc31ab9fe" title="Функция производит расчет целевых параметров заданного строба ФУ." alt="" coords="211,255,381,280"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="163,265,197,265,197,270,163,270"/>
+<area shape="rect" id="Node000021" href="$blk223fc_8cpp.html#a153e0d4f2701c145559f16c31b5fee64" title="Функция производит валидацию целевых параметров строба СМ." alt="" coords="221,394,371,434"/>
+<area shape="poly" id="edge22_Node000001_Node000021" title=" " alt="" coords="105,278,256,384,253,388,102,282"/>
+<area shape="rect" id="Node000003" href="$blk223fc_8cpp.html#ad43ea22e3e3797c99497816197dbfb45" title="Функция производит расчет сдвигового регистра для помехи." alt="" coords="429,5,568,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,102,366,72,428,40,444,33,446,38,430,44,369,76,319,106"/>
+<area shape="rect" id="Node000004" href="$blk223fc_8cpp.html#a27b36ab3398f3ac3e15d3c8e6fa4af99" title="Функция производит расчет сдвигового регистра для шума." alt="" coords="429,55,568,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="348,101,432,81,433,86,349,107"/>
+<area shape="rect" id="Node000006" href="$blk223fc_8cpp.html#a57200be7b5e839af9578f0fe53c324b2" title="Функция выбирает полином для помехи по заданному номеру." alt="" coords="439,104,559,129"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="375,114,425,114,425,119,375,119"/>
+<area shape="rect" id="Node000007" href="$group___xD1_x81223__fctl.html#ga437f25a6ee93028a30bbfbfc135e6634" title=" " alt="" coords="457,153,541,179"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="349,127,444,150,442,155,348,132"/>
+<area shape="rect" id="Node000005" href="$model__wrapper_8cpp.html#ab32de23dea6bf0a72185933abcc6d818" title="Рассчитывает номер первого канала для текущей ячейки." alt="" coords="616,55,799,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="568,65,602,65,602,70,568,70"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="673,56,666,46,670,36,684,30,707,28,736,32,748,41,744,45,734,37,707,33,685,35,673,40,671,46,677,53"/>
+<area shape="rect" id="Node000009" href="$blk223_2libfc_8cpp.html#a7efff375c8ab74709f6acc10b23a4287" title=" " alt="" coords="436,255,561,280"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="382,265,422,265,422,270,382,270"/>
+<area shape="rect" id="Node000013" href="$blk223_2libfc_8h.html#a8f73d0117aa68f53bf9d09d7661b477e" title="Количество лучей автокомпенсации (0 или 2)" alt="" coords="661,105,754,131"/>
+<area shape="poly" id="edge20_Node000008_Node000013" title=" " alt="" coords="354,252,473,222,528,204,567,188,581,176,590,164,599,152,615,140,646,126,648,131,617,144,603,156,594,168,585,180,569,192,530,209,474,227,355,257"/>
+<area shape="rect" id="Node000020" href="$blk223fc_8cpp.html#aba572646ab9c8bd2c02bc661c75f5855" title=" " alt="" coords="432,304,565,329"/>
+<area shape="poly" id="edge21_Node000008_Node000020" title=" " alt="" coords="349,277,433,298,432,303,348,283"/>
+<area shape="rect" id="Node000010" href="$blk223_2libfc_8cpp.html#acf7ac68cb0655fe69cf60e98c65d8f61" title=" " alt="" coords="626,155,789,180"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="531,252,566,233,590,211,599,200,615,189,629,182,631,187,617,194,603,204,593,214,570,237,533,257"/>
+<area shape="rect" id="Node000011" href="$blk223_2libfc_8cpp.html#aedf73c64578296f15e49f0b3f2941354" title=" " alt="" coords="639,204,775,229"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="551,252,640,230,642,235,553,257"/>
+<area shape="rect" id="Node000012" href="$blk223_2libfc_8cpp.html#ac2effc63cfa3d66da38751a916661a0d" title=" " alt="" coords="680,253,735,279"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="562,264,666,264,666,269,562,270"/>
+<area shape="poly" id="edge13_Node000009_Node000013" title=" " alt="" coords="537,252,566,233,582,210,588,187,596,163,614,140,646,124,649,128,618,144,600,166,594,188,587,212,570,237,540,257"/>
+<area shape="rect" id="Node000015" href="$blk223_2libfc_8cpp.html#a762edd2d8c7f72ecd18659ff376ea21d" title=" " alt="" coords="673,303,742,328"/>
+<area shape="poly" id="edge15_Node000009_Node000015" title=" " alt="" coords="555,277,660,302,659,307,554,283"/>
+<area shape="rect" id="Node000016" href="$blk223_2libfc_8h.html#a6a371265ce3ce26dc9f50b22eb41240b" title="Проверка на соответствие типа строба помеховому." alt="" coords="633,451,782,476"/>
+<area shape="poly" id="edge16_Node000009_Node000016" title=" " alt="" coords="554,278,570,289,584,308,591,328,594,365,597,401,604,419,618,436,625,442,621,446,614,440,599,421,592,403,589,365,586,329,579,311,566,293,551,282"/>
+<area shape="rect" id="Node000017" href="$blk978_2libfc_8cpp.html#af889ec125463699264ac5356a1ad4bc1" title="Преобразует сетевой код типа строба к коду карты памяти прошивки." alt="" coords="666,352,749,377"/>
+<area shape="poly" id="edge17_Node000009_Node000017" title=" " alt="" coords="546,278,569,289,585,302,594,314,603,326,617,337,653,352,651,357,615,342,599,330,590,317,581,305,567,294,544,282"/>
+<area shape="rect" id="Node000019" href="$blk223_2libfc_8cpp.html#ae5eda4589f2706efaf13730025e2ef73" title=" " alt="" coords="672,401,743,427"/>
+<area shape="poly" id="edge19_Node000009_Node000019" title=" " alt="" coords="552,278,570,289,588,315,594,340,600,364,607,375,618,387,637,398,659,406,658,411,635,403,614,391,603,379,595,366,589,341,583,317,566,293,549,282"/>
+<area shape="rect" id="Node000014" href="$blk223_2libfc_8h.html#a5b8eb03e622148718dd963bc58832918" title="Проверка на соответствие типа строба автокомпенсации." alt="" coords="847,105,1023,131"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="754,115,833,115,833,121,754,121"/>
+<area shape="rect" id="Node000018" href="$blk223_2libfc_8h.html#aea961f54684231b548c159708dcae31d" title="Проверка на соответствие типа строба анализу уровня шумов." alt="" coords="881,352,989,377"/>
+<area shape="poly" id="edge18_Node000017_Node000018" title=" " alt="" coords="749,362,867,362,867,367,749,367"/>
+<area shape="poly" id="edge24_Node000021_Node000016" title=" " alt="" coords="371,417,568,437,626,446,625,451,568,442,371,422"/>
+<area shape="rect" id="Node000022" href="$blk223fc_8cpp.html#a8a85adfb0e95e7444f67c03fcbaa04b5" title="Функция уточняет код режима АСП (ПК) для аппаратуры." alt="" coords="437,452,560,477"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="371,430,434,446,433,451,370,435"/>
+</map>

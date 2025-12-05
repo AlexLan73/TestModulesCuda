@@ -1,0 +1,256 @@
+.TH "ModelNS23817A620S1823::Main" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Main
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <modelMain\&.h>\fP
+.PP
+Inherits \fBModelNS23817A620S1823::Interface\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBErrors\fP { \fBok\fP, \fBlocked\fP, \fBnotFullyInitialized\fP, \fBbadMsgs\fP, \fBmasked\fP }"
+.br
+.in -1c
+
+Public Types inherited from \fBModelNS23817A620S1823::Interface\fP
+.in +1c
+.ti -1c
+.RI "enum \fBInitLevel\fP { \fBcontrolMsgsOnly\fP, \fBfullInit\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMain\fP (optional< \fBTreeConstructorFun_t\fP > \fBoptTreeCtor\fP, const std::list< std::string > &lstDataDirs=\fBDEFAULT_DIR_LIST\fP)"
+.br
+.ti -1c
+.RI "\fB~Main\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBformAllControlMessages\fP (\fBExternalMessages\fP *extMsgs, const \fBChannelsMask\fP *latticeMask, std::vector< \fBControlMessage\fP > &cntrlMsgs)"
+.br
+.ti -1c
+.RI "int32_t \fBstartProcessing\fP (\fBExternalMessages\fP *extMsgs, \fBCallbacks\fP *cbacks)"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBModelNS23817A620S1823::Interface\fP
+.in +1c
+.ti -1c
+.RI "virtual \fB~Interface\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBconvertExternalMessages\fP (const \fBExternalMessages\fP *extMsgs)"
+.br
+.ti -1c
+.RI "Result< void > \fBcheckStrobe\fP (uint32_t trprStrbIdx, int32_t trimtsStrbIdx)"
+.br
+.ti -1c
+.RI "void \fBinitUtilsAndCMsg\fP (\fBCallbacks\fP *cbacks)"
+.br
+.ti -1c
+.RI "void \fBformPolarControlMessages\fP (\fBSharedConst::StationType\fP stationType, uint32_t strbNum, \fBSharedConst::PolarizationTypes\fP \fBpolar\fP, \fBControlMsg\fP *\fBcntrlMsg\fP, std::vector< \fBControlMessage\fP > &outCntrlMsgs) const"
+.br
+.ti -1c
+.RI "bool \fBareExtMsgsValid\fP () const"
+.br
+.ti -1c
+.RI "void \fBprocessStrobes\fP (\fBExternalMessages\fP *extMsgs)"
+.br
+.ti -1c
+.RI "int32_t \fBfindTrimtsStrbIndex\fP (uint32_t trprStrbIdx)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "optional< \fBTreeConstructorFun_t\fP > \fBoptTreeCtor\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBControlMsg\fP > \fBcntrlMsg\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBCMsgModelTypes::StationConfig\fP > \fBconf\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBCMsgModelTypes::InputMessages\fP > \fBinputMsgs\fP"
+.br
+.ti -1c
+.RI "std::vector< int32_t > \fBtrimtsUsedStrobeIndexes\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс модели\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::Main::Errors\fP"
+коды ошибок/возврата для интерфейсных функций\&. Выдаются с минусом 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIok \fP\fP
+.TP
+\fB\fIlocked \fP\fP
+.TP
+\fB\fInotFullyInitialized \fP\fP
+.TP
+\fB\fIbadMsgs \fP\fP
+.TP
+\fB\fImasked \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Main::Main (optional< \fBTreeConstructorFun_t\fP > optTreeCtor, const std::list< std::string > & lstDataDirs = \fC\fBDEFAULT_DIR_LIST\fP\fP)"
+Конструктор выделяет память для УС (по умолчанию) 
+.SS "ModelNS23817A620S1823::Main::~Main ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ModelNS23817A620S1823::Main::areExtMsgsValid () const\fC [private]\fP"
+Проверка полей пришедших сетевых сообщений на граничные значения\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true если ошибок не найдено, false в противном случае 
+.RE
+.PP
+
+.SS "Result< void > ModelNS23817A620S1823::Main::checkStrobe (uint32_t trprStrbIdx, int32_t trimtsStrbIdx)\fC [private]\fP"
+Проверка полей строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrprStrbIdx\fP порядковый номер строба в сетевом сообщении (индекс в массиве) ТРПР 
+.br
+\fItrprStrbIdx\fP порядковый номер строба в сетевом сообщении (индекс в массиве) ТРИМЦ 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None если в результате проверок не найдено ошибок, в противном случае - ErrMsg с описанием ошибки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Main::convertExternalMessages (const \fBExternalMessages\fP * extMsgs)\fC [private]\fP"
+Конвертация входных параметров во внутренние структуры модели\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextMsgs\fP указатель на объект структуры входных сообщений 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Main::findTrimtsStrbIndex (uint32_t trprStrbIdx)\fC [private]\fP"
+Поиск индекса строба в ТРИМЦ с таким же идентификатором как и строб ТРПР с заданным номером\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrprStrbIdx\fP индекс строба в ТРПР 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+индекс строба в ТРИМЦ если поиск завершился удачно, -1 - если строб не был найден 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Main::formAllControlMessages (\fBExternalMessages\fP * extMsgs, const \fBChannelsMask\fP * latticeMask, std::vector< \fBControlMessage\fP > & cntrlMsgs)\fC [virtual]\fP"
+Формирование УС для всех стробов такта, поляризаций и всех ячеек Передаваемые сетевые сообщения должны просуществовать до завершения функции\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextMsgs\fP указатель на объект структуры входных сообщений 
+.br
+\fIcntrlMsgs\fP ссылка на объект управляющего сообщения 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBMain::ok\fP (0) если модель завершила расчёт УС, \fBMain::locked\fP (1) в противном случае 
+.RE
+.PP
+
+.PP
+Implements \fBModelNS23817A620S1823::Interface\fP\&.
+.SS "void ModelNS23817A620S1823::Main::formPolarControlMessages (\fBSharedConst::StationType\fP stationType, uint32_t strbNum, \fBSharedConst::PolarizationTypes\fP polar, \fBControlMsg\fP * cntrlMsg, std::vector< \fBControlMessage\fP > & outCntrlMsgs) const\fC [private]\fP"
+Формирование УС для всех 412х ячеек заданной поляризации для указанного строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstationType\fP тип станции 
+.br
+\fIstrbNum\fP порядковый номер строба в сетевом сообщении (индекс в массиве) 
+.br
+\fIpolar\fP тип поляризации 
+.br
+\fIcntrlMsg\fP указатель на объект управляющего сообщения 
+.br
+\fIoutCntrlMsgs\fP ссылка на массив для сгенерированных объектов управляющих сообщений 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Main::initUtilsAndCMsg (\fBCallbacks\fP * cbacks)\fC [private]\fP"
+Подготовка утилит для формирования УС, исходя из переданных в класс модели сетевых сообщений, а так же инициализация независящих от строба данных УС\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcbacks\fP указатель на объект структуры коллбэков для срезов 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Main::processStrobes (\fBExternalMessages\fP * extMsgs)\fC [private]\fP"
+Цикл обсчёта всех парных стробов ТРПР-ТРИМЦ\&. Для работы берутся только те стробы из ТРПР, для идентификатора которых в ТРИМЦ есть парный с таким же номером, остальные пропускаются\&. Последнее необходимо, т\&.к\&. в реальной работе задание на имитацию может отсутствовать или не совпадать с заданием на приём\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextMsgs\fP указатель на объект структуры входных сообщений 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Main::startProcessing (\fBExternalMessages\fP * extMsgs, \fBCallbacks\fP * cbacks)\fC [virtual]\fP"
+Запуск модели для расчёта одного такта работы приёмника станции\&. Передаваемые сетевые сообщения должны просуществовать как минимум до конца формирования УС\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextMsgs\fP указатель на объект структуры входных сообщений 
+.br
+\fIcbacks\fP указатель на объект структуры коллбэков для срезов 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBMain::ok\fP (0) если модель завершила расчёт, \fBMain::locked\fP (1) в противном случае 
+.RE
+.PP
+
+.PP
+Implements \fBModelNS23817A620S1823::Interface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::unique_ptr<\fBControlMsg\fP> ModelNS23817A620S1823::Main::cntrlMsg\fC [private]\fP"
+указатель на объект управляющего сообщения 
+.SS "std::shared_ptr<\fBCMsgModelTypes::StationConfig\fP> ModelNS23817A620S1823::Main::conf\fC [private]\fP"
+указатель на объект утилит 
+.SS "std::unique_ptr<\fBCMsgModelTypes::InputMessages\fP> ModelNS23817A620S1823::Main::inputMsgs\fC [private]\fP"
+указатель на объект входных сообщений 
+.SS "optional<\fBTreeConstructorFun_t\fP> ModelNS23817A620S1823::Main::optTreeCtor\fC [private]\fP"
+
+.SS "std::vector<int32_t> ModelNS23817A620S1823::Main::trimtsUsedStrobeIndexes\fC [private]\fP"
+массив индексов использованных стробов ТРИМЦ, т\&.е\&. тех, что уже поучаствовали в расчётах 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

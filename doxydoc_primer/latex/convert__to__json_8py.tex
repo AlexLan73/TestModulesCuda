@@ -1,0 +1,29 @@
+\doxysection{src/convert\+\_\+to\+\_\+json.py File Reference}
+\hypertarget{convert__to__json_8py}{}\label{convert__to__json_8py}\index{src/convert\_to\_json.py@{src/convert\_to\_json.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceconvert__to__json}{convert\+\_\+to\+\_\+json}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553}{convert\+\_\+to\+\_\+json.\+convert\+\_\+format}} (p)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_aaa876e2eefef86ed8396b209c054fbad}{convert\+\_\+to\+\_\+json.\+re\+\_\+int}} = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(\texorpdfstring{$\vert$}{|}-\/)\mbox{[}0-\/9\mbox{]}+\$"{})
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a10337a51604d52829dc773c1432e51b9}{convert\+\_\+to\+\_\+json.\+re\+\_\+float}} = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(\texorpdfstring{$\vert$}{|}-\/)\mbox{[}0-\/9\mbox{]}+.\mbox{[}0-\/9\mbox{]}\texorpdfstring{$\ast$}{*}\$"{})
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_aff17435cf3cc85f09fa5133bd16af1c3}{convert\+\_\+to\+\_\+json.\+re\+\_\+bool}} = re.\+compile("{}\texorpdfstring{$^\wedge$}{\string^}(true\texorpdfstring{$\vert$}{|}false)\$"{})
+\item 
+int \mbox{\hyperlink{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d}{convert\+\_\+to\+\_\+json.\+inp}} = file(sys.\+argv\mbox{[}1\mbox{]}) if len(sys.\+argv) $>$ 1 else sys.\+stdin
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a10dcb0eadf7cd708fea92ef6156aa37d}{convert\+\_\+to\+\_\+json.\+j}} = json.\+load(\mbox{\hyperlink{namespaceconvert__to__json_a6608689ecb9fa8f8b0835ce1d18e137d}{inp}}, object\+\_\+pairs\+\_\+hook = \mbox{\hyperlink{namespaceconvert__to__json_a7fdbe6a3b39a86641645422b6ad7a553}{convert\+\_\+format}})
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_adcb696a4a666c252daadfe84c4af2b48}{convert\+\_\+to\+\_\+json.\+stdout}}
+\item 
+\mbox{\hyperlink{namespaceconvert__to__json_a8b88973f5ec7087035fbe1edcd4cd59c}{convert\+\_\+to\+\_\+json.\+indent}}
+\end{DoxyCompactItemize}

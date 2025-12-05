@@ -1,0 +1,491 @@
+\doxysection{Gui\+App Class Reference}
+\hypertarget{classGuiApp}{}\label{classGuiApp}\index{GuiApp@{GuiApp}}
+
+
+{\ttfamily \#include $<$guiapp.\+h$>$}
+
+
+
+Inheritance diagram for Gui\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classGuiApp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gui\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGuiApp_a062890a3aa9f92c8035eb0b099158586}{on\+Messages\+Are\+Ready}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}ippa\+UVList, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_a55d720af2b77fc5c10ec794520438280}{on\+Start\+DPIteration}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, \mbox{\hyperlink{structDPParams}{DPParams}} \texorpdfstring{$\ast$}{*}dp\+Params, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_a6af342ec5e66530049aefdf56b314e7c}{on\+Model\+Work\+Complete}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a64c9d3066aee868f783b73c26baa156e}{start\+Model\+Pthread\+Termination}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a55e66d6454e5f886e49e52efee851180}{on\+Cell412\+Changed}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a6b2e10e3e100e6e1deda1c1003936fe5}{on\+Progress\+Bar\+Max\+Changed}} (unsigned max\+Value)
+\item 
+void \mbox{\hyperlink{classGuiApp_ab8d436c61ec667a5f27b5285ebd146a5}{stop\+Calculations}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGuiApp_a6ffba79bd89380513d5c52f29fcfda47}{messages\+Are\+Ready}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}ippa\+UVList, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_a9ba81b176c6bed576c8c94151047a745}{start\+DPIteration}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, \mbox{\hyperlink{structDPParams}{DPParams}} \texorpdfstring{$\ast$}{*}dp\+Params, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_a287895d5b8e12ca52f8b2ca0d9fadd03}{model\+Work\+Complete}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a084d9fe19dcca089a3a550164766bff7}{cell412\+Changed}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a07942cf315acc561814088b2531af819}{progress\+Bar\+Max\+Changed}} (unsigned max\+Value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGuiApp_a322a458f3ebafa24f3de9269875df748}{\texorpdfstring{$\sim$}{\string~}\+Gui\+App}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_add6658c5bba030da1f1f3ce23f6e1cb8}{send\+Messages\+Are\+Ready}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}ippa\+UVList, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_ad7acd13508595896376b1a900440cf2a}{send\+Start\+DPIteration}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, \mbox{\hyperlink{structDPParams}{DPParams}} \texorpdfstring{$\ast$}{*}dp\+Params, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_ac9b667f1a52a84201fd58c5a3b0fc6e5}{send\+Model\+Work\+Complete}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a8bf288af754b9ec9cb5f7e3a49286658}{add\+Model\+Ptid}} (pthread\+\_\+t ptid)
+\item 
+void \mbox{\hyperlink{classGuiApp_a16119c8499440459efc5052cc791940c}{get\+Model\+Input\+Messages}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+::\+External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs)
+\item 
+bool \mbox{\hyperlink{classGuiApp_a29fe02958e6cb1aa41a0eaeda9ddbab6}{send\+Cell412\+Changed}} ()
+\item 
+void \mbox{\hyperlink{classGuiApp_a8c1ae7b83d6eafd1d1f81c201748850d}{send\+Progress\+Bar\+Max\+Changed}} (uint32\+\_\+t max\+Value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classGuiApp}{Gui\+App}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGuiApp_acca9d7b7920c5f5e1bb72c4547bba72f}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGuiApp_a8e6846775b35025894e10d23b9d82af1}{copy\+Messages}} (\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}tact\+Info, \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}, \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}, QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}ippa\+UVList, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}, \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}})
+\item 
+void \mbox{\hyperlink{classGuiApp_a162b96488d0403eb849356bbdd567ba2}{fill\+Ippa\+Msg}} (QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}ippa\+UVList)
+\item 
+\mbox{\hyperlink{classGuiApp_a2968b6b2d8c63ec05cccc86e924eb0e7}{Gui\+App}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainWindow}{Main\+Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGuiApp_a8c2b965901f896dae6ba975314415574}{main\+Win}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr}{Model\+::\+Trpr}} \mbox{\hyperlink{classGuiApp_abf197152d2c27f38d053b74653a6fd42}{trpr}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Ippa}{Model\+::\+Ippa}} \mbox{\hyperlink{classGuiApp_abedd64ea51f31e0e69ea0338f34e8bc9}{ippa}}
+\item 
+Trimts\+Msg \mbox{\hyperlink{classGuiApp_a76d43a8217aa85f91ca7d2b4e9e444b9}{trimts}}
+\item 
+\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}}
+\item 
+\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{station\+Params}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{ch\+Mask}}
+\item 
+pthread\+\_\+t \mbox{\hyperlink{classGuiApp_a66b57e51ecf21d196623a6241eb08bc2}{model\+Ptid}}
+\item 
+QTime \mbox{\hyperlink{classGuiApp_a41943ff42efd752acbcf14914cb8012f}{work\+Time}}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{classGuiApp_afe585beeec57bfa495d1fce99f759d12}{stop\+Mutex}}
+\item 
+bool \mbox{\hyperlink{classGuiApp_a197118609642272722aef7cd593d25c8}{stop\+Calculations\+Flag}}
+\item 
+QShortcut \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGuiApp_ac5cba51c38026dc656d3803889f3b610}{shortcut}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGuiApp_a322a458f3ebafa24f3de9269875df748}\label{classGuiApp_a322a458f3ebafa24f3de9269875df748} 
+\index{GuiApp@{GuiApp}!````~GuiApp@{\texorpdfstring{$\sim$}{\string~}GuiApp}}
+\index{````~GuiApp@{\texorpdfstring{$\sim$}{\string~}GuiApp}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GuiApp()}{\string~GuiApp()}}
+{\footnotesize\ttfamily Gui\+App\+::\texorpdfstring{$\sim$}{\string~}\+Gui\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classGuiApp_a2968b6b2d8c63ec05cccc86e924eb0e7}\label{classGuiApp_a2968b6b2d8c63ec05cccc86e924eb0e7} 
+\index{GuiApp@{GuiApp}!GuiApp@{GuiApp}}
+\index{GuiApp@{GuiApp}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{GuiApp()}{GuiApp()}}
+{\footnotesize\ttfamily Gui\+App\+::\+Gui\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a2968b6b2d8c63ec05cccc86e924eb0e7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGuiApp_a8bf288af754b9ec9cb5f7e3a49286658}\label{classGuiApp_a8bf288af754b9ec9cb5f7e3a49286658} 
+\index{GuiApp@{GuiApp}!addModelPtid@{addModelPtid}}
+\index{addModelPtid@{addModelPtid}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{addModelPtid()}{addModelPtid()}}
+{\footnotesize\ttfamily void Gui\+App\+::add\+Model\+Ptid (\begin{DoxyParamCaption}\item[{pthread\+\_\+t}]{ptid }\end{DoxyParamCaption})}
+
+\Hypertarget{classGuiApp_a084d9fe19dcca089a3a550164766bff7}\label{classGuiApp_a084d9fe19dcca089a3a550164766bff7} 
+\index{GuiApp@{GuiApp}!cell412Changed@{cell412Changed}}
+\index{cell412Changed@{cell412Changed}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{cell412Changed}{cell412Changed}}
+{\footnotesize\ttfamily void Gui\+App\+::cell412\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classGuiApp_a8e6846775b35025894e10d23b9d82af1}\label{classGuiApp_a8e6846775b35025894e10d23b9d82af1} 
+\index{GuiApp@{GuiApp}!copyMessages@{copyMessages}}
+\index{copyMessages@{copyMessages}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{copyMessages()}{copyMessages()}}
+{\footnotesize\ttfamily void Gui\+App\+::copy\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}}]{ippa\+UVList,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+копирует сформированные сетевые сообщения из внутренних буферов в те, которые будут отданы в модель. Лишние стробы и объекты выкидываются Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a8e6846775b35025894e10d23b9d82af1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a162b96488d0403eb849356bbdd567ba2}\label{classGuiApp_a162b96488d0403eb849356bbdd567ba2} 
+\index{GuiApp@{GuiApp}!fillIppaMsg@{fillIppaMsg}}
+\index{fillIppaMsg@{fillIppaMsg}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{fillIppaMsg()}{fillIppaMsg()}}
+{\footnotesize\ttfamily void Gui\+App\+::fill\+Ippa\+Msg (\begin{DoxyParamCaption}\item[{QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}}]{ippa\+UVList }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a162b96488d0403eb849356bbdd567ba2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a16119c8499440459efc5052cc791940c}\label{classGuiApp_a16119c8499440459efc5052cc791940c} 
+\index{GuiApp@{GuiApp}!getModelInputMessages@{getModelInputMessages}}
+\index{getModelInputMessages@{getModelInputMessages}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{getModelInputMessages()}{getModelInputMessages()}}
+{\footnotesize\ttfamily void Gui\+App\+::get\+Model\+Input\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+::\+External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a16119c8499440459efc5052cc791940c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_acca9d7b7920c5f5e1bb72c4547bba72f}\label{classGuiApp_acca9d7b7920c5f5e1bb72c4547bba72f} 
+\index{GuiApp@{GuiApp}!instance@{instance}}
+\index{instance@{instance}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGuiApp}{Gui\+App}} \texorpdfstring{$\ast$}{*} Gui\+App\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_acca9d7b7920c5f5e1bb72c4547bba72f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a6ffba79bd89380513d5c52f29fcfda47}\label{classGuiApp_a6ffba79bd89380513d5c52f29fcfda47} 
+\index{GuiApp@{GuiApp}!messagesAreReady@{messagesAreReady}}
+\index{messagesAreReady@{messagesAreReady}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{messagesAreReady}{messagesAreReady}}
+{\footnotesize\ttfamily void Gui\+App\+::messages\+Are\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}}]{ippa\+UVList,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classGuiApp_a287895d5b8e12ca52f8b2ca0d9fadd03}\label{classGuiApp_a287895d5b8e12ca52f8b2ca0d9fadd03} 
+\index{GuiApp@{GuiApp}!modelWorkComplete@{modelWorkComplete}}
+\index{modelWorkComplete@{modelWorkComplete}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{modelWorkComplete}{modelWorkComplete}}
+{\footnotesize\ttfamily void Gui\+App\+::model\+Work\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classGuiApp_a55e66d6454e5f886e49e52efee851180}\label{classGuiApp_a55e66d6454e5f886e49e52efee851180} 
+\index{GuiApp@{GuiApp}!onCell412Changed@{onCell412Changed}}
+\index{onCell412Changed@{onCell412Changed}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{onCell412Changed}{onCell412Changed}}
+{\footnotesize\ttfamily void Gui\+App\+::on\+Cell412\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a55e66d6454e5f886e49e52efee851180_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a062890a3aa9f92c8035eb0b099158586}\label{classGuiApp_a062890a3aa9f92c8035eb0b099158586} 
+\index{GuiApp@{GuiApp}!onMessagesAreReady@{onMessagesAreReady}}
+\index{onMessagesAreReady@{onMessagesAreReady}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{onMessagesAreReady}{onMessagesAreReady}}
+{\footnotesize\ttfamily void Gui\+App\+::on\+Messages\+Are\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}}]{ippa\+UVList,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a062890a3aa9f92c8035eb0b099158586_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a6af342ec5e66530049aefdf56b314e7c}\label{classGuiApp_a6af342ec5e66530049aefdf56b314e7c} 
+\index{GuiApp@{GuiApp}!onModelWorkComplete@{onModelWorkComplete}}
+\index{onModelWorkComplete@{onModelWorkComplete}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{onModelWorkComplete}{onModelWorkComplete}}
+{\footnotesize\ttfamily void Gui\+App\+::on\+Model\+Work\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a6af342ec5e66530049aefdf56b314e7c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a6b2e10e3e100e6e1deda1c1003936fe5}\label{classGuiApp_a6b2e10e3e100e6e1deda1c1003936fe5} 
+\index{GuiApp@{GuiApp}!onProgressBarMaxChanged@{onProgressBarMaxChanged}}
+\index{onProgressBarMaxChanged@{onProgressBarMaxChanged}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{onProgressBarMaxChanged}{onProgressBarMaxChanged}}
+{\footnotesize\ttfamily void Gui\+App\+::on\+Progress\+Bar\+Max\+Changed (\begin{DoxyParamCaption}\item[{unsigned}]{max\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a6b2e10e3e100e6e1deda1c1003936fe5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a55d720af2b77fc5c10ec794520438280}\label{classGuiApp_a55d720af2b77fc5c10ec794520438280} 
+\index{GuiApp@{GuiApp}!onStartDPIteration@{onStartDPIteration}}
+\index{onStartDPIteration@{onStartDPIteration}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{onStartDPIteration}{onStartDPIteration}}
+{\footnotesize\ttfamily void Gui\+App\+::on\+Start\+DPIteration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{\mbox{\hyperlink{structDPParams}{DPParams}} \texorpdfstring{$\ast$}{*}}]{dp\+Params,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a55d720af2b77fc5c10ec794520438280_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a07942cf315acc561814088b2531af819}\label{classGuiApp_a07942cf315acc561814088b2531af819} 
+\index{GuiApp@{GuiApp}!progressBarMaxChanged@{progressBarMaxChanged}}
+\index{progressBarMaxChanged@{progressBarMaxChanged}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{progressBarMaxChanged}{progressBarMaxChanged}}
+{\footnotesize\ttfamily void Gui\+App\+::progress\+Bar\+Max\+Changed (\begin{DoxyParamCaption}\item[{unsigned}]{max\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classGuiApp_a29fe02958e6cb1aa41a0eaeda9ddbab6}\label{classGuiApp_a29fe02958e6cb1aa41a0eaeda9ddbab6} 
+\index{GuiApp@{GuiApp}!sendCell412Changed@{sendCell412Changed}}
+\index{sendCell412Changed@{sendCell412Changed}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{sendCell412Changed()}{sendCell412Changed()}}
+{\footnotesize\ttfamily bool Gui\+App\+::send\+Cell412\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a29fe02958e6cb1aa41a0eaeda9ddbab6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_add6658c5bba030da1f1f3ce23f6e1cb8}\label{classGuiApp_add6658c5bba030da1f1f3ce23f6e1cb8} 
+\index{GuiApp@{GuiApp}!sendMessagesAreReady@{sendMessagesAreReady}}
+\index{sendMessagesAreReady@{sendMessagesAreReady}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{sendMessagesAreReady()}{sendMessagesAreReady()}}
+{\footnotesize\ttfamily void Gui\+App\+::send\+Messages\+Are\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{QList$<$ \mbox{\hyperlink{structIppaUV}{Ippa\+UV}} $>$ \texorpdfstring{$\ast$}{*}}]{ippa\+UVList,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_add6658c5bba030da1f1f3ce23f6e1cb8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_ac9b667f1a52a84201fd58c5a3b0fc6e5}\label{classGuiApp_ac9b667f1a52a84201fd58c5a3b0fc6e5} 
+\index{GuiApp@{GuiApp}!sendModelWorkComplete@{sendModelWorkComplete}}
+\index{sendModelWorkComplete@{sendModelWorkComplete}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{sendModelWorkComplete()}{sendModelWorkComplete()}}
+{\footnotesize\ttfamily void Gui\+App\+::send\+Model\+Work\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_ac9b667f1a52a84201fd58c5a3b0fc6e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a8c1ae7b83d6eafd1d1f81c201748850d}\label{classGuiApp_a8c1ae7b83d6eafd1d1f81c201748850d} 
+\index{GuiApp@{GuiApp}!sendProgressBarMaxChanged@{sendProgressBarMaxChanged}}
+\index{sendProgressBarMaxChanged@{sendProgressBarMaxChanged}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{sendProgressBarMaxChanged()}{sendProgressBarMaxChanged()}}
+{\footnotesize\ttfamily void Gui\+App\+::send\+Progress\+Bar\+Max\+Changed (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+Value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a8c1ae7b83d6eafd1d1f81c201748850d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_ad7acd13508595896376b1a900440cf2a}\label{classGuiApp_ad7acd13508595896376b1a900440cf2a} 
+\index{GuiApp@{GuiApp}!sendStartDPIteration@{sendStartDPIteration}}
+\index{sendStartDPIteration@{sendStartDPIteration}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{sendStartDPIteration()}{sendStartDPIteration()}}
+{\footnotesize\ttfamily void Gui\+App\+::send\+Start\+DPIteration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{\mbox{\hyperlink{structDPParams}{DPParams}} \texorpdfstring{$\ast$}{*}}]{dp\+Params,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_ad7acd13508595896376b1a900440cf2a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_a9ba81b176c6bed576c8c94151047a745}\label{classGuiApp_a9ba81b176c6bed576c8c94151047a745} 
+\index{GuiApp@{GuiApp}!startDPIteration@{startDPIteration}}
+\index{startDPIteration@{startDPIteration}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{startDPIteration}{startDPIteration}}
+{\footnotesize\ttfamily void Gui\+App\+::start\+DPIteration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTactInfo}{Tact\+Info}} \texorpdfstring{$\ast$}{*}}]{tact\+Info,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{station\+Params,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{\mbox{\hyperlink{structDPParams}{DPParams}} \texorpdfstring{$\ast$}{*}}]{dp\+Params,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{afr,  }\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{klb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classGuiApp_a64c9d3066aee868f783b73c26baa156e}\label{classGuiApp_a64c9d3066aee868f783b73c26baa156e} 
+\index{GuiApp@{GuiApp}!startModelPthreadTermination@{startModelPthreadTermination}}
+\index{startModelPthreadTermination@{startModelPthreadTermination}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{startModelPthreadTermination}{startModelPthreadTermination}}
+{\footnotesize\ttfamily void Gui\+App\+::start\+Model\+Pthread\+Termination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_a64c9d3066aee868f783b73c26baa156e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGuiApp_ab8d436c61ec667a5f27b5285ebd146a5}\label{classGuiApp_ab8d436c61ec667a5f27b5285ebd146a5} 
+\index{GuiApp@{GuiApp}!stopCalculations@{stopCalculations}}
+\index{stopCalculations@{stopCalculations}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{stopCalculations}{stopCalculations}}
+{\footnotesize\ttfamily void Gui\+App\+::stop\+Calculations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGuiApp_ab8d436c61ec667a5f27b5285ebd146a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}\label{classGuiApp_a397554116e60a1b3f5ac027d6d050f91} 
+\index{GuiApp@{GuiApp}!afr@{afr}}
+\index{afr@{afr}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{afr}{afr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} Gui\+App\+::afr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}\label{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2} 
+\index{GuiApp@{GuiApp}!chMask@{chMask}}
+\index{chMask@{chMask}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{chMask}{chMask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+::\+Channels\+Mask}} Gui\+App\+::ch\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_abedd64ea51f31e0e69ea0338f34e8bc9}\label{classGuiApp_abedd64ea51f31e0e69ea0338f34e8bc9} 
+\index{GuiApp@{GuiApp}!ippa@{ippa}}
+\index{ippa@{ippa}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{ippa}{ippa}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Ippa}{Model\+::\+Ippa}} Gui\+App\+::ippa\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}\label{classGuiApp_afec4229b4deb57cf8d99189a35bd285e} 
+\index{GuiApp@{GuiApp}!klb@{klb}}
+\index{klb@{klb}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{klb}{klb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} Gui\+App\+::klb\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a8c2b965901f896dae6ba975314415574}\label{classGuiApp_a8c2b965901f896dae6ba975314415574} 
+\index{GuiApp@{GuiApp}!mainWin@{mainWin}}
+\index{mainWin@{mainWin}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{mainWin}{mainWin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMainWindow}{Main\+Window}}\texorpdfstring{$\ast$}{*} Gui\+App\+::main\+Win\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a66b57e51ecf21d196623a6241eb08bc2}\label{classGuiApp_a66b57e51ecf21d196623a6241eb08bc2} 
+\index{GuiApp@{GuiApp}!modelPtid@{modelPtid}}
+\index{modelPtid@{modelPtid}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{modelPtid}{modelPtid}}
+{\footnotesize\ttfamily pthread\+\_\+t Gui\+App\+::model\+Ptid\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_ac5cba51c38026dc656d3803889f3b610}\label{classGuiApp_ac5cba51c38026dc656d3803889f3b610} 
+\index{GuiApp@{GuiApp}!shortcut@{shortcut}}
+\index{shortcut@{shortcut}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{shortcut}{shortcut}}
+{\footnotesize\ttfamily QShortcut\texorpdfstring{$\ast$}{*} Gui\+App\+::shortcut\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a03973a7a8333d194e150604c839953fa}\label{classGuiApp_a03973a7a8333d194e150604c839953fa} 
+\index{GuiApp@{GuiApp}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} Gui\+App\+::station\+Params\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a197118609642272722aef7cd593d25c8}\label{classGuiApp_a197118609642272722aef7cd593d25c8} 
+\index{GuiApp@{GuiApp}!stopCalculationsFlag@{stopCalculationsFlag}}
+\index{stopCalculationsFlag@{stopCalculationsFlag}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{stopCalculationsFlag}{stopCalculationsFlag}}
+{\footnotesize\ttfamily bool Gui\+App\+::stop\+Calculations\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+флаг преждевременной остановки расчётов true -\/ остановить расчёты false -\/ не останавливать \Hypertarget{classGuiApp_afe585beeec57bfa495d1fce99f759d12}\label{classGuiApp_afe585beeec57bfa495d1fce99f759d12} 
+\index{GuiApp@{GuiApp}!stopMutex@{stopMutex}}
+\index{stopMutex@{stopMutex}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{stopMutex}{stopMutex}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t Gui\+App\+::stop\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a76d43a8217aa85f91ca7d2b4e9e444b9}\label{classGuiApp_a76d43a8217aa85f91ca7d2b4e9e444b9} 
+\index{GuiApp@{GuiApp}!trimts@{trimts}}
+\index{trimts@{trimts}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{trimts}{trimts}}
+{\footnotesize\ttfamily Trimts\+Msg Gui\+App\+::trimts\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_abf197152d2c27f38d053b74653a6fd42}\label{classGuiApp_abf197152d2c27f38d053b74653a6fd42} 
+\index{GuiApp@{GuiApp}!trpr@{trpr}}
+\index{trpr@{trpr}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{trpr}{trpr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr}{Model\+::\+Trpr}} Gui\+App\+::trpr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classGuiApp_a41943ff42efd752acbcf14914cb8012f}\label{classGuiApp_a41943ff42efd752acbcf14914cb8012f} 
+\index{GuiApp@{GuiApp}!workTime@{workTime}}
+\index{workTime@{workTime}!GuiApp@{GuiApp}}
+\doxysubsubsection{\texorpdfstring{workTime}{workTime}}
+{\footnotesize\ttfamily QTime Gui\+App\+::work\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{guiapp_8h}{guiapp.\+h}}\item 
+src/gui/\mbox{\hyperlink{guiapp_8cpp}{guiapp.\+cpp}}\end{DoxyCompactItemize}

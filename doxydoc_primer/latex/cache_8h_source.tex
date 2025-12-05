@@ -1,0 +1,31 @@
+\doxysection{cache.\+h}
+\hypertarget{cache_8h_source}{}\label{cache_8h_source}\index{src/jsonrpc/cache.h@{src/jsonrpc/cache.h}}
+\mbox{\hyperlink{cache_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{RPC_8h}{model/RPC.h}}>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <picojson.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <libutils/serdes.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ std::unordered\_map<\mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}},}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<libutils::picojson\_object>>\ \mbox{\hyperlink{cache_8h_a7759016100710da0d85e468dd942f5b2}{Cache\_t}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCache}{Cache}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{cache_8h_a7759016100710da0d85e468dd942f5b2}{Cache\_t}}\ *\mbox{\hyperlink{classCache_a406fc6023aa8d2aaa2203d1baae5eae4}{data}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ uint\ \mbox{\hyperlink{classCache_a5ba5751736a44a6d4b7ed6e376903d4b}{max\_size}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classCache}{Cache}}(uint\ capcty);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classCache_af8b171a6c49d88d3ba179477484b9d48}{\string~Cache}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCache_afd7f7dce7f449d694cc4b6c8dc360033}{put}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelOutput}{ModelOutput}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ std::shared\_ptr<libutils::picojson\_object>\ \mbox{\hyperlink{classCache_a488bd0c1e87c6e23b5b6a0c9fa6cc46b}{get}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ uint\ \mbox{\hyperlink{classCache_a6045f5d0056b3aac2693a2df0d8dbe53}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ uint\ \mbox{\hyperlink{classCache_a1e34d8d53040ba97877d479ab0ccbae5}{capacity}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classCache_a5ba5751736a44a6d4b7ed6e376903d4b}{max\_size}};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

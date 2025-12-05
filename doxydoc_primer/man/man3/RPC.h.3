@@ -1,0 +1,69 @@
+.TH "include/model/RPC.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/model/RPC.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <model/minDefs\&.h>\fP
+.br
+\fC#include <libutils/sumtype\&.h>\fP
+.br
+\fC#include <libutils/optional\&.h>\fP
+.br
+\fC#include <libvork/e2ippa\&.h>\fP
+.br
+\fC#include <libvork/e2mask\&.h>\fP
+.br
+\fC#include <libvork/e2trkp\&.h>\fP
+.br
+\fC#include <libvork/e2trpr\&.h>\fP
+.br
+\fC#include <libvork/e2trims\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSetOutputDirParams\fP"
+.br
+.ti -1c
+.RI "struct \fBModelOutput\fP"
+.br
+.RI "Выдача, сгенерированная моделью по всем стробам одного такта\&. "
+.ti -1c
+.RI "struct \fBModelInputBundle\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMODEL_PORT_DEFAULT\fP   3777"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef SumType< \fBSetOutputDirParams\fP, \fBModelInputBundle\fP > \fBModelParams\fP"
+.br
+.ti -1c
+.RI "typedef SumType< \fBModelOutput\fP, NoneType > \fBModelResult\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MODEL_PORT_DEFAULT   3777"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef SumType<\fBSetOutputDirParams\fP, \fBModelInputBundle\fP> \fBModelParams\fP"
+
+.SS "typedef SumType<\fBModelOutput\fP, NoneType> \fBModelResult\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

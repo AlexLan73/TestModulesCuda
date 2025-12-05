@@ -1,0 +1,317 @@
+\doxysection{c223\+\_\+target\+\_\+strobe Struct Reference}
+\hypertarget{structc223__target__strobe}{}\label{structc223__target__strobe}\index{c223\_target\_strobe@{c223\_target\_strobe}}
+
+
+Целевой строб ФУ 223-\/й ячейки.  
+
+
+
+
+{\ttfamily \#include $<$223fc.\+h$>$}
+
+
+
+Collaboration diagram for c223\+\_\+target\+\_\+strobe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{structc223__target__strobe__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structc223__target__strobe_a593720b107425e54a9dd9c6fa59c0a6e}{c223\+\_\+target\+\_\+strobe}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a7d74b870e5ad79b80a9583f08e49636c}{strobe\+\_\+begin}}
+\begin{DoxyCompactList}\small\item\em Начало строба в дискретах. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a9838abdaef29152c76b28683576ef734}{strobe\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Длина строба в дискретах. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a51562a13d87dd50bd3e702b8a8f5dc97}{n\+\_\+dec}}
+\begin{DoxyCompactList}\small\item\em Коэффициент прореживания в ПЧВО. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a9655faf3ef473e0773a515ead02a44dd}{norm}}
+\begin{DoxyCompactList}\small\item\em Коэффициент нормировки. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a4310ccf35e04ae366efdbce41d548c56}{\+\_\+reserved0}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a8050ed06c06f5cd110c042fdeda24a94}{reg}}
+\begin{DoxyCompactList}\small\item\em Признак регистрации сигнала по всем срезам тракта обработки. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_aa65a7319f4e85819534a73a04c4c08e7}{k}}
+\begin{DoxyCompactList}\small\item\em Коэффициент коммутации данных АЦП/Имитатор на вход гетеродина. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_aa5c34f4b7f2c5e7167eaf55438362f89}{n\+\_\+shift}}
+\begin{DoxyCompactList}\small\item\em Число сдвигов вправо для нормировки калибровок. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a836e33efca7930ed2c464b73893d5fba}{asp\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em Подрежим обработки строба. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a86f1a84c14d32f36437c162a1cb0fad4}{tippc\+\_\+nl}}
+\begin{DoxyCompactList}\small\item\em Количество лучей. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a5e65b38d0ca84ce206bf08a7cc13fb3e}{tips\+\_\+n}}
+\begin{DoxyCompactList}\small\item\em Тип строба \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_adfd21f9611a136695ce206f1d833fc4d}{nfft}}
+\begin{DoxyCompactList}\small\item\em Степень размерности БПФ. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a2526890495ccac853885332492072f2e}{add\+\_\+nl}}
+\begin{DoxyCompactList}\small\item\em Количество лучей автокомпенсации. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_af1dac30a0263a9d457f706397bf11e80}{\+\_\+reserved1}} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a83cec29a1d4cbb605c4857e25857af31}{delay}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Компенсация задержки в каналах ПЧВО в тактах для каждого канала. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_ab32e5be85631832851617f3d5320424a}{cfd\+\_\+dds\+\_\+step}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Шаг DDS для ЦФД для каждого канала. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a789eb93a2633dc7c9ad758c2f48825a1}{cfd\+\_\+dds\+\_\+phase}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Фаза DDS для ЦФД для каждого канала. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a3ea7f6ead542e90bf897c41c1ba53517}{cfd\+\_\+dds\+\_\+deviation}}
+\begin{DoxyCompactList}\small\item\em Девиация для ЦФД. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_adf14670909f2627c7ec64f1a97491b36}{\+\_\+reserved2}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{structcomplex32}{complex32}} \mbox{\hyperlink{structc223__target__strobe_ac3562518f56c14dc88f443d966ae2591}{w\+\_\+po}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gaf8ed06aa2f10022bc52c8a06b2a2a419}{MAX\+\_\+\+NR\+\_\+\+BEAMS}}\mbox{]}\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Диаграммообразующие векторы 1-\/й ступени фазирования. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcomplex32}{complex32}} \mbox{\hyperlink{structc223__target__strobe_a36651fb0d70ce3016ec2407912e23856}{w\+\_\+clb}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Калибровочные векторы. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcomplex32}{complex32}} \mbox{\hyperlink{structc223__target__strobe_a9b5325830a454b47e7e9c6f9ca2c41ab}{w\+\_\+ob}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_ga00688ff65110d31b64f74f0f54736d09}{NR\+\_\+\+VECTORS}}\mbox{]}\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Обучающие векторы. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__target__strobe_a35031ea9988093c60fd695d32ff12441}{\+\_\+reserved12}} \mbox{[}24\mbox{]}
+\item 
+struct cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header \mbox{\hyperlink{structc223__target__strobe_ac634d7643749858ed7410a075f768860}{wirehd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Целевой строб ФУ 223-\/й ячейки. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structc223__target__strobe_a593720b107425e54a9dd9c6fa59c0a6e}\label{structc223__target__strobe_a593720b107425e54a9dd9c6fa59c0a6e} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!c223\_target\_strobe@{c223\_target\_strobe}}
+\index{c223\_target\_strobe@{c223\_target\_strobe}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{c223\_target\_strobe()}{c223\_target\_strobe()}}
+{\footnotesize\ttfamily c223\+\_\+target\+\_\+strobe\+::c223\+\_\+target\+\_\+strobe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structc223__target__strobe_a4310ccf35e04ae366efdbce41d548c56}\label{structc223__target__strobe_a4310ccf35e04ae366efdbce41d548c56} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!\_reserved0@{\_reserved0}}
+\index{\_reserved0@{\_reserved0}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{\_reserved0}{\_reserved0}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::\+\_\+reserved0}
+
+\Hypertarget{structc223__target__strobe_af1dac30a0263a9d457f706397bf11e80}\label{structc223__target__strobe_af1dac30a0263a9d457f706397bf11e80} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!\_reserved1@{\_reserved1}}
+\index{\_reserved1@{\_reserved1}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{\_reserved1}{\_reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::\+\_\+reserved1\mbox{[}2\mbox{]}}
+
+\Hypertarget{structc223__target__strobe_a35031ea9988093c60fd695d32ff12441}\label{structc223__target__strobe_a35031ea9988093c60fd695d32ff12441} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!\_reserved12@{\_reserved12}}
+\index{\_reserved12@{\_reserved12}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{\_reserved12}{\_reserved12}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::\+\_\+reserved12\mbox{[}24\mbox{]}}
+
+\Hypertarget{structc223__target__strobe_adf14670909f2627c7ec64f1a97491b36}\label{structc223__target__strobe_adf14670909f2627c7ec64f1a97491b36} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!\_reserved2@{\_reserved2}}
+\index{\_reserved2@{\_reserved2}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{\_reserved2}{\_reserved2}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::\+\_\+reserved2\mbox{[}3\mbox{]}}
+
+\Hypertarget{structc223__target__strobe_a2526890495ccac853885332492072f2e}\label{structc223__target__strobe_a2526890495ccac853885332492072f2e} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!add\_nl@{add\_nl}}
+\index{add\_nl@{add\_nl}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{add\_nl}{add\_nl}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::add\+\_\+nl}
+
+
+
+Количество лучей автокомпенсации. 
+
+\Hypertarget{structc223__target__strobe_a836e33efca7930ed2c464b73893d5fba}\label{structc223__target__strobe_a836e33efca7930ed2c464b73893d5fba} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!asp\_mode@{asp\_mode}}
+\index{asp\_mode@{asp\_mode}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{asp\_mode}{asp\_mode}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::asp\+\_\+mode}
+
+
+
+Подрежим обработки строба. 
+
+\Hypertarget{structc223__target__strobe_a3ea7f6ead542e90bf897c41c1ba53517}\label{structc223__target__strobe_a3ea7f6ead542e90bf897c41c1ba53517} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!cfd\_dds\_deviation@{cfd\_dds\_deviation}}
+\index{cfd\_dds\_deviation@{cfd\_dds\_deviation}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{cfd\_dds\_deviation}{cfd\_dds\_deviation}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::cfd\+\_\+dds\+\_\+deviation}
+
+
+
+Девиация для ЦФД. 
+
+\Hypertarget{structc223__target__strobe_a789eb93a2633dc7c9ad758c2f48825a1}\label{structc223__target__strobe_a789eb93a2633dc7c9ad758c2f48825a1} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!cfd\_dds\_phase@{cfd\_dds\_phase}}
+\index{cfd\_dds\_phase@{cfd\_dds\_phase}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{cfd\_dds\_phase}{cfd\_dds\_phase}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::cfd\+\_\+dds\+\_\+phase\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Фаза DDS для ЦФД для каждого канала. 
+
+\Hypertarget{structc223__target__strobe_ab32e5be85631832851617f3d5320424a}\label{structc223__target__strobe_ab32e5be85631832851617f3d5320424a} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!cfd\_dds\_step@{cfd\_dds\_step}}
+\index{cfd\_dds\_step@{cfd\_dds\_step}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{cfd\_dds\_step}{cfd\_dds\_step}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::cfd\+\_\+dds\+\_\+step\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Шаг DDS для ЦФД для каждого канала. 
+
+\Hypertarget{structc223__target__strobe_a83cec29a1d4cbb605c4857e25857af31}\label{structc223__target__strobe_a83cec29a1d4cbb605c4857e25857af31} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!delay@{delay}}
+\index{delay@{delay}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::delay\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Компенсация задержки в каналах ПЧВО в тактах для каждого канала. 
+
+\Hypertarget{structc223__target__strobe_aa65a7319f4e85819534a73a04c4c08e7}\label{structc223__target__strobe_aa65a7319f4e85819534a73a04c4c08e7} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!k@{k}}
+\index{k@{k}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::k}
+
+
+
+Коэффициент коммутации данных АЦП/Имитатор на вход гетеродина. 
+
+\Hypertarget{structc223__target__strobe_a51562a13d87dd50bd3e702b8a8f5dc97}\label{structc223__target__strobe_a51562a13d87dd50bd3e702b8a8f5dc97} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!n\_dec@{n\_dec}}
+\index{n\_dec@{n\_dec}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{n\_dec}{n\_dec}}
+{\footnotesize\ttfamily uint16\+\_\+t c223\+\_\+target\+\_\+strobe\+::n\+\_\+dec}
+
+
+
+Коэффициент прореживания в ПЧВО. 
+
+\Hypertarget{structc223__target__strobe_aa5c34f4b7f2c5e7167eaf55438362f89}\label{structc223__target__strobe_aa5c34f4b7f2c5e7167eaf55438362f89} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!n\_shift@{n\_shift}}
+\index{n\_shift@{n\_shift}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{n\_shift}{n\_shift}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::n\+\_\+shift}
+
+
+
+Число сдвигов вправо для нормировки калибровок. 
+
+\Hypertarget{structc223__target__strobe_adfd21f9611a136695ce206f1d833fc4d}\label{structc223__target__strobe_adfd21f9611a136695ce206f1d833fc4d} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!nfft@{nfft}}
+\index{nfft@{nfft}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{nfft}{nfft}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::nfft}
+
+
+
+Степень размерности БПФ. 
+
+Диапазон значений\+: (3..10) \Hypertarget{structc223__target__strobe_a9655faf3ef473e0773a515ead02a44dd}\label{structc223__target__strobe_a9655faf3ef473e0773a515ead02a44dd} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!norm@{norm}}
+\index{norm@{norm}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{norm}{norm}}
+{\footnotesize\ttfamily uint16\+\_\+t c223\+\_\+target\+\_\+strobe\+::norm}
+
+
+
+Коэффициент нормировки. 
+
+\Hypertarget{structc223__target__strobe_a8050ed06c06f5cd110c042fdeda24a94}\label{structc223__target__strobe_a8050ed06c06f5cd110c042fdeda24a94} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!reg@{reg}}
+\index{reg@{reg}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{reg}{reg}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::reg}
+
+
+
+Признак регистрации сигнала по всем срезам тракта обработки. 
+
+\Hypertarget{structc223__target__strobe_a7d74b870e5ad79b80a9583f08e49636c}\label{structc223__target__strobe_a7d74b870e5ad79b80a9583f08e49636c} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!strobe\_begin@{strobe\_begin}}
+\index{strobe\_begin@{strobe\_begin}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{strobe\_begin}{strobe\_begin}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::strobe\+\_\+begin}
+
+
+
+Начало строба в дискретах. 
+
+\Hypertarget{structc223__target__strobe_a9838abdaef29152c76b28683576ef734}\label{structc223__target__strobe_a9838abdaef29152c76b28683576ef734} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!strobe\_length@{strobe\_length}}
+\index{strobe\_length@{strobe\_length}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{strobe\_length}{strobe\_length}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+target\+\_\+strobe\+::strobe\+\_\+length}
+
+
+
+Длина строба в дискретах. 
+
+\Hypertarget{structc223__target__strobe_a86f1a84c14d32f36437c162a1cb0fad4}\label{structc223__target__strobe_a86f1a84c14d32f36437c162a1cb0fad4} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!tippc\_nl@{tippc\_nl}}
+\index{tippc\_nl@{tippc\_nl}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{tippc\_nl}{tippc\_nl}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::tippc\+\_\+nl}
+
+
+
+Количество лучей. 
+
+Диапазон значений\+: (1..12) \Hypertarget{structc223__target__strobe_a5e65b38d0ca84ce206bf08a7cc13fb3e}\label{structc223__target__strobe_a5e65b38d0ca84ce206bf08a7cc13fb3e} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!tips\_n@{tips\_n}}
+\index{tips\_n@{tips\_n}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{tips\_n}{tips\_n}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+target\+\_\+strobe\+::tips\+\_\+n}
+
+
+
+Тип строба 
+
+\Hypertarget{structc223__target__strobe_a36651fb0d70ce3016ec2407912e23856}\label{structc223__target__strobe_a36651fb0d70ce3016ec2407912e23856} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!w\_clb@{w\_clb}}
+\index{w\_clb@{w\_clb}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{w\_clb}{w\_clb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcomplex32}{complex32}} c223\+\_\+target\+\_\+strobe\+::w\+\_\+clb\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Калибровочные векторы. 
+
+\Hypertarget{structc223__target__strobe_a9b5325830a454b47e7e9c6f9ca2c41ab}\label{structc223__target__strobe_a9b5325830a454b47e7e9c6f9ca2c41ab} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!w\_ob@{w\_ob}}
+\index{w\_ob@{w\_ob}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{w\_ob}{w\_ob}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcomplex32}{complex32}} c223\+\_\+target\+\_\+strobe\+::w\+\_\+ob\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_ga00688ff65110d31b64f74f0f54736d09}{NR\+\_\+\+VECTORS}}\mbox{]}\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Обучающие векторы. 
+
+\Hypertarget{structc223__target__strobe_ac3562518f56c14dc88f443d966ae2591}\label{structc223__target__strobe_ac3562518f56c14dc88f443d966ae2591} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!w\_po@{w\_po}}
+\index{w\_po@{w\_po}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{w\_po}{w\_po}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcomplex32}{complex32}} c223\+\_\+target\+\_\+strobe\+::w\+\_\+po\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gaf8ed06aa2f10022bc52c8a06b2a2a419}{MAX\+\_\+\+NR\+\_\+\+BEAMS}}\mbox{]}\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Диаграммообразующие векторы 1-\/й ступени фазирования. 
+
+\Hypertarget{structc223__target__strobe_ac634d7643749858ed7410a075f768860}\label{structc223__target__strobe_ac634d7643749858ed7410a075f768860} 
+\index{c223\_target\_strobe@{c223\_target\_strobe}!wirehd@{wirehd}}
+\index{wirehd@{wirehd}!c223\_target\_strobe@{c223\_target\_strobe}}
+\doxysubsubsection{\texorpdfstring{wirehd}{wirehd}}
+{\footnotesize\ttfamily struct cell\+\_\+412\+\_\+06\+\_\+wire\+\_\+header c223\+\_\+target\+\_\+strobe\+::wirehd}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/mpk1/blk223/\mbox{\hyperlink{223fc_8h}{223fc.\+h}}\end{DoxyCompactItemize}

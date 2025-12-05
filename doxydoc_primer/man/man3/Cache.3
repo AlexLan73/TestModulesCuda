@@ -1,0 +1,68 @@
+.TH "Cache" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Cache
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cache\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCache\fP (uint capcty)"
+.br
+.ti -1c
+.RI "\fB~Cache\fP ()"
+.br
+.ti -1c
+.RI "void \fBput\fP (const \fBModelInputBundle\fP &, const \fBModelOutput\fP &) const"
+.br
+.ti -1c
+.RI "std::shared_ptr< libutils::picojson_object > \fBget\fP (const \fBModelInputBundle\fP &) const"
+.br
+.ti -1c
+.RI "uint \fBsize\fP () const"
+.br
+.ti -1c
+.RI "uint \fBcapacity\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCache_t\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "const uint \fBmax_size\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Cache::Cache (uint capcty)"
+
+.SS "Cache::~Cache ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "uint Cache::capacity () const\fC [inline]\fP"
+
+.SS "shared_ptr< picojson_object > Cache::get (const \fBModelInputBundle\fP & i) const"
+
+.SS "void Cache::put (const \fBModelInputBundle\fP & b, const \fBModelOutput\fP & o) const"
+
+.SS "uint Cache::size () const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCache_t\fP* Cache::data\fC [private]\fP"
+
+.SS "const uint Cache::max_size\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

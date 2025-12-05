@@ -1,0 +1,171 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Trkp Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Trkp}{}\label{classModelNS23817A620S1823_1_1Trkp}\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+
+
+{\ttfamily \#include $<$trkp.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Trkp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classModelNS23817A620S1823_1_1Trkp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_a595b55cc80192085d3616a4aad263a0f}{Trkp}} ()
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_abc2a22e30c16e3c0ee15d44465327670}{\texorpdfstring{$\sim$}{\string~}\+Trkp}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_ac29f825497259d9eb7f83b1a42ec478a}{set\+New\+Msg}} (\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}trkp)
+\item 
+std\+::complex$<$ double $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_a3b391510efaa0670c75d398641b72cd2}{get\+Coef}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t chan\+Num) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_acba74a7d271e4687dffb6a9ea43598db}{ones}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_aade5801e9e0c1f7f0e235888d115da4d}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_aedc56012d777bd9bdec639fb5be24879}{copy\+Polarization}} (uint32\+\_\+t \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, uint32\+\_\+t channels\+Num, \mbox{\hyperlink{e2trkp_8h_a2b9cc9f0f756c29599ff9c373913153a}{Complex\+Float}} c\+Values\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_ac17f3c6339b4d7e43b3d130b6efe452e}{data\+Type}}
+\item 
+std\+::complex$<$ double $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp_a7f27e219f8cefc5debc5744d34b46265}{coefs}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}\mbox{[}\mbox{\hyperlink{e2trkp_8h_a51169032547efc833cf082394153cd16}{trkp\+Coefs\+Num}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Сообщение E2\+TRKP (калибровочные поправки и АФР для МПК). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Trkp_a595b55cc80192085d3616a4aad263a0f}\label{classModelNS23817A620S1823_1_1Trkp_a595b55cc80192085d3616a4aad263a0f} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!Trkp@{Trkp}}
+\index{Trkp@{Trkp}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{Trkp()}{Trkp()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Trkp\+::\+Trkp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trkp_a595b55cc80192085d3616a4aad263a0f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trkp_abc2a22e30c16e3c0ee15d44465327670}\label{classModelNS23817A620S1823_1_1Trkp_abc2a22e30c16e3c0ee15d44465327670} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!````~Trkp@{\texorpdfstring{$\sim$}{\string~}Trkp}}
+\index{````~Trkp@{\texorpdfstring{$\sim$}{\string~}Trkp}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Trkp()}{\string~Trkp()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Trkp\+::\texorpdfstring{$\sim$}{\string~}\+Trkp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Trkp_aedc56012d777bd9bdec639fb5be24879}\label{classModelNS23817A620S1823_1_1Trkp_aedc56012d777bd9bdec639fb5be24879} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!copyPolarization@{copyPolarization}}
+\index{copyPolarization@{copyPolarization}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{copyPolarization()}{copyPolarization()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trkp\+::copy\+Polarization (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{channels\+Num,  }\item[{\mbox{\hyperlink{e2trkp_8h_a2b9cc9f0f756c29599ff9c373913153a}{Complex\+Float}}}]{c\+Values\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Копирование комплексных значений коэффициентов для заданного количества каналов одной поляризации во внутренний массив класса. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & тип поляризации \\
+\hline
+{\em channels\+Num} & количество каналов \\
+\hline
+{\em c\+Values} & указатель на выходной буфер \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classModelNS23817A620S1823_1_1Trkp_aedc56012d777bd9bdec639fb5be24879_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trkp_a3b391510efaa0670c75d398641b72cd2}\label{classModelNS23817A620S1823_1_1Trkp_a3b391510efaa0670c75d398641b72cd2} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!getCoef@{getCoef}}
+\index{getCoef@{getCoef}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{getCoef()}{getCoef()}}
+{\footnotesize\ttfamily std\+::complex$<$ double $>$ Model\+NS23817\+A620\+S1823\+::\+Trkp\+::get\+Coef (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{polar,  }\item[{uint32\+\_\+t}]{chan\+Num }\end{DoxyParamCaption}) const}
+
+Возврат коэффициента (калибровочного или АФР) для заданных поляризации и канала. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & тип поляризации \\
+\hline
+{\em chan\+Num} & номер канала в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+значение коэффициента (калибровочного или АФР) для заданных поляризации и канала 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classModelNS23817A620S1823_1_1Trkp_a3b391510efaa0670c75d398641b72cd2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trkp_acba74a7d271e4687dffb6a9ea43598db}\label{classModelNS23817A620S1823_1_1Trkp_acba74a7d271e4687dffb6a9ea43598db} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!ones@{ones}}
+\index{ones@{ones}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{ones()}{ones()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trkp\+::ones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Заполнение единицами коэффициентов по всем каналам. \Hypertarget{classModelNS23817A620S1823_1_1Trkp_aade5801e9e0c1f7f0e235888d115da4d}\label{classModelNS23817A620S1823_1_1Trkp_aade5801e9e0c1f7f0e235888d115da4d} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!print@{print}}
+\index{print@{print}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trkp\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Печать квадратур по обеим поляризациям и по каждому каналу. \Hypertarget{classModelNS23817A620S1823_1_1Trkp_ac29f825497259d9eb7f83b1a42ec478a}\label{classModelNS23817A620S1823_1_1Trkp_ac29f825497259d9eb7f83b1a42ec478a} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!setNewMsg@{setNewMsg}}
+\index{setNewMsg@{setNewMsg}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{setNewMsg()}{setNewMsg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trkp\+::set\+New\+Msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structE2Trkp}{E2\+Trkp}} \texorpdfstring{$\ast$}{*}}]{trkp }\end{DoxyParamCaption})}
+
+Заполнение объекта заданными во входном сообщении Е2ТРКП значениями. 
+\begin{DoxyParams}{Parameters}
+{\em trkp} & указатель на сетевое сообщение Е2ТРКП \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trkp_ac29f825497259d9eb7f83b1a42ec478a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Trkp_a7f27e219f8cefc5debc5744d34b46265}\label{classModelNS23817A620S1823_1_1Trkp_a7f27e219f8cefc5debc5744d34b46265} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!coefs@{coefs}}
+\index{coefs@{coefs}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{coefs}{coefs}}
+{\footnotesize\ttfamily std\+::complex$<$double$>$ Model\+NS23817\+A620\+S1823\+::\+Trkp\+::coefs\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{Shared\+Const\+::max\+Polars}}\mbox{]}\mbox{[}\mbox{\hyperlink{e2trkp_8h_a51169032547efc833cf082394153cd16}{trkp\+Coefs\+Num}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+квадратуры по обеим поляризациям и по каждому каналу \Hypertarget{classModelNS23817A620S1823_1_1Trkp_ac17f3c6339b4d7e43b3d130b6efe452e}\label{classModelNS23817A620S1823_1_1Trkp_ac17f3c6339b4d7e43b3d130b6efe452e} 
+\index{ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}!dataType@{dataType}}
+\index{dataType@{dataType}!ModelNS23817A620S1823::Trkp@{ModelNS23817A620S1823::Trkp}}
+\doxysubsubsection{\texorpdfstring{dataType}{dataType}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trkp\+::data\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+тип данных\+: 0 -\/ калибровочный вектор (КЛБПРМ – результат расчета калибровочных параметров амплитудной и фазовой корректировки приемных подрешеток) 1 -\/ АФР (сообщение используем для АФР) – данные предварительного формирования канальных сигналов с учетом поправок на вышку или КС в режиме калибровки приемных каналов 2 -\/ взвешенный калибровочный вектор -\/ КЛБПРМК – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов приемных блоков; 3 -\/ КЛБПРД – результат расчета калибровочных параметров амплитудной и фазовой корректировки каналов передающих блоков 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{trkp_8h}{trkp.\+h}}\item 
+src/\mbox{\hyperlink{trkp_8cpp}{trkp.\+cpp}}\end{DoxyCompactItemize}

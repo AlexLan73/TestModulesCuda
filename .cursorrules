@@ -30,7 +30,7 @@ git push origin main
 
 # 2. Проверка на чистом клоне (ОБЯЗАТЕЛЬНО!)
 cd /tmp && rm -rf test_clone
-git clone git@github.com:AlexLan73/AmdOpenCLTest01.git test_clone
+git clone git@github.com:AlexLan73/TestModulesCuda.git test_clone
 cd test_clone
 cmake -B build && cmake --build build
 

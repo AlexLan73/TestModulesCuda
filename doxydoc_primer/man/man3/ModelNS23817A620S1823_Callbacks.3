@@ -1,0 +1,65 @@
+.TH "ModelNS23817A620S1823::Callbacks" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Callbacks
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <callbacks\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_adc\fP"
+.br
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_quadr\fP"
+.br
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_pftp\fP"
+.br
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_psp\fP"
+.br
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_418_01\fP"
+.br
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_418_02\fP"
+.br
+.ti -1c
+.RI "\fBCallback\fP * \fBcback_232\fP"
+.br
+.ti -1c
+.RI "bool(* \fBpCallback\fP )()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Интерфейсная структура набора указателей на коллбеки\&. Каждый может быть нулевым\&.
+.PP
+\fBCallbacks\fP не владеет этими сообщениями (т\&.е\&. не удаляет их) 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_232"
+коллбэк среза выхода 232й ячейки 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_418_01"
+коллбэк среза выхода 418-01й ячейки 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_418_02"
+коллбэк среза выхода 418-02й ячейки 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_adc"
+коллбэк среза АЦП 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_pftp"
+коллбэк среза ПЧВО 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_psp"
+коллбэк среза ППО 
+.SS "\fBCallback\fP * ModelNS23817A620S1823::Callbacks::cback_quadr"
+коллбэк среза формирования квадратур 
+.SS "bool(* ModelNS23817A620S1823::Callbacks::pCallback)()"
+коллбэк полосы прогресса 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

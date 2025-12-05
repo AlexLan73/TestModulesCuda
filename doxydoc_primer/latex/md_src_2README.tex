@@ -1,0 +1,96 @@
+\chapter{Тестовые скрипты}
+\hypertarget{md_src_2README}{}\label{md_src_2README}\index{Тестовые скрипты@{Тестовые скрипты}}
+\label{md_src_2README_autotoc_md0}%
+\Hypertarget{md_src_2README_autotoc_md0}%
+ Тестовые скрипты ({\ttfamily model-\/checker.\+sh}, {\ttfamily test-\/patches.\+sh}) сделаны для проверок рефакторинга кода (т.\+е. преобразований, улучшающих структуру и/или быстродействие кода, но не меняющих его поведение), хотя могут использоваться и для обнаружения нежелательных последствий любых изменений (например, если доработка касается только МРИК, но внезапно меняется выдача модели для СМ). В основе работы скриптов лежит простая идея -\/ мы сохраняем выдачу (все срезы) прогона некого ФУ на "{}заведомо правильной"{} базовой версии модели, и затем сравниваем сохраненную выдачу с выдачей новой версии модели. Очевидно, что для тщательной проверки необходимо много разнообразного ФУ (которое затрагивает все режимы работы модели); имеющееся тестовое ФУ хранится в поддереве каталогов с корнем в {\ttfamily src/model/testcases}. В свою очередь, ФУ разделяется по станциям -\/ ФУ каждой станции хранится в подкаталогах {\ttfamily testcases/\+MRIK}, {\ttfamily testcases/\+VoronezhM}, {\ttfamily testcases/\+Voronezh\+CM}, с легкими для понимания мнемоническими именами вроде {\ttfamily 1fu\+\_\+\+M\+\_\+strobe\+\_\+1\+\_\+tipsig\+\_\+1\+\_\+object\+\_\+8\+\_\+type\+\_\+interf}. Подкаталог с ФУ содержит собственно файл или файлы с ФУ (несколько файлов с сообщениями ФУ, зарегистрированными через ФПО МПК1, или файл {\ttfamily input.\+json}, импортированный из GUI модели -\/ см. ниже); выдача от прогона ФУ так же сохраняется в каталоге ФУ (точнее, в подкаталоге {\ttfamily baselines} каталога ФУ). Возможно сохранять выдачу разных вариантов модели под разными именами -\/ т.\+е. фактически создавать {\itshape несколько именованых эталонов} (baseline-\/ов; термины "{}эталон"{} и "{}baseline"{} будут использоваться как эквивалентные)\+: это бывает полезным, например, при отработке одной версии модели в разных системах -\/ например, выдачу от прогона модели в Debian 9 сохранять под именем {\ttfamily debian9} (в {\ttfamily baselines/debian9}), а выдачу от прогона в Ubuntu 16.\+04 -\/ под именем {\ttfamily ubuntu16} (в {\ttfamily baselines/ubuntu16}). Имя эталона задается через опцию {\ttfamily -\/n}, ее можно использовать и при сохранении выдачи, и при сравнении текущей выдачи с сохраненной; впрочем, имя эталона задавать не обязательно (если оно не задано, считается, что это имя -\/ {\ttfamily default}, и данные от прогона ФУ сохраняются в подкаталоге {\ttfamily baselines/default});
+
+Для сохранения выдачи предназначена команда {\ttfamily ./model-\/checker.sh make-\/baseline}; она принимает в виде аргумента список ФУ (т.\+е. имена каталогов с ФУ); например, команда 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./model-\/checker.sh\ make-\/baseline\ testcases/VoronezhM/1fu\_M\_strobe\_1\_tipsig\_1\_object\_8\_type\_interf}
+
+\end{DoxyCode}
+ сохранит выдачу, сгенерированную прогоном ФУ из каталога {\ttfamily testcases/\+Voronezh\+M/1fu\+\_\+\+M\+\_\+strobe\+\_\+1\+\_\+tipsig\+\_\+1\+\_\+object\+\_\+8\+\_\+type\+\_\+interf} на текущем варианте модели.
+
+Команда 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./model-\/checker.sh\ make-\/baseline\ testcases/*/*}
+
+\end{DoxyCode}
+ сохранит выдачу всех имеющихся ФУ (в обоих случаях, выдача будет сохранена под именем {\ttfamily default}).
+
+{\bfseries{Tip 1}}\+: если у вас не хватает места, вы можете создавать эталоны где угодно -\/ скопируйте {\ttfamily testcases} в другой каталог и укажите файлы из этого каталога в вызове {\ttfamily model-\/checker.\+sh} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cp\ -\/rs\ \$(pwd)/testcases\ /media/me/ext\_hdd}
+\DoxyCodeLine{./model-\/checker.sh\ make-\/baseline\ /media/me/ext\_hdd/testcases/*/*}
+\DoxyCodeLine{./model-\/checker.sh\ check-\/baseline\ /media/me/ext\_hdd/testcases/*/*}
+
+\end{DoxyCode}
+ Весь огромный объем данных эталонов будет записан в подкаталоги {\ttfamily /media/me/ext\+\_\+hdd}. Заметьте, что используется команда {\ttfamily cp -\/rs}, которая вместо настоящего копирования делает симлинки на оригинальные файлы (но создает реальное дерево каталогов); {\ttfamily cp -\/rs} необходимы 2 абсолютных имени, поэтому {\ttfamily \$(pwd)/testcases} делает из {\ttfamily testcases} абсолютное имя. Вместо {\ttfamily cp -\/rs} можно использовать и обычную {\ttfamily cp -\/r testcases /media/me/ext\+\_\+hdd}, но тогдна файлы с ФУ будут скопированы, и их правки придется вручную переносить в рабочую копию.
+
+Для сравнения выдачи текущего варианта модели с сохраненным используется команда {\ttfamily ./model-\/checker.sh check-\/baseline}; например, команда 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./model-\/checker.sh\ check-\/baseline\ testcases/*/*}
+
+\end{DoxyCode}
+ сравнит выдачу всех имеющихся ФУ с ранее сохраненной (под именем {\ttfamily default}).
+
+{\bfseries{Tip 2}}\+: при проверке эталона во временный каталог записывается содержимое всех срезов, генерируются MD5-\/суммы всех записанных файлов, затем полученные MD5-\/суммы сравниваются с MD5-\/суммами файлов эталона. Если у вас есть (даже сравнительно небольшой -\/ 20-\/30GB) быстрый носитель (SSD), можно создавать временный каталог там, это заметно ускоряет работу\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./model-\/checker.sh\ check-\/baseline\ -\/t\ /path/to/ssd\ testcases/*/*}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tip 3}}\+: если у вас вообще нет места на диске, вы можете просто затарить файлы MD5-\/сумм существующих эталонов, растарить их куда сами захотите, и использовать получившийся "{}эталон"{}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ /media/me/ext\_hdd}
+\DoxyCodeLine{\#\ в\ текущем\ каталоге\ есть\ каталог\ testcases,\ содержащий\ один\ или\ несколько\ эталонов}
+\DoxyCodeLine{tar\ cvf\ /tmp/baselines.tar\ \$(find\ testcases\ -\/name\ MD5SUMS)}
+\DoxyCodeLine{cd\ /tmp}
+\DoxyCodeLine{tar\ xvf\ baselines.tar}
+\DoxyCodeLine{cd\ \string~/work/model/src}
+\DoxyCodeLine{./model\_dumper\ /tmp/testcases/VoronezhCM/example}
+
+\end{DoxyCode}
+
+
+Команда 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./model-\/checker.sh\ check-\/baseline\ -\/n\ mybaseline\ testcases/*/*}
+
+\end{DoxyCode}
+ сравнит выдачу всех имеющихся ФУ с ранее сохраненной под именем {\ttfamily mybaseline}. Обратите внимание, что в вызове обеих команд указываются имена каталогов с ФУ и (не обязательно) имена эталонов (baseline-\/ов); это значит, что вы можете проверять эталон для подмножества ФУ, указанного при его генерации.
+
+Скрипты имеют много полезных опций и выдают подсказку по использованию при вызове без параметров.
+
+Если в работе используются очереди патчей (расширение Mercurial {\ttfamily mq}), для проверки нескольких патчей одной командой можно использовать скрипт {\ttfamily test-\/patches.\+sh}. Он последовательно накладывает указанные патчи и сравнивает выдачу модели с указанным эталоном.\hypertarget{md_src_2README_autotoc_md1}{}\doxysubsection{\texorpdfstring{TL;\+DR}{TL;DR}}\label{md_src_2README_autotoc_md1}
+На свежесобранной модели\+:
+
+\begin{quote}
+{\ttfamily cd src/model}~\newline
+ {\ttfamily ./model-\/checker.sh make-\/baseline testcases/\texorpdfstring{$\ast$}{*}/example} \end{quote}
+\texorpdfstring{$\ast$}{*}...вносим изменения и собираем измененную модель...\texorpdfstring{$\ast$}{*}
+
+\begin{quote}
+{\ttfamily ./model-\/checker.sh check-\/baseline testcases/\texorpdfstring{$\ast$}{*}/example} \end{quote}
+\hypertarget{md_src_2README_autotoc_md2}{}\doxysubsection{\texorpdfstring{Использование ФУ, сохраненного через GUI}{Использование ФУ, сохраненного через GUI}}\label{md_src_2README_autotoc_md2}
+Для использования в тестах ФУ, сохраненного через GUI модели, его нужно импортировать, т.\+е. записать в поддерево {\ttfamily testcases}, соответствующее станции, для которой это ФУ предназначено. Импорт необходим по двум причинам\+: во-\/первых, ФУ, сохраняемое через GUI модели, не является валидным JSON (у некоторых объектов есть поля с одинаковыми именами), и просто неудобен для загрузки (например, все поля имеют строковые значения); во-\/вторых, тестовые скрипты рассчитывают на определенную структуру каталогов, и ее нужно создать (что делается при импорте). Импорт выполняется скриптом {\ttfamily testcases/import.\+sh}; он должен вызываться в каталоге, соответствующем станции (например, {\ttfamily testcases/\+Voronezh\+CM}). Предположим, что файлы с новым ФУ ({\ttfamily \texorpdfstring{$\ast$}{*}.json}) для Воронеж-\/СМ находятся в каталоге {\ttfamily src/model/testcases}; тогда для их импорта нужно выдать команды\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ testcases/VoronezhCM}
+\DoxyCodeLine{../import.sh\ ../../*.json}
+
+\end{DoxyCode}
+ Эта команда создаст в каталоге {\ttfamily testcases/\+Voronezh\+CM} каталоги, соответствующие именам файлов ФУ (без суффикса {\ttfamily .json}) или выдаст ошибку.
+
+Собственно преобразование ФУ в валидный JSON делается скриптом {\ttfamily \doxylink{convert__to__json_8py}{convert\+\_\+to\+\_\+json.\+py}}, например, так\+:
+
+{\ttfamily ./convert\+\_\+to\+\_\+json.py} {\itshape имя-\/файла-\/с-\/ФУ}
+
+{\ttfamily ./convert\+\_\+to\+\_\+json.py} обрабатывает 1 файл (или, если аргумент не указан, стандартный вход) и выдает результат на стандартный вывод. Пользоваться этим скриптом следует только тогда, когда что-\/то пошло не так с {\ttfamily testcases/import.\+sh}.\hypertarget{md_src_2README_autotoc_md3}{}\doxysection{\texorpdfstring{Open\+MP}{OpenMP}}\label{md_src_2README_autotoc_md3}
+Распараллеливание вычислений в модели сделано с использованием Open\+MP, так что доступны все возможности Open\+MP по настройке производительности (см. например, \href{https://community.ibm.com/community/user/power/blogs/archive-user/2017/03/13/use-openmp-environment-variables-to-get-the-best-performance}{\texttt{ здесь}}); пока что эксперименты показывают, что единственным параметром, настройка которого дает (небольшой) выигрыш в скорости, является {\ttfamily OMP\+\_\+\+WAIT\+\_\+\+POLICY}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export\ OMP\_WAIT\_POLICY=passive}
+\DoxyCodeLine{./runLocalVersion}
+
+\end{DoxyCode}
+ 

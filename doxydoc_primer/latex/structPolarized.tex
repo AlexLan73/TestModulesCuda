@@ -1,0 +1,134 @@
+\doxysection{Polarized\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structPolarized}{}\label{structPolarized}\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+
+
+{\ttfamily \#include $<$min\+Defs.\+h$>$}
+
+
+
+Collaboration diagram for Polarized\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{structPolarized__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structPolarized_a7bb2df70d82bab741648d46f4d4a827a}{Polarized}} ()
+\item 
+\mbox{\hyperlink{structPolarized_a8a8e03c614a3d0f50c9cea82467af324}{Polarized}} (const \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$ \&p)
+\item 
+\mbox{\hyperlink{structPolarized_a7c67a125e6ae9daaa8eb5f77b12b9b30}{Polarized}} (const T \&v, const T \&h)
+\item 
+\mbox{\hyperlink{structPolarized_a3c2480108adaf682eb9c16a6fe8e12e4}{Polarized}} (T \&\&v, T \&\&h)
+\item 
+T \& \mbox{\hyperlink{structPolarized_a88535ad6ee7d295dc364d9b303efcd13}{operator\mbox{[}$\,$\mbox{]}}} (unsigned n)
+\item 
+const T \& \mbox{\hyperlink{structPolarized_af4e359f3bd507f22a589f242a89bf96c}{operator\mbox{[}$\,$\mbox{]}}} (unsigned n) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class... A$>$ }\\static \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$ \mbox{\hyperlink{structPolarized_a3abe058b7bcfc8873e4c88b31fd8c59f}{make}} (A... args)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}{vert}}
+\item 
+T \mbox{\hyperlink{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}{horz}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+struct Polarized$<$ T $>$}
+Объект с данными одинакового типа по вертикальной и горизонтальной поляризациям. Выдача модели всегда включает 2 поляризации -\/ если на блоке обрабатывается только одна, она извлекается при формировании выдачи прошивки (т.\+е. на клиенте -\/ стенде ФПО 232 блока). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structPolarized_a7bb2df70d82bab741648d46f4d4a827a}\label{structPolarized_a7bb2df70d82bab741648d46f4d4a827a} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!Polarized@{Polarized}}
+\index{Polarized@{Polarized}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Polarized()}{Polarized()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\mbox{\hyperlink{structPolarized}{\+::\+Polarized}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structPolarized_a8a8e03c614a3d0f50c9cea82467af324}\label{structPolarized_a8a8e03c614a3d0f50c9cea82467af324} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!Polarized@{Polarized}}
+\index{Polarized@{Polarized}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Polarized()}{Polarized()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\mbox{\hyperlink{structPolarized}{\+::\+Polarized}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structPolarized_a7c67a125e6ae9daaa8eb5f77b12b9b30}\label{structPolarized_a7c67a125e6ae9daaa8eb5f77b12b9b30} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!Polarized@{Polarized}}
+\index{Polarized@{Polarized}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Polarized()}{Polarized()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\mbox{\hyperlink{structPolarized}{\+::\+Polarized}} (\begin{DoxyParamCaption}\item[{const T \&}]{v,  }\item[{const T \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structPolarized_a3c2480108adaf682eb9c16a6fe8e12e4}\label{structPolarized_a3c2480108adaf682eb9c16a6fe8e12e4} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!Polarized@{Polarized}}
+\index{Polarized@{Polarized}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Polarized()}{Polarized()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\mbox{\hyperlink{structPolarized}{\+::\+Polarized}} (\begin{DoxyParamCaption}\item[{T \&\&}]{v,  }\item[{T \&\&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structPolarized_a3abe058b7bcfc8873e4c88b31fd8c59f}\label{structPolarized_a3abe058b7bcfc8873e4c88b31fd8c59f} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!make@{make}}
+\index{make@{make}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class... A$>$ \\
+static \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$ \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\+::make (\begin{DoxyParamCaption}\item[{A...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{structPolarized_a3abe058b7bcfc8873e4c88b31fd8c59f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{structPolarized_a88535ad6ee7d295dc364d9b303efcd13}\label{structPolarized_a88535ad6ee7d295dc364d9b303efcd13} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structPolarized_af4e359f3bd507f22a589f242a89bf96c}\label{structPolarized_af4e359f3bd507f22a589f242a89bf96c} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T \& \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structPolarized_a3b6679658e7a68dce1d094e0a34f111b}\label{structPolarized_a3b6679658e7a68dce1d094e0a34f111b} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!horz@{horz}}
+\index{horz@{horz}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{horz}{horz}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\+::horz}
+
+\Hypertarget{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2}\label{structPolarized_a82fe73b0e5c69aaa9d3333ce0986fcf2} 
+\index{Polarized$<$ T $>$@{Polarized$<$ T $>$}!vert@{vert}}
+\index{vert@{vert}!Polarized$<$ T $>$@{Polarized$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vert}{vert}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$\+::vert}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model/\mbox{\hyperlink{minDefs_8h}{min\+Defs.\+h}}\end{DoxyCompactItemize}

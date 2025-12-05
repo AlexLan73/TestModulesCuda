@@ -1,0 +1,81 @@
+\doxysection{RPC.\+h}
+\hypertarget{RPC_8h_source}{}\label{RPC_8h_source}\index{include/model/RPC.h@{include/model/RPC.h}}
+\mbox{\hyperlink{RPC_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ RPC.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 11,\ 2019}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ vmg}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INCLUDE\_MODEL\_RPC\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INCLUDE\_MODEL\_RPC\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{minDefs_8h}{model/minDefs.h}}>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <libutils/sumtype.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <libutils/optional.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <libvork/e2mask.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <libvork/e2trkp.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ MODEL\_PORT\_DEFAULT\ \ 3777}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }libutils::Result;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }libutils::SumType;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ }libutils::NoneType;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{using\ }std::experimental::optional;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }std::experimental::nullopt;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSetOutputDirParams}{SetOutputDirParams}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ optional<std::string>\ \mbox{\hyperlink{structSetOutputDirParams_a5a97375fa41f54e3a83fb95641883d6f}{outDir}};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structSetOutputDirParams_a6dd33638b083d50936c4cb01eb48a7be}{SetOutputDirParams}}(\textcolor{keyword}{const}\ optional<std::string>\&\ d\ =\ nullopt)}
+\DoxyCodeLine{00033\ \ \ \ \ :\ \mbox{\hyperlink{structSetOutputDirParams_a5a97375fa41f54e3a83fb95641883d6f}{outDir}}(d)}
+\DoxyCodeLine{00034\ \ \ \ \ \{\}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ ModelOutput\ не\ является\ Result,\ потому,\ что\ если\ дело\ доходит}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ до\ работы\ модели,\ Result-\/ы\ возвращаются\ в\ strobes,\ а\ если\ до}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ модели\ дело\ не\ доходит,\ ModelOutput\ вообще\ не\ возвращается}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ (возвращается\ JsonRpcError,\ она\ же\ ModelJsonRpcProto::Error)}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelOutput}{ModelOutput}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{structModelOutput_a73776f9a3100b738347d2385c447d4c3}{ex}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ список\ результатов\ работы\ модели\ по\ каждому\ стробу;\ это\ std::list,}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ а\ не\ std::vector,\ т.к.\ на\ gcc\ 4.3\ невозможно\ поместить\ SumType\ в\ vector}}
+\DoxyCodeLine{00046\ \ \ \ \ std::list<StrobeResult>\ \mbox{\hyperlink{structModelOutput_a99da3fbf19871085ceecb9626e52841f}{strobes}};}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ stationParams\ находится\ в\ параметрах\ RPC-\/запроса\ по\ историческим}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ причинам,\ т.к.\ ModelInputBundle\ изначально\ делалсь\ для\ загрузки\ ФУ,}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ сохраненного\ из\ GUI,\ а\ там\ параметры\ станции\ есть;\ если\ параметры}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ станции\ не\ указаны,\ параметры\ станции\ берутся\ по\ номеру\ позиции}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ E2TRPR\ \mbox{\hyperlink{structModelInputBundle_ad3b8b4d9d30c2cfad817efb08d3c2800}{trpr}};}
+\DoxyCodeLine{00059\ \ \ \ \ TrimtsMsg\ \mbox{\hyperlink{structModelInputBundle_ab9d0c6da6426cb00d0d1e5147b4843eb}{trimts}};}
+\DoxyCodeLine{00060\ \ \ \ \ optional<ModelNS23817A620S1823::StationParams>\ \mbox{\hyperlink{structModelInputBundle_a4884c9a8886b0b9f1acd96c6de50ec30}{stationParams}};}
+\DoxyCodeLine{00061\ \ \ \ \ optional<E2IPPA>\ \mbox{\hyperlink{structModelInputBundle_a9a4d9a5331a6e5ae40e6d8114311c566}{opt\_ippa}};}
+\DoxyCodeLine{00062\ \ \ \ \ optional<libvork::EUMASK>\ \mbox{\hyperlink{structModelInputBundle_aa6166190fea84afdbf847badc0931004}{opt\_mask}};}
+\DoxyCodeLine{00063\ \ \ \ \ optional<libvork::EUTRKP>\ \mbox{\hyperlink{structModelInputBundle_a599601df64e88e5649b114204a5272bc}{opt\_klb}};}
+\DoxyCodeLine{00064\ \ \ \ \ optional<libvork::EUTRKP>\ \mbox{\hyperlink{structModelInputBundle_a78a96f0fab9a5558c04c629b65ba8454}{opt\_afr}};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{typedef}\ SumType<SetOutputDirParams,\ ModelInputBundle>\ \mbox{\hyperlink{RPC_8h_af7f75d4d0847a2aa6b24f144caa2c426}{ModelParams}};}
+\DoxyCodeLine{00068\ \textcolor{keyword}{typedef}\ SumType<ModelOutput,\ NoneType>\ \mbox{\hyperlink{RPC_8h_a84f1b6c2c19897490ae8155942ea01f9}{ModelResult}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00071\ \textcolor{comment}{}}
+\DoxyCodeLine{00072\ \textcolor{comment}{Интерфейс\ RPC\ таков:}}
+\DoxyCodeLine{00073\ \textcolor{comment}{}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ setOutputDir:\ OutputDirParameters\ -\/>\ None\ |\ Error}}
+\DoxyCodeLine{00075\ \textcolor{comment}{}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ computePlanes:\ ModelInputBundle\ -\/>\ ModelOutput\ |\ Error}}
+\DoxyCodeLine{00077\ \textcolor{comment}{}}
+\DoxyCodeLine{00078\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INCLUDE\_MODEL\_RPC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,1842 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Control\+Msg Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1ControlMsg}{}\label{classModelNS23817A620S1823_1_1ControlMsg}\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+
+
+{\ttfamily \#include $<$control\+Msg.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Control\+Msg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMsg_1_1HeterodyneDataHolder}{Heterodyne\+Data\+Holder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a9fac07c26fa54b86b88f1b9b7ce456cd}{change\+C412}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a04dc323570071f50c7ed73cd64afd3fc}{precompute\+Common\+Data}} ()
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a180fbef31e03293c2ce0c998271b71c9}{send\+Cell412\+Changed\+Signal}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a1e8a7c98c351470e7be04589a6606bac}{set\+Callbacks}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}callbacks)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a79275f978622a789d21d261c1ac3d537}{set\+Channels\+Mask}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}ch\+Mask, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a70741eb300d4218fa466ad11c081f783}{get\+DFGroup\+Num}} (uint32\+\_\+t chan\+Num) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aa0623b8ede16bf8895a32a192f416750}{is\+Unmasked\+Polar}} () const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afebf012b14d0b395303f9cb7cb401d77}{is\+Unmasked\+Polar}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_add764b89e1d81143868ed460b27d7048}{is\+Unmasked\+Polar}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}}, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} station\+Type) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4d10fc718fc34cf8031bb4def998b0cb}{is\+Unmasked\+Crate}} (uint32\+\_\+t crate\+Num, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2fae8ff1db58f4db9cc360a704241bbd}{is\+Unmasked\+Cell}} (uint32\+\_\+t crate\+Num, uint32\+\_\+t cell\+Num, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_af2b61c84eac69447d0c6a083393c7117}{calc\+NShift}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2aa2346c191712b1e423b48e78a3551c}{calc\+N1\+Norm}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}lattice\+Mask)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ab9f23da88df8188e21162e9445756453}{calc\+N2\+Norm}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aa4ef4918a6ccb66773c21f24147cb59b}{model\+Ch2\+Lattice}} (uint32\+\_\+t m\+Ch) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a8b4b2c0e95487247fd3b2a9de1bda88b}{model\+Cl2\+Lattice}} (uint32\+\_\+t m\+Cl) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afed3b40f1b3f38f3fa5962ddfcbbf188}{model\+Cr2\+Lattice}} (uint32\+\_\+t m\+Cr) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a17b8c2ef2ec76dabbd49b3c5bb55c9de}{lattice\+Ch2\+Model}} (uint32\+\_\+t l\+Ch) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a229e488de17d7dbbc0b2f9d1e6fd8345}{lattice\+Cl2\+Model\+SM}} (uint32\+\_\+t l\+Cl) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afb7a97f0d62265acb279fef14d647d37}{is\+Virtual\+Channel}} (uint32\+\_\+t m\+Ch) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2fbb7a6c5aad4c11c50800e7c9e1fce9}{get\+Channel\+XYCoords}} (uint32\+\_\+t chan\+Num, double \texorpdfstring{$\ast$}{*}x, double \texorpdfstring{$\ast$}{*}y) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a46b228fe0bcab80e966c9026fd7aac99}{get\+Wlb}} (uint32\+\_\+t nfil, uint32\+\_\+t wlb\+Num, int32\+\_\+t \texorpdfstring{$\ast$}{*}wlb\+Buf) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4d4c39c0e261fba6ea2d4c02c046638b}{print\+Cntrl\+Msg}} () const
+\item 
+float \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a204d132abe98c25c3dc9806d17520b1e}{get\+IppaU}} (int32\+\_\+t a\+Interf\+Index) const
+\item 
+float \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2f135bca105c3dcc4beec7850f8eab19}{get\+IppaV}} (int32\+\_\+t a\+Interf\+Index) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ab11a18e72b515f1de077fa1beb02cd68}{form\+Control\+Msg}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1InputMessages}{CMsg\+Model\+Types\+::\+Input\+Messages}} \texorpdfstring{$\ast$}{*}input\+Msgs, int32\+\_\+t trpr\+Strb\+Index, int32\+\_\+t trimts\+Strb\+Index, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type)
+\item 
+TStrobe \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a46a9ea9e92b1f3ffd84d6101a4080634}{get\+Strobe}} () const
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ad009ae7f9e563e84482f12c9a2109144}{Control\+Msg}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationConfig}{CMsg\+Model\+Types\+::\+Station\+Config}} $>$)
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ab9d54c8d0a794d3b1ccef289a7786e1c}{Control\+Msg}} ()
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ae330379e3753ea19f5cb314e52c53c5d}{\texorpdfstring{$\sim$}{\string~}\+Control\+Msg}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMsg_1_1HeterodyneDataHolder}{Heterodyne\+Data\+Holder}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a5cc226e4ae8cddada0234687aedbfda2}{heter\+Data}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsg\+Shared\+Types\+::\+Imit\+Tact}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a130d21375909d4ec60a7b227b50a3e0e}{tact\+Header}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2fd80fef7395401b03bda0dac51de049}{strb}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsg\+Shared\+Types\+::\+Imit\+Object}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ad9799c35dfd66c0f39f86af8642fd527}{imit\+Objects}} \mbox{[}\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{max\+Imit\+Objects}}\mbox{]}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a5db48e14b2fa2a01510a802f84dcc979}{station\+Params}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a6a8e47a862b4dc41cc0a2788b8661ad6}{cbacks}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a8af9084820107d31b714672aee03ffbf}{max\+Nfil\+Value}} = 2048
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aea48b5f5fdcfc85b77133bd27eb2879b}{fill\+Obj\+Lengths}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afa2a863f4b67bf37bf8726ad0fe6b714}{fill\+Obj\+Types}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ac7cb9faadf643a6a6818c5c0fdfe19b6}{fill\+Obj\+Polynomials}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a55f0ab84c007c1d6e4dbc3a46096cccf}{fill\+Obj\+Intensity}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_af1a5a59e51a43a5cd7ddb389fda8b7cd}{fill\+Obj\+Interf\+Band\+Width}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_accef5bef1c9b894c05f8a81af824d9db}{fill\+Obj\+Begins}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a36b6c918690c3bfec09e139331a89aa8}{fill\+Obj\+Freq\+Point}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a91870cfcfd23404c50061a17d539db4a}{fill\+Sig\+Phases}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a51204fc98ffbf27eea1c2c22fc6613d7}{fill\+Rays\+Coords}} (const TRay trpr\+UV\mbox{[}$\,$\mbox{]}, uint32\+\_\+t df\+Groups\+Num, uint8\+\_\+t target\+DFType)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a42dfe869c0f11ebb659ed3dd75e2333d}{fill\+Channels\+Mask}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a7e73ae9c271ac0e49350ce0421ce1ec3}{fill\+Channels\+XYCoords}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a1850dad6a125e77dc92be9772e279d6e}{calc\+Obj\+Delays}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afc815bfaeb3090c1b7e1472973ecf390}{calc\+Pftp\+Delays}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a6a47de368548982d2b5f5801dfc8c867}{print\+Cntrl\+Msg\+Objects}} (int32\+\_\+t obj\+Num) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aaec31ac9f1593eb99ecb8f84d6d92b35}{fill\+Obj\+Coords}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_adacd0ee106b73255678d03a95ed0214f}{fill\+Ampl\+Distribution\+Num}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a6349cfcaeeee946a55fc3991a9ce988a}{fill\+Heter\+Freq\+Point}} (const TStrobe \texorpdfstring{$\ast$}{*}trpr\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a1751190a9dc15114fb76e4060618261c}{calc\+Dig\+Spat\+Proc\+Norm}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type)
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aa64d8db5bf9e09f36bead0c6e577a234}{calc\+Phase4\+Spat\+Proc\+Vector}} (uint32\+\_\+t ray, uint32\+\_\+t first\+Chan\+Of\+Cell, uint32\+\_\+t chan) const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ad47329f11597491a0044be5a2eac42a6}{is\+Sum\+Diff\+DF}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4a003b5468ddf4311cc02826b9d66367}{copy\+SPV1\+From\+Ray\+Zero}} (uint32\+\_\+t ray\+Num, int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num, uint32\+\_\+t chan\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a03d772407d7cde4aa51819fd0e4799eb}{copy\+SPV2\+From\+Ray\+Zero}} (uint32\+\_\+t ray\+Num, uint32\+\_\+t chan\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aff70f03f91930132c5db0c565790e383}{calc\+Spat\+Proc\+Vectors}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a5665b985cc48794473019f2af42de7a0}{fill\+Kgrs}} (uint16\+\_\+t kgrs)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4d8b1a4ef1371537a872ab859199a1b1}{calc\+Strb\+Lengths}} (uint32\+\_\+t trimts\+Length, uint32\+\_\+t trpr\+Length)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a926c02483ae04c583df0e62efaa1c00c}{fill\+Station\+Params}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}st\+Params)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a37cce8a1d1703953f9f27038d985891e}{fill\+Polars\+Combining}} (uint8\+\_\+t polars\+Combining\+Code)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a0bed87b74f333112453ab62e56b77112}{calc\+Cell\+Wpap\+Coefs}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ae4cfa64eedb3785fb7a293143f0d0beb}{calc\+D2zs\+Ch}} (double u, double v, double x, double y) const
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a59bd36f99475bb667645ce8b52f67f0a}{calc\+D2zO}} (double u, double v, double x, double y) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aae9affb10ff22e7131a74fade7b84674}{calc\+Proc\+Carrier\+Freq}} (int32\+\_\+t trpr\+Fg1)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a20875f89143fc6ef47b7a962e80f82a3}{remember\+Klb\+And\+Afr}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1InputMessages}{CMsg\+Model\+Types\+::\+Input\+Messages}} \texorpdfstring{$\ast$}{*}input\+Msgs)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ac644e361156db78d5fbdcca16cb00c3e}{fill\+Klb\+Afr\+Of\+Cell}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4f6f1bde49a3dd949c1fc610cfb4de71}{calc\+Phi\+And\+Ampl\+Afr}} (std\+::complex$<$ double $>$ afr\+Coef, double \texorpdfstring{$\ast$}{*}phi, uint16\+\_\+t \texorpdfstring{$\ast$}{*}ampl) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ad9a7470cecd7b4b3cdf1eb0f768a4e90}{calc\+First\+Chan\+Of\+Cell}} (int32\+\_\+t crate\+Num, int32\+\_\+t cell\+Num) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a0dc6dd4eef776c4174c8271b24014c32}{fill\+Ampl\+Afr}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_af3f39b65ad57ac0b6963ffc50e62454d}{calc\+Sig\+Initial\+Phase}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a48723f01a3320e590fcf6a4cffe3a336}{calc\+Signal\+Freq}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a8a94615669826d79b4a967f34c127a10}{calc\+Sig\+Phase\+Increment}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a53c7223948ce2105847a7609e793c2ed}{fill\+Signal\+Types}} (const Imit\+Object trimts\+Obj\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a04f4e12d882c23d51941bf68a40ff537}{fill\+Obj\+Dfm}} (const Imit\+Object trimts\+Obj\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aebec8e6ceb3e1cab56afcb47cc704bbc}{calc\+Sig\+In\+Chan\+Initial\+Phase}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afc495a71f68f84926716d8b0bb6f21f9}{calc\+Signal\+In\+Chan\+Freq}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a7f81be9761ff2b17132a9616ba6bb663}{calc\+Dimless\+Rate\+Of\+Freq\+Change}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a9b3ef0ae3224f5af23dc8fcfa2372a84}{calc\+Max\+Obj\+Delays}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a8fa316afc8c96cea4f24354cc7149141}{fill\+Obj\+NTay}} (const Imit\+Object trimts\+Obj\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a8f988f840a483ed112cfc88cb3366c3a}{calc\+Min\+Dist2\+ZSource4\+Each\+Ray}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aceabefab67a90b48aacc31f3bf578ac6}{calc\+Min\+Dist2\+ZSource4\+Dfg\+Center}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a14660fe3a47513fc672701ad2102b6dd}{calc\+Division\+Coef}} (const TStrobe \texorpdfstring{$\ast$}{*}trpr\+Strb) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a905231f5c9c8610130787d5874a1419b}{calc\+Div\+Coefs\+XY}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}div\+CoefX, uint32\+\_\+t \texorpdfstring{$\ast$}{*}div\+CoefY) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aee6ce73e15223007a3b01e0a4fe8f1f8}{calc\+Min\+Dist2\+ZSource4\+Each\+Pap}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a00d7bcbf513809d4c08a7374528d260e}{calc\+Min\+Dist2\+ZSource4\+Each\+Pap2}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aad1def0810a78d47508963d74840236d}{calc\+Pftp\+Pap\+Min\+Delay}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_afdea36b70deccbbd19db72ddf0850c00}{get\+First\+Non\+Virtual\+Channel\+Num}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a50d96b63cf06616b22e21870a62e0a92}{calc\+Adc\+Proc\+Offsets}} (uint32\+\_\+t trimts\+Strb\+Begin, uint32\+\_\+t trpr\+Strb\+Begin)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2bf0a2900787d2fb41bdbdf081d12ecd}{fill\+Adc\+Imitator\+Params}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a437def5b3f95f96c1193fdedde11fdb6}{correction\+Of\+Obj\+Intensity}} (const Imit\+Strobe \texorpdfstring{$\ast$}{*}trimts\+Strb)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a6c5940192337528dc4eb099f32e74235}{calc\+Quarter\+Of\+Antenna}} (int32\+\_\+t crate\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_af089bc3f486ae5fa4628e56a10881520}{fill\+Channels\+Mask\+For\+Autocomp}} (int32\+\_\+t crate\+Num)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a332a87d21f9073dcf850244e74a2b94b}{calc\+Corr\+Freq\+Dist}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a9b8ad84afffdcce650e5bdd762759e8a}{calc\+Wlb\+Norm}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ab12610591b5b147751cf09e0bb252e8e}{calc\+Sig\+Length}} (const PAR\+\_\+\+SIGN \texorpdfstring{$\ast$}{*}sig\+Params, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} station\+Type)
+\item 
+static uint \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2526589dd6c2175210f6a290e6edb5e3}{calc\+Basic\+Nihs}} (const PAR\+\_\+\+SIGN \texorpdfstring{$\ast$}{*}sig\+Params, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \&\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a5db48e14b2fa2a01510a802f84dcc979}{station\+Params}})
+\item 
+static uint \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a0765d004b4c541b99f63fe783e5f4487}{calc\+True\+Nihs}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a2fd80fef7395401b03bda0dac51de049}{strb}}, const PAR\+\_\+\+SIGN \texorpdfstring{$\ast$}{*}sig\+Params, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \&\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a5db48e14b2fa2a01510a802f84dcc979}{station\+Params}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationConfig}{CMsg\+Model\+Types\+::\+Station\+Config}} $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aeffcd4c34d5760bbb26b2a5b34914e99}{config}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Ippa}{Ippa}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a3c3da7803cd4dbc588e503e0be11188f}{ippa}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp}{Trkp}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a3445f92d7b719758e14619a6c04453b8}{klb}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp}{Trkp}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a94c7809db655f60929a7aa6b0fea756a}{afr}}
+\item 
+E2\+TRPR \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a33ca2a966baf13580e4a73db41e6b606}{trpr}}
+\item 
+Trimts\+Msg \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ad522780309048bbca93c5e5aeb3331a3}{trimts}}
+\item 
+int \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ac334e4b48da5313a1736e273f666a055}{trpr\+Strb\+Idx}}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a8bf2c8d7ece0caaa1e50942471ff6487}{max\+Delay\+In\+Obj}} \mbox{[}\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{max\+Imit\+Objects}}\mbox{]}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ac6b875ef2a366052cd9d20e86f12e225}{min\+Dist2\+ZSource4\+Each\+Pap}} \mbox{[}max\+Active\+Interferences\mbox{]}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a3d3aac901300655a723792c9212d0d20}{pftp\+Pap\+Min\+Delay\+In\+Interf}} \mbox{[}max\+Active\+Interferences\mbox{]}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ac5b9df0a15cc195305136355b9e5e968}{pftp\+Min\+Delay}}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_ab43b945dea96039dbbe540ea9150e48d}{min\+Dist2\+ZSource}}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4828bb64514ffea5484198d6fba88206}{pftp\+Min\+Delay\+In\+Rays}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{Shared\+Const\+::max\+DFGroups}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a673710b9708848cc56cc351f41acd2b7}{min\+Dist2\+ZSource\+In\+Rays}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{Shared\+Const\+::max\+DFGroups}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_aedcdfc1730b54f5af6d89801f131f99d}{d2zs\+In\+Ch}}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg_a4fdb7a3a4a4d01ff375ff761082512ac}{d2zs\+In\+Ch\+Rays}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс управляющего сообщения (УС). Содержит ФУ строба в виде, удобном для модели; содержит также копии ТРПР и ТРИМС. Пересчитывается для каждой ячейки (\doxylink{classModelNS23817A620S1823_1_1ControlMsg_a9fac07c26fa54b86b88f1b9b7ce456cd}{change\+C412}), причем in place (т.\+е. change\+C412 -\/ мутатор). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ad009ae7f9e563e84482f12c9a2109144}\label{classModelNS23817A620S1823_1_1ControlMsg_ad009ae7f9e563e84482f12c9a2109144} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!ControlMsg@{ControlMsg}}
+\index{ControlMsg@{ControlMsg}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{ControlMsg()}{ControlMsg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::\+Control\+Msg (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationConfig}{CMsg\+Model\+Types\+::\+Station\+Config}} $>$}]{conf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Конструктор объекта класса. 
+\begin{DoxyParams}{Parameters}
+{\em utils} & указатель на объект утилит для формирования управляющего сообщения \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_ad009ae7f9e563e84482f12c9a2109144_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ab9d54c8d0a794d3b1ccef289a7786e1c}\label{classModelNS23817A620S1823_1_1ControlMsg_ab9d54c8d0a794d3b1ccef289a7786e1c} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!ControlMsg@{ControlMsg}}
+\index{ControlMsg@{ControlMsg}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{ControlMsg()}{ControlMsg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::\+Control\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_ab9d54c8d0a794d3b1ccef289a7786e1c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ae330379e3753ea19f5cb314e52c53c5d}\label{classModelNS23817A620S1823_1_1ControlMsg_ae330379e3753ea19f5cb314e52c53c5d} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!````~ControlMsg@{\texorpdfstring{$\sim$}{\string~}ControlMsg}}
+\index{````~ControlMsg@{\texorpdfstring{$\sim$}{\string~}ControlMsg}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ControlMsg()}{\string~ControlMsg()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::\texorpdfstring{$\sim$}{\string~}\+Control\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a50d96b63cf06616b22e21870a62e0a92}\label{classModelNS23817A620S1823_1_1ControlMsg_a50d96b63cf06616b22e21870a62e0a92} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcAdcProcOffsets@{calcAdcProcOffsets}}
+\index{calcAdcProcOffsets@{calcAdcProcOffsets}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcAdcProcOffsets()}{calcAdcProcOffsets()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Adc\+Proc\+Offsets (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{trimts\+Strb\+Begin,  }\item[{uint32\+\_\+t}]{trpr\+Strb\+Begin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт смещений строба имитации относительно строба обработки и вычисление исходя из этого длины данных строба имитации, которые по времени совпадают со стробом обработки. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb\+Begin} & начало строба имитации из Е2ТРИМЦ \\
+\hline
+{\em trpr\+Strb\+Begin} & начало строба обработки из Е2ТРПР \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2526589dd6c2175210f6a290e6edb5e3}\label{classModelNS23817A620S1823_1_1ControlMsg_a2526589dd6c2175210f6a290e6edb5e3} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcBasicNihs@{calcBasicNihs}}
+\index{calcBasicNihs@{calcBasicNihs}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcBasicNihs()}{calcBasicNihs()}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Basic\+Nihs (\begin{DoxyParamCaption}\item[{const PAR\+\_\+\+SIGN \texorpdfstring{$\ast$}{*}}]{sig\+Params,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \&}]{station\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Возврат длительности импульсной характеристики сигнала в числе дискретов частоты на входе ЧВО. 
+\begin{DoxyParams}{Parameters}
+{\em sig\+Params} & указатель на объект структуры данных, описывающей сигнал \\
+\hline
+{\em station\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+длительность импульсной характеристики сигнала 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a0bed87b74f333112453ab62e56b77112}\label{classModelNS23817A620S1823_1_1ControlMsg_a0bed87b74f333112453ab62e56b77112} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcCellWpapCoefs@{calcCellWpapCoefs}}
+\index{calcCellWpapCoefs@{calcCellWpapCoefs}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcCellWpapCoefs()}{calcCellWpapCoefs()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Cell\+Wpap\+Coefs (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт векторов ПО на постановщик активной помехи для координатной адаптации. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a0bed87b74f333112453ab62e56b77112_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a332a87d21f9073dcf850244e74a2b94b}\label{classModelNS23817A620S1823_1_1ControlMsg_a332a87d21f9073dcf850244e74a2b94b} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcCorrFreqDist@{calcCorrFreqDist}}
+\index{calcCorrFreqDist@{calcCorrFreqDist}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcCorrFreqDist()}{calcCorrFreqDist()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Corr\+Freq\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчет коэффициента коррекции частотных искажений, показывает на сколько частота гетеродина отличается от середины интервала \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a59bd36f99475bb667645ce8b52f67f0a}\label{classModelNS23817A620S1823_1_1ControlMsg_a59bd36f99475bb667645ce8b52f67f0a} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcD2zO@{calcD2zO}}
+\index{calcD2zO@{calcD2zO}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcD2zO()}{calcD2zO()}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+D2zO (\begin{DoxyParamCaption}\item[{double}]{u,  }\item[{double}]{v,  }\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт расстояния до объекта в канале. 
+\begin{DoxyParams}{Parameters}
+{\em u} & координата U луча/центра ПГ \\
+\hline
+{\em v} & координата V луча/центра ПГ \\
+\hline
+{\em x} & координата X канала \\
+\hline
+{\em y} & координата Y канала \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+расстояние до объекта в канале 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ae4cfa64eedb3785fb7a293143f0d0beb}\label{classModelNS23817A620S1823_1_1ControlMsg_ae4cfa64eedb3785fb7a293143f0d0beb} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcD2zsCh@{calcD2zsCh}}
+\index{calcD2zsCh@{calcD2zsCh}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcD2zsCh()}{calcD2zsCh()}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+D2zs\+Ch (\begin{DoxyParamCaption}\item[{double}]{u,  }\item[{double}]{v,  }\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт расстояния до источника в канале. 
+\begin{DoxyParams}{Parameters}
+{\em u} & координата U луча/центра ПГ \\
+\hline
+{\em v} & координата V луча/центра ПГ \\
+\hline
+{\em x} & координата X канала \\
+\hline
+{\em y} & координата Y канала \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+расстояние до источника в канале 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a1751190a9dc15114fb76e4060618261c}\label{classModelNS23817A620S1823_1_1ControlMsg_a1751190a9dc15114fb76e4060618261c} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcDigSpatProcNorm@{calcDigSpatProcNorm}}
+\index{calcDigSpatProcNorm@{calcDigSpatProcNorm}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcDigSpatProcNorm()}{calcDigSpatProcNorm()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Dig\+Spat\+Proc\+Norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт и заполнение нормы ЦПО исходя из типа поляризации. 
+\begin{DoxyParams}{Parameters}
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a1751190a9dc15114fb76e4060618261c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a7f81be9761ff2b17132a9616ba6bb663}\label{classModelNS23817A620S1823_1_1ControlMsg_a7f81be9761ff2b17132a9616ba6bb663} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcDimlessRateOfFreqChange@{calcDimlessRateOfFreqChange}}
+\index{calcDimlessRateOfFreqChange@{calcDimlessRateOfFreqChange}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcDimlessRateOfFreqChange()}{calcDimlessRateOfFreqChange()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Dimless\+Rate\+Of\+Freq\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Возврат безразмерной скорости изменения частоты (для ЛЧМ в ПЧВО) Воронеж-\/СМ. \begin{DoxyReturn}{Returns}
+безразмерная скорость изменения частоты 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a905231f5c9c8610130787d5874a1419b}\label{classModelNS23817A620S1823_1_1ControlMsg_a905231f5c9c8610130787d5874a1419b} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcDivCoefsXY@{calcDivCoefsXY}}
+\index{calcDivCoefsXY@{calcDivCoefsXY}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcDivCoefsXY()}{calcDivCoefsXY()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Div\+Coefs\+XY (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{div\+CoefX,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{div\+CoefY }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Запись в аргументы метода количества фрагментов по длине антенны и по высоте соответственно. 
+\begin{DoxyParams}{Parameters}
+{\em div\+CoefX} & указатель на переменную, в которую будет записано количества фрагментов по длине антенны \\
+\hline
+{\em div\+CoefY} & указатель на переменную, в которую будет записано количества фрагментов по высоте антенны \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a14660fe3a47513fc672701ad2102b6dd}\label{classModelNS23817A620S1823_1_1ControlMsg_a14660fe3a47513fc672701ad2102b6dd} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcDivisionCoef@{calcDivisionCoef}}
+\index{calcDivisionCoef@{calcDivisionCoef}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcDivisionCoef()}{calcDivisionCoef()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Division\+Coef (\begin{DoxyParamCaption}\item[{const TStrobe \texorpdfstring{$\ast$}{*}}]{trpr\+Strb }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт коэффициента дробления полотна. 
+\begin{DoxyParams}{Parameters}
+{\em trpr\+Strb} & указатель на объект строба сообщения Е2ТРПР \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество фрагментов, на которые поделено антенное полотно 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a14660fe3a47513fc672701ad2102b6dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ad9a7470cecd7b4b3cdf1eb0f768a4e90}\label{classModelNS23817A620S1823_1_1ControlMsg_ad9a7470cecd7b4b3cdf1eb0f768a4e90} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcFirstChanOfCell@{calcFirstChanOfCell}}
+\index{calcFirstChanOfCell@{calcFirstChanOfCell}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcFirstChanOfCell()}{calcFirstChanOfCell()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+First\+Chan\+Of\+Cell (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Вычисление номера первого канала ячейки в сквозной нумерации в поляризации. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер первого канала ячейки в сквозной нумерации в поляризации 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a9b3ef0ae3224f5af23dc8fcfa2372a84}\label{classModelNS23817A620S1823_1_1ControlMsg_a9b3ef0ae3224f5af23dc8fcfa2372a84} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcMaxObjDelays@{calcMaxObjDelays}}
+\index{calcMaxObjDelays@{calcMaxObjDelays}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcMaxObjDelays()}{calcMaxObjDelays()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Max\+Obj\+Delays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт минимальной дальности по каждому объекту и нахождение максимальной задержки по всем объектам. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a9b3ef0ae3224f5af23dc8fcfa2372a84_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aceabefab67a90b48aacc31f3bf578ac6}\label{classModelNS23817A620S1823_1_1ControlMsg_aceabefab67a90b48aacc31f3bf578ac6} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcMinDist2ZSource4DfgCenter@{calcMinDist2ZSource4DfgCenter}}
+\index{calcMinDist2ZSource4DfgCenter@{calcMinDist2ZSource4DfgCenter}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcMinDist2ZSource4DfgCenter()}{calcMinDist2ZSource4DfgCenter()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Min\+Dist2\+ZSource4\+Dfg\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Нахождение минимального расстояния до источника среди всех каналов поляризации для центра группы. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_aceabefab67a90b48aacc31f3bf578ac6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aee6ce73e15223007a3b01e0a4fe8f1f8}\label{classModelNS23817A620S1823_1_1ControlMsg_aee6ce73e15223007a3b01e0a4fe8f1f8} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcMinDist2ZSource4EachPap@{calcMinDist2ZSource4EachPap}}
+\index{calcMinDist2ZSource4EachPap@{calcMinDist2ZSource4EachPap}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcMinDist2ZSource4EachPap()}{calcMinDist2ZSource4EachPap()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Min\+Dist2\+ZSource4\+Each\+Pap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт минимального расстояния до источника для каждой активной помехи. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_aee6ce73e15223007a3b01e0a4fe8f1f8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a00d7bcbf513809d4c08a7374528d260e}\label{classModelNS23817A620S1823_1_1ControlMsg_a00d7bcbf513809d4c08a7374528d260e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcMinDist2ZSource4EachPap2@{calcMinDist2ZSource4EachPap2}}
+\index{calcMinDist2ZSource4EachPap2@{calcMinDist2ZSource4EachPap2}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcMinDist2ZSource4EachPap2()}{calcMinDist2ZSource4EachPap2()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Min\+Dist2\+ZSource4\+Each\+Pap2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a8f988f840a483ed112cfc88cb3366c3a}\label{classModelNS23817A620S1823_1_1ControlMsg_a8f988f840a483ed112cfc88cb3366c3a} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcMinDist2ZSource4EachRay@{calcMinDist2ZSource4EachRay}}
+\index{calcMinDist2ZSource4EachRay@{calcMinDist2ZSource4EachRay}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcMinDist2ZSource4EachRay()}{calcMinDist2ZSource4EachRay()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Min\+Dist2\+ZSource4\+Each\+Ray (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Нахождение минимального расстояния до источника среди всех каналов поляризации для каждого луча. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a8f988f840a483ed112cfc88cb3366c3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2aa2346c191712b1e423b48e78a3551c}\label{classModelNS23817A620S1823_1_1ControlMsg_a2aa2346c191712b1e423b48e78a3551c} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcN1Norm@{calcN1Norm}}
+\index{calcN1Norm@{calcN1Norm}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcN1Norm()}{calcN1Norm()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+N1\+Norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{lattice\+Mask }\end{DoxyParamCaption})}
+
+Расчет и заполнение нормы для 978, 223 и 435 блоков исходя из типа поляризации и маски каналов полотна 
+\begin{DoxyParams}{Parameters}
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a2aa2346c191712b1e423b48e78a3551c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ab9f23da88df8188e21162e9445756453}\label{classModelNS23817A620S1823_1_1ControlMsg_ab9f23da88df8188e21162e9445756453} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcN2Norm@{calcN2Norm}}
+\index{calcN2Norm@{calcN2Norm}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcN2Norm()}{calcN2Norm()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+N2\+Norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Расчет и заполнение нормы для 232 блока исходя из типа строба Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_ab9f23da88df8188e21162e9445756453_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_af2b61c84eac69447d0c6a083393c7117}\label{classModelNS23817A620S1823_1_1ControlMsg_af2b61c84eac69447d0c6a083393c7117} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcNShift@{calcNShift}}
+\index{calcNShift@{calcNShift}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcNShift()}{calcNShift()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+NShift (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Расчёт сдвига в режимах калибровки, РИУШ и дробления полотна для ФПО МПК. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_af2b61c84eac69447d0c6a083393c7117_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a1850dad6a125e77dc92be9772e279d6e}\label{classModelNS23817A620S1823_1_1ControlMsg_a1850dad6a125e77dc92be9772e279d6e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcObjDelays@{calcObjDelays}}
+\index{calcObjDelays@{calcObjDelays}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcObjDelays()}{calcObjDelays()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Obj\+Delays (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт задержек для объектов для заданной 412й ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a1850dad6a125e77dc92be9772e279d6e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afc815bfaeb3090c1b7e1472973ecf390}\label{classModelNS23817A620S1823_1_1ControlMsg_afc815bfaeb3090c1b7e1472973ecf390} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcPftpDelays@{calcPftpDelays}}
+\index{calcPftpDelays@{calcPftpDelays}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcPftpDelays()}{calcPftpDelays()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Pftp\+Delays (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт задержек для ПЧВО для заданной 412й ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_afc815bfaeb3090c1b7e1472973ecf390_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aad1def0810a78d47508963d74840236d}\label{classModelNS23817A620S1823_1_1ControlMsg_aad1def0810a78d47508963d74840236d} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcPftpPapMinDelay@{calcPftpPapMinDelay}}
+\index{calcPftpPapMinDelay@{calcPftpPapMinDelay}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcPftpPapMinDelay()}{calcPftpPapMinDelay()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Pftp\+Pap\+Min\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт минимальной задержки в каналах для каждой активной помехи для ПЧВО. \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aa64d8db5bf9e09f36bead0c6e577a234}\label{classModelNS23817A620S1823_1_1ControlMsg_aa64d8db5bf9e09f36bead0c6e577a234} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcPhase4SpatProcVector@{calcPhase4SpatProcVector}}
+\index{calcPhase4SpatProcVector@{calcPhase4SpatProcVector}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcPhase4SpatProcVector()}{calcPhase4SpatProcVector()}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Phase4\+Spat\+Proc\+Vector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ray,  }\item[{uint32\+\_\+t}]{first\+Chan\+Of\+Cell,  }\item[{uint32\+\_\+t}]{chan }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт фазы для вектора ПО. 
+\begin{DoxyParams}{Parameters}
+{\em ray} & номер луча \\
+\hline
+{\em first\+Chan\+Of\+Cell} & сквозной в поляризации номер первого канала в ячейке \\
+\hline
+{\em chan} & номер канала в поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+фаза для расчёта вектора ПО 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_aa64d8db5bf9e09f36bead0c6e577a234_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4f6f1bde49a3dd949c1fc610cfb4de71}\label{classModelNS23817A620S1823_1_1ControlMsg_a4f6f1bde49a3dd949c1fc610cfb4de71} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcPhiAndAmplAfr@{calcPhiAndAmplAfr}}
+\index{calcPhiAndAmplAfr@{calcPhiAndAmplAfr}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcPhiAndAmplAfr()}{calcPhiAndAmplAfr()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Phi\+And\+Ampl\+Afr (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$}]{afr\+Coef,  }\item[{double \texorpdfstring{$\ast$}{*}}]{phi,  }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{ampl }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Вычисление амплитуды и фазы заданного коэффциента АФР для имитатора АЦП. 
+\begin{DoxyParams}{Parameters}
+{\em afr\+Coef} & коэффициент амплитудного распределения \\
+\hline
+{\em phi} & фаза АФР \\
+\hline
+{\em ampl} & амплитуда АФР \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aae9affb10ff22e7131a74fade7b84674}\label{classModelNS23817A620S1823_1_1ControlMsg_aae9affb10ff22e7131a74fade7b84674} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcProcCarrierFreq@{calcProcCarrierFreq}}
+\index{calcProcCarrierFreq@{calcProcCarrierFreq}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcProcCarrierFreq()}{calcProcCarrierFreq()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Proc\+Carrier\+Freq (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trpr\+Fg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт несущей частоты для обработки (412я ячейка после имитатора АЦП). 
+\begin{DoxyParams}{Parameters}
+{\em trpr\+Fg1} & частота первого гетеродина \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a6c5940192337528dc4eb099f32e74235}\label{classModelNS23817A620S1823_1_1ControlMsg_a6c5940192337528dc4eb099f32e74235} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcQuarterOfAntenna@{calcQuarterOfAntenna}}
+\index{calcQuarterOfAntenna@{calcQuarterOfAntenna}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcQuarterOfAntenna()}{calcQuarterOfAntenna()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Quarter\+Of\+Antenna (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт номера четверти антенного полотна по номеру крейта (в нумерации модели). Четверти в модели расположены как на решётке и нумеруются на всех станциях так\+: 1 3 0 2 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер текущего крейта \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер четверти полотна, в которой находится заданный крейт 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aebec8e6ceb3e1cab56afcb47cc704bbc}\label{classModelNS23817A620S1823_1_1ControlMsg_aebec8e6ceb3e1cab56afcb47cc704bbc} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSigInChanInitialPhase@{calcSigInChanInitialPhase}}
+\index{calcSigInChanInitialPhase@{calcSigInChanInitialPhase}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSigInChanInitialPhase()}{calcSigInChanInitialPhase()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Sig\+In\+Chan\+Initial\+Phase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт начальной фазы сигнала в каналах в ПЧВО (Воронеж-\/М/СМ). \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_af3f39b65ad57ac0b6963ffc50e62454d}\label{classModelNS23817A620S1823_1_1ControlMsg_af3f39b65ad57ac0b6963ffc50e62454d} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSigInitialPhase@{calcSigInitialPhase}}
+\index{calcSigInitialPhase@{calcSigInitialPhase}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSigInitialPhase()}{calcSigInitialPhase()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Sig\+Initial\+Phase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт начальной фазы сигнала в объектах (Воронеж-\/М/СМ). Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_af3f39b65ad57ac0b6963ffc50e62454d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ab12610591b5b147751cf09e0bb252e8e}\label{classModelNS23817A620S1823_1_1ControlMsg_ab12610591b5b147751cf09e0bb252e8e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSigLength@{calcSigLength}}
+\index{calcSigLength@{calcSigLength}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSigLength()}{calcSigLength()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Sig\+Length (\begin{DoxyParamCaption}\item[{const PAR\+\_\+\+SIGN \texorpdfstring{$\ast$}{*}}]{sig\+Params,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{station\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Возврат длины сигнала указанного типа в числе дискретов частоты дискретизации/имитации. 
+\begin{DoxyParams}{Parameters}
+{\em sig\+Params} & указатель на объект структуры данных, описывающей сигнал \\
+\hline
+{\em station\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+длина сигнала 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a48723f01a3320e590fcf6a4cffe3a336}\label{classModelNS23817A620S1823_1_1ControlMsg_a48723f01a3320e590fcf6a4cffe3a336} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSignalFreq@{calcSignalFreq}}
+\index{calcSignalFreq@{calcSignalFreq}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSignalFreq()}{calcSignalFreq()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Signal\+Freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт частоты сигнала в объектах (Воронеж-\/М/СМ). \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afc495a71f68f84926716d8b0bb6f21f9}\label{classModelNS23817A620S1823_1_1ControlMsg_afc495a71f68f84926716d8b0bb6f21f9} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSignalInChanFreq@{calcSignalInChanFreq}}
+\index{calcSignalInChanFreq@{calcSignalInChanFreq}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSignalInChanFreq()}{calcSignalInChanFreq()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Signal\+In\+Chan\+Freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт частоты сигнала в каналах в ПЧВО (Воронеж-\/М/СМ). \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a8a94615669826d79b4a967f34c127a10}\label{classModelNS23817A620S1823_1_1ControlMsg_a8a94615669826d79b4a967f34c127a10} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSigPhaseIncrement@{calcSigPhaseIncrement}}
+\index{calcSigPhaseIncrement@{calcSigPhaseIncrement}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSigPhaseIncrement()}{calcSigPhaseIncrement()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Sig\+Phase\+Increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт приращения фазы за счёт ЛЧМ сигнала в объектах (Воронеж-\/М/СМ). \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aff70f03f91930132c5db0c565790e383}\label{classModelNS23817A620S1823_1_1ControlMsg_aff70f03f91930132c5db0c565790e383} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcSpatProcVectors@{calcSpatProcVectors}}
+\index{calcSpatProcVectors@{calcSpatProcVectors}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcSpatProcVectors()}{calcSpatProcVectors()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Spat\+Proc\+Vectors (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт векторов ПО для ППО. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_aff70f03f91930132c5db0c565790e383_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4d8b1a4ef1371537a872ab859199a1b1}\label{classModelNS23817A620S1823_1_1ControlMsg_a4d8b1a4ef1371537a872ab859199a1b1} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcStrbLengths@{calcStrbLengths}}
+\index{calcStrbLengths@{calcStrbLengths}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcStrbLengths()}{calcStrbLengths()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Strb\+Lengths (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{trimts\+Length,  }\item[{uint32\+\_\+t}]{trpr\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт длин строба (для имитатора и для обработки). 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Length} & длина строба имитации из сообщения Е2ТРИМЦ. \\
+\hline
+{\em trpr\+Length} & длина строба приёма из сообщения Е2ТРПР \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a4d8b1a4ef1371537a872ab859199a1b1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a0765d004b4c541b99f63fe783e5f4487}\label{classModelNS23817A620S1823_1_1ControlMsg_a0765d004b4c541b99f63fe783e5f4487} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcTrueNihs@{calcTrueNihs}}
+\index{calcTrueNihs@{calcTrueNihs}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcTrueNihs()}{calcTrueNihs()}}
+{\footnotesize\ttfamily uint Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+True\+Nihs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \&}]{strb,  }\item[{const PAR\+\_\+\+SIGN \texorpdfstring{$\ast$}{*}}]{sig\+Params,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \&}]{station\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Как calc\+Basic\+Nihs, но учитывается скорость цели (СМ и МРИК; указывается посредством частоты второго гетеродина) Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a0765d004b4c541b99f63fe783e5f4487_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a9b8ad84afffdcce650e5bdd762759e8a}\label{classModelNS23817A620S1823_1_1ControlMsg_a9b8ad84afffdcce650e5bdd762759e8a} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!calcWlbNorm@{calcWlbNorm}}
+\index{calcWlbNorm@{calcWlbNorm}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{calcWlbNorm()}{calcWlbNorm()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::calc\+Wlb\+Norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчет коэффициента нормировки ЦФНЧ \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a9fac07c26fa54b86b88f1b9b7ce456cd}\label{classModelNS23817A620S1823_1_1ControlMsg_a9fac07c26fa54b86b88f1b9b7ce456cd} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!changeC412@{changeC412}}
+\index{changeC412@{changeC412}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{changeC412()}{changeC412()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::change\+C412 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})}
+
+Пересчёт параметров УС, зависящих от номера канала/ячейки при смене 412й (223й) ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a9fac07c26fa54b86b88f1b9b7ce456cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4a003b5468ddf4311cc02826b9d66367}\label{classModelNS23817A620S1823_1_1ControlMsg_a4a003b5468ddf4311cc02826b9d66367} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!copySPV1FromRayZero@{copySPV1FromRayZero}}
+\index{copySPV1FromRayZero@{copySPV1FromRayZero}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{copySPV1FromRayZero()}{copySPV1FromRayZero()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::copy\+SPV1\+From\+Ray\+Zero (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ray\+Num,  }\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num,  }\item[{uint32\+\_\+t}]{chan\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт векторов ПО для режима СРП-\/1. 
+\begin{DoxyParams}{Parameters}
+{\em ray\+Num} & номер луча \\
+\hline
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+{\em chan\+Num} & номер канала в ячейке\\
+\hline
+\end{DoxyParams}
+В отличие от других режимов в этом только нулевой луч считается как обычно, а остальные два являются копиями нулевого с изменённым знаком в нижней половине полотна для первого луча и в левой половине полотна для второго луча. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a4a003b5468ddf4311cc02826b9d66367_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a03d772407d7cde4aa51819fd0e4799eb}\label{classModelNS23817A620S1823_1_1ControlMsg_a03d772407d7cde4aa51819fd0e4799eb} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!copySPV2FromRayZero@{copySPV2FromRayZero}}
+\index{copySPV2FromRayZero@{copySPV2FromRayZero}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{copySPV2FromRayZero()}{copySPV2FromRayZero()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::copy\+SPV2\+From\+Ray\+Zero (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ray\+Num,  }\item[{uint32\+\_\+t}]{chan\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт векторов ПО для режима СРП-\/2. 
+\begin{DoxyParams}{Parameters}
+{\em ray\+Num} & номер луча \\
+\hline
+{\em chan\+Num} & номер канала в ячейке\\
+\hline
+\end{DoxyParams}
+В отличие от других режимов в этом только нулевой луч считается как обычно, а остальные два являются копиями нулевого с изменёнными весами и знаками. \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a437def5b3f95f96c1193fdedde11fdb6}\label{classModelNS23817A620S1823_1_1ControlMsg_a437def5b3f95f96c1193fdedde11fdb6} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!correctionOfObjIntensity@{correctionOfObjIntensity}}
+\index{correctionOfObjIntensity@{correctionOfObjIntensity}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{correctionOfObjIntensity()}{correctionOfObjIntensity()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::correction\+Of\+Obj\+Intensity (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Пересчёт интенсивности иммитируемых объектов с учетом диаграммы подрешетки. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2bf0a2900787d2fb41bdbdf081d12ecd}\label{classModelNS23817A620S1823_1_1ControlMsg_a2bf0a2900787d2fb41bdbdf081d12ecd} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillAdcImitatorParams@{fillAdcImitatorParams}}
+\index{fillAdcImitatorParams@{fillAdcImitatorParams}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillAdcImitatorParams()}{fillAdcImitatorParams()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Adc\+Imitator\+Params (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение полей строба и объектов, управляющих имитатором АЦП, данными строба сетевого сообщения Е2ТРИМЦ. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a2bf0a2900787d2fb41bdbdf081d12ecd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a0dc6dd4eef776c4174c8271b24014c32}\label{classModelNS23817A620S1823_1_1ControlMsg_a0dc6dd4eef776c4174c8271b24014c32} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillAmplAfr@{fillAmplAfr}}
+\index{fillAmplAfr@{fillAmplAfr}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillAmplAfr()}{fillAmplAfr()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Ampl\+Afr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение амплитуд амплитудно-\/фазового распределения по всем каналам поляризации. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a0dc6dd4eef776c4174c8271b24014c32_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_adacd0ee106b73255678d03a95ed0214f}\label{classModelNS23817A620S1823_1_1ControlMsg_adacd0ee106b73255678d03a95ed0214f} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillAmplDistributionNum@{fillAmplDistributionNum}}
+\index{fillAmplDistributionNum@{fillAmplDistributionNum}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillAmplDistributionNum()}{fillAmplDistributionNum()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Ampl\+Distribution\+Num (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение номера амплитудного распределения по каждому каналу текущей ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_adacd0ee106b73255678d03a95ed0214f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a42dfe869c0f11ebb659ed3dd75e2333d}\label{classModelNS23817A620S1823_1_1ControlMsg_a42dfe869c0f11ebb659ed3dd75e2333d} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillChannelsMask@{fillChannelsMask}}
+\index{fillChannelsMask@{fillChannelsMask}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillChannelsMask()}{fillChannelsMask()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Channels\+Mask (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Формирование маски каналов для заданной 412й ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a42dfe869c0f11ebb659ed3dd75e2333d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_af089bc3f486ae5fa4628e56a10881520}\label{classModelNS23817A620S1823_1_1ControlMsg_af089bc3f486ae5fa4628e56a10881520} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillChannelsMaskForAutocomp@{fillChannelsMaskForAutocomp}}
+\index{fillChannelsMaskForAutocomp@{fillChannelsMaskForAutocomp}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillChannelsMaskForAutocomp()}{fillChannelsMaskForAutocomp()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Channels\+Mask\+For\+Autocomp (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение маски каналов для автокомпенсации. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер текущего крейта \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_af089bc3f486ae5fa4628e56a10881520_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a7e73ae9c271ac0e49350ce0421ce1ec3}\label{classModelNS23817A620S1823_1_1ControlMsg_a7e73ae9c271ac0e49350ce0421ce1ec3} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillChannelsXYCoords@{fillChannelsXYCoords}}
+\index{fillChannelsXYCoords@{fillChannelsXYCoords}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillChannelsXYCoords()}{fillChannelsXYCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Channels\+XYCoords (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Формирование координат каналов 412й ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a7e73ae9c271ac0e49350ce0421ce1ec3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a6349cfcaeeee946a55fc3991a9ce988a}\label{classModelNS23817A620S1823_1_1ControlMsg_a6349cfcaeeee946a55fc3991a9ce988a} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillHeterFreqPoint@{fillHeterFreqPoint}}
+\index{fillHeterFreqPoint@{fillHeterFreqPoint}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillHeterFreqPoint()}{fillHeterFreqPoint()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Heter\+Freq\+Point (\begin{DoxyParamCaption}\item[{const TStrobe \texorpdfstring{$\ast$}{*}}]{trpr\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение номера частотной точки гетеродина исходя из типа станции. 
+\begin{DoxyParams}{Parameters}
+{\em trpr\+Strb} & указатель на объект строба приёма сообщения Е2ТРПР \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a5665b985cc48794473019f2af42de7a0}\label{classModelNS23817A620S1823_1_1ControlMsg_a5665b985cc48794473019f2af42de7a0} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillKgrs@{fillKgrs}}
+\index{fillKgrs@{fillKgrs}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillKgrs()}{fillKgrs()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Kgrs (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{kgrs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение количества гипотез по радиальной скорости (фильтров). 
+\begin{DoxyParams}{Parameters}
+{\em kgrs} & количество гипотез по радиальной скорости (фильтров) \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a5665b985cc48794473019f2af42de7a0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ac644e361156db78d5fbdcca16cb00c3e}\label{classModelNS23817A620S1823_1_1ControlMsg_ac644e361156db78d5fbdcca16cb00c3e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillKlbAfrOfCell@{fillKlbAfrOfCell}}
+\index{fillKlbAfrOfCell@{fillKlbAfrOfCell}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillKlbAfrOfCell()}{fillKlbAfrOfCell()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Klb\+Afr\+Of\+Cell (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{crate\+Num,  }\item[{int32\+\_\+t}]{cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение калибровочных коэффициентов и векторов АФР для заданной ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_ac644e361156db78d5fbdcca16cb00c3e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_accef5bef1c9b894c05f8a81af824d9db}\label{classModelNS23817A620S1823_1_1ControlMsg_accef5bef1c9b894c05f8a81af824d9db} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjBegins@{fillObjBegins}}
+\index{fillObjBegins@{fillObjBegins}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjBegins()}{fillObjBegins()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Begins (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение начал объектов строба исходя из типа станции и их запоминание. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aaec31ac9f1593eb99ecb8f84d6d92b35}\label{classModelNS23817A620S1823_1_1ControlMsg_aaec31ac9f1593eb99ecb8f84d6d92b35} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjCoords@{fillObjCoords}}
+\index{fillObjCoords@{fillObjCoords}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjCoords()}{fillObjCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Coords (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение координат всех объектов строба. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a04f4e12d882c23d51941bf68a40ff537}\label{classModelNS23817A620S1823_1_1ControlMsg_a04f4e12d882c23d51941bf68a40ff537} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjDfm@{fillObjDfm}}
+\index{fillObjDfm@{fillObjDfm}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjDfm()}{fillObjDfm()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Dfm (\begin{DoxyParamCaption}\item[{const Imit\+Object}]{trimts\+Obj\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение поля "{}девиация частоты"{} в объектах строба значениями из ТРИМЦ. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Obj} & указатель на массив объектов имитации текущего строба сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a36b6c918690c3bfec09e139331a89aa8}\label{classModelNS23817A620S1823_1_1ControlMsg_a36b6c918690c3bfec09e139331a89aa8} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjFreqPoint@{fillObjFreqPoint}}
+\index{fillObjFreqPoint@{fillObjFreqPoint}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjFreqPoint()}{fillObjFreqPoint()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Freq\+Point (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение номеров частотных точек объектов строба. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a55f0ab84c007c1d6e4dbc3a46096cccf}\label{classModelNS23817A620S1823_1_1ControlMsg_a55f0ab84c007c1d6e4dbc3a46096cccf} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjIntensity@{fillObjIntensity}}
+\index{fillObjIntensity@{fillObjIntensity}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjIntensity()}{fillObjIntensity()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Intensity (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт интенсивностей объектов строба исходя из типа поляризации и их запоминание. Учет полосы для объектов типа помеха. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_af1a5a59e51a43a5cd7ddb389fda8b7cd}\label{classModelNS23817A620S1823_1_1ControlMsg_af1a5a59e51a43a5cd7ddb389fda8b7cd} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjInterfBandWidth@{fillObjInterfBandWidth}}
+\index{fillObjInterfBandWidth@{fillObjInterfBandWidth}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjInterfBandWidth()}{fillObjInterfBandWidth()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Interf\+Band\+Width (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение ширины полосы помехи объектов строба. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aea48b5f5fdcfc85b77133bd27eb2879b}\label{classModelNS23817A620S1823_1_1ControlMsg_aea48b5f5fdcfc85b77133bd27eb2879b} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjLengths@{fillObjLengths}}
+\index{fillObjLengths@{fillObjLengths}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjLengths()}{fillObjLengths()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Lengths (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт длин объектов строба исходя из типа станции и их запоминание. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_aea48b5f5fdcfc85b77133bd27eb2879b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a8fa316afc8c96cea4f24354cc7149141}\label{classModelNS23817A620S1823_1_1ControlMsg_a8fa316afc8c96cea4f24354cc7149141} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjNTay@{fillObjNTay}}
+\index{fillObjNTay@{fillObjNTay}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjNTay()}{fillObjNTay()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+NTay (\begin{DoxyParamCaption}\item[{const Imit\+Object}]{trimts\+Obj\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение длительности дискрета ФМ, в мкс для каждого объекта строба. Это поле необходимо только для ФПО Воронеж-\/СМ (!). 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Obj} & указатель на массив объектов имитации текущего строба сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ac7cb9faadf643a6a6818c5c0fdfe19b6}\label{classModelNS23817A620S1823_1_1ControlMsg_ac7cb9faadf643a6a6818c5c0fdfe19b6} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjPolynomials@{fillObjPolynomials}}
+\index{fillObjPolynomials@{fillObjPolynomials}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjPolynomials()}{fillObjPolynomials()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Polynomials (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение начальных последовательностей (количества знаков м-\/последовательности) и полиномов объектов строба. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afa2a863f4b67bf37bf8726ad0fe6b714}\label{classModelNS23817A620S1823_1_1ControlMsg_afa2a863f4b67bf37bf8726ad0fe6b714} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillObjTypes@{fillObjTypes}}
+\index{fillObjTypes@{fillObjTypes}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillObjTypes()}{fillObjTypes()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Obj\+Types (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение типов объектов строба. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a37cce8a1d1703953f9f27038d985891e}\label{classModelNS23817A620S1823_1_1ControlMsg_a37cce8a1d1703953f9f27038d985891e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillPolarsCombining@{fillPolarsCombining}}
+\index{fillPolarsCombining@{fillPolarsCombining}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillPolarsCombining()}{fillPolarsCombining()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Polars\+Combining (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{polars\+Combining\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Перевод способа объединения поляризаций во внутреннее представление модели и его сохранение. 
+\begin{DoxyParams}{Parameters}
+{\em polars\+Combining\+Code} & способ объединения сигналов поляризаций и представления данных по выходу СФ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a51204fc98ffbf27eea1c2c22fc6613d7}\label{classModelNS23817A620S1823_1_1ControlMsg_a51204fc98ffbf27eea1c2c22fc6613d7} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillRaysCoords@{fillRaysCoords}}
+\index{fillRaysCoords@{fillRaysCoords}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillRaysCoords()}{fillRaysCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Rays\+Coords (\begin{DoxyParamCaption}\item[{const TRay}]{trpr\+UV\mbox{[}$\,$\mbox{]},  }\item[{uint32\+\_\+t}]{df\+Groups\+Num,  }\item[{uint8\+\_\+t}]{target\+DFType }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение координат лучей исходя из центра ПГ и расстановки лучей в ней. 
+\begin{DoxyParams}{Parameters}
+{\em trpr\+UV} & указатель на список координат центров ПГ \\
+\hline
+{\em df\+Groups\+Num} & количество ПГ \\
+\hline
+{\em target\+DFType} & номер (тип) ПГ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a53c7223948ce2105847a7609e793c2ed}\label{classModelNS23817A620S1823_1_1ControlMsg_a53c7223948ce2105847a7609e793c2ed} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillSignalTypes@{fillSignalTypes}}
+\index{fillSignalTypes@{fillSignalTypes}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillSignalTypes()}{fillSignalTypes()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Signal\+Types (\begin{DoxyParamCaption}\item[{const Imit\+Object}]{trimts\+Obj\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение поля "{}тип сигнала"{} в объектах строба значениями из ТРИМЦ. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Obj} & указатель на массив объектов имитации текущего строба сообщения Е2ТРИМЦ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a91870cfcfd23404c50061a17d539db4a}\label{classModelNS23817A620S1823_1_1ControlMsg_a91870cfcfd23404c50061a17d539db4a} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillSigPhases@{fillSigPhases}}
+\index{fillSigPhases@{fillSigPhases}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillSigPhases()}{fillSigPhases()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Sig\+Phases (\begin{DoxyParamCaption}\item[{const Imit\+Strobe \texorpdfstring{$\ast$}{*}}]{trimts\+Strb,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Заполнение фаз сигналов строба для всех поляризаций. 
+\begin{DoxyParams}{Parameters}
+{\em trimts\+Strb} & указатель на объект строба имитации сообщения Е2ТРИМЦ \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a926c02483ae04c583df0e62efaa1c00c}\label{classModelNS23817A620S1823_1_1ControlMsg_a926c02483ae04c583df0e62efaa1c00c} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!fillStationParams@{fillStationParams}}
+\index{fillStationParams@{fillStationParams}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{fillStationParams()}{fillStationParams()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::fill\+Station\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} \texorpdfstring{$\ast$}{*}}]{st\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Запоминание переданных в модель параметров станции. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Params} & указатель на объект параметров модели станции \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ab11a18e72b515f1de077fa1beb02cd68}\label{classModelNS23817A620S1823_1_1ControlMsg_ab11a18e72b515f1de077fa1beb02cd68} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!formControlMsg@{formControlMsg}}
+\index{formControlMsg@{formControlMsg}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{formControlMsg()}{formControlMsg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::form\+Control\+Msg (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1InputMessages}{CMsg\+Model\+Types\+::\+Input\+Messages}} \texorpdfstring{$\ast$}{*}}]{input\+Msgs,  }\item[{int32\+\_\+t}]{trpr\+Strb\+Index,  }\item[{int32\+\_\+t}]{trimts\+Strb\+Index,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption})}
+
+Главная функция класса. Используя входные параметры заполняет те поля УС, которые не зависят от порядкового номера ячейки. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Msgs} & указатель на объект входных сообщений \\
+\hline
+{\em trpr\+Strb\+Index} & порядковый номер (индекс) строба в ТРПР \\
+\hline
+{\em trimts\+Strb\+Index} & порядковый номер (индекс) строба в ТРИМЦ \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_ab11a18e72b515f1de077fa1beb02cd68_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2fbb7a6c5aad4c11c50800e7c9e1fce9}\label{classModelNS23817A620S1823_1_1ControlMsg_a2fbb7a6c5aad4c11c50800e7c9e1fce9} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getChannelXYCoords@{getChannelXYCoords}}
+\index{getChannelXYCoords@{getChannelXYCoords}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getChannelXYCoords()}{getChannelXYCoords()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+Channel\+XYCoords (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{chan\+Num,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{double \texorpdfstring{$\ast$}{*}}]{y }\end{DoxyParamCaption}) const}
+
+Занесение координат указанного канала (сквозной номер в поляризации) в заданные аргументы. 
+\begin{DoxyParams}{Parameters}
+{\em chan\+Num} & номер канала в нумерации модели \\
+\hline
+{\em x} & указатель на переменную для хранения координаты x \\
+\hline
+{\em y} & указатель на переменную для хранения координаты y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае пустых входных указателей или слишком большого номера канала или 0 если всё хорошо
+\end{DoxyReturn}
+Нумерация каналов на входе как в модели \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a70741eb300d4218fa466ad11c081f783}\label{classModelNS23817A620S1823_1_1ControlMsg_a70741eb300d4218fa466ad11c081f783} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getDFGroupNum@{getDFGroupNum}}
+\index{getDFGroupNum@{getDFGroupNum}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getDFGroupNum()}{getDFGroupNum()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+DFGroup\+Num (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{chan\+Num }\end{DoxyParamCaption}) const}
+
+Выдача номера пеленгационной группы исходя из номера канала. 
+\begin{DoxyParams}{Parameters}
+{\em chan\+Num} & сквозной номер канала в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер пеленгационной группы 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a70741eb300d4218fa466ad11c081f783_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afdea36b70deccbbd19db72ddf0850c00}\label{classModelNS23817A620S1823_1_1ControlMsg_afdea36b70deccbbd19db72ddf0850c00} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getFirstNonVirtualChannelNum@{getFirstNonVirtualChannelNum}}
+\index{getFirstNonVirtualChannelNum@{getFirstNonVirtualChannelNum}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getFirstNonVirtualChannelNum()}{getFirstNonVirtualChannelNum()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+First\+Non\+Virtual\+Channel\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Возврат номера нулевого канала первой невиртуальной ячейки на полотне в нумерации модели. Актуально только для Воронеж-\/СМ, для других станций возвращается номер нулевого канала нулевой ячейки. \begin{DoxyReturn}{Returns}
+номер нулевого канала первой невиртуальной ячейки на полотне в нумерации модели 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_afdea36b70deccbbd19db72ddf0850c00_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a204d132abe98c25c3dc9806d17520b1e}\label{classModelNS23817A620S1823_1_1ControlMsg_a204d132abe98c25c3dc9806d17520b1e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getIppaU@{getIppaU}}
+\index{getIppaU@{getIppaU}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getIppaU()}{getIppaU()}}
+{\footnotesize\ttfamily float Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+IppaU (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{a\+Interf\+Index }\end{DoxyParamCaption}) const}
+
+Выдача координаты U заданной активной помехи сообщения Е2ИППА. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Interf\+Index} & индекс активной помехи сообщения Е2ИППА \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+координата U заданной активной помехи 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a204d132abe98c25c3dc9806d17520b1e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2f135bca105c3dcc4beec7850f8eab19}\label{classModelNS23817A620S1823_1_1ControlMsg_a2f135bca105c3dcc4beec7850f8eab19} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getIppaV@{getIppaV}}
+\index{getIppaV@{getIppaV}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getIppaV()}{getIppaV()}}
+{\footnotesize\ttfamily float Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+IppaV (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{a\+Interf\+Index }\end{DoxyParamCaption}) const}
+
+Выдача координаты V заданной активной помехи сообщения Е2ИППА. 
+\begin{DoxyParams}{Parameters}
+{\em a\+Interf\+Index} & индекс активной помехи сообщения Е2ИППА \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+координата V заданной активной помехи 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a2f135bca105c3dcc4beec7850f8eab19_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a46a9ea9e92b1f3ffd84d6101a4080634}\label{classModelNS23817A620S1823_1_1ControlMsg_a46a9ea9e92b1f3ffd84d6101a4080634} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getStrobe@{getStrobe}}
+\index{getStrobe@{getStrobe}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getStrobe()}{getStrobe()}}
+{\footnotesize\ttfamily TStrobe Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+Strobe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Строб ТРПР, которому соответствует текущее сообщение \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a46b228fe0bcab80e966c9026fd7aac99}\label{classModelNS23817A620S1823_1_1ControlMsg_a46b228fe0bcab80e966c9026fd7aac99} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!getWlb@{getWlb}}
+\index{getWlb@{getWlb}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{getWlb()}{getWlb()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::get\+Wlb (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{nfil,  }\item[{uint32\+\_\+t}]{wlb\+Num,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{wlb\+Buf }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ad47329f11597491a0044be5a2eac42a6}\label{classModelNS23817A620S1823_1_1ControlMsg_ad47329f11597491a0044be5a2eac42a6} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isSumDiffDF@{isSumDiffDF}}
+\index{isSumDiffDF@{isSumDiffDF}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isSumDiffDF()}{isSumDiffDF()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Sum\+Diff\+DF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка строба на то, что в нём назначена суммарно-\/разностная пеленгация. \begin{DoxyReturn}{Returns}
+true если в стробе назначена суммарно-\/разностная пеленгация, false если что-\/то другое
+\end{DoxyReturn}
+СРП бывает только в целевых стробах. Есть только в Воронеж-\/М. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_ad47329f11597491a0044be5a2eac42a6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2fae8ff1db58f4db9cc360a704241bbd}\label{classModelNS23817A620S1823_1_1ControlMsg_a2fae8ff1db58f4db9cc360a704241bbd} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isUnmaskedCell@{isUnmaskedCell}}
+\index{isUnmaskedCell@{isUnmaskedCell}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isUnmaskedCell()}{isUnmaskedCell()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Unmasked\+Cell (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{crate\+Num,  }\item[{uint32\+\_\+t}]{cell\+Num,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption}) const}
+
+Проверка маски каналов в заданной аргументами ячейке объекта на присутствие в ней хотя бы одного размаскированного канала. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+Num} & номер ячейки в крейте \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+если в заданной параметрами ячейке размаскирован хотя бы один канал, то возвращается true, в противном случае -\/ false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a2fae8ff1db58f4db9cc360a704241bbd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4d10fc718fc34cf8031bb4def998b0cb}\label{classModelNS23817A620S1823_1_1ControlMsg_a4d10fc718fc34cf8031bb4def998b0cb} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isUnmaskedCrate@{isUnmaskedCrate}}
+\index{isUnmaskedCrate@{isUnmaskedCrate}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isUnmaskedCrate()}{isUnmaskedCrate()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Unmasked\+Crate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{crate\+Num,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar\+Type }\end{DoxyParamCaption}) const}
+
+Проверка маски каналов в заданном аргументами крейте объекта на присутствие в нём хотя бы одного размаскированного канала. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em polar\+Type} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+если в заданном параметрами крейте размаскирован хотя бы один канал, то возвращается true, в противном случае -\/ false 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aa0623b8ede16bf8895a32a192f416750}\label{classModelNS23817A620S1823_1_1ControlMsg_aa0623b8ede16bf8895a32a192f416750} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isUnmaskedPolar@{isUnmaskedPolar}}
+\index{isUnmaskedPolar@{isUnmaskedPolar}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isUnmaskedPolar()}{isUnmaskedPolar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Unmasked\+Polar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Проверка маски каналов текущей поляризации объекта на присутствие в ней хотя бы одного размаскированного канала. \begin{DoxyReturn}{Returns}
+если в текущей поляризации (номер которой прописан в стробе) размаскирован хотя бы один канал, то возвращается true, в противном случае -\/ false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classModelNS23817A620S1823_1_1ControlMsg_aa0623b8ede16bf8895a32a192f416750_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afebf012b14d0b395303f9cb7cb401d77}\label{classModelNS23817A620S1823_1_1ControlMsg_afebf012b14d0b395303f9cb7cb401d77} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isUnmaskedPolar@{isUnmaskedPolar}}
+\index{isUnmaskedPolar@{isUnmaskedPolar}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isUnmaskedPolar()}{isUnmaskedPolar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Unmasked\+Polar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar }\end{DoxyParamCaption}) const}
+
+Проверка маски каналов указанной поляризации объекта на присутствие в ней хотя бы одного размаскированного канала. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & тип поляризации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+если в заданной параметром поляризации размаскирован хотя бы один канал, то возвращается true, в противном случае -\/ false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_afebf012b14d0b395303f9cb7cb401d77_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_add764b89e1d81143868ed460b27d7048}\label{classModelNS23817A620S1823_1_1ControlMsg_add764b89e1d81143868ed460b27d7048} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isUnmaskedPolar@{isUnmaskedPolar}}
+\index{isUnmaskedPolar@{isUnmaskedPolar}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isUnmaskedPolar()}{isUnmaskedPolar()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Unmasked\+Polar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}}}]{polar,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{station\+Type }\end{DoxyParamCaption}) const}
+
+Проверка маски каналов указанной поляризации и типа станции объекта на присутствие в ней хотя бы одного размаскированного канала. 
+\begin{DoxyParams}{Parameters}
+{\em polar} & тип поляризации \\
+\hline
+{\em station\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+если в заданных параметрами поляризации и типе станции размаскирован хотя бы один канал, то возвращается true, в противном случае -\/ false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classModelNS23817A620S1823_1_1ControlMsg_add764b89e1d81143868ed460b27d7048_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afb7a97f0d62265acb279fef14d647d37}\label{classModelNS23817A620S1823_1_1ControlMsg_afb7a97f0d62265acb279fef14d647d37} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!isVirtualChannel@{isVirtualChannel}}
+\index{isVirtualChannel@{isVirtualChannel}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{isVirtualChannel()}{isVirtualChannel()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::is\+Virtual\+Channel (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch }\end{DoxyParamCaption}) const}
+
+Проверка на принадлежность заданного канала одной из виртуальных ячеек станции Воронеж-\/СМ. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & номер канала в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+если заданный канал (сквозной номер в поляризации) находится в одной из виртуальных ячеек Воронеж-\/СМ, то возвращается true. В противном случае -\/ false 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a17b8c2ef2ec76dabbd49b3c5bb55c9de}\label{classModelNS23817A620S1823_1_1ControlMsg_a17b8c2ef2ec76dabbd49b3c5bb55c9de} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!latticeCh2Model@{latticeCh2Model}}
+\index{latticeCh2Model@{latticeCh2Model}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{latticeCh2Model()}{latticeCh2Model()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::lattice\+Ch2\+Model (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{l\+Ch }\end{DoxyParamCaption}) const}
+
+Перевод номера канала из нумерации полотна в нумерацию модели Общая для всех станций. 
+\begin{DoxyParams}{Parameters}
+{\em l\+Ch} & номер канала в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в нумерации модели 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a229e488de17d7dbbc0b2f9d1e6fd8345}\label{classModelNS23817A620S1823_1_1ControlMsg_a229e488de17d7dbbc0b2f9d1e6fd8345} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!latticeCl2ModelSM@{latticeCl2ModelSM}}
+\index{latticeCl2ModelSM@{latticeCl2ModelSM}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{latticeCl2ModelSM()}{latticeCl2ModelSM()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::lattice\+Cl2\+Model\+SM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{l\+Cl }\end{DoxyParamCaption}) const}
+
+Перевод номера 223й ячейки станции Воронеж-\/СМ из нумерации полотна в нумерацию модели. 
+\begin{DoxyParams}{Parameters}
+{\em l\+Cl} & номер 223й ячейки в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер 223й ячейки в нумерации модели 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a229e488de17d7dbbc0b2f9d1e6fd8345_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aa4ef4918a6ccb66773c21f24147cb59b}\label{classModelNS23817A620S1823_1_1ControlMsg_aa4ef4918a6ccb66773c21f24147cb59b} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!modelCh2Lattice@{modelCh2Lattice}}
+\index{modelCh2Lattice@{modelCh2Lattice}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{modelCh2Lattice()}{modelCh2Lattice()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::model\+Ch2\+Lattice (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch }\end{DoxyParamCaption}) const}
+
+Пересчёт внутреннего номера канала модели в номер как на полотне. Общая для всех станций. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & номер канала в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в нумерации полотна 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a8b4b2c0e95487247fd3b2a9de1bda88b}\label{classModelNS23817A620S1823_1_1ControlMsg_a8b4b2c0e95487247fd3b2a9de1bda88b} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!modelCl2Lattice@{modelCl2Lattice}}
+\index{modelCl2Lattice@{modelCl2Lattice}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{modelCl2Lattice()}{modelCl2Lattice()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::model\+Cl2\+Lattice (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Cl }\end{DoxyParamCaption}) const}
+
+Пересчёт внутреннего номера ячейки модели в номер как на полотне. Общая для всех станций. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Cl} & номер ячейки в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер ячейки в нумерации полотна 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_afed3b40f1b3f38f3fa5962ddfcbbf188}\label{classModelNS23817A620S1823_1_1ControlMsg_afed3b40f1b3f38f3fa5962ddfcbbf188} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!modelCr2Lattice@{modelCr2Lattice}}
+\index{modelCr2Lattice@{modelCr2Lattice}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{modelCr2Lattice()}{modelCr2Lattice()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::model\+Cr2\+Lattice (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Cr }\end{DoxyParamCaption}) const}
+
+Пересчёт внутреннего номера крейта модели в номер как на полотне. Общая для всех станций, но актуальна только для МРИКа. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Cr} & номер крейта в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер крейта в поляризации в нумерации полотна 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a04dc323570071f50c7ed73cd64afd3fc}\label{classModelNS23817A620S1823_1_1ControlMsg_a04dc323570071f50c7ed73cd64afd3fc} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!precomputeCommonData@{precomputeCommonData}}
+\index{precomputeCommonData@{precomputeCommonData}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{precomputeCommonData()}{precomputeCommonData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::precompute\+Common\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Вычислить общие данные (данные, одинаковые для всех ячеек). Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a04dc323570071f50c7ed73cd64afd3fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4d4c39c0e261fba6ea2d4c02c046638b}\label{classModelNS23817A620S1823_1_1ControlMsg_a4d4c39c0e261fba6ea2d4c02c046638b} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!printCntrlMsg@{printCntrlMsg}}
+\index{printCntrlMsg@{printCntrlMsg}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{printCntrlMsg()}{printCntrlMsg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::print\+Cntrl\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Вывод на печать (в поток вывода) значений всех полей УС. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a4d4c39c0e261fba6ea2d4c02c046638b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a6a47de368548982d2b5f5801dfc8c867}\label{classModelNS23817A620S1823_1_1ControlMsg_a6a47de368548982d2b5f5801dfc8c867} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!printCntrlMsgObjects@{printCntrlMsgObjects}}
+\index{printCntrlMsgObjects@{printCntrlMsgObjects}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{printCntrlMsgObjects()}{printCntrlMsgObjects()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::print\+Cntrl\+Msg\+Objects (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{obj\+Num }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Печать в поток вывода значений всех полей всех объектов строба. 
+\begin{DoxyParams}{Parameters}
+{\em obj\+Num} & номер объекта \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a20875f89143fc6ef47b7a962e80f82a3}\label{classModelNS23817A620S1823_1_1ControlMsg_a20875f89143fc6ef47b7a962e80f82a3} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!rememberKlbAndAfr@{rememberKlbAndAfr}}
+\index{rememberKlbAndAfr@{rememberKlbAndAfr}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{rememberKlbAndAfr()}{rememberKlbAndAfr()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::remember\+Klb\+And\+Afr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1InputMessages}{CMsg\+Model\+Types\+::\+Input\+Messages}} \texorpdfstring{$\ast$}{*}}]{input\+Msgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Занесение заданных сетевым сообщением Е2КЛБ калибровочных коэффициентов и векторов АФР (Е2АФР) во внутренние буферы. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Msgs} & указатель на объект входных сообщений \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ControlMsg_a20875f89143fc6ef47b7a962e80f82a3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a180fbef31e03293c2ce0c998271b71c9}\label{classModelNS23817A620S1823_1_1ControlMsg_a180fbef31e03293c2ce0c998271b71c9} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!sendCell412ChangedSignal@{sendCell412ChangedSignal}}
+\index{sendCell412ChangedSignal@{sendCell412ChangedSignal}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{sendCell412ChangedSignal()}{sendCell412ChangedSignal()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::send\+Cell412\+Changed\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Отсылка сигнала (вызов коллбэка) наверх, что в модели сменилась 412я ячейка. \begin{DoxyReturn}{Returns}
+false если необходимый коллбэк не задан, true -\/ если коллбэк исполнился успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a1e8a7c98c351470e7be04589a6606bac}\label{classModelNS23817A620S1823_1_1ControlMsg_a1e8a7c98c351470e7be04589a6606bac} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!setCallbacks@{setCallbacks}}
+\index{setCallbacks@{setCallbacks}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{setCallbacks()}{setCallbacks()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::set\+Callbacks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}}]{callbacks }\end{DoxyParamCaption})}
+
+Сохранение указателей на коллбэки для модели внутри УС. 
+\begin{DoxyParams}{Parameters}
+{\em callbacks} & указатель на объект структуры коллбэков \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a79275f978622a789d21d261c1ac3d537}\label{classModelNS23817A620S1823_1_1ControlMsg_a79275f978622a789d21d261c1ac3d537} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!setChannelsMask@{setChannelsMask}}
+\index{setChannelsMask@{setChannelsMask}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{setChannelsMask()}{setChannelsMask()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::set\+Channels\+Mask (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{ch\+Mask,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption})}
+
+Запоминание маски каналов, пришедшей в сетевом сообщении Е2МАСК, во внутреннем буфере. 
+\begin{DoxyParams}{Parameters}
+{\em ch\+Mask} & указатель на объект маски каналов \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a94c7809db655f60929a7aa6b0fea756a}\label{classModelNS23817A620S1823_1_1ControlMsg_a94c7809db655f60929a7aa6b0fea756a} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!afr@{afr}}
+\index{afr@{afr}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{afr}{afr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp}{Trkp}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::afr\hspace{0.3cm}{\ttfamily [private]}}
+
+объект класса сообщения АФР \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a6a8e47a862b4dc41cc0a2788b8661ad6}\label{classModelNS23817A620S1823_1_1ControlMsg_a6a8e47a862b4dc41cc0a2788b8661ad6} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!cbacks@{cbacks}}
+\index{cbacks@{cbacks}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{cbacks}{cbacks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::cbacks}
+
+указатели на коллбэки \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aeffcd4c34d5760bbb26b2a5b34914e99}\label{classModelNS23817A620S1823_1_1ControlMsg_aeffcd4c34d5760bbb26b2a5b34914e99} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!config@{config}}
+\index{config@{config}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationConfig}{CMsg\+Model\+Types\+::\+Station\+Config}}$>$ Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::config\hspace{0.3cm}{\ttfamily [private]}}
+
+Статическая конфигурация станции (объекты координат каналов, Ar, Wlb и т.\+д.) XXX config.\+ch\+Mask нифига не статическая -\/ похоже, она устанавливается по входному сообщению E2\+MASK \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_aedcdfc1730b54f5af6d89801f131f99d}\label{classModelNS23817A620S1823_1_1ControlMsg_aedcdfc1730b54f5af6d89801f131f99d} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!d2zsInCh@{d2zsInCh}}
+\index{d2zsInCh@{d2zsInCh}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{d2zsInCh}{d2zsInCh}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::d2zs\+In\+Ch\hspace{0.3cm}{\ttfamily [private]}}
+
+дальности до источника в каждом канале, м \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4fdb7a3a4a4d01ff375ff761082512ac}\label{classModelNS23817A620S1823_1_1ControlMsg_a4fdb7a3a4a4d01ff375ff761082512ac} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!d2zsInChRays@{d2zsInChRays}}
+\index{d2zsInChRays@{d2zsInChRays}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{d2zsInChRays}{d2zsInChRays}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::d2zs\+In\+Ch\+Rays\hspace{0.3cm}{\ttfamily [private]}}
+
+дальности до источника в каждом канале каждого луча группы, м \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a5cc226e4ae8cddada0234687aedbfda2}\label{classModelNS23817A620S1823_1_1ControlMsg_a5cc226e4ae8cddada0234687aedbfda2} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!heterData@{heterData}}
+\index{heterData@{heterData}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{heterData}{heterData}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMsg_1_1HeterodyneDataHolder}{Heterodyne\+Data\+Holder}}$>$ Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::heter\+Data}
+
+Предвычисленные даные гетеродина для канала; в М они одинаковы для всех каналов, в СМ они одинаковы для всех каналов, когда PAR\+\_\+\+SIGN\+::\+Dev == 0 \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ad9799c35dfd66c0f39f86af8642fd527}\label{classModelNS23817A620S1823_1_1ControlMsg_ad9799c35dfd66c0f39f86af8642fd527} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!imitObjects@{imitObjects}}
+\index{imitObjects@{imitObjects}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{imitObjects}{imitObjects}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsg\+Shared\+Types\+::\+Imit\+Object}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::imit\+Objects\mbox{[}\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{max\+Imit\+Objects}}\mbox{]}}
+
+массив параметров объектов для имитации \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a3c3da7803cd4dbc588e503e0be11188f}\label{classModelNS23817A620S1823_1_1ControlMsg_a3c3da7803cd4dbc588e503e0be11188f} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!ippa@{ippa}}
+\index{ippa@{ippa}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{ippa}{ippa}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Ippa}{Ippa}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::ippa\hspace{0.3cm}{\ttfamily [private]}}
+
+объект класса сообщения ИППА \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a3445f92d7b719758e14619a6c04453b8}\label{classModelNS23817A620S1823_1_1ControlMsg_a3445f92d7b719758e14619a6c04453b8} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!klb@{klb}}
+\index{klb@{klb}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{klb}{klb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trkp}{Trkp}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::klb\hspace{0.3cm}{\ttfamily [private]}}
+
+объект класса сообщения КЛБ \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a8bf2c8d7ece0caaa1e50942471ff6487}\label{classModelNS23817A620S1823_1_1ControlMsg_a8bf2c8d7ece0caaa1e50942471ff6487} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!maxDelayInObj@{maxDelayInObj}}
+\index{maxDelayInObj@{maxDelayInObj}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{maxDelayInObj}{maxDelayInObj}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::max\+Delay\+In\+Obj\mbox{[}\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{max\+Imit\+Objects}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+максимальная задержка в каналах в каждом объекте строба, в целом числе дискретов частоты Fд \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a8af9084820107d31b714672aee03ffbf}\label{classModelNS23817A620S1823_1_1ControlMsg_a8af9084820107d31b714672aee03ffbf} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!maxNfilValue@{maxNfilValue}}
+\index{maxNfilValue@{maxNfilValue}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{maxNfilValue}{maxNfilValue}}
+{\footnotesize\ttfamily const uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::max\+Nfil\+Value = 2048\hspace{0.3cm}{\ttfamily [static]}}
+
+максимальное значение длительности импульсной характеристики (ИХ) фильтра ПЧВО в числе выборок частоты \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ab43b945dea96039dbbe540ea9150e48d}\label{classModelNS23817A620S1823_1_1ControlMsg_ab43b945dea96039dbbe540ea9150e48d} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!minDist2ZSource@{minDist2ZSource}}
+\index{minDist2ZSource@{minDist2ZSource}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{minDist2ZSource}{minDist2ZSource}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::min\+Dist2\+ZSource\hspace{0.3cm}{\ttfamily [private]}}
+
+минимальная дальность до источника по каналам для центра группы лучей, в метрах \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ac6b875ef2a366052cd9d20e86f12e225}\label{classModelNS23817A620S1823_1_1ControlMsg_ac6b875ef2a366052cd9d20e86f12e225} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!minDist2ZSource4EachPap@{minDist2ZSource4EachPap}}
+\index{minDist2ZSource4EachPap@{minDist2ZSource4EachPap}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{minDist2ZSource4EachPap}{minDist2ZSource4EachPap}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::min\+Dist2\+ZSource4\+Each\+Pap\mbox{[}max\+Active\+Interferences\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+минимальная дистанция до источника для каждой активной помехи \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a673710b9708848cc56cc351f41acd2b7}\label{classModelNS23817A620S1823_1_1ControlMsg_a673710b9708848cc56cc351f41acd2b7} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!minDist2ZSourceInRays@{minDist2ZSourceInRays}}
+\index{minDist2ZSourceInRays@{minDist2ZSourceInRays}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{minDist2ZSourceInRays}{minDist2ZSourceInRays}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::min\+Dist2\+ZSource\+In\+Rays\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{Shared\+Const\+::max\+DFGroups}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+минимальная дальность до источника по каналам для каждого луча группы, в метрах \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ac5b9df0a15cc195305136355b9e5e968}\label{classModelNS23817A620S1823_1_1ControlMsg_ac5b9df0a15cc195305136355b9e5e968} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!pftpMinDelay@{pftpMinDelay}}
+\index{pftpMinDelay@{pftpMinDelay}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{pftpMinDelay}{pftpMinDelay}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::pftp\+Min\+Delay\hspace{0.3cm}{\ttfamily [private]}}
+
+минимальная задержка в каналах поляризации для центра группы лучей (для ПЧВО), в метрах \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a4828bb64514ffea5484198d6fba88206}\label{classModelNS23817A620S1823_1_1ControlMsg_a4828bb64514ffea5484198d6fba88206} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!pftpMinDelayInRays@{pftpMinDelayInRays}}
+\index{pftpMinDelayInRays@{pftpMinDelayInRays}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{pftpMinDelayInRays}{pftpMinDelayInRays}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::pftp\+Min\+Delay\+In\+Rays\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{Shared\+Const\+::max\+DFGroups}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+минимальная задержка в каналах поляризации для каждого луча группы (для ПЧВО), в метрах \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a3d3aac901300655a723792c9212d0d20}\label{classModelNS23817A620S1823_1_1ControlMsg_a3d3aac901300655a723792c9212d0d20} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!pftpPapMinDelayInInterf@{pftpPapMinDelayInInterf}}
+\index{pftpPapMinDelayInInterf@{pftpPapMinDelayInInterf}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{pftpPapMinDelayInInterf}{pftpPapMinDelayInInterf}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::pftp\+Pap\+Min\+Delay\+In\+Interf\mbox{[}max\+Active\+Interferences\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+минимальная задержка в каналах поляризации для каждой активной помехи (для ПЧВО), в метрах \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a5db48e14b2fa2a01510a802f84dcc979}\label{classModelNS23817A620S1823_1_1ControlMsg_a5db48e14b2fa2a01510a802f84dcc979} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgModelTypes_1_1StationParams}{CMsg\+Model\+Types\+::\+Station\+Params}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::station\+Params}
+
+объект параметров станции \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a2fd80fef7395401b03bda0dac51de049}\label{classModelNS23817A620S1823_1_1ControlMsg_a2fd80fef7395401b03bda0dac51de049} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!strb@{strb}}
+\index{strb@{strb}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{strb}{strb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::strb}
+
+объект строба тактового расписания \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a130d21375909d4ec60a7b227b50a3e0e}\label{classModelNS23817A620S1823_1_1ControlMsg_a130d21375909d4ec60a7b227b50a3e0e} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!tactHeader@{tactHeader}}
+\index{tactHeader@{tactHeader}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{tactHeader}{tactHeader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsg\+Shared\+Types\+::\+Imit\+Tact}} Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::tact\+Header}
+
+объект заголовка тактового расписания \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ad522780309048bbca93c5e5aeb3331a3}\label{classModelNS23817A620S1823_1_1ControlMsg_ad522780309048bbca93c5e5aeb3331a3} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!trimts@{trimts}}
+\index{trimts@{trimts}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{trimts}{trimts}}
+{\footnotesize\ttfamily Trimts\+Msg Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::trimts\hspace{0.3cm}{\ttfamily [private]}}
+
+объект структуры сообщения Е2ТРИМЦ \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_a33ca2a966baf13580e4a73db41e6b606}\label{classModelNS23817A620S1823_1_1ControlMsg_a33ca2a966baf13580e4a73db41e6b606} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!trpr@{trpr}}
+\index{trpr@{trpr}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{trpr}{trpr}}
+{\footnotesize\ttfamily E2\+TRPR Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::trpr\hspace{0.3cm}{\ttfamily [private]}}
+
+объект структуры сообщения Е2ТРПР \Hypertarget{classModelNS23817A620S1823_1_1ControlMsg_ac334e4b48da5313a1736e273f666a055}\label{classModelNS23817A620S1823_1_1ControlMsg_ac334e4b48da5313a1736e273f666a055} 
+\index{ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}!trprStrbIdx@{trprStrbIdx}}
+\index{trprStrbIdx@{trprStrbIdx}!ModelNS23817A620S1823::ControlMsg@{ModelNS23817A620S1823::ControlMsg}}
+\doxysubsubsection{\texorpdfstring{trprStrbIdx}{trprStrbIdx}}
+{\footnotesize\ttfamily int Model\+NS23817\+A620\+S1823\+::\+Control\+Msg\+::trpr\+Strb\+Idx\hspace{0.3cm}{\ttfamily [private]}}
+
+Текущий строб из ТРПР (строб, преобразованный в форму для модели) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{controlMsg_8h}{control\+Msg.\+h}}\item 
+src/\mbox{\hyperlink{controlMsg_8cpp}{control\+Msg.\+cpp}}\end{DoxyCompactItemize}

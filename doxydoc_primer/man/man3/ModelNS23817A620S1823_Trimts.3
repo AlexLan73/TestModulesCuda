@@ -1,0 +1,320 @@
+.TH "ModelNS23817A620S1823::Trimts" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Trimts
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <trimts\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTrimts\fP ()"
+.br
+.ti -1c
+.RI "\fBTrimts\fP (TrimtsMsg *newMsg)"
+.br
+.ti -1c
+.RI "\fB~Trimts\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNewMsg\fP (const TrimtsMsg *newMsg)"
+.br
+.ti -1c
+.RI "void \fBgetMsg\fP (TrimtsMsg *msgBuf) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetStrbId\fP (uint32_t strbIndex) const"
+.br
+.ti -1c
+.RI "int32_t \fBvalidate\fP (\fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetStrobesNumber\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisStrobeForModel\fP (uint32_t strbIndex) const"
+.br
+.ti -1c
+.RI "int32_t \fBgetStrbIndex\fP (uint32_t strbId, int32_t startIndex) const"
+.br
+.ti -1c
+.RI "uint64_t \fBgetTactId\fP () const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBvalidateStrb\fP (uint32_t strbIndex, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBvalidateObject\fP (uint32_t strbIndex, uint32_t objIndex, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidObjLength\fP (uint32_t objLen, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidObjBegin\fP (int32_t objBegin, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidObjFreqNum\fP (int32_t frqNum, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidStrbLength\fP (uint32_t strbLen, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidStrbBegin\fP (uint32_t strbBegin, \fBSharedConst::StationType\fP stType) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "TrimtsMsg \fBtrimts\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс тактового расписания имитатора\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Trimts::Trimts ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Trimts::Trimts (TrimtsMsg * newMsg)"
+Конструктор объекта класса\&. Инициализирует объект trimts значениями из newMsg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewMsg\fP указатель на объект сетевого сообщения Е2ТРПР 
+.RE
+.PP
+
+.SS "ModelNS23817A620S1823::Trimts::~Trimts ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Trimts::clear ()\fC [private]\fP"
+Обнуление внутренного буфера\&. 
+.SS "void ModelNS23817A620S1823::Trimts::getMsg (TrimtsMsg * msgBuf) const"
+Копирование внутреннего сообщения Е2ТРИМЦ в заданный буфер\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsgBuf\fP указатель на объект сетевого сообщения Е2ТРИМЦ (буфер) 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Trimts::getStrbId (uint32_t strbIndex) const"
+Возврат идентификатора заданного строба такта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+идентификатор строба 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::getStrbIndex (uint32_t strbId, int32_t startIndex = \fC0\fP) const"
+Поиск строба с заданным идентификатором\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbId\fP идентификатор строба 
+.br
+\fIstartIndex\fP индекс строба в массиве, с которого будет начат поиск 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+индекс строба в сообщении Е2ТРИМЦ если поиск завершился успехом, -1 - если искомое значение не найдено 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Trimts::getStrobesNumber () const"
+Возврат количества стробов в ТРИМЦ\&. 
+.PP
+\fBReturns\fP
+.RS 4
+количество стробов в ТРИМЦ 
+.RE
+.PP
+
+.SS "uint64_t ModelNS23817A620S1823::Trimts::getTactId () const"
+Возврат идентификатора такта\&. 
+.PP
+\fBReturns\fP
+.RS 4
+идентификатор такта 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Trimts::isStrobeForModel (uint32_t strbIndex) const"
+Проверка на принадлежность модели строба с заданным индексом\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный строб предназначен для модели, false в противном случае 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::isValidObjBegin (int32_t objBegin, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка дискрета начала объекта на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjBegin\fP дискрет начала объекта 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если дискрет начала объекта выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::isValidObjFreqNum (int32_t frqNum, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка номера частотной точки объекта на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrqNum\fP номер частотной точки объекта 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если номер частотной точки объекта выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::isValidObjLength (uint32_t objLen, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка длины объекта на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjLen\fP длина объекта 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если длина объекта выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::isValidStrbBegin (uint32_t strbBegin, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка дискрета начала строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbBegin\fP дискрет начала строба 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если дискрет начала строба выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::isValidStrbLength (uint32_t strbLen, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка длины строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbLen\fP длина строба 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если длина строба выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trimts::setNewMsg (const TrimtsMsg * newMsg)"
+Инициализация внутреннего буфера объекта trimts значениями из newMsg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewMsg\fP указатель на объект сетевого сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::validate (\fBSharedConst::StationType\fP stType) const"
+Проверка полей ТРИМЦ на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если значения полей находятся вне пределов интервала [минимум; максимум], 0 - если проверки пройдены успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::validateObject (uint32_t strbIndex, uint32_t objIndex, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка полей заданного объекта строба ТРИМЦ на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.br
+\fIobjIndex\fP индекс объекта в стробе 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если значения полей находятся вне пределов интервала [минимум; максимум], 0 - если проверки пройдены успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trimts::validateStrb (uint32_t strbIndex, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка полей заданного строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если значения полей находятся вне пределов интервала [минимум; максимум], 0 - если проверки пройдены успешно 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "TrimtsMsg ModelNS23817A620S1823::Trimts::trimts\fC [private]\fP"
+объект сетевой структуры тактового расписания имитатора 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

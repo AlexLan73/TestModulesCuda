@@ -1,0 +1,5 @@
+<map id="MainWindow::initDfgUVTableView" name="MainWindow::initDfgUVTableView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,248,31"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#acdc0c70dae8cb4eb510350ca87209393" title=" " alt="" coords="296,5,547,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,15,282,15,282,21,248,21"/>
+</map>

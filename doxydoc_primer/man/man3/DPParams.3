@@ -1,0 +1,103 @@
+.TH "DPParams" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DPParams
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dpParams\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBdpBeginCoordU\fP"
+.br
+.ti -1c
+.RI "double \fBdpEndCoordU\fP"
+.br
+.ti -1c
+.RI "double \fBdpBeginCoordV\fP"
+.br
+.ti -1c
+.RI "double \fBdpEndCoordV\fP"
+.br
+.ti -1c
+.RI "double \fBdpUStep\fP"
+.br
+.ti -1c
+.RI "double \fBdpVStep\fP"
+.br
+.ti -1c
+.RI "bool \fBmainUCoord\fP"
+.br
+.ti -1c
+.RI "bool \fBmainVCoord\fP"
+.br
+.ti -1c
+.RI "bool \fBfixUVTrpr\fP"
+.br
+.ti -1c
+.RI "bool \fBfixUVTrimts\fP"
+.br
+.ti -1c
+.RI "bool \fBdoNotFixUV\fP"
+.br
+.ti -1c
+.RI "double \fBdpFixedCoordU\fP"
+.br
+.ti -1c
+.RI "double \fBdpFixedCoordV\fP"
+.br
+.ti -1c
+.RI "double \fBu\fP"
+.br
+.ti -1c
+.RI "double \fBv\fP"
+.br
+.ti -1c
+.RI "int \fBdpCounter\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+directivity pattern parameters Параматры диаграммы направленности 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool DPParams::doNotFixUV"
+
+.SS "double DPParams::dpBeginCoordU"
+
+.SS "double DPParams::dpBeginCoordV"
+
+.SS "int DPParams::dpCounter"
+счётчик итераций диаграммы направленности используется для генерации неповторяющегося от такта к такту шума (добавляется к номеру строба) 
+.SS "double DPParams::dpEndCoordU"
+
+.SS "double DPParams::dpEndCoordV"
+
+.SS "double DPParams::dpFixedCoordU"
+
+.SS "double DPParams::dpFixedCoordV"
+
+.SS "double DPParams::dpUStep"
+
+.SS "double DPParams::dpVStep"
+
+.SS "bool DPParams::fixUVTrimts"
+
+.SS "bool DPParams::fixUVTrpr"
+
+.SS "bool DPParams::mainUCoord"
+
+.SS "bool DPParams::mainVCoord"
+
+.SS "double DPParams::u"
+координаты текущей итерации для записи в ТРПР и/или ТРИМЦ 
+.SS "double DPParams::v"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

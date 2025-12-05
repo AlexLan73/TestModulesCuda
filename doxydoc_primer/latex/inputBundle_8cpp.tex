@@ -1,0 +1,157 @@
+\doxysection{src/input\+Bundle.cpp File Reference}
+\hypertarget{inputBundle_8cpp}{}\label{inputBundle_8cpp}\index{src/inputBundle.cpp@{src/inputBundle.cpp}}
+{\ttfamily \#include "{}input\+Bundle.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$libutils/string.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/panic.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/serdes.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trims.\+h$>$}\newline
+{\ttfamily \#include $<$model/model\+Interface.\+h$>$}\newline
+Include dependency graph for input\+Bundle.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inputBundle_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSavedStationParams}{Saved\+Station\+Params}}
+\item 
+struct \mbox{\hyperlink{structlibutils_1_1FromJSON_3_01Model_1_1StationParams_01_4}{libutils\+::\+From\+JSON$<$ Model\+::\+Station\+Params $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelibutils}{libutils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{namespacelibutils_a171546bcefa23c5c6babccd9d2551753}{libutils\+::noop\+\_\+deleter}} (istream \texorpdfstring{$\ast$}{*})
+\item 
+static string \mbox{\hyperlink{namespacelibutils_ade843298a0cdcd20bfa3241a108a1f85}{libutils\+::path\+\_\+concat}} (const string \&dir, const string \&fname)
+\item 
+static void \mbox{\hyperlink{inputBundle_8cpp_a53b4e999de04f0c33df2f357281919c4}{patch\+\_\+strobe}} (picojson\+::value \&strobe\+\_\+val, uint npoz)
+\item 
+static void \mbox{\hyperlink{inputBundle_8cpp_a5e75f994f2908ec4259016ac99acc41a}{patch\+\_\+imit\+\_\+object}} (picojson\+::value \&im\+\_\+object\+\_\+val)
+\item 
+static void \mbox{\hyperlink{inputBundle_8cpp_a26a386d58618a7b058abc87c5c656c67}{patch\+\_\+parsig}} (picojson\+::value \&parsig\+\_\+val)
+\item 
+static Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ \mbox{\hyperlink{inputBundle_8cpp_ab3390ddb6c136e0e8030ad6593e26038}{extract\+Bundle}} (picojson\+::value \&v)
+\begin{DoxyCompactList}\small\item\em Десериализовать данные, сохраненные из GUI, в ТРПР и ТРИМС \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\optional$<$ EUMASK $>$ \mbox{\hyperlink{inputBundle_8cpp_a3b0a97d6f6da73b51d79e6a95e9321a8}{Load\+Mask\+Data}} (const string \&fc\+Dir\+Name, const string \&mask\+File\+Name)
+\item 
+static optional$<$ E2\+IPPA $>$ \mbox{\hyperlink{inputBundle_8cpp_a82d79230da5c006a502234c6f8659700}{Load\+Ippa\+Data}} (const string \&fc\+Dir\+Name, const string \&ippa\+File\+Name, uint npos)
+\item 
+{\footnotesize template$<$class T $>$ }\\optional$<$ EUTRKP $>$ \mbox{\hyperlink{inputBundle_8cpp_ad129d28e689755062a414cbc915c5296}{Load\+Trkp\+Data}} (const string \&, const string \&, uint)
+\item 
+optional$<$ Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ $>$ \mbox{\hyperlink{inputBundle_8cpp_a3de4bec243719623fcfe7ad97b8d26cb}{Load\+Bundle}} (const optional$<$ string $>$ \&opt\+Fc\+Dir\+Path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int64\+\_\+t \mbox{\hyperlink{inputBundle_8cpp_a34071f79903dc28df31cb71cbfe7751f}{zero64}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputBundle_8cpp_ab3390ddb6c136e0e8030ad6593e26038}\label{inputBundle_8cpp_ab3390ddb6c136e0e8030ad6593e26038} 
+\index{inputBundle.cpp@{inputBundle.cpp}!extractBundle@{extractBundle}}
+\index{extractBundle@{extractBundle}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{extractBundle()}{extractBundle()}}
+{\footnotesize\ttfamily static Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ extract\+Bundle (\begin{DoxyParamCaption}\item[{picojson\+::value \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Десериализовать данные, сохраненные из GUI, в ТРПР и ТРИМС 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{inputBundle_8cpp_ab3390ddb6c136e0e8030ad6593e26038_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{inputBundle_8cpp_a3de4bec243719623fcfe7ad97b8d26cb}\label{inputBundle_8cpp_a3de4bec243719623fcfe7ad97b8d26cb} 
+\index{inputBundle.cpp@{inputBundle.cpp}!LoadBundle@{LoadBundle}}
+\index{LoadBundle@{LoadBundle}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadBundle()}{LoadBundle()}}
+{\footnotesize\ttfamily optional$<$ Result$<$ \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ $>$ Load\+Bundle (\begin{DoxyParamCaption}\item[{const optional$<$ string $>$ \&}]{opt\+Fc\+Dir\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inputBundle_8cpp_a3de4bec243719623fcfe7ad97b8d26cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{inputBundle_8cpp_a82d79230da5c006a502234c6f8659700}\label{inputBundle_8cpp_a82d79230da5c006a502234c6f8659700} 
+\index{inputBundle.cpp@{inputBundle.cpp}!LoadIppaData@{LoadIppaData}}
+\index{LoadIppaData@{LoadIppaData}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadIppaData()}{LoadIppaData()}}
+{\footnotesize\ttfamily static optional$<$ E2\+IPPA $>$ Load\+Ippa\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{fc\+Dir\+Name,  }\item[{const string \&}]{ippa\+File\+Name,  }\item[{uint}]{npos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{inputBundle_8cpp_a82d79230da5c006a502234c6f8659700_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{inputBundle_8cpp_a3b0a97d6f6da73b51d79e6a95e9321a8}\label{inputBundle_8cpp_a3b0a97d6f6da73b51d79e6a95e9321a8} 
+\index{inputBundle.cpp@{inputBundle.cpp}!LoadMaskData@{LoadMaskData}}
+\index{LoadMaskData@{LoadMaskData}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadMaskData()}{LoadMaskData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+optional$<$ EUMASK $>$ Load\+Mask\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{fc\+Dir\+Name,  }\item[{const string \&}]{mask\+File\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{inputBundle_8cpp_a3b0a97d6f6da73b51d79e6a95e9321a8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{inputBundle_8cpp_ad129d28e689755062a414cbc915c5296}\label{inputBundle_8cpp_ad129d28e689755062a414cbc915c5296} 
+\index{inputBundle.cpp@{inputBundle.cpp}!LoadTrkpData@{LoadTrkpData}}
+\index{LoadTrkpData@{LoadTrkpData}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadTrkpData()}{LoadTrkpData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+optional$<$ EUTRKP $>$ Load\+Trkp\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{,  }\item[{const string \&}]{,  }\item[{uint}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{inputBundle_8cpp_a5e75f994f2908ec4259016ac99acc41a}\label{inputBundle_8cpp_a5e75f994f2908ec4259016ac99acc41a} 
+\index{inputBundle.cpp@{inputBundle.cpp}!patch\_imit\_object@{patch\_imit\_object}}
+\index{patch\_imit\_object@{patch\_imit\_object}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{patch\_imit\_object()}{patch\_imit\_object()}}
+{\footnotesize\ttfamily static void patch\+\_\+imit\+\_\+object (\begin{DoxyParamCaption}\item[{picojson\+::value \&}]{im\+\_\+object\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{inputBundle_8cpp_a26a386d58618a7b058abc87c5c656c67}\label{inputBundle_8cpp_a26a386d58618a7b058abc87c5c656c67} 
+\index{inputBundle.cpp@{inputBundle.cpp}!patch\_parsig@{patch\_parsig}}
+\index{patch\_parsig@{patch\_parsig}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{patch\_parsig()}{patch\_parsig()}}
+{\footnotesize\ttfamily static void patch\+\_\+parsig (\begin{DoxyParamCaption}\item[{picojson\+::value \&}]{parsig\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{inputBundle_8cpp_a53b4e999de04f0c33df2f357281919c4}\label{inputBundle_8cpp_a53b4e999de04f0c33df2f357281919c4} 
+\index{inputBundle.cpp@{inputBundle.cpp}!patch\_strobe@{patch\_strobe}}
+\index{patch\_strobe@{patch\_strobe}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{patch\_strobe()}{patch\_strobe()}}
+{\footnotesize\ttfamily static void patch\+\_\+strobe (\begin{DoxyParamCaption}\item[{picojson\+::value \&}]{strobe\+\_\+val,  }\item[{uint}]{npoz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{inputBundle_8cpp_a34071f79903dc28df31cb71cbfe7751f}\label{inputBundle_8cpp_a34071f79903dc28df31cb71cbfe7751f} 
+\index{inputBundle.cpp@{inputBundle.cpp}!zero64@{zero64}}
+\index{zero64@{zero64}!inputBundle.cpp@{inputBundle.cpp}}
+\doxysubsubsection{\texorpdfstring{zero64}{zero64}}
+{\footnotesize\ttfamily const int64\+\_\+t zero64 = 0\hspace{0.3cm}{\ttfamily [static]}}
+

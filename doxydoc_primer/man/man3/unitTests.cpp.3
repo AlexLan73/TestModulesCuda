@@ -1,0 +1,47 @@
+.TH "src/unitTests.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/unitTests.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <libutils/fdstream\&.h>\fP
+.br
+\fC#include 'jsonrpc/cache\&.h'\fP
+.br
+\fC#include 'runModel\&.h'\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <catch\&.hpp>\fP
+.br
+\fC#include <libutils/serdes\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class T > void \fBserialize\fP (ostream &out, const T &o)"
+.br
+.ti -1c
+.RI "\fBTEST_CASE\fP ('Cache: trivial')"
+.br
+.ti -1c
+.RI "\fBTEST_CASE\fP ('Cache')"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "template<class T > void serialize (ostream & out, const T & o)"
+
+.SS "TEST_CASE ('Cache')"
+
+.SS "TEST_CASE ('Cache: trivial')"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

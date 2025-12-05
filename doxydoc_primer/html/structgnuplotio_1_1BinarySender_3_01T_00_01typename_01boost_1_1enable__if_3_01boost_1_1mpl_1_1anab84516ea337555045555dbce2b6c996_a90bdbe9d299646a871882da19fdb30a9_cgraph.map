@@ -1,0 +1,5 @@
+<map id="gnuplotio::BinarySender&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, boost::mpl::not_&lt; is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt; &gt;::type &gt;::send" name="gnuplotio::BinarySender&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, boost::mpl::not_&lt; is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt; &gt;::type &gt;::send">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,244,119"/>
+<area shape="rect" id="Node000002" href="$structgnuplotio_1_1BinarySender.html#a4b5dd22b7679c4f0ce4d8e75b36c8a21" title=" " alt="" coords="292,42,471,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,59,278,59,278,65,244,65"/>
+</map>

@@ -1,0 +1,78 @@
+.TH "include/model/modelInterface.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/model/modelInterface.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <libvork/e2trpr\&.h>\fP
+.br
+\fC#include <libvork/e2ippa\&.h>\fP
+.br
+\fC#include <model/e2trimts\&.h>\fP
+.br
+\fC#include <model/e2trkp\&.h>\fP
+.br
+\fC#include <model/str_uco\&.h>\fP
+.br
+\fC#include <model/minDefs\&.h>\fP
+.br
+\fC#include <model/controlMsgSharedTypes\&.h>\fP
+.br
+\fC#include <model/modelSharedConst\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::ChannelsMask\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::ExternalMessages\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::ControlMessage\fP"
+.br
+.ti -1c
+.RI "class \fBModelNS23817A620S1823::Interface\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModelNS23817A620S1823::Interface\fP * \fBcreateModelObject\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBModelNS23817A620S1823::Interface\fP * createModelObject ()\fC [extern]\fP"
+Создание объекта модели\&. Память для объекта выделяется в куче, поэтому важно помнить, что после использования на указатель надо натравить delete\&. Доступ к модели осуществляется только через функции интерфейса\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitLvl\fP уровень инициализации объекта модели\&. controlMsgsOnly - расчёт только УС fullInit - инициализация помимо памяти УС ещё и памяти для работы модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+указатель на объект интерфейсной части модели 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

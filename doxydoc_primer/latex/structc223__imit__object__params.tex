@@ -1,0 +1,274 @@
+\doxysection{c223\+\_\+imit\+\_\+object\+\_\+params Struct Reference}
+\hypertarget{structc223__imit__object__params}{}\label{structc223__imit__object__params}\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+
+
+Параметры имитируемого объекта.  
+
+
+
+
+{\ttfamily \#include $<$223fc.\+h$>$}
+
+
+
+Collaboration diagram for c223\+\_\+imit\+\_\+object\+\_\+params\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{structc223__imit__object__params__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structc223__imit__object__params_a1268cc10f136945c2f4c9ba2f60887df}{c223\+\_\+imit\+\_\+object\+\_\+params}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_acf80647cb3ba303188342a0fabb8400d}{begin}}
+\begin{DoxyCompactList}\small\item\em Начало объекта. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a7d95bb3397a7979efa7ca376c071aebc}{length}}
+\begin{DoxyCompactList}\small\item\em Длительность объекта. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_aed8552716993760293599a0d3de2fc98}{n\+\_\+poly\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Полином генерации М-\/последовательности (младшая часть 40-\/битной последовательности). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a7569fce9287f92e64ff7ddd014502820}{n\+\_\+poly\+\_\+h}}
+\begin{DoxyCompactList}\small\item\em Полином генерации М-\/последовательности (старшая часть 40-\/битной последовательности). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a048ec6115b2d164c02716f8942bc6a66}{h\+\_\+band}}
+\begin{DoxyCompactList}\small\item\em Длина окна для формирования помехи объекта. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a93ab6a4af850dea92726da4da3c83ddc}{type}}
+\begin{DoxyCompactList}\small\item\em Тип объекта (сигнал или помеха). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a979e8b161299d2d391e392071df1d2fa}{\+\_\+reserved0}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a82c5b3700d86bf2b71341c1ce253485d}{n\+\_\+posl\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Начальная фаза М-\/последовательности (младшая часть 40-\/битной последовательности) \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a24cb1441ffd78e6e42ca06d6de11ac08}{n\+\_\+posl\+\_\+h\+\_\+\+\_\+m\+\_\+d\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em Совмещенное поле\+: \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a62126f38a77450d05763725d8cdd1703}{m\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em Длина 1-\/битной М-\/последовательности. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a024c856be463a8e94b25ec58eb956069}{intens}}
+\begin{DoxyCompactList}\small\item\em Интенсивность. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_ae3d44e924b939904e1dbf571d5a2b7e6}{d\+\_\+len\+\_\+\+\_\+period}}
+\begin{DoxyCompactList}\small\item\em Совмещенное поле\+: \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a1da884c04437791aec1fb85bea3c750b}{dds\+\_\+step}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Шаг по DDS. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_ac8c7e0d607aa92857f47cf3eb1980077}{dds\+\_\+phase}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Фаза DDS. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_aa5c39d1068a392c3356613d7acc106c2}{deviation}}
+\begin{DoxyCompactList}\small\item\em Отклонение. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a7e2c9a383b1d9c3dd21a04a741a13636}{\+\_\+reserved1}} \mbox{[}3\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_a8099c89139814d358fecdf5240b24967}{delay}} \mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Поканальная задержка. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structc223__imit__object__params_ac1740a1c36b40181e1e79cddd14ee87f}{\+\_\+reserved2}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Параметры имитируемого объекта. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structc223__imit__object__params_a1268cc10f136945c2f4c9ba2f60887df}\label{structc223__imit__object__params_a1268cc10f136945c2f4c9ba2f60887df} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{c223\_imit\_object\_params()}{c223\_imit\_object\_params()}}
+{\footnotesize\ttfamily c223\+\_\+imit\+\_\+object\+\_\+params\+::c223\+\_\+imit\+\_\+object\+\_\+params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structc223__imit__object__params_a979e8b161299d2d391e392071df1d2fa}\label{structc223__imit__object__params_a979e8b161299d2d391e392071df1d2fa} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!\_reserved0@{\_reserved0}}
+\index{\_reserved0@{\_reserved0}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{\_reserved0}{\_reserved0}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::\+\_\+reserved0}
+
+\Hypertarget{structc223__imit__object__params_a7e2c9a383b1d9c3dd21a04a741a13636}\label{structc223__imit__object__params_a7e2c9a383b1d9c3dd21a04a741a13636} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!\_reserved1@{\_reserved1}}
+\index{\_reserved1@{\_reserved1}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{\_reserved1}{\_reserved1}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::\+\_\+reserved1\mbox{[}3\mbox{]}}
+
+\Hypertarget{structc223__imit__object__params_ac1740a1c36b40181e1e79cddd14ee87f}\label{structc223__imit__object__params_ac1740a1c36b40181e1e79cddd14ee87f} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!\_reserved2@{\_reserved2}}
+\index{\_reserved2@{\_reserved2}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{\_reserved2}{\_reserved2}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::\+\_\+reserved2\mbox{[}4\mbox{]}}
+
+\Hypertarget{structc223__imit__object__params_acf80647cb3ba303188342a0fabb8400d}\label{structc223__imit__object__params_acf80647cb3ba303188342a0fabb8400d} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!begin@{begin}}
+\index{begin@{begin}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{begin}{begin}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::begin}
+
+
+
+Начало объекта. 
+
+\Hypertarget{structc223__imit__object__params_ae3d44e924b939904e1dbf571d5a2b7e6}\label{structc223__imit__object__params_ae3d44e924b939904e1dbf571d5a2b7e6} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!d\_len\_\_period@{d\_len\_\_period}}
+\index{d\_len\_\_period@{d\_len\_\_period}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{d\_len\_\_period}{d\_len\_\_period}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::d\+\_\+len\+\_\+\+\_\+period}
+
+
+
+Совмещенное поле\+: 
+
+
+\begin{DoxyItemize}
+\item period -\/ период изменения длительности сигнала;
+\item d-\/len -\/ величина изменения длительности дискрета ФМ.
+
+Совмещенное поле\+:
+\begin{DoxyItemize}
+\item period -\/ \texorpdfstring{$<$}{<} сдвиг 0, длина 20 \texorpdfstring{$>$}{>};
+\item d-\/len -\/ \texorpdfstring{$<$}{<} сдвиг 20, длина 4 \texorpdfstring{$>$}{>}. 
+\end{DoxyItemize}
+\end{DoxyItemize}\Hypertarget{structc223__imit__object__params_ac8c7e0d607aa92857f47cf3eb1980077}\label{structc223__imit__object__params_ac8c7e0d607aa92857f47cf3eb1980077} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!dds\_phase@{dds\_phase}}
+\index{dds\_phase@{dds\_phase}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{dds\_phase}{dds\_phase}}
+{\footnotesize\ttfamily uint16\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::dds\+\_\+phase\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Фаза DDS. 
+
+\Hypertarget{structc223__imit__object__params_a1da884c04437791aec1fb85bea3c750b}\label{structc223__imit__object__params_a1da884c04437791aec1fb85bea3c750b} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!dds\_step@{dds\_step}}
+\index{dds\_step@{dds\_step}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{dds\_step}{dds\_step}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::dds\+\_\+step\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Шаг по DDS. 
+
+\Hypertarget{structc223__imit__object__params_a8099c89139814d358fecdf5240b24967}\label{structc223__imit__object__params_a8099c89139814d358fecdf5240b24967} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!delay@{delay}}
+\index{delay@{delay}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::delay\mbox{[}\mbox{\hyperlink{group___xD1_x81223__fctl_gadbd7a94e94a2b31b936217abd281369f}{MAX\+\_\+\+NR\+\_\+\+CHANNELS}}\mbox{]}}
+
+
+
+Поканальная задержка. 
+
+\Hypertarget{structc223__imit__object__params_aa5c39d1068a392c3356613d7acc106c2}\label{structc223__imit__object__params_aa5c39d1068a392c3356613d7acc106c2} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!deviation@{deviation}}
+\index{deviation@{deviation}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{deviation}{deviation}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::deviation}
+
+
+
+Отклонение. 
+
+\Hypertarget{structc223__imit__object__params_a048ec6115b2d164c02716f8942bc6a66}\label{structc223__imit__object__params_a048ec6115b2d164c02716f8942bc6a66} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!h\_band@{h\_band}}
+\index{h\_band@{h\_band}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{h\_band}{h\_band}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::h\+\_\+band}
+
+
+
+Длина окна для формирования помехи объекта. 
+
+\Hypertarget{structc223__imit__object__params_a024c856be463a8e94b25ec58eb956069}\label{structc223__imit__object__params_a024c856be463a8e94b25ec58eb956069} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!intens@{intens}}
+\index{intens@{intens}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{intens}{intens}}
+{\footnotesize\ttfamily uint16\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::intens}
+
+
+
+Интенсивность. 
+
+\Hypertarget{structc223__imit__object__params_a7d95bb3397a7979efa7ca376c071aebc}\label{structc223__imit__object__params_a7d95bb3397a7979efa7ca376c071aebc} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!length@{length}}
+\index{length@{length}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::length}
+
+
+
+Длительность объекта. 
+
+\Hypertarget{structc223__imit__object__params_a62126f38a77450d05763725d8cdd1703}\label{structc223__imit__object__params_a62126f38a77450d05763725d8cdd1703} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!m\_len@{m\_len}}
+\index{m\_len@{m\_len}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{m\_len}{m\_len}}
+{\footnotesize\ttfamily uint16\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::m\+\_\+len}
+
+
+
+Длина 1-\/битной М-\/последовательности. 
+
+\Hypertarget{structc223__imit__object__params_a7569fce9287f92e64ff7ddd014502820}\label{structc223__imit__object__params_a7569fce9287f92e64ff7ddd014502820} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!n\_poly\_h@{n\_poly\_h}}
+\index{n\_poly\_h@{n\_poly\_h}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{n\_poly\_h}{n\_poly\_h}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::n\+\_\+poly\+\_\+h}
+
+
+
+Полином генерации М-\/последовательности (старшая часть 40-\/битной последовательности). 
+
+\Hypertarget{structc223__imit__object__params_aed8552716993760293599a0d3de2fc98}\label{structc223__imit__object__params_aed8552716993760293599a0d3de2fc98} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!n\_poly\_l@{n\_poly\_l}}
+\index{n\_poly\_l@{n\_poly\_l}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{n\_poly\_l}{n\_poly\_l}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::n\+\_\+poly\+\_\+l}
+
+
+
+Полином генерации М-\/последовательности (младшая часть 40-\/битной последовательности). 
+
+\Hypertarget{structc223__imit__object__params_a24cb1441ffd78e6e42ca06d6de11ac08}\label{structc223__imit__object__params_a24cb1441ffd78e6e42ca06d6de11ac08} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!n\_posl\_h\_\_m\_d\_len@{n\_posl\_h\_\_m\_d\_len}}
+\index{n\_posl\_h\_\_m\_d\_len@{n\_posl\_h\_\_m\_d\_len}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{n\_posl\_h\_\_m\_d\_len}{n\_posl\_h\_\_m\_d\_len}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::n\+\_\+posl\+\_\+h\+\_\+\+\_\+m\+\_\+d\+\_\+len}
+
+
+
+Совмещенное поле\+: 
+
+
+\begin{DoxyItemize}
+\item n\+\_\+posl\+\_\+h -\/ начальная фаза М-\/последовательности (старшая часть 40-\/битной последовательности);
+\item m\+\_\+d\+\_\+len -\/ длина одного знака М-\/последовательности.
+
+Совмещенное поле\+:
+\end{DoxyItemize}
+
+n\+\_\+posl\+\_\+h -\/ \texorpdfstring{$<$}{<} сдвиг 0, длина 8 \texorpdfstring{$>$}{>};
+\begin{DoxyItemize}
+\item m\+\_\+d\+\_\+len -\/ \texorpdfstring{$<$}{<} сдвиг 8, длина 24 \texorpdfstring{$>$}{>}. 
+\end{DoxyItemize}\Hypertarget{structc223__imit__object__params_a82c5b3700d86bf2b71341c1ce253485d}\label{structc223__imit__object__params_a82c5b3700d86bf2b71341c1ce253485d} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!n\_posl\_l@{n\_posl\_l}}
+\index{n\_posl\_l@{n\_posl\_l}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{n\_posl\_l}{n\_posl\_l}}
+{\footnotesize\ttfamily uint32\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::n\+\_\+posl\+\_\+l}
+
+
+
+Начальная фаза М-\/последовательности (младшая часть 40-\/битной последовательности) 
+
+\Hypertarget{structc223__imit__object__params_a93ab6a4af850dea92726da4da3c83ddc}\label{structc223__imit__object__params_a93ab6a4af850dea92726da4da3c83ddc} 
+\index{c223\_imit\_object\_params@{c223\_imit\_object\_params}!type@{type}}
+\index{type@{type}!c223\_imit\_object\_params@{c223\_imit\_object\_params}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily uint8\+\_\+t c223\+\_\+imit\+\_\+object\+\_\+params\+::type}
+
+
+
+Тип объекта (сигнал или помеха). 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/mpk1/blk223/\mbox{\hyperlink{223fc_8h}{223fc.\+h}}\end{DoxyCompactItemize}

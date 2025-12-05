@@ -1,0 +1,91 @@
+.TH "ModelNS23817A620S1823::ComplexMark" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::ComplexMark
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <b232\&.h>\fP
+.PP
+Inherits \fBModelNS23817A620S1823::Mark\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBcenter\fP =0, \fBmDistance\fP =1, \fBpDistance\fP =2, \fBmFilter\fP =3, \fBpFilter\fP =4 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBComplexMark\fP (uint nrays)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBVector2d\fP< double > \fBamplitude\fP"
+.br
+.ti -1c
+.RI "\fBPolarized\fP< \fBVector2d\fP< std::complex< double > > > \fBrawAmplitude\fP"
+.br
+.ti -1c
+.RI "\fBVector2d\fP< double > \fBthreshold\fP"
+.br
+.in -1c
+
+Public Attributes inherited from \fBModelNS23817A620S1823::Mark\fP
+.in +1c
+.ti -1c
+.RI "uint32_t \fBdistance\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBfilter\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBray\fP"
+.br
+.ti -1c
+.RI "double \fBmagnitude\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Структура комплексной отметки\&. Порядок амплитуд в кресте: 0 - центр, 1 - минус одна дальность, 2 - плюс одна дальность, 3 - минус один фильтр, 4 - плюс один фильтр 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIcenter \fP\fP
+.TP
+\fB\fImDistance \fP\fP
+.TP
+\fB\fIpDistance \fP\fP
+.TP
+\fB\fImFilter \fP\fP
+.TP
+\fB\fIpFilter \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::ComplexMark::ComplexMark (uint nrays)\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBVector2d\fP<double> ModelNS23817A620S1823::ComplexMark::amplitude"
+амплитуды в кресте во всех лучах, где найдено превышение порога 
+.SS "\fBPolarized\fP<\fBVector2d\fP<std::complex<double> > > ModelNS23817A620S1823::ComplexMark::rawAmplitude"
+сырые амплитуды в поляризациях 
+.SS "\fBVector2d\fP<double> ModelNS23817A620S1823::ComplexMark::threshold"
+порог для значений в кресте во всех лучах 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

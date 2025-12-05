@@ -1,0 +1,104 @@
+.TH "с223_fctl" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+с223_fctl \- Функциональное управление 223-й ячейки\&.
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcomplex32\fP"
+.br
+.RI "Структура 32-разрядного комплексного числа\&. "
+.ti -1c
+.RI "struct \fBc223_target_strobe\fP"
+.br
+.RI "Целевой строб ФУ 223-й ячейки\&. "
+.ti -1c
+.RI "struct \fBc223_imit_object_params\fP"
+.br
+.RI "Параметры имитируемого объекта\&. "
+.ti -1c
+.RI "struct \fBc223_imit_strobe\fP"
+.br
+.RI "Имитационный строб ФУ 223-й ячейки\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_STROBES\fP   16"
+.br
+.RI "Максимальное количество стробов "
+.ti -1c
+.RI "#define \fBMAX_NR_CHANNELS\fP   16"
+.br
+.RI "Максимальное количество каналов "
+.ti -1c
+.RI "#define \fBNR_CHANNELS\fP   15"
+.br
+.RI "Количество задействованных каналов "
+.ti -1c
+.RI "#define \fBNR_VECTORS\fP   16"
+.br
+.RI "Максимальное количество векторов "
+.ti -1c
+.RI "#define \fBMAX_NR_BEAMS\fP   12"
+.br
+.RI "Максимальное количество лучей "
+.ti -1c
+.RI "#define \fBMAX_NR_OBJS\fP   8"
+.br
+.RI "Максимальное количество объектов "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint \fBn_objects\fP (const \fBc223_imit_strobe\fP &s)"
+.br
+.ti -1c
+.RI "uint \fBpolar\fP (const \fBc223_imit_strobe\fP &s)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MAX_NR_BEAMS   12"
+
+.PP
+Максимальное количество лучей 
+.SS "#define MAX_NR_CHANNELS   16"
+
+.PP
+Максимальное количество каналов 
+.SS "#define MAX_NR_OBJS   8"
+
+.PP
+Максимальное количество объектов 
+.SS "#define MAX_STROBES   16"
+
+.PP
+Максимальное количество стробов 
+.SS "#define NR_CHANNELS   15"
+
+.PP
+Количество задействованных каналов 
+.SS "#define NR_VECTORS   16"
+
+.PP
+Максимальное количество векторов 
+.SH "Function Documentation"
+.PP 
+.SS "uint n_objects (const \fBc223_imit_strobe\fP & s)\fC [inline]\fP"
+
+.SS "uint polar (const \fBc223_imit_strobe\fP & s)\fC [inline]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

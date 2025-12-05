@@ -1,0 +1,158 @@
+\doxysection{mainwin.\+h}
+\hypertarget{mainwin_8h_source}{}\label{mainwin_8h_source}\index{src/gui/mainwin.h@{src/gui/mainwin.h}}
+\mbox{\hyperlink{mainwin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWIN\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWIN\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QStandardItemModel>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QStringList>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QSystemTrayIcon>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ std::vector}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <fstream>}\ \textcolor{comment}{//\ std::ofstream}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ui\_mainform.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{messages_8h}{messages.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{guiapp_8h}{guiapp.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{signalTable_8h}{signalTable.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sliceViewer_8h}{sliceViewer.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dpParams_8h}{dpParams.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{e2trkp_8h}{model/e2trkp.h}}>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model}}\ =\ \mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}:\ \textcolor{keyword}{public}\ QMainWindow,\ \textcolor{keyword}{public}\ Ui::MainForm\ \{}
+\DoxyCodeLine{00025\ Q\_OBJECT}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classMainWindow_a34c4b4207b46d11a4100c9b19f0e81bb}{MainWindow}}(\mbox{\hyperlink{classGuiApp}{GuiApp}}\ *\mbox{\hyperlink{classMainWindow_ab0811fb8d146d03042256aa5c9504974}{app}});}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae2f0ebb51ad0e7d32a0db30d0e03579c}{sayWorkComplete}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a82b56cd2f54c86ce911d96df0c184782}{increaseImitProgressBar}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8eea9bcd54520397d82dff7a2fa72762}{changeProgressBarMax}}(uint32\_t\ maxValue);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8354c6c5a201460b61654e45c029dfec}{setWorkTime}}(\textcolor{keywordtype}{int}\ workTimeMs);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a38b77156d49710e5423ba10dce4b7cf5}{stopWorkOutAllMode}}();}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_aebacd16cb90fd3cfc2a9c61cfa77e1a0}{onAddTactBtnClicked}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a29285b72566680233f4b46b4cf2b7030}{onAddStrbBtnClicked}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae2702d2b75d9f042fbe9724a6620ffca}{onAddObjBtnClicked}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a5d6a2bee749058867a8c19d9b1f17806}{onRemoveItemBtnClicked}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a60333c627bd87878d929d40ccd7158df}{treeWidgetSelectionChanged}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a7400ab982af2f127b37a7875083f3d73}{treeWidgetItemDoubleClicked}}(QTreeWidgetItem\ *item,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a27ac3e59b5789d876a71243a09b8c47c}{onWorkOutCurrentBtnClicked}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_adb9c4ee31e88bf2adcf6f137592e1272}{onWorkOutAllBtnClicked}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1281b05542dcef9643d568d8bcc909a9}{onTreeWidgetItemChanged}}(QTreeWidgetItem\ *item,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a92451211adfb3d46ef7a7dd559450c57}{onSaveMsgsBtnClicked}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8275650b16c5bf139d076a6b67f9139e}{onLoadMsgsBtnClicked}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ac7ccfacc8374c527857429330b7666d3}{fctlFromFile2MainForm}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae201b532720fbf4792667cad3462b1bc}{onDataToZScheduleBtnClicked}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a87e9393fb8bac93434cf09de70014fb9}{onExpandCollapseAllBtnClicked}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a7ac83918c86d7dc1674b577cac25a560}{onTurnOnAllChannelsBtnClicked}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_abfebf7e4886dcf4f208a2c89ab259ba0}{onTurnOffAllChannelsBtnClicked}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a4ab573abddcc1e1e08b1f33458cec869}{onCalcDirectivityPatternBtnClicked}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8bb08057cd18d30b52fa563e0cc15522}{onSelectAllSlicesBtnClicked}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a302f27b507ffb91d1924e93935d0a901}{onSelectNoOneSliceBtnClicked}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a86e73289e0471c025aea012054652667}{onLoadIppaBtnClicked}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a18e8cbd0dfcbd138166c0489024889d3}{onSaveIppaBtnClicked}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ac27c3b316131f5f36cea1afdb80359da}{onRmIppaAllCoordsBtnClicked}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a294e812743bdd19cc9964fc78b1be29b}{onAddIppaCoordsBtnClicked}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_acbe82e0687b1caa1c0442604807d7e7d}{onRmIppaCoordsBtnClicked}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a86d206b293011488e378fdde1bded8af}{updateIppaCounter}}(\textcolor{keyword}{const}\ QModelIndex\ \&\ parent,\ \textcolor{keywordtype}{int}\ start,\ \textcolor{keywordtype}{int}\ end);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a9fdb5229374ce275661fc0a5c021c8b6}{stopDPCalculation}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a295baadf593d36527bc5a1e2d35313b1}{fillTrprKDivCBox}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ac329254891477d655f502e938a716f01}{onRmAllDfgUVCoordsBtnClicked}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ab83b55e47063e052d072a5e9180c40a5}{onAddDfgUVCoordsBtnClicked}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a297e29f52da723b0313cb5e80990c61a}{onRmDfgUVCoordsBtnClicked}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_acdc0c70dae8cb4eb510350ca87209393}{updateDfgUVCounter}}(\textcolor{keyword}{const}\ QModelIndex\ \&,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a96663c447eb74867400287393faaebe4}{onAddFctlFileBtnClicked}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ac3b4fcfb06a9069b4821b162bc1850ba}{onRmFctlFileBtnClicked}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a7e26983a6ec515e40ce0df8737258e52}{onLoadMaskBtnClicked}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a43c5dd2b62430edad72f805e3cb679bf}{onLoadFirstSliceFileBtnClicked}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a604e2a2950a1241366f79bcab3f71bf0}{onLoadSecondSliceFileBtnClicked}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad456635bd46fd82d512b8c98caabd7d1}{onRm1SliceFileDataBtnClicked}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a0c85b5df4af04f273b4086766a598d51}{onRm2SliceFileDataBtnClicked}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_adfb71c53be0d159edfc08017031b59d2}{onDrawGraphBtnClicked}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1f6db25a97a88e51943c4ac5c43108e0}{onLoadAfrBtnClicked}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ab57fec3077dc2d9d9c22365f49eaf412}{onLoadKlbBtnClicked}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a7dd432ac9c253813f8139779d5515f17}{trimtsStrbOnOff}}(\textcolor{keywordtype}{int}\ widgetState);}
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1}{TactSchedElemType}}\ \{\ \mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1a3e95d37fbc64364d634623bb7680798e}{tactElem}}=0,\ \mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1ab4d0ac158edd4a06a4a1442c9acb3301}{strobeElem}}=1,\ \mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1aca89de5012a67266965c5e2c64bc385d}{objectElem}}=2,\ \mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1a475248c1e5c1a12d05ef064cf9f28296}{none}}=3\ \};}
+\DoxyCodeLine{00079\ \ \ \ \ std::vector<TactInfo>\ \mbox{\hyperlink{classMainWindow_ad2c2b7c462c318e13f6dbd8144a92bac}{tact}};}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ \mbox{\hyperlink{classMainWindow_a8fcb077325cafbc6fce8ac9f3e19ce02}{stationParams}};}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ \mbox{\hyperlink{classMainWindow_ac1b234e6ac153bc1985697dedac048fe}{chMask}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_ae095fb8253e29c1117724ae9cde2ca4b}{dpStarted}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a75003e8ad733b29bc2165e9dccd517c4}{dpCounter}};}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{structDPParams}{DPParams}}\ \mbox{\hyperlink{classMainWindow_a7ff0f20aeea3a161fa6a1c9bb16ede0b}{dpParams}};}
+\DoxyCodeLine{00091\ \ \ \ \ QList<IppaUV>\ \mbox{\hyperlink{classMainWindow_a26861f2f0d9639a6c6903bcbe5710f21}{ippaUVList}};}
+\DoxyCodeLine{00093\ \ \ \ \ QStandardItemModel\ *\mbox{\hyperlink{classMainWindow_a80bf705dbe86f06d99bee6bea2c661e2}{ippaTableModel}};}
+\DoxyCodeLine{00095\ \ \ \ \ QStandardItemModel\ *\mbox{\hyperlink{classMainWindow_a4e6796f25461b2bab65f2216ad2bef20}{dfgUVTableModel}};}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{classSignalTable}{SignalTable}}\ \mbox{\hyperlink{classMainWindow_a88a2b08fb41168af2a58e28925ad7fa1}{sigTable}};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_a0df378edad659b63e041830668b0f508}{workOutAllModeIsRunning}};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_a60b3d9d53aa2504577d78a53c3403d34}{workOutAllFilesModeIsRunning}};}
+\DoxyCodeLine{00112\ \ \ \ \ QStringList\ \mbox{\hyperlink{classMainWindow_a9226e09c8093314f88f1d89e21859308}{fullFnamesList}};}
+\DoxyCodeLine{00114\ \ \ \ \ QSystemTrayIcon\ *\mbox{\hyperlink{classMainWindow_a0c42f7496716d94e18650e2a29b07040}{trayIcon}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_a81688858c14f6c719115ea0d139573d9}{isTreeExpanded}};}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{classSliceViewer}{SliceViewer}}\ \mbox{\hyperlink{classMainWindow_a570e7989294f4e736ff76e23ba77c64a}{sliceViewer}};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMainWindow_a08037e5d8028fe068e620080484c1fbd}{maxSignalValue}};}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{classGuiApp}{GuiApp}}\ *\mbox{\hyperlink{classMainWindow_ab0811fb8d146d03042256aa5c9504974}{app}};}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{classConfig}{Config}}\ \mbox{\hyperlink{classMainWindow_a669d25c3dfdece5d4e893847eb71f72e}{config}};}
+\DoxyCodeLine{00128\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_a40b91efb049eefb5214315e02dace941}{ippaFileName}};}
+\DoxyCodeLine{00129\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_a1aaba5dfc9f9b42b8c28548fcd00786d}{maskFileName}};}
+\DoxyCodeLine{00130\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_adc9c8656857ff67fc659ef7ef693cf5d}{afrFileName}};}
+\DoxyCodeLine{00131\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_a49d3a4ff148c271db61ac0b9afb7daa4}{klbFileName}};}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ \mbox{\hyperlink{classMainWindow_af14f30dc1e85bfcf971f185cf141b508}{afr}},\ \mbox{\hyperlink{classMainWindow_aaf0ba3fc8e1d82050d457e0b10e39857}{klb}};}
+\DoxyCodeLine{00133\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{classMainWindow_a34c4b4207b46d11a4100c9b19f0e81bb}{MainWindow}}()\ \{\}}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1}{TactSchedElemType}}\ \mbox{\hyperlink{classMainWindow_a838ad212ad5ef30828aef00e3b3ac5fe}{getItemType}}(QTreeWidgetItem\ *item)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_adf31d2f21cd5a1adfa216ea607c9ce52}{getItemIndex}}(QTreeWidgetItem\ *item)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad59eeef4d4e0d76653a0871594edb0af}{getItemPlacement}}(\mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1}{TactSchedElemType}}\ *elemType,\ \textcolor{keywordtype}{int}\ *tactNum,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *strbNum,\ \textcolor{keywordtype}{int}\ *objNum,\ QTreeWidgetItem\ *item);}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a3f900fc0b0134d599674b20f783788f1}{chooseTactSheduleTab}}(\mbox{\hyperlink{classMainWindow_aa46cd6281fb252df460d18b25053a0c1}{TactSchedElemType}}\ tab);}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ac6ec134f1ceb58d730f14e2e99c8f659}{mapScheduleToTheTreeWidget}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a4431dbf06ebd5344600977806bcc781e}{displayTactInfo}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\&\ \mbox{\hyperlink{classMainWindow_ad2c2b7c462c318e13f6dbd8144a92bac}{tact}});}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a4eb37ed1a173cae09bc2fbafae51611a}{displayStrobeInfo}}(\mbox{\hyperlink{structStrobeInfo}{StrobeInfo}}\&\ strb);}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a847cc9d38e4f1b37cc371bda00b88a8d}{displayTrprStrobeInfo}}(TStrobe\&\ strb);}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad8cbbd0ea4a6f9171c17f32308450183}{displayTrimtsStrobeInfo}}(ImitStrobe\&\ strb);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a68e5b5d47b760b50f51979f58f42a2d9}{displayObjectInfo}}(\textcolor{keyword}{const}\ ImitObject\&\ obj);}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a9414a7e7d252866e8ab7218823a6b0a6}{displayStationParams}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a37b4fdca3593d9f171c0c77fbd0cdf79}{displayDPParams}}();}
+\DoxyCodeLine{00148\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classMainWindow_a2f1b5bc08908e032fe8b9c249d6de779}{calcDivisionCoefIndex}}(uint32\_t\ kdivx,\ uint32\_t\ kdivy)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a6576276992c30952ca1011b78b85356d}{dataToEditor}}(QTreeWidgetItem\ *item);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ab45137806ea854b5c1a0319ad2f59f29}{storeTactInfo}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\&\ \mbox{\hyperlink{classMainWindow_ad2c2b7c462c318e13f6dbd8144a92bac}{tact}});}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad9e34d3f3aa74a2e9362202b09e0aff5}{storeStrobeInfo}}(\mbox{\hyperlink{structStrobeInfo}{StrobeInfo}}\&\ strb);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a999701ac7d75144d7e86a71bc7392a72}{storeTrprStrobeInfo}}(TStrobe\&\ strb);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2b2e1a7fcf17b364d9a9979d3cf5a5a5}{storeTrimtsStrobeInfo}}(ImitStrobe\&\ strb);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a674792ecabe6b788da2025af45777424}{storeObjectInfo}}(ImitObject\&\ obj);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae43e778f0aad7684e40ab018e8616423}{blockAllRunButtons}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ad0861dcd984665667bf38f28841d3470}{unblockAllRunButtons}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a6e922a96e5b02809c04ac392459633db}{collectStationParams}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_af2735958d4c952ac9ec921b5d2138194}{prepareDPParams}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a97fb829c3831b9bf24d0e88bbbab73a9}{showMessageBox}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_a16711cbf4abace6364cb7880883ccb4a}{areDPParamsBad}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ac1f1507674ae703829d1fd5d04f03b0a}{setSlicesPermissions}}(\textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8af7fa91c7aa93ef056975924fc16938}{disableAllTactElemsTabs}}();}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a56cdaae00b9898bfa4af0191c23747a9}{initIppaTableView}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae7aaaa03764c21fc98bd723d5bbb31a6}{initDfgUVTableView}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8f445ede5b77f7b803fd2d53e81d0323}{collectIppaUV}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a7bd55f5037a5ec1b4aaf1be686c79d44}{fillSigParams}}(uint32\_t\ type,\ PAR\_SIGN\ *sigParams);}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a9a8eac5b92429a0d1746bbec4d257d5f}{loadListFileContent}}(QStringList\&\ sList,\ QString\ *fileName\ =\ 0);}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a1995f0ec12b68454c4991bc17d23ab76}{loadSliceDataFile}}(\mbox{\hyperlink{classSliceViewer_a3d024cfa3200517e60d53f6bbf6647b3}{SliceViewer::FileIndex}}\ fileNum);}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae9c5b9622e554ef8c99147df3bde0ec2}{setGraphMaxXY}}(uint32\_t\ \&maxX,\ uint32\_t\ \&maxY);}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ae0904e1a335c8a9c3ec606577882c12c}{showMeanDispersionMaxValue}}(\mbox{\hyperlink{classSliceViewer}{SliceViewer}}\&\ \mbox{\hyperlink{classMainWindow_a570e7989294f4e736ff76e23ba77c64a}{sliceViewer}});}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a00aa650c9b0ee3f1c3612570a9f1fa5f}{uncheckSignalNoiseButtons}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a4a0fc4ab2272c9ce146f1d53126caf1c}{collectDPParams}}();}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a5ea575c24127e21881cb9d134eedded8}{openFileDialog}}(QString\ *fName);}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_ab8365fceaacdf6b9de208b423c8c3aa7}{loadIppaFromFile}}(QString\ *fName);}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a6b68a30983617dd35927d7736e4cce2c}{loadMaskFromFile}}(QString\ *fName);}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ возвращает\ -\/1\ если\ произошла\ ошибка\ при\ разборе\ файла}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//\ 0\ -\/\ если\ всё\ хорошо}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMainWindow_a9e11b55e0aecc0ebb5dcfa4e72785a03}{loadTrkpFromFile}}(QString\ *fName,\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *trkp);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a259218f4a6bfddbe1692b610ef833a0f}{setDefaultAfrKlb}}();}
+\DoxyCodeLine{00180\ \};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

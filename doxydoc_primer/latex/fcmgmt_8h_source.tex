@@ -1,0 +1,43 @@
+\doxysection{fcmgmt.\+h}
+\hypertarget{fcmgmt_8h_source}{}\label{fcmgmt_8h_source}\index{src/mpk1/blk223/fcmgmt.h@{src/mpk1/blk223/fcmgmt.h}}
+\mbox{\hyperlink{fcmgmt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_FCMGMT\_H\_\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_FCMGMT\_H\_\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <libvork/e2mask.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <libvork/e2trkp.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fcquantum_8h}{fcquantum.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fcmgmt_8h_a1ccaefdca2f9e156823acf6c65cc6372}{direct\_trpr\_to\_fc}}(\textcolor{keyword}{const}\ E2TRPR\&\ msg\_trpr,\ \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}}\&\ fcmap);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fcmgmt_8h_a3775d8ce0ffa5a17d90c6529901a271b}{direct\_trims\_to\_fc}}(\textcolor{keyword}{const}\ TrimtsMsg\&\ msg\_trims,\ \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}}\&\ fcmap);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fcmgmt_8h_ab720f842010408b2ffb6231ea8c4a19d}{init\_fc\_defaults}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fcmgmt_8h_a202f0094a9f6a5fdb5f76a22a25be64a}{update\_afr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}}\&\ msg\_afr);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fcmgmt_8h_a3422890153935d99b4cf08d0e2761623}{update\_clb}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}}\&\ msg\_clb);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fcmgmt_8h_adf747cacfde5eae18cd044558c218725}{update\_mask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}}\&\ msg\_mask);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fcmgmt_8h_a462e981e09b71f3785e253ce62a827db}{update\_ippa}}(\textcolor{keyword}{const}\ E2IPPA\ *msg\_ippa);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fcmgmt_8h_a93e56ef6ee59014729c7c323c60656e9}{drop\_old\_fc}}(\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}}\&\ fcmap,\ int64\_t\ stroke);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fcmgmt_8h_a6f70565b4f324406d4bd3720fd3b66e3}{drop\_fc\_exceeded\_queue\_limit}}(\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}}\&\ fcmap);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fcmgmt_8h_a4bc1f244997267d01a67797efe2a5317}{delete\_fcq}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structfcq}{fcq}}\ *fcqp);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00109\ \mbox{\hyperlink{structfcq}{fcq}}*\ \mbox{\hyperlink{fcmgmt_8h_a0054d01d93810ada68b9921b91834e39}{extract\_fc}}(\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}}\&\ fcmap,\ int64\_t\ stroke);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00125\ \mbox{\hyperlink{structfcq}{fcq}}*\ \mbox{\hyperlink{fcmgmt_8h_a424692426d955fe06ee372a2414d2389}{get\_fc\_quant}}(\mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}}\&\ fcmap,\ int64\_t\ stroke);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

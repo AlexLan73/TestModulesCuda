@@ -1,0 +1,269 @@
+.TH "cell_412_06_target_strobe" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cell_412_06_target_strobe \- Данные ячейки 6МЯ-412-06 по целевому стробу  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <412\-06_fc\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBtarget_strobe_begin\fP"
+.br
+.RI "TARGET_STROBE_BEGIN – начало целевого строба в 60 МГц дискретах\&. "
+.ti -1c
+.RI "uint32_t \fBtarget_strobe_length\fP"
+.br
+.RI "TARGET_STROBE_LENGTH – длина целевого строба в 60 МГц дискретах\&. "
+.ti -1c
+.RI "uint16_t \fBn_dec\fP"
+.br
+.RI "N_DEC – коэффициент прореживания в ПЧВО\&. "
+.ti -1c
+.RI "uint16_t \fBnorm\fP"
+.br
+.RI "NORM – коэффициент нормировки\&. "
+.ti -1c
+.RI "uint32_t \fBreserved1\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBreg\fP"
+.br
+.RI "REG – признак регистрации сигнала по всем срезам тракта обработки\&. XXX все сразу? "
+.ti -1c
+.RI "uint8_t \fBk\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBn_shift\fP"
+.br
+.RI "сдвиг для режима калибровки и РИУШ (типстроба 2049) "
+.ti -1c
+.RI "uint8_t \fBmode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtippc_nl\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtips_n\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBnfft\fP"
+.br
+.RI "NFFT – 3\&.\&.\&.10 степень размерности БПФ\&. "
+.ti -1c
+.RI "uint8_t \fBWob\fP"
+.br
+.RI "Wob – количество обучающих векторов\&. "
+.ti -1c
+.RI "uint32_t \fBreserved3\fP [2]"
+.br
+.ti -1c
+.RI "uint8_t \fBdelay_ch\fP [4]"
+.br
+.RI "DELAY_CHX – компенсация задержки в каналах ПЧВО в тактах, для X-го канала "
+.ti -1c
+.RI "uint32_t \fBreserved4\fP [3]"
+.br
+.ti -1c
+.RI "uint32_t \fBhet_dds_step\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBhet_dds_phase\fP"
+.br
+.RI "HET_DDS_PHASE – фаза DDS для цифрового гетеродина ПЧВО "
+.ti -1c
+.RI "uint32_t \fBhilbert_corr_freq\fP"
+.br
+.RI "GILBERT_CorrFreq – корректирующий коэффициент для преобразования гилберта "
+.ti -1c
+.RI "uint32_t \fBreserved5\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   int32_t \fBre\fP"
+.br
+.ti -1c
+.RI "   int32_t \fBim\fP"
+.br
+.ti -1c
+.RI "} \fBw_po\fP [12][4]"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBre\fP"
+.br
+.ti -1c
+.RI "   uint32_t \fBim\fP"
+.br
+.ti -1c
+.RI "} \fBw_clb\fP [4]"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBre\fP"
+.br
+.ti -1c
+.RI "   uint32_t \fBim\fP"
+.br
+.ti -1c
+.RI "} \fBw_train\fP [30][4]"
+.br
+.ti -1c
+.RI "char \fBreserved5_1\fP [96]"
+.br
+.ti -1c
+.RI "struct cell_412_06_wire_header \fBwirehd\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBunused_tail\fP [0x1000 \- 1632]"
+.br
+.ti -1c
+.RI "int32_t \fBhilbert_corr_freq\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   int32_t \fBre\fP"
+.br
+.ti -1c
+.RI "   int32_t \fBim\fP"
+.br
+.ti -1c
+.RI "} \fBw_po\fP [12][4]"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBre\fP"
+.br
+.ti -1c
+.RI "   uint32_t \fBim\fP"
+.br
+.ti -1c
+.RI "} \fBw_clb\fP [4]"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBre\fP"
+.br
+.ti -1c
+.RI "   uint32_t \fBim\fP"
+.br
+.ti -1c
+.RI "} \fBw_train\fP [30][4]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Данные ячейки 6МЯ-412-06 по целевому стробу 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t cell_412_06_target_strobe::delay_ch"
+
+.PP
+DELAY_CHX – компенсация задержки в каналах ПЧВО в тактах, для X-го канала 
+.SS "uint32_t cell_412_06_target_strobe::het_dds_phase"
+
+.PP
+HET_DDS_PHASE – фаза DDS для цифрового гетеродина ПЧВО 
+.SS "uint32_t cell_412_06_target_strobe::het_dds_step"
+HET_DDS_STEP – шаг DDS для цифрового гетеродина ПЧВО 0,02794Гц - цена младшего разряда этого поля старший бит - знак 
+.SS "uint32_t cell_412_06_target_strobe::hilbert_corr_freq"
+
+.PP
+GILBERT_CorrFreq – корректирующий коэффициент для преобразования гилберта 
+.SS "int32_t cell_412_06_target_strobe::hilbert_corr_freq"
+GILBERT_CorrFreq – корректирующий коэффициент для преобразования гилберта (учитываются только младшие 16 бит) 
+.SS "int32_t cell_412_06_target_strobe::im"
+
+.SS "uint32_t cell_412_06_target_strobe::im"
+
+.SS "uint8_t cell_412_06_target_strobe::k"
+K – маска коммутации данных АЦП/Имитатор на вход гетеродина\&. 0-й бит включает АЦП, 1-й бит - имитатор 
+.SS "uint8_t cell_412_06_target_strobe::mode"
+подрежим работы помехового канала , определяет фрагментацию полотна и способ некогерентного объединения фрагментов mode[0:3] - код количества фрагментов; фрагмент - часть полотна, в которой производится когерентное сложение подрешеток; подрешетки каждого фрагмента сфазированы в своем угловом направлении (1 - 1фр, 2 - 2фр, 4 - 4фр, 8 - 8фр, 0 - 192фр) mode[4:7] - код способа некогерентного объединения фрагментов (TStrobe::kpg, кроме случая количества фрагментов == 192, когда он == 0) 
+.SS "uint16_t cell_412_06_target_strobe::n_dec"
+
+.PP
+N_DEC – коэффициент прореживания в ПЧВО\&. 
+.SS "uint8_t cell_412_06_target_strobe::n_shift"
+
+.PP
+сдвиг для режима калибровки и РИУШ (типстроба 2049) 
+.SS "uint8_t cell_412_06_target_strobe::nfft"
+
+.PP
+NFFT – 3\&.\&.\&.10 степень размерности БПФ\&. 
+.SS "uint16_t cell_412_06_target_strobe::norm"
+
+.PP
+NORM – коэффициент нормировки\&. 
+.SS "int32_t cell_412_06_target_strobe::re"
+
+.SS "uint32_t cell_412_06_target_strobe::re"
+
+.SS "uint8_t cell_412_06_target_strobe::reg"
+
+.PP
+REG – признак регистрации сигнала по всем срезам тракта обработки\&. XXX все сразу? 
+.SS "uint32_t cell_412_06_target_strobe::reserved1"
+
+.SS "uint32_t cell_412_06_target_strobe::reserved3"
+
+.SS "uint32_t cell_412_06_target_strobe::reserved4"
+
+.SS "uint32_t cell_412_06_target_strobe::reserved5"
+
+.SS "char cell_412_06_target_strobe::reserved5_1"
+
+.SS "uint32_t cell_412_06_target_strobe::target_strobe_begin"
+
+.PP
+TARGET_STROBE_BEGIN – начало целевого строба в 60 МГц дискретах\&. 
+.SS "uint32_t cell_412_06_target_strobe::target_strobe_length"
+
+.PP
+TARGET_STROBE_LENGTH – длина целевого строба в 60 МГц дискретах\&. 
+.SS "uint8_t cell_412_06_target_strobe::tippc_nl"
+TIPPC_NL – 1 \&.\&. 12 - количество лучей\&. При любом АСП стробе NL = 1! 
+.SS "uint8_t cell_412_06_target_strobe::tips_n"
+TIPS_N – тип строба\&. 1 – целевой (0, 257 – АСП в узком луче) 2 – ПК10 (256) 3 – ПК20 (256) 4 – ПК40 (256) 5 – АСП (258 – в широком луче) 6 – адаптация (513) 7 – калибровка (2048) 8 – анализ уровня шумов (2049) 
+.SS "uint8_t cell_412_06_target_strobe::unused_tail"
+
+.SS "struct  { \&.\&.\&. }  cell_412_06_target_strobe::w_clb[4]"
+W_clb_Re_X, W_clb_Im_X - Re и Im калибровочные вектора W_Clb X = 1\&.\&.4 – номер канала; 
+.SS "struct  { \&.\&.\&. }  cell_412_06_target_strobe::w_clb[4]"
+W_clb_Re_X, W_clb_Im_X - Re и Im калибровочные вектора W_Clb X = 1\&.\&.4 – номер канала; 
+.SS "struct  { \&.\&.\&. }  cell_412_06_target_strobe::w_po[12][4]"
+W_po_Re_X_Y, W_po_Re_X_Y – Re и Im диаграммообразующего вектора W_Po: X = 1\&.\&.4 – номер канала; Y = 1\&.\&.12 – номер луча 20 разрядов 
+.SS "struct  { \&.\&.\&. }  cell_412_06_target_strobe::w_po[12][4]"
+W_po_Re_X_Y, W_po_Re_X_Y – Re и Im диаграммообразующего вектора W_Po: X = 1\&.\&.4 – номер канала; Y = 1\&.\&.12 – номер луча 20 разрядов 
+.SS "struct  { \&.\&.\&. }  cell_412_06_target_strobe::w_train[30][4]"
+W_ob_Re_X_Y, W_ob_Re_X_ - Re и Im обучающие вектора W_Po X = 1\&.\&.4 – номер канала; Y = 1\&.\&.30 – номер вектора\&. 
+.SS "struct  { \&.\&.\&. }  cell_412_06_target_strobe::w_train[30][4]"
+W_ob_Re_X_Y, W_ob_Re_X_ - Re и Im обучающие вектора W_Po X = 1\&.\&.4 – номер канала; Y = 1\&.\&.30 – номер вектора\&. 
+.SS "struct cell_412_06_wire_header cell_412_06_target_strobe::wirehd"
+
+.SS "uint8_t cell_412_06_target_strobe::Wob"
+
+.PP
+Wob – количество обучающих векторов\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,55 @@
+\doxysection{trimts.\+h}
+\hypertarget{trimts_8h_source}{}\label{trimts_8h_source}\index{src/trimts.h@{src/trimts.h}}
+\mbox{\hyperlink{trimts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRIMTS\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRIMTS\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{e2trimts_8h}{model/e2trimts.h}}>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedConst_8h}{sharedConst.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts}{Trimts}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_adf338b7e438fdc63881520065eb27fa3}{Trimts}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_adf338b7e438fdc63881520065eb27fa3}{Trimts}}(TrimtsMsg\ *newMsg);}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a1bc5bdc0878bc71bf0efbb2a2eba90dc}{\string~Trimts}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a8d724eecd56b2053d76b80fcd85da842}{setNewMsg}}(\textcolor{keyword}{const}\ TrimtsMsg\ *newMsg);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_ab42ba43f59728991bb30a10b97209503}{getMsg}}(TrimtsMsg\ *msgBuf)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_aa4451594733578c52a044aa57d8b8b67}{getStrbId}}(uint32\_t\ strbIndex)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a845c37b4aa2145f4b8f67c85c41bf167}{validate}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a95bf1965e51782126ea770bbd24af698}{getStrobesNumber}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a2955b01cac4b782fe8c6cb6081967632}{isStrobeForModel}}(uint32\_t\ strbIndex)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a804e3e9c88b6b847504b7eab5618d39e}{getStrbIndex}}(uint32\_t\ strbId,\ int32\_t\ startIndex)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a3a29c89e649c6208abff5e9fae6c3a46}{getTactId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00070\ \ \ \ \ TrimtsMsg\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a04893700511156cec4afcd9c9d02a5e5}{trimts}};}
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_abc7b7cf1090915a6630621d5dd35977b}{clear}}();}
+\DoxyCodeLine{00081\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a09edd0cd29591ffd32dfbd4418eca6da}{validateStrb}}(uint32\_t\ strbIndex,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a844c373c096f9a6af7414c8d7554a03f}{validateObject}}(uint32\_t\ strbIndex,\ uint32\_t\ objIndex,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a0264489bd457ba7af7dc632f920f35de}{isValidObjLength}}(uint32\_t\ objLen,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_ab00053b036c4cbdefa95897e9bbe9d51}{isValidObjBegin}}(int32\_t\ objBegin,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_ad9f5db2832de682ba610c6969065a57c}{isValidObjFreqNum}}(int32\_t\ frqNum,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_a291e1ff810f831b9135af04eb11f28db}{isValidStrbLength}}(uint32\_t\ strbLen,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00131\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trimts_ad091c4baf3212ee1285be5705081a1c6}{isValidStrbBegin}}(uint32\_t\ strbBegin,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ \};\ \textcolor{comment}{//\ class\ Trimts}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TRIMTS\_H\_\_}}
+
+\end{DoxyCode}

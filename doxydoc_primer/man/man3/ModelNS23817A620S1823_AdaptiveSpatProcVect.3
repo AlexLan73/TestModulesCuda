@@ -1,0 +1,240 @@
+.TH "ModelNS23817A620S1823::AdaptiveSpatProcVect" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::AdaptiveSpatProcVect
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <adaptiveSpatProcVect\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBOneStrobeVectors\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMode\fP { \fBsignalCoord\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd\fP (uint32_t strbID, uint32_t maxChannels, uint64_t tExecNum, \fBSharedConst::PolarizationTypes\fP polarType, std::complex< int32_t > adaptiveVect[][\fBSharedConst::maxChannelsSM\fP])"
+.br
+.ti -1c
+.RI "void \fBrm\fP (uint32_t strbID)"
+.br
+.ti -1c
+.RI "const \fBOneStrobeVectors\fP * \fBget\fP (uint32_t strbID) const"
+.br
+.ti -1c
+.RI "void \fBprint\fP (\fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "\fBAdaptiveSpatProcVect\fP ()"
+.br
+.ti -1c
+.RI "\fB~AdaptiveSpatProcVect\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBfindFreeQuantIndex\fP () const"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisStrbIdExistAlready\fP (uint32_t strbID, int32_t *strbIndex) const"
+.br
+.ti -1c
+.RI "int32_t \fBpurge\fP (uint64_t tExecNum)"
+.br
+.ti -1c
+.RI "int32_t \fBfindFreeQuantOrRightStrobe\fP (uint32_t strbID, uint64_t tExecNum, \fBSharedConst::PolarizationTypes\fP polarType)"
+.br
+.ti -1c
+.RI "void \fBprintSignalCoordData\fP (\fBSharedConst::StationType\fP stType, uint32_t s) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBOneStrobeVectors\fP \fBstrobes\fP [\fBmaxAdaptStrobes\fP]"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBmaxAdaptStrobes\fP = 10"
+.br
+.ti -1c
+.RI "static const uint32_t \fBadaptDataStoreTime\fP = 2"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс адаптивных векторов пространственной обработки\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::AdaptiveSpatProcVect::Mode\fP"
+Виды адаптаций:
+.IP "\(bu" 2
+signalCoord - сигнальная и координатная; 
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIsignalCoord \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::AdaptiveSpatProcVect::AdaptiveSpatProcVect ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::AdaptiveSpatProcVect::~AdaptiveSpatProcVect ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::AdaptiveSpatProcVect::add (uint32_t strbID, uint32_t maxChannels, uint64_t tExecNum, \fBSharedConst::PolarizationTypes\fP polarType, std::complex< int32_t > adaptiveVect[][SharedConst::maxChannelsSM])"
+Сохранение адаптивных векторов ПО из adaptiveVect внутри объекта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbID\fP идентификатор (номер) строба 
+.br
+\fImaxChannels\fP максимальное количество каналов в поляризации для текущей станции 
+.br
+\fItExecNum\fP номер такта исполнения 
+.br
+\fIpolarType\fP тип поляризации 
+.br
+\fIadaptiveVect\fP массив адаптивных векторов 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::AdaptiveSpatProcVect::clear ()\fC [private]\fP"
+Очищение всех данных объекта\&. 
+.SS "int32_t ModelNS23817A620S1823::AdaptiveSpatProcVect::findFreeQuantIndex () const\fC [private]\fP"
+Поиск свободного кванта для хранения адаптивных векторов ПО\&. 
+.PP
+\fBReturns\fP
+.RS 4
+индекс свободного элемента в массиве данных для хранения адаптивных векторов ПО\&. Если все элементы заняты, то возвращает минус единицу 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::AdaptiveSpatProcVect::findFreeQuantOrRightStrobe (uint32_t strbID, uint64_t tExecNum, \fBSharedConst::PolarizationTypes\fP polarType)\fC [private]\fP"
+Поиск свободного кванта или уже ранее занятого для строба с идентификатором strbID, но со свободным буфером для поляризации polarType\&. Если всё занято, то запускается чистка\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbID\fP идентификатор (номер) строба 
+.br
+\fItExecNum\fP номер такта исполнения 
+.br
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+индекс свободного кванта или -1 если кванта для заданных входных данных не обнаружено 
+.RE
+.PP
+
+.SS "const \fBAdaptiveSpatProcVect::OneStrobeVectors\fP * ModelNS23817A620S1823::AdaptiveSpatProcVect::get (uint32_t strbID) const"
+Получение адаптивных векторов ПО для заданного идентификатора строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbID\fP идентификатор (номер) строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+указатель на массив адаптивных векторов ПО для строба strbID 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::AdaptiveSpatProcVect::isStrbIdExistAlready (uint32_t strbID, int32_t * strbIndex) const\fC [private]\fP"
+Проверка наличия адаптивных векторов на заданный строб\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbID\fP идентификатор (номер) строба 
+.br
+\fIstrbIndex\fP указатель на переменную, через который отдаётся индекс найденного занятого строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если адаптивные вектора для заданного номера строба уже есть в массиве, false в противном случае 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::AdaptiveSpatProcVect::print (\fBSharedConst::StationType\fP stType) const"
+Печать в поток вывода готовых векторов и коэццициентов по всем хранящимся стробам\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::AdaptiveSpatProcVect::printSignalCoordData (\fBSharedConst::StationType\fP stType, uint32_t s) const\fC [private]\fP"
+Печать в поток вывода готовых адаптивных векторов сигнальной или координатной адаптации для заданного кванта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.br
+\fIs\fP порядковый номер строба (кванта) в массиве адаптивных векторов strobes 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::AdaptiveSpatProcVect::purge (uint64_t tExecNum)\fC [private]\fP"
+Чистка набора адаптивных векторов от устаревших\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItExecNum\fP номер такта исполнения 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество свободных квантов или -1 если свободных нет 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::AdaptiveSpatProcVect::rm (uint32_t strbID)"
+Удаление адаптивных векторов ПО для строба strbID из объекта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbID\fP идентификатор (номер) строба 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "const uint32_t ModelNS23817A620S1823::AdaptiveSpatProcVect::adaptDataStoreTime = 2\fC [static]\fP, \fC [private]\fP"
+время хранения адаптивных векторов, в тактах\&. 
+.SS "const uint32_t ModelNS23817A620S1823::AdaptiveSpatProcVect::maxAdaptStrobes = 10\fC [static]\fP, \fC [private]\fP"
+максимальное количество стробов, для которых можно одновременно хранить данные в объекте класса\&. 
+.SS "\fBOneStrobeVectors\fP ModelNS23817A620S1823::AdaptiveSpatProcVect::strobes[\fBmaxAdaptStrobes\fP]\fC [private]\fP"
+массив данных для хранения адаптивных векторов ПО и коэффициентов корреляции нескольких стробов\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,111 @@
+\doxysection{412-\/06\+\_\+fc.\+h}
+\hypertarget{blk223_2mpk_2412-06__fc_8h_source}{}\label{blk223_2mpk_2412-06__fc_8h_source}\index{src/mpk1/blk223/mpk/412-\/06\_fc.h@{src/mpk1/blk223/mpk/412-\/06\_fc.h}}
+\mbox{\hyperlink{blk223_2mpk_2412-06__fc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ 412-\/06\_fc.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Nov\ 4,\ 2015}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ vmg}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ C412\_06\_FC\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ C412\_06\_FC\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ \_\_KERNEL\_\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <linux/types.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <libvork/412-\/06\_wire.h>}\ \textcolor{comment}{//\ для\ cell\_412\_06\_wire\_header}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/****\ Организация\ памяти\ ФУ\ (целевые\ параметры)\ ячейки\ 6МЯ-\/412-\/06\ ****/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcell__412__06__target__strobe}{cell\_412\_06\_target\_strobe}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_af850a57b841b5c77f6a5f0eaa1719d3f}{target\_strobe\_begin}};}
+\DoxyCodeLine{00027\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a836b8b94605e7b7232baca1c4733c3af}{target\_strobe\_length}};}
+\DoxyCodeLine{00029\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_aca089c8df17518a88ae6d223a12cd9c1}{n\_dec}};}
+\DoxyCodeLine{00031\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_aaac27c360f45f1bddd4fdcf8bcb0b4c4}{norm}};}
+\DoxyCodeLine{00032\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a9b93b838f73b045377572759db132f8e}{reserved1}};}
+\DoxyCodeLine{00034\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a4890280bb1caf9be8a282c47b46bd970}{reg}};}
+\DoxyCodeLine{00037\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a91739e50e45cf6224da48594d4e10475}{k}};}
+\DoxyCodeLine{00039\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a4831841f10264c3d8bf48f9bf07f1c2e}{n\_shift}};}
+\DoxyCodeLine{00049\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_ac5b78a1d8bf321183488b5c28e52c3e0}{mode}};}
+\DoxyCodeLine{00052\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a47c493923a21660f9e2f4900e8af8361}{tippc\_nl}};}
+\DoxyCodeLine{00062\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_aea54b6f0aa816057a06de6e4b9ce4250}{tips\_n}};}
+\DoxyCodeLine{00064\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_ab29bd5f40c847b8337ce6e803f9292f9}{nfft}};}
+\DoxyCodeLine{00066\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_af3be64f259d95e1f02fa98338aa50def}{Wob}};}
+\DoxyCodeLine{00067\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a84f3c9d228077fc6cb569a844595cba3}{reserved3}}[2];}
+\DoxyCodeLine{00069\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a495c421c62ca62954d4b9a35a5359c59}{delay\_ch}}[4];}
+\DoxyCodeLine{00070\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_ab84672b7e1903241a85791d977e3dd54}{reserved4}}[3];}
+\DoxyCodeLine{00074\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a0830142ac0f4b555d09e13cad1363f50}{het\_dds\_step}};}
+\DoxyCodeLine{00076\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a7ea30b4b351e21f6c03c7b00fb15542c}{het\_dds\_phase}};}
+\DoxyCodeLine{00078\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a2f686b9104854ba776117d852fe1a3c4}{hilbert\_corr\_freq}};}
+\DoxyCodeLine{00079\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a7f287c8127dd8e3591f59928ff24277f}{reserved5}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{struct\ }\{\ int32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894}{re}},\ \mbox{\hyperlink{structcell__412__06__target__strobe_a77501f9c54f3b91b045f7647b0777cb6}{im}};\ \}\ \mbox{\hyperlink{structcell__412__06__target__strobe_a4ecf066038f46c1ba278caef808b4e73}{w\_po}}[12][4];}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{struct\ }\{\ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894}{re}},\ \mbox{\hyperlink{structcell__412__06__target__strobe_aebc765abadde78207112d513b78e0952}{im}};\ \}\ \mbox{\hyperlink{structcell__412__06__target__strobe_a4cf742e0c28e2c18b598010230b3b8ff}{w\_clb}}[4];}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{struct\ }\{\ uint32\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_ab4c69ecf17e6f2ca4d9b980ed1480894}{re}},\ \mbox{\hyperlink{structcell__412__06__target__strobe_a77501f9c54f3b91b045f7647b0777cb6}{im}};\ \}\ \mbox{\hyperlink{structcell__412__06__target__strobe_a29bab95e7dbc04bd7413e3c8d786b9fa}{w\_train}}[30][4];}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structcell__412__06__target__strobe_a41692e9e569c3ac069b71a605451ab2e}{reserved5\_1}}[96];}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{struct\ }cell\_412\_06\_wire\_header\ \mbox{\hyperlink{structcell__412__06__target__strobe_a0bc55bc5f440a45201ace7ffd868a636}{wirehd}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ дополняем\ размер\ структуры\ до\ 0x1000}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ 1632\ -\/\ размер\ cell\_412\_06\_target\_strobe\ без\ unused\_tail}}
+\DoxyCodeLine{00096\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__target__strobe_a393aa3f9f49c4d8852345836ec4c90bf}{unused\_tail}}[0x1000\ -\/\ 1632];}
+\DoxyCodeLine{00097\ \};\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00100\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structcell__412__06__target__strobe}{cell\_412\_06\_target\_strobe}})\ ==\ 0x1000,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}sizeof(cell\_412\_06\_target\_strobe)\ must\ be\ 0x1000"{}});}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ ASSERT(x)\ static\_assert((x),\ "{}Assertion\ broken:\ "{}\ \#x);}}
+\DoxyCodeLine{00104\ ASSERT(offsetof(\mbox{\hyperlink{structcell__412__06__target__strobe}{cell\_412\_06\_target\_strobe}},\ tips\_n)\ ==\ 0x15);}
+\DoxyCodeLine{00105\ ASSERT(offsetof(\mbox{\hyperlink{structcell__412__06__target__strobe}{cell\_412\_06\_target\_strobe}},\ hilbert\_corr\_freq)\ ==\ 0x38);}
+\DoxyCodeLine{00106\ ASSERT(offsetof(\mbox{\hyperlink{structcell__412__06__target__strobe}{cell\_412\_06\_target\_strobe}},\ w\_po)\ ==\ 0x40);}
+\DoxyCodeLine{00107\ ASSERT(offsetof(\mbox{\hyperlink{structcell__412__06__target__strobe}{cell\_412\_06\_target\_strobe}},\ w\_train)\ ==\ 0x1e0);}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#undef\ ASSERT}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{comment}{/****\ Организация\ памяти\ ФУ\ (имитационные\ параметры)\ ячейки\ 6МЯ-\/412-\/06\ ****/}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcell__412__06__sim__object}{cell\_412\_06\_sim\_object}}\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_ab1eade402ac4789644d7349dfec24052}{begin}};}
+\DoxyCodeLine{00120\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_ad28b53e5a6dd02526ce6be231d2c9ce7}{length}};}
+\DoxyCodeLine{00125\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a7322f0c785377e562e8a3afa4f1e7b2d}{n\_poly\_0\_31}};}
+\DoxyCodeLine{00126\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a3de2839e50cf8eb7e06aebdf9a7e32f8}{n\_poly\_32\_40}};}
+\DoxyCodeLine{00129\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a44ff8a8617b0ee5a405aa07ac9d72bd2}{h\_band}};}
+\DoxyCodeLine{00132\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a896bea864aa8ad38f4960e74f164ba07}{type}};}
+\DoxyCodeLine{00133\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_aabf8289da88e4dbd1e3ddc418d1e8a11}{reserved}};}
+\DoxyCodeLine{00136\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a62109a280ee2137539e845147b43217f}{n\_posl\_0\_31}};}
+\DoxyCodeLine{00137\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a9342e82512b28060574fcf9a81d951d0}{n\_posl\_32\_40}};}
+\DoxyCodeLine{00139\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a2c8b787e4e3ca9b9d3534cfcacb7a630}{mseq\_diskret\_length}}[3];}
+\DoxyCodeLine{00141\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_ad713e47f1738250b3f3f0ff1a33995db}{mseq\_length}};}
+\DoxyCodeLine{00143\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a81d8dba740abe728054bcea142f3c1cb}{intens}};}
+\DoxyCodeLine{00147\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a79d8df0dcf882ab84ac3de1bfd07de77}{dds\_step}};}
+\DoxyCodeLine{00150\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a4da80a037afb535dd15196bdebf37c24}{dds\_phase}}[4];}
+\DoxyCodeLine{00152\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__object_a64fab9920b64bbef636a07c334791641}{delay}}[4];}
+\DoxyCodeLine{00153\ \};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcell__412__06__sim__strobe}{cell\_412\_06\_sim\_strobe}}\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_a930b84144bb7a80e75a0743121257a7b}{imit\_strobe\_begin}};}
+\DoxyCodeLine{00160\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_a49ab8102c34f90f44b7328ad1b82b8c8}{imit\_strobe\_length}};}
+\DoxyCodeLine{00168\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_aca6d95cab0e16a6148b2f25efa383f3d}{noise\_n\_posl\_null\_0\_31}};}
+\DoxyCodeLine{00169\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_a2cdb6bf4fc116a5f27f6d0bf9156b253}{noise\_n\_posl\_null\_32\_39}};}
+\DoxyCodeLine{00171\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_ab26a4647ee3ad8e2fda7f41a4a4cf7c6}{n\_objects}};}
+\DoxyCodeLine{00172\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_ae780be37f2eb4832123a00afeae622ee}{noise\_int}};}
+\DoxyCodeLine{00174\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_a6c9446a9a919316f641813c1f7f2f6ba}{afr\_int}}[4];}
+\DoxyCodeLine{00175\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_a9bd8c66e6f382761d9ba070dd46d04f7}{reserved1}}[2];}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcell__412__06__sim__object}{cell\_412\_06\_sim\_object}}\ \mbox{\hyperlink{structcell__412__06__sim__strobe_a9c5670fe271c7ffd89052cf1840fc0df}{objects}}[8];}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//\ дополняем\ размер\ структуры\ до\ 0x1000}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{comment}{//\ 384\ -\/\ размер\ cell\_412\_06\_sim\_strobe\ без\ unused\_tail}}
+\DoxyCodeLine{00179\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structcell__412__06__sim__strobe_afb4023b0a9d3c420f96e95da0d87a829}{unused\_tail}}[0x1000\ -\/\ 384];}
+\DoxyCodeLine{00180\ \};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00183\ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structcell__412__06__sim__strobe}{cell\_412\_06\_sim\_strobe}})\ ==\ 0x1000,}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}sizeof(cell\_412\_06\_sim\_strobe)\ must\ be\ 0x1000"{}});}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ C412\_06\_FC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

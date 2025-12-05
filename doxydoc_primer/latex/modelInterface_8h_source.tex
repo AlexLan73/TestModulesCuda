@@ -1,0 +1,72 @@
+\doxysection{model\+Interface.\+h}
+\hypertarget{modelInterface_8h_source}{}\label{modelInterface_8h_source}\index{include/model/modelInterface.h@{include/model/modelInterface.h}}
+\mbox{\hyperlink{modelInterface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODELINTERFACE\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODELINTERFACE\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{e2trimts_8h}{model/e2trimts.h}}>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{e2trkp_8h}{model/e2trkp.h}}>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{str__uco_8h}{model/str\_uco.h}}>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{minDefs_8h}{model/minDefs.h}}>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{controlMsgSharedTypes_8h}{model/controlMsgSharedTypes.h}}>}\ \textcolor{comment}{//\ structs\ for\ ControlMessage}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelSharedConst_8h}{model/modelSharedConst.h}}>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }Callbacks;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{ChannelsMask}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask_ab57dade7931b2b3b1077e1a3e3eb19f2}{mask}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a38dba6fed584da52d4ad6d539a97c3fe}{SharedConst::maxPolars}}][\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}];}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ TrimtsMsg\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a92321e81d633ab6ebc4a2cbadb8ca7b4}{trimts}};}
+\DoxyCodeLine{00038\ \ \ \ \ E2TRPR\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_ad5b1c8eb4cf57a77de4db3f168674b10}{trpr}};}
+\DoxyCodeLine{00040\ \ \ \ \ E2IPPA\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a7c4f243459723dbe3bb180a2569b8e37}{ippa}};}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a842be86f86b58ba869bc40c299942393}{klb}};}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a12c52d33fc7b8266ba57fa56b9a5b0f4}{afr}};}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{ChannelsMask}}\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a5a6dffcdbd4bb8125200c88372048bf8}{chMask}};}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{StationParams}}\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a53b993686944bba891ce3b18bc0836b4}{stationParams}};}
+\DoxyCodeLine{00050\ \ \ \ \ std::list<StrobeResult>\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a3a611a8d7bfbbb07cedde8521602fa45}{results}};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{structUcopoMsgBuf}{UcopoMsgBuf}}\ *\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages_a2eed6f928f0e726eeb9376275ed44b39}{ucopoBuf}};}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{ControlMessage}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_a88b7b29b49635b8a67b78ce8dc9de62a}{strbNum}};}
+\DoxyCodeLine{00060\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_a3cd9ed3bdd334f5d82c130f01aefb60c}{polarNum}};}
+\DoxyCodeLine{00062\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_aef5a67f87fa251d435b173fb5511fa8f}{cell412Num}};}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact}{CMsgSharedTypes::ImitTact}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_aa2611e1865d1cf7ebb000bdc7b538dc4}{tactHeader}};}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsgSharedTypes::ImitStrobe}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_a2d06a085982f892d56b47ad678632ad3}{strb}};}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject}{CMsgSharedTypes::ImitObject}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage_ae5902c67e1d9f363e5852b7b850a72b1}{imitObjects}}[\mbox{\hyperlink{e2trimts_8h_a0fc9e7a29ac5ea4ef0f83173e6639154}{maxImitObjects}}];}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Interface}}\ \{}
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739}{InitLevel}}\ \{\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739a4c73bcba4a5bab17bf798b2313c7cdb6}{controlMsgsOnly}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739aac48c9b6ef2010aee18a8f8a3e6dc6ea}{fullInit}}\ \};}
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:\ \ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_aaf6eac83fc27f36c0cb6c7477e51155c}{\string~Interface}}()\ \{\}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{virtual}\ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a5f0b1f05c85df381b4ae72f679f9ec10}{formAllControlMessages}}(}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ *extMsgs,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{ChannelsMask}}\ *latticeMask,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ControlMessage>\&\ cntrlMsgs)\ =\ 0;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a072b0b4492b4cf8621ee4586231cc69a}{startProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ *extMsgs,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}}\ *cbacks)\ =\ 0;}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{ModelNS23817A620S1823::Interface}}*}
+\DoxyCodeLine{00118\ \mbox{\hyperlink{modelInterface_8h_a0ebb9babc58d35b38df764011eb8b8f0}{createModelObject}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MODELINTERFACE\_H\_\_}}
+
+\end{DoxyCode}

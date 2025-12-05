@@ -1,0 +1,287 @@
+\doxysection{Server\+Loop Class Reference}
+\hypertarget{classServerLoop}{}\label{classServerLoop}\index{ServerLoop@{ServerLoop}}
+
+
+{\ttfamily \#include $<$server\+\_\+loop.\+h$>$}
+
+
+
+Collaboration diagram for Server\+Loop\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classServerLoop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}}
+\item 
+struct \mbox{\hyperlink{structServerLoop_1_1QueuedRequest}{Queued\+Request}}
+\begin{DoxyCompactList}\small\item\em Запрос на вполнение JSON RPC метода (любого), поставленный в очередь. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServerLoop_a3d9b7918e7ae1f2aa188a34006c700a3}{Server\+Loop}} (\mbox{\hyperlink{classCache}{Cache}} \&c)
+\item 
+void \mbox{\hyperlink{classServerLoop_a955eef2b52f4d62f9086b33b28bf4a7e}{serve}} (int listenfd)
+\item 
+void \mbox{\hyperlink{classServerLoop_ac2a99e3872db66dbb5d9ad7bef3d5526}{serve1}} (int connfd)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} \mbox{\hyperlink{classServerLoop_a7cb3a4bea800700b3de2507d17c88563}{oneshot}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&inputs, optional$<$ std\+::string $>$ out\+Dir\+Path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef libutils\+::\+FDPort\+In$<$ optional$<$ Result$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}, \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ $>$, libutils\+::fdistream \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7}{get\+\_\+fd}} $>$ \mbox{\hyperlink{classServerLoop_af056a2ec76f3ce64931945277302e4be}{Client\+Port\+In\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classServerLoop_ad22434b6a2fe29896b3faa9a963dbfb1}{do\+\_\+serve}} (libutils\+::\+Port\+In$<$ int $>$ \&conn\+\_\+in, bool forever)
+\item 
+\mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} \& \mbox{\hyperlink{classServerLoop_a36e98f3be02fb71963be2e1e01ed6ac4}{add\+\_\+client}} (libutils\+::\+Port\+In$<$ int $>$ \&conn\+\_\+in)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$ \mbox{\hyperlink{classServerLoop_ae6c7fba19272651d813cbc86f879645d}{find\+\_\+client}} (const libutils\+::\+Ready\+Ports \&ports) const
+\item 
+void \mbox{\hyperlink{classServerLoop_aef0a09bfb495c03ea06de7fcfbb7ea23}{drop\+\_\+client}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$ client)
+\item 
+std\+::unique\+\_\+ptr$<$ libutils\+::\+Select $>$ \mbox{\hyperlink{classServerLoop_a0f2460ce67974de7a27e89e0ec8f9496}{rebuild\+\_\+select}} (libutils\+::\+Port\+In$<$ int $>$ \&conn\+\_\+in, libutils\+::\+Port\+In$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ \&rsp\+\_\+in) const
+\item 
+bool \mbox{\hyperlink{classServerLoop_a643334cde5788ced913b4e5b64411e5c}{send}} (const \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} \&rsp, \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} \&client) const
+\item 
+std\+::shared\+\_\+ptr$<$ libutils\+::picojson\+\_\+object $>$ \mbox{\hyperlink{classServerLoop_a1dd0d0634cb65322fd9f208fd5253e17}{get\+\_\+cached}} (const \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} \texorpdfstring{$\ast$}{*}req) const
+\item 
+void \mbox{\hyperlink{classServerLoop_a056775dfeb9bd0224ccc1185e5d3286c}{cache\+\_\+response}} (const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \texorpdfstring{$\ast$}{*}in\+\_\+bundle, const Result$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}, libutils\+::\+Recv\+Error $>$ \&rsp)
+\begin{DoxyCompactList}\small\item\em Если ответ содержит пригодную к кэшированию выдачу модели, кэшируем его \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerLoop_a79a9ef83f24537fee702f067799f7bbc}{send\+\_\+cached\+\_\+json\+\_\+object}} (std\+::shared\+\_\+ptr$<$ libutils\+::picojson\+\_\+object $>$ cached\+\_\+rsp, const \mbox{\hyperlink{structServerLoop_1_1QueuedRequest}{Queued\+Request}} \&qreq) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} $>$, bool $>$ \mbox{\hyperlink{classServerLoop_a67ea005cd84f35c2efa7d6484a5fb2de}{get\+\_\+request}} (\mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} \&c)
+\item 
+static pollfd \mbox{\hyperlink{classServerLoop_a443051fd6f1607583b3409dfcc302dbc}{make\+\_\+null\+\_\+pollfd}} (int fd)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$ $>$ \mbox{\hyperlink{classServerLoop_a9f49c065f4a6043f028944725555bf70}{clients}}
+\begin{DoxyCompactList}\small\item\em Список всех клиентских соединений \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCache}{Cache}} \& \mbox{\hyperlink{classServerLoop_a3ee87ca5fbb90c4aca642403f00ef5c1}{cache}}
+\begin{DoxyCompactList}\small\item\em Кэш вычисленных Strobe\+Output. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classServerLoop_a6b6f37773461b7febd2d65057ebf1909}{nrequests}}
+\begin{DoxyCompactList}\small\item\em Количество обработанных запросов \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classServerLoop_a81368a2f9afb3fa2065616bea526883a}{ncachehits}}
+\begin{DoxyCompactList}\small\item\em Количество запросов, обработанных из кэша \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classServerLoop_af056a2ec76f3ce64931945277302e4be}\label{classServerLoop_af056a2ec76f3ce64931945277302e4be} 
+\index{ServerLoop@{ServerLoop}!ClientPortIn\_t@{ClientPortIn\_t}}
+\index{ClientPortIn\_t@{ClientPortIn\_t}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{ClientPortIn\_t}{ClientPortIn\_t}}
+{\footnotesize\ttfamily typedef libutils\+::\+FDPort\+In$<$optional$<$Result$<$\mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}}, \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}$>$ $>$, libutils\+::fdistream \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{server__loop_8h_a78d881cde714da2f33142d22d0fe6fd7}{get\+\_\+fd}}$>$ \mbox{\hyperlink{classServerLoop_af056a2ec76f3ce64931945277302e4be}{Server\+Loop\+::\+Client\+Port\+In\+\_\+t}}\hspace{0.3cm}{\ttfamily [private]}}
+
+Порт для ожидания и чтения запроса из входного потока; входной поток оборачивает дескриптор сокета (ожидание выполняется на дескрипторе) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classServerLoop_a3d9b7918e7ae1f2aa188a34006c700a3}\label{classServerLoop_a3d9b7918e7ae1f2aa188a34006c700a3} 
+\index{ServerLoop@{ServerLoop}!ServerLoop@{ServerLoop}}
+\index{ServerLoop@{ServerLoop}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{ServerLoop()}{ServerLoop()}}
+{\footnotesize\ttfamily Server\+Loop\+::\+Server\+Loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCache}{Cache}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classServerLoop_a36e98f3be02fb71963be2e1e01ed6ac4}\label{classServerLoop_a36e98f3be02fb71963be2e1e01ed6ac4} 
+\index{ServerLoop@{ServerLoop}!add\_client@{add\_client}}
+\index{add\_client@{add\_client}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{add\_client()}{add\_client()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Server\+Loop\+::\+Client\+Conn}} \& Server\+Loop\+::add\+\_\+client (\begin{DoxyParamCaption}\item[{libutils\+::\+Port\+In$<$ int $>$ \&}]{conn\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a056775dfeb9bd0224ccc1185e5d3286c}\label{classServerLoop_a056775dfeb9bd0224ccc1185e5d3286c} 
+\index{ServerLoop@{ServerLoop}!cache\_response@{cache\_response}}
+\index{cache\_response@{cache\_response}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{cache\_response()}{cache\_response()}}
+{\footnotesize\ttfamily void Server\+Loop\+::cache\+\_\+response (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \texorpdfstring{$\ast$}{*}}]{in\+\_\+bundle,  }\item[{const Result$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}}, libutils\+::\+Recv\+Error $>$ \&}]{rsp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Если ответ содержит пригодную к кэшированию выдачу модели, кэшируем его 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerLoop_a056775dfeb9bd0224ccc1185e5d3286c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerLoop_ad22434b6a2fe29896b3faa9a963dbfb1}\label{classServerLoop_ad22434b6a2fe29896b3faa9a963dbfb1} 
+\index{ServerLoop@{ServerLoop}!do\_serve@{do\_serve}}
+\index{do\_serve@{do\_serve}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{do\_serve()}{do\_serve()}}
+{\footnotesize\ttfamily void Server\+Loop\+::do\+\_\+serve (\begin{DoxyParamCaption}\item[{libutils\+::\+Port\+In$<$ int $>$ \&}]{conn\+\_\+in,  }\item[{bool}]{forever }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerLoop_ad22434b6a2fe29896b3faa9a963dbfb1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerLoop_aef0a09bfb495c03ea06de7fcfbb7ea23}\label{classServerLoop_aef0a09bfb495c03ea06de7fcfbb7ea23} 
+\index{ServerLoop@{ServerLoop}!drop\_client@{drop\_client}}
+\index{drop\_client@{drop\_client}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{drop\_client()}{drop\_client()}}
+{\footnotesize\ttfamily void Server\+Loop\+::drop\+\_\+client (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} $>$}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_ae6c7fba19272651d813cbc86f879645d}\label{classServerLoop_ae6c7fba19272651d813cbc86f879645d} 
+\index{ServerLoop@{ServerLoop}!find\_client@{find\_client}}
+\index{find\_client@{find\_client}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{find\_client()}{find\_client()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{structServerLoop_1_1ClientConn}{Server\+Loop\+::\+Client\+Conn}} $>$ Server\+Loop\+::find\+\_\+client (\begin{DoxyParamCaption}\item[{const libutils\+::\+Ready\+Ports \&}]{ports }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a1dd0d0634cb65322fd9f208fd5253e17}\label{classServerLoop_a1dd0d0634cb65322fd9f208fd5253e17} 
+\index{ServerLoop@{ServerLoop}!get\_cached@{get\_cached}}
+\index{get\_cached@{get\_cached}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{get\_cached()}{get\_cached()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ picojson\+\_\+object $>$ Server\+Loop\+::get\+\_\+cached (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} \texorpdfstring{$\ast$}{*}}]{req }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classServerLoop_a1dd0d0634cb65322fd9f208fd5253e17_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerLoop_a67ea005cd84f35c2efa7d6484a5fb2de}\label{classServerLoop_a67ea005cd84f35c2efa7d6484a5fb2de} 
+\index{ServerLoop@{ServerLoop}!get\_request@{get\_request}}
+\index{get\_request@{get\_request}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{get\_request()}{get\_request()}}
+{\footnotesize\ttfamily tuple$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{server__loop_8h_a05d41c83dfd17cd16d15ab7d96587546}{Request}} $>$, bool $>$ Server\+Loop\+::get\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a443051fd6f1607583b3409dfcc302dbc}\label{classServerLoop_a443051fd6f1607583b3409dfcc302dbc} 
+\index{ServerLoop@{ServerLoop}!make\_null\_pollfd@{make\_null\_pollfd}}
+\index{make\_null\_pollfd@{make\_null\_pollfd}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{make\_null\_pollfd()}{make\_null\_pollfd()}}
+{\footnotesize\ttfamily pollfd Server\+Loop\+::make\+\_\+null\+\_\+pollfd (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a7cb3a4bea800700b3de2507d17c88563}\label{classServerLoop_a7cb3a4bea800700b3de2507d17c88563} 
+\index{ServerLoop@{ServerLoop}!oneshot@{oneshot}}
+\index{oneshot@{oneshot}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{oneshot()}{oneshot()}}
+{\footnotesize\ttfamily P\+::\+Response Server\+Loop\+::oneshot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} \&}]{inputs,  }\item[{optional$<$ std\+::string $>$}]{out\+Dir\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerLoop_a7cb3a4bea800700b3de2507d17c88563_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerLoop_a0f2460ce67974de7a27e89e0ec8f9496}\label{classServerLoop_a0f2460ce67974de7a27e89e0ec8f9496} 
+\index{ServerLoop@{ServerLoop}!rebuild\_select@{rebuild\_select}}
+\index{rebuild\_select@{rebuild\_select}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{rebuild\_select()}{rebuild\_select()}}
+{\footnotesize\ttfamily unique\+\_\+ptr$<$ Select $>$ Server\+Loop\+::rebuild\+\_\+select (\begin{DoxyParamCaption}\item[{libutils\+::\+Port\+In$<$ int $>$ \&}]{conn\+\_\+in,  }\item[{libutils\+::\+Port\+In$<$ \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} $>$ \&}]{rsp\+\_\+in }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a643334cde5788ced913b4e5b64411e5c}\label{classServerLoop_a643334cde5788ced913b4e5b64411e5c} 
+\index{ServerLoop@{ServerLoop}!send@{send}}
+\index{send@{send}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Server\+Loop\+::send (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{server__loop_8h_a59b0d9fd7a3ed362f113bc1cc6e2c8de}{Response}} \&}]{rsp,  }\item[{\mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}} \&}]{client }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a79a9ef83f24537fee702f067799f7bbc}\label{classServerLoop_a79a9ef83f24537fee702f067799f7bbc} 
+\index{ServerLoop@{ServerLoop}!send\_cached\_json\_object@{send\_cached\_json\_object}}
+\index{send\_cached\_json\_object@{send\_cached\_json\_object}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{send\_cached\_json\_object()}{send\_cached\_json\_object()}}
+{\footnotesize\ttfamily bool Server\+Loop\+::send\+\_\+cached\+\_\+json\+\_\+object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ libutils\+::picojson\+\_\+object $>$}]{cached\+\_\+rsp,  }\item[{const \mbox{\hyperlink{structServerLoop_1_1QueuedRequest}{Queued\+Request}} \&}]{qreq }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classServerLoop_a955eef2b52f4d62f9086b33b28bf4a7e}\label{classServerLoop_a955eef2b52f4d62f9086b33b28bf4a7e} 
+\index{ServerLoop@{ServerLoop}!serve@{serve}}
+\index{serve@{serve}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{serve()}{serve()}}
+{\footnotesize\ttfamily void Server\+Loop\+::serve (\begin{DoxyParamCaption}\item[{int}]{listenfd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerLoop_a955eef2b52f4d62f9086b33b28bf4a7e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerLoop_ac2a99e3872db66dbb5d9ad7bef3d5526}\label{classServerLoop_ac2a99e3872db66dbb5d9ad7bef3d5526} 
+\index{ServerLoop@{ServerLoop}!serve1@{serve1}}
+\index{serve1@{serve1}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{serve1()}{serve1()}}
+{\footnotesize\ttfamily void Server\+Loop\+::serve1 (\begin{DoxyParamCaption}\item[{int}]{connfd }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerLoop_ac2a99e3872db66dbb5d9ad7bef3d5526_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classServerLoop_a3ee87ca5fbb90c4aca642403f00ef5c1}\label{classServerLoop_a3ee87ca5fbb90c4aca642403f00ef5c1} 
+\index{ServerLoop@{ServerLoop}!cache@{cache}}
+\index{cache@{cache}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{cache}{cache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCache}{Cache}}\& Server\+Loop\+::cache\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Кэш вычисленных Strobe\+Output. 
+
+\Hypertarget{classServerLoop_a9f49c065f4a6043f028944725555bf70}\label{classServerLoop_a9f49c065f4a6043f028944725555bf70} 
+\index{ServerLoop@{ServerLoop}!clients@{clients}}
+\index{clients@{clients}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{clients}{clients}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structServerLoop_1_1ClientConn}{Client\+Conn}}$>$ $>$ Server\+Loop\+::clients\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Список всех клиентских соединений 
+
+\Hypertarget{classServerLoop_a81368a2f9afb3fa2065616bea526883a}\label{classServerLoop_a81368a2f9afb3fa2065616bea526883a} 
+\index{ServerLoop@{ServerLoop}!ncachehits@{ncachehits}}
+\index{ncachehits@{ncachehits}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{ncachehits}{ncachehits}}
+{\footnotesize\ttfamily uint Server\+Loop\+::ncachehits\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Количество запросов, обработанных из кэша 
+
+\Hypertarget{classServerLoop_a6b6f37773461b7febd2d65057ebf1909}\label{classServerLoop_a6b6f37773461b7febd2d65057ebf1909} 
+\index{ServerLoop@{ServerLoop}!nrequests@{nrequests}}
+\index{nrequests@{nrequests}!ServerLoop@{ServerLoop}}
+\doxysubsubsection{\texorpdfstring{nrequests}{nrequests}}
+{\footnotesize\ttfamily uint Server\+Loop\+::nrequests\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Количество обработанных запросов 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/jsonrpc/\mbox{\hyperlink{server__loop_8h}{server\+\_\+loop.\+h}}\item 
+src/jsonrpc/\mbox{\hyperlink{server__loop_8cpp}{server\+\_\+loop.\+cpp}}\end{DoxyCompactItemize}

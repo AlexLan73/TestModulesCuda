@@ -1,0 +1,69 @@
+.TH "src/mpk1/blk978/libfc.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk978/libfc.h \- Вспомогательные функции для работы с ФУ\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <libvork/libmpk\&.h>\fP
+.br
+\fC#include <model/modelInterface\&.h>\fP
+.br
+\fC#include <mpk/412\-06_fc\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static int32_t \fBroundflt\fP (float value)"
+.br
+.RI "Округление числа с плавающей запятой до ближайшего целого\&. "
+.ti -1c
+.RI "void \fBfill_wire_header\fP (const TStrobe &netstrb, const modelv::CMsgSharedTypes::ImitStrobe &unistrb, const modelv::CMsgSharedTypes::ImitTact &unitact, cell_412_06_wire_header &wirehd)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Вспомогательные функции для работы с ФУ\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+vmg 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+27\&.11\&.2015 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void fill_wire_header (const TStrobe & netstrb, const modelv::CMsgSharedTypes::ImitStrobe & unistrb, const modelv::CMsgSharedTypes::ImitTact & unitact, cell_412_06_wire_header & wirehd)"
+
+.SS "static int32_t roundflt (float value)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Округление числа с плавающей запятой до ближайшего целого\&. Функция производит простую операцию округления переданного значения до ближайшего целого\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Округляемое значение\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает округленное до целого число\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

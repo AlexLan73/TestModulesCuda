@@ -1,0 +1,146 @@
+.TH "src/mpk1/blk223/blk223fc.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk223/blk223fc.h \- Расчет функционального управления для 223-й ячейки\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'fcquantum\&.h'\fP
+.br
+\fC#include 'model_wrapper\&.h'\fP
+.br
+
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBinterf_strobe_modes\fP { \fBINTERF_MODE_NONE\fP = 0, \fBINTERF_MODE_WIDE_BEAM\fP = 1, \fBINTERF_MODE_NARROW_BEAM\fP = 2, \fBINTERF_MODE_LEVEL_MEASURE\fP = 3 }"
+.br
+.RI "Режимы помеховых стробов\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "libutils::Result< \fBinterf_strobe_modes\fP > \fBcalc_asp_mode\fP (const unsigned divc, const unsigned rays, const unsigned kgrs, const unsigned nstr)"
+.br
+.RI "Функция уточняет код режима АСП (ПК) для аппаратуры\&. "
+.ti -1c
+.RI "int \fBcompute_fcq_for_hw\fP (const std::vector< \fBmodelv::ControlMessage\fP > &ctrl_msgs, \fBfcq\fP *fcqp)"
+.br
+.RI "Функция производит расчет и конвертацию ФУ для 223-й ячейки\&. "
+.ti -1c
+.RI "void \fBprint_fcq\fP (\fBfcq\fP *fcqp)"
+.br
+.RI "Функция производит печать рассчитанного для аппаратуры ФУ\&. "
+.ti -1c
+.RI "void \fBprint_fcq_dump\fP (const \fBfcq\fP *fcqp, FILE *=stdout)"
+.br
+.RI "Функция производит печать 'сырого' дампа всего кванта ФУ\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Расчет функционального управления для 223-й ячейки\&. 
+
+Функции расчета ФУ для 223-й ячейки и его конвертации для прошивки\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBinterf_strobe_modes\fP"
+
+.PP
+Режимы помеховых стробов\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIINTERF_MODE_NONE \fP\fP
+.TP
+\fB\fIINTERF_MODE_WIDE_BEAM \fP\fP
+АСП узким лучом\&. 
+.TP
+\fB\fIINTERF_MODE_NARROW_BEAM \fP\fP
+АСП широким лучом\&. 
+.TP
+\fB\fIINTERF_MODE_LEVEL_MEASURE \fP\fP
+Измерение уровня (ПК)\&. 
+.SH "Function Documentation"
+.PP 
+.SS "libutils::Result< \fBinterf_strobe_modes\fP > calc_asp_mode (const unsigned divc, const unsigned rays, const unsigned kgrs, const unsigned nstr)"
+
+.PP
+Функция уточняет код режима АСП (ПК) для аппаратуры\&. В зависимости от комбинации входных параметров функция определяет, для какого режима работы АСП они были заданы и возвращает соответствующее значение кода режима АСП\&. В случае неверно заданных параметров функция возвращает стандартный код ошибки и выводит поясняющий текст ошибки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdivc\fP Коэффициент дробления полотна\&. 
+.br
+\fIrays\fP Количество лучей\&. 
+.br
+\fIkgrs\fP Количество гипотез по скорости\&. 
+.br
+\fInstr\fP Номер строба\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+В случае успешного расчета возвращает код режима АСП\&. 
+.PP
+В случае ошибки возвращает стандартный код ошибки\&. 
+.RE
+.PP
+
+.SS "int compute_fcq_for_hw (const std::vector< \fBmodelv::ControlMessage\fP > & ctrl_msgs, \fBfcq\fP * fcqp)"
+
+.PP
+Функция производит расчет и конвертацию ФУ для 223-й ячейки\&. Функция последовательно перебирает имеющиеся управляющие сообщения (УС), для каждого из них производит вызов валидации параметров ФУ, а затем, в случае корректного УС, производит вызов фунций расчета целевого и имитационного ФУ более низкого уровня\&. В случае ошибки функция отбрасывает данное УС, изменяет счетчик статистики некорректных стробов и переходит к следующему управляющему сообщению\&. После расчета ФУ в случае необходимости производится печать сформированных стробов ФУ\&. По завершению всех предыдущих операций производится обязательная конвертация ФУ из внутреннего представления в представление ПЛИС\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIctrl_msgs\fP Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели\&. Служит исходными данными для ФУ\&. 
+.br
+\fIfcqp\fP Указатель на структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+При успешном формировании ФУ возвращает EXIT_SUCCESS\&. 
+.RE
+.PP
+
+.SS "void print_fcq (\fBfcq\fP * fcqp)"
+
+.PP
+Функция производит печать рассчитанного для аппаратуры ФУ\&. Функция производит перебор целевых и имитационных стробов для заданного кванта ФУ и вызывает для них соответствующие функции печати стробов\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfcqp\fP Указатель на структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "void print_fcq_dump (const \fBfcq\fP * fcqp, FILE * out = \fCstdout\fP)"
+
+.PP
+Функция производит печать 'сырого' дампа всего кванта ФУ\&. Функция производит последовательный вывод дампа ФУ, предназначенного для ПЛИС\&. Формат, в котором выдаются данные, пригодны для моделирования работы прошивки в ModelSim\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfcqp\fP Указатель на структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

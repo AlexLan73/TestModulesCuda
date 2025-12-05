@@ -1,0 +1,14 @@
+<map id="ModelNS23817A620S1823::ControlMessage" name="ModelNS23817A620S1823::ControlMessage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,525,430,645"/>
+<area shape="rect" id="Node000002" href="$structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitTact.html" title=" " alt="" coords="5,243,205,403"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,401,246,500,258,512,254,515,242,503,160,405"/>
+<area shape="rect" id="Node000003" href="$structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe.html" title=" " alt="" coords="469,183,685,463"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="471,464,435,503,423,516,419,512,431,499,467,460"/>
+<area shape="rect" id="Node000004" href="$structModelNS23817A620S1823_1_1RayCoords.html" title=" " alt="" coords="269,5,454,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="422,104,446,128,479,168,475,171,442,131,418,107"/>
+<area shape="rect" id="Node000006" href="$structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitObject.html" title=" " alt="" coords="229,183,445,463"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="347,106,341,130,337,167,332,166,336,129,341,105"/>
+<area shape="rect" id="Node000005" href="$structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ChanCoords.html" title=" " alt="" coords="501,5,728,105"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="610,106,602,167,597,166,605,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="340,463,340,509,335,509,335,463"/>
+</map>

@@ -1,0 +1,144 @@
+\doxysection{libfc.\+h}
+\hypertarget{blk223_2libfc_8h_source}{}\label{blk223_2libfc_8h_source}\index{src/mpk1/blk223/libfc.h@{src/mpk1/blk223/libfc.h}}
+\mbox{\hyperlink{blk223_2libfc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ LIBFC\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ LIBFC\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <libvork/libmpk.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{model__wrapper_8h}{model\_wrapper.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ COORD\_ADAPT\_STRB\_TYPE\ \ \ \ \ \ \ 512}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ SIGNAL\_ADAPT\_STRB\_TYPE\ \ \ \ \ \ 513}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ AUTOCOMPENS\_STRB\_TYPE\ \ \ \ \ \ \ 514}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ AUTOCOMPENS\_STRB\_TYPE\ \ \ \ \ \ \ 128}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ TFK\_STRB\_TYPE\ \ \ \ \ \ \ \ \ \ \ 1024}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ CALIBR\_STRB\_TYPE\ \ \ \ \ \ \ \ 2048}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ NLA\_STRB\_TYPE\ \ \ \ \ \ \ \ \ \ \ 2049}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ XXX\ объединить\ функции\ в\ единую,\ возвращающую\ enum}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ XXX\ и\ сделать\ 2\ набора\ функций\ -\/\ для\ TStrobe\ и\ int\ (is\_*\_strobe\{,\_type\})}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_a65b71dac9ccbcafe9c75785fbe08eb9b}{is\_tfk\_strobe\_type}}(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (strb\_type\ >=\ \mbox{\hyperlink{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e}{TFK\_STRB\_TYPE}}\ \&\&\ strb\_type\ <\ \mbox{\hyperlink{blk223_2libfc_8h_a9359db5577ef2862ec780a3766a31b52}{CALIBR\_STRB\_TYPE}})}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_calib\_strobe\_type(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ strb\_type\ ==\ \mbox{\hyperlink{blk223_2libfc_8h_a9359db5577ef2862ec780a3766a31b52}{CALIBR\_STRB\_TYPE}};}
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_aea961f54684231b548c159708dcae31d}{is\_nla\_strobe}}(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ strb\_type\ ==\ \mbox{\hyperlink{blk223_2libfc_8h_a527e269ab9e91a93d533e6861de509af}{NLA\_STRB\_TYPE}};}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_a5b8eb03e622148718dd963bc58832918}{is\_auto\_compen\_strobe}}(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ strb\_type\ ==\ \mbox{\hyperlink{blk223_2libfc_8h_afcb7163f6a01047ac47e90cde2693106}{AUTOCOMPENS\_STRB\_TYPE}}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ ||\ (strb\_type\ +\ \mbox{\hyperlink{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e}{TFK\_STRB\_TYPE}})\ ==\ \mbox{\hyperlink{blk223_2libfc_8h_afcb7163f6a01047ac47e90cde2693106}{AUTOCOMPENS\_STRB\_TYPE}};}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00097\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_coord\_adapt\_strobe(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{return}\ strb\_type\ ==\ COORD\_ADAPT\_STRB\_TYPE}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ ||\ (strb\_type\ +\ \mbox{\hyperlink{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e}{TFK\_STRB\_TYPE}})\ ==\ COORD\_ADAPT\_STRB\_TYPE;}
+\DoxyCodeLine{00101\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_sig\_adapt\_strobe(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{return}\ strb\_type\ ==\ SIGNAL\_ADAPT\_STRB\_TYPE}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ ||\ (strb\_type\ +\ \mbox{\hyperlink{blk223_2libfc_8h_acb21e3e7965d033d099297cf67cc2d0e}{TFK\_STRB\_TYPE}})\ ==\ SIGNAL\_ADAPT\_STRB\_TYPE;}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_adapt\_strobe\_type(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00122\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{return}\ is\_sig\_adapt\_strobe(strb\_type)\ ||\ is\_coord\_adapt\_strobe(strb\_type);}
+\DoxyCodeLine{00124\ \}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_a6a371265ce3ce26dc9f50b22eb41240b}{is\_jam\_strobe\_type}}(\textcolor{keywordtype}{int}\ strb\_type)}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ strb\_type\ ==\ 256;}
+\DoxyCodeLine{00136\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_a42db2ab22944747c988a753da2f3ff09}{is\_tfk\_strobe}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ TStrobe\ *strb)}
+\DoxyCodeLine{00146\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{blk223_2libfc_8h_a65b71dac9ccbcafe9c75785fbe08eb9b}{is\_tfk\_strobe\_type}}(strb-\/>tips);}
+\DoxyCodeLine{00148\ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00158\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_interf\_strobe(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ TStrobe\ *strb)}
+\DoxyCodeLine{00159\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{return}\ libvork::is\_jam\_strobe(strb);}
+\DoxyCodeLine{00161\ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_calib\_strobe(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ TStrobe\ *strb)}
+\DoxyCodeLine{00171\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ libvork::is\_calib\_strobe\_type(strb-\/>tips);}
+\DoxyCodeLine{00173\ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_aea961f54684231b548c159708dcae31d}{is\_nla\_strobe}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ TStrobe\ *strb)}
+\DoxyCodeLine{00183\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{blk223_2libfc_8h_aea961f54684231b548c159708dcae31d}{is\_nla\_strobe}}(strb-\/>tips);}
+\DoxyCodeLine{00185\ \}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00196\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ is\_adapt\_strobe(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ TStrobe\ *strb)}
+\DoxyCodeLine{00197\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordflow}{return}\ is\_adapt\_strobe\_type(strb-\/>tips);}
+\DoxyCodeLine{00199\ \}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00209\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223_2libfc_8h_af889ec125463699264ac5356a1ad4bc1}{map\_tips}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ TStrobe\&\ s);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ int32\_t\ \mbox{\hyperlink{blk223_2libfc_8h_aa7890e86b6f4ef066be693f71ea63e21}{roundflt}}(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{00217\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <\ 0)}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (int32\_t)(value\ -\/\ 0.5);}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ >\ 0)}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (int32\_t)(value\ +\ 0.5);}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00225\ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00235\ libutils::Result<TrimtsMsg>\ \mbox{\hyperlink{blk223_2libfc_8h_a45b9ccd991f45c306e605c54ebfae812}{validate\_trims}}(\textcolor{keyword}{const}\ TrimtsMsg\&\ msg);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00247\ libutils::Result<E2TRPR>\ \mbox{\hyperlink{blk223_2libfc_8h_a6083a2db59c14503e1199e63ebe21c37}{validate\_trpr}}(\textcolor{keyword}{const}\ E2TRPR\&\ msg,\ uint\ rek\_num);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00250\ \textcolor{keyword}{inline}\ uint\ \mbox{\hyperlink{blk223_2libfc_8h_a8f73d0117aa68f53bf9d09d7661b477e}{get\_add\_nl}}(\textcolor{keyword}{const}\ modelv::CMsgSharedTypes::ImitStrobe\&\ s)\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{comment}{/*\ Количество\ лучей\ автокомпенсации;\ если\ в\ стробе\ используется}}
+\DoxyCodeLine{00252\ \textcolor{comment}{\ \ \ \ \ \ \ АК,\ считаем,\ что\ в\ нем\ 2\ луча,\ а\ лишние\ зануляем\ весовыми\ коэфф.\ */}}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{blk223_2libfc_8h_a5b8eb03e622148718dd963bc58832918}{is\_auto\_compen\_strobe}}(s.type)\ ?\ 2\ :\ 0;}
+\DoxyCodeLine{00254\ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00257\ \textcolor{keyword}{inline}\ uint\ \mbox{\hyperlink{blk223_2libfc_8h_ae5036fdc064d4392882df4f0b60a743a}{nrays\_total}}(\textcolor{keyword}{const}\ modelv::CMsgSharedTypes::ImitStrobe\&\ s)\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{blk223_2libfc_8h_a8f73d0117aa68f53bf9d09d7661b477e}{get\_add\_nl}}(s)\ +\ s.rays;}
+\DoxyCodeLine{00259\ \}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{blk223_2libfc_8h_a9fd7a03ceeb8dc8812766e4e54a92145}{fill\_wire\_header}}(\textcolor{keyword}{const}\ TStrobe\&\ netstrb,}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ modelv::CMsgSharedTypes::ImitStrobe\&\ unistrb,}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cell\_412\_06\_wire\_header\&\ wirehd);}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LIBFC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

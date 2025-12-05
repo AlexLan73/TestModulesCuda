@@ -1,0 +1,584 @@
+.TH "ModelNS23817A620S1823::Block232" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Block232
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <b232\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBlock232\fP ()"
+.br
+.ti -1c
+.RI "\fB~Block232\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetControlMessage\fP (const TStrobe &s)"
+.br
+.ti -1c
+.RI "void \fBsetControlMessage\fP (\fBControlMsg\fP *controlMsg)"
+.br
+.ti -1c
+.RI "void \fBgetResults\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtfpParamsCorrection\fP (int32_t *nfgdfu, uint32_t *kgrs, int32_t *n1grs, uint32_t *kgd) const"
+.br
+.ti -1c
+.RI "void \fBcalcFloatingThresholds\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcRelFixedThresholds\fP (const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas)"
+.br
+.ti -1c
+.RI "\fBVector3d\fP< double > \fBcoherentIncoherentSumming\fP (const \fBTStrobeExt\fP *\fBstrb\fP, const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "void \fBprepareWindow\fP (uint32_t d, uint32_t f, uint32_t r, std::vector< double > &win)"
+.br
+.ti -1c
+.RI "void \fBthresholdLogicProcessing\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "double \fBgetThresholdValue\fP (uint32_t ray, uint32_t d, uint32_t f) const"
+.br
+.ti -1c
+.RI "void \fBcalcThresholds\fP (const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas)"
+.br
+.ti -1c
+.RI "void \fBfindComplexMarks\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "void \fBfindMonomarks\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "bool \fBisDistanceMonomarked\fP (uint32_t curDistance) const"
+.br
+.ti -1c
+.RI "bool \fBisComplexMarkAlreadySaved\fP (uint32_t d, uint32_t f, uint32_t r)"
+.br
+.ti -1c
+.RI "void \fBdumpSumOfPolarsTfpSlice\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitSliceFiles\fP (uint64_t texec)"
+.br
+.ti -1c
+.RI "std::complex< double > \fBcalcImageWeight\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays, uint32_t r, uint32_t d, uint32_t f, const std::complex< double > &corrCoef) const"
+.br
+.ti -1c
+.RI "double \fBcalcSigNoise\fP (double ampl, uint32_t rayNum, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas) const"
+.br
+.ti -1c
+.RI "void \fBfindLocalMaximumsInMark\fP (const \fBComplexMark\fP &mark, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas, std::vector< uint32_t > &lmRays)"
+.br
+.ti -1c
+.RI "void \fBgetWeightBorders\fP (double *min, double *max, double sigNoise) const"
+.br
+.ti -1c
+.RI "bool \fBisLocalMaximumAmpl\fP (const double crossAmpl[]) const"
+.br
+.ti -1c
+.RI "double \fBcalcMaxSigNoise\fP (const \fBComplexMark\fP &mark, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetAcceptableImageWeightsNum\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays, const \fBComplexMark\fP &mark, std::vector< uint32_t > &lmRays, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas) const"
+.br
+.ti -1c
+.RI "void \fBformEvaluation\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas)"
+.br
+.ti -1c
+.RI "void \fBtradTargInterfStrbProcessing\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays, const \fBPolarized\fP< std::vector< uint64_t > > &targetSigmas, \fBUcopoMsgBuf\fP *ucopo)"
+.br
+.ti -1c
+.RI "\fBStrobeOutput\fP \fBcaptureOutput\fP (\fBC418_02Result\fP *c418_02Result[]) const"
+.br
+.ti -1c
+.RI "void \fBadd2ZPackStrobeResult\fP (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "void \fBadd2ZPackTargetSigmas\fP ()"
+.br
+.ti -1c
+.RI "void \fBmovePackStrobeData2ZIncohSumBuf\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitPackStrobeBuffer\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitPackTargetSigmas\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisPackStrobe\fP () const"
+.br
+.ti -1c
+.RI "void \fBprintMonomarks\fP () const"
+.br
+.ti -1c
+.RI "void \fBprintComplexMarks\fP () const"
+.br
+.ti -1c
+.RI "void \fBprintCalibrLIMMSourceData\fP (\fBC418_02Result\fP *c418_02Result[]) const"
+.br
+.ti -1c
+.RI "void \fBfillMonoMark\fP (uint32_t r, uint32_t d, uint32_t f, const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.ti -1c
+.RI "void \fBfillComplexMark\fP (uint32_t r, uint32_t d, uint32_t f, const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > &tfpRays)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBMonomark\fP > \fBmonomarks\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBComplexMark\fP > \fBcomplexMarks\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBTStrobeExt\fP > \fBstrb\fP"
+.br
+.ti -1c
+.RI "\fBSharedConst::StationType\fP \fBstationType\fP"
+.br
+.ti -1c
+.RI "double \fBrelFixThresholds\fP [\fBSharedConst::maxRays\fP]"
+.br
+.ti -1c
+.RI "double \fBpackRelFixThresholds\fP [\fBSharedConst::maxRays\fP]"
+.br
+.ti -1c
+.RI "\fBPolarized\fP< std::vector< uint64_t > > \fBcopyTargetSigmas\fP"
+.br
+.ti -1c
+.RI "\fBPolarized\fP< std::vector< uint64_t > > \fBpackTargetSigmas\fP"
+.br
+.ti -1c
+.RI "\fBVector3d\fP< double > \fBsumOfPolars\fP"
+.br
+.ti -1c
+.RI "\fBPolarized\fP< \fBVector3d\fP< double > > \fBpackModeData\fP"
+.br
+.ti -1c
+.RI "\fBVector3d\fP< double > \fBflThreshold\fP"
+.br
+.ti -1c
+.RI "\fBSavePermissions\fP \fBsavePerm\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBSliceFile\fP > \fBtfpSliceNormalized\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBSliceFile\fP > \fBdpSlice\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBSliceFile\fP > \fBtfpSumPolSlice\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBSliceFile\fP > \fBucopoSlice\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBcurrPackStrbID\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBcurrPackStrbImpCounter\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBaccumulatedPackImpulses\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс имитации ячейки спецвычислителя 232\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Block232::Block232 ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Block232::~Block232 ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Block232::add2ZPackStrobeResult (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+Добавление результата некогерентной суммы поляризаций текущего строба пачки к сумме результатов предыдущих стробов пачки\&. 
+.SS "void ModelNS23817A620S1823::Block232::add2ZPackTargetSigmas ()\fC [private]\fP"
+Накопление значений оценок дисперсий шума для каждого луча при работе некогерентной пачкой\&. 
+.SS "void ModelNS23817A620S1823::Block232::calcFloatingThresholds ()\fC [private]\fP"
+Расчёт плавающих порогов\&. 
+.SS "std::complex< double > ModelNS23817A620S1823::Block232::calcImageWeight (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays, uint32_t r, uint32_t d, uint32_t f, const std::complex< double > & corrCoef) const\fC [private]\fP"
+Расчёт веса образа по входным параметрам\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP номер луча 
+.br
+\fId\fP значение дальности 
+.br
+\fIf\fP значение фильтра 
+.br
+\fIcorrCoef\fP корректирующий коэффициент 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+рассчитанный по входным параметрам вес образа 
+.RE
+.PP
+
+.SS "double ModelNS23817A620S1823::Block232::calcMaxSigNoise (const \fBComplexMark\fP & mark, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas) const\fC [private]\fP"
+Расчёт отношения сигнал/шум в заданных лучах отметки по каждой поляризации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImarkNum\fP номер отметки 
+.br
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+максимальное рассчитанное отношение сигнал/шум 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::calcRelFixedThresholds (const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas)\fC [private]\fP"
+Расчёт относительных фиксированных порогов по каждому лучу\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItargetSigmasV\fP указатель на массив целевых сигм по каждому лучу для вертикальной поляризации 
+.br
+\fItargetSigmasH\fP указатель на массив целевых сигм по каждому лучу для горизонтальной поляризации 
+.RE
+.PP
+
+.SS "double ModelNS23817A620S1823::Block232::calcSigNoise (double ampl, uint32_t rayNum, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas) const\fC [private]\fP"
+Расчёт отношения сигнал/шум для заданных параметров\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIampl\fP амплитуда 
+.br
+\fIrayNum\fP номер луча 
+.br
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+отношение сигнал/шум для заданных параметров 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::calcThresholds (const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas)\fC [private]\fP"
+Расчёт заданного[-ых] в ТРПР порога[-ов]\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItargetSigmasV\fP указатель на массив целевых сигм по каждому лучу для вертикальной поляризации 
+.br
+\fItargetSigmasH\fP указатель на массив целевых сигм по каждому лучу для горизонтальной поляризации 
+.RE
+.PP
+
+.SS "\fBStrobeOutput\fP ModelNS23817A620S1823::Block232::captureOutput (\fBC418_02Result\fP * c418_02Result[]) const\fC [private]\fP"
+
+.SS "\fBVector3d\fP< double > ModelNS23817A620S1823::Block232::coherentIncoherentSumming (const \fBTStrobeExt\fP * strb, const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+[Не]когерентное сложение результатов согласованного фильтра\&. (ЧВО) вертикальной и горизонтальной поляризаций\&. 
+.SS "void ModelNS23817A620S1823::Block232::dumpSumOfPolarsTfpSlice ()\fC [private]\fP"
+Сохранение модулей значений среза ЧВО в режиме [не]когерентного сложения поляризаций в файл\&. 
+.SS "void ModelNS23817A620S1823::Block232::fillComplexMark (uint32_t r, uint32_t d, uint32_t f, const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+Заполнение комплексной отметки данными согласно входным параметрам и внесение её в массив найденных отметок\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP номер луча 
+.br
+\fId\fP значение дальности 
+.br
+\fIf\fP значение фильтра 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::fillMonoMark (uint32_t r, uint32_t d, uint32_t f, const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+Заполнение моно отметки данными согласно входным параметрам и внесение её в массив найденных отметок\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP номер луча 
+.br
+\fId\fP значение дальности 
+.br
+\fIf\fP значение фильтра 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::findComplexMarks (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+Поиск комплексных отметок (с отбором локального максимума)\&. 
+.SS "void ModelNS23817A620S1823::Block232::findLocalMaximumsInMark (const \fBComplexMark\fP & mark, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas, std::vector< uint32_t > & lmRays)\fC [private]\fP"
+Поиск локальных максимумов в крестах лучей заданной отметки, т\&.е\&. ищет максимальную из центров крестов амплитуду\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImarkNum\fP номер отметки 
+.br
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.br
+\fIlmRays\fP ссылка на массив найденных локальных максимумов 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::findMonomarks (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+Поиск моноотметок (без отбора локального максимума)\&. 
+.SS "void ModelNS23817A620S1823::Block232::formEvaluation (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas)\fC [private]\fP"
+Реализация алгоритма оценки формы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Block232::getAcceptableImageWeightsNum (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays, const \fBComplexMark\fP & mark, std::vector< uint32_t > & lmRays, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas) const\fC [private]\fP"
+Расчёт количества 'хороших весов', прошедших ворота\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImarkNum\fP номер отметки 
+.br
+\fIlmRays\fP ссылка на массив найденных локальных максимумов 
+.br
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество 'хороших весов', прошедших ворота 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::getResults (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas, \fBUcopoMsgBuf\fP * ucopo)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+
+.SS "double ModelNS23817A620S1823::Block232::getThresholdValue (uint32_t ray, uint32_t d, uint32_t f) const\fC [private]\fP"
+Взятие текущего значения порога, исходя из входных параметров и параметров строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIray\fP номер луча 
+.br
+\fId\fP значение дальности 
+.br
+\fIf\fP значение фильтра 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+текущее значение порога 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::getWeightBorders (double * min, double * max, double sigNoise) const\fC [private]\fP"
+Заполнение границ для значения веса образа, исходя из соотношения сигнал/шум (sigNoise)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImin\fP указатель на переменную для минимального значения веса образа 
+.br
+\fImax\fP указатель на переменную для максимального значения веса образа 
+.br
+\fIsigNoise\fP значение соотношения сигнал/шум 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::initPackStrobeBuffer ()\fC [private]\fP"
+Формирование буфера необходимого размера для результатов пачечного строба и инициализация этого буфера нулями\&. 
+.SS "void ModelNS23817A620S1823::Block232::initPackTargetSigmas ()\fC [private]\fP"
+Очистка буфера дисперсий шума пачечного режима\&. 
+.SS "void ModelNS23817A620S1823::Block232::initSliceFiles (uint64_t texec)\fC [private]\fP"
+Инициализация объектов файлов срезов начальными значениями для дальнейшего формирования правильных имён файлов\&. 
+.SS "bool ModelNS23817A620S1823::Block232::isComplexMarkAlreadySaved (uint32_t d, uint32_t f, uint32_t r)\fC [private]\fP"
+Проверка того, что комплексная отметка с заданной дальностью и фильтром была найдена ранее\&. Если отметка с заданными координатами уже есть и в ней был ЛМ с меньшей, чем в текущем ЛМ, амплитудой то максимальным лучом назначается луч текущего ЛМ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP значение дальности комплексной отметки 
+.br
+\fIf\fP значение фильтра комплексной отметки 
+.br
+\fIr\fP номер луча комплексной отметки 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если комплексная отметка с заданной дальностью и фильтром была найдена ранее, иначе - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Block232::isDistanceMonomarked (uint32_t curDistance) const\fC [private]\fP"
+Проверка наличия заданной дальности в отметках\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurDistance\fP значение текущей дальности 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданная дальность уже есть в отметках, иначе - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Block232::isLocalMaximumAmpl (const double crossAmpl[]) const\fC [private]\fP"
+Проверка на наличие локального максимума в центре заданного креста\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrossAmpl\fP указатель на массив значений креста в луче 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если в центре заданного креста максимум, иначе - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Block232::isPackStrobe () const\fC [private]\fP"
+Проверка строба на то, что он пачечный\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true если строб пачечный, иначе - false 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::movePackStrobeData2ZIncohSumBuf ()\fC [private]\fP"
+Перенос просуммированных данных всего пачечного строба в буфер [не]когерентного накопления для дальнейшей работы с ними по обычному алгоритму после ЧВО\&. 
+.SS "void ModelNS23817A620S1823::Block232::prepareWindow (uint32_t d, uint32_t f, uint32_t r, std::vector< double > & win)\fC [private]\fP"
+Формирование из элементов окна с центром в точке (r, d, f) плоскости дальность/фильтр одномерного массива buf[] для дальнейшего поиска медианы этого окна\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP значение дальности в центре окна 
+.br
+\fIf\fP значение фильтра в центре окна 
+.br
+\fIr\fP номер луча, в котором берётся окно 
+.br
+\fIwin\fP ссылка на временный буфер для расчётов, в который будут скопированы элементы окна 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::printCalibrLIMMSourceData (\fBC418_02Result\fP * c418_02Result[]) const\fC [private]\fP"
+Печать исходных данных для калибровки по всем заданным поляризациям\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::printComplexMarks () const\fC [private]\fP"
+Печать комплексных отметок ПЛО\&. 
+.SS "void ModelNS23817A620S1823::Block232::printMonomarks () const\fC [private]\fP"
+Печать моноотметок ПЛО\&. 
+.SS "void ModelNS23817A620S1823::Block232::setControlMessage (const TStrobe & s)"
+
+.SS "void ModelNS23817A620S1823::Block232::setControlMessage (\fBControlMsg\fP * controlMsg)"
+Задание управляющих параметров\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrolMsg\fP указатель на объект управляющего сообщения 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::tfpParamsCorrection (int32_t * nfgdfu, uint32_t * kgrs, int32_t * n1grs, uint32_t * kgd) const\fC [private]\fP"
+Корректировка параметров для ЧВО\&. Используется для плавающего порога и отбора локальных максимумов\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInfgdfu\fP положение первой гипотезы по дальности в номерах гипотез 
+.br
+\fIkgrs\fP количество фильтров 
+.br
+\fIn1grs\fP Код частоты начала доплеровского диапазона относительно 0 Гц (шаг 19 Гц) 
+.br
+\fIkgd\fP количество гипотех по дальности 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Block232::thresholdLogicProcessing (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays)\fC [private]\fP"
+Порогово-логическая обработка\&. 
+.SS "void ModelNS23817A620S1823::Block232::tradTargInterfStrbProcessing (const \fBPolarized\fP< \fBVector3d\fP< std::complex< double > > > & tfpRays, const \fBPolarized\fP< std::vector< uint64_t > > & targetSigmas, \fBUcopoMsgBuf\fP * ucopo)\fC [private]\fP"
+Обработка данных в традиционных целевых и помеховых режимах\&. Включает ЧВО, ПЛО, оценку формы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc418_02Result\fP указатель на массив данных 418-02й ячейки для каждой поляризации 
+.br
+\fIucopo\fP указатель на буфер для сообщения УЦОПО 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t ModelNS23817A620S1823::Block232::accumulatedPackImpulses\fC [private]\fP"
+счётчик накопленных импульсов пачечного строба 
+.SS "std::vector<\fBComplexMark\fP> ModelNS23817A620S1823::Block232::complexMarks\fC [private]\fP"
+комплексные отметки - результат работы ПЛО 
+.SS "\fBPolarized\fP<std::vector<uint64_t> > ModelNS23817A620S1823::Block232::copyTargetSigmas\fC [private]\fP"
+копия оценки дисперсии шума для каждого луча 
+.SS "uint32_t ModelNS23817A620S1823::Block232::currPackStrbID\fC [private]\fP"
+идентификатор текущего пачечного строба 
+.SS "uint32_t ModelNS23817A620S1823::Block232::currPackStrbImpCounter\fC [private]\fP"
+счётчик импульсов (еще не пришедших) пачечного строба 
+.SS "std::unique_ptr<\fBSliceFile\fP> ModelNS23817A620S1823::Block232::dpSlice\fC [private]\fP"
+объект файла среза диаграммы направленности
+.PP
+это не та диаграмма направленности, которую снимает МФ1, а какая-то модельная вещь, использовавшаяся Антоном для проверок 
+.SS "\fBVector3d\fP<double> ModelNS23817A620S1823::Block232::flThreshold\fC [private]\fP"
+плавающий порог [лучи][дальность][фильтр] 
+.SS "std::vector<\fBMonomark\fP> ModelNS23817A620S1823::Block232::monomarks\fC [private]\fP"
+моноотметки - результат работы ПЛО 
+.SS "\fBPolarized\fP<\fBVector3d\fP<double> > ModelNS23817A620S1823::Block232::packModeData\fC [private]\fP"
+данные пачечного режима\&. По сути это некогерентная сумма результатов всех стробов пачки по поляризациям после ЧВО (квадраты) 
+.SS "double ModelNS23817A620S1823::Block232::packRelFixThresholds[\fBSharedConst::maxRays\fP]\fC [private]\fP"
+накапливаемые значения относительного фиксированного порога для каждого луча при пачечном стробе 
+.SS "\fBPolarized\fP<std::vector<uint64_t> > ModelNS23817A620S1823::Block232::packTargetSigmas\fC [private]\fP"
+накапливаемые значения оценки дисперсии шума для каждого луча при работе некогерентной пачкой 
+.SS "double ModelNS23817A620S1823::Block232::relFixThresholds[\fBSharedConst::maxRays\fP]\fC [private]\fP"
+значения относительного фиксированного порога для каждого луча 
+.SS "\fBSavePermissions\fP ModelNS23817A620S1823::Block232::savePerm\fC [private]\fP"
+
+.SS "\fBSharedConst::StationType\fP ModelNS23817A620S1823::Block232::stationType\fC [private]\fP"
+тип станции 
+.SS "std::unique_ptr<\fBTStrobeExt\fP> ModelNS23817A620S1823::Block232::strb\fC [private]\fP"
+указатель на параметры строба управляющего сообщения 
+.SS "\fBVector3d\fP<double> ModelNS23817A620S1823::Block232::sumOfPolars\fC [private]\fP"
+сумма поляризаций после ЧВО при [не]когерентном сложении (квадраты) 
+.SS "std::unique_ptr<\fBSliceFile\fP> ModelNS23817A620S1823::Block232::tfpSliceNormalized\fC [private]\fP"
+объект файла среза ЧВО после нормализации 
+.SS "std::unique_ptr<\fBSliceFile\fP> ModelNS23817A620S1823::Block232::tfpSumPolSlice\fC [private]\fP"
+объект файла модулей значений среза ЧВО после суммирования поляризаций 
+.SS "std::unique_ptr<\fBSliceFile\fP> ModelNS23817A620S1823::Block232::ucopoSlice\fC [private]\fP"
+объект файла среза УЦОПО 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

@@ -1,0 +1,154 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Ar\+Coefs\+Array Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray}{}\label{classModelNS23817A620S1823_1_1ArCoefsArray}\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+
+
+{\ttfamily \#include $<$ar\+Coefs\+Array.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Ar\+Coefs\+Array\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classModelNS23817A620S1823_1_1ArCoefsArray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_ae4ed748f8dd831843e1e9832ca6dbc85}{Ar\+Coefs\+Array}} (const std\+::list$<$ std\+::string $>$ \&lst\+Data\+Dirs)
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a40a2a26669160a1bff79a02c253a233c}{\texorpdfstring{$\sim$}{\string~}\+Ar\+Coefs\+Array}} ()
+\item 
+float \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_aa494cca2bee9779f1b9f2ccc1644142d}{get\+Ar\+Coef}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type, uint32\+\_\+t vect\+Num, uint32\+\_\+t chan\+Num) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a69b582eebb9363ad72e2a90a7a84d22a}{load\+Ar\+Coefs}} (const std\+::list$<$ std\+::string $>$ \&lst\+Data\+Dirs)
+\item 
+\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a9f84d1f0df8975b36b71fdb0d27a9b96}{get\+Station\+Type}} (std\+::string str\+Header)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a6b0d4ae0d92f32870f106adb434a0b10}{get\+Ar\+Num}} (std\+::string str\+Header)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ float $>$ $>$ $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a27020cd5dc86649a2944c22df481d9e4}{ar\+Coefs}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1ArCoefsArray_a1331ccd90b33f73d8d9b537bbf027666}{max\+Ar\+Types}} = 16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс данных амплитудного распределения по антенне. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_ae4ed748f8dd831843e1e9832ca6dbc85}\label{classModelNS23817A620S1823_1_1ArCoefsArray_ae4ed748f8dd831843e1e9832ca6dbc85} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!ArCoefsArray@{ArCoefsArray}}
+\index{ArCoefsArray@{ArCoefsArray}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{ArCoefsArray()}{ArCoefsArray()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::\+Ar\+Coefs\+Array (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{lst\+Data\+Dirs }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ArCoefsArray_ae4ed748f8dd831843e1e9832ca6dbc85_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_a40a2a26669160a1bff79a02c253a233c}\label{classModelNS23817A620S1823_1_1ArCoefsArray_a40a2a26669160a1bff79a02c253a233c} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!````~ArCoefsArray@{\texorpdfstring{$\sim$}{\string~}ArCoefsArray}}
+\index{````~ArCoefsArray@{\texorpdfstring{$\sim$}{\string~}ArCoefsArray}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ArCoefsArray()}{\string~ArCoefsArray()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::\texorpdfstring{$\sim$}{\string~}\+Ar\+Coefs\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_aa494cca2bee9779f1b9f2ccc1644142d}\label{classModelNS23817A620S1823_1_1ArCoefsArray_aa494cca2bee9779f1b9f2ccc1644142d} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!getArCoef@{getArCoef}}
+\index{getArCoef@{getArCoef}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{getArCoef()}{getArCoef()}}
+{\footnotesize\ttfamily float Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::get\+Ar\+Coef (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type,  }\item[{uint32\+\_\+t}]{vect\+Num,  }\item[{uint32\+\_\+t}]{chan\+Num }\end{DoxyParamCaption}) const}
+
+Взятие по заданным параметрам коэффициента амплитудного распределения по антенне. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+{\em vect\+Num} & номер вектора коэффициентов амплитудного распределения \\
+\hline
+{\em chan\+Num} & номером канала коэффициентов амплитудного распределения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+коэффициент амплитудного распределения по антенне для заданного номера вектора и номера канала 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_a6b0d4ae0d92f32870f106adb434a0b10}\label{classModelNS23817A620S1823_1_1ArCoefsArray_a6b0d4ae0d92f32870f106adb434a0b10} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!getArNum@{getArNum}}
+\index{getArNum@{getArNum}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{getArNum()}{getArNum()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::get\+Ar\+Num (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Выдача номера амплитудного распределения, заданного в строке заголовка данных, в виде целого значения. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Header} & строка заголовка данных по одному виду амплитудного распределения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+тип станции 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_a9f84d1f0df8975b36b71fdb0d27a9b96}\label{classModelNS23817A620S1823_1_1ArCoefsArray_a9f84d1f0df8975b36b71fdb0d27a9b96} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!getStationType@{getStationType}}
+\index{getStationType@{getStationType}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{getStationType()}{getStationType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::get\+Station\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Выдача типа станции по строке заголовка данных одного вида амплитудного распределения. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Header} & строка заголовка данных по одному виду амплитудного распределения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+тип станции 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_a69b582eebb9363ad72e2a90a7a84d22a}\label{classModelNS23817A620S1823_1_1ArCoefsArray_a69b582eebb9363ad72e2a90a7a84d22a} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!loadArCoefs@{loadArCoefs}}
+\index{loadArCoefs@{loadArCoefs}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{loadArCoefs()}{loadArCoefs()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::load\+Ar\+Coefs (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{lst\+Data\+Dirs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Загрузка векторов амплитудного распределения по антенне из файла. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1ArCoefsArray_a69b582eebb9363ad72e2a90a7a84d22a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_a27020cd5dc86649a2944c22df481d9e4}\label{classModelNS23817A620S1823_1_1ArCoefsArray_a27020cd5dc86649a2944c22df481d9e4} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!arCoefs@{arCoefs}}
+\index{arCoefs@{arCoefs}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{arCoefs}{arCoefs}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::vector$<$float$>$ $>$ $>$ Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::ar\+Coefs\hspace{0.3cm}{\ttfamily [private]}}
+
+вектора амплитудного распределения по антенне от 0. до 1. ar\+Coefs\mbox{[}тип станции\mbox{]}\mbox{[}номер АР\mbox{]}\mbox{[}коэффициенты\mbox{]} \Hypertarget{classModelNS23817A620S1823_1_1ArCoefsArray_a1331ccd90b33f73d8d9b537bbf027666}\label{classModelNS23817A620S1823_1_1ArCoefsArray_a1331ccd90b33f73d8d9b537bbf027666} 
+\index{ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}!maxArTypes@{maxArTypes}}
+\index{maxArTypes@{maxArTypes}!ModelNS23817A620S1823::ArCoefsArray@{ModelNS23817A620S1823::ArCoefsArray}}
+\doxysubsubsection{\texorpdfstring{maxArTypes}{maxArTypes}}
+{\footnotesize\ttfamily const uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Ar\+Coefs\+Array\+::max\+Ar\+Types = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальное количество векторов амплитудного распределения по антенне. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{arCoefsArray_8h}{ar\+Coefs\+Array.\+h}}\item 
+src/\mbox{\hyperlink{arCoefsArray_8cpp}{ar\+Coefs\+Array.\+cpp}}\end{DoxyCompactItemize}

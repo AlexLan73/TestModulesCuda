@@ -1,0 +1,71 @@
+.TH "src/jsonrpc/server_loop.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/jsonrpc/server_loop.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'server_loop\&.h'\fP
+.br
+\fC#include <signal\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBModelWrapper\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBexecute\fP (\fBModelWrapper\fP &w, const \fBRequest\fP &req, PortOut< \fBResponse\fP > &reply_chan)"
+.br
+.ti -1c
+.RI "static bool \fBresponse_is_cacheable\fP (const Result< \fBResponse\fP, RecvError > &rsp)"
+.br
+.RI "Response кэшируем, если все стробы такта успешно обсчитаны "
+.ti -1c
+.RI "static int \fBaccept_connection\fP (int fd)"
+.br
+.ti -1c
+.RI "pollfd \fBget_fd\fP (fdistream *in)"
+.br
+.ti -1c
+.RI "optional< Result< \fBRequest\fP, \fBResponse\fP > > \fBrecv_request\fP (istream *in)"
+.br
+.ti -1c
+.RI "template<class \fBP\fP > Result< optional< typename \fBP::Response\fP >, DesError > \fBtransact\fP (const typename \fBP::Request\fP &req, std::ostream &out, std::istream &in)"
+.br
+.ti -1c
+.RI "void \fBjsonrpcOneshot\fP (const \fBModelInputBundle\fP &inputs, optional< string > outDirPath)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static int accept_connection (int fd)\fC [static]\fP"
+
+.SS "static void execute (\fBModelWrapper\fP & w, const \fBRequest\fP & req, PortOut< \fBResponse\fP > & reply_chan)\fC [static]\fP"
+
+.SS "pollfd get_fd (fdistream * in)"
+
+.SS "void jsonrpcOneshot (const \fBModelInputBundle\fP & inputs, optional< string > outDirPath)"
+
+.SS "optional< Result< \fBRequest\fP, \fBResponse\fP > > recv_request (istream * in)"
+
+.SS "static bool response_is_cacheable (const Result< \fBResponse\fP, RecvError > & rsp)\fC [static]\fP"
+
+.PP
+Response кэшируем, если все стробы такта успешно обсчитаны 
+.SS "template<class \fBP\fP > Result< optional< typename \fBP::Response\fP >, DesError > transact (const typename \fBP::Request\fP & req, std::ostream & out, std::istream & in)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

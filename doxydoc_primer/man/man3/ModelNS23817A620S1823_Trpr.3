@@ -1,0 +1,508 @@
+.TH "ModelNS23817A620S1823::Trpr" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Trpr
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <trpr\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTrpr\fP ()"
+.br
+.ti -1c
+.RI "\fBTrpr\fP (E2TRPR *newMsg)"
+.br
+.ti -1c
+.RI "\fB~Trpr\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNewMsg\fP (const E2TRPR *newMsg)"
+.br
+.ti -1c
+.RI "void \fBgetMsg\fP (E2TRPR *msgBuf) const"
+.br
+.ti -1c
+.RI "void \fBsetTactHeader\fP (SDTRPR *header)"
+.br
+.ti -1c
+.RI "void \fBsetStrobe\fP (TStrobe *strb, uint32_t strbIndex)"
+.br
+.ti -1c
+.RI "void \fBsetUvPg\fP (float u, float v, uint32_t strbIndex, int32_t pgIndex)"
+.br
+.ti -1c
+.RI "void \fBsetStrbId\fP (uint32_t strbId, uint32_t strbIndex)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetStrbId\fP (uint32_t strbIndex) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetPolarsMask\fP (uint32_t strbIndex) const"
+.br
+.ti -1c
+.RI "int32_t \fBvalidate\fP (\fBSharedConst::StationType\fP stType, int16_t activeInterfsNum) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetStrobesNumber\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisStrobeForModel\fP (uint32_t strbIndex) const"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSignalType\fP (uint32_t strbIndex) const"
+.br
+.ti -1c
+.RI "uint64_t \fBgetTactId\fP () const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBvalidateStrb\fP (uint32_t strbIndex, \fBSharedConst::StationType\fP stType, int16_t activeInterfsNum) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidKdivXY\fP (\fBSharedConst::StationType\fP stType, uint8_t kdivx, uint8_t kdivy) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidDFGroupsNum\fP (uint8_t dfgsNum, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidDFGroupsAndRays\fP (const TStrobe *strb, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidKgd\fP (uint16_t kgd, int32_t) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidFg1\fP (int32_t fg1, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidStrbLength\fP (uint32_t strbLen, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidStrbBegin\fP (uint32_t strbBegin, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidN1grs\fP (int16_t n1grs, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidKgrs\fP (uint16_t kgrs, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidFg2\fP (int32_t fg2, \fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "int32_t \fBisValidThreshold\fP (uint8_t thresholdsMask, uint16_t winSizeR, uint16_t winSizeV, uint16_t kgd, uint16_t kgrs) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "E2TRPR \fBtrpr\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< std::pair< uint8_t, uint8_t > > > \fBkdiv\fP"
+.br
+.ti -1c
+.RI "\fBDFGroups\fP \fBdfGroups\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс тактового расписания приёмника\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Trpr::Trpr ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::Trpr::Trpr (E2TRPR * newMsg)"
+Конструктор объекта класса\&. Инициализирует объект trpr значениями из newMsg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewMsg\fP указатель на объект сетевого сообщения Е2ТРПР 
+.RE
+.PP
+
+.SS "ModelNS23817A620S1823::Trpr::~Trpr ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Trpr::clear ()\fC [private]\fP"
+Обнуление внутренного буфера\&. 
+.SS "void ModelNS23817A620S1823::Trpr::getMsg (E2TRPR * msgBuf) const"
+Копирование внутреннего сообщения Е2ТРПР в заданный буфер\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsgBuf\fP указатель на объект сетевого сообщения Е2ТРПР (буфер) 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Trpr::getPolarsMask (uint32_t strbIndex) const"
+Возврат маски поляризаций для заданного строба такта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+маска поляризаций 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Trpr::getSignalType (uint32_t strbIndex) const"
+Возврат типа сигнала в заданном стробе\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+тип сигнала 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Trpr::getStrbId (uint32_t strbIndex) const"
+Возврат идентификатора заданного строба такта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+идентификатор строба 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Trpr::getStrobesNumber () const"
+Возврат количества стробов в ТРПР\&. 
+.PP
+\fBReturns\fP
+.RS 4
+количество стробов в ТРПР 
+.RE
+.PP
+
+.SS "uint64_t ModelNS23817A620S1823::Trpr::getTactId () const"
+Возврат идентификатора такта\&. 
+.PP
+\fBReturns\fP
+.RS 4
+идентификатор такта 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::Trpr::isStrobeForModel (uint32_t strbIndex) const"
+Проверка на принадлежность модели строба с заданным индексом\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если заданный строб предназначен для модели, false в противном случае 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidDFGroupsAndRays (const TStrobe * strb, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка количества лучей и количества пеленгационных групп на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrb\fP указатель на объект строба ТРПР 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если количество лучей или пеленгационных групп выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidDFGroupsNum (uint8_t dfgsNum, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка количества пеленгационных групп на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdfgsNum\fP количество пеленгационных групп 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если количество пеленгационных групп выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidFg1 (int32_t fg1, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка частоты первого гетеродина на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfg1\fP частота первого гетеродина 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если частота первого гетеродина выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidFg2 (int32_t fg2, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка кода частоты цифрового гетеродина на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfg2\fP код частоты цифрового гетеродина 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если код частоты цифрового гетеродина выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidKdivXY (\fBSharedConst::StationType\fP stType, uint8_t kdivx, uint8_t kdivy) const\fC [private]\fP"
+Проверка размерностей фрагмента полотна на соответствие таблице\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.br
+\fIkdivx\fP размер фрагмента по оси X 
+.br
+\fIkdivy\fP размер фрагмента по оси Y 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если значения размерностей не соответствуют таблице, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidKgd (uint16_t kgd, int32_t) const\fC [private]\fP"
+Проверка количества гипотез по дальности на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkgd\fP количество гипотез по дальности 
+.br
+\fIstrbType\fP тип строба 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если количество гипотез по дальности выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidKgrs (uint16_t kgrs, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка количества гипотез по радиальной скорости (фильтров) на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkgrs\fP количество гипотез по радиальной скорости 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если количество гипотез по радиальной скорости выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidN1grs (int16_t n1grs, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка кода частоты начала доплеровского диапазона на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn1grs\fP код частоты начала доплеровского диапазона 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если код частоты начала доплеровского диапазона выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidStrbBegin (uint32_t strbBegin, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка дискрета начала строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbBegin\fP дискрет начала строба 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если дискрет начала строба выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidStrbLength (uint32_t strbLen, \fBSharedConst::StationType\fP stType) const\fC [private]\fP"
+Проверка длины строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbLen\fP длина строба 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если длина строба выходит за граничные значения, 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::isValidThreshold (uint8_t thresholdsMask, uint16_t winSizeR, uint16_t winSizeV, uint16_t kgd, uint16_t kgrs) const\fC [private]\fP"
+Проверка параметров для порогово-логической обработки на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthresholdsMask\fP маска порогов 
+.br
+\fIwinSizeR\fP размер окна вычисления сигмы по гипотезам дальности 
+.br
+\fIwinSizeV\fP размер окна вычисления сигмы по гипотезам скорости 
+.br
+\fIkgd\fP количество заказанных гипотез дальности 
+.br
+\fIkgrs\fP количество заказанных гипотез скорости 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+< 0 в случае если тип порога неизвестен или размер окна вычисления сигмы для плавающего порога выходит за граничные значения; 0 - если проверка пройдена успешно 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trpr::setNewMsg (const E2TRPR * newMsg)"
+Инициализация внутреннего буфера объекта trpr значениями из newMsg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewMsg\fP указатель на объект сетевого сообщения Е2ТРПР 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trpr::setStrbId (uint32_t strbId, uint32_t strbIndex)"
+Инициализация идентификатора заданного индексом строба такта заданным значением\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbId\fP идентификатор строба 
+.br
+\fIstrbIndex\fP индекс строба 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trpr::setStrobe (TStrobe * strb, uint32_t strbIndex)"
+Инициализация заданного строба такта во внутреннем буфере заданными значениями\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrb\fP указатель на объект строба сетевого сообщения Е2ТРПР 
+.br
+\fIstrbIndex\fP индекс строба в сообщении Е2ТРПР 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trpr::setTactHeader (SDTRPR * header)"
+Инициализация заголовка такта во внутреннем буфере заданными значениями\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIheader\fP указатель на объект заголовка сетевого сообщения Е2ТРПР 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Trpr::setUvPg (float u, float v, uint32_t strbIndex, int32_t pgIndex)"
+Инициализация угловых координат указанного центра группы лучей заданного строба такта заданными значениями\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIu\fP координата u для центра группы лучей 
+.br
+\fIv\fP координата v для центра группы лучей 
+.br
+\fIstrbIndex\fP индекс строба 
+.br
+\fIpgIndex\fP индекс пеленгационной группы 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::validate (\fBSharedConst::StationType\fP stType, int16_t activeInterfsNum) const"
+Проверка полей ТРПР на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.br
+\fIactiveInterfsNum\fP количество активных помех 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если значения полей находятся вне пределов интервала [минимум; максимум], 0 - если проверки пройдены успешно 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::Trpr::validateStrb (uint32_t strbIndex, \fBSharedConst::StationType\fP stType, int16_t activeInterfsNum) const\fC [private]\fP"
+Проверка полей заданного строба на граничные значения\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstrbIndex\fP индекс строба 
+.br
+\fIstType\fP тип станции 
+.br
+\fIactiveInterfsNum\fP количество активных помех 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае если значения полей находятся вне пределов интервала [минимум; максимум], 0 - если проверки пройдены успешно 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDFGroups\fP ModelNS23817A620S1823::Trpr::dfGroups\fC [private]\fP"
+список расстановок лучей 
+.SS "std::vector<std::vector<std::pair<uint8_t, uint8_t> > > ModelNS23817A620S1823::Trpr::kdiv\fC [private]\fP"
+список допустимых значений параметров дробления полотна kdiv_[xy] 
+.SS "E2TRPR ModelNS23817A620S1823::Trpr::trpr\fC [private]\fP"
+объект сетевой структуры тактового расписания приёмника 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

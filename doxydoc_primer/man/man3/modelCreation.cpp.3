@@ -1,0 +1,37 @@
+.TH "src/modelCreation.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/modelCreation.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'modelMain\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModel::Interface\fP * \fBcreateModelObject\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBModel::Interface\fP * createModelObject ()"
+Создание объекта модели\&. Память для объекта выделяется в куче, поэтому важно помнить, что после использования на указатель надо натравить delete\&. Доступ к модели осуществляется только через функции интерфейса\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitLvl\fP уровень инициализации объекта модели\&. controlMsgsOnly - расчёт только УС fullInit - инициализация помимо памяти УС ещё и памяти для работы модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+указатель на объект интерфейсной части модели 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

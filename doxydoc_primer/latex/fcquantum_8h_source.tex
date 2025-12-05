@@ -1,0 +1,62 @@
+\doxysection{fcquantum.\+h}
+\hypertarget{fcquantum_8h_source}{}\label{fcquantum_8h_source}\index{src/mpk1/blk223/fcquantum.h@{src/mpk1/blk223/fcquantum.h}}
+\mbox{\hyperlink{fcquantum_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_FCQ\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_FCQ\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\#include\ "{}config.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <libvork/e2mask.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <libvork/e2trkp.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#if\ 1}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{223fc_8h}{223fc.h}}"{}}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{typedef}\ EUMASK\_CM\ \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{typedef}\ EUTRKP\_CM\_Rx\ \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}};}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#error\ "{}Which\ block?"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfcq}{fcq}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ uint\ \mbox{\hyperlink{structfcq_ab8388b8a93736303b0f687dcd9f57938}{crate\_num}};}
+\DoxyCodeLine{00027\ \ \ \ \ TrimtsMsg\ *\mbox{\hyperlink{structfcq_aa85a81c60fb2ed280743115477e1d325}{trims}};\ \ }
+\DoxyCodeLine{00028\ \ \ \ \ E2TRPR\ *\mbox{\hyperlink{structfcq_a492affda2d322653672df2834a24810e}{trpr}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}}\ *\mbox{\hyperlink{structfcq_a8778531f31b3b8a7921885f0df4cd431}{afr}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{fcquantum_8h_ab6a18c4f31ba14e9b1388f1fd32ec107}{TRKP}}\ *\mbox{\hyperlink{structfcq_a006e76b6304b7c40a0cc679c95a09843}{clb}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{fcquantum_8h_a3bf13ce728830c7dc89b44b7668b249f}{MASK}}\ *\mbox{\hyperlink{structfcq_aed4c1a377c1a9cd9fb33997b00fb26b7}{mask}};\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ E2IPPA\ *\mbox{\hyperlink{structfcq_a6e84244379190d56025dfc73a22234ef}{ippa}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#if\ 1}}
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<c223\_target\_strobe>\ \mbox{\hyperlink{structfcq_a033c47e8648460f2fbe7cd70a146b2f3}{t\_strobes}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<c223\_imit\_strobe>\ \mbox{\hyperlink{structfcq_a990ff70bcc45af4a55389547f1855e6c}{i\_strobes}};\ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structfcq_aeec23c1bd5afc38b50788f7b758f49e7}{fcq}}()}
+\DoxyCodeLine{00037\ \ \ \ \ :\ \mbox{\hyperlink{structfcq_ab8388b8a93736303b0f687dcd9f57938}{crate\_num}}(\mbox{\hyperlink{structfcq_a8d5653f56be5dd10af2d3346fdf4b13a}{def\_crate\_num}}.value())}
+\DoxyCodeLine{00038\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_aa85a81c60fb2ed280743115477e1d325}{trims}}(0)}
+\DoxyCodeLine{00039\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a492affda2d322653672df2834a24810e}{trpr}}(0)}
+\DoxyCodeLine{00040\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a8778531f31b3b8a7921885f0df4cd431}{afr}}(0)}
+\DoxyCodeLine{00041\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a006e76b6304b7c40a0cc679c95a09843}{clb}}(0)}
+\DoxyCodeLine{00042\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_aed4c1a377c1a9cd9fb33997b00fb26b7}{mask}}(0)}
+\DoxyCodeLine{00043\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a6e84244379190d56025dfc73a22234ef}{ippa}}(0)}
+\DoxyCodeLine{00044\ \ \ \ \ \{\}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{structfcq_ad3af7d7ed22441ae46a945b24c4e3494}{fcq}}(uint\ c)}
+\DoxyCodeLine{00046\ \ \ \ \ :\ \mbox{\hyperlink{structfcq_ab8388b8a93736303b0f687dcd9f57938}{crate\_num}}(c)}
+\DoxyCodeLine{00047\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_aa85a81c60fb2ed280743115477e1d325}{trims}}(0)}
+\DoxyCodeLine{00048\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a492affda2d322653672df2834a24810e}{trpr}}(0)}
+\DoxyCodeLine{00049\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a8778531f31b3b8a7921885f0df4cd431}{afr}}(0)}
+\DoxyCodeLine{00050\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a006e76b6304b7c40a0cc679c95a09843}{clb}}(0)}
+\DoxyCodeLine{00051\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_aed4c1a377c1a9cd9fb33997b00fb26b7}{mask}}(0)}
+\DoxyCodeLine{00052\ \ \ \ \ ,\ \mbox{\hyperlink{structfcq_a6e84244379190d56025dfc73a22234ef}{ippa}}(0)}
+\DoxyCodeLine{00053\ \ \ \ \ \{\}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ std::experimental::optional<uint>\ \mbox{\hyperlink{structfcq_a8d5653f56be5dd10af2d3346fdf4b13a}{def\_crate\_num}};}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{typedef}\ std::map<int64\_t,\ fcq*>\ \mbox{\hyperlink{fcquantum_8h_ae17f448121921e8ed912075f8d07ef69}{fc\_map}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

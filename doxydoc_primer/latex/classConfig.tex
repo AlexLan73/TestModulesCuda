@@ -1,0 +1,488 @@
+\doxysection{Config Class Reference}
+\hypertarget{classConfig}{}\label{classConfig}\index{Config@{Config}}
+
+
+{\ttfamily \#include $<$config.\+h$>$}
+
+
+
+Collaboration diagram for Config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classConfig__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}} ()
+\item 
+\mbox{\hyperlink{classConfig_a543dce59b66475c5108088ee4ce1cdfc}{\texorpdfstring{$\sim$}{\string~}\+Config}} ()
+\item 
+void \mbox{\hyperlink{classConfig_a48ae7a7ca4b6c9dfaa2a40b8977eac54}{load}} (const char \texorpdfstring{$\ast$}{*}f\+Name)
+\item 
+void \mbox{\hyperlink{classConfig_a55563d4972ce4e59f520f3babd5ef3dd}{save}} (const char \texorpdfstring{$\ast$}{*}f\+Name)
+\item 
+void \mbox{\hyperlink{classConfig_a8c2764739f6a7228d1585683f2ed9b9d}{set\+Tacts\+Info}} (const std\+::vector$<$ \mbox{\hyperlink{structTactInfo}{Tact\+Info}} $>$ \&t\+Info)
+\item 
+void \mbox{\hyperlink{classConfig_ac5b507cc02b67784913dc3692a1d5a78}{set\+Station\+Params}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \&st\+Params)
+\item 
+void \mbox{\hyperlink{classConfig_aa633a36093849030485ac8438d9ac6d8}{set\+DPParams}} (const \mbox{\hyperlink{structDPParams}{DPParams}} \&dp\+Params)
+\item 
+void \mbox{\hyperlink{classConfig_a6ff22291122d30f0e70febfbcc05c451}{set\+Ippa\+File\+Name}} (const char \texorpdfstring{$\ast$}{*}f\+Name)
+\item 
+void \mbox{\hyperlink{classConfig_a671ccaff6611308ca5404f8dd16024ed}{set\+Mask\+File\+Name}} (const char \texorpdfstring{$\ast$}{*}f\+Name)
+\item 
+void \mbox{\hyperlink{classConfig_ae1e933b33290ae8cec4322606cb8fb36}{set\+Afr\+File\+Name}} (const char \texorpdfstring{$\ast$}{*}f\+Name)
+\item 
+void \mbox{\hyperlink{classConfig_a6201705f1f7435be6fa14db060b411b1}{set\+Klb\+File\+Name}} (const char \texorpdfstring{$\ast$}{*}f\+Name)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{structTactInfo}{Tact\+Info}} $>$ \& \mbox{\hyperlink{classConfig_a1db1f0826e26155ee3fd093f5eb23b77}{get\+Tacts\+Info}} () const
+\item 
+const \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \& \mbox{\hyperlink{classConfig_a0ba26bcb431e7f0658bf2d806f085149}{get\+Station\+Params}} () const
+\item 
+const \mbox{\hyperlink{structDPParams}{DPParams}} \& \mbox{\hyperlink{classConfig_af7ccf87acc08375960e6a747e43362b5}{get\+DPParams}} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classConfig_a9a43012c04b5443a4bf352af857f99b4}{get\+Ippa\+File\+Name}} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classConfig_a1e032b141e87f031790d36139b3b4dfc}{get\+Mask\+File\+Name}} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classConfig_a143cef34c28c89d4fabb1ba2ef1181ac}{get\+Afr\+File\+Name}} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classConfig_a174dabd555c0c41a42f8efdd098e3344}{get\+Klb\+File\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classConfig_a4d4698876d10131043806b0ddd690eb3}{clear}} ()
+\item 
+void \mbox{\hyperlink{classConfig_a5a2f36ead0d4d510efb7ebb9fe0cdc30}{parse\+Parsig}} (const pt\+::ptree \&object, PAR\+\_\+\+SIGN \&parsig)
+\item 
+void \mbox{\hyperlink{classConfig_af5a82b91953dd44f453465d303f3d2b8}{parse\+Objects}} (const pt\+::ptree \&strobe, std\+::vector$<$ \mbox{\hyperlink{structObjectInfo}{Object\+Info}} $>$ \&objects)
+\item 
+void \mbox{\hyperlink{classConfig_a162852065616d1f54687b8fc22abb5a9}{parse\+Uv\+Pg}} (const pt\+::ptree \&j\+Uv\+Pg, TRay \texorpdfstring{$\ast$}{*}uv\+Pg)
+\item 
+void \mbox{\hyperlink{classConfig_a809ed75fe1cf9a4414f4adfaed64d268}{parse\+Trpr\+Strobe}} (const pt\+::ptree \&strobe, TStrobe \&trpr\+Strb)
+\item 
+void \mbox{\hyperlink{classConfig_a59b5282abe40760bb6901592428333b8}{parse\+Trimts\+Strobe}} (const pt\+::ptree \&strobe, Imit\+Strobe \&trimts\+Strb)
+\item 
+void \mbox{\hyperlink{classConfig_a900682fdf7d56a432f6852f004221603}{parse\+Strobes}} (const pt\+::ptree \&tact, std\+::vector$<$ \mbox{\hyperlink{structStrobeInfo}{Strobe\+Info}} $>$ \&strobes)
+\item 
+void \mbox{\hyperlink{classConfig_af427c2c67dedb790ba0b30d7c85abd25}{parse\+Station\+Params}} (const pt\+::ptree \&j\+St\+Params)
+\item 
+void \mbox{\hyperlink{classConfig_a98e7b0109e9ae2fe5b2aece4eb8f8542}{parse\+DPParams}} (const pt\+::ptree \&j\+Dp\+Params)
+\item 
+void \mbox{\hyperlink{classConfig_a72e4e7f083e9c8f7551bad1f8500b41d}{fill\+Parsig}} (pt\+::ptree \&j\+Parent, PAR\+\_\+\+SIGN \&parsig)
+\item 
+void \mbox{\hyperlink{classConfig_aecc1b40c3ef8d01b184d5fcf75821f8e}{fill\+Trimts\+Objects}} (boost\+::property\+\_\+tree\+::ptree \&j\+Objects, std\+::vector$<$ \mbox{\hyperlink{structObjectInfo}{Object\+Info}} $>$ \&objects)
+\item 
+void \mbox{\hyperlink{classConfig_aba8565031b117b9dbd14b95cd7302e9f}{fill\+UV}} (pt\+::ptree \&j\+Trpr\+Strobe, TRay \texorpdfstring{$\ast$}{*}uv\+Pg)
+\item 
+void \mbox{\hyperlink{classConfig_abaf7b1163697cbb1a71c85160ae27e06}{fill\+Trpr\+Strobe}} (boost\+::property\+\_\+tree\+::ptree \&j\+Trpr\+Strobe, TStrobe \&trpr\+Strobe)
+\item 
+void \mbox{\hyperlink{classConfig_ad0da9f01d7bfe563b574587054e4d0d1}{fill\+Trimts\+Strobe}} (boost\+::property\+\_\+tree\+::ptree \&j\+Trimts\+Strobe, Imit\+Strobe \&trimts\+Strobe)
+\item 
+void \mbox{\hyperlink{classConfig_a69cc658d2c1fc9dceb15c9422394e445}{fill\+Strobes}} (boost\+::property\+\_\+tree\+::ptree \&j\+Strobes, std\+::vector$<$ \mbox{\hyperlink{structStrobeInfo}{Strobe\+Info}} $>$ \&strobes)
+\item 
+void \mbox{\hyperlink{classConfig_a2f48b0c1f6250ef534d38327cf114eb6}{fill\+Trpr\+Tact\+Header}} (pt\+::ptree \&j\+Header, SDTRPR \&trpr\+Header)
+\item 
+void \mbox{\hyperlink{classConfig_a73524d125debbfcc85ad5d754dc81979}{fill\+Trimts\+Tact\+Header}} (pt\+::ptree \&j\+Header, Imit\+Tact\+Description \&trimts\+Header)
+\item 
+void \mbox{\hyperlink{classConfig_ae0e2ab1586e1e54e525acf83bccc73e8}{fill\+Stations\+Params}} ()
+\item 
+void \mbox{\hyperlink{classConfig_abfc5b9f7ee1fc0652e8caf63c7dc5759}{fill\+DPParams}} ()
+\item 
+void \mbox{\hyperlink{classConfig_aaf251f175f2dceeb45959a7d8634493d}{fill\+Tact\+Header}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structTactInfo}{Tact\+Info}} $>$ \mbox{\hyperlink{classConfig_a60a19e72e761ead0c7e479676e31acab}{tacts\+Info}}
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \mbox{\hyperlink{classConfig_a212a726b32b260e6d5feecdaf1e8571d}{station\+Params}}
+\item 
+\mbox{\hyperlink{structDPParams}{DPParams}} \mbox{\hyperlink{classConfig_ada220b16ae15dde9cf0ebe56f9d80ecf}{dir\+Pat\+Params}}
+\item 
+std\+::string \mbox{\hyperlink{classConfig_afb192714634345f1a764b4f41d6784e8}{ippa\+File\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{classConfig_a6c8533ab25e4f00b79fedf53985ddb08}{mask\+File\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{classConfig_ac776621b78398d82b862db10921bc17b}{afr\+File\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{classConfig_a0c773813a9aa6f1479dcc737e111ca1a}{klb\+File\+Name}}
+\item 
+pt\+::ptree \mbox{\hyperlink{classConfig_a626ad1f3cf579c5bdc0c90821e5c762c}{root}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classConfig_abd0c571c116924871e30444b192b792a}\label{classConfig_abd0c571c116924871e30444b192b792a} 
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{Config()}{Config()}}
+{\footnotesize\ttfamily Config\+::\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classConfig_abd0c571c116924871e30444b192b792a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a543dce59b66475c5108088ee4ce1cdfc}\label{classConfig_a543dce59b66475c5108088ee4ce1cdfc} 
+\index{Config@{Config}!````~Config@{\texorpdfstring{$\sim$}{\string~}Config}}
+\index{````~Config@{\texorpdfstring{$\sim$}{\string~}Config}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Config()}{\string~Config()}}
+{\footnotesize\ttfamily Config\+::\texorpdfstring{$\sim$}{\string~}\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classConfig_a4d4698876d10131043806b0ddd690eb3}\label{classConfig_a4d4698876d10131043806b0ddd690eb3} 
+\index{Config@{Config}!clear@{clear}}
+\index{clear@{clear}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Config\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_abfc5b9f7ee1fc0652e8caf63c7dc5759}\label{classConfig_abfc5b9f7ee1fc0652e8caf63c7dc5759} 
+\index{Config@{Config}!fillDPParams@{fillDPParams}}
+\index{fillDPParams@{fillDPParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillDPParams()}{fillDPParams()}}
+{\footnotesize\ttfamily void Config\+::fill\+DPParams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a72e4e7f083e9c8f7551bad1f8500b41d}\label{classConfig_a72e4e7f083e9c8f7551bad1f8500b41d} 
+\index{Config@{Config}!fillParsig@{fillParsig}}
+\index{fillParsig@{fillParsig}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillParsig()}{fillParsig()}}
+{\footnotesize\ttfamily void Config\+::fill\+Parsig (\begin{DoxyParamCaption}\item[{pt\+::ptree \&}]{j\+Parent,  }\item[{PAR\+\_\+\+SIGN \&}]{parsig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_ae0e2ab1586e1e54e525acf83bccc73e8}\label{classConfig_ae0e2ab1586e1e54e525acf83bccc73e8} 
+\index{Config@{Config}!fillStationsParams@{fillStationsParams}}
+\index{fillStationsParams@{fillStationsParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillStationsParams()}{fillStationsParams()}}
+{\footnotesize\ttfamily void Config\+::fill\+Stations\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a69cc658d2c1fc9dceb15c9422394e445}\label{classConfig_a69cc658d2c1fc9dceb15c9422394e445} 
+\index{Config@{Config}!fillStrobes@{fillStrobes}}
+\index{fillStrobes@{fillStrobes}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillStrobes()}{fillStrobes()}}
+{\footnotesize\ttfamily void Config\+::fill\+Strobes (\begin{DoxyParamCaption}\item[{boost\+::property\+\_\+tree\+::ptree \&}]{j\+Strobes,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structStrobeInfo}{Strobe\+Info}} $>$ \&}]{strobes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_a69cc658d2c1fc9dceb15c9422394e445_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_aaf251f175f2dceeb45959a7d8634493d}\label{classConfig_aaf251f175f2dceeb45959a7d8634493d} 
+\index{Config@{Config}!fillTactHeader@{fillTactHeader}}
+\index{fillTactHeader@{fillTactHeader}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillTactHeader()}{fillTactHeader()}}
+{\footnotesize\ttfamily void Config\+::fill\+Tact\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_aaf251f175f2dceeb45959a7d8634493d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_aecc1b40c3ef8d01b184d5fcf75821f8e}\label{classConfig_aecc1b40c3ef8d01b184d5fcf75821f8e} 
+\index{Config@{Config}!fillTrimtsObjects@{fillTrimtsObjects}}
+\index{fillTrimtsObjects@{fillTrimtsObjects}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillTrimtsObjects()}{fillTrimtsObjects()}}
+{\footnotesize\ttfamily void Config\+::fill\+Trimts\+Objects (\begin{DoxyParamCaption}\item[{boost\+::property\+\_\+tree\+::ptree \&}]{j\+Objects,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structObjectInfo}{Object\+Info}} $>$ \&}]{objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classConfig_aecc1b40c3ef8d01b184d5fcf75821f8e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_ad0da9f01d7bfe563b574587054e4d0d1}\label{classConfig_ad0da9f01d7bfe563b574587054e4d0d1} 
+\index{Config@{Config}!fillTrimtsStrobe@{fillTrimtsStrobe}}
+\index{fillTrimtsStrobe@{fillTrimtsStrobe}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillTrimtsStrobe()}{fillTrimtsStrobe()}}
+{\footnotesize\ttfamily void Config\+::fill\+Trimts\+Strobe (\begin{DoxyParamCaption}\item[{boost\+::property\+\_\+tree\+::ptree \&}]{j\+Trimts\+Strobe,  }\item[{Imit\+Strobe \&}]{trimts\+Strobe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a73524d125debbfcc85ad5d754dc81979}\label{classConfig_a73524d125debbfcc85ad5d754dc81979} 
+\index{Config@{Config}!fillTrimtsTactHeader@{fillTrimtsTactHeader}}
+\index{fillTrimtsTactHeader@{fillTrimtsTactHeader}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillTrimtsTactHeader()}{fillTrimtsTactHeader()}}
+{\footnotesize\ttfamily void Config\+::fill\+Trimts\+Tact\+Header (\begin{DoxyParamCaption}\item[{pt\+::ptree \&}]{j\+Header,  }\item[{Imit\+Tact\+Description \&}]{trimts\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_abaf7b1163697cbb1a71c85160ae27e06}\label{classConfig_abaf7b1163697cbb1a71c85160ae27e06} 
+\index{Config@{Config}!fillTrprStrobe@{fillTrprStrobe}}
+\index{fillTrprStrobe@{fillTrprStrobe}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillTrprStrobe()}{fillTrprStrobe()}}
+{\footnotesize\ttfamily void Config\+::fill\+Trpr\+Strobe (\begin{DoxyParamCaption}\item[{boost\+::property\+\_\+tree\+::ptree \&}]{j\+Trpr\+Strobe,  }\item[{TStrobe \&}]{trpr\+Strobe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classConfig_abaf7b1163697cbb1a71c85160ae27e06_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a2f48b0c1f6250ef534d38327cf114eb6}\label{classConfig_a2f48b0c1f6250ef534d38327cf114eb6} 
+\index{Config@{Config}!fillTrprTactHeader@{fillTrprTactHeader}}
+\index{fillTrprTactHeader@{fillTrprTactHeader}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillTrprTactHeader()}{fillTrprTactHeader()}}
+{\footnotesize\ttfamily void Config\+::fill\+Trpr\+Tact\+Header (\begin{DoxyParamCaption}\item[{pt\+::ptree \&}]{j\+Header,  }\item[{SDTRPR \&}]{trpr\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_aba8565031b117b9dbd14b95cd7302e9f}\label{classConfig_aba8565031b117b9dbd14b95cd7302e9f} 
+\index{Config@{Config}!fillUV@{fillUV}}
+\index{fillUV@{fillUV}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{fillUV()}{fillUV()}}
+{\footnotesize\ttfamily void Config\+::fill\+UV (\begin{DoxyParamCaption}\item[{pt\+::ptree \&}]{j\+Trpr\+Strobe,  }\item[{TRay \texorpdfstring{$\ast$}{*}}]{uv\+Pg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a143cef34c28c89d4fabb1ba2ef1181ac}\label{classConfig_a143cef34c28c89d4fabb1ba2ef1181ac} 
+\index{Config@{Config}!getAfrFileName@{getAfrFileName}}
+\index{getAfrFileName@{getAfrFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getAfrFileName()}{getAfrFileName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Config\+::get\+Afr\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_af7ccf87acc08375960e6a747e43362b5}\label{classConfig_af7ccf87acc08375960e6a747e43362b5} 
+\index{Config@{Config}!getDPParams@{getDPParams}}
+\index{getDPParams@{getDPParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getDPParams()}{getDPParams()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structDPParams}{DPParams}} \& Config\+::get\+DPParams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_a9a43012c04b5443a4bf352af857f99b4}\label{classConfig_a9a43012c04b5443a4bf352af857f99b4} 
+\index{Config@{Config}!getIppaFileName@{getIppaFileName}}
+\index{getIppaFileName@{getIppaFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getIppaFileName()}{getIppaFileName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Config\+::get\+Ippa\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_a174dabd555c0c41a42f8efdd098e3344}\label{classConfig_a174dabd555c0c41a42f8efdd098e3344} 
+\index{Config@{Config}!getKlbFileName@{getKlbFileName}}
+\index{getKlbFileName@{getKlbFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getKlbFileName()}{getKlbFileName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Config\+::get\+Klb\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_a1e032b141e87f031790d36139b3b4dfc}\label{classConfig_a1e032b141e87f031790d36139b3b4dfc} 
+\index{Config@{Config}!getMaskFileName@{getMaskFileName}}
+\index{getMaskFileName@{getMaskFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getMaskFileName()}{getMaskFileName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Config\+::get\+Mask\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_a0ba26bcb431e7f0658bf2d806f085149}\label{classConfig_a0ba26bcb431e7f0658bf2d806f085149} 
+\index{Config@{Config}!getStationParams@{getStationParams}}
+\index{getStationParams@{getStationParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getStationParams()}{getStationParams()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \& Config\+::get\+Station\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_a1db1f0826e26155ee3fd093f5eb23b77}\label{classConfig_a1db1f0826e26155ee3fd093f5eb23b77} 
+\index{Config@{Config}!getTactsInfo@{getTactsInfo}}
+\index{getTactsInfo@{getTactsInfo}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getTactsInfo()}{getTactsInfo()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structTactInfo}{Tact\+Info}} $>$ \& Config\+::get\+Tacts\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classConfig_a48ae7a7ca4b6c9dfaa2a40b8977eac54}\label{classConfig_a48ae7a7ca4b6c9dfaa2a40b8977eac54} 
+\index{Config@{Config}!load@{load}}
+\index{load@{load}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Config\+::load (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{f\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_a48ae7a7ca4b6c9dfaa2a40b8977eac54_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a98e7b0109e9ae2fe5b2aece4eb8f8542}\label{classConfig_a98e7b0109e9ae2fe5b2aece4eb8f8542} 
+\index{Config@{Config}!parseDPParams@{parseDPParams}}
+\index{parseDPParams@{parseDPParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseDPParams()}{parseDPParams()}}
+{\footnotesize\ttfamily void Config\+::parse\+DPParams (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{j\+Dp\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_af5a82b91953dd44f453465d303f3d2b8}\label{classConfig_af5a82b91953dd44f453465d303f3d2b8} 
+\index{Config@{Config}!parseObjects@{parseObjects}}
+\index{parseObjects@{parseObjects}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseObjects()}{parseObjects()}}
+{\footnotesize\ttfamily void Config\+::parse\+Objects (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{strobe,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structObjectInfo}{Object\+Info}} $>$ \&}]{objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classConfig_af5a82b91953dd44f453465d303f3d2b8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a5a2f36ead0d4d510efb7ebb9fe0cdc30}\label{classConfig_a5a2f36ead0d4d510efb7ebb9fe0cdc30} 
+\index{Config@{Config}!parseParsig@{parseParsig}}
+\index{parseParsig@{parseParsig}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseParsig()}{parseParsig()}}
+{\footnotesize\ttfamily void Config\+::parse\+Parsig (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{object,  }\item[{PAR\+\_\+\+SIGN \&}]{parsig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_af427c2c67dedb790ba0b30d7c85abd25}\label{classConfig_af427c2c67dedb790ba0b30d7c85abd25} 
+\index{Config@{Config}!parseStationParams@{parseStationParams}}
+\index{parseStationParams@{parseStationParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseStationParams()}{parseStationParams()}}
+{\footnotesize\ttfamily void Config\+::parse\+Station\+Params (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{j\+St\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a900682fdf7d56a432f6852f004221603}\label{classConfig_a900682fdf7d56a432f6852f004221603} 
+\index{Config@{Config}!parseStrobes@{parseStrobes}}
+\index{parseStrobes@{parseStrobes}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseStrobes()}{parseStrobes()}}
+{\footnotesize\ttfamily void Config\+::parse\+Strobes (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{tact,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structStrobeInfo}{Strobe\+Info}} $>$ \&}]{strobes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_a900682fdf7d56a432f6852f004221603_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a59b5282abe40760bb6901592428333b8}\label{classConfig_a59b5282abe40760bb6901592428333b8} 
+\index{Config@{Config}!parseTrimtsStrobe@{parseTrimtsStrobe}}
+\index{parseTrimtsStrobe@{parseTrimtsStrobe}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseTrimtsStrobe()}{parseTrimtsStrobe()}}
+{\footnotesize\ttfamily void Config\+::parse\+Trimts\+Strobe (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{strobe,  }\item[{Imit\+Strobe \&}]{trimts\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a809ed75fe1cf9a4414f4adfaed64d268}\label{classConfig_a809ed75fe1cf9a4414f4adfaed64d268} 
+\index{Config@{Config}!parseTrprStrobe@{parseTrprStrobe}}
+\index{parseTrprStrobe@{parseTrprStrobe}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseTrprStrobe()}{parseTrprStrobe()}}
+{\footnotesize\ttfamily void Config\+::parse\+Trpr\+Strobe (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{strobe,  }\item[{TStrobe \&}]{trpr\+Strb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_a809ed75fe1cf9a4414f4adfaed64d268_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a162852065616d1f54687b8fc22abb5a9}\label{classConfig_a162852065616d1f54687b8fc22abb5a9} 
+\index{Config@{Config}!parseUvPg@{parseUvPg}}
+\index{parseUvPg@{parseUvPg}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{parseUvPg()}{parseUvPg()}}
+{\footnotesize\ttfamily void Config\+::parse\+Uv\+Pg (\begin{DoxyParamCaption}\item[{const pt\+::ptree \&}]{j\+Uv\+Pg,  }\item[{TRay \texorpdfstring{$\ast$}{*}}]{uv\+Pg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a55563d4972ce4e59f520f3babd5ef3dd}\label{classConfig_a55563d4972ce4e59f520f3babd5ef3dd} 
+\index{Config@{Config}!save@{save}}
+\index{save@{save}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Config\+::save (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{f\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_a55563d4972ce4e59f520f3babd5ef3dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_ae1e933b33290ae8cec4322606cb8fb36}\label{classConfig_ae1e933b33290ae8cec4322606cb8fb36} 
+\index{Config@{Config}!setAfrFileName@{setAfrFileName}}
+\index{setAfrFileName@{setAfrFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setAfrFileName()}{setAfrFileName()}}
+{\footnotesize\ttfamily void Config\+::set\+Afr\+File\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{f\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{classConfig_aa633a36093849030485ac8438d9ac6d8}\label{classConfig_aa633a36093849030485ac8438d9ac6d8} 
+\index{Config@{Config}!setDPParams@{setDPParams}}
+\index{setDPParams@{setDPParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setDPParams()}{setDPParams()}}
+{\footnotesize\ttfamily void Config\+::set\+DPParams (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structDPParams}{DPParams}} \&}]{dp\+Params }\end{DoxyParamCaption})}
+
+\Hypertarget{classConfig_a6ff22291122d30f0e70febfbcc05c451}\label{classConfig_a6ff22291122d30f0e70febfbcc05c451} 
+\index{Config@{Config}!setIppaFileName@{setIppaFileName}}
+\index{setIppaFileName@{setIppaFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setIppaFileName()}{setIppaFileName()}}
+{\footnotesize\ttfamily void Config\+::set\+Ippa\+File\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{f\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{classConfig_a6201705f1f7435be6fa14db060b411b1}\label{classConfig_a6201705f1f7435be6fa14db060b411b1} 
+\index{Config@{Config}!setKlbFileName@{setKlbFileName}}
+\index{setKlbFileName@{setKlbFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setKlbFileName()}{setKlbFileName()}}
+{\footnotesize\ttfamily void Config\+::set\+Klb\+File\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{f\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{classConfig_a671ccaff6611308ca5404f8dd16024ed}\label{classConfig_a671ccaff6611308ca5404f8dd16024ed} 
+\index{Config@{Config}!setMaskFileName@{setMaskFileName}}
+\index{setMaskFileName@{setMaskFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setMaskFileName()}{setMaskFileName()}}
+{\footnotesize\ttfamily void Config\+::set\+Mask\+File\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{f\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{classConfig_ac5b507cc02b67784913dc3692a1d5a78}\label{classConfig_ac5b507cc02b67784913dc3692a1d5a78} 
+\index{Config@{Config}!setStationParams@{setStationParams}}
+\index{setStationParams@{setStationParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setStationParams()}{setStationParams()}}
+{\footnotesize\ttfamily void Config\+::set\+Station\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} \&}]{st\+Params }\end{DoxyParamCaption})}
+
+\Hypertarget{classConfig_a8c2764739f6a7228d1585683f2ed9b9d}\label{classConfig_a8c2764739f6a7228d1585683f2ed9b9d} 
+\index{Config@{Config}!setTactsInfo@{setTactsInfo}}
+\index{setTactsInfo@{setTactsInfo}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{setTactsInfo()}{setTactsInfo()}}
+{\footnotesize\ttfamily void Config\+::set\+Tacts\+Info (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structTactInfo}{Tact\+Info}} $>$ \&}]{t\+Info }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classConfig_ac776621b78398d82b862db10921bc17b}\label{classConfig_ac776621b78398d82b862db10921bc17b} 
+\index{Config@{Config}!afrFileName@{afrFileName}}
+\index{afrFileName@{afrFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{afrFileName}{afrFileName}}
+{\footnotesize\ttfamily std\+::string Config\+::afr\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_ada220b16ae15dde9cf0ebe56f9d80ecf}\label{classConfig_ada220b16ae15dde9cf0ebe56f9d80ecf} 
+\index{Config@{Config}!dirPatParams@{dirPatParams}}
+\index{dirPatParams@{dirPatParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{dirPatParams}{dirPatParams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDPParams}{DPParams}} Config\+::dir\+Pat\+Params\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_afb192714634345f1a764b4f41d6784e8}\label{classConfig_afb192714634345f1a764b4f41d6784e8} 
+\index{Config@{Config}!ippaFileName@{ippaFileName}}
+\index{ippaFileName@{ippaFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{ippaFileName}{ippaFileName}}
+{\footnotesize\ttfamily std\+::string Config\+::ippa\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a0c773813a9aa6f1479dcc737e111ca1a}\label{classConfig_a0c773813a9aa6f1479dcc737e111ca1a} 
+\index{Config@{Config}!klbFileName@{klbFileName}}
+\index{klbFileName@{klbFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{klbFileName}{klbFileName}}
+{\footnotesize\ttfamily std\+::string Config\+::klb\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a6c8533ab25e4f00b79fedf53985ddb08}\label{classConfig_a6c8533ab25e4f00b79fedf53985ddb08} 
+\index{Config@{Config}!maskFileName@{maskFileName}}
+\index{maskFileName@{maskFileName}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{maskFileName}{maskFileName}}
+{\footnotesize\ttfamily std\+::string Config\+::mask\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a626ad1f3cf579c5bdc0c90821e5c762c}\label{classConfig_a626ad1f3cf579c5bdc0c90821e5c762c} 
+\index{Config@{Config}!root@{root}}
+\index{root@{root}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily pt\+::ptree Config\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a212a726b32b260e6d5feecdaf1e8571d}\label{classConfig_a212a726b32b260e6d5feecdaf1e8571d} 
+\index{Config@{Config}!stationParams@{stationParams}}
+\index{stationParams@{stationParams}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{stationParams}{stationParams}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+::\+Station\+Params}} Config\+::station\+Params\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classConfig_a60a19e72e761ead0c7e479676e31acab}\label{classConfig_a60a19e72e761ead0c7e479676e31acab} 
+\index{Config@{Config}!tactsInfo@{tactsInfo}}
+\index{tactsInfo@{tactsInfo}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{tactsInfo}{tactsInfo}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structTactInfo}{Tact\+Info}}$>$ Config\+::tacts\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{config_8h}{config.\+h}}\item 
+src/gui/\mbox{\hyperlink{config_8cpp}{config.\+cpp}}\end{DoxyCompactItemize}

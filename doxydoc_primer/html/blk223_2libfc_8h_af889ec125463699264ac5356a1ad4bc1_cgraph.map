@@ -1,0 +1,5 @@
+<map id="map_tips" name="map_tips">
+<area shape="rect" id="Node000001" title="Преобразует сетевой код типа строба к коду карты памяти прошивки." alt="" coords="5,5,88,31"/>
+<area shape="rect" id="Node000002" href="$blk223_2libfc_8h.html#aea961f54684231b548c159708dcae31d" title="Проверка на соответствие типа строба анализу уровня шумов." alt="" coords="136,5,244,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,15,122,15,122,21,88,21"/>
+</map>

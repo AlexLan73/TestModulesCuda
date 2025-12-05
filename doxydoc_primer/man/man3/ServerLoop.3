@@ -1,0 +1,172 @@
+.TH "ServerLoop" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServerLoop
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <server_loop\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBClientConn\fP"
+.br
+.ti -1c
+.RI "struct \fBQueuedRequest\fP"
+.br
+.RI "Запрос на вполнение JSON RPC метода (любого), поставленный в очередь\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBServerLoop\fP (\fBCache\fP &c)"
+.br
+.ti -1c
+.RI "void \fBserve\fP (int listenfd)"
+.br
+.ti -1c
+.RI "void \fBserve1\fP (int connfd)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBResponse\fP \fBoneshot\fP (const \fBModelInputBundle\fP &inputs, optional< std::string > outDirPath)"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "typedef libutils::FDPortIn< optional< Result< \fBRequest\fP, \fBResponse\fP > >, libutils::fdistream *, \fBget_fd\fP > \fBClientPortIn_t\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdo_serve\fP (libutils::PortIn< int > &conn_in, bool forever)"
+.br
+.ti -1c
+.RI "\fBClientConn\fP & \fBadd_client\fP (libutils::PortIn< int > &conn_in)"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBClientConn\fP > \fBfind_client\fP (const libutils::ReadyPorts &ports) const"
+.br
+.ti -1c
+.RI "void \fBdrop_client\fP (std::shared_ptr< \fBClientConn\fP > client)"
+.br
+.ti -1c
+.RI "std::unique_ptr< libutils::Select > \fBrebuild_select\fP (libutils::PortIn< int > &conn_in, libutils::PortIn< \fBResponse\fP > &rsp_in) const"
+.br
+.ti -1c
+.RI "bool \fBsend\fP (const \fBResponse\fP &rsp, \fBClientConn\fP &client) const"
+.br
+.ti -1c
+.RI "std::shared_ptr< libutils::picojson_object > \fBget_cached\fP (const \fBRequest\fP *req) const"
+.br
+.ti -1c
+.RI "void \fBcache_response\fP (const \fBModelInputBundle\fP *in_bundle, const Result< \fBResponse\fP, libutils::RecvError > &rsp)"
+.br
+.RI "Если ответ содержит пригодную к кэшированию выдачу модели, кэшируем его "
+.ti -1c
+.RI "bool \fBsend_cached_json_object\fP (std::shared_ptr< libutils::picojson_object > cached_rsp, const \fBQueuedRequest\fP &qreq) const"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::tuple< std::unique_ptr< \fBRequest\fP >, bool > \fBget_request\fP (\fBClientConn\fP &c)"
+.br
+.ti -1c
+.RI "static pollfd \fBmake_null_pollfd\fP (int fd)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::list< std::shared_ptr< \fBClientConn\fP > > \fBclients\fP"
+.br
+.RI "Список всех клиентских соединений "
+.ti -1c
+.RI "\fBCache\fP & \fBcache\fP"
+.br
+.RI "Кэш вычисленных StrobeOutput\&. "
+.ti -1c
+.RI "uint \fBnrequests\fP"
+.br
+.RI "Количество обработанных запросов "
+.ti -1c
+.RI "uint \fBncachehits\fP"
+.br
+.RI "Количество запросов, обработанных из кэша "
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef libutils::FDPortIn<optional<Result<\fBRequest\fP, \fBResponse\fP> >, libutils::fdistream *, \fBget_fd\fP> \fBServerLoop::ClientPortIn_t\fP\fC [private]\fP"
+Порт для ожидания и чтения запроса из входного потока; входной поток оборачивает дескриптор сокета (ожидание выполняется на дескрипторе) 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ServerLoop::ServerLoop (\fBCache\fP & c)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBServerLoop::ClientConn\fP & ServerLoop::add_client (libutils::PortIn< int > & conn_in)\fC [private]\fP"
+
+.SS "void ServerLoop::cache_response (const \fBModelInputBundle\fP * in_bundle, const Result< \fBResponse\fP, libutils::RecvError > & rsp)\fC [private]\fP"
+
+.PP
+Если ответ содержит пригодную к кэшированию выдачу модели, кэшируем его 
+.SS "void ServerLoop::do_serve (libutils::PortIn< int > & conn_in, bool forever)\fC [private]\fP"
+
+.SS "void ServerLoop::drop_client (std::shared_ptr< \fBClientConn\fP > client)\fC [private]\fP"
+
+.SS "shared_ptr< \fBServerLoop::ClientConn\fP > ServerLoop::find_client (const libutils::ReadyPorts & ports) const\fC [private]\fP"
+
+.SS "shared_ptr< picojson_object > ServerLoop::get_cached (const \fBRequest\fP * req) const\fC [private]\fP"
+
+.SS "tuple< unique_ptr< \fBRequest\fP >, bool > ServerLoop::get_request (\fBClientConn\fP & c)\fC [static]\fP, \fC [private]\fP"
+
+.SS "pollfd ServerLoop::make_null_pollfd (int fd)\fC [static]\fP, \fC [private]\fP"
+
+.SS "P::Response ServerLoop::oneshot (const \fBModelInputBundle\fP & inputs, optional< std::string > outDirPath)\fC [static]\fP"
+
+.SS "unique_ptr< Select > ServerLoop::rebuild_select (libutils::PortIn< int > & conn_in, libutils::PortIn< \fBResponse\fP > & rsp_in) const\fC [private]\fP"
+
+.SS "bool ServerLoop::send (const \fBResponse\fP & rsp, \fBClientConn\fP & client) const\fC [private]\fP"
+
+.SS "bool ServerLoop::send_cached_json_object (std::shared_ptr< libutils::picojson_object > cached_rsp, const \fBQueuedRequest\fP & qreq) const\fC [private]\fP"
+
+.SS "void ServerLoop::serve (int listenfd)"
+
+.SS "void ServerLoop::serve1 (int connfd)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCache\fP& ServerLoop::cache\fC [private]\fP"
+
+.PP
+Кэш вычисленных StrobeOutput\&. 
+.SS "std::list<std::shared_ptr<\fBClientConn\fP> > ServerLoop::clients\fC [private]\fP"
+
+.PP
+Список всех клиентских соединений 
+.SS "uint ServerLoop::ncachehits\fC [private]\fP"
+
+.PP
+Количество запросов, обработанных из кэша 
+.SS "uint ServerLoop::nrequests\fC [private]\fP"
+
+.PP
+Количество обработанных запросов 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

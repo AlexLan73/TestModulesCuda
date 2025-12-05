@@ -1,0 +1,209 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Wlb\+Array Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1WlbArray}{}\label{classModelNS23817A620S1823_1_1WlbArray}\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+
+
+{\ttfamily \#include $<$wlb\+Array.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Wlb\+Array\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classModelNS23817A620S1823_1_1WlbArray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a21544bb70f6c67a1c839661a6c9b85ac}{Wlb\+Array}} (const std\+::list$<$ std\+::string $>$ \&lst\+Data\+Dirs)
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a481a1422a9794f7f8330011ed970080e}{\texorpdfstring{$\sim$}{\string~}\+Wlb\+Array}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a66d2e1af081800bce8e13d9d456a166c}{get\+Wlb}} (uint32\+\_\+t nfil, uint32\+\_\+t wlb\+Num, int32\+\_\+t \texorpdfstring{$\ast$}{*}wlb\+Buf) const
+\item 
+double \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a1bc20b2ac0f5dd262ff9d17fd7498d26}{get\+Wlb\+Nnorm}} (uint32\+\_\+t nfil, uint32\+\_\+t wlb\+Num) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_afa905906159157375f73a06a64801ac0}{load\+Wlb\+Coefs}} (const std\+::list$<$ std\+::string $>$ \&lst\+Data\+Dirs)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a79e6f139bd4e5ffc2fc297e101f1f433}{get\+Nfil}} (std\+::string str\+Header)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_aac889ad6f50c18c6a1438ffe36d91918}{get\+Wlb\+Num}} (std\+::string str\+Header)
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a7d591c4b3a09a3d29f8a06dc9c380bd9}{find\+Nfil}} (uint32\+\_\+t nfil) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a5462f0a3c2e0aed3a7b7cbcc45687374}{wlb\+Coefs}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const float \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a77b5bab038801c2cb92c7c6812f686cd}{wlb\+Const}} = 65535.
+\item 
+static const int \mbox{\hyperlink{classModelNS23817A620S1823_1_1WlbArray_a4948fc00ee26098b191968c461a7412c}{max\+Num\+Wlbs\+For\+One\+Nfil}} = 16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс данных коэффициентов фильтра нижних частот. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a21544bb70f6c67a1c839661a6c9b85ac}\label{classModelNS23817A620S1823_1_1WlbArray_a21544bb70f6c67a1c839661a6c9b85ac} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!WlbArray@{WlbArray}}
+\index{WlbArray@{WlbArray}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{WlbArray()}{WlbArray()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::\+Wlb\+Array (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{lst\+Data\+Dirs }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1WlbArray_a21544bb70f6c67a1c839661a6c9b85ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a481a1422a9794f7f8330011ed970080e}\label{classModelNS23817A620S1823_1_1WlbArray_a481a1422a9794f7f8330011ed970080e} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!````~WlbArray@{\texorpdfstring{$\sim$}{\string~}WlbArray}}
+\index{````~WlbArray@{\texorpdfstring{$\sim$}{\string~}WlbArray}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WlbArray()}{\string~WlbArray()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::\texorpdfstring{$\sim$}{\string~}\+Wlb\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a7d591c4b3a09a3d29f8a06dc9c380bd9}\label{classModelNS23817A620S1823_1_1WlbArray_a7d591c4b3a09a3d29f8a06dc9c380bd9} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!findNfil@{findNfil}}
+\index{findNfil@{findNfil}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{findNfil()}{findNfil()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::find\+Nfil (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{nfil }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Поиск индекса длительности импульсной характеристики фильтра нижних частот в массиве wlb\+Coefs. 
+\begin{DoxyParams}{Parameters}
+{\em nfil} & длительность импульсной характеристики фильтра нижних частот \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+индекс длительности импульсной характеристики фильтра нижних 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a79e6f139bd4e5ffc2fc297e101f1f433}\label{classModelNS23817A620S1823_1_1WlbArray_a79e6f139bd4e5ffc2fc297e101f1f433} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!getNfil@{getNfil}}
+\index{getNfil@{getNfil}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{getNfil()}{getNfil()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::get\+Nfil (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Выдача длительности импульсной характеристики фильтра нижних частот ПЧВО, считанного из переданной строки. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Header} & строка заголовка данных $<$nfil wlb\+Num$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+длительность импульсной характеристики фильтра нижних частот 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a66d2e1af081800bce8e13d9d456a166c}\label{classModelNS23817A620S1823_1_1WlbArray_a66d2e1af081800bce8e13d9d456a166c} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!getWlb@{getWlb}}
+\index{getWlb@{getWlb}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{getWlb()}{getWlb()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::get\+Wlb (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{nfil,  }\item[{uint32\+\_\+t}]{wlb\+Num,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{wlb\+Buf }\end{DoxyParamCaption}) const}
+
+Копирование в wlb\+Buf вектор коэффициентов ФНЧ, длина которого равна nfil. 
+\begin{DoxyParams}{Parameters}
+{\em nfil} & номер фильтра нижних частот \\
+\hline
+{\em wlb\+Num} & номер импульсной характеристики второго ЦФНЧ в ПЧВО \\
+\hline
+{\em wlb\+Buf} & указатель на буфер, в который будут записаны значения фильтра нижних частот \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1WlbArray_a66d2e1af081800bce8e13d9d456a166c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a1bc20b2ac0f5dd262ff9d17fd7498d26}\label{classModelNS23817A620S1823_1_1WlbArray_a1bc20b2ac0f5dd262ff9d17fd7498d26} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!getWlbNnorm@{getWlbNnorm}}
+\index{getWlbNnorm@{getWlbNnorm}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{getWlbNnorm()}{getWlbNnorm()}}
+{\footnotesize\ttfamily double Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::get\+Wlb\+Nnorm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{nfil,  }\item[{uint32\+\_\+t}]{wlb\+Num }\end{DoxyParamCaption}) const}
+
+Возврат нормы вектора коэффициентов ФНЧ, длина которого равна nfil. 
+\begin{DoxyParams}{Parameters}
+{\em nfil} & номер фильтра нижних частот \\
+\hline
+{\em wlb\+Num} & номер импульсной характеристики второго ЦФНЧ в ПЧВО \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+норма вектора коэффициентов ФНЧ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1WlbArray_a1bc20b2ac0f5dd262ff9d17fd7498d26_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_aac889ad6f50c18c6a1438ffe36d91918}\label{classModelNS23817A620S1823_1_1WlbArray_aac889ad6f50c18c6a1438ffe36d91918} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!getWlbNum@{getWlbNum}}
+\index{getWlbNum@{getWlbNum}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{getWlbNum()}{getWlbNum()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::get\+Wlb\+Num (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Выдача номера импульсной характеристики второго ЦФНЧ в ПЧВО, считанного из переданной строки. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Header} & строка заголовка данных $<$nfil wlb\+Num$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер импульсной характеристики второго ЦФНЧ в ПЧВО 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_afa905906159157375f73a06a64801ac0}\label{classModelNS23817A620S1823_1_1WlbArray_afa905906159157375f73a06a64801ac0} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!loadWlbCoefs@{loadWlbCoefs}}
+\index{loadWlbCoefs@{loadWlbCoefs}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{loadWlbCoefs()}{loadWlbCoefs()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::load\+Wlb\+Coefs (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{lst\+Data\+Dirs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Загрузка коэффициентов для всех типов станций из файла wlb\+Coefs. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1WlbArray_afa905906159157375f73a06a64801ac0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a4948fc00ee26098b191968c461a7412c}\label{classModelNS23817A620S1823_1_1WlbArray_a4948fc00ee26098b191968c461a7412c} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!maxNumWlbsForOneNfil@{maxNumWlbsForOneNfil}}
+\index{maxNumWlbsForOneNfil@{maxNumWlbsForOneNfil}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{maxNumWlbsForOneNfil}{maxNumWlbsForOneNfil}}
+{\footnotesize\ttfamily const int Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::max\+Num\+Wlbs\+For\+One\+Nfil = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальное количество векторов Wlb для одного nfil \Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a5462f0a3c2e0aed3a7b7cbcc45687374}\label{classModelNS23817A620S1823_1_1WlbArray_a5462f0a3c2e0aed3a7b7cbcc45687374} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!wlbCoefs@{wlbCoefs}}
+\index{wlbCoefs@{wlbCoefs}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{wlbCoefs}{wlbCoefs}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::vector$<$uint32\+\_\+t$>$ $>$ $>$ Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::wlb\+Coefs\hspace{0.3cm}{\ttfamily [private]}}
+
+вектора Wlb wlb\+Coefs\mbox{[}nfil\mbox{]}\mbox{[}wlb\+Num\mbox{]}\mbox{[}coefs\mbox{]} \Hypertarget{classModelNS23817A620S1823_1_1WlbArray_a77b5bab038801c2cb92c7c6812f686cd}\label{classModelNS23817A620S1823_1_1WlbArray_a77b5bab038801c2cb92c7c6812f686cd} 
+\index{ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}!wlbConst@{wlbConst}}
+\index{wlbConst@{wlbConst}!ModelNS23817A620S1823::WlbArray@{ModelNS23817A620S1823::WlbArray}}
+\doxysubsubsection{\texorpdfstring{wlbConst}{wlbConst}}
+{\footnotesize\ttfamily const float Model\+NS23817\+A620\+S1823\+::\+Wlb\+Array\+::wlb\+Const = 65535.\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+максимальное значение коэффициента фильтра нижних частот 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{wlbArray_8h}{wlb\+Array.\+h}}\item 
+src/\mbox{\hyperlink{wlbArray_8cpp}{wlb\+Array.\+cpp}}\end{DoxyCompactItemize}

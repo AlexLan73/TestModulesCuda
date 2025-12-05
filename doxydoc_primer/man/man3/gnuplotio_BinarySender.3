@@ -1,0 +1,34 @@
+.TH "gnuplotio::BinarySender< T, Enable >" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gnuplotio::BinarySender< T, Enable >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gnuplot\-iostream\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGNUPLOT_STATIC_ASSERT_MSG\fP ((sizeof(T)==0), 'BinarySender class not specialized for this type')"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBsend\fP (std::ostream &stream, const T &v)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T , typename Enable  = void> \fBgnuplotio::BinarySender\fP< T, Enable >::GNUPLOT_STATIC_ASSERT_MSG ((sizeof(T)==0), 'BinarySender< T, Enable > class not specialized for this type')"
+
+.SS "template<typename T , typename Enable  = void> static void \fBgnuplotio::BinarySender\fP< T, Enable >::send (std::ostream & stream, const T & v)\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

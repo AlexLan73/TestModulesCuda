@@ -1,0 +1,602 @@
+.TH "ModelNS23817A620S1823::Cell412_06" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Cell412_06
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c412_06\&.h>\fP
+.PP
+Inherits \fBModelNS23817A620S1823::VirtualCell412_06\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell412_06\fP (const \fBControlMsg\fP &cmsg, int32_t currCrateNum, int32_t currCellNum)"
+.br
+.ti -1c
+.RI "void \fBgetResults\fP (\fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBsaveAdaptiveVectors\fP (std::complex< int32_t > adaptiveVect[][\fBSharedConst::maxChannelsSM\fP])"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBModelNS23817A620S1823::VirtualCell412_06\fP
+.in +1c
+.ti -1c
+.RI "virtual \fB~VirtualCell412_06\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBgenHeterodyne\fP (const \fBCMsgModelTypes::StationParams\fP *\fBstationParams\fP, const \fBCMsgSharedTypes::ImitStrobe\fP *\fBstrb\fP, uint32_t chanNum, std::complex< int32_t > \fBheterodyne\fP[])"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell412_06\fP ()"
+.br
+.ti -1c
+.RI "void \fBfromAdcToPftp1Channel\fP (int chNum, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "uint32_t \fBpftp\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBpftpFinalization\fP (const int32_t wlb[], uint32_t steps, uint32_t stepWidth, uint32_t winWidth, int32_t wlbNorm, uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBcollectData4SignalAdaptation\fP (uint32_t samples, \fBC412_06Result\fP *result, uint32_t chanNum) const"
+.br
+.ti -1c
+.RI "void \fBcollectData4CoordAdaptation\fP (\fBC412_06Result\fP *result, uint32_t chanNum) const"
+.br
+.ti -1c
+.RI "void \fBpsp\fP (uint32_t chanNum, uint32_t samplesNum, std::complex< int32_t > channelData[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.ti -1c
+.RI "void \fBpspOfOneRay\fP (uint32_t chanNum, uint32_t samplesNum, uint32_t rayNum, std::complex< int32_t > channelData[][\fBSharedConst::maxSamplesInRay\fP], const \fBAdaptiveSpatProcVect::OneStrobeVectors\fP *aVect, uint32_t chInPolar)"
+.br
+.ti -1c
+.RI "void \fBrmAdaptiveVectors\fP (uint32_t chInPolar)"
+.br
+.ti -1c
+.RI "void \fBhilbertTransform\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBdigitalPhaseDetector\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBquadratureComponentForm\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBmoveDataAccording2ZDelays\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBsavePspSlice\fP (uint32_t samples, std::complex< int32_t > channelData[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.ti -1c
+.RI "void \fBclearResultBuf\fP (\fBC412_06Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBpostPftpChanSumming\fP (uint32_t ch, uint32_t samples, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBpostChanSumProcessing\fP (uint32_t samples, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBformCalibrLIMMSourceData\fP (\fBC412_06Result\fP *result, uint32_t samplesNum, uint32_t ch) const"
+.br
+.ti -1c
+.RI "void \fBdumpAdcSlice\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBdumpQuadrCompFormSlice\fP (uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBdumpPftpSlice\fP (uint32_t chanNum, uint32_t samplesNum)"
+.br
+.ti -1c
+.RI "void \fBdumpPspSlice\fP (\fBC412_06Result\fP *result, uint32_t samplesNum)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcGlobalChanIndex\fP (uint32_t chanNum) const"
+.br
+.ti -1c
+.RI "void \fBinitSliceFiles\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisAntennaDividedByMaxPieces\fP () const"
+.br
+.ti -1c
+.RI "void \fBdftOfPspData\fP (uint32_t chanNum, uint32_t dataLength, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBdftOf223CellData\fP (uint32_t dataLength, \fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBdumpAdaptiveVectors\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitSliceFile\fP (\fBSliceFile\fP *sFile)"
+.br
+.ti -1c
+.RI "void \fBadcPftpPart\fP (\fBC412_06Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBadjustAdcStrbToProcStrb\fP (int chNum)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBcrateNum\fP"
+.br
+.ti -1c
+.RI "int32_t \fBcellNum\fP"
+.br
+.ti -1c
+.RI "const \fBControlMsg\fP \fBcontrolMsg\fP"
+.br
+.ti -1c
+.RI "int32_t \fBadcChannelSamples\fP [\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::discretesInTact\fP]"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBheterodyne\fP [\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::discretesInTact\fP]"
+.br
+.ti -1c
+.RI "\fBCell412_06ADCImit\fP \fBadcImit\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint64_t \fBinterfSpectrumNorms\fP [\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::maxRays\fP][\fBSharedConst::maxFragmKgrs\fP]"
+.br
+.ti -1c
+.RI "std::vector< std::vector< std::vector< std::complex< int32_t > > > > \fBpspData\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitStrobe\fP * \fBstrb\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgModelTypes::StationParams\fP * \fBstationParams\fP"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBadcSlice\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBquadrCompFormSlice\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBpftpSlice\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBpspSlice\fP"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBadaptiveVectorFile\fP"
+.br
+.ti -1c
+.RI "\fBAdaptiveSpatProcVect\fP \fBadaptiveSpatProcVect\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBpostPftpChLength\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс имитации ячейки расчёта каналов 412-06 (232-СМ)\&. Работа в многопоточном режиме управляется стандартными переменными окружения OpenMP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Cell412_06::Cell412_06 (const \fBControlMsg\fP & cmsg, int32_t currCrateNum, int32_t currCellNum)\fC [explicit]\fP"
+Конструктор объекта класса\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrCrateNum\fP номер крейта 
+.br
+\fIcurrCellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "ModelNS23817A620S1823::Cell412_06::Cell412_06 ()\fC [private]\fP"
+Конструктор по умолчанию, не используется\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Cell412_06::adcPftpPart (\fBC412_06Result\fP * result)\fC [private]\fP"
+Вычисление этапов от АЦП до ПЧВО по количеству каналов в ячейке нижнего уровня (412-06, 223, 435) с распараллеливанием\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::adjustAdcStrbToProcStrb (int chNum)\fC [private]\fP"
+Расположение данных имитационного строба в приёмном стробе (стробе обработки) для заданного канала ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchNum\fP номер обсчитываемого канала 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06::calcGlobalChanIndex (uint32_t chanNum) const\fC [private]\fP"
+Расчёт по заданному номеру канала в ячейке сквозного номера канала в поляризации, используется в выдаче первых четырёх срезов наверх\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+сквозной номера канала в поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::clearResultBuf (\fBC412_06Result\fP * result) const\fC [private]\fP"
+Очистка буфера выходных данных\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::collectData4CoordAdaptation (\fBC412_06Result\fP * result, uint32_t chanNum) const\fC [private]\fP"
+Сбор данных (вектора ПО и вектора ПАП) указанного незамаскированного канала ячейки в общий для ячейки массив данных для координатной адаптации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.br
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::collectData4SignalAdaptation (uint32_t samples, \fBC412_06Result\fP * result, uint32_t chanNum) const\fC [private]\fP"
+Сбор данных (вектора ПО и выборки после ПЧВО) указанного незамаскированного канала ячейки в общий для ячейки массив данных для сигнальной адаптации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsamples\fP количество выборок 
+.br
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.br
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::dftOf223CellData (uint32_t dataLength, \fBC412_06Result\fP * result)\fC [private]\fP"
+Дискретное преобразование Фурье для данных на выходе 223й ячейки при максимальном фрагментировании полотна в целевом и помеховом режиме\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataLength\fP длина входных данных 
+.br
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::dftOfPspData (uint32_t chanNum, uint32_t dataLength, \fBC412_06Result\fP * result)\fC [private]\fP"
+Дискретное преобразование Фурье для данных после ППО при фрагментировании полотна в целевом и помеховом режиме\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.br
+\fIdataLength\fP длина входных данных 
+.br
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::digitalPhaseDetector (uint32_t chanNum)\fC [private]\fP"
+Цифровой фазовый детектор для выхода АЦП\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке
+.RE
+.PP
+Фильтр Re(i) = Сумм[m = от 0 до 3]{ Re(i+m)*K[m]}, т\&.е\&. окно=4, шаг=1, где К - окно Кайзера на 4 элемента\&. Im(i) аналогично\&. Тут 2я контрольная точка\&. 
+.SS "void ModelNS23817A620S1823::Cell412_06::dumpAdaptiveVectors ()\fC [private]\fP"
+Сохранение рассчитанных адаптивных векторов в файл\&. 
+.SS "void ModelNS23817A620S1823::Cell412_06::dumpAdcSlice (uint32_t chanNum)\fC [private]\fP"
+Сохранение среза АЦП в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::dumpPftpSlice (uint32_t chanNum, uint32_t samplesNum)\fC [private]\fP"
+Сохранение среза ПЧВО в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.br
+\fIsamplesNum\fP количество выборок 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::dumpPspSlice (\fBC412_06Result\fP * result, uint32_t samplesNum)\fC [private]\fP"
+Сохранение среза ППО (целевой/помеховый режимы) в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.br
+\fIsamplesNum\fP количество выборок 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::dumpQuadrCompFormSlice (uint32_t chanNum)\fC [private]\fP"
+Сохранение среза компонента квадратурного формирования в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::formCalibrLIMMSourceData (\fBC412_06Result\fP * result, uint32_t samplesNum, uint32_t ch) const\fC [private]\fP"
+Формирование исходных данных для расчёта калибровочных коэффициентов или коэффициентов РИУШ одной ячейки 412 (223)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.br
+\fIsamplesNum\fP количество выборок 
+.br
+\fIch\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::fromAdcToPftp1Channel (int chNum, \fBC412_06Result\fP * result)\fC [private]\fP"
+Обсчёт данных от имитации АЦП до ПЧВО для одного канала\&. Эта связка алгоритмов обособлена для выполнения в отдельной для каждого канала ячейки нити\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchNum\fP номер канала, который будет обсчитываться 
+.br
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::genHeterodyne (const \fBCMsgModelTypes::StationParams\fP * stationParams, const \fBCMsgSharedTypes::ImitStrobe\fP * strb, uint32_t chanNum, std::complex< int32_t > heterodyne[])\fC [static]\fP"
+Генерация гетеродина для ПЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::getResults (\fBC412_06Result\fP * result)\fC [virtual]\fP"
+Основная функция 412й/223й/435й ячейки\&. Рассчитывает данные текущего строба, затем проводит по ним ПЧВО и ППО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.PP
+Implements \fBModelNS23817A620S1823::VirtualCell412_06\fP\&.
+.SS "void ModelNS23817A620S1823::Cell412_06::hilbertTransform (uint32_t chanNum)\fC [private]\fP"
+Преобразование Гилберта для выхода АЦП\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке
+.RE
+.PP
+Выход АЦП перед домножением на гетеродин переводится в комплексный вид путём передвижения по массиву окна из трёх элементов с шагом 1, из которого получаются Re = средний элемент, Im = разность третьего и первого элементов Тут 2я контрольная точка 
+.SS "void ModelNS23817A620S1823::Cell412_06::initSliceFile (\fBSliceFile\fP * sFile)\fC [private]\fP"
+Инициализация заданного лог-файла среза\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsFile\fP указатель на объект класса информации о файле среза 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::initSliceFiles ()\fC [private]\fP"
+Инициализация объектов файлов срезов начальными значениями для дальнейшего формирования правильных имён файлов\&. 
+.SS "bool ModelNS23817A620S1823::Cell412_06::isAntennaDividedByMaxPieces () const\fC [private]\fP"
+Проверка на максимальное дробление решётки\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true если антенное полотно разделено на максимальное количество фрагментов\&. Актуально только для Воронеж-М, т\&.к\&. в Воронеж-СМ фрагменты начинаются в 234-01 ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::moveDataAccording2ZDelays (uint32_t chanNum)\fC [private]\fP"
+Сдвиг данных канала (chanNum) на величину задержки в этом канале вправо, т\&.е\&. вперёд по времени\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке
+.RE
+.PP
+Данные в начале строба, размером с задержку выборок, нулятся\&. 
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06::pftp (uint32_t chanNum)\fC [private]\fP"
+Preliminary time-frequency processing - ПЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество полученных выборок в массиве heterodyne 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::pftpFinalization (const int32_t wlb[], uint32_t steps, uint32_t stepWidth, uint32_t winWidth, int32_t wlbNorm, uint32_t chanNum)\fC [private]\fP"
+Завершающая часть ПЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwlb\fP указатель на массив коэффициентов фильтра нижних частот 
+.br
+\fIsteps\fP количество шагов (выборок после ПЧВО) 
+.br
+\fIstepWidth\fP ширина шага 
+.br
+\fIwinWidth\fP ширина окна 
+.br
+\fIwlbNorm\fP норма фильтра нижних частот 
+.br
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::postChanSumProcessing (uint32_t samples, \fBC412_06Result\fP * result)\fC [private]\fP"
+Спектральная обработка сумм каналов в разных режимах\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsamples\fP количество выборок 
+.br
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::postPftpChanSumming (uint32_t ch, uint32_t samples, \fBC412_06Result\fP * result)\fC [private]\fP"
+Суммирование каналов после ПЧВО в совокупности с ППО, там, где это нужно\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIch\fP номер канала в текущей ячейке 
+.br
+\fIsamples\fP количество выборок 
+.br
+\fIresult\fP указатель на объект для результирующих данных 412й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::psp (uint32_t chanNum, uint32_t samplesNum, std::complex< int32_t > channelData[][SharedConst::maxSamplesInRay])\fC [private]\fP"
+Pre-spatial processing\&. Расчёт коэффициентов предварительной пространственной обработки (ППО) для заданного канала (chanNum) и длиной данных после ПЧВО равной samples\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.br
+\fIsamplesNum\fP количество выборок 
+.br
+\fIchannelData\fP указатель на массив результирующих данных ППО
+.RE
+.PP
+ППО для метровой станции для СМ - диаграммообразование и временная обработка она же первая ступень цифрового диаграммообразования п2\&.5\&. 
+.SS "void ModelNS23817A620S1823::Cell412_06::pspOfOneRay (uint32_t chanNum, uint32_t samplesNum, uint32_t rayNum, std::complex< int32_t > channelData[][SharedConst::maxSamplesInRay], const \fBAdaptiveSpatProcVect::OneStrobeVectors\fP * aVect, uint32_t chInPolar)\fC [private]\fP"
+ППО в заданном луче\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.br
+\fIsamplesNum\fP количество выборок 
+.br
+\fIrayNum\fP номер луча 
+.br
+\fIchannelData\fP указатель на массив результирующих данных ППО 
+.br
+\fIaVect\fP указатель на объект адаптивных векторов для текущего строба 
+.br
+\fIchInPolar\fP номер канала в поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::quadratureComponentForm (uint32_t chanNum)\fC [private]\fP"
+Формирование квадратурных составляющих заданным в УС (поле quadrCompFormType) способом\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в текущей ячейке 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::rmAdaptiveVectors (uint32_t chInPolar)\fC [private]\fP"
+Удаление использованного адаптивного вектора если заданный канал последний в последней поляризации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchInPolar\fP номер канала в поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell412_06::saveAdaptiveVectors (std::complex< int32_t > adaptiveVect[][SharedConst::maxChannelsSM])\fC [virtual]\fP"
+Сохранение адаптивных векторов из массива adaptiveVect в объекте класса адаптивных векторов пространственной обработки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadaptiveVect\fP указатель на массив адаптивных векторов ПО по всем каналам 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBModelNS23817A620S1823::VirtualCell412_06\fP\&.
+.SS "void ModelNS23817A620S1823::Cell412_06::savePspSlice (uint32_t samples, std::complex< int32_t > channelData[][SharedConst::maxSamplesInRay])\fC [private]\fP"
+Сохранение пятого среза (после ППО) в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsamples\fP количество выборок 
+.br
+\fIchannelData\fP указатель на массив результирующих данных ППО 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAdaptiveSpatProcVect\fP ModelNS23817A620S1823::Cell412_06::adaptiveSpatProcVect\fC [private]\fP"
+вектора ПО, рассчитанные при адаптации 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell412_06::adaptiveVectorFile\fC [private]\fP"
+объект файла адаптивных векторов 
+.SS "int32_t ModelNS23817A620S1823::Cell412_06::adcChannelSamples[\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::discretesInTact\fP]\fC [private]\fP"
+массив для хранения выборок каждого канала ячейки 412-06 имитатора выхода АЦП 
+.SS "\fBCell412_06ADCImit\fP ModelNS23817A620S1823::Cell412_06::adcImit[\fBSharedConst::maxChannelsInCellSM\fP]\fC [private]\fP"
+объект имитатора выхода АЦП для каждого канала ячейки 412-06 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell412_06::adcSlice[\fBSharedConst::maxChannelsInCellSM\fP]\fC [private]\fP"
+объект файла среза АЦП 
+.SS "int32_t ModelNS23817A620S1823::Cell412_06::cellNum\fC [private]\fP"
+текущий номер ячейки 
+.SS "const \fBControlMsg\fP ModelNS23817A620S1823::Cell412_06::controlMsg\fC [private]\fP"
+сообщение с параметрами управления ячейкой 
+.SS "int32_t ModelNS23817A620S1823::Cell412_06::crateNum\fC [private]\fP"
+текущий номер крейта 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::Cell412_06::heterodyne[\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::discretesInTact\fP]\fC [private]\fP"
+массив для хранения гетеродина для каждого канала ячейки 412-06 АХТУНГ! По ходу работы этот массив переписывается результатами ПЧВО\&. 
+.SS "uint64_t ModelNS23817A620S1823::Cell412_06::interfSpectrumNorms[\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::maxRays\fP][\fBSharedConst::maxFragmKgrs\fP]\fC [private]\fP"
+усреднённые на длительности приёмного строба значения квадрата модуля спектра помех в заданной полосе анализа и с заданным разрешением по частоте 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell412_06::pftpSlice[\fBSharedConst::maxChannelsInCellSM\fP]\fC [private]\fP"
+объект файла среза ПЧВО 
+.SS "uint32_t ModelNS23817A620S1823::Cell412_06::postPftpChLength[\fBSharedConst::maxChannelsInCellSM\fP]\fC [private]\fP"
+массив длин данных в каждом канале после ПЧВО 
+.SS "std::vector<std::vector<std::vector<std::complex<int32_t> > > > ModelNS23817A620S1823::Cell412_06::pspData\fC [private]\fP"
+массив для хранения векторов ПО по каждому каналу, используется для БПФ/ДПФ для помехового режима при разбиении полотна на фрагменты [фрагменты(тут каналы)][лучи][выборки] 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell412_06::pspSlice\fC [private]\fP"
+объект файла среза ППО 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell412_06::quadrCompFormSlice[\fBSharedConst::maxChannelsInCellSM\fP]\fC [private]\fP"
+объект файла среза компонента квадратурной обработки 
+.SS "const \fBCMsgModelTypes::StationParams\fP* ModelNS23817A620S1823::Cell412_06::stationParams\fC [private]\fP"
+указатель на параметры станции управляющего сообщения 
+.SS "const \fBCMsgSharedTypes::ImitStrobe\fP* ModelNS23817A620S1823::Cell412_06::strb\fC [private]\fP"
+указатель на параметры строба управляющего сообщения 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

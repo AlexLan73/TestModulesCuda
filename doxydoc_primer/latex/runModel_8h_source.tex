@@ -1,0 +1,47 @@
+\doxysection{run\+Model.\+h}
+\hypertarget{runModel_8h_source}{}\label{runModel_8h_source}\index{src/runModel.h@{src/runModel.h}}
+\mbox{\hyperlink{runModel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ runModel.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Nov\ 25,\ 2019}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ vmg}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_MODEL\_RUNMODEL\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_MODEL\_RUNMODEL\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <libvork/e2trpr.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <libvork/e2trims.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <libvork/e2mask.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <libvork/e2trkp.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <libvork/e2ippa.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputBundle_8h}{inputBundle.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }libutils::Result;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }std::experimental::optional;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{runModel_8h_aeac29ccc9826d6d89801038cb315c783}{Exists}}(std::string\ path);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ Result<ModelInputBundle>}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{runModel_8h_a3eb9a1bc30f77730680e63df274929f4}{LoadInputMessages}}(\textcolor{keyword}{const}\ optional<std::string>\&\ fcDirPath);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structResourceUsage}{ResourceUsage}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ ulong\ \mbox{\hyperlink{structResourceUsage_a77d7d9f3efe0b4a39dd831c6c168a67a}{realTime}};\ \textcolor{comment}{//\ мс}}
+\DoxyCodeLine{00029\ \ \ \ \ ulong\ \mbox{\hyperlink{structResourceUsage_abb8763554ac87810202f5c1ea972f9a5}{sysTime}};\ \textcolor{comment}{//\ мс}}
+\DoxyCodeLine{00030\ \ \ \ \ ulong\ \mbox{\hyperlink{structResourceUsage_a13c6409c3ad37e00b0b7cf503c24d765}{userTime}};\ \textcolor{comment}{//\ мс}}
+\DoxyCodeLine{00031\ \ \ \ \ ulong\ \mbox{\hyperlink{structResourceUsage_a01aa83ce9c736dbf78e01e324f8c88f0}{maxRss}};\ \textcolor{comment}{//\ Кбайт}}
+\DoxyCodeLine{00032\ \ \ \ \ ulong\ \mbox{\hyperlink{structResourceUsage_a5d3727e3a660ad443c6b519864560fb1}{majFaults}};}
+\DoxyCodeLine{00033\ \ \ \ \ ulong\ \mbox{\hyperlink{structResourceUsage_a1d9a87a66ef5efce772dccd66d4d514b}{minFaults}};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ Result<ModelOutput>}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{runModel_8h_ab609332a9e2b380c47fdc9f3a53132c8}{RunModel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelInputBundle}{ModelInputBundle}}\&\ in,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ optional<std::string>\ outDirPath,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ *\mbox{\hyperlink{runModel_8cpp_a143332c5a40204465fa2e750dc305d18}{stopFlag}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_MODEL\_RUNMODEL\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

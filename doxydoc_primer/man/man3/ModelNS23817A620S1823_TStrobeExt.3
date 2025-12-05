@@ -1,0 +1,118 @@
+.TH "ModelNS23817A620S1823::TStrobeExt" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::TStrobeExt
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <b232\&.h>\fP
+.PP
+Inherits TStrobe\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBThresholdTypes\fP { \fBABSOLUTE\fP = 1 << 0, \fBRELATIVE\fP = 1 << 1, \fBFLOATING\fP = 1 << 2, \fBTHRESHOLD_MASK\fP = (ABSOLUTE | RELATIVE | FLOATING) }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTStrobeExt\fP (const TStrobe &)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint \fBrays\fP"
+.br
+.ti -1c
+.RI "uint \fBtype\fP"
+.br
+.ti -1c
+.RI "bool \fBformEvalPerm\fP"
+.br
+.ti -1c
+.RI "uint \fBimpulsesNumber\fP"
+.br
+.ti -1c
+.RI "uint \fBthWinSzR\fP"
+.br
+.ti -1c
+.RI "uint \fBthWinSzV\fP"
+.br
+.ti -1c
+.RI "bool \fBsearchLocalMax\fP"
+.br
+.ti -1c
+.RI "uint \fBfloatThresMult\fP"
+.br
+.ti -1c
+.RI "uint \fBrelFixThresMult\fP"
+.br
+.ti -1c
+.RI "uint \fBabsThreshold\fP"
+.br
+.ti -1c
+.RI "uint \fBsamplesInRay\fP"
+.br
+.ti -1c
+.RI "uint \fBpolarsCombiningWay\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Это подмножество данных \fBCMsgSharedTypes::ImitStrobe\fP, используемое в ПЛО\&. Всё это вынесено в отдельную структуру (а константы типа порога вообще продублированы) для того, чтобы ПЛО было полностью отвязано от модели и легко встраивалось в код ФПО\&. Возможно, это окажется временным решением\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBModelNS23817A620S1823::TStrobeExt::ThresholdTypes\fP"
+Биты порогов для ПЛО\&. В ФУ строба может быть указана любая их комбинация\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIABSOLUTE \fP\fP
+.TP
+\fB\fIRELATIVE \fP\fP
+.TP
+\fB\fIFLOATING \fP\fP
+.TP
+\fB\fITHRESHOLD_MASK \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::TStrobeExt::TStrobeExt (const TStrobe & s)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint ModelNS23817A620S1823::TStrobeExt::absThreshold"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::floatThresMult"
+
+.SS "bool ModelNS23817A620S1823::TStrobeExt::formEvalPerm"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::impulsesNumber"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::polarsCombiningWay"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::rays"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::relFixThresMult"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::samplesInRay"
+
+.SS "bool ModelNS23817A620S1823::TStrobeExt::searchLocalMax"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::thWinSzR"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::thWinSzV"
+
+.SS "uint ModelNS23817A620S1823::TStrobeExt::type"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

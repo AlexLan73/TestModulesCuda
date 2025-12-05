@@ -1,0 +1,212 @@
+.TH "c223_target_strobe" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+c223_target_strobe \- Целевой строб ФУ 223-й ячейки\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <223fc\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBc223_target_strobe\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBstrobe_begin\fP"
+.br
+.RI "Начало строба в дискретах\&. "
+.ti -1c
+.RI "uint32_t \fBstrobe_length\fP"
+.br
+.RI "Длина строба в дискретах\&. "
+.ti -1c
+.RI "uint16_t \fBn_dec\fP"
+.br
+.RI "Коэффициент прореживания в ПЧВО\&. "
+.ti -1c
+.RI "uint16_t \fBnorm\fP"
+.br
+.RI "Коэффициент нормировки\&. "
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBreg\fP"
+.br
+.RI "Признак регистрации сигнала по всем срезам тракта обработки\&. "
+.ti -1c
+.RI "uint8_t \fBk\fP"
+.br
+.RI "Коэффициент коммутации данных АЦП/Имитатор на вход гетеродина\&. "
+.ti -1c
+.RI "uint8_t \fBn_shift\fP"
+.br
+.RI "Число сдвигов вправо для нормировки калибровок\&. "
+.ti -1c
+.RI "uint8_t \fBasp_mode\fP"
+.br
+.RI "Подрежим обработки строба\&. "
+.ti -1c
+.RI "uint8_t \fBtippc_nl\fP"
+.br
+.RI "Количество лучей\&. "
+.ti -1c
+.RI "uint8_t \fBtips_n\fP"
+.br
+.RI "Тип строба "
+.ti -1c
+.RI "uint8_t \fBnfft\fP"
+.br
+.RI "Степень размерности БПФ\&. "
+.ti -1c
+.RI "uint8_t \fBadd_nl\fP"
+.br
+.RI "Количество лучей автокомпенсации\&. "
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP [2]"
+.br
+.ti -1c
+.RI "uint8_t \fBdelay\fP [\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Компенсация задержки в каналах ПЧВО в тактах для каждого канала\&. "
+.ti -1c
+.RI "uint32_t \fBcfd_dds_step\fP [\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Шаг DDS для ЦФД для каждого канала\&. "
+.ti -1c
+.RI "uint32_t \fBcfd_dds_phase\fP [\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Фаза DDS для ЦФД для каждого канала\&. "
+.ti -1c
+.RI "uint32_t \fBcfd_dds_deviation\fP"
+.br
+.RI "Девиация для ЦФД\&. "
+.ti -1c
+.RI "uint32_t \fB_reserved2\fP [3]"
+.br
+.ti -1c
+.RI "\fBcomplex32\fP \fBw_po\fP [\fBMAX_NR_BEAMS\fP][\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Диаграммообразующие векторы 1-й ступени фазирования\&. "
+.ti -1c
+.RI "\fBcomplex32\fP \fBw_clb\fP [\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Калибровочные векторы\&. "
+.ti -1c
+.RI "\fBcomplex32\fP \fBw_ob\fP [\fBNR_VECTORS\fP][\fBMAX_NR_CHANNELS\fP]"
+.br
+.RI "Обучающие векторы\&. "
+.ti -1c
+.RI "uint32_t \fB_reserved12\fP [24]"
+.br
+.ti -1c
+.RI "struct cell_412_06_wire_header \fBwirehd\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Целевой строб ФУ 223-й ячейки\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "c223_target_strobe::c223_target_strobe ()\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t c223_target_strobe::_reserved0"
+
+.SS "uint32_t c223_target_strobe::_reserved1[2]"
+
+.SS "uint32_t c223_target_strobe::_reserved12[24]"
+
+.SS "uint32_t c223_target_strobe::_reserved2[3]"
+
+.SS "uint8_t c223_target_strobe::add_nl"
+
+.PP
+Количество лучей автокомпенсации\&. 
+.SS "uint8_t c223_target_strobe::asp_mode"
+
+.PP
+Подрежим обработки строба\&. 
+.SS "uint32_t c223_target_strobe::cfd_dds_deviation"
+
+.PP
+Девиация для ЦФД\&. 
+.SS "uint32_t c223_target_strobe::cfd_dds_phase[\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Фаза DDS для ЦФД для каждого канала\&. 
+.SS "uint32_t c223_target_strobe::cfd_dds_step[\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Шаг DDS для ЦФД для каждого канала\&. 
+.SS "uint8_t c223_target_strobe::delay[\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Компенсация задержки в каналах ПЧВО в тактах для каждого канала\&. 
+.SS "uint8_t c223_target_strobe::k"
+
+.PP
+Коэффициент коммутации данных АЦП/Имитатор на вход гетеродина\&. 
+.SS "uint16_t c223_target_strobe::n_dec"
+
+.PP
+Коэффициент прореживания в ПЧВО\&. 
+.SS "uint8_t c223_target_strobe::n_shift"
+
+.PP
+Число сдвигов вправо для нормировки калибровок\&. 
+.SS "uint8_t c223_target_strobe::nfft"
+
+.PP
+Степень размерности БПФ\&. Диапазон значений: (3\&.\&.10) 
+.SS "uint16_t c223_target_strobe::norm"
+
+.PP
+Коэффициент нормировки\&. 
+.SS "uint8_t c223_target_strobe::reg"
+
+.PP
+Признак регистрации сигнала по всем срезам тракта обработки\&. 
+.SS "uint32_t c223_target_strobe::strobe_begin"
+
+.PP
+Начало строба в дискретах\&. 
+.SS "uint32_t c223_target_strobe::strobe_length"
+
+.PP
+Длина строба в дискретах\&. 
+.SS "uint8_t c223_target_strobe::tippc_nl"
+
+.PP
+Количество лучей\&. Диапазон значений: (1\&.\&.12) 
+.SS "uint8_t c223_target_strobe::tips_n"
+
+.PP
+Тип строба 
+.SS "\fBcomplex32\fP c223_target_strobe::w_clb[\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Калибровочные векторы\&. 
+.SS "\fBcomplex32\fP c223_target_strobe::w_ob[\fBNR_VECTORS\fP][\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Обучающие векторы\&. 
+.SS "\fBcomplex32\fP c223_target_strobe::w_po[\fBMAX_NR_BEAMS\fP][\fBMAX_NR_CHANNELS\fP]"
+
+.PP
+Диаграммообразующие векторы 1-й ступени фазирования\&. 
+.SS "struct cell_412_06_wire_header c223_target_strobe::wirehd"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

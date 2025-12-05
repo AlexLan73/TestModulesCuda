@@ -1,0 +1,126 @@
+.TH "ModelNS23817A620S1823::C412_06Result" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::C412_06Result
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c412_06Result\&.h>\fP
+.PP
+Inherited by \fBModelNS23817A620S1823::C418_02Result\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear412Results\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearInterfSpectrumNorms\fP ()"
+.br
+.ti -1c
+.RI "void \fBdumpInterfSpectrumNorms\fP (\fBSliceFile\fP &sFile, uint32_t length, uint32_t raysNum)"
+.br
+.ti -1c
+.RI "void \fBdumpTargData\fP (\fBSliceFile\fP &sFile, uint32_t raysNum, uint32_t samplesNum)"
+.br
+.ti -1c
+.RI "void \fBclearTargData\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintCalibrLIMMSourceData\fP (\fBSharedConst::StationType\fP stType) const"
+.br
+.ti -1c
+.RI "\fBC412_06Result\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~C412_06Result\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint64_t \fBinterfSpectrumNorms\fP [\fBSharedConst::maxRays\fP *\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxFragmKgrs\fP]"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBtargData\fP [\fBSharedConst::maxRays\fP][\fBSharedConst::maxSamplesInRay\fP]"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBadaptData\fP [\fBSharedConst::maxRays\fP+maxActiveInterferences+\fBSharedConst::sigAdaptExtraRows\fP][\fBSharedConst::maxChannelsInCellSM\fP *\fBSharedConst::maxCellsInCrateSM\fP]"
+.br
+.ti -1c
+.RI "std::complex< double > \fBcalibrLIMMData\fP [\fBSharedConst::maxChannelsSM\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Структура выходной информации ячейки расчёта каналов 412-06/223\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::C412_06Result::C412_06Result ()"
+Конструктор объекта структуры\&. 
+.SS "ModelNS23817A620S1823::C412_06Result::~C412_06Result ()\fC [virtual]\fP"
+Деструктор объекта структуры\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::C412_06Result::clear412Results ()"
+Очистка массивов структуры\&. 
+.SS "void ModelNS23817A620S1823::C412_06Result::clearInterfSpectrumNorms ()"
+Очистка массива норм спектра помех\&. 
+.SS "void ModelNS23817A620S1823::C412_06Result::clearTargData ()"
+Очистка массива данных целевого режима\&. 
+.SS "void ModelNS23817A620S1823::C412_06Result::dumpInterfSpectrumNorms (\fBSliceFile\fP & sFile, uint32_t length, uint32_t raysNum)"
+Сохранение в файл, который описывает sFile, данных массива interfSpectrumNorms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsFile\fP ссылка на объект файла среза 
+.br
+\fIlength\fP длина данных в луче 
+.br
+\fIraysNum\fP количество лучей 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::C412_06Result::dumpTargData (\fBSliceFile\fP & sFile, uint32_t raysNum, uint32_t samplesNum)"
+Сохранение в файл, который описывает sFile, данных массива targData\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsFile\fP ссылка на объект файла среза 
+.br
+\fIraysNum\fP количество лучей 
+.br
+\fIsamplesNum\fP количество выборок в луче 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::C412_06Result::printCalibrLIMMSourceData (\fBSharedConst::StationType\fP stType) const"
+Печать в поток вывода исходных данных для калибровки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstType\fP тип станции 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::C412_06Result::adaptData[\fBSharedConst::maxRays\fP+maxActiveInterferences+\fBSharedConst::sigAdaptExtraRows\fP][\fBSharedConst::maxChannelsInCellSM\fP *\fBSharedConst::maxCellsInCrateSM\fP]"
+данные ячейки[-ек] для адаптации +1 - опытное число, которое может измениться в процессе отладки Каналов больше, чем в одной 412й(223й) ячейке, т\&.к\&. эту же структуру использует для хранения и 418-01я ячейка\&. Данные 412х ячеек тут лежат по порядку нумерации ячеек в крейте\&. Количество каналов в ячейке и ячеек в крейте взято как для сантиметровой станции, т\&.к\&. в ней их больше, чем в метровой и МРИК 
+.SS "std::complex<double> ModelNS23817A620S1823::C412_06Result::calibrLIMMData[\fBSharedConst::maxChannelsSM\fP]"
+результат калибровочного строба или строба РИУШ (LIMM) по каждому каналу поляризации (исходные данные для расчёта калибровочных коэффициентов)
+.PP
+Отсюда берем выдачу 233 ячейки по калибровочному стробу 
+.SS "uint64_t ModelNS23817A620S1823::C412_06Result::interfSpectrumNorms[\fBSharedConst::maxRays\fP *\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxFragmKgrs\fP]"
+массив для данных спектров норм фрагменто
+.PP
+Отсюда берем выдачу 233 ячейки по помеховому стробу 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::C412_06Result::targData[\fBSharedConst::maxRays\fP][\fBSharedConst::maxSamplesInRay\fP]"
+массив для данных целевых и помеховых режимов 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

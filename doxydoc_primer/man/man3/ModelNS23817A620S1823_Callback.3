@@ -1,0 +1,495 @@
+.TH "ModelNS23817A620S1823::Callback" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Callback
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <callbacks\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBcallback\fP (\fBCut\fP cut, \fBCutMode\fP mode, unsigned \fBpolar\fP, unsigned idx1, unsigned idx2, const \fBValue\fP &val)=0"
+.br
+.ti -1c
+.RI "virtual \fB~Callback\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBCutMode\fP \fBgetCutMode\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBprintDim3Data2ZStream\fP (std::ostream &s, uint32_t \fBpolar\fP, uint32_t dim1Idx, uint32_t dim2Idx)=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetPolarsNum\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetDim1Size\fP (uint32_t \fBpolar\fP)=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetDim2Size\fP (uint32_t \fBpolar\fP, uint32_t dim1Idx)=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetDim3Size\fP (uint32_t \fBpolar\fP, uint32_t dim1Idx, uint32_t dim2Idx)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisDataTransferComplete\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetDataTransferStatus\fP (bool status)=0"
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetGeneralCutParams\fP (uint64_t inpStrokeNum, uint32_t inpStrbID, uint32_t inpStrbType, int32_t inp1HypR, int32_t inp1HypV)=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetStrokeNum\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetStrbID\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetStrbType\fP ()=0"
+.br
+.ti -1c
+.RI "virtual int32_t \fBget1HypR\fP ()=0"
+.br
+.ti -1c
+.RI "virtual int32_t \fBget1HypV\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBcallback\fP (\fBCut\fP cut, \fBCutMode\fP mode, unsigned \fBpolar\fP, unsigned idx1, unsigned idx2, const \fBValue\fP &val)=0"
+.br
+.ti -1c
+.RI "virtual \fB~Callback\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBCutMode\fP \fBgetCutMode\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBprintDim3Data2ZStream\fP (std::ostream &s, uint32_t \fBpolar\fP, uint32_t dim1Idx, uint32_t dim2Idx)=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetPolarsNum\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetDim1Size\fP (uint32_t \fBpolar\fP)=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetDim2Size\fP (uint32_t \fBpolar\fP, uint32_t dim1Idx)=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetDim3Size\fP (uint32_t \fBpolar\fP, uint32_t dim1Idx, uint32_t dim2Idx)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisDataTransferComplete\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetDataTransferStatus\fP (bool status)=0"
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetGeneralCutParams\fP (uint64_t inpStrokeNum, uint32_t inpStrbID, uint32_t inpStrbType, int32_t inp1HypR, int32_t inp1HypV)=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetStrokeNum\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetStrbID\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetStrbType\fP ()=0"
+.br
+.ti -1c
+.RI "virtual int32_t \fBget1HypR\fP ()=0"
+.br
+.ti -1c
+.RI "virtual int32_t \fBget1HypV\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Базовый класс для объектов, представляющих коллбеки\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual ModelNS23817A620S1823::Callback::~Callback ()\fC [inline]\fP, \fC [virtual]\fP"
+Деструктор объекта класса\&. 
+.SS "virtual ModelNS23817A620S1823::Callback::~Callback ()\fC [inline]\fP, \fC [virtual]\fP"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void ModelNS23817A620S1823::Callback::callback (\fBCut\fP cut, \fBCutMode\fP mode, unsigned polar, unsigned idx1, unsigned idx2, const \fBValue\fP & val)\fC [pure virtual]\fP"
+Занесение одного значения в массив среза, вызывается из модели\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcut\fP тип среза 
+.br
+\fImode\fP режим среза (по сути указание на формат данных) 
+.br
+\fIpolar\fP тип поляризации (0 - вертикальная, 1 - горизонтальная) 
+.br
+\fIidx1\fP индекс первой размерности массива данных (0 если нет) 
+.br
+\fIidx2\fP индекс второй размерности массива данных (0 если нет) 
+.br
+\fIval\fP ссылка на значение очередного элемента третьей размерности 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::callback (\fBCut\fP cut, \fBCutMode\fP mode, unsigned polar, unsigned idx1, unsigned idx2, const \fBValue\fP & val)\fC [pure virtual]\fP"
+Занесение одного значения в массив среза, вызывается из модели\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcut\fP тип среза 
+.br
+\fImode\fP режим среза (по сути указание на формат данных) 
+.br
+\fIpolar\fP тип поляризации (0 - вертикальная, 1 - горизонтальная) 
+.br
+\fIidx1\fP индекс первой размерности массива данных (0 если нет) 
+.br
+\fIidx2\fP индекс второй размерности массива данных (0 если нет) 
+.br
+\fIval\fP ссылка на значение очередного элемента третьей размерности 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::clear ()\fC [pure virtual]\fP"
+Очистка массива данных среза\&. 
+.SS "virtual void ModelNS23817A620S1823::Callback::clear ()\fC [pure virtual]\fP"
+Очистка массива данных среза\&. 
+.SS "virtual int32_t ModelNS23817A620S1823::Callback::get1HypR ()\fC [pure virtual]\fP"
+Возврат номера первой гипотезы по дальности для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер первой гипотезы по дальности 
+.RE
+.PP
+
+.SS "virtual int32_t ModelNS23817A620S1823::Callback::get1HypR ()\fC [pure virtual]\fP"
+Возврат номера первой гипотезы по дальности для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер первой гипотезы по дальности 
+.RE
+.PP
+
+.SS "virtual int32_t ModelNS23817A620S1823::Callback::get1HypV ()\fC [pure virtual]\fP"
+Возврат номера первой гипотезы по скорости для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер первой гипотезы по скорости 
+.RE
+.PP
+
+.SS "virtual int32_t ModelNS23817A620S1823::Callback::get1HypV ()\fC [pure virtual]\fP"
+Возврат номера первой гипотезы по скорости для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер первой гипотезы по скорости 
+.RE
+.PP
+
+.SS "virtual \fBCutMode\fP ModelNS23817A620S1823::Callback::getCutMode ()\fC [pure virtual]\fP"
+Взятие режима работы среза (для понимания, какой формат имеет информация из модели)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+режим работы среза 
+.RE
+.PP
+
+.SS "virtual \fBCutMode\fP ModelNS23817A620S1823::Callback::getCutMode ()\fC [pure virtual]\fP"
+Взятие режима работы среза (для понимания, какой формат имеет информация из модели)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+режим работы среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getDim1Size (uint32_t polar)\fC [pure virtual]\fP"
+Выдача величины первой размерности массива данных среза, т\&.е\&. единицу для 1 среза, количество ячеек (0-47) для 2-6 срезов или лучей для среза ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP номер (тип) поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина первой размерности массива данных среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getDim1Size (uint32_t polar)\fC [pure virtual]\fP"
+Выдача величины первой размерности массива данных среза, т\&.е\&. единицу для 1 среза, количество ячеек (0-47) для 2-6 срезов или лучей для среза ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP номер (тип) поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина первой размерности массива данных среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getDim2Size (uint32_t polar, uint32_t dim1Idx)\fC [pure virtual]\fP"
+Выдача величины второй размерности массива данных среза, т\&.е\&. количество каналов для 1 среза, лучей для 2-6 срезов или дальностей для среза ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP номер (тип) поляризации 
+.br
+\fIdim1Idx\fP величина первой размерности массива данных 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина второй размерности массива данных среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getDim2Size (uint32_t polar, uint32_t dim1Idx)\fC [pure virtual]\fP"
+Выдача величины второй размерности массива данных среза, т\&.е\&. количество каналов для 1 среза, лучей для 2-6 срезов или дальностей для среза ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP номер (тип) поляризации 
+.br
+\fIdim1Idx\fP величина первой размерности массива данных 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина второй размерности массива данных среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getDim3Size (uint32_t polar, uint32_t dim1Idx, uint32_t dim2Idx)\fC [pure virtual]\fP"
+Выдача величины третьей размерности массива данных среза, т\&.е\&. количество выборок для 1-6 срезов или фильтров для среза ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP номер (тип) поляризации 
+.br
+\fIdim1Idx\fP величина первой размерности массива данных 
+.br
+\fIdim2Idx\fP величина второй размерности массива данных 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина третьей размерности массива данных среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getDim3Size (uint32_t polar, uint32_t dim1Idx, uint32_t dim2Idx)\fC [pure virtual]\fP"
+Выдача величины третьей размерности массива данных среза, т\&.е\&. количество выборок для 1-6 срезов или фильтров для среза ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP номер (тип) поляризации 
+.br
+\fIdim1Idx\fP величина первой размерности массива данных 
+.br
+\fIdim2Idx\fP величина второй размерности массива данных 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+величина третьей размерности массива данных среза 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getPolarsNum ()\fC [pure virtual]\fP"
+Выдача количества поляризаций, для которых готовы данные\&. 
+.PP
+\fBReturns\fP
+.RS 4
+количество поляризаций 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getPolarsNum ()\fC [pure virtual]\fP"
+Выдача количества поляризаций, для которых готовы данные\&. 
+.PP
+\fBReturns\fP
+.RS 4
+количество поляризаций 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getStrbID ()\fC [pure virtual]\fP"
+Возврат идентификатора строба для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+идентификатор строба 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getStrbID ()\fC [pure virtual]\fP"
+Возврат идентификатора строба для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+идентификатор строба 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getStrbType ()\fC [pure virtual]\fP"
+Возврат типа строба для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+тип строба 
+.RE
+.PP
+
+.SS "virtual uint32_t ModelNS23817A620S1823::Callback::getStrbType ()\fC [pure virtual]\fP"
+Возврат типа строба для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+тип строба 
+.RE
+.PP
+
+.SS "virtual uint64_t ModelNS23817A620S1823::Callback::getStrokeNum ()\fC [pure virtual]\fP"
+Возврат номера такта для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер такта 
+.RE
+.PP
+
+.SS "virtual uint64_t ModelNS23817A620S1823::Callback::getStrokeNum ()\fC [pure virtual]\fP"
+Возврат номера такта для данного среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер такта 
+.RE
+.PP
+
+.SS "virtual bool ModelNS23817A620S1823::Callback::isDataTransferComplete ()\fC [pure virtual]\fP"
+Выдача состояния передачи данных среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true если передача данных завершена, false в противном случае 
+.RE
+.PP
+
+.SS "virtual bool ModelNS23817A620S1823::Callback::isDataTransferComplete ()\fC [pure virtual]\fP"
+Выдача состояния передачи данных среза\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true если передача данных завершена, false в противном случае 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::printDim3Data2ZStream (std::ostream & s, uint32_t polar, uint32_t dim1Idx, uint32_t dim2Idx)\fC [pure virtual]\fP"
+Преобразование всех данные вектора третьей размерности из бинарного вида в строковое для формирования XML-файла\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP ссылка на поток, куда будут выводиться данные 
+.br
+\fIpolar\fP номер (тип) поляризации 
+.br
+\fIdim1Idx\fP величина первой размерности массива данных 
+.br
+\fIdim2Idx\fP величина второй размерности массива данных 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::printDim3Data2ZStream (std::ostream & s, uint32_t polar, uint32_t dim1Idx, uint32_t dim2Idx)\fC [pure virtual]\fP"
+Преобразование всех данные вектора третьей размерности из бинарного вида в строковое для формирования XML-файла\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP ссылка на поток, куда будут выводиться данные 
+.br
+\fIpolar\fP номер (тип) поляризации 
+.br
+\fIdim1Idx\fP величина первой размерности массива данных 
+.br
+\fIdim2Idx\fP величина второй размерности массива данных 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::setDataTransferStatus (bool status)\fC [pure virtual]\fP"
+Установка состояния передачи данных среза\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstatus\fP состояние передачи данных среза 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::setDataTransferStatus (bool status)\fC [pure virtual]\fP"
+Установка состояния передачи данных среза\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstatus\fP состояние передачи данных среза 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::setGeneralCutParams (uint64_t inpStrokeNum, uint32_t inpStrbID, uint32_t inpStrbType, int32_t inp1HypR, int32_t inp1HypV)\fC [pure virtual]\fP"
+Установка общих параметров среза: номера такта, идентификатора строба и типа строба, номера первой гипотезы по дальности и скорости\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinpStrokeNum\fP номер такта 
+.br
+\fIinpStrbID\fP идентификатор строба 
+.br
+\fIinpStrbType\fP тип строба 
+.br
+\fIinp1HypR\fP номер первой гипотезы по дальности 
+.br
+\fIinp1HypV\fP номер первой гипотезы по скорости 
+.RE
+.PP
+
+.SS "virtual void ModelNS23817A620S1823::Callback::setGeneralCutParams (uint64_t inpStrokeNum, uint32_t inpStrbID, uint32_t inpStrbType, int32_t inp1HypR, int32_t inp1HypV)\fC [pure virtual]\fP"
+Установка общих параметров среза: номера такта, идентификатора строба и типа строба, номера первой гипотезы по дальности и скорости\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinpStrokeNum\fP номер такта 
+.br
+\fIinpStrbID\fP идентификатор строба 
+.br
+\fIinpStrbType\fP тип строба 
+.br
+\fIinp1HypR\fP номер первой гипотезы по дальности 
+.br
+\fIinp1HypV\fP номер первой гипотезы по скорости 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

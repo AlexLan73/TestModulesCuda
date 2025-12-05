@@ -1,0 +1,646 @@
+.TH "MainWindow" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MainWindow
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mainwin\&.h>\fP
+.PP
+Inherits QMainWindow, and Ui::MainForm\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBonAddTactBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonAddStrbBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonAddObjBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRemoveItemBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBtreeWidgetSelectionChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBtreeWidgetItemDoubleClicked\fP (QTreeWidgetItem *item, int column)"
+.br
+.ti -1c
+.RI "void \fBonWorkOutCurrentBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonWorkOutAllBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonTreeWidgetItemChanged\fP (QTreeWidgetItem *item, int)"
+.br
+.ti -1c
+.RI "void \fBonSaveMsgsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadMsgsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBfctlFromFile2MainForm\fP ()"
+.br
+.ti -1c
+.RI "void \fBonDataToZScheduleBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonExpandCollapseAllBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonTurnOnAllChannelsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonTurnOffAllChannelsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonCalcDirectivityPatternBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonSelectAllSlicesBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonSelectNoOneSliceBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadIppaBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonSaveIppaBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRmIppaAllCoordsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonAddIppaCoordsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRmIppaCoordsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateIppaCounter\fP (const QModelIndex &parent, int start, int end)"
+.br
+.ti -1c
+.RI "void \fBstopDPCalculation\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillTrprKDivCBox\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBonRmAllDfgUVCoordsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonAddDfgUVCoordsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRmDfgUVCoordsBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateDfgUVCounter\fP (const QModelIndex &, int, int)"
+.br
+.ti -1c
+.RI "void \fBonAddFctlFileBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRmFctlFileBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadMaskBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadFirstSliceFileBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadSecondSliceFileBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRm1SliceFileDataBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonRm2SliceFileDataBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonDrawGraphBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadAfrBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBonLoadKlbBtnClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBtrimtsStrbOnOff\fP (int widgetState)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainWindow\fP (\fBGuiApp\fP *\fBapp\fP)"
+.br
+.ti -1c
+.RI "\fB~MainWindow\fP ()"
+.br
+.ti -1c
+.RI "void \fBsayWorkComplete\fP ()"
+.br
+.ti -1c
+.RI "void \fBincreaseImitProgressBar\fP ()"
+.br
+.ti -1c
+.RI "void \fBchangeProgressBarMax\fP (uint32_t maxValue)"
+.br
+.ti -1c
+.RI "void \fBsetWorkTime\fP (int workTimeMs)"
+.br
+.ti -1c
+.RI "void \fBstopWorkOutAllMode\fP ()"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTactSchedElemType\fP { \fBtactElem\fP =0, \fBstrobeElem\fP =1, \fBobjectElem\fP =2, \fBnone\fP =3 }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainWindow\fP ()"
+.br
+.ti -1c
+.RI "\fBTactSchedElemType\fP \fBgetItemType\fP (QTreeWidgetItem *item) const"
+.br
+.ti -1c
+.RI "int \fBgetItemIndex\fP (QTreeWidgetItem *item) const"
+.br
+.ti -1c
+.RI "void \fBgetItemPlacement\fP (\fBTactSchedElemType\fP *elemType, int *tactNum, int *strbNum, int *objNum, QTreeWidgetItem *item)"
+.br
+.ti -1c
+.RI "void \fBchooseTactSheduleTab\fP (\fBTactSchedElemType\fP tab)"
+.br
+.ti -1c
+.RI "void \fBmapScheduleToTheTreeWidget\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplayTactInfo\fP (\fBTactInfo\fP &\fBtact\fP)"
+.br
+.ti -1c
+.RI "void \fBdisplayStrobeInfo\fP (\fBStrobeInfo\fP &strb)"
+.br
+.ti -1c
+.RI "void \fBdisplayTrprStrobeInfo\fP (TStrobe &strb)"
+.br
+.ti -1c
+.RI "void \fBdisplayTrimtsStrobeInfo\fP (ImitStrobe &strb)"
+.br
+.ti -1c
+.RI "void \fBdisplayObjectInfo\fP (const ImitObject &obj)"
+.br
+.ti -1c
+.RI "void \fBdisplayStationParams\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplayDPParams\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcDivisionCoefIndex\fP (uint32_t kdivx, uint32_t kdivy) const"
+.br
+.ti -1c
+.RI "void \fBdataToEditor\fP (QTreeWidgetItem *item)"
+.br
+.ti -1c
+.RI "void \fBstoreTactInfo\fP (\fBTactInfo\fP &\fBtact\fP)"
+.br
+.ti -1c
+.RI "void \fBstoreStrobeInfo\fP (\fBStrobeInfo\fP &strb)"
+.br
+.ti -1c
+.RI "void \fBstoreTrprStrobeInfo\fP (TStrobe &strb)"
+.br
+.ti -1c
+.RI "void \fBstoreTrimtsStrobeInfo\fP (ImitStrobe &strb)"
+.br
+.ti -1c
+.RI "void \fBstoreObjectInfo\fP (ImitObject &obj)"
+.br
+.ti -1c
+.RI "void \fBblockAllRunButtons\fP ()"
+.br
+.ti -1c
+.RI "void \fBunblockAllRunButtons\fP ()"
+.br
+.ti -1c
+.RI "void \fBcollectStationParams\fP ()"
+.br
+.ti -1c
+.RI "bool \fBprepareDPParams\fP ()"
+.br
+.ti -1c
+.RI "void \fBshowMessageBox\fP (const char *text)"
+.br
+.ti -1c
+.RI "bool \fBareDPParamsBad\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSlicesPermissions\fP (bool state)"
+.br
+.ti -1c
+.RI "void \fBdisableAllTactElemsTabs\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitIppaTableView\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitDfgUVTableView\fP ()"
+.br
+.ti -1c
+.RI "void \fBcollectIppaUV\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillSigParams\fP (uint32_t type, PAR_SIGN *sigParams)"
+.br
+.ti -1c
+.RI "void \fBloadListFileContent\fP (QStringList &sList, QString *fileName=0)"
+.br
+.ti -1c
+.RI "void \fBloadSliceDataFile\fP (\fBSliceViewer::FileIndex\fP fileNum)"
+.br
+.ti -1c
+.RI "void \fBsetGraphMaxXY\fP (uint32_t &maxX, uint32_t &maxY)"
+.br
+.ti -1c
+.RI "void \fBshowMeanDispersionMaxValue\fP (\fBSliceViewer\fP &\fBsliceViewer\fP)"
+.br
+.ti -1c
+.RI "void \fBuncheckSignalNoiseButtons\fP ()"
+.br
+.ti -1c
+.RI "void \fBcollectDPParams\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenFileDialog\fP (QString *fName)"
+.br
+.ti -1c
+.RI "void \fBloadIppaFromFile\fP (QString *fName)"
+.br
+.ti -1c
+.RI "void \fBloadMaskFromFile\fP (QString *fName)"
+.br
+.ti -1c
+.RI "int \fBloadTrkpFromFile\fP (QString *fName, \fBE2Trkp\fP *trkp)"
+.br
+.ti -1c
+.RI "void \fBsetDefaultAfrKlb\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBTactInfo\fP > \fBtact\fP"
+.br
+.ti -1c
+.RI "\fBModel::StationParams\fP \fBstationParams\fP"
+.br
+.ti -1c
+.RI "\fBModel::ChannelsMask\fP \fBchMask\fP"
+.br
+.ti -1c
+.RI "bool \fBdpStarted\fP"
+.br
+.ti -1c
+.RI "int \fBdpCounter\fP"
+.br
+.ti -1c
+.RI "\fBDPParams\fP \fBdpParams\fP"
+.br
+.ti -1c
+.RI "QList< \fBIppaUV\fP > \fBippaUVList\fP"
+.br
+.ti -1c
+.RI "QStandardItemModel * \fBippaTableModel\fP"
+.br
+.ti -1c
+.RI "QStandardItemModel * \fBdfgUVTableModel\fP"
+.br
+.ti -1c
+.RI "\fBSignalTable\fP \fBsigTable\fP"
+.br
+.ti -1c
+.RI "bool \fBworkOutAllModeIsRunning\fP"
+.br
+.ti -1c
+.RI "bool \fBworkOutAllFilesModeIsRunning\fP"
+.br
+.ti -1c
+.RI "QStringList \fBfullFnamesList\fP"
+.br
+.ti -1c
+.RI "QSystemTrayIcon * \fBtrayIcon\fP"
+.br
+.ti -1c
+.RI "bool \fBisTreeExpanded\fP"
+.br
+.ti -1c
+.RI "\fBSliceViewer\fP \fBsliceViewer\fP"
+.br
+.ti -1c
+.RI "double \fBmaxSignalValue\fP"
+.br
+.ti -1c
+.RI "\fBGuiApp\fP * \fBapp\fP"
+.br
+.ti -1c
+.RI "\fBConfig\fP \fBconfig\fP"
+.br
+.ti -1c
+.RI "QString \fBippaFileName\fP"
+.br
+.ti -1c
+.RI "QString \fBmaskFileName\fP"
+.br
+.ti -1c
+.RI "QString \fBafrFileName\fP"
+.br
+.ti -1c
+.RI "QString \fBklbFileName\fP"
+.br
+.ti -1c
+.RI "\fBE2Trkp\fP \fBafr\fP"
+.br
+.ti -1c
+.RI "\fBE2Trkp\fP \fBklb\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBMainWindow::TactSchedElemType\fP\fC [private]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fItactElem \fP\fP
+.TP
+\fB\fIstrobeElem \fP\fP
+.TP
+\fB\fIobjectElem \fP\fP
+.TP
+\fB\fInone \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MainWindow::MainWindow (\fBGuiApp\fP * app)\fC [explicit]\fP"
+
+.SS "MainWindow::~MainWindow ()"
+
+.SS "MainWindow::MainWindow ()\fC [inline]\fP, \fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool MainWindow::areDPParamsBad ()\fC [private]\fP"
+
+.SS "void MainWindow::blockAllRunButtons ()\fC [private]\fP"
+
+.SS "uint32_t MainWindow::calcDivisionCoefIndex (uint32_t kdivx, uint32_t kdivy) const\fC [private]\fP"
+
+.SS "void MainWindow::changeProgressBarMax (uint32_t maxValue)"
+
+.SS "void MainWindow::chooseTactSheduleTab (\fBTactSchedElemType\fP tab)\fC [private]\fP"
+
+.SS "void MainWindow::collectDPParams ()\fC [private]\fP"
+
+.SS "void MainWindow::collectIppaUV ()\fC [private]\fP"
+
+.SS "void MainWindow::collectStationParams ()\fC [private]\fP"
+
+.SS "void MainWindow::dataToEditor (QTreeWidgetItem * item)\fC [private]\fP"
+
+.SS "void MainWindow::disableAllTactElemsTabs ()\fC [private]\fP"
+
+.SS "void MainWindow::displayDPParams ()\fC [private]\fP"
+
+.SS "void MainWindow::displayObjectInfo (const ImitObject & obj)\fC [private]\fP"
+
+.SS "void MainWindow::displayStationParams ()\fC [private]\fP"
+
+.SS "void MainWindow::displayStrobeInfo (\fBStrobeInfo\fP & strb)\fC [private]\fP"
+
+.SS "void MainWindow::displayTactInfo (\fBTactInfo\fP & tact)\fC [private]\fP"
+
+.SS "void MainWindow::displayTrimtsStrobeInfo (ImitStrobe & strb)\fC [private]\fP"
+
+.SS "void MainWindow::displayTrprStrobeInfo (TStrobe & strb)\fC [private]\fP"
+
+.SS "void MainWindow::fctlFromFile2MainForm ()\fC [slot]\fP"
+
+.SS "void MainWindow::fillSigParams (uint32_t type, PAR_SIGN * sigParams)\fC [private]\fP"
+
+.SS "void MainWindow::fillTrprKDivCBox (int index)\fC [slot]\fP"
+
+.SS "int MainWindow::getItemIndex (QTreeWidgetItem * item) const\fC [private]\fP"
+
+.SS "void MainWindow::getItemPlacement (\fBTactSchedElemType\fP * elemType, int * tactNum, int * strbNum, int * objNum, QTreeWidgetItem * item)\fC [private]\fP"
+
+.SS "\fBMainWindow::TactSchedElemType\fP MainWindow::getItemType (QTreeWidgetItem * item) const\fC [private]\fP"
+
+.SS "void MainWindow::increaseImitProgressBar ()"
+
+.SS "void MainWindow::initDfgUVTableView ()\fC [private]\fP"
+
+.SS "void MainWindow::initIppaTableView ()\fC [private]\fP"
+
+.SS "void MainWindow::loadIppaFromFile (QString * fName)\fC [private]\fP"
+
+.SS "void MainWindow::loadListFileContent (QStringList & sList, QString * fileName = \fC0\fP)\fC [private]\fP"
+
+.SS "void MainWindow::loadMaskFromFile (QString * fName)\fC [private]\fP"
+
+.SS "void MainWindow::loadSliceDataFile (\fBSliceViewer::FileIndex\fP fileNum)\fC [private]\fP"
+
+.SS "int MainWindow::loadTrkpFromFile (QString * fName, \fBE2Trkp\fP * trkp)\fC [private]\fP"
+
+.SS "void MainWindow::mapScheduleToTheTreeWidget ()\fC [private]\fP"
+
+.SS "void MainWindow::onAddDfgUVCoordsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onAddFctlFileBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onAddIppaCoordsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onAddObjBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onAddStrbBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onAddTactBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onCalcDirectivityPatternBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onDataToZScheduleBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onDrawGraphBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onExpandCollapseAllBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadAfrBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadFirstSliceFileBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadIppaBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadKlbBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadMaskBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadMsgsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onLoadSecondSliceFileBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRemoveItemBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRm1SliceFileDataBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRm2SliceFileDataBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRmAllDfgUVCoordsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRmDfgUVCoordsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRmFctlFileBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRmIppaAllCoordsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onRmIppaCoordsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onSaveIppaBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onSaveMsgsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onSelectAllSlicesBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onSelectNoOneSliceBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onTreeWidgetItemChanged (QTreeWidgetItem * item, int)\fC [slot]\fP"
+
+.SS "void MainWindow::onTurnOffAllChannelsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onTurnOnAllChannelsBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onWorkOutAllBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::onWorkOutCurrentBtnClicked ()\fC [slot]\fP"
+
+.SS "void MainWindow::openFileDialog (QString * fName)\fC [private]\fP"
+
+.SS "bool MainWindow::prepareDPParams ()\fC [private]\fP"
+
+.SS "void MainWindow::sayWorkComplete ()"
+
+.SS "void MainWindow::setDefaultAfrKlb ()\fC [private]\fP"
+
+.SS "void MainWindow::setGraphMaxXY (uint32_t & maxX, uint32_t & maxY)\fC [private]\fP"
+
+.SS "void MainWindow::setSlicesPermissions (bool state)\fC [private]\fP"
+
+.SS "void MainWindow::setWorkTime (int workTimeMs)"
+
+.SS "void MainWindow::showMeanDispersionMaxValue (\fBSliceViewer\fP & sliceViewer)\fC [private]\fP"
+
+.SS "void MainWindow::showMessageBox (const char * text)\fC [private]\fP"
+
+.SS "void MainWindow::stopDPCalculation ()\fC [slot]\fP"
+
+.SS "void MainWindow::stopWorkOutAllMode ()"
+
+.SS "void MainWindow::storeObjectInfo (ImitObject & obj)\fC [private]\fP"
+
+.SS "void MainWindow::storeStrobeInfo (\fBStrobeInfo\fP & strb)\fC [private]\fP"
+
+.SS "void MainWindow::storeTactInfo (\fBTactInfo\fP & tact)\fC [private]\fP"
+
+.SS "void MainWindow::storeTrimtsStrobeInfo (ImitStrobe & strb)\fC [private]\fP"
+
+.SS "void MainWindow::storeTrprStrobeInfo (TStrobe & strb)\fC [private]\fP"
+
+.SS "void MainWindow::treeWidgetItemDoubleClicked (QTreeWidgetItem * item, int column)\fC [slot]\fP"
+
+.SS "void MainWindow::treeWidgetSelectionChanged ()\fC [slot]\fP"
+
+.SS "void MainWindow::trimtsStrbOnOff (int widgetState)\fC [slot]\fP"
+
+.SS "void MainWindow::unblockAllRunButtons ()\fC [private]\fP"
+
+.SS "void MainWindow::uncheckSignalNoiseButtons ()\fC [private]\fP"
+
+.SS "void MainWindow::updateDfgUVCounter (const QModelIndex &, int, int)\fC [slot]\fP"
+
+.SS "void MainWindow::updateIppaCounter (const QModelIndex & parent, int start, int end)\fC [slot]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBE2Trkp\fP MainWindow::afr\fC [private]\fP"
+
+.SS "QString MainWindow::afrFileName\fC [private]\fP"
+
+.SS "\fBGuiApp\fP* MainWindow::app\fC [private]\fP"
+
+.SS "\fBModel::ChannelsMask\fP MainWindow::chMask\fC [private]\fP"
+маска каналов 
+.SS "\fBConfig\fP MainWindow::config\fC [private]\fP"
+
+.SS "QStandardItemModel* MainWindow::dfgUVTableModel\fC [private]\fP"
+модель таблицы координат UV пеленгационных групп (ТРПР) 
+.SS "int MainWindow::dpCounter\fC [private]\fP"
+счётчик итераций диаграммы направленности 
+.SS "\fBDPParams\fP MainWindow::dpParams\fC [private]\fP"
+параметры диаграммы направленности 
+.SS "bool MainWindow::dpStarted\fC [private]\fP"
+флаг начала расчёта диаграммы направленности 
+.SS "QStringList MainWindow::fullFnamesList\fC [private]\fP"
+список полных путей ко всем выбранным файлам управления 
+.SS "QString MainWindow::ippaFileName\fC [private]\fP"
+
+.SS "QStandardItemModel* MainWindow::ippaTableModel\fC [private]\fP"
+модель таблицы координат UV активных помех (ИППА) 
+.SS "QList<\fBIppaUV\fP> MainWindow::ippaUVList\fC [private]\fP"
+список координат активных помех 
+.SS "bool MainWindow::isTreeExpanded\fC [private]\fP"
+флаг развёрнутости элементов списка тактов/стробов/объектов true - всё развернуто false - всё свёрнуто 
+.SS "\fBE2Trkp\fP MainWindow::klb\fC [private]\fP"
+
+.SS "QString MainWindow::klbFileName\fC [private]\fP"
+
+.SS "QString MainWindow::maskFileName\fC [private]\fP"
+
+.SS "double MainWindow::maxSignalValue\fC [private]\fP"
+максимальное значение графика, используется для нахождения отношения сигнал/шум\&. 
+.SS "\fBSignalTable\fP MainWindow::sigTable\fC [private]\fP"
+таблица сигналов, нужна чтобы с формы задавать только номер сигнала, а не все его десять параметров 
+.SS "\fBSliceViewer\fP MainWindow::sliceViewer\fC [private]\fP"
+объект отображения графиков срезов 
+.SS "\fBModel::StationParams\fP MainWindow::stationParams\fC [private]\fP"
+параметры станции 
+.SS "std::vector<\fBTactInfo\fP> MainWindow::tact\fC [private]\fP"
+
+.SS "QSystemTrayIcon* MainWindow::trayIcon\fC [private]\fP"
+иконка в трее для вывода сообщений 
+.SS "bool MainWindow::workOutAllFilesModeIsRunning\fC [private]\fP"
+флаг состояния режима 'запустить все расписания во всех выбранных
+файлах' true - режим запущен false - режим не запущен 
+.SS "bool MainWindow::workOutAllModeIsRunning\fC [private]\fP"
+флаг состояния режима 'запустить все расписания' true - режим запущен false - режим не запущен 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

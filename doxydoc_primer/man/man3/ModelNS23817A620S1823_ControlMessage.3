@@ -1,0 +1,53 @@
+.TH "ModelNS23817A620S1823::ControlMessage" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::ControlMessage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <modelInterface\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBstrbNum\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBpolarNum\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBcell412Num\fP"
+.br
+.ti -1c
+.RI "\fBCMsgSharedTypes::ImitTact\fP \fBtactHeader\fP"
+.br
+.ti -1c
+.RI "\fBCMsgSharedTypes::ImitStrobe\fP \fBstrb\fP"
+.br
+.ti -1c
+.RI "\fBCMsgSharedTypes::ImitObject\fP \fBimitObjects\fP [\fBmaxImitObjects\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Интерфейсная структура данных управляющего сообщения на одну 412ю ячейку 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t ModelNS23817A620S1823::ControlMessage::cell412Num"
+порядковый номер 412й ячейки, для которой сформировано УС 
+.SS "\fBCMsgSharedTypes::ImitObject\fP ModelNS23817A620S1823::ControlMessage::imitObjects[\fBmaxImitObjects\fP]"
+массив параметров объектов для имитации 
+.SS "uint32_t ModelNS23817A620S1823::ControlMessage::polarNum"
+номер поляризации, для которого сформировано УС 
+.SS "\fBCMsgSharedTypes::ImitStrobe\fP ModelNS23817A620S1823::ControlMessage::strb"
+объект строба тактового расписания 
+.SS "uint32_t ModelNS23817A620S1823::ControlMessage::strbNum"
+порядковый номер строба в ТРПР, для которого сформировано УС 
+.SS "\fBCMsgSharedTypes::ImitTact\fP ModelNS23817A620S1823::ControlMessage::tactHeader"
+объект заголовка тактового расписания 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

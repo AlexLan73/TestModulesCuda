@@ -1,0 +1,96 @@
+\doxysection{guiapp.\+h}
+\hypertarget{guiapp_8h_source}{}\label{guiapp_8h_source}\index{src/gui/guiapp.h@{src/gui/guiapp.h}}
+\mbox{\hyperlink{guiapp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GUIAPP\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GUIAPP\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QShortcut>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QTime>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <pthread.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{messages_8h}{messages.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sharedGuiTypes_8h}{sharedGuiTypes.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dpParams_8h}{dpParams.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelInterface_8h}{model/modelInterface.h}}>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../trpr.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../ippa.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model}}\ =\ \mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGuiApp}{GuiApp}}:\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00024\ Q\_OBJECT}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classGuiApp_a322a458f3ebafa24f3de9269875df748}{\string~GuiApp}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_add6658c5bba030da1f1f3ce23f6e1cb8}{sendMessagesAreReady}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QList<IppaUV>\ *ippaUVList,\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_ad7acd13508595896376b1a900440cf2a}{sendStartDPIteration}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},\ \mbox{\hyperlink{structDPParams}{DPParams}}\ *dpParams,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_ac9b667f1a52a84201fd58c5a3b0fc6e5}{sendModelWorkComplete}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a8bf288af754b9ec9cb5f7e3a49286658}{addModelPtid}}(pthread\_t\ ptid);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a16119c8499440459efc5052cc791940c}{getModelInputMessages}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model::ExternalMessages}}\ *extMsgs);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGuiApp_a29fe02958e6cb1aa41a0eaeda9ddbab6}{sendCell412Changed}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a8c1ae7b83d6eafd1d1f81c201748850d}{sendProgressBarMaxChanged}}(uint32\_t\ maxValue);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classGuiApp}{GuiApp}}\ *\mbox{\hyperlink{classGuiApp_acca9d7b7920c5f5e1bb72c4547bba72f}{instance}}();}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a062890a3aa9f92c8035eb0b099158586}{onMessagesAreReady}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QList<IppaUV>\ *ippaUVList,\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a55d720af2b77fc5c10ec794520438280}{onStartDPIteration}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},\ \mbox{\hyperlink{structDPParams}{DPParams}}\ *dpParams,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a6af342ec5e66530049aefdf56b314e7c}{onModelWorkComplete}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a64c9d3066aee868f783b73c26baa156e}{startModelPthreadTermination}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a55e66d6454e5f886e49e52efee851180}{onCell412Changed}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a6b2e10e3e100e6e1deda1c1003936fe5}{onProgressBarMaxChanged}}(\textcolor{keywordtype}{unsigned}\ maxValue);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_ab8d436c61ec667a5f27b5285ebd146a5}{stopCalculations}}();}
+\DoxyCodeLine{00057\ signals:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a6ffba79bd89380513d5c52f29fcfda47}{messagesAreReady}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QList<IppaUV>\ *ippaUVList,\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a9ba81b176c6bed576c8c94151047a745}{startDPIteration}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},\ \mbox{\hyperlink{structDPParams}{DPParams}}\ *dpParams,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a287895d5b8e12ca52f8b2ca0d9fadd03}{modelWorkComplete}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a084d9fe19dcca089a3a550164766bff7}{cell412Changed}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a07942cf315acc561814088b2531af819}{progressBarMaxChanged}}(\textcolor{keywordtype}{unsigned}\ maxValue);}
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}\ *\mbox{\hyperlink{classGuiApp_a8c2b965901f896dae6ba975314415574}{mainWin}};}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr}{Model::Trpr}}\ \mbox{\hyperlink{classGuiApp_abf197152d2c27f38d053b74653a6fd42}{trpr}};}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Ippa}{Model::Ippa}}\ \mbox{\hyperlink{classGuiApp_abedd64ea51f31e0e69ea0338f34e8bc9}{ippa}};}
+\DoxyCodeLine{00073\ \ \ \ \ TrimtsMsg\ \mbox{\hyperlink{classGuiApp_a76d43a8217aa85f91ca7d2b4e9e444b9}{trimts}};}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ \mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},\ \mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}};}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ \mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}};}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ \mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}};}
+\DoxyCodeLine{00077\ \ \ \ \ pthread\_t\ \mbox{\hyperlink{classGuiApp_a66b57e51ecf21d196623a6241eb08bc2}{modelPtid}};}
+\DoxyCodeLine{00078\ \ \ \ \ QTime\ \mbox{\hyperlink{classGuiApp_a41943ff42efd752acbcf14914cb8012f}{workTime}};}
+\DoxyCodeLine{00079\ \ \ \ \ pthread\_mutex\_t\ \mbox{\hyperlink{classGuiApp_afe585beeec57bfa495d1fce99f759d12}{stopMutex}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGuiApp_a197118609642272722aef7cd593d25c8}{stopCalculationsFlag}};}
+\DoxyCodeLine{00085\ \ \ \ \ QShortcut\ *\mbox{\hyperlink{classGuiApp_ac5cba51c38026dc656d3803889f3b610}{shortcut}};}
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a8e6846775b35025894e10d23b9d82af1}{copyMessages}}(\mbox{\hyperlink{structTactInfo}{TactInfo}}\ *tactInfo,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model::StationParams}}\ *\mbox{\hyperlink{classGuiApp_a03973a7a8333d194e150604c839953fa}{stationParams}},}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model::ChannelsMask}}\ *\mbox{\hyperlink{classGuiApp_a7daec9f70b14a9cb916a52c62c906fa2}{chMask}},\ QList<IppaUV>\ *ippaUVList,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_a397554116e60a1b3f5ac027d6d050f91}{afr}},\ \mbox{\hyperlink{structE2Trkp}{E2Trkp}}\ *\mbox{\hyperlink{classGuiApp_afec4229b4deb57cf8d99189a35bd285e}{klb}});}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGuiApp_a162b96488d0403eb849356bbdd567ba2}{fillIppaMsg}}(QList<IppaUV>\ *ippaUVList);}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classGuiApp_a2968b6b2d8c63ec05cccc86e924eb0e7}{GuiApp}}();}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

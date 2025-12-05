@@ -1,0 +1,130 @@
+.TH "src/jsonrpc/cache.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/jsonrpc/cache.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <libvork/e2trpr\&.h>\fP
+.br
+\fC#include <libvork/e2trims\&.h>\fP
+.br
+\fC#include <libvork/e2mask\&.h>\fP
+.br
+\fC#include <libvork/e2ippa\&.h>\fP
+.br
+\fC#include <libutils/optional\&.h>\fP
+.br
+\fC#include <libutils/serdes\&.h>\fP
+.br
+\fC#include 'cache\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBstd::hash< ModelInputBundle >\fP"
+.br
+.ti -1c
+.RI "struct \fBstd::equal_to< ModelInputBundle >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBstd\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCMP\fP(f)   (a1\&.f == a2\&.f)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBoperator==\fP (const ISAP &a1, const ISAP &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const E2IPPA &a1, const E2IPPA &a2)"
+.br
+.ti -1c
+.RI "template<class T > bool \fBcompareTrkp\fP (const EUTRKP &m1, const EUTRKP &m2)"
+.br
+.ti -1c
+.RI "template<> bool \fBcompareTrkp< EUTRKP_M_Rx >\fP (const EUTRKP &m1, const EUTRKP &m2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const EUTRKP &a1, const EUTRKP &a2)"
+.br
+.ti -1c
+.RI "template<class T > bool \fBcompareMask\fP (const EUMASK &m1, const EUMASK &m2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const EUMASK &a1, const EUMASK &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const PAR_SIGN &a1, const PAR_SIGN &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const ImitObject &a1, const ImitObject &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const ImitStrobe &a1, const ImitStrobe &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const TrimtsMsg &a1, const TrimtsMsg &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const TStrobe &a1, const TStrobe &a2)"
+.br
+.ti -1c
+.RI "static bool \fBoperator==\fP (const E2TRPR &a1, const E2TRPR &a2)"
+.br
+.ti -1c
+.RI "template<class T > bool \fBcmpOpt\fP (const optional< T > &a1, const optional< T > &a2)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CMP(f)   (a1\&.f == a2\&.f)"
+
+.SH "Function Documentation"
+.PP 
+.SS "template<class T > bool cmpOpt (const optional< T > & a1, const optional< T > & a2)"
+
+.SS "template<class T > bool compareMask (const EUMASK & m1, const EUMASK & m2)"
+
+.SS "template<class T > bool compareTrkp (const EUTRKP & m1, const EUTRKP & m2)"
+
+.SS "template<> bool \fBcompareTrkp\fP< EUTRKP_M_Rx > (const EUTRKP & m1, const EUTRKP & m2)"
+
+.SS "static bool operator== (const E2IPPA & a1, const E2IPPA & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const E2TRPR & a1, const E2TRPR & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const EUMASK & a1, const EUMASK & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const EUTRKP & a1, const EUTRKP & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const ImitObject & a1, const ImitObject & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const ImitStrobe & a1, const ImitStrobe & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const ISAP & a1, const ISAP & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const PAR_SIGN & a1, const PAR_SIGN & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const TrimtsMsg & a1, const TrimtsMsg & a2)\fC [static]\fP"
+
+.SS "static bool operator== (const TStrobe & a1, const TStrobe & a2)\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

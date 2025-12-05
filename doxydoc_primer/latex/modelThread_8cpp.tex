@@ -1,0 +1,114 @@
+\doxysection{src/gui/model\+Thread.cpp File Reference}
+\hypertarget{modelThread_8cpp}{}\label{modelThread_8cpp}\index{src/gui/modelThread.cpp@{src/gui/modelThread.cpp}}
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$model/model\+Shared\+Const.\+h$>$}\newline
+{\ttfamily \#include $<$model/model\+Interface.\+h$>$}\newline
+{\ttfamily \#include "{}guiapp.\+h"{}}\newline
+{\ttfamily \#include "{}model\+Thread.\+h"{}}\newline
+{\ttfamily \#include "{}progress\+Callback.\+h"{}}\newline
+{\ttfamily \#include "{}callbacks.\+h"{}}\newline
+Include dependency graph for model\+Thread.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelThread_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{modelThread_8cpp_af9f394318ed7bcf635a2f79c917fb868}{input\+Msgs\+Correction}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+::\+External\+Messages}} \texorpdfstring{$\ast$}{*})
+\item 
+static void \mbox{\hyperlink{modelThread_8cpp_a21af06c7299f65752236cbf0ef930359}{calc\+Cells412\+Num}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+::\+External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs)
+\item 
+static int32\+\_\+t \mbox{\hyperlink{modelThread_8cpp_aff4146331a5d91d9d4b125a9eb0be236}{wait\+For\+Event}} ()
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{modelThread_8cpp_a34f688ffb76cd41f6e2ec99ef1a605be}{model\+Thread}} (void \texorpdfstring{$\ast$}{*}app)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{modelThread_8cpp_acede2b484f1d2c2ebfaf5eaf8de7b4eb}{shutdown\+Signaled}}
+\item 
+static bool \mbox{\hyperlink{modelThread_8cpp_a7034bea13b2198e2c0e8d33db478821e}{model\+Start\+Signaled}}
+\item 
+static pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{modelThread_8cpp_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex}} = PTHREAD\+\_\+\+MUTEX\+\_\+\+INITIALIZER
+\item 
+static pthread\+\_\+cond\+\_\+t \mbox{\hyperlink{modelThread_8cpp_a3e860480436fa0ccf8f534d68a503600}{cond\+Var}} = PTHREAD\+\_\+\+COND\+\_\+\+INITIALIZER
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modelThread_8cpp_a21af06c7299f65752236cbf0ef930359}\label{modelThread_8cpp_a21af06c7299f65752236cbf0ef930359} 
+\index{modelThread.cpp@{modelThread.cpp}!calcCells412Num@{calcCells412Num}}
+\index{calcCells412Num@{calcCells412Num}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{calcCells412Num()}{calcCells412Num()}}
+{\footnotesize\ttfamily static void calc\+Cells412\+Num (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+::\+External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+расчёт количества 412х(223х) ячеек, которые будут обработаны моделью в течение всего такта. Количество находится с учётом маскирования каналов и маски поляризаций в каждом стробе такта. Результат отправляется в графическую нить для настройки полосы прогресса Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelThread_8cpp_a21af06c7299f65752236cbf0ef930359_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{modelThread_8cpp_af9f394318ed7bcf635a2f79c917fb868}\label{modelThread_8cpp_af9f394318ed7bcf635a2f79c917fb868} 
+\index{modelThread.cpp@{modelThread.cpp}!inputMsgsCorrection@{inputMsgsCorrection}}
+\index{inputMsgsCorrection@{inputMsgsCorrection}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{inputMsgsCorrection()}{inputMsgsCorrection()}}
+{\footnotesize\ttfamily static void input\+Msgs\+Correction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+::\+External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{modelThread_8cpp_a34f688ffb76cd41f6e2ec99ef1a605be}\label{modelThread_8cpp_a34f688ffb76cd41f6e2ec99ef1a605be} 
+\index{modelThread.cpp@{modelThread.cpp}!modelThread@{modelThread}}
+\index{modelThread@{modelThread}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{modelThread()}{modelThread()}}
+{\footnotesize\ttfamily static void \texorpdfstring{$\ast$}{*} model\+Thread (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelThread_8cpp_a34f688ffb76cd41f6e2ec99ef1a605be_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{modelThread_8cpp_aff4146331a5d91d9d4b125a9eb0be236}\label{modelThread_8cpp_aff4146331a5d91d9d4b125a9eb0be236} 
+\index{modelThread.cpp@{modelThread.cpp}!waitForEvent@{waitForEvent}}
+\index{waitForEvent@{waitForEvent}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{waitForEvent()}{waitForEvent()}}
+{\footnotesize\ttfamily static int32\+\_\+t wait\+For\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{modelThread_8cpp_a3e860480436fa0ccf8f534d68a503600}\label{modelThread_8cpp_a3e860480436fa0ccf8f534d68a503600} 
+\index{modelThread.cpp@{modelThread.cpp}!condVar@{condVar}}
+\index{condVar@{condVar}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{condVar}{condVar}}
+{\footnotesize\ttfamily pthread\+\_\+cond\+\_\+t cond\+Var = PTHREAD\+\_\+\+COND\+\_\+\+INITIALIZER\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{modelThread_8cpp_a7034bea13b2198e2c0e8d33db478821e}\label{modelThread_8cpp_a7034bea13b2198e2c0e8d33db478821e} 
+\index{modelThread.cpp@{modelThread.cpp}!modelStartSignaled@{modelStartSignaled}}
+\index{modelStartSignaled@{modelStartSignaled}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{modelStartSignaled}{modelStartSignaled}}
+{\footnotesize\ttfamily bool model\+Start\+Signaled\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{modelThread_8cpp_a4acff8232e4aec9cd5c6dc200ac55ef3}\label{modelThread_8cpp_a4acff8232e4aec9cd5c6dc200ac55ef3} 
+\index{modelThread.cpp@{modelThread.cpp}!mutex@{mutex}}
+\index{mutex@{mutex}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t mutex = PTHREAD\+\_\+\+MUTEX\+\_\+\+INITIALIZER\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{modelThread_8cpp_acede2b484f1d2c2ebfaf5eaf8de7b4eb}\label{modelThread_8cpp_acede2b484f1d2c2ebfaf5eaf8de7b4eb} 
+\index{modelThread.cpp@{modelThread.cpp}!shutdownSignaled@{shutdownSignaled}}
+\index{shutdownSignaled@{shutdownSignaled}!modelThread.cpp@{modelThread.cpp}}
+\doxysubsubsection{\texorpdfstring{shutdownSignaled}{shutdownSignaled}}
+{\footnotesize\ttfamily bool shutdown\+Signaled\hspace{0.3cm}{\ttfamily [static]}}
+

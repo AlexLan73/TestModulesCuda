@@ -1,0 +1,74 @@
+\doxysection{model\+Main.\+h}
+\hypertarget{modelMain_8h_source}{}\label{modelMain_8h_source}\index{src/modelMain.h@{src/modelMain.h}}
+\mbox{\hyperlink{modelMain_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODEL\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODEL\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ [u]intNN\_t}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelInterface_8h}{model/modelInterface.h}}>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c412__06_8h}{c412\_06.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418__02_8h}{c418\_02.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418__02Result_8h}{c418\_02Result.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{src_2b232_8h}{b232.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c233_8h}{c233.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsg_8h}{controlMsg.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsgModelTypes_8h}{controlMsgModelTypes.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stationTree_8h}{stationTree.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <libutils/result.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ }libutils::Result;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }libutils::NoneType;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }std::experimental::optional;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ std::list<std::string>\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_adda6b02822eeee17c26f02b368d37998}{DEFAULT\_DIR\_LIST}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ std::function<}
+\DoxyCodeLine{00032\ \ \ \ \ std::unique\_ptr<StationTree>\ (\textcolor{keyword}{const}\ ControlMsg\&,\ \textcolor{keyword}{const}\ ControlMsg\&)}
+\DoxyCodeLine{00033\ >\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_aab68dbb441fab74eb0d2f82e83efe4d4}{TreeConstructorFun\_t}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Cell233}{Cell233}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main}{Main}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Interface}}\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:\ \textcolor{comment}{//data}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3}{Errors}}\ \{\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}{ok}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}{locked}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a43df00ed3a365249a3d8bf71ca4d64ea}{notFullyInitialized}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3ac98746454f0bf8d16b34b9abb3222709}{badMsgs}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a8b7fcd6b4f5ac29ee03b4348258b8cca}{masked}}\ \};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main}{Main}}(optional<TreeConstructorFun\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a594e0ae3a89fda234965ae9fea1c0d14}{optTreeCtor}},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::list<std::string>\&\ lstDataDirs\ =\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_adda6b02822eeee17c26f02b368d37998}{DEFAULT\_DIR\_LIST}});}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a76f1b3eb091f22b4c99e423f4aa6eaa7}{\string~Main}}();}
+\DoxyCodeLine{00057\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a5c4ce562f37b044cec79356f6df0b7f1}{formAllControlMessages}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ *extMsgs,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{ChannelsMask}}\ *latticeMask,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ControlMessage>\&\ cntrlMsgs);}
+\DoxyCodeLine{00068\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_aeb9e16b44bbe2550bf6dc3f9f927e72c}{startProcessing}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ *extMsgs,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}}\ *cbacks);}
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00070\ \ \ \ \ optional<TreeConstructorFun\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a594e0ae3a89fda234965ae9fea1c0d14}{optTreeCtor}};}
+\DoxyCodeLine{00072\ \ \ \ \ std::unique\_ptr<ControlMsg>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_ac73551cf2bb0df62ab7301f1a2717829}{cntrlMsg}};}
+\DoxyCodeLine{00074\ \ \ \ \ std::shared\_ptr<CMsgModelTypes::StationConfig>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a04525f95e2bde6c2e46987861f8366a3}{conf}};}
+\DoxyCodeLine{00076\ \ \ \ \ std::unique\_ptr<CMsgModelTypes::InputMessages>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_abad3203ff946818aef8795b2e6dd2840}{inputMsgs}};}
+\DoxyCodeLine{00080\ \ \ \ \ std::vector<int32\_t>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a03df431e33dd9628c97890a35c6a7c0f}{trimtsUsedStrobeIndexes}};}
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_ac317b36365dbff00e8070958201c8ae5}{convertExternalMessages}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ *extMsgs);}
+\DoxyCodeLine{00094\ \ \ \ \ Result<void>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_add4a94f03ace167c05381ca795827ccc}{checkStrobe}}(uint32\_t\ trprStrbIdx,\ int32\_t\ trimtsStrbIdx);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a227f93ec625ecec4a73194c7e0c55450}{initUtilsAndCMsg}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}}\ *cbacks);}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a2a0955be6f0b7e760c281c91d5cdfcf6}{formPolarControlMessages}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stationType,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ strbNum,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{SharedConst::PolarizationTypes}}\ \mbox{\hyperlink{group___xD1_x81223__fctl_ga6637897ba9d85fc93a18a21a2dc9323a}{polar}},}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_ac73551cf2bb0df62ab7301f1a2717829}{cntrlMsg}},}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ControlMessage>\&\ outCntrlMsgs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_add543303f4fc4bb62f98219bc1ae48ea}{areExtMsgsValid}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a3744a37387af729fde7ae4b3eb8bc433}{processStrobes}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{ExternalMessages}}\ *extMsgs);}
+\DoxyCodeLine{00134\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a6bc2fbfbc173e519f33a3c3c101e5b56}{findTrimtsStrbIndex}}(uint32\_t\ trprStrbIdx);}
+\DoxyCodeLine{00135\ \};\ \textcolor{comment}{//\ class\ Main}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MODEL\_H\_\_}}
+
+\end{DoxyCode}

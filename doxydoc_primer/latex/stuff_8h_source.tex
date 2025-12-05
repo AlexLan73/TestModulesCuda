@@ -1,0 +1,18 @@
+\doxysection{stuff.\+h}
+\hypertarget{stuff_8h_source}{}\label{stuff_8h_source}\index{src/mpk1/blk223/stuff.h@{src/mpk1/blk223/stuff.h}}
+\mbox{\hyperlink{stuff_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_STUFF\_H\_\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_STUFF\_H\_\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CHECK\_UP(cond,\ ...)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ if\ (!(cond))\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ char\ msgbuf[256];\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ snprintf(msgbuf,\ sizeof(msgbuf),\ \_\_VA\_ARGS\_\_);\ \ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ return\ ErrMsg(msgbuf);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

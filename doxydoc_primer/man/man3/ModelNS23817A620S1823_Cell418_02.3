@@ -1,0 +1,587 @@
+.TH "ModelNS23817A620S1823::Cell418_02" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::Cell418_02
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <c418_02\&.h>\fP
+.PP
+Inherits \fBModelNS23817A620S1823::VirtualCell418_02\fP, and \fBModelNS23817A620S1823::Cell418Base\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell418_02\fP (const \fBControlMsg\fP &)"
+.br
+.ti -1c
+.RI "void \fBgetResults\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBresetStopFlag\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBModelNS23817A620S1823::VirtualCell418_02\fP
+.in +1c
+.ti -1c
+.RI "virtual \fB~VirtualCell418_02\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBModelNS23817A620S1823::Cell418Base\fP
+.in +1c
+.ti -1c
+.RI "\fBCell418Base\fP (const \fBControlMsg\fP &cmsg)"
+.br
+.ti -1c
+.RI "virtual \fB~Cell418Base\fP ()=0"
+.br
+.ti -1c
+.RI "bool \fBgetStopFlag\fP () const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpostTargetModeProcessing\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBrunBlanking\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBclearInterfData\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearAdaptData\fP ()"
+.br
+.ti -1c
+.RI "void \fBdigSpatPostProcessing\fP (std::complex< int32_t > in[][\fBSharedConst::maxSamplesInRay\fP], std::complex< int32_t > out[][\fBSharedConst::maxSamplesInRay\fP]) const"
+.br
+.ti -1c
+.RI "void \fBinitSliceFiles\fP ()"
+.br
+.ti -1c
+.RI "void \fBdumpInputSlice\fP (\fBC412_06Result\fP *\fBinData\fP, uint32_t crateNum)"
+.br
+.ti -1c
+.RI "void \fBdumpInputSliceIntoFile\fP (\fBC412_06Result\fP *\fBinData\fP, uint32_t crateNum, uint32_t rays, uint32_t samplesNum)"
+.br
+.ti -1c
+.RI "void \fBdumpOutputSlice\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBdumpOutputSliceIntoFile\fP (\fBC418_02Result\fP *result, uint32_t rays, uint32_t samplesNum)"
+.br
+.ti -1c
+.RI "void \fBinDataProcessing\fP (uint32_t crateNum, \fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBpostProcessing\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBamspStrbPostProcessing\fP (\fBC418_02Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBcopyMatrixInfo2ZOutputArray\fP (uint32_t crateNum)"
+.br
+.ti -1c
+.RI "void \fBamtpStrbPostProcessing\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBcollectCrateAdaptData\fP (uint32_t crateNum)"
+.br
+.ti -1c
+.RI "void \fBcollectCalibrLIMMSourceData\fP (uint32_t crateNum, \fBC418_02Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBprintCalibrLimmCoefs\fP (const \fBC418_02Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBprintTargetSigma\fP (const \fBC418_02Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBdiagFormVectAdaptation\fP ()"
+.br
+.ti -1c
+.RI "double \fBcalcAdaptC023\fP (uint32_t m) const"
+.br
+.ti -1c
+.RI "std::complex< double > \fBcalcAdaptC1\fP (uint32_t n, uint32_t j) const"
+.br
+.ti -1c
+.RI "void \fBantennaPartsProcessing\fP (uint32_t crateNum, \fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBsumCratesDataInFragments\fP ()"
+.br
+.ti -1c
+.RI "void \fBdftOfInterfData\fP (uint32_t fragmentsNum)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcDFGroup4DftData\fP (uint32_t fragmentsNum, uint32_t fragmNum) const"
+.br
+.ti -1c
+.RI "void \fBsumDftResultInDFGroups\fP (uint32_t fragmentsNum, \fBC418_02Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBpostInterfFragmModeProcessing\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBrunAutocompensation\fP (\fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBapplyK0ToZTargetData\fP (std::complex< int32_t > buf[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.ti -1c
+.RI "void \fBcopyAutocompInputDataToTempBuffer\fP (const \fBC418_02Result\fP *result)"
+.br
+.ti -1c
+.RI "void \fBcopyAutocompResultToOutBuffer\fP (\fBC418_02Result\fP *result) const"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBsortDescendingOrder\fP (std::pair< uint32_t, double > i, std::pair< uint32_t, double > j)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::complex< int32_t > \fBinterfData\fP [\fBSharedConst::maxAntennaParts\fP][\fBSharedConst::maxRays\fP][\fBSharedConst::maxSamplesInRay\fP]"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBinputSlice\fP"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBoutputSlice\fP"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBoutputSliceHex\fP"
+.br
+.ti -1c
+.RI "\fBSliceFile\fP \fBinputSliceAutocomp\fP"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBadaptData\fP [\fBSharedConst::maxRays\fP+maxActiveInterferences+\fBSharedConst::sigAdaptExtraRows\fP][\fBSharedConst::maxChannelsSM\fP]"
+.br
+.ti -1c
+.RI "\fBAdaptiveSpatProcVect\fP \fBautocompCoefs\fP"
+.br
+.ti -1c
+.RI "std::complex< double > \fBautocompK0\fP [\fBSharedConst::maxRays\fP *maxActiveInterferences][maxActiveInterferences]"
+.br
+.ti -1c
+.RI "double \fBautocompK1\fP [\fBSharedConst::maxRays\fP *maxActiveInterferences][maxActiveInterferences]"
+.br
+.ti -1c
+.RI "uint32_t \fBautocompIdx\fP [\fBSharedConst::maxRays\fP][maxActiveInterferences]"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Public Attributes inherited from \fBModelNS23817A620S1823::VirtualCell418_02\fP
+.in +1c
+.ti -1c
+.RI "std::vector< std::unique_ptr< \fBVirtualCell418_01\fP > > \fBc418_01\fP"
+.br
+.in -1c
+
+Protected Member Functions inherited from \fBModelNS23817A620S1823::Cell418Base\fP
+.in +1c
+.ti -1c
+.RI "void \fBtargetModeProcessing\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopyOutDataTo\fP (\fBC412_06Result\fP *result) const"
+.br
+.ti -1c
+.RI "void \fBaccumulateCrateData\fP (std::complex< int32_t > in[][\fBSharedConst::maxSamplesInRay\fP], std::complex< int32_t > out[][\fBSharedConst::maxSamplesInRay\fP])"
+.br
+.in -1c
+
+Protected Attributes inherited from \fBModelNS23817A620S1823::Cell418Base\fP
+.in +1c
+.ti -1c
+.RI "\fBC412_06Result\fP \fBinData\fP"
+.br
+.ti -1c
+.RI "\fBC412_06Result\fP \fBoutData\fP"
+.br
+.ti -1c
+.RI "const \fBControlMsg\fP \fBcontrolMsg\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgSharedTypes::ImitStrobe\fP * \fBstrb\fP"
+.br
+.ti -1c
+.RI "const \fBCMsgModelTypes::StationParams\fP * \fBstationParams\fP"
+.br
+.ti -1c
+.RI "bool \fBstopFlag\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс ячейки суммирования крейтов 418-02 (234-05 СМ)\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::Cell418_02::Cell418_02 (const \fBControlMsg\fP & cmsg)"
+Конструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::Cell418_02::amspStrbPostProcessing (\fBC418_02Result\fP * result) const\fC [private]\fP"
+Завершающая часть расчёта спектра и мощности помехи в поляризации для режима формирования антенных модулей и спектральной обработки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::amtpStrbPostProcessing (\fBC418_02Result\fP * result)\fC [private]\fP"
+Завершающая часть формирования массива сигналов антенных модулей в стробах целевого канала с матричной обработкой и в стробах помехового канала с формированием антенных модулей и временной обработкой\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::antennaPartsProcessing (uint32_t crateNum, \fBC418_02Result\fP * result)\fC [private]\fP"
+Входная обработка данных фрагментов полотна\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::applyK0ToZTargetData (std::complex< int32_t > buf[][SharedConst::maxSamplesInRay])\fC [private]\fP"
+Компенсация помех на выходе пространственной обработки в режиме использования коэффициентов корреляции автокомпенсации в ячейке 418-02\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuf\fP указатель на выходной буфер 
+.RE
+.PP
+
+.SS "double ModelNS23817A620S1823::Cell418_02::calcAdaptC023 (uint32_t m) const\fC [private]\fP"
+Расчёт коэффициента a0, a2 или a3 для алгоритма адаптации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIm\fP индекс временного массива адаптивных векторов 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+адаптационный коэффициент a0, a2 или a3, разница в расчёте которых - только индекс массива (m) 
+.RE
+.PP
+
+.SS "std::complex< double > ModelNS23817A620S1823::Cell418_02::calcAdaptC1 (uint32_t n, uint32_t j) const\fC [private]\fP"
+Расчёт адаптационного коэффициента a1\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP смещение по лучам массива адаптивных векторов 
+.br
+\fIj\fP смещение по лучам массива адаптивных векторов 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+адаптационный коэффициент a1 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::Cell418_02::calcDFGroup4DftData (uint32_t fragmentsNum, uint32_t fragmNum) const\fC [private]\fP"
+Расчёт номера ПГ текущего фрагмента для сложения результатов ДПФ при фрагментированном полотне и условии, что фрагментов больше чем ПГ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfragmentsNum\fP количество фрагментов 
+.br
+\fIfragmNum\fP номер фрагмента 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер пеленгационной группы текущего фрагмента 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::clearAdaptData ()\fC [private]\fP"
+Очистка массива данных для адаптации\&. 
+.SS "void ModelNS23817A620S1823::Cell418_02::clearInterfData ()\fC [private]\fP"
+Очистка массива помеховых данных\&. 
+.SS "void ModelNS23817A620S1823::Cell418_02::collectCalibrLIMMSourceData (uint32_t crateNum, \fBC418_02Result\fP * result) const\fC [private]\fP"
+Сбор данных для калибровки или РИУШ со всех крейтов в одном массиве\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::collectCrateAdaptData (uint32_t crateNum)\fC [private]\fP"
+Сбор данных для адаптации со всех крейтов в одном массиве\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::copyAutocompInputDataToTempBuffer (const \fBC418_02Result\fP * result)\fC [private]\fP"
+Копирование входных данных для автокомпенсации во временный буфер, с которым будет работать алгоритм расчёта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки, в котором находятся входные данные для автокомпенсации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::copyAutocompResultToOutBuffer (\fBC418_02Result\fP * result) const\fC [private]\fP"
+Копирование результата работы алгоритма автокомпенсации в выходной буфер\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::copyMatrixInfo2ZOutputArray (uint32_t crateNum)\fC [private]\fP"
+Копирование данных заданного крейта из входного массива в выходной при матричных режимах (целевой канал и помеховый канал с формированием антенных модулей и временной обработкой)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::dftOfInterfData (uint32_t fragmentsNum)\fC [private]\fP"
+Дискретное преобразование Фурье для данных в помеховом режиме при разбиении антенного полотна на фрагменты\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfragmentsNum\fP количество фрагментов 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::diagFormVectAdaptation ()\fC [private]\fP"
+Адаптация (сигнальная/координатная) диаграммообразующих векторов\&. 
+.SS "void ModelNS23817A620S1823::Cell418_02::digSpatPostProcessing (std::complex< int32_t > in[][SharedConst::maxSamplesInRay], std::complex< int32_t > out[][SharedConst::maxSamplesInRay]) const\fC [private]\fP"
+Завершающая ЦПО нормировка данных\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIin\fP указатель на входной буфер 
+.br
+\fIout\fP указатель на выходной буфер 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::dumpInputSlice (\fBC412_06Result\fP * inData, uint32_t crateNum)\fC [private]\fP"
+Сохранение входного среза в файл и выдача в прослойку\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinData\fP указатель на объект результирующих данных 418-01й ячейки 
+.br
+\fIcrateNum\fP номер крейта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::dumpInputSliceIntoFile (\fBC412_06Result\fP * inData, uint32_t crateNum, uint32_t rays, uint32_t samplesNum)\fC [private]\fP"
+Сохранение входного среза в файл\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinData\fP указатель на объект результирующих данных 418-01й ячейки 
+.br
+\fIcrateNum\fP номер крейта 
+.br
+\fIrays\fP количество лучей 
+.br
+\fIsamplesNum\fP количество выборок в луче 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::dumpOutputSlice (\fBC418_02Result\fP * result)\fC [private]\fP"
+Сохранение выходного среза в файл и выдача в прослойку\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::dumpOutputSliceIntoFile (\fBC418_02Result\fP * result, uint32_t rays, uint32_t samplesNum)\fC [private]\fP"
+Сохранение выходного среза в файл и выдача в прослойку\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект результирующих данных 418-02й ячейки 
+.br
+\fIrays\fP количество лучей 
+.br
+\fIsamplesNum\fP количество выборок в луче 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::getResults (\fBC418_02Result\fP * result)\fC [virtual]\fP"
+Занесение в память, на которую указывает outData, результата работы ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.PP
+Implements \fBModelNS23817A620S1823::VirtualCell418_02\fP\&.
+.SS "void ModelNS23817A620S1823::Cell418_02::inDataProcessing (uint32_t crateNum, \fBC418_02Result\fP * result)\fC [private]\fP"
+Обработка входных данных, полученных с заданного крейта\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::initSliceFiles ()\fC [private]\fP"
+Инициализация объектов файлов срезов начальными значениями для дальнейшего формирования правильных имён файлов\&. 
+.SS "void ModelNS23817A620S1823::Cell418_02::postInterfFragmModeProcessing (\fBC418_02Result\fP * result)\fC [private]\fP"
+Финальная обработка данных фрагментов в помеховом режиме\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::postProcessing (\fBC418_02Result\fP * result)\fC [private]\fP"
+Обработка собранных со всех крейтов данных перед выдачей на 232ю ячейку\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-01й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::postTargetModeProcessing (\fBC418_02Result\fP * result)\fC [private]\fP"
+Обработка данных в целевом режиме после суммирования крейтов\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::printCalibrLimmCoefs (const \fBC418_02Result\fP * result) const\fC [private]\fP"
+Печать данных для калибровки или РИУШ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::printTargetSigma (const \fBC418_02Result\fP * result) const\fC [private]\fP"
+Печать оценки дисперсии входного процесса\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::resetStopFlag ()\fC [virtual]\fP"
+Сброс флага преждевременной остановки вычислений\&. Необходим, т\&.к\&. объект ячейки может отрабатывать больше одного строба, а никаких признаков, что расчёт был последним в текущем запуске нет\&. 
+.PP
+Implements \fBModelNS23817A620S1823::Cell418Base\fP\&.
+.SS "void ModelNS23817A620S1823::Cell418_02::runAutocompensation (\fBC418_02Result\fP * result)\fC [private]\fP"
+Расчёт коэффициентов корреляции в ячейке 418-02 для автокомпенсации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::runBlanking (\fBC418_02Result\fP * result)\fC [private]\fP"
+Бланкирование 
+.SS "bool ModelNS23817A620S1823::Cell418_02::sortDescendingOrder (std::pair< uint32_t, double > i, std::pair< uint32_t, double > j)\fC [static]\fP, \fC [private]\fP"
+Сравнение двух входных значений\&. Используется для сортировки массива для расположения элементов по убыванию второго значения пары\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP первая пара значений 
+.br
+\fIj\fP вторая пара значений 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true если второе число первой пары больше второго числа второй пары 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::Cell418_02::sumCratesDataInFragments ()\fC [private]\fP"
+Суммирование данных крейтов в соответствующие им массивы фрагментов полотна\&.
+.PP
+При фрагментировании полотна после приёма входные данные складываются в отдельный массив interfData[крейты][лучи][выборки], но фрагментов (частей полотна может быть меньше, чем количество крейтов (зависит от разбиения)\&. Если полотно фрагментировано максимально, то вся обработка производится в 412-06(223)й (1;1 в метрах и сантиметрах) или 234й (2;1 в сантиметрах) ячейке и дальше результаты просто суммируются\&. Если фрагментов полотна столько же, сколько и крейтов или единственный фрагмент равен всему полотну, то дальше по ним идёт сразу ДПФ\&. Если же фрагментов меньше, чем крейтов (12;4, 12;8 в метрах), то сначала их нужно ссумировать\&. Данные укладываются без пропусков, чтобы потом удобно было делать по ним ДПФ СМ 6;3, М 6;4, МРИК 2;4 - суммировать не надо, т\&.к\&. они по 1 крейту в фрагменте\&. 
+.SS "void ModelNS23817A620S1823::Cell418_02::sumDftResultInDFGroups (uint32_t fragmentsNum, \fBC418_02Result\fP * result) const\fC [private]\fP"
+Суммирование данных фрагментов в результирующий массив по количеству пеленгационных групп при условии, что фрагментов больше чем ПГ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfragmentsNum\fP количество фрагментов 
+.br
+\fIresult\fP указатель на объект для результирующих данных 418-02й ячейки 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::Cell418_02::adaptData[\fBSharedConst::maxRays\fP+maxActiveInterferences+\fBSharedConst::sigAdaptExtraRows\fP][\fBSharedConst::maxChannelsSM\fP]\fC [private]\fP"
+данные ячейки[-ек] для адаптации Каналы в массиве расположены по порядку нумерации ячеек в крейте\&. Количество каналов взято как для сантиметровой станции, т\&.к\&. в ней их больше, чем в метровой и МРИК 
+.SS "\fBAdaptiveSpatProcVect\fP ModelNS23817A620S1823::Cell418_02::autocompCoefs\fC [private]\fP"
+коэффициенты корреляции автокомпенсации по нескольким стробам 
+.SS "uint32_t ModelNS23817A620S1823::Cell418_02::autocompIdx[\fBSharedConst::maxRays\fP][maxActiveInterferences]\fC [private]\fP"
+массив индексов, определяющий порядок применения рассчитанных коэффициентов корреляции автокомпенсации K0 и K1\&. 
+.SS "std::complex<double> ModelNS23817A620S1823::Cell418_02::autocompK0[\fBSharedConst::maxRays\fP *maxActiveInterferences][maxActiveInterferences]\fC [private]\fP"
+коэффициенты корреляции автокомпенсации K0 (нормированный комплексный коэффициент передачи) 
+.SS "double ModelNS23817A620S1823::Cell418_02::autocompK1[\fBSharedConst::maxRays\fP *maxActiveInterferences][maxActiveInterferences]\fC [private]\fP"
+коэффициенты корреляции автокомпенсации K1 (действительный нормирующий множитель) 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell418_02::inputSlice\fC [private]\fP"
+объект файла среза входа ячейки 418-02 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell418_02::inputSliceAutocomp\fC [private]\fP"
+вход автокомпенсатора 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::Cell418_02::interfData[\fBSharedConst::maxAntennaParts\fP][\fBSharedConst::maxRays\fP][\fBSharedConst::maxSamplesInRay\fP]\fC [private]\fP"
+массив помеховых данных 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell418_02::outputSlice\fC [private]\fP"
+объект файла среза выхода ячейки 418-02 
+.SS "\fBSliceFile\fP ModelNS23817A620S1823::Cell418_02::outputSliceHex\fC [private]\fP"
+выдача для прошивки 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

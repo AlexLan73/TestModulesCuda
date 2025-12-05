@@ -1,0 +1,71 @@
+.TH "SignalTable::SignalInfo" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SignalTable::SignalInfo
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBnfil\fP"
+.br
+.ti -1c
+.RI "int32_t \fBndec\fP"
+.br
+.ti -1c
+.RI "int32_t \fBndFm\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPoly\fP"
+.br
+.ti -1c
+.RI "double \fBnTay\fP"
+.br
+.ti -1c
+.RI "double \fBdRp\fP"
+.br
+.ti -1c
+.RI "int32_t \fBdfm\fP"
+.br
+.ti -1c
+.RI "double \fBgb3\fP"
+.br
+.ti -1c
+.RI "int32_t \fBnsdv\fP"
+.br
+.ti -1c
+.RI "const char * \fBdescr\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+параметры каждого сигнала 
+.SH "Member Data Documentation"
+.PP 
+.SS "const char* SignalTable::SignalInfo::descr"
+короткое текстовое описание 
+.SS "int32_t SignalTable::SignalInfo::dfm"
+девиация частоты сигнала, в Гц 
+.SS "double SignalTable::SignalInfo::dRp"
+цена дискрета выдачи, в долях nTay 
+.SS "double SignalTable::SignalInfo::gb3"
+параметр для расчёта потенциала 
+.SS "int32_t SignalTable::SignalInfo::ndec"
+коэффициент децимации (прореживания) по выходу ПЧВО 
+.SS "int32_t SignalTable::SignalInfo::ndFm"
+количество дискрет ФМ на длительности сигнала 
+.SS "int32_t SignalTable::SignalInfo::nfil"
+длительность импульсной характеристики (ИХ) фильтра ПЧВО в числе выборок частоты (размер окна фильтра ПЧВО) 
+.SS "uint32_t SignalTable::SignalInfo::nPoly"
+код полинома для расчёта м-последовательности 
+.SS "int32_t SignalTable::SignalInfo::nsdv"
+признак назначения режима бланкирования на входе ЧВО 
+.SS "double SignalTable::SignalInfo::nTay"
+длительность дискрета ФМ, в \fIмикросекундах\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

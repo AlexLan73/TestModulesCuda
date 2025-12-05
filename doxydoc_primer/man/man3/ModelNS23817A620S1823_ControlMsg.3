@@ -1,0 +1,1332 @@
+.TH "ModelNS23817A620S1823::ControlMsg" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::ControlMsg
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <controlMsg\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBHeterodyneDataHolder\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBchangeC412\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBprecomputeCommonData\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsendCell412ChangedSignal\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetCallbacks\fP (\fBCallbacks\fP *callbacks)"
+.br
+.ti -1c
+.RI "void \fBsetChannelsMask\fP (const \fBChannelsMask\fP *chMask, \fBSharedConst::StationType\fP stType)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetDFGroupNum\fP (uint32_t chanNum) const"
+.br
+.ti -1c
+.RI "bool \fBisUnmaskedPolar\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisUnmaskedPolar\fP (\fBSharedConst::PolarizationTypes\fP \fBpolar\fP) const"
+.br
+.ti -1c
+.RI "bool \fBisUnmaskedPolar\fP (\fBSharedConst::PolarizationTypes\fP \fBpolar\fP, \fBSharedConst::StationType\fP stationType) const"
+.br
+.ti -1c
+.RI "bool \fBisUnmaskedCrate\fP (uint32_t crateNum, \fBSharedConst::PolarizationTypes\fP polarType) const"
+.br
+.ti -1c
+.RI "bool \fBisUnmaskedCell\fP (uint32_t crateNum, uint32_t cellNum, \fBSharedConst::PolarizationTypes\fP polarType) const"
+.br
+.ti -1c
+.RI "void \fBcalcNShift\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcN1Norm\fP (\fBSharedConst::PolarizationTypes\fP polarType, const \fBChannelsMask\fP *latticeMask)"
+.br
+.ti -1c
+.RI "void \fBcalcN2Norm\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBmodelCh2Lattice\fP (uint32_t mCh) const"
+.br
+.ti -1c
+.RI "uint32_t \fBmodelCl2Lattice\fP (uint32_t mCl) const"
+.br
+.ti -1c
+.RI "uint32_t \fBmodelCr2Lattice\fP (uint32_t mCr) const"
+.br
+.ti -1c
+.RI "uint32_t \fBlatticeCh2Model\fP (uint32_t lCh) const"
+.br
+.ti -1c
+.RI "uint32_t \fBlatticeCl2ModelSM\fP (uint32_t lCl) const"
+.br
+.ti -1c
+.RI "bool \fBisVirtualChannel\fP (uint32_t mCh) const"
+.br
+.ti -1c
+.RI "int32_t \fBgetChannelXYCoords\fP (uint32_t chanNum, double *x, double *y) const"
+.br
+.ti -1c
+.RI "void \fBgetWlb\fP (uint32_t nfil, uint32_t wlbNum, int32_t *wlbBuf) const"
+.br
+.ti -1c
+.RI "void \fBprintCntrlMsg\fP () const"
+.br
+.ti -1c
+.RI "float \fBgetIppaU\fP (int32_t aInterfIndex) const"
+.br
+.ti -1c
+.RI "float \fBgetIppaV\fP (int32_t aInterfIndex) const"
+.br
+.ti -1c
+.RI "void \fBformControlMsg\fP (const \fBCMsgModelTypes::InputMessages\fP *inputMsgs, int32_t trprStrbIndex, int32_t trimtsStrbIndex, \fBSharedConst::PolarizationTypes\fP polarType)"
+.br
+.ti -1c
+.RI "TStrobe \fBgetStrobe\fP () const"
+.br
+.ti -1c
+.RI "\fBControlMsg\fP (std::shared_ptr< \fBCMsgModelTypes::StationConfig\fP >)"
+.br
+.ti -1c
+.RI "\fBControlMsg\fP ()"
+.br
+.ti -1c
+.RI "\fB~ControlMsg\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< \fBHeterodyneDataHolder\fP > \fBheterData\fP"
+.br
+.ti -1c
+.RI "\fBCMsgSharedTypes::ImitTact\fP \fBtactHeader\fP"
+.br
+.ti -1c
+.RI "\fBCMsgSharedTypes::ImitStrobe\fP \fBstrb\fP"
+.br
+.ti -1c
+.RI "\fBCMsgSharedTypes::ImitObject\fP \fBimitObjects\fP [\fBmaxImitObjects\fP]"
+.br
+.ti -1c
+.RI "\fBCMsgModelTypes::StationParams\fP \fBstationParams\fP"
+.br
+.ti -1c
+.RI "\fBCallbacks\fP \fBcbacks\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBmaxNfilValue\fP = 2048"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfillObjLengths\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillObjTypes\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillObjPolynomials\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillObjIntensity\fP (const ImitStrobe *trimtsStrb, \fBSharedConst::PolarizationTypes\fP polarType)"
+.br
+.ti -1c
+.RI "void \fBfillObjInterfBandWidth\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillObjBegins\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillObjFreqPoint\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillSigPhases\fP (const ImitStrobe *trimtsStrb, \fBSharedConst::PolarizationTypes\fP polarType)"
+.br
+.ti -1c
+.RI "void \fBfillRaysCoords\fP (const TRay trprUV[], uint32_t dfGroupsNum, uint8_t targetDFType)"
+.br
+.ti -1c
+.RI "void \fBfillChannelsMask\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBfillChannelsXYCoords\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBcalcObjDelays\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBcalcPftpDelays\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBprintCntrlMsgObjects\fP (int32_t objNum) const"
+.br
+.ti -1c
+.RI "void \fBfillObjCoords\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBfillAmplDistributionNum\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBfillHeterFreqPoint\fP (const TStrobe *trprStrb)"
+.br
+.ti -1c
+.RI "void \fBcalcDigSpatProcNorm\fP (\fBSharedConst::PolarizationTypes\fP polarType)"
+.br
+.ti -1c
+.RI "double \fBcalcPhase4SpatProcVector\fP (uint32_t ray, uint32_t firstChanOfCell, uint32_t chan) const"
+.br
+.ti -1c
+.RI "bool \fBisSumDiffDF\fP () const"
+.br
+.ti -1c
+.RI "void \fBcopySPV1FromRayZero\fP (uint32_t rayNum, int32_t crateNum, int32_t cellNum, uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBcopySPV2FromRayZero\fP (uint32_t rayNum, uint32_t chanNum)"
+.br
+.ti -1c
+.RI "void \fBcalcSpatProcVectors\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBfillKgrs\fP (uint16_t kgrs)"
+.br
+.ti -1c
+.RI "void \fBcalcStrbLengths\fP (uint32_t trimtsLength, uint32_t trprLength)"
+.br
+.ti -1c
+.RI "void \fBfillStationParams\fP (\fBCMsgModelTypes::StationParams\fP *stParams)"
+.br
+.ti -1c
+.RI "void \fBfillPolarsCombining\fP (uint8_t polarsCombiningCode)"
+.br
+.ti -1c
+.RI "void \fBcalcCellWpapCoefs\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "double \fBcalcD2zsCh\fP (double u, double v, double x, double y) const"
+.br
+.ti -1c
+.RI "double \fBcalcD2zO\fP (double u, double v, double x, double y) const"
+.br
+.ti -1c
+.RI "void \fBcalcProcCarrierFreq\fP (int32_t trprFg1)"
+.br
+.ti -1c
+.RI "void \fBrememberKlbAndAfr\fP (const \fBCMsgModelTypes::InputMessages\fP *inputMsgs)"
+.br
+.ti -1c
+.RI "void \fBfillKlbAfrOfCell\fP (int32_t crateNum, int32_t cellNum)"
+.br
+.ti -1c
+.RI "void \fBcalcPhiAndAmplAfr\fP (std::complex< double > afrCoef, double *phi, uint16_t *ampl) const"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcFirstChanOfCell\fP (int32_t crateNum, int32_t cellNum) const"
+.br
+.ti -1c
+.RI "void \fBfillAmplAfr\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcSigInitialPhase\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcSignalFreq\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcSigPhaseIncrement\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillSignalTypes\fP (const ImitObject trimtsObj[])"
+.br
+.ti -1c
+.RI "void \fBfillObjDfm\fP (const ImitObject trimtsObj[])"
+.br
+.ti -1c
+.RI "void \fBcalcSigInChanInitialPhase\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcSignalInChanFreq\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBcalcDimlessRateOfFreqChange\fP () const"
+.br
+.ti -1c
+.RI "void \fBcalcMaxObjDelays\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillObjNTay\fP (const ImitObject trimtsObj[])"
+.br
+.ti -1c
+.RI "void \fBcalcMinDist2ZSource4EachRay\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcMinDist2ZSource4DfgCenter\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcDivisionCoef\fP (const TStrobe *trprStrb) const"
+.br
+.ti -1c
+.RI "void \fBcalcDivCoefsXY\fP (uint32_t *divCoefX, uint32_t *divCoefY) const"
+.br
+.ti -1c
+.RI "void \fBcalcMinDist2ZSource4EachPap\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcMinDist2ZSource4EachPap2\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcPftpPapMinDelay\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetFirstNonVirtualChannelNum\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcAdcProcOffsets\fP (uint32_t trimtsStrbBegin, uint32_t trprStrbBegin)"
+.br
+.ti -1c
+.RI "void \fBfillAdcImitatorParams\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "void \fBcorrectionOfObjIntensity\fP (const ImitStrobe *trimtsStrb)"
+.br
+.ti -1c
+.RI "uint32_t \fBcalcQuarterOfAntenna\fP (int32_t crateNum)"
+.br
+.ti -1c
+.RI "void \fBfillChannelsMaskForAutocomp\fP (int32_t crateNum)"
+.br
+.ti -1c
+.RI "void \fBcalcCorrFreqDist\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalcWlbNorm\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int32_t \fBcalcSigLength\fP (const PAR_SIGN *sigParams, \fBSharedConst::StationType\fP stationType)"
+.br
+.ti -1c
+.RI "static uint \fBcalcBasicNihs\fP (const PAR_SIGN *sigParams, const \fBCMsgModelTypes::StationParams\fP &\fBstationParams\fP)"
+.br
+.ti -1c
+.RI "static uint \fBcalcTrueNihs\fP (const \fBCMsgSharedTypes::ImitStrobe\fP &\fBstrb\fP, const PAR_SIGN *sigParams, const \fBCMsgModelTypes::StationParams\fP &\fBstationParams\fP)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< \fBCMsgModelTypes::StationConfig\fP > \fBconfig\fP"
+.br
+.ti -1c
+.RI "\fBIppa\fP \fBippa\fP"
+.br
+.ti -1c
+.RI "\fBTrkp\fP \fBklb\fP"
+.br
+.ti -1c
+.RI "\fBTrkp\fP \fBafr\fP"
+.br
+.ti -1c
+.RI "E2TRPR \fBtrpr\fP"
+.br
+.ti -1c
+.RI "TrimtsMsg \fBtrimts\fP"
+.br
+.ti -1c
+.RI "int \fBtrprStrbIdx\fP"
+.br
+.ti -1c
+.RI "double \fBmaxDelayInObj\fP [\fBmaxImitObjects\fP]"
+.br
+.ti -1c
+.RI "double \fBminDist2ZSource4EachPap\fP [maxActiveInterferences]"
+.br
+.ti -1c
+.RI "double \fBpftpPapMinDelayInInterf\fP [maxActiveInterferences]"
+.br
+.ti -1c
+.RI "double \fBpftpMinDelay\fP"
+.br
+.ti -1c
+.RI "double \fBminDist2ZSource\fP"
+.br
+.ti -1c
+.RI "double \fBpftpMinDelayInRays\fP [\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxRays\fP]"
+.br
+.ti -1c
+.RI "double \fBminDist2ZSourceInRays\fP [\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxRays\fP]"
+.br
+.ti -1c
+.RI "std::vector< double > \fBd2zsInCh\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< double > > \fBd2zsInChRays\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс управляющего сообщения (УС)\&. Содержит ФУ строба в виде, удобном для модели; содержит также копии ТРПР и ТРИМС\&. Пересчитывается для каждой ячейки (\fBchangeC412\fP), причем in place (т\&.е\&. changeC412 - мутатор)\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelNS23817A620S1823::ControlMsg::ControlMsg (std::shared_ptr< \fBCMsgModelTypes::StationConfig\fP > conf)\fC [explicit]\fP"
+Конструктор объекта класса\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIutils\fP указатель на объект утилит для формирования управляющего сообщения 
+.RE
+.PP
+
+.SS "ModelNS23817A620S1823::ControlMsg::ControlMsg ()"
+Конструктор объекта класса\&. 
+.SS "ModelNS23817A620S1823::ControlMsg::~ControlMsg ()"
+Деструктор объекта класса\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcAdcProcOffsets (uint32_t trimtsStrbBegin, uint32_t trprStrbBegin)\fC [private]\fP"
+Расчёт смещений строба имитации относительно строба обработки и вычисление исходя из этого длины данных строба имитации, которые по времени совпадают со стробом обработки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrbBegin\fP начало строба имитации из Е2ТРИМЦ 
+.br
+\fItrprStrbBegin\fP начало строба обработки из Е2ТРПР 
+.RE
+.PP
+
+.SS "uint ModelNS23817A620S1823::ControlMsg::calcBasicNihs (const PAR_SIGN * sigParams, const \fBCMsgModelTypes::StationParams\fP & stationParams)\fC [static]\fP, \fC [private]\fP"
+Возврат длительности импульсной характеристики сигнала в числе дискретов частоты на входе ЧВО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsigParams\fP указатель на объект структуры данных, описывающей сигнал 
+.br
+\fIstationType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+длительность импульсной характеристики сигнала 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcCellWpapCoefs (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Расчёт векторов ПО на постановщик активной помехи для координатной адаптации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcCorrFreqDist ()\fC [private]\fP"
+Расчет коэффициента коррекции частотных искажений, показывает на сколько частота гетеродина отличается от середины интервала 
+.SS "double ModelNS23817A620S1823::ControlMsg::calcD2zO (double u, double v, double x, double y) const\fC [private]\fP"
+Расчёт расстояния до объекта в канале\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIu\fP координата U луча/центра ПГ 
+.br
+\fIv\fP координата V луча/центра ПГ 
+.br
+\fIx\fP координата X канала 
+.br
+\fIy\fP координата Y канала 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+расстояние до объекта в канале 
+.RE
+.PP
+
+.SS "double ModelNS23817A620S1823::ControlMsg::calcD2zsCh (double u, double v, double x, double y) const\fC [private]\fP"
+Расчёт расстояния до источника в канале\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIu\fP координата U луча/центра ПГ 
+.br
+\fIv\fP координата V луча/центра ПГ 
+.br
+\fIx\fP координата X канала 
+.br
+\fIy\fP координата Y канала 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+расстояние до источника в канале 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcDigSpatProcNorm (\fBSharedConst::PolarizationTypes\fP polarType)\fC [private]\fP"
+Расчёт и заполнение нормы ЦПО исходя из типа поляризации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::ControlMsg::calcDimlessRateOfFreqChange () const\fC [private]\fP"
+Возврат безразмерной скорости изменения частоты (для ЛЧМ в ПЧВО) Воронеж-СМ\&. 
+.PP
+\fBReturns\fP
+.RS 4
+безразмерная скорость изменения частоты 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcDivCoefsXY (uint32_t * divCoefX, uint32_t * divCoefY) const\fC [private]\fP"
+Запись в аргументы метода количества фрагментов по длине антенны и по высоте соответственно\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdivCoefX\fP указатель на переменную, в которую будет записано количества фрагментов по длине антенны 
+.br
+\fIdivCoefY\fP указатель на переменную, в которую будет записано количества фрагментов по высоте антенны 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::calcDivisionCoef (const TStrobe * trprStrb) const\fC [private]\fP"
+Расчёт коэффициента дробления полотна\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrprStrb\fP указатель на объект строба сообщения Е2ТРПР 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+количество фрагментов, на которые поделено антенное полотно 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::calcFirstChanOfCell (int32_t crateNum, int32_t cellNum) const\fC [private]\fP"
+Вычисление номера первого канала ячейки в сквозной нумерации в поляризации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер первого канала ячейки в сквозной нумерации в поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcMaxObjDelays ()\fC [private]\fP"
+Расчёт минимальной дальности по каждому объекту и нахождение максимальной задержки по всем объектам\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcMinDist2ZSource4DfgCenter ()\fC [private]\fP"
+Нахождение минимального расстояния до источника среди всех каналов поляризации для центра группы\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcMinDist2ZSource4EachPap ()\fC [private]\fP"
+Расчёт минимального расстояния до источника для каждой активной помехи\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcMinDist2ZSource4EachPap2 ()\fC [private]\fP"
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcMinDist2ZSource4EachRay ()\fC [private]\fP"
+Нахождение минимального расстояния до источника среди всех каналов поляризации для каждого луча\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcN1Norm (\fBSharedConst::PolarizationTypes\fP polarType, const \fBChannelsMask\fP * latticeMask)"
+Расчет и заполнение нормы для 978, 223 и 435 блоков исходя из типа поляризации и маски каналов полотна 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcN2Norm ()"
+Расчет и заполнение нормы для 232 блока исходя из типа строба 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcNShift ()"
+Расчёт сдвига в режимах калибровки, РИУШ и дробления полотна для ФПО МПК\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcObjDelays (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Расчёт задержек для объектов для заданной 412й ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcPftpDelays (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Расчёт задержек для ПЧВО для заданной 412й ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcPftpPapMinDelay ()\fC [private]\fP"
+Расчёт минимальной задержки в каналах для каждой активной помехи для ПЧВО\&. 
+.SS "double ModelNS23817A620S1823::ControlMsg::calcPhase4SpatProcVector (uint32_t ray, uint32_t firstChanOfCell, uint32_t chan) const\fC [private]\fP"
+Расчёт фазы для вектора ПО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIray\fP номер луча 
+.br
+\fIfirstChanOfCell\fP сквозной в поляризации номер первого канала в ячейке 
+.br
+\fIchan\fP номер канала в поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+фаза для расчёта вектора ПО 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcPhiAndAmplAfr (std::complex< double > afrCoef, double * phi, uint16_t * ampl) const\fC [private]\fP"
+Вычисление амплитуды и фазы заданного коэффциента АФР для имитатора АЦП\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIafrCoef\fP коэффициент амплитудного распределения 
+.br
+\fIphi\fP фаза АФР 
+.br
+\fIampl\fP амплитуда АФР 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcProcCarrierFreq (int32_t trprFg1)\fC [private]\fP"
+Расчёт несущей частоты для обработки (412я ячейка после имитатора АЦП)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrprFg1\fP частота первого гетеродина 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::calcQuarterOfAntenna (int32_t crateNum)\fC [private]\fP"
+Расчёт номера четверти антенного полотна по номеру крейта (в нумерации модели)\&. Четверти в модели расположены как на решётке и нумеруются на всех станциях так: 1 3 0 2 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер текущего крейта 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер четверти полотна, в которой находится заданный крейт 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcSigInChanInitialPhase ()\fC [private]\fP"
+Расчёт начальной фазы сигнала в каналах в ПЧВО (Воронеж-М/СМ)\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcSigInitialPhase ()\fC [private]\fP"
+Расчёт начальной фазы сигнала в объектах (Воронеж-М/СМ)\&. 
+.SS "int32_t ModelNS23817A620S1823::ControlMsg::calcSigLength (const PAR_SIGN * sigParams, \fBSharedConst::StationType\fP stationType)\fC [static]\fP, \fC [private]\fP"
+Возврат длины сигнала указанного типа в числе дискретов частоты дискретизации/имитации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsigParams\fP указатель на объект структуры данных, описывающей сигнал 
+.br
+\fIstationType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+длина сигнала 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcSignalFreq ()\fC [private]\fP"
+Расчёт частоты сигнала в объектах (Воронеж-М/СМ)\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcSignalInChanFreq ()\fC [private]\fP"
+Расчёт частоты сигнала в каналах в ПЧВО (Воронеж-М/СМ)\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcSigPhaseIncrement ()\fC [private]\fP"
+Расчёт приращения фазы за счёт ЛЧМ сигнала в объектах (Воронеж-М/СМ)\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcSpatProcVectors (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Расчёт векторов ПО для ППО\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::calcStrbLengths (uint32_t trimtsLength, uint32_t trprLength)\fC [private]\fP"
+Расчёт длин строба (для имитатора и для обработки)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsLength\fP длина строба имитации из сообщения Е2ТРИМЦ\&. 
+.br
+\fItrprLength\fP длина строба приёма из сообщения Е2ТРПР 
+.RE
+.PP
+
+.SS "uint ModelNS23817A620S1823::ControlMsg::calcTrueNihs (const \fBCMsgSharedTypes::ImitStrobe\fP & strb, const PAR_SIGN * sigParams, const \fBCMsgModelTypes::StationParams\fP & stationParams)\fC [static]\fP, \fC [private]\fP"
+Как calcBasicNihs, но учитывается скорость цели (СМ и МРИК; указывается посредством частоты второго гетеродина) 
+.SS "void ModelNS23817A620S1823::ControlMsg::calcWlbNorm ()\fC [private]\fP"
+Расчет коэффициента нормировки ЦФНЧ 
+.SS "void ModelNS23817A620S1823::ControlMsg::changeC412 (int32_t crateNum, int32_t cellNum)"
+Пересчёт параметров УС, зависящих от номера канала/ячейки при смене 412й (223й) ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::copySPV1FromRayZero (uint32_t rayNum, int32_t crateNum, int32_t cellNum, uint32_t chanNum)\fC [private]\fP"
+Расчёт векторов ПО для режима СРП-1\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrayNum\fP номер луча 
+.br
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.br
+\fIchanNum\fP номер канала в ячейке
+.RE
+.PP
+В отличие от других режимов в этом только нулевой луч считается как обычно, а остальные два являются копиями нулевого с изменённым знаком в нижней половине полотна для первого луча и в левой половине полотна для второго луча\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::copySPV2FromRayZero (uint32_t rayNum, uint32_t chanNum)\fC [private]\fP"
+Расчёт векторов ПО для режима СРП-2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrayNum\fP номер луча 
+.br
+\fIchanNum\fP номер канала в ячейке
+.RE
+.PP
+В отличие от других режимов в этом только нулевой луч считается как обычно, а остальные два являются копиями нулевого с изменёнными весами и знаками\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::correctionOfObjIntensity (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Пересчёт интенсивности иммитируемых объектов с учетом диаграммы подрешетки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillAdcImitatorParams (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение полей строба и объектов, управляющих имитатором АЦП, данными строба сетевого сообщения Е2ТРИМЦ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillAmplAfr ()\fC [private]\fP"
+Заполнение амплитуд амплитудно-фазового распределения по всем каналам поляризации\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::fillAmplDistributionNum (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Заполнение номера амплитудного распределения по каждому каналу текущей ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillChannelsMask (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Формирование маски каналов для заданной 412й ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillChannelsMaskForAutocomp (int32_t crateNum)\fC [private]\fP"
+Заполнение маски каналов для автокомпенсации\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер текущего крейта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillChannelsXYCoords (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Формирование координат каналов 412й ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillHeterFreqPoint (const TStrobe * trprStrb)\fC [private]\fP"
+Заполнение номера частотной точки гетеродина исходя из типа станции\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrprStrb\fP указатель на объект строба приёма сообщения Е2ТРПР 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillKgrs (uint16_t kgrs)\fC [private]\fP"
+Заполнение количества гипотез по радиальной скорости (фильтров)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkgrs\fP количество гипотез по радиальной скорости (фильтров) 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillKlbAfrOfCell (int32_t crateNum, int32_t cellNum)\fC [private]\fP"
+Заполнение калибровочных коэффициентов и векторов АФР для заданной ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjBegins (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение начал объектов строба исходя из типа станции и их запоминание\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjCoords (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение координат всех объектов строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjDfm (const ImitObject trimtsObj[])\fC [private]\fP"
+Заполнение поля 'девиация частоты' в объектах строба значениями из ТРИМЦ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsObj\fP указатель на массив объектов имитации текущего строба сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjFreqPoint (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение номеров частотных точек объектов строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjIntensity (const ImitStrobe * trimtsStrb, \fBSharedConst::PolarizationTypes\fP polarType)\fC [private]\fP"
+Расчёт интенсивностей объектов строба исходя из типа поляризации и их запоминание\&. Учет полосы для объектов типа помеха\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.br
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjInterfBandWidth (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение ширины полосы помехи объектов строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjLengths (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Расчёт длин объектов строба исходя из типа станции и их запоминание\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjNTay (const ImitObject trimtsObj[])\fC [private]\fP"
+Заполнение длительности дискрета ФМ, в мкс для каждого объекта строба\&. Это поле необходимо только для ФПО Воронеж-СМ (!)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsObj\fP указатель на массив объектов имитации текущего строба сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjPolynomials (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение начальных последовательностей (количества знаков м-последовательности) и полиномов объектов строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillObjTypes (const ImitStrobe * trimtsStrb)\fC [private]\fP"
+Заполнение типов объектов строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillPolarsCombining (uint8_t polarsCombiningCode)\fC [private]\fP"
+Перевод способа объединения поляризаций во внутреннее представление модели и его сохранение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolarsCombiningCode\fP способ объединения сигналов поляризаций и представления данных по выходу СФ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillRaysCoords (const TRay trprUV[], uint32_t dfGroupsNum, uint8_t targetDFType)\fC [private]\fP"
+Заполнение координат лучей исходя из центра ПГ и расстановки лучей в ней\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrprUV\fP указатель на список координат центров ПГ 
+.br
+\fIdfGroupsNum\fP количество ПГ 
+.br
+\fItargetDFType\fP номер (тип) ПГ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillSignalTypes (const ImitObject trimtsObj[])\fC [private]\fP"
+Заполнение поля 'тип сигнала' в объектах строба значениями из ТРИМЦ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsObj\fP указатель на массив объектов имитации текущего строба сообщения Е2ТРИМЦ 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillSigPhases (const ImitStrobe * trimtsStrb, \fBSharedConst::PolarizationTypes\fP polarType)\fC [private]\fP"
+Заполнение фаз сигналов строба для всех поляризаций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrimtsStrb\fP указатель на объект строба имитации сообщения Е2ТРИМЦ 
+.br
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::fillStationParams (\fBCMsgModelTypes::StationParams\fP * stParams)\fC [private]\fP"
+Запоминание переданных в модель параметров станции\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstParams\fP указатель на объект параметров модели станции 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::formControlMsg (const \fBCMsgModelTypes::InputMessages\fP * inputMsgs, int32_t trprStrbIndex, int32_t trimtsStrbIndex, \fBSharedConst::PolarizationTypes\fP polarType)"
+Главная функция класса\&. Используя входные параметры заполняет те поля УС, которые не зависят от порядкового номера ячейки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputMsgs\fP указатель на объект входных сообщений 
+.br
+\fItrprStrbIndex\fP порядковый номер (индекс) строба в ТРПР 
+.br
+\fItrimtsStrbIndex\fP порядковый номер (индекс) строба в ТРИМЦ 
+.br
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+
+.SS "int32_t ModelNS23817A620S1823::ControlMsg::getChannelXYCoords (uint32_t chanNum, double * x, double * y) const"
+Занесение координат указанного канала (сквозной номер в поляризации) в заданные аргументы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP номер канала в нумерации модели 
+.br
+\fIx\fP указатель на переменную для хранения координаты x 
+.br
+\fIy\fP указатель на переменную для хранения координаты y 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 в случае пустых входных указателей или слишком большого номера канала или 0 если всё хорошо
+.RE
+.PP
+Нумерация каналов на входе как в модели 
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::getDFGroupNum (uint32_t chanNum) const"
+Выдача номера пеленгационной группы исходя из номера канала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchanNum\fP сквозной номер канала в поляризации в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер пеленгационной группы 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::getFirstNonVirtualChannelNum ()\fC [private]\fP"
+Возврат номера нулевого канала первой невиртуальной ячейки на полотне в нумерации модели\&. Актуально только для Воронеж-СМ, для других станций возвращается номер нулевого канала нулевой ячейки\&. 
+.PP
+\fBReturns\fP
+.RS 4
+номер нулевого канала первой невиртуальной ячейки на полотне в нумерации модели 
+.RE
+.PP
+
+.SS "float ModelNS23817A620S1823::ControlMsg::getIppaU (int32_t aInterfIndex) const"
+Выдача координаты U заданной активной помехи сообщения Е2ИППА\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaInterfIndex\fP индекс активной помехи сообщения Е2ИППА 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+координата U заданной активной помехи 
+.RE
+.PP
+
+.SS "float ModelNS23817A620S1823::ControlMsg::getIppaV (int32_t aInterfIndex) const"
+Выдача координаты V заданной активной помехи сообщения Е2ИППА\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaInterfIndex\fP индекс активной помехи сообщения Е2ИППА 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+координата V заданной активной помехи 
+.RE
+.PP
+
+.SS "TStrobe ModelNS23817A620S1823::ControlMsg::getStrobe () const\fC [inline]\fP"
+Строб ТРПР, которому соответствует текущее сообщение 
+.SS "void ModelNS23817A620S1823::ControlMsg::getWlb (uint32_t nfil, uint32_t wlbNum, int32_t * wlbBuf) const"
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::isSumDiffDF () const\fC [private]\fP"
+Проверка строба на то, что в нём назначена суммарно-разностная пеленгация\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true если в стробе назначена суммарно-разностная пеленгация, false если что-то другое
+.RE
+.PP
+СРП бывает только в целевых стробах\&. Есть только в Воронеж-М\&. 
+.SS "bool ModelNS23817A620S1823::ControlMsg::isUnmaskedCell (uint32_t crateNum, uint32_t cellNum, \fBSharedConst::PolarizationTypes\fP polarType) const"
+Проверка маски каналов в заданной аргументами ячейке объекта на присутствие в ней хотя бы одного размаскированного канала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIcellNum\fP номер ячейки в крейте 
+.br
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+если в заданной параметрами ячейке размаскирован хотя бы один канал, то возвращается true, в противном случае - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::isUnmaskedCrate (uint32_t crateNum, \fBSharedConst::PolarizationTypes\fP polarType) const"
+Проверка маски каналов в заданном аргументами крейте объекта на присутствие в нём хотя бы одного размаскированного канала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcrateNum\fP номер крейта 
+.br
+\fIpolarType\fP тип поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+если в заданном параметрами крейте размаскирован хотя бы один канал, то возвращается true, в противном случае - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::isUnmaskedPolar () const"
+Проверка маски каналов текущей поляризации объекта на присутствие в ней хотя бы одного размаскированного канала\&. 
+.PP
+\fBReturns\fP
+.RS 4
+если в текущей поляризации (номер которой прописан в стробе) размаскирован хотя бы один канал, то возвращается true, в противном случае - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::isUnmaskedPolar (\fBSharedConst::PolarizationTypes\fP polar) const"
+Проверка маски каналов указанной поляризации объекта на присутствие в ней хотя бы одного размаскированного канала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP тип поляризации 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+если в заданной параметром поляризации размаскирован хотя бы один канал, то возвращается true, в противном случае - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::isUnmaskedPolar (\fBSharedConst::PolarizationTypes\fP polar, \fBSharedConst::StationType\fP stationType) const"
+Проверка маски каналов указанной поляризации и типа станции объекта на присутствие в ней хотя бы одного размаскированного канала\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolar\fP тип поляризации 
+.br
+\fIstationType\fP тип станции 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+если в заданных параметрами поляризации и типе станции размаскирован хотя бы один канал, то возвращается true, в противном случае - false 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::isVirtualChannel (uint32_t mCh) const"
+Проверка на принадлежность заданного канала одной из виртуальных ячеек станции Воронеж-СМ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP номер канала в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+если заданный канал (сквозной номер в поляризации) находится в одной из виртуальных ячеек Воронеж-СМ, то возвращается true\&. В противном случае - false 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::latticeCh2Model (uint32_t lCh) const"
+Перевод номера канала из нумерации полотна в нумерацию модели Общая для всех станций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlCh\fP номер канала в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в нумерации модели 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::latticeCl2ModelSM (uint32_t lCl) const"
+Перевод номера 223й ячейки станции Воронеж-СМ из нумерации полотна в нумерацию модели\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlCl\fP номер 223й ячейки в нумерации полотна 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер 223й ячейки в нумерации модели 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::modelCh2Lattice (uint32_t mCh) const"
+Пересчёт внутреннего номера канала модели в номер как на полотне\&. Общая для всех станций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCh\fP номер канала в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер канала в нумерации полотна 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::modelCl2Lattice (uint32_t mCl) const"
+Пересчёт внутреннего номера ячейки модели в номер как на полотне\&. Общая для всех станций\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCl\fP номер ячейки в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер ячейки в нумерации полотна 
+.RE
+.PP
+
+.SS "uint32_t ModelNS23817A620S1823::ControlMsg::modelCr2Lattice (uint32_t mCr) const"
+Пересчёт внутреннего номера крейта модели в номер как на полотне\&. Общая для всех станций, но актуальна только для МРИКа\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImCr\fP номер крейта в поляризации в нумерации модели 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер крейта в поляризации в нумерации полотна 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::precomputeCommonData ()"
+Вычислить общие данные (данные, одинаковые для всех ячеек)\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::printCntrlMsg () const"
+Вывод на печать (в поток вывода) значений всех полей УС\&. 
+.SS "void ModelNS23817A620S1823::ControlMsg::printCntrlMsgObjects (int32_t objNum) const\fC [private]\fP"
+Печать в поток вывода значений всех полей всех объектов строба\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobjNum\fP номер объекта 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::rememberKlbAndAfr (const \fBCMsgModelTypes::InputMessages\fP * inputMsgs)\fC [private]\fP"
+Занесение заданных сетевым сообщением Е2КЛБ калибровочных коэффициентов и векторов АФР (Е2АФР) во внутренние буферы\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputMsgs\fP указатель на объект входных сообщений 
+.RE
+.PP
+
+.SS "bool ModelNS23817A620S1823::ControlMsg::sendCell412ChangedSignal () const"
+Отсылка сигнала (вызов коллбэка) наверх, что в модели сменилась 412я ячейка\&. 
+.PP
+\fBReturns\fP
+.RS 4
+false если необходимый коллбэк не задан, true - если коллбэк исполнился успешно 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::setCallbacks (\fBCallbacks\fP * callbacks)"
+Сохранение указателей на коллбэки для модели внутри УС\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallbacks\fP указатель на объект структуры коллбэков 
+.RE
+.PP
+
+.SS "void ModelNS23817A620S1823::ControlMsg::setChannelsMask (const \fBChannelsMask\fP * chMask, \fBSharedConst::StationType\fP stType)"
+Запоминание маски каналов, пришедшей в сетевом сообщении Е2МАСК, во внутреннем буфере\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchMask\fP указатель на объект маски каналов 
+.br
+\fIstType\fP тип станции 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTrkp\fP ModelNS23817A620S1823::ControlMsg::afr\fC [private]\fP"
+объект класса сообщения АФР 
+.SS "\fBCallbacks\fP ModelNS23817A620S1823::ControlMsg::cbacks"
+указатели на коллбэки 
+.SS "std::shared_ptr<\fBCMsgModelTypes::StationConfig\fP> ModelNS23817A620S1823::ControlMsg::config\fC [private]\fP"
+Статическая конфигурация станции (объекты координат каналов, Ar, Wlb и т\&.д\&.) XXX config\&.chMask нифига не статическая - похоже, она устанавливается по входному сообщению E2MASK 
+.SS "std::vector<double> ModelNS23817A620S1823::ControlMsg::d2zsInCh\fC [private]\fP"
+дальности до источника в каждом канале, м 
+.SS "std::vector<std::vector<double> > ModelNS23817A620S1823::ControlMsg::d2zsInChRays\fC [private]\fP"
+дальности до источника в каждом канале каждого луча группы, м 
+.SS "std::shared_ptr<\fBHeterodyneDataHolder\fP> ModelNS23817A620S1823::ControlMsg::heterData"
+Предвычисленные даные гетеродина для канала; в М они одинаковы для всех каналов, в СМ они одинаковы для всех каналов, когда PAR_SIGN::Dev == 0 
+.SS "\fBCMsgSharedTypes::ImitObject\fP ModelNS23817A620S1823::ControlMsg::imitObjects[\fBmaxImitObjects\fP]"
+массив параметров объектов для имитации 
+.SS "\fBIppa\fP ModelNS23817A620S1823::ControlMsg::ippa\fC [private]\fP"
+объект класса сообщения ИППА 
+.SS "\fBTrkp\fP ModelNS23817A620S1823::ControlMsg::klb\fC [private]\fP"
+объект класса сообщения КЛБ 
+.SS "double ModelNS23817A620S1823::ControlMsg::maxDelayInObj[\fBmaxImitObjects\fP]\fC [private]\fP"
+максимальная задержка в каналах в каждом объекте строба, в целом числе дискретов частоты Fд 
+.SS "const uint32_t ModelNS23817A620S1823::ControlMsg::maxNfilValue = 2048\fC [static]\fP"
+максимальное значение длительности импульсной характеристики (ИХ) фильтра ПЧВО в числе выборок частоты 
+.SS "double ModelNS23817A620S1823::ControlMsg::minDist2ZSource\fC [private]\fP"
+минимальная дальность до источника по каналам для центра группы лучей, в метрах 
+.SS "double ModelNS23817A620S1823::ControlMsg::minDist2ZSource4EachPap[maxActiveInterferences]\fC [private]\fP"
+минимальная дистанция до источника для каждой активной помехи 
+.SS "double ModelNS23817A620S1823::ControlMsg::minDist2ZSourceInRays[\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxRays\fP]\fC [private]\fP"
+минимальная дальность до источника по каналам для каждого луча группы, в метрах 
+.SS "double ModelNS23817A620S1823::ControlMsg::pftpMinDelay\fC [private]\fP"
+минимальная задержка в каналах поляризации для центра группы лучей (для ПЧВО), в метрах 
+.SS "double ModelNS23817A620S1823::ControlMsg::pftpMinDelayInRays[\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxRays\fP]\fC [private]\fP"
+минимальная задержка в каналах поляризации для каждого луча группы (для ПЧВО), в метрах 
+.SS "double ModelNS23817A620S1823::ControlMsg::pftpPapMinDelayInInterf[maxActiveInterferences]\fC [private]\fP"
+минимальная задержка в каналах поляризации для каждой активной помехи (для ПЧВО), в метрах 
+.SS "\fBCMsgModelTypes::StationParams\fP ModelNS23817A620S1823::ControlMsg::stationParams"
+объект параметров станции 
+.SS "\fBCMsgSharedTypes::ImitStrobe\fP ModelNS23817A620S1823::ControlMsg::strb"
+объект строба тактового расписания 
+.SS "\fBCMsgSharedTypes::ImitTact\fP ModelNS23817A620S1823::ControlMsg::tactHeader"
+объект заголовка тактового расписания 
+.SS "TrimtsMsg ModelNS23817A620S1823::ControlMsg::trimts\fC [private]\fP"
+объект структуры сообщения Е2ТРИМЦ 
+.SS "E2TRPR ModelNS23817A620S1823::ControlMsg::trpr\fC [private]\fP"
+объект структуры сообщения Е2ТРПР 
+.SS "int ModelNS23817A620S1823::ControlMsg::trprStrbIdx\fC [private]\fP"
+Текущий строб из ТРПР (строб, преобразованный в форму для модели) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

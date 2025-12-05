@@ -1,0 +1,5 @@
+<map id="drop_fc_exceeded_queue_limit" name="drop_fc_exceeded_queue_limit">
+<area shape="rect" id="Node000001" title="Функция удаляет ФУ, превышающее допустимый размер очереди ФУ." alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$fcmgmt_8cpp.html#a4bc1f244997267d01a67797efe2a5317" title="Функция удаляет заданный квант ФУ из контейнера ФУ." alt="" coords="240,13,331,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,23,226,23,226,28,193,28"/>
+</map>

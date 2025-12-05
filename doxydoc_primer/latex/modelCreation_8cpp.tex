@@ -1,0 +1,33 @@
+\doxysection{src/model\+Creation.cpp File Reference}
+\hypertarget{modelCreation_8cpp}{}\label{modelCreation_8cpp}\index{src/modelCreation.cpp@{src/modelCreation.cpp}}
+{\ttfamily \#include "{}model\+Main.\+h"{}}\newline
+Include dependency graph for model\+Creation.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelCreation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+::\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{modelCreation_8cpp_a939897aa08d7d51d1ef962664eb5a7d1}{create\+Model\+Object}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modelCreation_8cpp_a939897aa08d7d51d1ef962664eb5a7d1}\label{modelCreation_8cpp_a939897aa08d7d51d1ef962664eb5a7d1} 
+\index{modelCreation.cpp@{modelCreation.cpp}!createModelObject@{createModelObject}}
+\index{createModelObject@{createModelObject}!modelCreation.cpp@{modelCreation.cpp}}
+\doxysubsubsection{\texorpdfstring{createModelObject()}{createModelObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+::\+Interface}} \texorpdfstring{$\ast$}{*} create\+Model\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Создание объекта модели. Память для объекта выделяется в куче, поэтому важно помнить, что после использования на указатель надо натравить delete. Доступ к модели осуществляется только через функции интерфейса. 
+\begin{DoxyParams}{Parameters}
+{\em init\+Lvl} & уровень инициализации объекта модели. control\+Msgs\+Only -\/ расчёт только УС full\+Init -\/ инициализация помимо памяти УС ещё и памяти для работы модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на объект интерфейсной части модели 
+\end{DoxyReturn}

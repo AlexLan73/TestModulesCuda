@@ -1,0 +1,88 @@
+\doxysection{Server\+Loop\+::Client\+Conn Struct Reference}
+\hypertarget{structServerLoop_1_1ClientConn}{}\label{structServerLoop_1_1ClientConn}\index{ServerLoop::ClientConn@{ServerLoop::ClientConn}}
+
+
+Collaboration diagram for Server\+Loop\+::Client\+Conn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{structServerLoop_1_1ClientConn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structServerLoop_1_1ClientConn_ad75d3612f65aa09a4f9d1cd440528a7f}{Client\+Conn}} (int fd)
+\begin{DoxyCompactList}\small\item\em Создает объект из conneted-\/сокета fd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+libutils\+::fdistream \mbox{\hyperlink{structServerLoop_1_1ClientConn_ae6dc598202f87d9cf448ba873a597fac}{in}}
+\begin{DoxyCompactList}\small\item\em Входной поток (на дескрипторе сокета) \end{DoxyCompactList}\item 
+libutils\+::fdostream \mbox{\hyperlink{structServerLoop_1_1ClientConn_af1ab91a383fcde121ce26fcbd4c96351}{out}}
+\begin{DoxyCompactList}\small\item\em Выходной поток (на дубликате дескриптора сокета) \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classServerLoop_af056a2ec76f3ce64931945277302e4be}{Client\+Port\+In\+\_\+t}} $>$ \mbox{\hyperlink{structServerLoop_1_1ClientConn_a943cb7294cbb8c6e1b2bb8373cd32c30}{port\+\_\+in}}
+\begin{DoxyCompactList}\small\item\em Порт, из которого читаются запросы (сделан поверх in) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structServerLoop_1_1ClientConn_a25102547037362a1f3e91acd27241919}{is\+\_\+open}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Клиентское соединение; по сути потоки данных для В/В из connected-\/сокета 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structServerLoop_1_1ClientConn_ad75d3612f65aa09a4f9d1cd440528a7f}\label{structServerLoop_1_1ClientConn_ad75d3612f65aa09a4f9d1cd440528a7f} 
+\index{ServerLoop::ClientConn@{ServerLoop::ClientConn}!ClientConn@{ClientConn}}
+\index{ClientConn@{ClientConn}!ServerLoop::ClientConn@{ServerLoop::ClientConn}}
+\doxysubsubsection{\texorpdfstring{ClientConn()}{ClientConn()}}
+{\footnotesize\ttfamily Server\+Loop\+::\+Client\+Conn\+::\+Client\+Conn (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Создает объект из conneted-\/сокета fd. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structServerLoop_1_1ClientConn_ae6dc598202f87d9cf448ba873a597fac}\label{structServerLoop_1_1ClientConn_ae6dc598202f87d9cf448ba873a597fac} 
+\index{ServerLoop::ClientConn@{ServerLoop::ClientConn}!in@{in}}
+\index{in@{in}!ServerLoop::ClientConn@{ServerLoop::ClientConn}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily libutils\+::fdistream Server\+Loop\+::\+Client\+Conn\+::in}
+
+
+
+Входной поток (на дескрипторе сокета) 
+
+\Hypertarget{structServerLoop_1_1ClientConn_a25102547037362a1f3e91acd27241919}\label{structServerLoop_1_1ClientConn_a25102547037362a1f3e91acd27241919} 
+\index{ServerLoop::ClientConn@{ServerLoop::ClientConn}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!ServerLoop::ClientConn@{ServerLoop::ClientConn}}
+\doxysubsubsection{\texorpdfstring{is\_open}{is\_open}}
+{\footnotesize\ttfamily bool Server\+Loop\+::\+Client\+Conn\+::is\+\_\+open}
+
+Флаг "{}соединение является открытым"{} -\/ сбрасывается, когда обнаруживается закрытие соединения клиентом (сам \doxylink{structServerLoop_1_1ClientConn}{Client\+Conn} уничтожается не в этот момент, а по уничтожению последнего shared\+\_\+ptr, так что может некоторое время жить с is\+\_\+open == false); понятно, что после закрытия соединения операции в/в с in и out бесполезны \Hypertarget{structServerLoop_1_1ClientConn_af1ab91a383fcde121ce26fcbd4c96351}\label{structServerLoop_1_1ClientConn_af1ab91a383fcde121ce26fcbd4c96351} 
+\index{ServerLoop::ClientConn@{ServerLoop::ClientConn}!out@{out}}
+\index{out@{out}!ServerLoop::ClientConn@{ServerLoop::ClientConn}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily libutils\+::fdostream Server\+Loop\+::\+Client\+Conn\+::out}
+
+
+
+Выходной поток (на дубликате дескриптора сокета) 
+
+\Hypertarget{structServerLoop_1_1ClientConn_a943cb7294cbb8c6e1b2bb8373cd32c30}\label{structServerLoop_1_1ClientConn_a943cb7294cbb8c6e1b2bb8373cd32c30} 
+\index{ServerLoop::ClientConn@{ServerLoop::ClientConn}!port\_in@{port\_in}}
+\index{port\_in@{port\_in}!ServerLoop::ClientConn@{ServerLoop::ClientConn}}
+\doxysubsubsection{\texorpdfstring{port\_in}{port\_in}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classServerLoop_af056a2ec76f3ce64931945277302e4be}{Client\+Port\+In\+\_\+t}}$>$ Server\+Loop\+::\+Client\+Conn\+::port\+\_\+in}
+
+
+
+Порт, из которого читаются запросы (сделан поверх in) 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/jsonrpc/\mbox{\hyperlink{server__loop_8h}{server\+\_\+loop.\+h}}\end{DoxyCompactItemize}

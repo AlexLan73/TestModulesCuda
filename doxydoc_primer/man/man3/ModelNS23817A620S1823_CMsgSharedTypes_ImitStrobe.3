@@ -1,0 +1,348 @@
+.TH "ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <controlMsgSharedTypes\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBid\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBadcLength\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBblankThreshold\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBprocLength\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBoffsetInProcStrb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBoffsetInAdcStrb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBadcStrbRealLen\fP"
+.br
+.ti -1c
+.RI "int32_t \fBheterFreqPoint\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBrays\fP"
+.br
+.ti -1c
+.RI "\fBRayCoords\fP \fBraysCoords\fP [\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxRays\fP]"
+.br
+.ti -1c
+.RI "\fBRayCoords\fP \fBdfGroupCenter\fP [\fBSharedConst::maxDFGroups\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBtype\fP"
+.br
+.ti -1c
+.RI "int32_t \fBdrofc\fP"
+.br
+.ti -1c
+.RI "\fBChanCoords\fP \fBchanCoords\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "float \fBarCoefs\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBobjQuantity\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBselfNoiseIntens\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBreserve2\fP"
+.br
+.ti -1c
+.RI "double \fBpreDigitDelays\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBpftpDelays\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "int32_t \fBobjMaxDelay\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBpftpStepWidth\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBpftpWinWidth\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBamplDistribNum\fP"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBspatProcVect\fP [\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::maxRays\fP]"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBwpapCoefs\fP [\fBSharedConst::maxChannelsInCellSM\fP][maxActiveInterferences]"
+.br
+.ti -1c
+.RI "std::complex< int32_t > \fBamfCoefs\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBkgd\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBkgrs\fP"
+.br
+.ti -1c
+.RI "int16_t \fBn1grs\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBbasicNihs\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBtrueNihs\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBshgd\fP"
+.br
+.ti -1c
+.RI "int32_t \fBnfgdfu\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBsigPolynomial\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBsigInitSequence\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdivisionCoef\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBimpulsesNumber\fP"
+.br
+.ti -1c
+.RI "\fBSharedConst::PolarsCombining\fP \fBpolarsCombiningWay\fP"
+.br
+.ti -1c
+.RI "\fBSharedConst::PolarizationTypes\fP \fBpolarType\fP"
+.br
+.ti -1c
+.RI "double \fBprocCarrierFreq\fP"
+.br
+.ti -1c
+.RI "std::complex< double > \fBklb\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "std::complex< double > \fBafr\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "bool \fBafrPerm\fP"
+.br
+.ti -1c
+.RI "bool \fBklbPerm\fP"
+.br
+.ti -1c
+.RI "bool \fBadaptPerm\fP"
+.br
+.ti -1c
+.RI "int32_t \fBpftpDfm\fP"
+.br
+.ti -1c
+.RI "int32_t \fBpftpSigLength\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBamplAfr\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBsigInChanInitPhase\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "uint32_t \fBsigInChanFreq\fP [\fBSharedConst::maxChannelsInCellSM\fP]"
+.br
+.ti -1c
+.RI "int32_t \fBletteredFreqOfRad\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBactiveInterfsNumber\fP"
+.br
+.ti -1c
+.RI "double \fBdist2ZSource\fP"
+.br
+.ti -1c
+.RI "double \fBdist2ZObject\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdfGroupsNum\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdfTypeOfTarget\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBpolarMask\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnShift\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBn1Norm\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBn2Norm\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBwlbNum\fP"
+.br
+.ti -1c
+.RI "int16_t \fBcorrFreqDist\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBwlbNorm\fP"
+.br
+.ti -1c
+.RI "\fBSharedConst::PhasingType\fP \fBphasingType\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Параметры имитируемого строба; в общем-то, это строб приемника 
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::activeInterfsNumber"
+количество активных помех (в ИППА) 
+.SS "bool ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::adaptPerm"
+разрешение на использование адаптивных векторов в ППО 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::adcLength"
+длина строба для имитатора АЦП (по ТРИМЦ) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::adcStrbRealLen"
+реальная длина данных строба имитации, которые попадают в строб обработки 
+.SS "std::complex<double> ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::afr[\fBSharedConst::maxChannelsInCellSM\fP]"
+вектора АФР для текущей ячейки 412-06 (223) 
+.SS "bool ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::afrPerm"
+разрешение на использование векторов АФР в имитаторе АЦП 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::amfCoefs[\fBSharedConst::maxChannelsInCellSM\fP]"
+коэффициенты для режима ФАМ (формирование антенных модулей) 
+.SS "uint16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::amplAfr[\fBSharedConst::maxChannelsInCellSM\fP]"
+амплитуды АФР для имитатора АЦП по каждому каналу 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::amplDistribNum"
+номер амплитудного распределения 
+.SS "float ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::arCoefs[\fBSharedConst::maxChannelsInCellSM\fP]"
+коэффициенты амплитудного распределения по антенне в каналах ячейки 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::basicNihs"
+длительность импульсной характеристики сигнала (длина сигнала в децимированных выборках) 
+.SS "uint16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::blankThreshold"
+порог бланкирования 
+.SS "\fBChanCoords\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::chanCoords[\fBSharedConst::maxChannelsInCellSM\fP]"
+координаты каналов\&. Количество каналов задаётся в chanQuantity, сами координаты выбираются и заносятся сюда из таблицы координат каналов (класс \fBXYChanCoords\fP) 
+.SS "int16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::corrFreqDist"
+коэффициент коррекции частотных искажений 
+.SS "\fBRayCoords\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::dfGroupCenter[\fBSharedConst::maxDFGroups\fP]"
+координаты центра пеленгационной группы 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::dfGroupsNum"
+количество пеленгационных групп 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::dfTypeOfTarget"
+тип пеленгации цели 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::dist2ZObject"
+дальность до объекта, м 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::dist2ZSource"
+дальность до источника, м 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::divisionCoef"
+коэффициент деления полотна 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::drofc"
+безразмерная скорость изменения частоты (Воронеж-СМ) 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::heterFreqPoint"
+частота гетеродина (номер частотной точки) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::id"
+индентификатор(номер) строба 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::impulsesNumber"
+количество импульсов в некогерентной пачке 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::kgd"
+количество гипотез по дальности 
+.SS "uint16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::kgrs"
+код величины доплеровского диапазона в числе гипотез по скорости 
+.SS "std::complex<double> ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::klb[\fBSharedConst::maxChannelsInCellSM\fP]"
+калибровочные вектора для текущей ячейки 412-06 (223) 
+.SS "bool ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::klbPerm"
+разрешение на использование векторов КЛБ в ППО 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::letteredFreqOfRad"
+литерная частота излучения 
+.SS "int16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::n1grs"
+код частоты начала доплеровского диапазона 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::n1Norm"
+норма для 978, 223 и 435 блоков Не используется в модели 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::n2Norm"
+норма для 232 блока Не используется в модели 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::nfgdfu"
+положение первое гипотезы по дальности в номерах гипотез 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::nShift"
+сдвиг в режимах калибровки, РИУШ и дробления полотна для ФПО МПК\&. Не используется в модели 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::objMaxDelay"
+максимальная задержка в каналах поляризации (для объектов) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::objQuantity"
+количество объектов в стробе 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::offsetInAdcStrb"
+смещение в дискретах от начала строба имитации, показывающее на сколько дискрет нужно сдвинуться, чтобы данные по времени оказались в стробе обработки 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::offsetInProcStrb"
+смещение в дискретах от начала строба обработки, показывающее на сколько нужно сдвинуться, чтобы достичь начала строба имитации 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::pftpDelays[\fBSharedConst::maxChannelsInCellSM\fP]"
+задержки в каналах ячейки для центра группы лучей (для ПЧВО) 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::pftpDfm"
+девиация частоты зондирующего сигнала (c223 - Воронеж-СМ) 
+.SS "int32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::pftpSigLength"
+длительность сигнала в обработке, в дискретах 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::pftpStepWidth"
+шаг окна по данным ПЧВО 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::pftpWinWidth"
+ширина окна данных ПЧВО 
+.SS "\fBSharedConst::PhasingType\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::phasingType"
+тип фазирования антенной решётки 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::polarMask"
+маска поляризаций\&. Показывает для каких поляризаций будет обсчитываться строб 
+.SS "\fBSharedConst::PolarsCombining\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::polarsCombiningWay"
+способ объединения сигналов поляризаций 
+.SS "\fBSharedConst::PolarizationTypes\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::polarType"
+тип обрабатываемой в текущий момент поляризации 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::preDigitDelays[\fBSharedConst::maxChannelsInCellSM\fP]"
+задержки до оцифровки 
+.SS "double ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::procCarrierFreq"
+несущая частота для обработки (Fн) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::procLength"
+длина строба в обработке (по ТРПР) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::rays"
+количество лучей (определется по типу пеленгации цели из таблицы относительных координат лучей и количеству ПГ) 
+.SS "\fBRayCoords\fP ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::raysCoords[\fBSharedConst::maxDFGroups\fP][\fBSharedConst::maxRays\fP]"
+координаты лучей (не относительные) по всем лучам во всех ПГ 
+.SS "uint16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::reserve2"
+
+.SS "uint16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::selfNoiseIntens"
+интенсивность собственного шума 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::shgd"
+шаг гипотез по дальности в числе выборок по выходу ПЧВО 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::sigInChanFreq[\fBSharedConst::maxChannelsInCellSM\fP]"
+частота сигнала в канале (Воронеж-М/СМ) a1 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::sigInChanInitPhase[\fBSharedConst::maxChannelsInCellSM\fP]"
+начальная фаза сигнала в канале (Воронеж-М/СМ) a0 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::sigInitSequence"
+код начальной последовательносиь для сигнала (для ЧВО) 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::sigPolynomial"
+полином М-последовательности для сигнала (для ЧВО) 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::spatProcVect[\fBSharedConst::maxChannelsInCellSM\fP][\fBSharedConst::maxRays\fP]"
+вектор коэффициентов ПО (spatial processing) для всех каналов ячейки и заданного количества лучей 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::trueNihs"
+длина сигнала в децимированных выборках с учетом скорости цели 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::type"
+код типа строба 
+.SS "uint16_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::wlbNorm"
+норма вектора коэффициентов ЦФНЧ 
+.SS "uint32_t ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::wlbNum"
+номер импульсной характеристики второго ЦФНЧ в ПЧВО 
+.SS "std::complex<int32_t> ModelNS23817A620S1823::CMsgSharedTypes::ImitStrobe::wpapCoefs[\fBSharedConst::maxChannelsInCellSM\fP][maxActiveInterferences]"
+коэффициенты постановщиков активных помех (Wпап) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

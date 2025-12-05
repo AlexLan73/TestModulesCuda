@@ -1,0 +1,39 @@
+.TH "src/mpk1/blk223/stuff.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk223/stuff.h \- Модуль вспомогательных функций и макросов\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCHECK_UP\fP(cond, \&.\&.\&.)"
+.br
+.RI "Проверка условия, печать сообщения об ошибке, если оно неверно и возврат из функции с кодом ошибки\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Модуль вспомогательных функций и макросов\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CHECK_UP(cond,  \&.\&.\&.)"
+\fBValue:\fP.PP
+.nf
+    if (!(cond)) {                      \\
+        char msgbuf[256];           \\
+        snprintf(msgbuf, sizeof(msgbuf), __VA_ARGS__);  \\
+        return ErrMsg(msgbuf);              \\
+    }
+.fi
+
+.PP
+Проверка условия, печать сообщения об ошибке, если оно неверно и возврат из функции с кодом ошибки\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

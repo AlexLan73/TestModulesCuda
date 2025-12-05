@@ -1,0 +1,294 @@
+.TH "src/mpk1/blk223/blk223fc.cpp" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/mpk1/blk223/blk223fc.cpp \- Расчет функционального управления для 223-й ячейки\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'blk223fc\&.h'\fP
+.br
+\fC#include '\&.\&./controlMsg\&.h'\fP
+.br
+\fC#include 'libfc\&.h'\fP
+.br
+\fC#include 'stuff\&.h'\fP
+.br
+\fC#include 'mpk/c223\&.h'\fP
+.br
+\fC#include <libutils/boconv\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint8_t \fBget_quarter_num\fP (uint32_t cellNum)"
+.br
+.ti -1c
+.RI "Result< \fBinterf_strobe_modes\fP > \fBcalc_asp_mode\fP (const unsigned divc, const unsigned rays, const unsigned kgrs, const unsigned nstr)"
+.br
+.RI "Функция уточняет код режима АСП (ПК) для аппаратуры\&. "
+.ti -1c
+.RI "static int \fBcalc_target_fctl_strobe\fP (const \fBControlMessage\fP *ctrl_msg, const int strobe_id, \fBfcq\fP *fcp)"
+.br
+.RI "Функция производит расчет целевых параметров заданного строба ФУ\&. "
+.ti -1c
+.RI "static uint64_t \fBcalc_noise_n_posl\fP (const uint64_t texec, const uint32_t strobe_id)"
+.br
+.RI "Функция производит расчет сдвигового регистра для шума\&. "
+.ti -1c
+.RI "static uint64_t \fBcalc_interf_n_posl\fP (const uint64_t texec, const uint32_t strobe_id)"
+.br
+.RI "Функция производит расчет сдвигового регистра для помехи\&. "
+.ti -1c
+.RI "static uint64_t \fBget_interf_poly\fP (const int interf_index)"
+.br
+.RI "Функция выбирает полином для помехи по заданному номеру\&. "
+.ti -1c
+.RI "static int \fBcalc_imit_fctl_strobe\fP (const \fBControlMessage\fP *ctrl_msg, const int strobe_id, \fBfcq\fP *fcp)"
+.br
+.RI "Функция производит расчет имитационных параметров заданного строба ФУ\&. "
+.ti -1c
+.RI "Result< bool > \fBvalidate_target_fctl_strobe\fP (const \fBControlMessage\fP *ctrl_msg, const int strobe_id, \fBfcq\fP *fcp)"
+.br
+.RI "Функция производит валидацию целевых параметров строба СМ\&. "
+.ti -1c
+.RI "int \fBcompute_fcq_for_hw\fP (const vector< \fBControlMessage\fP > &ctrl_msgs, \fBfcq\fP *fcqp)"
+.br
+.RI "Функция инициирует расчет и конвертацию ФУ для аппаратуры\&. "
+.ti -1c
+.RI "void \fBprint_fcq_dump\fP (const \fBfcq\fP *fcqp, FILE *out)"
+.br
+.RI "Функция производит печать 'сырого' дампа всего кванта ФУ\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const float \fBADDR_SPACE_DDS\fP = 1024\&."
+.br
+.ti -1c
+.RI "const float \fBSHGRS_TS\fP = 0\&.5"
+.br
+.ti -1c
+.RI "const unsigned \fBFULL_PLANE_CM\fP = 72"
+.br
+.ti -1c
+.RI "const int \fBFW_STROBE_TYPE_INTERF_WIDE\fP = 5"
+.br
+.RI "Тип строба: АСП ШЛ "
+.ti -1c
+.RI "const int \fBFW_STROBE_TYPE_INTERF_NARROW\fP = 5"
+.br
+.RI "Тип строба: АСП УЛ "
+.ti -1c
+.RI "const int \fBFW_STROBE_TYPE_INTERF_LEVEL\fP = 2"
+.br
+.RI "Тип строба: ПК "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Расчет функционального управления для 223-й ячейки\&. 
+
+Функции расчета ФУ для 223-й ячейки и его конвертации для прошивки\&. 
+.SH "Function Documentation"
+.PP 
+.SS "Result< \fBinterf_strobe_modes\fP > calc_asp_mode (const unsigned divc, const unsigned rays, const unsigned kgrs, const unsigned nstr)"
+
+.PP
+Функция уточняет код режима АСП (ПК) для аппаратуры\&. В зависимости от комбинации входных параметров функция определяет, для какого режима работы АСП они были заданы и возвращает соответствующее значение кода режима АСП\&. В случае неверно заданных параметров функция возвращает стандартный код ошибки и выводит поясняющий текст ошибки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdivc\fP Коэффициент дробления полотна\&. 
+.br
+\fIrays\fP Количество лучей\&. 
+.br
+\fIkgrs\fP Количество гипотез по скорости\&. 
+.br
+\fInstr\fP Номер строба\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+В случае успешного расчета возвращает код режима АСП\&. 
+.PP
+В случае ошибки возвращает стандартный код ошибки\&. 
+.RE
+.PP
+
+.SS "static int calc_imit_fctl_strobe (const \fBControlMessage\fP * ctrl_msg, const int strobe_id, \fBfcq\fP * fcp)\fC [static]\fP"
+
+.PP
+Функция производит расчет имитационных параметров заданного строба ФУ\&. Функция производит пересчет управляющего сообщения, сформированного частью модели, в структуру параметров заданного имитационного строба ФУ в соответствии с требованиями карты памяти ПЛИС\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIctrl_msg\fP Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели\&. 
+.br
+\fIstrobe_id\fP Номер строба в пределах такта (с 0)\&. 
+.br
+\fIfcp\fP Указатель на выходную структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает 0 как показатель успешного пересчета\&. 
+.RE
+.PP
+
+.SS "static uint64_t calc_interf_n_posl (const uint64_t texec, const uint32_t strobe_id)\fC [static]\fP"
+
+.PP
+Функция производит расчет сдвигового регистра для помехи\&. Функция производит расчет и возвращает полученное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItexec\fP Такт исполнения\&. 
+.br
+\fIstrobe_id\fP Номер строба (глобальный, не в такте)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает рассчитанное значение сдвигового регистра\&. 
+.RE
+.PP
+
+.SS "static uint64_t calc_noise_n_posl (const uint64_t texec, const uint32_t strobe_id)\fC [static]\fP"
+
+.PP
+Функция производит расчет сдвигового регистра для шума\&. Функция производит расчет и возвращает полученное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItexec\fP Такт исполнения\&. 
+.br
+\fIstrobe_id\fP Номер строба (глобальный, а не в такте)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает рассчитанное значение сдвигового регистра\&. 
+.RE
+.PP
+
+.SS "static int calc_target_fctl_strobe (const \fBControlMessage\fP * ctrl_msg, const int strobe_id, \fBfcq\fP * fcp)\fC [static]\fP"
+
+.PP
+Функция производит расчет целевых параметров заданного строба ФУ\&. Функция производит пересчет управляющего сообщения, сформированного частью модели, в структуру параметров заданного целевого строба ФУ в соответствии с требованиями карты памяти ПЛИС\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIctrl_msg\fP Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели\&. 
+.br
+\fIstrobe_id\fP Номер строба\&. 
+.br
+\fIfcp\fP Указатель на выходную структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает 0 как показатель успешного пересчета\&. 
+.RE
+.PP
+
+.SS "int compute_fcq_for_hw (const vector< \fBControlMessage\fP > & ctrl_msgs, \fBfcq\fP * fcqp)"
+
+.PP
+Функция инициирует расчет и конвертацию ФУ для аппаратуры\&. 
+.SS "static uint64_t get_interf_poly (const int interf_index)\fC [static]\fP"
+
+.PP
+Функция выбирает полином для помехи по заданному номеру\&. Функция производит расчет и возвращает полученное значение\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinterf_index\fP Индекс помехи\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Возвращает полином для требуемой помехи\&. 
+.RE
+.PP
+
+.SS "static uint8_t get_quarter_num (uint32_t cellNum)\fC [static]\fP"
+Вычисление номера четверти полотна по номеру ячейки 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellNum\fP = - номер ячейки на полотне (0\&.\&.71) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+номер четверти (0\&.\&.3) 
+.RE
+.PP
+
+.SS "void print_fcq_dump (const \fBfcq\fP * fcqp, FILE * out = \fCstdout\fP)"
+
+.PP
+Функция производит печать 'сырого' дампа всего кванта ФУ\&. Функция производит последовательный вывод дампа ФУ, предназначенного для ПЛИС\&. Формат, в котором выдаются данные, пригодны для моделирования работы прошивки в ModelSim\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfcqp\fP Указатель на структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ничего не возвращает\&. 
+.RE
+.PP
+
+.SS "Result< bool > validate_target_fctl_strobe (const \fBControlMessage\fP * ctrl_msg, const int strobe_id, \fBfcq\fP * fcp)"
+
+.PP
+Функция производит валидацию целевых параметров строба СМ\&. Функция производит как общие проверки на диапазоны допустимых значений в заданном стробе входящего сетевого сообщения ТРПР, так и проверки, зависящие от определенного типа строба и режима работы\&. В случае неверно заданных параметров функция возвращает стандартный код ошибки и выводит поясняющий текст ошибки\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIctrl_msg\fP Ссылка на вектор с управляющими сообщениями, рассчитанными блоком модели\&. 
+.br
+\fIstrobe_id\fP Номер строба\&. 
+.br
+\fIfcp\fP Указатель на выходную структуру блока ФУ\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+В случае успешного расчета возвращает is_ok\&. 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "const float ADDR_SPACE_DDS = 1024\&."
+Длина DDS коррелятора\&. На данный момент она равна 1024, но КЛМ планирует в будущем получить гораздо большие величины: 4096, 8192, и даже 16384\&. 
+.SS "const unsigned FULL_PLANE_CM = 72"
+Коэффициент деления полотна СМ, соответствующий дроблению на минимальные фрагменты (ячейки 223 в СМ)\&. 
+.SS "const int FW_STROBE_TYPE_INTERF_LEVEL = 2\fC [extern]\fP"
+
+.PP
+Тип строба: ПК 
+.SS "const int FW_STROBE_TYPE_INTERF_NARROW = 5\fC [extern]\fP"
+
+.PP
+Тип строба: АСП УЛ 
+.SS "const int FW_STROBE_TYPE_INTERF_WIDE = 5\fC [extern]\fP"
+
+.PP
+Тип строба: АСП ШЛ 
+.SS "const float SHGRS_TS = 0\&.5"
+Шаг расстановки гипотез на длительности сигнала\&. Пока что это значение константное (причем мы не используем параметр из ТРПР, но в будущем планируется прикрутить формулу 0\&.5 / ts)\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

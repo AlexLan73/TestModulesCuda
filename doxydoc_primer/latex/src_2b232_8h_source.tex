@@ -1,0 +1,202 @@
+\doxysection{b232.\+h}
+\hypertarget{src_2b232_8h_source}{}\label{src_2b232_8h_source}\index{src/b232.h@{src/b232.h}}
+\mbox{\hyperlink{src_2b232_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C232\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C232\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \textcolor{comment}{//\ [u]intNN\_t}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ std::vector}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelInterface_8h}{model/modelInterface.h}}>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controlMsg_8h}{controlMsg.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418__02_8h}{c418\_02.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sliceFile_8h}{sliceFile.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{c418__02Result_8h}{c418\_02Result.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{const}\ int32\_t\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8caad7812984971b1aae23e7b484d4e4}{crossValuesNum}}\ =\ 5;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark}{Mark}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark_aaada70656facb296958090418e064a71}{distance}};}
+\DoxyCodeLine{00028\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark_ac186991f121a3fe23b36266098f8d3a9}{filter}};}
+\DoxyCodeLine{00030\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark_a07a6511f33fd780608fab3aff4a48338}{ray}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ называется\ magnitude\ отчасти\ для\ того,\ чтобы\ не\ сталкиваться}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ с\ Monomark::amplitude,\ отчасти\ потому,\ что\ magnitude\ пришла\ на\ ум\ раньше}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark_a9a6a2bfe88e697bbb9e40a938449fb45}{magnitude}};}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a3f3456dc71748fa18b17ba2037c682d6}{operator\ >}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark}{Mark}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark}{Mark}}\&\ m2)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{return}\ m1.\mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark_a9a6a2bfe88e697bbb9e40a938449fb45}{magnitude}}\ >\ m2.\mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark_a9a6a2bfe88e697bbb9e40a938449fb45}{magnitude}};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark}{Monomark}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark}{Mark}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structVector2d}{Vector2d<double>}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a4701f1d9e67d4d82880f7edfd72dc881}{amplitude}};}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<Vector2d<std::complex<double>}}>>\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a81e3f6ab23d1c78ea4d3c4a6d7cc6712}{rawAmplitude}};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{structVector2d}{Vector2d<double>}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a9a641f58eba8ee6d2864a5a45f76e608}{threshold}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a2f9b4c612eee280e3d3ea36c3c6eedd6}{Monomark}}(uint\ nrays,\ uint\ kgrs)}
+\DoxyCodeLine{00055\ \ \ \ \ :\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a4701f1d9e67d4d82880f7edfd72dc881}{amplitude}}(\mbox{\hyperlink{structVector2d}{Vector2d}}<double>::make(nrays,\ kgrs))}
+\DoxyCodeLine{00056\ \ \ \ \ ,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a81e3f6ab23d1c78ea4d3c4a6d7cc6712}{rawAmplitude}}(\mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector2d}{Vector2d}}<\mbox{\hyperlink{namespacestd}{std}}::complex<double>>>::make(nrays,\ kgrs))}
+\DoxyCodeLine{00057\ \ \ \ \ ,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Monomark_a9a641f58eba8ee6d2864a5a45f76e608}{threshold}}(\mbox{\hyperlink{structVector2d}{Vector2d}}<double>::make(nrays,\ kgrs))}
+\DoxyCodeLine{00058\ \ \ \ \ \{\}}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark}{ComplexMark}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1Mark}{Mark}}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_ad215102289e90c423830243b31d1071daf3dd88de4d973ca6dfdb2ac2d2f6a6b6}{center}}=0,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_ad215102289e90c423830243b31d1071da003a37e2877cfb9a42dff5bdc006cc8a}{mDistance}}=1,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_ad215102289e90c423830243b31d1071da311056d6a95bcdd48fc5938ce15eabf0}{pDistance}}=2,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_ad215102289e90c423830243b31d1071da041abee2babda0714a6d3cba566f61d4}{mFilter}}=3,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_ad215102289e90c423830243b31d1071da1bb8e3aa8fe9a47cf20a763f111ef453}{pFilter}}=4\ \};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ [лучи][crossValuesNum]}}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{structVector2d}{Vector2d<double>}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a5a9ca0de8a5c477de670f2462fcad700}{amplitude}};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ [поляризации][лучи][crossValuesNum]}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<Vector2d<std::complex<double>}}>>\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a76bbe9d3792b1a3a532e469654374497}{rawAmplitude}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ [лучи][crossValuesNum]}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{structVector2d}{Vector2d<double>}}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a141d736248e66021c3da0efffd2a8ad5}{threshold}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a97738070685f640337884aac84d16cb1}{ComplexMark}}(uint\ nrays)}
+\DoxyCodeLine{00082\ \ \ \ \ :\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a5a9ca0de8a5c477de670f2462fcad700}{amplitude}}(\mbox{\hyperlink{structVector2d}{Vector2d}}<double>::make(nrays,\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8caad7812984971b1aae23e7b484d4e4}{crossValuesNum}}))}
+\DoxyCodeLine{00083\ \ \ \ \ ,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a76bbe9d3792b1a3a532e469654374497}{rawAmplitude}}(\mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector2d}{Vector2d}}<\mbox{\hyperlink{namespacestd}{std}}::complex<double>>>::make(nrays,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8caad7812984971b1aae23e7b484d4e4}{crossValuesNum}}))}
+\DoxyCodeLine{00085\ \ \ \ \ ,\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark_a141d736248e66021c3da0efffd2a8ad5}{threshold}}(\mbox{\hyperlink{structVector2d}{Vector2d}}<double>::make(nrays,\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8caad7812984971b1aae23e7b484d4e4}{crossValuesNum}}))}
+\DoxyCodeLine{00086\ \ \ \ \ \{\}}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobeExt}}\ :\ \textcolor{keyword}{public}\ TStrobe\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a49177b832bd0a7a4f15943023e77207d}{rays}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3}{ThresholdTypes}}\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a706b99ac1324c267f968bc2c0ac1d485}{ABSOLUTE}}\ \ \ \ \ \ \ =\ 1\ <<\ 0,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a2e53ad16eb9f3e8a6b1359d65c854443}{RELATIVE}}\ \ \ \ \ \ \ =\ 1\ <<\ 1,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3ade80ff09b35ee2b3e2784ba69a91b5c9}{FLOATING}}\ \ \ \ \ \ \ =\ 1\ <<\ 2,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a18eb0f28da1a62f9e2d2d2e47eadd3f8}{THRESHOLD\_MASK}}\ =\ (\mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a706b99ac1324c267f968bc2c0ac1d485}{ABSOLUTE}}\ |\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a2e53ad16eb9f3e8a6b1359d65c854443}{RELATIVE}}\ |\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3ade80ff09b35ee2b3e2784ba69a91b5c9}{FLOATING}})}
+\DoxyCodeLine{00104\ \ \ \ \ \};}
+\DoxyCodeLine{00105\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a2bb519a4325ee70a0d5a0af9a7a114ef}{type}};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a07a967daf6ccf8f43394d14e889c2684}{formEvalPerm}};}
+\DoxyCodeLine{00107\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a302a04385c3827eb9336bef3960fa0e0}{impulsesNumber}};}
+\DoxyCodeLine{00108\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a09471decf47f6cc982bde20474afc93c}{thWinSzR}};}
+\DoxyCodeLine{00109\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a39c2496cdd946304fa51e713cb6642ac}{thWinSzV}};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_aaf9be41c745d73b31a318007f85d4a0d}{searchLocalMax}};}
+\DoxyCodeLine{00111\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a73040ce09369b21429cc89caca7b11d2}{floatThresMult}};}
+\DoxyCodeLine{00112\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a8d1f24baa70ea38ab1d989c3adde4351}{relFixThresMult}};}
+\DoxyCodeLine{00113\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a44300f849f387e63c22566acc4c7668f}{absThreshold}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ в\ СВ\ это\ называется\ "{}длина\ строба\ в\ прореженных\ выборках"{}}}
+\DoxyCodeLine{00115\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a9ed1ff6befc44dee2d063551ffa5c1f2}{samplesInRay}};}
+\DoxyCodeLine{00116\ \ \ \ \ uint\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a3d068d2f1bd31eee1dd26dbe37109561}{polarsCombiningWay}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobeExt}}(\textcolor{keyword}{const}\ TStrobe\&);}
+\DoxyCodeLine{00119\ \};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{inline}\ uint\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac268cc00623ac63a91d32a213e33eb31}{thresholdBits}}(\textcolor{keyword}{const}\ TStrobe\&\ s)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ s.thres\_comb\ \&\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a18eb0f28da1a62f9e2d2d2e47eadd3f8}{TStrobeExt::THRESHOLD\_MASK}};}
+\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a3e5c9734a20c8b45ad0f030562b801ee}{thresholdAbsolute}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobeExt}}\&\ s)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac268cc00623ac63a91d32a213e33eb31}{thresholdBits}}(s)\ \&\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a706b99ac1324c267f968bc2c0ac1d485}{TStrobeExt::ABSOLUTE}};}
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a44220ca1ee8c1aeb327755c41b0f9632}{thresholdRelative}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobeExt}}\&\ s)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac268cc00623ac63a91d32a213e33eb31}{thresholdBits}}(s)\ \&\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3a2e53ad16eb9f3e8a6b1359d65c854443}{TStrobeExt::RELATIVE}};}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_a220002642ea2737c294fb6d5e0461770}{thresholdFloating}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobeExt}}\&\ s)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac268cc00623ac63a91d32a213e33eb31}{thresholdBits}}(s)\ \&\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt_a386f0f8b49a8f309b9f219c978148fa3ade80ff09b35ee2b3e2784ba69a91b5c9}{TStrobeExt::FLOATING}};}
+\DoxyCodeLine{00135\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232}{Block232}}\ \{}
+\DoxyCodeLine{00139\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a297f504386a2b98f254b25bd0dd9495b}{Block232}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a0f535d70b36a34fa5cb19ee3c9a463b7}{\string~Block232}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aa78c3b7491c528c96a2f286f9bdbffec}{setControlMessage}}(\textcolor{keyword}{const}\ TStrobe\&\ s);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aa78c3b7491c528c96a2f286f9bdbffec}{setControlMessage}}(\mbox{\hyperlink{classModelNS23817A620S1823_1_1ControlMsg}{ControlMsg}}\ *controlMsg);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a2adfe6c9305ad3446ff99c35e2f0c231}{getResults}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUcopoMsgBuf}{UcopoMsgBuf}}\ *ucopo);}
+\DoxyCodeLine{00156\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00158\ \ \ \ \ std::vector<Monomark>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a02d5cba527b33b631676ade5880678f6}{monomarks}};}
+\DoxyCodeLine{00160\ \ \ \ \ std::vector<ComplexMark>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aa1f9b569f478ba696b8031dd2c2f3188}{complexMarks}};}
+\DoxyCodeLine{00162\ \ \ \ \ std::unique\_ptr<TStrobeExt>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a82926498613b41cb6c3a1e7654f89657}{strb}};}
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ae8e6f49947f471202739ea890c1596c4}{stationType}};}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_af65fc9ada4494e8720aa768b6777ca73}{relFixThresholds}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}];}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a04b8a332558060e8ce944225bad1eef9}{packRelFixThresholds}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{SharedConst::maxRays}}];}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<std::vector<uint64\_t>}}>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ae6ab0ba78b88e8b3c55fa411d73ec72d}{copyTargetSigmas}};}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<std::vector<uint64\_t>}}>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a0772e9aa8cefca46eb216d18b7d110f3}{packTargetSigmas}};}
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{structVector3d}{Vector3d<double>}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a42f580427bf05f9d53d800f5a76650bc}{sumOfPolars}};}
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{structPolarized}{Polarized<Vector3d<double>}}>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a171f981b891aadd5cef90129c44d37df}{packModeData}};}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{structVector3d}{Vector3d<double>}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_affeb9c31bde7031f3ff9d592f3704998}{flThreshold}};}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions}{SavePermissions}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ad62784fa0d0a10098ae8561801d9f772}{savePerm}};}
+\DoxyCodeLine{00184\ \ \ \ \ std::unique\_ptr<SliceFile>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a5224a84b0ae57b82e8c9461e20f68eb9}{tfpSliceNormalized}};}
+\DoxyCodeLine{00190\ \ \ \ \ std::unique\_ptr<SliceFile>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a779e0092fec10b3ae960b839511dfe22}{dpSlice}};}
+\DoxyCodeLine{00194\ \ \ \ \ std::unique\_ptr<SliceFile>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_acd9ea288a4aaaa6206a0afb19f3933eb}{tfpSumPolSlice}};}
+\DoxyCodeLine{00196\ \ \ \ \ std::unique\_ptr<SliceFile>\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a51779042482d0218b6b5081f5d03ebaf}{ucopoSlice}};}
+\DoxyCodeLine{00198\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a37fa7dc94ce70225271c3878e2c476cf}{currPackStrbID}};}
+\DoxyCodeLine{00200\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a95407b49da7096a109dfe758144aa83e}{currPackStrbImpCounter}};}
+\DoxyCodeLine{00202\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a9e8fd4fbb28dd6b6e88d69fc55780e7f}{accumulatedPackImpulses}};}
+\DoxyCodeLine{00203\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a0353af74351cdbba4c188ccd73128817}{tfpParamsCorrection}}(int32\_t\ *nfgdfu,\ uint32\_t\ *kgrs,}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ *n1grs,\ uint32\_t\ *kgd)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aa6fe1185a2992ef317c10913144a428b}{calcFloatingThresholds}}();}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a13a2b2eff47d7687306958cbc8898889}{calcRelFixedThresholds}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas);}
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{structVector3d}{Vector3d<double>}}}
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a0665509703e1eadffbdf145540b4ee7c}{coherentIncoherentSumming}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1TStrobeExt}{TStrobeExt}}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a82926498613b41cb6c3a1e7654f89657}{strb}},}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a8ea2cb716528796f291773eeed021d10}{prepareWindow}}(uint32\_t\ d,\ uint32\_t\ f,\ uint32\_t\ r,}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<double>\&\ win);}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ad14729c2a919d1a44b4d87aa5ac8c2fe}{thresholdLogicProcessing}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aa0cdd53c4f34b31e7110142338e31485}{getThresholdValue}}(uint32\_t\ ray,\ uint32\_t\ d,\ uint32\_t\ f)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a7fec34358b64b778755368c044f605fa}{calcThresholds}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas);}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a7f7f9c170515e6b87f9017d45253fef1}{findComplexMarks}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a4f2d22689768a73338ec4f86f02bfd51}{findMonomarks}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a615360c45d395dc93963ef0570d183ea}{isDistanceMonomarked}}(uint32\_t\ curDistance)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aef4ba6d7bb5dfae7526e88b65c45bc37}{isComplexMarkAlreadySaved}}(uint32\_t\ d,\ uint32\_t\ f,\ uint32\_t\ r);}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a5d44ee6d3971682eeb6217442c75df3f}{dumpSumOfPolarsTfpSlice}}();}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{comment}{//void\ dumpComplexOutTfpSlice(SharedConst::PolarizationTypes\ polar);}}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ae158e3548a58c5e5885501eb4dd5d337}{initSliceFiles}}(uint64\_t\ texec);}
+\DoxyCodeLine{00294\ \ \ \ \ std::complex<double>}
+\DoxyCodeLine{00295\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ab57b30b9d0d296650fae2fb0846784d7}{calcImageWeight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays,}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ r,\ uint32\_t\ d,\ uint32\_t\ f,}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::complex<double>\&\ corrCoef)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00306\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_aa3e53adc2e7e502aba32e4ad8ef57434}{calcSigNoise}}(\textcolor{keywordtype}{double}\ ampl,\ uint32\_t\ rayNum,}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_ab83b43f2a08495b49da8c6c828161828}{findLocalMaximumsInMark}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark}{ComplexMark}}\&\ mark,}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas,}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint32\_t>\&\ lmRays);}
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a213cbe8de69fcc427373b8981d0ee667}{getWeightBorders}}(\textcolor{keywordtype}{double}\ *min,\ \textcolor{keywordtype}{double}\ *max,\ \textcolor{keywordtype}{double}\ sigNoise)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a7602b3bc0ef2557851e0193f94ac386f}{isLocalMaximumAmpl}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ crossAmpl[])\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00340\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a3d977075d3df8d155a74dcd3ec979959}{calcMaxSigNoise}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark}{ComplexMark}}\&\ mark,}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00349\ \ \ \ \ uint32\_t}
+\DoxyCodeLine{00350\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a968c40bd53eb2e4c35417e030bfc6bff}{getAcceptableImageWeightsNum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays,}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ComplexMark}{ComplexMark}}\&\ mark,}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint32\_t>\&\ lmRays,}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a83c76b6202bcd4a28eff4e0a15b910b0}{formEvaluation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays,}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas);}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00367\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_af3b35a945685e3c3414f0bf3dee8f2bb}{tradTargInterfStrbProcessing}}(}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays,}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<std::vector<uint64\_t>>\&\ targetSigmas,}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUcopoMsgBuf}{UcopoMsgBuf}}\ *ucopo);}
+\DoxyCodeLine{00371\ \ \ \ \ \mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{StrobeOutput}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_abb6d356749ca197c81533507f69992c0}{captureOutput}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *c418\_02Result[])\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a59fb4709008de76f6dafe26ad4702f8a}{add2ZPackStrobeResult}}(}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a2afd6ce0ab58c9cd554c7b4efd00f419}{add2ZPackTargetSigmas}}();}
+\DoxyCodeLine{00385\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a0609a0c9ec416f9bd356d1c82997ac98}{movePackStrobeData2ZIncohSumBuf}}();}
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a5ec5a69c94a915a17d9339da3ce2e22f}{initPackStrobeBuffer}}();}
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a76ac94541bd87b6de2b134abd5a5df29}{initPackTargetSigmas}}();}
+\DoxyCodeLine{00395\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a4618b1ab32e20137d5949f4b56350320}{isPackStrobe}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a29cfd53f73a7ec56f0a84cd9c81b0814}{printMonomarks}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ debug\ print}}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a01b85f788415cf559402644a9becca3b}{printComplexMarks}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ debug\ print}}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a7770216884f250caa3c42140f31e17c2}{printCalibrLIMMSourceData}}(\mbox{\hyperlink{structModelNS23817A620S1823_1_1C418__02Result}{C418\_02Result}}\ *c418\_02Result[])\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a3836959f9f1a8c1d0276edd08bec2971}{fillMonoMark}}(uint32\_t\ r,\ uint32\_t\ d,\ uint32\_t\ f,}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Block232_a1ad36b91f93dde4124bd88a55a3653de}{fillComplexMark}}(uint32\_t\ r,\ uint32\_t\ d,\ uint32\_t\ f,}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPolarized}{Polarized}}<\mbox{\hyperlink{structVector3d}{Vector3d}}<std::complex<double>>>\&\ tfpRays);}
+\DoxyCodeLine{00421\ \};\ \textcolor{comment}{//\ class\ Block232}}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C232\_H\_\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+<map id="gnuplotio::ArrayTraits&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt;::type &gt;" name="gnuplotio::ArrayTraits&lt; T, typename boost::enable_if&lt; boost::mpl::and_&lt; is_boost_tuple&lt; T &gt;, is_boost_tuple_nulltype&lt; typename T::tail_type &gt; &gt; &gt;::type &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,173,212,312"/>
+<area shape="rect" id="Node000002" href="$classgnuplotio_1_1ArrayTraits.html" title=" " alt="" coords="31,5,186,125"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,139,111,173,106,173,106,139"/>
+</map>

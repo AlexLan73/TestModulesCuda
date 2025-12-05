@@ -1,0 +1,168 @@
+\doxysection{gnuplotio\+::Vec\+Of\+Range\texorpdfstring{$<$}{<} RT \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classgnuplotio_1_1VecOfRange}{}\label{classgnuplotio_1_1VecOfRange}\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+
+
+{\ttfamily \#include $<$gnuplot-\/iostream.\+h$>$}
+
+
+
+Collaboration diagram for gnuplotio\+::Vec\+Of\+Range\texorpdfstring{$<$}{<} RT \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classgnuplotio_1_1VecOfRange__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ typename RT\+::value\+\_\+type $>$ \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_aed503f2f8d8ed71b303f2db26872bafd}{value\+\_\+type}}
+\item 
+typedef \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{Vec\+Of\+Range}}$<$ typename RT\+::subiter\+\_\+type $>$ \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a4cfae20b9797febceffafec3415b52db}{subiter\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a077cf69b9ea96d4f0da78a5e72ab2427}{Vec\+Of\+Range}} ()
+\item 
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a81e04f9ab4b8641d69df61f695e97e34}{Vec\+Of\+Range}} (const std\+::vector$<$ RT $>$ \&\+\_\+rvec)
+\item 
+bool \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a714b945004e06909e5a0cdc3cca619b5}{is\+\_\+end}} () const
+\item 
+void \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a2e5371ab6c88994e3fc6f12324783e1c}{inc}} ()
+\item 
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange_aed503f2f8d8ed71b303f2db26872bafd}{value\+\_\+type}} \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_ab0a35bc07a4f12b18bd1541bc4b771fc}{deref}} () const
+\item 
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a4cfae20b9797febceffafec3415b52db}{subiter\+\_\+type}} \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a9b02d8bd8ec62ba77de16ad8ea8a87b2}{deref\+\_\+subiter}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a8725d4907d46575dddb7152f1f1d1f66}{is\+\_\+container}} = RT\+::is\+\_\+container
+\item 
+static const bool \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a19d87e61a7854f9e22d3dd8a94f79500}{allow\+\_\+auto\+\_\+unwrap}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ RT $>$ \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a44d625920b73b31599579fff8e514e7f}{rvec}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename Print\+Mode $>$ }\\void \mbox{\hyperlink{classgnuplotio_1_1VecOfRange_adafbfb0122b8e499d1af9c246f4ac288}{deref\+\_\+and\+\_\+print}} (std\+::ostream \&, const \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{Vec\+Of\+Range}}$<$ T $>$ \&, Print\+Mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classgnuplotio_1_1VecOfRange_a4cfae20b9797febceffafec3415b52db}\label{classgnuplotio_1_1VecOfRange_a4cfae20b9797febceffafec3415b52db} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!subiter\_type@{subiter\_type}}
+\index{subiter\_type@{subiter\_type}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{subiter\_type}{subiter\_type}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+typedef \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{Vec\+Of\+Range}}$<$typename RT\+::subiter\+\_\+type$>$ \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::subiter\+\_\+type}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_aed503f2f8d8ed71b303f2db26872bafd}\label{classgnuplotio_1_1VecOfRange_aed503f2f8d8ed71b303f2db26872bafd} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+typedef std\+::vector$<$typename RT\+::value\+\_\+type$>$ \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgnuplotio_1_1VecOfRange_a077cf69b9ea96d4f0da78a5e72ab2427}\label{classgnuplotio_1_1VecOfRange_a077cf69b9ea96d4f0da78a5e72ab2427} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!VecOfRange@{VecOfRange}}
+\index{VecOfRange@{VecOfRange}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{VecOfRange()}{VecOfRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::\+Vec\+Of\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_a81e04f9ab4b8641d69df61f695e97e34}\label{classgnuplotio_1_1VecOfRange_a81e04f9ab4b8641d69df61f695e97e34} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!VecOfRange@{VecOfRange}}
+\index{VecOfRange@{VecOfRange}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{VecOfRange()}{VecOfRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::\+Vec\+Of\+Range (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ RT $>$ \&}]{\+\_\+rvec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgnuplotio_1_1VecOfRange_ab0a35bc07a4f12b18bd1541bc4b771fc}\label{classgnuplotio_1_1VecOfRange_ab0a35bc07a4f12b18bd1541bc4b771fc} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!deref@{deref}}
+\index{deref@{deref}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{deref()}{deref()}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange_aed503f2f8d8ed71b303f2db26872bafd}{value\+\_\+type}} \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::deref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_a9b02d8bd8ec62ba77de16ad8ea8a87b2}\label{classgnuplotio_1_1VecOfRange_a9b02d8bd8ec62ba77de16ad8ea8a87b2} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!deref\_subiter@{deref\_subiter}}
+\index{deref\_subiter@{deref\_subiter}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{deref\_subiter()}{deref\_subiter()}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+\mbox{\hyperlink{classgnuplotio_1_1VecOfRange_a4cfae20b9797febceffafec3415b52db}{subiter\+\_\+type}} \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::deref\+\_\+subiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_a2e5371ab6c88994e3fc6f12324783e1c}\label{classgnuplotio_1_1VecOfRange_a2e5371ab6c88994e3fc6f12324783e1c} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!inc@{inc}}
+\index{inc@{inc}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{inc()}{inc()}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+void \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::inc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_a714b945004e06909e5a0cdc3cca619b5}\label{classgnuplotio_1_1VecOfRange_a714b945004e06909e5a0cdc3cca619b5} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!is\_end@{is\_end}}
+\index{is\_end@{is\_end}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{is\_end()}{is\_end()}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+bool \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::is\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classgnuplotio_1_1VecOfRange_a714b945004e06909e5a0cdc3cca619b5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classgnuplotio_1_1VecOfRange_adafbfb0122b8e499d1af9c246f4ac288}\label{classgnuplotio_1_1VecOfRange_adafbfb0122b8e499d1af9c246f4ac288} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!deref\_and\_print@{deref\_and\_print}}
+\index{deref\_and\_print@{deref\_and\_print}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{deref\_and\_print}{deref\_and\_print}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+template$<$typename T , typename Print\+Mode $>$ \\
+void deref\+\_\+and\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{Vec\+Of\+Range}}$<$ T $>$ \&}]{arg,  }\item[{Print\+Mode}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgnuplotio_1_1VecOfRange_a19d87e61a7854f9e22d3dd8a94f79500}\label{classgnuplotio_1_1VecOfRange_a19d87e61a7854f9e22d3dd8a94f79500} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!allow\_auto\_unwrap@{allow\_auto\_unwrap}}
+\index{allow\_auto\_unwrap@{allow\_auto\_unwrap}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{allow\_auto\_unwrap}{allow\_auto\_unwrap}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+const bool \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::allow\+\_\+auto\+\_\+unwrap = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_a8725d4907d46575dddb7152f1f1d1f66}\label{classgnuplotio_1_1VecOfRange_a8725d4907d46575dddb7152f1f1d1f66} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!is\_container@{is\_container}}
+\index{is\_container@{is\_container}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{is\_container}{is\_container}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+const bool \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::is\+\_\+container = RT\+::is\+\_\+container\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgnuplotio_1_1VecOfRange_a44d625920b73b31599579fff8e514e7f}\label{classgnuplotio_1_1VecOfRange_a44d625920b73b31599579fff8e514e7f} 
+\index{gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}!rvec@{rvec}}
+\index{rvec@{rvec}!gnuplotio::VecOfRange$<$ RT $>$@{gnuplotio::VecOfRange$<$ RT $>$}}
+\doxysubsubsection{\texorpdfstring{rvec}{rvec}}
+{\footnotesize\ttfamily template$<$typename RT $>$ \\
+std\+::vector$<$RT$>$ \mbox{\hyperlink{classgnuplotio_1_1VecOfRange}{gnuplotio\+::\+Vec\+Of\+Range}}$<$ RT $>$\+::rvec\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/gui/\mbox{\hyperlink{gnuplot-iostream_8h}{gnuplot-\/iostream.\+h}}\end{DoxyCompactItemize}

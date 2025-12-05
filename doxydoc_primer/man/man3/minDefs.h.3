@@ -1,0 +1,115 @@
+.TH "include/model/minDefs.h" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/model/minDefs.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cassert>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <complex>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <libutils/sumtype\&.h>\fP
+.br
+\fC#include <libutils/result\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBVector2d< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBVector3d< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBPolarized< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBTargetStrobeOutput\fP"
+.br
+.ti -1c
+.RI "struct \fBInterfStrobeOutput\fP"
+.br
+.ti -1c
+.RI "struct \fBCalibStrobeOutput\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::SavePermissions\fP"
+.br
+.ti -1c
+.RI "struct \fBModelNS23817A620S1823::StationParams\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823\fP"
+.br
+.ti -1c
+.RI "namespace \fBModelNS23817A620S1823::SharedConst\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef libutils::SumType< \fBTargetStrobeOutput\fP, \fBInterfStrobeOutput\fP, \fBCalibStrobeOutput\fP > \fBStrobeOutput\fP"
+.br
+.ti -1c
+.RI "typedef libutils::Result< \fBStrobeOutput\fP, libutils::ErrMsg > \fBStrobeResult\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBModelNS23817A620S1823::SharedConst::StationType\fP { \fBModelNS23817A620S1823::SharedConst::voronezhM\fP, \fBModelNS23817A620S1823::SharedConst::voronezhSM\fP, \fBModelNS23817A620S1823::SharedConst::mrik\fP }"
+.br
+.ti -1c
+.RI "enum \fBModelNS23817A620S1823::SharedConst::PolarizationTypes\fP { \fBModelNS23817A620S1823::SharedConst::vertical\fP, \fBModelNS23817A620S1823::SharedConst::horizontal\fP, \fBModelNS23817A620S1823::SharedConst::both\fP }"
+.br
+.ti -1c
+.RI "enum \fBModelNS23817A620S1823::SharedConst::QuadrCompFormTypes\fP { \fBModelNS23817A620S1823::SharedConst::hilbert\fP, \fBModelNS23817A620S1823::SharedConst::kaiserDPD\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class T > bool \fBeq_dims\fP (const \fBVector3d\fP< T > &a)"
+.br
+.ti -1c
+.RI "template<class T > bool \fBeq_dims\fP (const \fBVector3d\fP< T > &a, const \fBVector3d\fP< T > &b)"
+.br
+.ti -1c
+.RI "template<class T > bool \fBeq_dims\fP (const \fBPolarized\fP< T > &a)"
+.br
+.RI "Проверяет, что поляризации a - 3-мерные массивы одинаковых размерностей "
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef libutils::SumType<\fBTargetStrobeOutput\fP, \fBInterfStrobeOutput\fP, \fBCalibStrobeOutput\fP> \fBStrobeOutput\fP"
+Выдача, сгенерированная моделью по одному стробу (целевому, помеховому, калибровочному) при успешном завершении 
+.SS "typedef libutils::Result<\fBStrobeOutput\fP, libutils::ErrMsg> \fBStrobeResult\fP"
+Результат работы модели по одному стробу - либо данные, либо сообщение об ошибке 
+.SH "Function Documentation"
+.PP 
+.SS "template<class T > bool eq_dims (const \fBPolarized\fP< T > & a)"
+
+.PP
+Проверяет, что поляризации a - 3-мерные массивы одинаковых размерностей 
+.SS "template<class T > bool eq_dims (const \fBVector3d\fP< T > & a)"
+Вспомогательная функция для sanity check -проверяет, что a имеет размерности 'обычного' 3-мерного массива (т\&.к\&. \fBVector3d\fP является т\&.н\&. jagged array размерности a[0][0] и a[0][1] могут не совпадать, а у обычного трехмерного массива они совпадают)\&. 
+.SS "template<class T > bool eq_dims (const \fBVector3d\fP< T > & a, const \fBVector3d\fP< T > & b)"
+Вспомогательная функция для sanity check - проверяет, что a1 и a2 имеют размерности 'обычных' 3-мерных массивов, и они равнцы у a1 и a2 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

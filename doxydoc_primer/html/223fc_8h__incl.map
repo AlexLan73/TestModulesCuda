@@ -1,0 +1,11 @@
+<map id="src/mpk1/blk223/223fc.h" name="src/mpk1/blk223/223fc.h">
+<area shape="rect" id="Node000001" title="Описание карты памяти прошивки ячейки 9ДЯ&#45;223." alt="" coords="92,5,275,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,33,77,75,75,70,159,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="100,79,171,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,33,153,69,148,66,173,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="195,79,270,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="194,29,219,66,215,69,189,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="294,79,457,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="215,28,332,71,330,76,213,33"/>
+</map>

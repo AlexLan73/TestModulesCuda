@@ -1,0 +1,5 @@
+<map id="direct_trpr_to_fc" name="direct_trpr_to_fc">
+<area shape="rect" id="Node000001" title="Функция перенаправляет сообщение ТРПР в контейнер ФУ." alt="" coords="5,5,133,31"/>
+<area shape="rect" id="Node000002" href="$fcmgmt_8cpp.html#a424692426d955fe06ee372a2414d2389" title="Функция возвращает указатель на структуру ФУ для заданного номера такта." alt="" coords="181,5,288,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,15,168,15,168,21,134,21"/>
+</map>

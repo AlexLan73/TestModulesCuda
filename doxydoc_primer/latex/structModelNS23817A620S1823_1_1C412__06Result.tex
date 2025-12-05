@@ -1,0 +1,189 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::C412\+\_\+06\+Result Struct Reference}
+\hypertarget{structModelNS23817A620S1823_1_1C412__06Result}{}\label{structModelNS23817A620S1823_1_1C412__06Result}\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+
+
+{\ttfamily \#include $<$c412\+\_\+06\+Result.\+h$>$}
+
+
+
+Inheritance diagram for Model\+NS23817\+A620\+S1823\+::C412\+\_\+06\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{structModelNS23817A620S1823_1_1C412__06Result__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::C412\+\_\+06\+Result\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{structModelNS23817A620S1823_1_1C412__06Result__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ab4966a09c82d9229ab45772708f33d9a}{clear412\+Results}} ()
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a190a4374cdc3036e63c8ea61df75d277}{clear\+Interf\+Spectrum\+Norms}} ()
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ab1dd0f8c0120fe1cb9f01a84b76bc28b}{dump\+Interf\+Spectrum\+Norms}} (\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&s\+File, uint32\+\_\+t length, uint32\+\_\+t rays\+Num)
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a10bab54524281f180e408726007d6858}{dump\+Targ\+Data}} (\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&s\+File, uint32\+\_\+t rays\+Num, uint32\+\_\+t samples\+Num)
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a6119edac880898c4d13b83b2811acf2a}{clear\+Targ\+Data}} ()
+\item 
+void \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a89fd42809eb19ccdc751fdfc5465f61f}{print\+Calibr\+LIMMSource\+Data}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+\mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_aa732e2dfe653b018874b2d76f4441ea8}{C412\+\_\+06\+Result}} ()
+\item 
+virtual \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ab9f5dcd5b9dcfc707e3d1b2f893d895c}{\texorpdfstring{$\sim$}{\string~}\+C412\+\_\+06\+Result}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_adf14c7babd564a834e41cbbe3820e199}{interf\+Spectrum\+Norms}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{Shared\+Const\+::max\+DFGroups}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a81c9f430166223e000560449a6f8d972}{Shared\+Const\+::max\+Fragm\+Kgrs}}\mbox{]}
+\item 
+std\+::complex$<$ int32\+\_\+t $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ae9de601d3d126633e5578ee73432b9db}{targ\+Data}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{Shared\+Const\+::max\+Samples\+In\+Ray}}\mbox{]}
+\item 
+std\+::complex$<$ int32\+\_\+t $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_a6ebdfcb296ddd85c74652e7fc60739e1}{adapt\+Data}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}+max\+Active\+Interferences+\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_ad884158d24868f5636889e3cac089247}{Shared\+Const\+::sig\+Adapt\+Extra\+Rows}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a6be4f6e8eb253d07f3075926a6761618}{Shared\+Const\+::max\+Channels\+In\+Cell\+SM}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa73222a674af1c7fae744f40375bcd18}{Shared\+Const\+::max\+Cells\+In\+Crate\+SM}}\mbox{]}
+\item 
+std\+::complex$<$ double $>$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1C412__06Result_ace853e58c07ed7dd7c5c4171098c0be6}{calibr\+LIMMData}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{Shared\+Const\+::max\+Channels\+SM}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура выходной информации ячейки расчёта каналов 412-\/06/223. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_aa732e2dfe653b018874b2d76f4441ea8}\label{structModelNS23817A620S1823_1_1C412__06Result_aa732e2dfe653b018874b2d76f4441ea8} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!C412\_06Result@{C412\_06Result}}
+\index{C412\_06Result@{C412\_06Result}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{C412\_06Result()}{C412\_06Result()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::\+C412\+\_\+06\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта структуры. \Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_ab9f5dcd5b9dcfc707e3d1b2f893d895c}\label{structModelNS23817A620S1823_1_1C412__06Result_ab9f5dcd5b9dcfc707e3d1b2f893d895c} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!````~C412\_06Result@{\texorpdfstring{$\sim$}{\string~}C412\_06Result}}
+\index{````~C412\_06Result@{\texorpdfstring{$\sim$}{\string~}C412\_06Result}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}C412\_06Result()}{\string~C412\_06Result()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::\texorpdfstring{$\sim$}{\string~}\+C412\+\_\+06\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Деструктор объекта структуры. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_ab4966a09c82d9229ab45772708f33d9a}\label{structModelNS23817A620S1823_1_1C412__06Result_ab4966a09c82d9229ab45772708f33d9a} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!clear412Results@{clear412Results}}
+\index{clear412Results@{clear412Results}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{clear412Results()}{clear412Results()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::clear412\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Очистка массивов структуры. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structModelNS23817A620S1823_1_1C412__06Result_ab4966a09c82d9229ab45772708f33d9a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_a190a4374cdc3036e63c8ea61df75d277}\label{structModelNS23817A620S1823_1_1C412__06Result_a190a4374cdc3036e63c8ea61df75d277} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!clearInterfSpectrumNorms@{clearInterfSpectrumNorms}}
+\index{clearInterfSpectrumNorms@{clearInterfSpectrumNorms}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{clearInterfSpectrumNorms()}{clearInterfSpectrumNorms()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::clear\+Interf\+Spectrum\+Norms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Очистка массива норм спектра помех. \Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_a6119edac880898c4d13b83b2811acf2a}\label{structModelNS23817A620S1823_1_1C412__06Result_a6119edac880898c4d13b83b2811acf2a} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!clearTargData@{clearTargData}}
+\index{clearTargData@{clearTargData}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{clearTargData()}{clearTargData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::clear\+Targ\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Очистка массива данных целевого режима. \Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_ab1dd0f8c0120fe1cb9f01a84b76bc28b}\label{structModelNS23817A620S1823_1_1C412__06Result_ab1dd0f8c0120fe1cb9f01a84b76bc28b} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!dumpInterfSpectrumNorms@{dumpInterfSpectrumNorms}}
+\index{dumpInterfSpectrumNorms@{dumpInterfSpectrumNorms}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{dumpInterfSpectrumNorms()}{dumpInterfSpectrumNorms()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::dump\+Interf\+Spectrum\+Norms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&}]{s\+File,  }\item[{uint32\+\_\+t}]{length,  }\item[{uint32\+\_\+t}]{rays\+Num }\end{DoxyParamCaption})}
+
+Сохранение в файл, который описывает s\+File, данных массива interf\+Spectrum\+Norms. 
+\begin{DoxyParams}{Parameters}
+{\em s\+File} & ссылка на объект файла среза \\
+\hline
+{\em length} & длина данных в луче \\
+\hline
+{\em rays\+Num} & количество лучей \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structModelNS23817A620S1823_1_1C412__06Result_ab1dd0f8c0120fe1cb9f01a84b76bc28b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_a10bab54524281f180e408726007d6858}\label{structModelNS23817A620S1823_1_1C412__06Result_a10bab54524281f180e408726007d6858} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!dumpTargData@{dumpTargData}}
+\index{dumpTargData@{dumpTargData}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{dumpTargData()}{dumpTargData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::dump\+Targ\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&}]{s\+File,  }\item[{uint32\+\_\+t}]{rays\+Num,  }\item[{uint32\+\_\+t}]{samples\+Num }\end{DoxyParamCaption})}
+
+Сохранение в файл, который описывает s\+File, данных массива targ\+Data. 
+\begin{DoxyParams}{Parameters}
+{\em s\+File} & ссылка на объект файла среза \\
+\hline
+{\em rays\+Num} & количество лучей \\
+\hline
+{\em samples\+Num} & количество выборок в луче \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_a89fd42809eb19ccdc751fdfc5465f61f}\label{structModelNS23817A620S1823_1_1C412__06Result_a89fd42809eb19ccdc751fdfc5465f61f} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!printCalibrLIMMSourceData@{printCalibrLIMMSourceData}}
+\index{printCalibrLIMMSourceData@{printCalibrLIMMSourceData}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{printCalibrLIMMSourceData()}{printCalibrLIMMSourceData()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::print\+Calibr\+LIMMSource\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const}
+
+Печать в поток вывода исходных данных для калибровки. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_a6ebdfcb296ddd85c74652e7fc60739e1}\label{structModelNS23817A620S1823_1_1C412__06Result_a6ebdfcb296ddd85c74652e7fc60739e1} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!adaptData@{adaptData}}
+\index{adaptData@{adaptData}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{adaptData}{adaptData}}
+{\footnotesize\ttfamily std\+::complex$<$int32\+\_\+t$>$ Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::adapt\+Data\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}+max\+Active\+Interferences+\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_ad884158d24868f5636889e3cac089247}{Shared\+Const\+::sig\+Adapt\+Extra\+Rows}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a6be4f6e8eb253d07f3075926a6761618}{Shared\+Const\+::max\+Channels\+In\+Cell\+SM}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa73222a674af1c7fae744f40375bcd18}{Shared\+Const\+::max\+Cells\+In\+Crate\+SM}}\mbox{]}}
+
+данные ячейки\mbox{[}-\/ек\mbox{]} для адаптации +1 -\/ опытное число, которое может измениться в процессе отладки Каналов больше, чем в одной 412й(223й) ячейке, т.\+к. эту же структуру использует для хранения и 418-\/01я ячейка. Данные 412х ячеек тут лежат по порядку нумерации ячеек в крейте. Количество каналов в ячейке и ячеек в крейте взято как для сантиметровой станции, т.\+к. в ней их больше, чем в метровой и МРИК \Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_ace853e58c07ed7dd7c5c4171098c0be6}\label{structModelNS23817A620S1823_1_1C412__06Result_ace853e58c07ed7dd7c5c4171098c0be6} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!calibrLIMMData@{calibrLIMMData}}
+\index{calibrLIMMData@{calibrLIMMData}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{calibrLIMMData}{calibrLIMMData}}
+{\footnotesize\ttfamily std\+::complex$<$double$>$ Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::calibr\+LIMMData\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{Shared\+Const\+::max\+Channels\+SM}}\mbox{]}}
+
+результат калибровочного строба или строба РИУШ (LIMM) по каждому каналу поляризации (исходные данные для расчёта калибровочных коэффициентов)
+
+Отсюда берем выдачу 233 ячейки по калибровочному стробу \Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_adf14c7babd564a834e41cbbe3820e199}\label{structModelNS23817A620S1823_1_1C412__06Result_adf14c7babd564a834e41cbbe3820e199} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!interfSpectrumNorms@{interfSpectrumNorms}}
+\index{interfSpectrumNorms@{interfSpectrumNorms}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{interfSpectrumNorms}{interfSpectrumNorms}}
+{\footnotesize\ttfamily uint64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::interf\+Spectrum\+Norms\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a45a9750b9e0c97a3bd220df48a41660d}{Shared\+Const\+::max\+DFGroups}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a81c9f430166223e000560449a6f8d972}{Shared\+Const\+::max\+Fragm\+Kgrs}}\mbox{]}}
+
+массив для данных спектров норм фрагменто
+
+Отсюда берем выдачу 233 ячейки по помеховому стробу \Hypertarget{structModelNS23817A620S1823_1_1C412__06Result_ae9de601d3d126633e5578ee73432b9db}\label{structModelNS23817A620S1823_1_1C412__06Result_ae9de601d3d126633e5578ee73432b9db} 
+\index{ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}!targData@{targData}}
+\index{targData@{targData}!ModelNS23817A620S1823::C412\_06Result@{ModelNS23817A620S1823::C412\_06Result}}
+\doxysubsubsection{\texorpdfstring{targData}{targData}}
+{\footnotesize\ttfamily std\+::complex$<$int32\+\_\+t$>$ Model\+NS23817\+A620\+S1823\+::\+C412\+\_\+06\+Result\+::targ\+Data\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a7be339b6faffc6b701f4f4cf6d74fa65}{Shared\+Const\+::max\+Rays}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a403641dc68ff2a24ea23de8248690934}{Shared\+Const\+::max\+Samples\+In\+Ray}}\mbox{]}}
+
+массив для данных целевых и помеховых режимов 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{c412__06Result_8h}{c412\+\_\+06\+Result.\+h}}\item 
+src/\mbox{\hyperlink{c412__06Result_8cpp}{c412\+\_\+06\+Result.\+cpp}}\end{DoxyCompactItemize}

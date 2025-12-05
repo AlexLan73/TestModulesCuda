@@ -1,0 +1,507 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::XYChan\+Coords Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1XYChanCoords}{}\label{classModelNS23817A620S1823_1_1XYChanCoords}\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+
+
+{\ttfamily \#include $<$xy\+Chan\+Coords.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::XYChan\+Coords\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classModelNS23817A620S1823_1_1XYChanCoords__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}{Calc\+Type}} \{ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21}{zero\+In\+Center}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa1e0001e9c94eb89354142e65b77057c6}{zero\+In\+Left\+Bottom}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a99c463f2d1365b3bc2688e04bc875f7f}{XYChan\+Coords}} ()
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a3ff31af721f4e1e7050650af61c94f69}{\texorpdfstring{$\sim$}{\string~}\+XYChan\+Coords}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a87c34fac8a1b62215e051358c64bf204}{get\+XYCoords}} (uint32\+\_\+t chan\+Num, double \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a61590303a61317682f9ea24330797b04}{x}}, double \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a4947e4c77c4334c92fe6d59c567a5dd7}{y}}) const
+\item 
+\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a815a45f68a9caf2c9d037bd02eec6229}{get\+Current\+Station\+Type}} () const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a95a7684a416a2859a80d47b46cec59a6}{calc\+XY}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type, \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}{Calc\+Type}} calc\+Type=\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21}{zero\+In\+Center}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_aaf25701961f8673c4f3b866efd0e4034}{model\+Ch2\+Lattice}} (uint32\+\_\+t m\+Ch) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a8a26c5b43a114a00ee280a6e596afd29}{model\+Cl2\+Lattice}} (uint32\+\_\+t m\+Cl) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a672e2334388efb9a18308e9748b95647}{model\+Cr2\+Lattice}} (uint32\+\_\+t m\+Cr) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a739a6465df3589f17f5f19ae0914d8ed}{lattice\+Ch2\+Model}} (uint32\+\_\+t l\+Ch) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a55a867ebd5b347d3e8bfd7e17ccf6bc1}{model2\+Lattice\+SM}} (uint32\+\_\+t m\+Ch, uint32\+\_\+t \texorpdfstring{$\ast$}{*}l\+Ch, uint32\+\_\+t \texorpdfstring{$\ast$}{*}l\+Cl)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a424dacde867f0eae80aac4a16f320039}{model2\+Lattice\+Mrik}} (uint32\+\_\+t m\+Ch)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a87f02fc0372865b7fb7f385811746f19}{model\+Cr\+Cl\+Ch2\+Lattice\+ChM}} (uint32\+\_\+t crate\+Num, uint32\+\_\+t cell\+In\+Crate\+Num, uint32\+\_\+t chan\+In\+Cell\+Num)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a7ee636b6fbae986c49cc91e9afad4854}{model\+Cr\+Cl\+Ch2\+Lattice\+Ch\+Mrik}} (uint32\+\_\+t crate\+Num, uint32\+\_\+t cell\+In\+Crate\+Num, uint32\+\_\+t chan\+In\+Cell\+Num)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_ae2dfc832dbd9a06157f815dd519db48a}{model2\+LatticeM}} (uint32\+\_\+t m\+Ch)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a3f00391f7d403ce3d5f466f99a38050c}{lattice2\+Model\+SM}} (uint32\+\_\+t l\+Ch, uint32\+\_\+t \texorpdfstring{$\ast$}{*}m\+Cl)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a691116cf658f1b89a5280baad660c3c3}{lattice2\+ModelM}} (uint32\+\_\+t l\+Ch)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6c90d0dba1145a1639d1a7cb7a1ddf85}{lattice2\+Model\+Mrik}} (uint32\+\_\+t l\+Ch)
+\item 
+static bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a29ee3843fb1a9a2187dac8c4e208e1fb}{is\+Virtual\+Channel\+SM}} (uint32\+\_\+t m\+Ch)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a8e22424b24b9f639e208dddb220a872d}{calc\+XY00\+In\+Corner}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_ac8db104a0c702f0fead3b3e524546292}{calc\+XY00\+In\+Center}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a81e1b2ff9f6a92a00dd8f731815f986c}{calc\+SMChans\+Coords}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_afc112032721a7fd24626fe67a342927f}{calc\+SMChans\+Centered\+Coords}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_ad9dd3b5a68d88cfb08747bb12f72e2fc}{calc\+Mrik\+Chans\+Centered\+Coords}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>float \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a61590303a61317682f9ea24330797b04}{x}}\\
+\>float \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a4947e4c77c4334c92fe6d59c567a5dd7}{y}}\\
+\} \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_add1c64463474b3a5017d2cfc45b3abec}{xyChanCoords}} \mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}\mbox{]}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a7b143a15da5c02eb100f278db20c865f}{station\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс данных координат каналов приёмника на антенном полотне. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}\label{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!CalcType@{CalcType}}
+\index{CalcType@{CalcType}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{CalcType}{CalcType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}{Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::\+Calc\+Type}}}
+
+признак расположения точки (0; 0) на антенном полотне \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{zeroInCenter@{zeroInCenter}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!zeroInCenter@{zeroInCenter}}}\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21}\label{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21} 
+zero\+In\+Center&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{zeroInLeftBottom@{zeroInLeftBottom}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!zeroInLeftBottom@{zeroInLeftBottom}}}\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa1e0001e9c94eb89354142e65b77057c6}\label{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa1e0001e9c94eb89354142e65b77057c6} 
+zero\+In\+Left\+Bottom&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a99c463f2d1365b3bc2688e04bc875f7f}\label{classModelNS23817A620S1823_1_1XYChanCoords_a99c463f2d1365b3bc2688e04bc875f7f} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!XYChanCoords@{XYChanCoords}}
+\index{XYChanCoords@{XYChanCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{XYChanCoords()}{XYChanCoords()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::\+XYChan\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a99c463f2d1365b3bc2688e04bc875f7f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a3ff31af721f4e1e7050650af61c94f69}\label{classModelNS23817A620S1823_1_1XYChanCoords_a3ff31af721f4e1e7050650af61c94f69} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!````~XYChanCoords@{\texorpdfstring{$\sim$}{\string~}XYChanCoords}}
+\index{````~XYChanCoords@{\texorpdfstring{$\sim$}{\string~}XYChanCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}XYChanCoords()}{\string~XYChanCoords()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::\texorpdfstring{$\sim$}{\string~}\+XYChan\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_ad9dd3b5a68d88cfb08747bb12f72e2fc}\label{classModelNS23817A620S1823_1_1XYChanCoords_ad9dd3b5a68d88cfb08747bb12f72e2fc} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!calcMrikChansCenteredCoords@{calcMrikChansCenteredCoords}}
+\index{calcMrikChansCenteredCoords@{calcMrikChansCenteredCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{calcMrikChansCenteredCoords()}{calcMrikChansCenteredCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::calc\+Mrik\+Chans\+Centered\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт координат каналов относительно центра полотна. Тут стоит помнить, что полотно состоит из двух половин (верхней и нижней) разного размера с разными расстояниями между фазовращателями. Все размеры в метрах. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_ad9dd3b5a68d88cfb08747bb12f72e2fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_afc112032721a7fd24626fe67a342927f}\label{classModelNS23817A620S1823_1_1XYChanCoords_afc112032721a7fd24626fe67a342927f} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!calcSMChansCenteredCoords@{calcSMChansCenteredCoords}}
+\index{calcSMChansCenteredCoords@{calcSMChansCenteredCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{calcSMChansCenteredCoords()}{calcSMChansCenteredCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::calc\+SMChans\+Centered\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Пересчёт координат каналов с точкой (0; 0) в левом нижнем углу нулевого блока в центрированные (с точкой (0; 0) в центре антенного полотна), для Воронеж-\/СМ. \Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a81e1b2ff9f6a92a00dd8f731815f986c}\label{classModelNS23817A620S1823_1_1XYChanCoords_a81e1b2ff9f6a92a00dd8f731815f986c} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!calcSMChansCoords@{calcSMChansCoords}}
+\index{calcSMChansCoords@{calcSMChansCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{calcSMChansCoords()}{calcSMChansCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::calc\+SMChans\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт координат каналов для Воронеж-\/СМ с точкой (0; 0) в левом нижнем углу нулевого блока. \Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a95a7684a416a2859a80d47b46cec59a6}\label{classModelNS23817A620S1823_1_1XYChanCoords_a95a7684a416a2859a80d47b46cec59a6} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!calcXY@{calcXY}}
+\index{calcXY@{calcXY}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{calcXY()}{calcXY()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::calc\+XY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type,  }\item[{\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}{Calc\+Type}}}]{calc\+Type = {\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21}{zero\+In\+Center}}} }\end{DoxyParamCaption})}
+
+Расчёт координат каналов заданным методом. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+{\em calc\+Type} & место расположение точки (0; 0), по умолчанию в центре полотна \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a95a7684a416a2859a80d47b46cec59a6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_ac8db104a0c702f0fead3b3e524546292}\label{classModelNS23817A620S1823_1_1XYChanCoords_ac8db104a0c702f0fead3b3e524546292} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!calcXY00InCenter@{calcXY00InCenter}}
+\index{calcXY00InCenter@{calcXY00InCenter}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{calcXY00InCenter()}{calcXY00InCenter()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::calc\+XY00\+In\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт координат каналов. Точка (0, 0) находится в центре антенного полотна. \Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a8e22424b24b9f639e208dddb220a872d}\label{classModelNS23817A620S1823_1_1XYChanCoords_a8e22424b24b9f639e208dddb220a872d} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!calcXY00InCorner@{calcXY00InCorner}}
+\index{calcXY00InCorner@{calcXY00InCorner}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{calcXY00InCorner()}{calcXY00InCorner()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::calc\+XY00\+In\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Расчёт координат каналов. Точка (0, 0) находится в левом нижнем углу антенного полотна. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a8e22424b24b9f639e208dddb220a872d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a815a45f68a9caf2c9d037bd02eec6229}\label{classModelNS23817A620S1823_1_1XYChanCoords_a815a45f68a9caf2c9d037bd02eec6229} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!getCurrentStationType@{getCurrentStationType}}
+\index{getCurrentStationType@{getCurrentStationType}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{getCurrentStationType()}{getCurrentStationType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::get\+Current\+Station\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Возврат типа станции, для которого на текущий момент рассчитаны координаты. \begin{DoxyReturn}{Returns}
+тип станции 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a87c34fac8a1b62215e051358c64bf204}\label{classModelNS23817A620S1823_1_1XYChanCoords_a87c34fac8a1b62215e051358c64bf204} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!getXYCoords@{getXYCoords}}
+\index{getXYCoords@{getXYCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{getXYCoords()}{getXYCoords()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::get\+XYCoords (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{chan\+Num,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{double \texorpdfstring{$\ast$}{*}}]{y }\end{DoxyParamCaption}) const}
+
+Занесение в (x, y) соответствующих координат на антенном полотне канала chan\+Num (номер в поляризации в глобальной нумерации, т.\+е. \mbox{[}0-\/191\mbox{]}(Воронеж-\/М)). 
+\begin{DoxyParams}{Parameters}
+{\em chan\+Num} & номер канала в нумерации модели \\
+\hline
+{\em x} & указатель на буфер для координаты канала x \\
+\hline
+{\em y} & указатель на буфер для координаты канала y \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a29ee3843fb1a9a2187dac8c4e208e1fb}\label{classModelNS23817A620S1823_1_1XYChanCoords_a29ee3843fb1a9a2187dac8c4e208e1fb} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!isVirtualChannelSM@{isVirtualChannelSM}}
+\index{isVirtualChannelSM@{isVirtualChannelSM}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{isVirtualChannelSM()}{isVirtualChannelSM()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::is\+Virtual\+Channel\+SM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Проверка номера канала на то, что он принадлежит виртуальной ячейке. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & сквозной номер канала в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если канал находится в виртуальной ячейке, false в противном случае 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a29ee3843fb1a9a2187dac8c4e208e1fb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a691116cf658f1b89a5280baad660c3c3}\label{classModelNS23817A620S1823_1_1XYChanCoords_a691116cf658f1b89a5280baad660c3c3} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!lattice2ModelM@{lattice2ModelM}}
+\index{lattice2ModelM@{lattice2ModelM}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{lattice2ModelM()}{lattice2ModelM()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::lattice2\+ModelM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{l\+Ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Перевод номера канала из нумерации полотна в нумерацию модели Только для Воронеж-\/М. 
+\begin{DoxyParams}{Parameters}
+{\em l\+Ch} & номер канала в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации в нумерации модели 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a6c90d0dba1145a1639d1a7cb7a1ddf85}\label{classModelNS23817A620S1823_1_1XYChanCoords_a6c90d0dba1145a1639d1a7cb7a1ddf85} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!lattice2ModelMrik@{lattice2ModelMrik}}
+\index{lattice2ModelMrik@{lattice2ModelMrik}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{lattice2ModelMrik()}{lattice2ModelMrik()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::lattice2\+Model\+Mrik (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{l\+Ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Перевод номера канала из нумерации полотна в нумерацию модели Только для МРИК. 
+\begin{DoxyParams}{Parameters}
+{\em l\+Ch} & номер канала в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации в нумерации модели 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a3f00391f7d403ce3d5f466f99a38050c}\label{classModelNS23817A620S1823_1_1XYChanCoords_a3f00391f7d403ce3d5f466f99a38050c} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!lattice2ModelSM@{lattice2ModelSM}}
+\index{lattice2ModelSM@{lattice2ModelSM}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{lattice2ModelSM()}{lattice2ModelSM()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::lattice2\+Model\+SM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{l\+Ch,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{m\+Cl = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Перевод номера канала из нумерации полотна в нумерацию модели. Только для Воронеж-\/СМ. 
+\begin{DoxyParams}{Parameters}
+{\em l\+Ch} & номер канала в поляризации в нумерации полотна \\
+\hline
+{\em m\+Cl} & указатель на буфер для результирующего номера ячейки в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации в нумерации модели 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a739a6465df3589f17f5f19ae0914d8ed}\label{classModelNS23817A620S1823_1_1XYChanCoords_a739a6465df3589f17f5f19ae0914d8ed} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!latticeCh2Model@{latticeCh2Model}}
+\index{latticeCh2Model@{latticeCh2Model}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{latticeCh2Model()}{latticeCh2Model()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::lattice\+Ch2\+Model (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{l\+Ch }\end{DoxyParamCaption}) const}
+
+Перевод номера канала из нумерации полотна в нумерацию модели Общая для всех станций. 
+\begin{DoxyParams}{Parameters}
+{\em l\+Ch} & номер канала в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации в нумерации модели 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a739a6465df3589f17f5f19ae0914d8ed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_ae2dfc832dbd9a06157f815dd519db48a}\label{classModelNS23817A620S1823_1_1XYChanCoords_ae2dfc832dbd9a06157f815dd519db48a} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!model2LatticeM@{model2LatticeM}}
+\index{model2LatticeM@{model2LatticeM}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{model2LatticeM()}{model2LatticeM()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model2\+LatticeM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Пересчёт внутреннего сквозного номера канала модели в сквозной номер канала как на полотне. Только для Воронеж-\/М. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & номер канала в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации на полотне 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_ae2dfc832dbd9a06157f815dd519db48a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a424dacde867f0eae80aac4a16f320039}\label{classModelNS23817A620S1823_1_1XYChanCoords_a424dacde867f0eae80aac4a16f320039} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!model2LatticeMrik@{model2LatticeMrik}}
+\index{model2LatticeMrik@{model2LatticeMrik}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{model2LatticeMrik()}{model2LatticeMrik()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model2\+Lattice\+Mrik (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Пересчёт внутреннего сквозного номера канала модели в сквозной номер канала как на полотне. Только для МРИК. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & номер канала в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации на полотне 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a424dacde867f0eae80aac4a16f320039_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a55a867ebd5b347d3e8bfd7e17ccf6bc1}\label{classModelNS23817A620S1823_1_1XYChanCoords_a55a867ebd5b347d3e8bfd7e17ccf6bc1} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!model2LatticeSM@{model2LatticeSM}}
+\index{model2LatticeSM@{model2LatticeSM}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{model2LatticeSM()}{model2LatticeSM()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model2\+Lattice\+SM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{l\+Ch = {\ttfamily 0},  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{l\+Cl = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Пересчёт внутреннего номера канала/ячейки/фрагмента(2;1) модели в номер как на полотне. Только для Воронеж-\/СМ. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & номер канала в поляризации в нумерации модели \\
+\hline
+{\em l\+Ch} & указатель на буфер для результирующего номера канала в поляризации в нумерации полотна \\
+\hline
+{\em l\+Cl} & указатель на буфер для результирующего номера ячейки в поляризации в нумерации полотна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации на полотне 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_aaf25701961f8673c4f3b866efd0e4034}\label{classModelNS23817A620S1823_1_1XYChanCoords_aaf25701961f8673c4f3b866efd0e4034} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!modelCh2Lattice@{modelCh2Lattice}}
+\index{modelCh2Lattice@{modelCh2Lattice}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{modelCh2Lattice()}{modelCh2Lattice()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model\+Ch2\+Lattice (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Ch }\end{DoxyParamCaption}) const}
+
+Пересчёт внутреннего номера канала модели в номер как на полотне. Общая для всех станций. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Ch} & номер канала в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации в нумерации полотна 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_aaf25701961f8673c4f3b866efd0e4034_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a8a26c5b43a114a00ee280a6e596afd29}\label{classModelNS23817A620S1823_1_1XYChanCoords_a8a26c5b43a114a00ee280a6e596afd29} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!modelCl2Lattice@{modelCl2Lattice}}
+\index{modelCl2Lattice@{modelCl2Lattice}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{modelCl2Lattice()}{modelCl2Lattice()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model\+Cl2\+Lattice (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Cl }\end{DoxyParamCaption}) const}
+
+Пересчёт внутреннего номера ячейки модели в номер как на полотне. Общая для всех станций. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Cl} & номер ячейки в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер ячейки в поляризации в нумерации полотна 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1XYChanCoords_a8a26c5b43a114a00ee280a6e596afd29_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a672e2334388efb9a18308e9748b95647}\label{classModelNS23817A620S1823_1_1XYChanCoords_a672e2334388efb9a18308e9748b95647} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!modelCr2Lattice@{modelCr2Lattice}}
+\index{modelCr2Lattice@{modelCr2Lattice}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{modelCr2Lattice()}{modelCr2Lattice()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model\+Cr2\+Lattice (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{m\+Cr }\end{DoxyParamCaption}) const}
+
+Пересчёт внутреннего номера крейта модели в номер как на полотне. Общая для всех станций, но актуальна только для МРИКа. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Cr} & номер крейта в поляризации в нумерации модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер крейта в поляризации в нумерации полотна 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a87f02fc0372865b7fb7f385811746f19}\label{classModelNS23817A620S1823_1_1XYChanCoords_a87f02fc0372865b7fb7f385811746f19} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!modelCrClCh2LatticeChM@{modelCrClCh2LatticeChM}}
+\index{modelCrClCh2LatticeChM@{modelCrClCh2LatticeChM}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{modelCrClCh2LatticeChM()}{modelCrClCh2LatticeChM()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model\+Cr\+Cl\+Ch2\+Lattice\+ChM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{crate\+Num,  }\item[{uint32\+\_\+t}]{cell\+In\+Crate\+Num,  }\item[{uint32\+\_\+t}]{chan\+In\+Cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Пересчёт внутреннего номера крейта, ячейки и канала модели в сквозной номер канала как на полотне. Только для Воронеж-\/М. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+In\+Crate\+Num} & номер ячейки в крейте \\
+\hline
+{\em chan\+In\+Cell\+Num} & номер канала в ячейке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации на полотне 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a7ee636b6fbae986c49cc91e9afad4854}\label{classModelNS23817A620S1823_1_1XYChanCoords_a7ee636b6fbae986c49cc91e9afad4854} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!modelCrClCh2LatticeChMrik@{modelCrClCh2LatticeChMrik}}
+\index{modelCrClCh2LatticeChMrik@{modelCrClCh2LatticeChMrik}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{modelCrClCh2LatticeChMrik()}{modelCrClCh2LatticeChMrik()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::model\+Cr\+Cl\+Ch2\+Lattice\+Ch\+Mrik (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{crate\+Num,  }\item[{uint32\+\_\+t}]{cell\+In\+Crate\+Num,  }\item[{uint32\+\_\+t}]{chan\+In\+Cell\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Пересчёт внутреннего номера крейта (предполагается, что в каждом 1 ячейка), ячейки и канала модели в сквозной номер канала как на полотне. Только для МРИК. 
+\begin{DoxyParams}{Parameters}
+{\em crate\+Num} & номер крейта \\
+\hline
+{\em cell\+In\+Crate\+Num} & номер ячейки в крейте \\
+\hline
+{\em chan\+In\+Cell\+Num} & номер канала в ячейке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+номер канала в поляризации на полотне 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a7b143a15da5c02eb100f278db20c865f}\label{classModelNS23817A620S1823_1_1XYChanCoords_a7b143a15da5c02eb100f278db20c865f} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!stationType@{stationType}}
+\index{stationType@{stationType}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{stationType}{stationType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::station\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+тип станции, для которой рассчитаны координаты каналов \Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a61590303a61317682f9ea24330797b04}\label{classModelNS23817A620S1823_1_1XYChanCoords_a61590303a61317682f9ea24330797b04} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!x@{x}}
+\index{x@{x}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::x}
+
+координата канала по X, м \Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_add1c64463474b3a5017d2cfc45b3abec}\label{classModelNS23817A620S1823_1_1XYChanCoords_add1c64463474b3a5017d2cfc45b3abec} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!xyChanCoords@{xyChanCoords}}
+\index{xyChanCoords@{xyChanCoords}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily struct  \{ ... \}  Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::xy\+Chan\+Coords\mbox{[}\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{Shared\+Const\+::max\+Channels\+SM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+массив координат каждого канала приёмника на антенном полотне Количество каналов взято наибольшее среди трёх станций \Hypertarget{classModelNS23817A620S1823_1_1XYChanCoords_a4947e4c77c4334c92fe6d59c567a5dd7}\label{classModelNS23817A620S1823_1_1XYChanCoords_a4947e4c77c4334c92fe6d59c567a5dd7} 
+\index{ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}!y@{y}}
+\index{y@{y}!ModelNS23817A620S1823::XYChanCoords@{ModelNS23817A620S1823::XYChanCoords}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Model\+NS23817\+A620\+S1823\+::\+XYChan\+Coords\+::y}
+
+координата канала по Y, м 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{xyChanCoords_8h}{xy\+Chan\+Coords.\+h}}\item 
+src/\mbox{\hyperlink{xyChanCoords_8cpp}{xy\+Chan\+Coords.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="gnuplotio::deref_and_print" name="gnuplotio::deref_and_print">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,161,45"/>
+<area shape="rect" id="Node000002" href="$namespacegnuplotio.html#a0d1ae7874d3299e861934d59a2f3e7a0" title=" " alt="" coords="209,5,365,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,23,196,23,196,28,161,28"/>
+<area shape="rect" id="Node000003" href="$namespacegnuplotio.html#a55ff2f9abaa4b3e1c64a8f730f791b33" title=" " alt="" coords="413,13,581,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,23,400,23,400,28,366,28"/>
+<area shape="rect" id="Node000004" href="$structgnuplotio_1_1TextSender.html#a03b58292dc75a4137d30ad7fffd762c6" title=" " alt="" coords="629,5,792,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="582,23,616,23,616,28,582,28"/>
+</map>

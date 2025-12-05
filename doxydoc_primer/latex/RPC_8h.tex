@@ -1,0 +1,71 @@
+\doxysection{include/model/\+RPC.h File Reference}
+\hypertarget{RPC_8h}{}\label{RPC_8h}\index{include/model/RPC.h@{include/model/RPC.h}}
+{\ttfamily \#include $<$model/min\+Defs.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/sumtype.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/optional.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2ippa.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2mask.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trkp.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2trims.\+h$>$}\newline
+Include dependency graph for RPC.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RPC_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RPC_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSetOutputDirParams}{Set\+Output\+Dir\+Params}}
+\item 
+struct \mbox{\hyperlink{structModelOutput}{Model\+Output}}
+\begin{DoxyCompactList}\small\item\em Выдача, сгенерированная моделью по всем стробам одного такта. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{RPC_8h_a5bb375082f51ad4570ab64c8af121606}{MODEL\+\_\+\+PORT\+\_\+\+DEFAULT}}~3777
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Sum\+Type$<$ \mbox{\hyperlink{structSetOutputDirParams}{Set\+Output\+Dir\+Params}}, \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}} $>$ \mbox{\hyperlink{RPC_8h_af7f75d4d0847a2aa6b24f144caa2c426}{Model\+Params}}
+\item 
+typedef Sum\+Type$<$ \mbox{\hyperlink{structModelOutput}{Model\+Output}}, None\+Type $>$ \mbox{\hyperlink{RPC_8h_a84f1b6c2c19897490ae8155942ea01f9}{Model\+Result}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{RPC_8h_a5bb375082f51ad4570ab64c8af121606}\label{RPC_8h_a5bb375082f51ad4570ab64c8af121606} 
+\index{RPC.h@{RPC.h}!MODEL\_PORT\_DEFAULT@{MODEL\_PORT\_DEFAULT}}
+\index{MODEL\_PORT\_DEFAULT@{MODEL\_PORT\_DEFAULT}!RPC.h@{RPC.h}}
+\doxysubsubsection{\texorpdfstring{MODEL\_PORT\_DEFAULT}{MODEL\_PORT\_DEFAULT}}
+{\footnotesize\ttfamily \#define MODEL\+\_\+\+PORT\+\_\+\+DEFAULT~3777}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{RPC_8h_af7f75d4d0847a2aa6b24f144caa2c426}\label{RPC_8h_af7f75d4d0847a2aa6b24f144caa2c426} 
+\index{RPC.h@{RPC.h}!ModelParams@{ModelParams}}
+\index{ModelParams@{ModelParams}!RPC.h@{RPC.h}}
+\doxysubsubsection{\texorpdfstring{ModelParams}{ModelParams}}
+{\footnotesize\ttfamily typedef Sum\+Type$<$\mbox{\hyperlink{structSetOutputDirParams}{Set\+Output\+Dir\+Params}}, \mbox{\hyperlink{structModelInputBundle}{Model\+Input\+Bundle}}$>$ \mbox{\hyperlink{RPC_8h_af7f75d4d0847a2aa6b24f144caa2c426}{Model\+Params}}}
+
+\Hypertarget{RPC_8h_a84f1b6c2c19897490ae8155942ea01f9}\label{RPC_8h_a84f1b6c2c19897490ae8155942ea01f9} 
+\index{RPC.h@{RPC.h}!ModelResult@{ModelResult}}
+\index{ModelResult@{ModelResult}!RPC.h@{RPC.h}}
+\doxysubsubsection{\texorpdfstring{ModelResult}{ModelResult}}
+{\footnotesize\ttfamily typedef Sum\+Type$<$\mbox{\hyperlink{structModelOutput}{Model\+Output}}, None\+Type$>$ \mbox{\hyperlink{RPC_8h_a84f1b6c2c19897490ae8155942ea01f9}{Model\+Result}}}
+

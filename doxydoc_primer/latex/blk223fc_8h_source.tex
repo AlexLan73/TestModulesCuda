@@ -1,0 +1,31 @@
+\doxysection{blk223fc.\+h}
+\hypertarget{blk223fc_8h_source}{}\label{blk223fc_8h_source}\index{src/mpk1/blk223/blk223fc.h@{src/mpk1/blk223/blk223fc.h}}
+\mbox{\hyperlink{blk223fc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_BLK223FC\_H\_\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_BLK223FC\_H\_\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fcquantum_8h}{fcquantum.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{model__wrapper_8h}{model\_wrapper.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafac}{interf\_strobe\_modes}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca29666ac6bde785f2e90488149dfff648}{INTERF\_MODE\_NONE}}\ =\ 0,}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca339674c133519bcc51037e3ccea30017}{INTERF\_MODE\_WIDE\_BEAM}}\ =\ 1,\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca7fd448f3b7e8797852b09f3171db1458}{INTERF\_MODE\_NARROW\_BEAM}}\ =\ 2,\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{blk223fc_8h_a796a5df00ab61d21ab9f3c0c48ccafaca878b303d6fd50d5cc984b2744ccda5af}{INTERF\_MODE\_LEVEL\_MEASURE}}\ =\ 3\ \ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00033\ libutils::Result<interf\_strobe\_modes>\ \mbox{\hyperlink{blk223fc_8h_a6bc4bd366fc4e96bef4c0a106c8b0ca0}{calc\_asp\_mode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ divc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ rays,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ kgrs,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ nstr);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{blk223fc_8h_a1a3d23f57ac040a38ee787c96bb474a1}{compute\_fcq\_for\_hw}}(\textcolor{keyword}{const}\ std::vector<modelv::ControlMessage>\ \&ctrl\_msgs,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfcq}{fcq}}\ *fcqp);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{blk223fc_8h_a4803249bbb22a5880058b73cc13c9953}{print\_fcq}}(\mbox{\hyperlink{structfcq}{fcq}}\ *fcqp);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{blk223fc_8h_a69f08e39ea82f1ffdd8f9b018e73c23d}{print\_fcq\_dump}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structfcq}{fcq}}*\ fcqp,\ FILE\ *\ =\ stdout);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

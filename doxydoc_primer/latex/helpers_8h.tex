@@ -1,0 +1,113 @@
+\doxysection{src/helpers.h File Reference}
+\hypertarget{helpers_8h}{}\label{helpers_8h}\index{src/helpers.h@{src/helpers.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$model/control\+Msg\+Shared\+Types.\+h$>$}\newline
+{\ttfamily \#include "{}slice\+File.\+h"{}}\newline
+{\ttfamily \#include "{}control\+Msg\+Model\+Types.\+h"{}}\newline
+Include dependency graph for helpers.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model\+NS23817\+A620\+S1823}}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers}{Model\+NS23817\+A620\+S1823\+::\+Helpers}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a8f4698ade28eb63457898bcb04f37ecb}{Model\+NS23817\+A620\+S1823\+::maybe\+\_\+terminate}} (char \texorpdfstring{$\ast$}{*}s, uint n, char c)
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_ac077babd1ba2ca681702bc70e3dd447c}{Model\+NS23817\+A620\+S1823\+::quick\+Print}} (std\+::ostream \&s, const std\+::complex$<$ int32\+\_\+t $>$ \&data, char c=\textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a6b1d3b036fdf5f25619060f93111f8ac}{Model\+NS23817\+A620\+S1823\+::quick\+Print}} (std\+::ostream \&s, const std\+::complex$<$ double $>$ \&data, char c=\textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a9ac6c9c54fa14ab76c8b8e50cc3050d0}{Model\+NS23817\+A620\+S1823\+::quick\+Print}} (std\+::ostream \&s, const int32\+\_\+t \&data, char c=\textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_abdb200a2eaec4643cad647754781e895}{Model\+NS23817\+A620\+S1823\+::quick\+Print}} (std\+::ostream \&s, const int64\+\_\+t \&data, char c=\textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a2d4bfd49826f22f3d517c87071e7ff85}{Model\+NS23817\+A620\+S1823\+::quick\+Print}} (std\+::ostream \&s, const uint64\+\_\+t \&data, char c=\textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+void \mbox{\hyperlink{namespaceModelNS23817A620S1823_aec8a89ed52e25d1a287041cc11a629f3}{Model\+NS23817\+A620\+S1823\+::quick\+Print}} (std\+::ostream \&s, const double \&data, char c=\textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespaceModelNS23817A620S1823_a099f1fe658d71ddb40bb82995a15444f}{Model\+NS23817\+A620\+S1823\+::quick\+Println}} (std\+::ostream \&s, const T \&v)
+\item 
+static int32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_a513446493a680aae9a86d2011dd2da59}{Model\+NS23817\+A620\+S1823\+::round\+\_\+u32}} (const int s, const uint32\+\_\+t x, const unsigned n)
+\item 
+static int64\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_abd072fbb6c2f3abef34b77d65cd68cc0}{Model\+NS23817\+A620\+S1823\+::round\+\_\+u64}} (const int s, const uint64\+\_\+t x, const unsigned n)
+\item 
+static int32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_a0bb27d7b33ace176910233ff3b345381}{Model\+NS23817\+A620\+S1823\+::round\+\_\+i32}} (int32\+\_\+t x, const unsigned n)
+\item 
+static int64\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_a97ef45869b51098405dad2f196d94474}{Model\+NS23817\+A620\+S1823\+::round\+\_\+i64}} (int64\+\_\+t x, const unsigned n)
+\item 
+{\footnotesize template$<$unsigned capacity$>$ }\\int32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_abe6c67dd3d1b5cf57e55aa958c216336}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::rshift\+By}} (int32\+\_\+t value)
+\item 
+{\footnotesize template$<$unsigned capacity$>$ }\\int64\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_adb8c09633653904b77f249d6abc25fa3}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::rshift64\+By}} (int64\+\_\+t value)
+\item 
+{\footnotesize template$<$unsigned capacity$>$ }\\std\+::complex$<$ int32\+\_\+t $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a7daa74a67ad79e94dcd5d60966def12f}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::rshift\+By}} (const std\+::complex$<$ int32\+\_\+t $>$ \&value)
+\item 
+{\footnotesize template$<$unsigned capacity$>$ }\\std\+::complex$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a848cca87d4fcdb9fe46542e847b13b7d}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::rshift64\+By}} (const std\+::complex$<$ int64\+\_\+t $>$ \&value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a4ec45a40fd7534549edaa65b5ad05b2f}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::flp2}} (uint32\+\_\+t x)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a83fc4933fb8f468179b8d10ed98f56f7}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Interf\+Mode\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aab804c17c6331df19d2ab8aadff432d6}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Target\+Mode\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_ab2905bdba81471bfc9f192cf71cb8770}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Coord\+Adapt\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a70a220ee82b24c41e5095c53ed6dedea}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Signal\+Adapt\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_af7281c45ee109fe93059c8028f1e8459}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Autocomp\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a21d4d44b6b64c131c1a5ae454844b304}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Calibr\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_adff9707b7a3530c5f9a62ed10130bcc3}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+LIMMStrb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a687cddb6f575d22bbdf873bcf1ba0d36}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Fragm\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aeb89d6cc545fbab069a9076f86e5658f}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Tfc\+Strb}} (uint32\+\_\+t strb\+Type)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a5b80c2dcd034f8385df57533032fba98}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::calc\+Samples\+In\+Ray}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*}strb)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aabdb31d2add16b63348d1ad008455778}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::calc\+Transient\+Response\+Length}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*}strb)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a8910ccf5e21ff6ed675cb824ae6df61e}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::calc\+Autocomp\+Samples\+In\+Ray}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*}strb)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aa2cb71c43a87b8ef71b3e41872e2cb8a}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::calc\+Rays\+Num}} (const \mbox{\hyperlink{structModelNS23817A620S1823_1_1CMsgSharedTypes_1_1ImitStrobe}{CMsg\+Shared\+Types\+::\+Imit\+Strobe}} \texorpdfstring{$\ast$}{*}strb)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_ad58103cb4e1fe3345ce1b2cab7b06b68}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::get\+Strobe\+IDAppendix}} (uint32\+\_\+t strb\+Type)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_afdefbc89c749f596f330669162fb89df}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Last\+Polarization}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Shared\+Const\+::\+Polarization\+Types}} polar\+Type, uint32\+\_\+t polar\+Mask)
+\item 
+bool \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a63a270be0bd04eaa87b979c0652848d7}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Mrik\+Bottom\+Half}} (uint32\+\_\+t l\+Chan\+Num)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a01c864754900d1da7814e09c551ee219}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::print\+Arr}} (const T arr\mbox{[}$\,$\mbox{]}, int32\+\_\+t length, char direction=\textquotesingle{}r\textquotesingle{}, const char \texorpdfstring{$\ast$}{*}descr="{}"{})
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a4698105c1122c8b0993295bf4f66597d}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::dump1\+Dim\+Slice}} (const T buf\mbox{[}$\,$\mbox{]}, uint32\+\_\+t length, \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&s\+File, std\+::ios\+\_\+base\+::openmode mode=std\+::ios\+\_\+base\+::trunc)
+\item 
+{\footnotesize template$<$class T , const uint32\+\_\+t dim2\+Sz$>$ }\\void \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_a2e212a6919279b5740feedc96fbdc02a}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::dump2\+Dim\+Slice}} (const T buf\mbox{[}$\,$\mbox{]}\mbox{[}dim2\+Sz\mbox{]}, uint32\+\_\+t rows\+Num, uint32\+\_\+t columns\+Num, \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&s\+File, std\+::ios\+\_\+base\+::openmode mode=std\+::ios\+\_\+base\+::trunc)
+\item 
+{\footnotesize template$<$class T $>$ }\\int32\+\_\+t \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aedfc02b6d2a9e66c52e942ac94f22438}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::is\+Valid}} (T value, T min, T max, const char \texorpdfstring{$\ast$}{*}descr)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_aec0feb465b3c921b9833a640a3e9b66b}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::dump\+Sum\+Polars}} (std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ T $>$ $>$ $>$ \&sum, \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} \&s\+File)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1SliceFile}{Slice\+File}} $>$ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1Helpers_afc1b0912f9bfb3d0b779db63e336afce}{Model\+NS23817\+A620\+S1823\+::\+Helpers\+::make\+Slice\+File}} (const char \texorpdfstring{$\ast$}{*}slice\+\_\+name, uint64\+\_\+t texec, uint nstr)
+\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\doxysection{include/model/model\+Interface.h File Reference}
+\hypertarget{modelInterface_8h}{}\label{modelInterface_8h}\index{include/model/modelInterface.h@{include/model/modelInterface.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$libvork/e2trpr.\+h$>$}\newline
+{\ttfamily \#include $<$libvork/e2ippa.\+h$>$}\newline
+{\ttfamily \#include $<$model/e2trimts.\+h$>$}\newline
+{\ttfamily \#include $<$model/e2trkp.\+h$>$}\newline
+{\ttfamily \#include $<$model/str\+\_\+uco.\+h$>$}\newline
+{\ttfamily \#include $<$model/min\+Defs.\+h$>$}\newline
+{\ttfamily \#include $<$model/control\+Msg\+Shared\+Types.\+h$>$}\newline
+{\ttfamily \#include $<$model/model\+Shared\+Const.\+h$>$}\newline
+Include dependency graph for model\+Interface.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelInterface_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modelInterface_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Model\+NS23817\+A620\+S1823\+::\+Channels\+Mask}}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{Model\+NS23817\+A620\+S1823\+::\+External\+Messages}}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Model\+NS23817\+A620\+S1823\+::\+Control\+Message}}
+\item 
+class \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+NS23817\+A620\+S1823\+::\+Interface}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model\+NS23817\+A620\+S1823}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+NS23817\+A620\+S1823\+::\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{modelInterface_8h_a0ebb9babc58d35b38df764011eb8b8f0}{create\+Model\+Object}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{modelInterface_8h_a0ebb9babc58d35b38df764011eb8b8f0}\label{modelInterface_8h_a0ebb9babc58d35b38df764011eb8b8f0} 
+\index{modelInterface.h@{modelInterface.h}!createModelObject@{createModelObject}}
+\index{createModelObject@{createModelObject}!modelInterface.h@{modelInterface.h}}
+\doxysubsubsection{\texorpdfstring{createModelObject()}{createModelObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface}{Model\+NS23817\+A620\+S1823\+::\+Interface}} \texorpdfstring{$\ast$}{*} create\+Model\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+Создание объекта модели. Память для объекта выделяется в куче, поэтому важно помнить, что после использования на указатель надо натравить delete. Доступ к модели осуществляется только через функции интерфейса. 
+\begin{DoxyParams}{Parameters}
+{\em init\+Lvl} & уровень инициализации объекта модели. control\+Msgs\+Only -\/ расчёт только УС full\+Init -\/ инициализация помимо памяти УС ещё и памяти для работы модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на объект интерфейсной части модели 
+\end{DoxyReturn}

@@ -1,0 +1,121 @@
+.TH "fcq" 3 "Test moduls" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fcq \- Квант ФУ для ячейки (тип)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fcquantum\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfcq\fP ()"
+.br
+.ti -1c
+.RI "\fBfcq\fP (uint c)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const uint \fBcrate_num\fP"
+.br
+.ti -1c
+.RI "TrimtsMsg * \fBtrims\fP"
+.br
+.RI "Указатель на сообщение ТРИМС "
+.ti -1c
+.RI "E2TRPR * \fBtrpr\fP"
+.br
+.RI "Указатель на сообщение ТРПР "
+.ti -1c
+.RI "\fBTRKP\fP * \fBafr\fP"
+.br
+.RI "Указатель на сообщение АФР "
+.ti -1c
+.RI "\fBTRKP\fP * \fBclb\fP"
+.br
+.RI "Указатель на сообщение КЛБ "
+.ti -1c
+.RI "\fBMASK\fP * \fBmask\fP"
+.br
+.RI "Указатель на сообщение МАСК "
+.ti -1c
+.RI "E2IPPA * \fBippa\fP"
+.br
+.RI "Указатель на сообщение ИППА "
+.ti -1c
+.RI "std::vector< \fBc223_target_strobe\fP > \fBt_strobes\fP"
+.br
+.RI "Вектор целевых стробов\&. "
+.ti -1c
+.RI "std::vector< \fBc223_imit_strobe\fP > \fBi_strobes\fP"
+.br
+.RI "Вектор имитационных стробов\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static std::experimental::optional< uint > \fBdef_crate_num\fP"
+.br
+.RI "Номер крейта (aka 'номер ячейки на полотне'; в крейте 2 ячейки,\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Квант ФУ для ячейки (тип)\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "fcq::fcq ()\fC [inline]\fP"
+
+.SS "fcq::fcq (uint c)\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTRKP\fP* fcq::afr"
+
+.PP
+Указатель на сообщение АФР 
+.SS "\fBTRKP\fP* fcq::clb"
+
+.PP
+Указатель на сообщение КЛБ 
+.SS "const uint fcq::crate_num"
+
+.SS "std::experimental::optional< uint > fcq::def_crate_num\fC [static]\fP"
+
+.PP
+Номер крейта (aka 'номер ячейки на полотне'; в крейте 2 ячейки,\&. 
+.SS "std::vector<\fBc223_imit_strobe\fP> fcq::i_strobes"
+
+.PP
+Вектор имитационных стробов\&. 
+.SS "E2IPPA* fcq::ippa"
+
+.PP
+Указатель на сообщение ИППА 
+.SS "\fBMASK\fP* fcq::mask"
+
+.PP
+Указатель на сообщение МАСК 
+.SS "std::vector<\fBc223_target_strobe\fP> fcq::t_strobes"
+
+.PP
+Вектор целевых стробов\&. 
+.SS "TrimtsMsg* fcq::trims"
+
+.PP
+Указатель на сообщение ТРИМС 
+.SS "E2TRPR* fcq::trpr"
+
+.PP
+Указатель на сообщение ТРПР 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Test moduls from the source code\&.

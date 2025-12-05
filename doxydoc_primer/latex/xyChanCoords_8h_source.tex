@@ -1,0 +1,59 @@
+\doxysection{xy\+Chan\+Coords.\+h}
+\hypertarget{xyChanCoords_8h_source}{}\label{xyChanCoords_8h_source}\index{src/xyChanCoords.h@{src/xyChanCoords.h}}
+\mbox{\hyperlink{xyChanCoords_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ XYCHANCOORDS\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ XYCHANCOORDS\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{modelSharedConst_8h}{model/modelSharedConst.h}}>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceModelNS23817A620S1823}{ModelNS23817A620S1823}}\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords}{XYChanCoords}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}{CalcType}}\ \{\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21}{zeroInCenter}},\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa1e0001e9c94eb89354142e65b77057c6}{zeroInLeftBottom}}\ \};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a99c463f2d1365b3bc2688e04bc875f7f}{XYChanCoords}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a3ff31af721f4e1e7050650af61c94f69}{\string~XYChanCoords}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a87c34fac8a1b62215e051358c64bf204}{getXYCoords}}(uint32\_t\ chanNum,\ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a61590303a61317682f9ea24330797b04}{x}},\ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a4947e4c77c4334c92fe6d59c567a5dd7}{y}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a815a45f68a9caf2c9d037bd02eec6229}{getCurrentStationType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a95a7684a416a2859a80d47b46cec59a6}{calcXY}}(\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ stType,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0ca}{CalcType}}\ calcType\ =\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6bd80095b517ceda2d9e97adcb4ea0caa0bdd5dc57cf1599590d1b4caf17b3c21}{zeroInCenter}});}
+\DoxyCodeLine{00045\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_aaf25701961f8673c4f3b866efd0e4034}{modelCh2Lattice}}(uint32\_t\ mCh)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a8a26c5b43a114a00ee280a6e596afd29}{modelCl2Lattice}}(uint32\_t\ mCl)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a672e2334388efb9a18308e9748b95647}{modelCr2Lattice}}(uint32\_t\ mCr)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a739a6465df3589f17f5f19ae0914d8ed}{latticeCh2Model}}(uint32\_t\ lCh)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a55a867ebd5b347d3e8bfd7e17ccf6bc1}{model2LatticeSM}}(uint32\_t\ mCh,\ uint32\_t\ *lCh,\ uint32\_t\ *lCl);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a424dacde867f0eae80aac4a16f320039}{model2LatticeMrik}}(uint32\_t\ mCh);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a87f02fc0372865b7fb7f385811746f19}{modelCrClCh2LatticeChM}}(uint32\_t\ crateNum,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ cellInCrateNum,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ chanInCellNum);}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a7ee636b6fbae986c49cc91e9afad4854}{modelCrClCh2LatticeChMrik}}(uint32\_t\ crateNum,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ cellInCrateNum,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ chanInCellNum);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_ae2dfc832dbd9a06157f815dd519db48a}{model2LatticeM}}(uint32\_t\ mCh);}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a3f00391f7d403ce3d5f466f99a38050c}{lattice2ModelSM}}(uint32\_t\ lCh,\ uint32\_t\ *mCl);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a691116cf658f1b89a5280baad660c3c3}{lattice2ModelM}}(uint32\_t\ lCh);}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{static}\ uint32\_t\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a6c90d0dba1145a1639d1a7cb7a1ddf85}{lattice2ModelMrik}}(uint32\_t\ lCh);}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a29ee3843fb1a9a2187dac8c4e208e1fb}{isVirtualChannelSM}}(uint32\_t\ mCh);}
+\DoxyCodeLine{00133\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a61590303a61317682f9ea24330797b04}{x}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a4947e4c77c4334c92fe6d59c567a5dd7}{y}};}
+\DoxyCodeLine{00142\ \ \ \ \ \}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_add1c64463474b3a5017d2cfc45b3abec}{xyChanCoords}}[\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a93f12f243259b0ca6640db0a26e27d78}{SharedConst::maxChannelsSM}}];}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{SharedConst::StationType}}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a7b143a15da5c02eb100f278db20c865f}{stationType}};}
+\DoxyCodeLine{00145\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a8e22424b24b9f639e208dddb220a872d}{calcXY00InCorner}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_ac8db104a0c702f0fead3b3e524546292}{calcXY00InCenter}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_a81e1b2ff9f6a92a00dd8f731815f986c}{calcSMChansCoords}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_afc112032721a7fd24626fe67a342927f}{calcSMChansCenteredCoords}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelNS23817A620S1823_1_1XYChanCoords_ad9dd3b5a68d88cfb08747bb12f72e2fc}{calcMrikChansCenteredCoords}}();}
+\DoxyCodeLine{00169\ \};\ \textcolor{comment}{//\ class\ XYChanCoords}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \}\ \textcolor{comment}{//\ namespace\ ModelNS23817A620S1823}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ XYCHANCOORDS\_H\_\_}}
+
+\end{DoxyCode}

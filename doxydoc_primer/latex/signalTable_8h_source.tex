@@ -1,0 +1,67 @@
+\doxysection{signal\+Table.\+h}
+\hypertarget{signalTable_8h_source}{}\label{signalTable_8h_source}\index{src/gui/signalTable.h@{src/gui/signalTable.h}}
+\mbox{\hyperlink{signalTable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SIGNALTABLE\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SIGNALTABLE\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSignalTable}{SignalTable}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classSignalTable_a05bc91ad325bce1f774b18b4c167cd37}{SignalTable}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classSignalTable_a1b2039da9cfcc2806f6fd38d5d96f39e}{\string~SignalTable}}();}
+\DoxyCodeLine{00014\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classSignalTable_adabed06a30427e9a8b1cad150f9268b8}{getNdec}}(uint32\_t\ sigType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classSignalTable_a0f33c791e19e1926cd01ebbeef2a5c35}{getNfil}}(uint32\_t\ sigType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classSignalTable_a1a2f33752104dd2c2dcbe1328c2df39d}{getDfm}}(uint32\_t\ sigType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classSignalTable_a205781d6d062251a9af7a8179e1813ef}{getNTay}}(uint32\_t\ sigType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ int32\_t\ \mbox{\hyperlink{classSignalTable_a410bf403fcceb0b5b3d3e32487c8bd99}{getMSeqSignQuantity}}(uint32\_t\ sigType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classSignalTable_a0772452ef0edaae71f951bbfe55d2c3a}{getNPoly}}(uint32\_t\ sigType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ data}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSignalTable_1_1SignalInfo}{SignalInfo}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_ab5ed000e30815a9e213f8d59a4dd7aef}{nfil}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_a4b954773fb0e7591d56f3692c285b2e9}{ndec}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_aeae05f6e59cd23306c33d10add659a02}{ndFm}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_adfaa7cddddc5717c4d4e5ffe83616f16}{nPoly}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_a543f684405fcfe4d4521d06f572034ea}{nTay}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_aa91877bed569d1eea6f19d4d510a39c8}{dRp}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_ab59aa2108aed4464d2b8b51557cd8330}{dfm}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_a489f1f8af3907233693a1f017ae4cd11}{gb3}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{structSignalTable_1_1SignalInfo_a060252d92485c4954cfe3e578862b142}{nsdv}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structSignalTable_1_1SignalInfo_acb2723896cb4dcb157c7b7c151e7c665}{descr}};}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ \mbox{\hyperlink{classSignalTable_a40b2f89a228150faffeeab8a74205788}{maxSignals}}\ =\ 384;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{structSignalTable_1_1SignalInfo}{SignalInfo}}\ \mbox{\hyperlink{classSignalTable_aa51e8f7f91dad46ddbbdd04f31fc1067}{signalsInfo}}[\mbox{\hyperlink{classSignalTable_a40b2f89a228150faffeeab8a74205788}{maxSignals}}];}
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ methods}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a4b4ea398b9b0f6c1ff43ae80b482ce0b}{initM}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a9d87debd6af0eb9f77cddc34820ec80f}{initSM}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_ac350ad165375d14bbab74e00d9320678}{initMrik}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_afca469ebe86e773b567d60c73235a531}{initShared}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a88e7726f3205c86bf955ed89846488cc}{fillNfilM}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_abfed2b0e94f89f3e7f962108ea560bda}{fillNfilSM}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_aa76660ecfc062427359901789ead51cf}{fillNfilMrik}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a9640389d872e24db1712b44be3663223}{fillNfilShared}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_ab46f724aa5be3a3374dca3858c914493}{fillNdecM}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_ad00e731cb125a8c5d787e7cf10470b8a}{fillNdecSM}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_afe283f97dc9348bbbf4d3c7e6ac02f74}{fillNdecMrik}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a20b0fde7e1a5c125f8588bf87d439827}{fillNdecShared}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a562eb467a240118529feba79ceec58c8}{fillNdFmM}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a6ea9f2a7de6d6cf1d56db07a96484d39}{fillNdFmSM}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_aa4975e70887b247f102eddb9ddba9f88}{fillNdFmMrik}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_adc661db421ec0dd423e0d33f986c06db}{fillNdFmShared}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a91e0d05782efda694eed96b89042a95b}{fillNTayM}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a13177e68b49bdb8b1c3aa3d24daa24f9}{fillNTaySM}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a510e345dbf2aef4b4625aed8fac0264c}{fillNTayMrik}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a26e7165e362e2213aae141dfdc95913d}{fillNTayShared}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_af53e2251b6d85fc6999987eb71bf43b8}{fillDfmM}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a6403bfb3f0f81357c7e28bff2d25b6b4}{fillDfmSM}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a49ddb4a2da8579f667ed2f73871deaf2}{fillDfmMrik}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a983406c9b093d496175e5193142408cd}{fillDfmShared}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a7edeb5922c8bacf430b5b35c082a28ce}{fillNPolyM}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_ae73c14e3406a65f6ed7fcd3468938f3a}{fillNPolySM}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSignalTable_a9a5f4395e2c74e91044258b309cbac0e}{fillNPolyMrik}}();}
+\DoxyCodeLine{00158\ \};\ \textcolor{comment}{//\ class\ SignalTable}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SIGNALTABLE\_H\_\_}}
+
+\end{DoxyCode}

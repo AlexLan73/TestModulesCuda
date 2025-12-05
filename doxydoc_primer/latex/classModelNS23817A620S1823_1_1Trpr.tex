@@ -1,0 +1,570 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Trpr Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Trpr}{}\label{classModelNS23817A620S1823_1_1Trpr}\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+
+
+{\ttfamily \#include $<$trpr.\+h$>$}
+
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Trpr\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classModelNS23817A620S1823_1_1Trpr__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a5005dfe5c56d34c72dfd3572a0dc7cd7}{Trpr}} ()
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ad8781291c9d7cebbf6ea7b21b103dfcb}{Trpr}} (E2\+TRPR \texorpdfstring{$\ast$}{*}new\+Msg)
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a8d37b90a09b87cf2e949c86bdaf23b1d}{\texorpdfstring{$\sim$}{\string~}\+Trpr}} ()
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ac9dbe7e327f7db94be0944d92df5c77d}{set\+New\+Msg}} (const E2\+TRPR \texorpdfstring{$\ast$}{*}new\+Msg)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_aa8f44d5f879b771fc4de331782e8e424}{get\+Msg}} (E2\+TRPR \texorpdfstring{$\ast$}{*}msg\+Buf) const
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_aca73328cd5146245be8b8e1ebb0cd0db}{set\+Tact\+Header}} (SDTRPR \texorpdfstring{$\ast$}{*}header)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ad26f0f2a2ea65832f56ebf84488ce217}{set\+Strobe}} (TStrobe \texorpdfstring{$\ast$}{*}strb, uint32\+\_\+t strb\+Index)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a81009017f06aea9beb3bf6d15bc0c508}{set\+Uv\+Pg}} (float u, float v, uint32\+\_\+t strb\+Index, int32\+\_\+t pg\+Index)
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ad0a4674a71a6f41a2b4322b6f69bd12d}{set\+Strb\+Id}} (uint32\+\_\+t strb\+Id, uint32\+\_\+t strb\+Index)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a62f2acca19c26b1fd57a55bd6b7501c4}{get\+Strb\+Id}} (uint32\+\_\+t strb\+Index) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a02d37b6d9e105f993c49dd52777ab152}{get\+Polars\+Mask}} (uint32\+\_\+t strb\+Index) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a18f40572e2e315adad0ea7793e8d1c1e}{validate}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type, int16\+\_\+t active\+Interfs\+Num) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_abeab087c56998990f3e688349b374e7c}{get\+Strobes\+Number}} () const
+\item 
+bool \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ac248e0a7a6350beaf2e4e1c2603f82e2}{is\+Strobe\+For\+Model}} (uint32\+\_\+t strb\+Index) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a1534eb01c1de4fc02135bba03e0ba9fd}{get\+Signal\+Type}} (uint32\+\_\+t strb\+Index) const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_aec308203653e4398561ef67d9b730d78}{get\+Tact\+Id}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a12bafb38f59191a46715dff089b18efc}{clear}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_af56c47229f6dcd82c84978f91cd0ea7f}{validate\+Strb}} (uint32\+\_\+t strb\+Index, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type, int16\+\_\+t active\+Interfs\+Num) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a67d273cd1ea89bbbf231d85620817e6b}{is\+Valid\+Kdiv\+XY}} (\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type, uint8\+\_\+t kdivx, uint8\+\_\+t kdivy) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a485879e3a1f2fb1c1f4551ceec9a9b51}{is\+Valid\+DFGroups\+Num}} (uint8\+\_\+t dfgs\+Num, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_af85c1a4b2b7d5831fa2320939e622a30}{is\+Valid\+DFGroups\+And\+Rays}} (const TStrobe \texorpdfstring{$\ast$}{*}strb, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a2274872e12ae2010ce59543b460aa902}{is\+Valid\+Kgd}} (uint16\+\_\+t kgd, int32\+\_\+t) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_aeef1a004fa9211249db17aaa26fbb300}{is\+Valid\+Fg1}} (int32\+\_\+t fg1, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_af257447ad571ba13a1ca29a060f8533f}{is\+Valid\+Strb\+Length}} (uint32\+\_\+t strb\+Len, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_adf563303c912ac53ce8530aebeb857c4}{is\+Valid\+Strb\+Begin}} (uint32\+\_\+t strb\+Begin, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a73a3d1727858bcb45caca82553d6df48}{is\+Valid\+N1grs}} (int16\+\_\+t n1grs, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a3e7de9b7b9952c1d0a2859b83fb7c838}{is\+Valid\+Kgrs}} (uint16\+\_\+t kgrs, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ab8eab945532cb89e12391fc5ab26c80f}{is\+Valid\+Fg2}} (int32\+\_\+t fg2, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}} st\+Type) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a84baab8953e6c3c62b699ff89b8bc90c}{is\+Valid\+Threshold}} (uint8\+\_\+t thresholds\+Mask, uint16\+\_\+t win\+SizeR, uint16\+\_\+t win\+SizeV, uint16\+\_\+t kgd, uint16\+\_\+t kgrs) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+E2\+TRPR \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a7131d5f523741647b5d626bc24e57c40}{trpr}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::pair$<$ uint8\+\_\+t, uint8\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_a4f06c9dd1c88a917f0e673dd2d864de1}{kdiv}}
+\item 
+\mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups}{DFGroups}} \mbox{\hyperlink{classModelNS23817A620S1823_1_1Trpr_ab5f7d16a963a9c7af26ea759da9d72b5}{df\+Groups}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс тактового расписания приёмника. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a5005dfe5c56d34c72dfd3572a0dc7cd7}\label{classModelNS23817A620S1823_1_1Trpr_a5005dfe5c56d34c72dfd3572a0dc7cd7} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!Trpr@{Trpr}}
+\index{Trpr@{Trpr}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{Trpr()}{Trpr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Trpr\+::\+Trpr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trpr_a5005dfe5c56d34c72dfd3572a0dc7cd7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ad8781291c9d7cebbf6ea7b21b103dfcb}\label{classModelNS23817A620S1823_1_1Trpr_ad8781291c9d7cebbf6ea7b21b103dfcb} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!Trpr@{Trpr}}
+\index{Trpr@{Trpr}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{Trpr()}{Trpr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Trpr\+::\+Trpr (\begin{DoxyParamCaption}\item[{E2\+TRPR \texorpdfstring{$\ast$}{*}}]{new\+Msg }\end{DoxyParamCaption})}
+
+Конструктор объекта класса. Инициализирует объект trpr значениями из new\+Msg. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Msg} & указатель на объект сетевого сообщения Е2ТРПР \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trpr_ad8781291c9d7cebbf6ea7b21b103dfcb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a8d37b90a09b87cf2e949c86bdaf23b1d}\label{classModelNS23817A620S1823_1_1Trpr_a8d37b90a09b87cf2e949c86bdaf23b1d} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!````~Trpr@{\texorpdfstring{$\sim$}{\string~}Trpr}}
+\index{````~Trpr@{\texorpdfstring{$\sim$}{\string~}Trpr}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Trpr()}{\string~Trpr()}}
+{\footnotesize\ttfamily Model\+NS23817\+A620\+S1823\+::\+Trpr\+::\texorpdfstring{$\sim$}{\string~}\+Trpr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a12bafb38f59191a46715dff089b18efc}\label{classModelNS23817A620S1823_1_1Trpr_a12bafb38f59191a46715dff089b18efc} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!clear@{clear}}
+\index{clear@{clear}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Обнуление внутренного буфера. \Hypertarget{classModelNS23817A620S1823_1_1Trpr_aa8f44d5f879b771fc4de331782e8e424}\label{classModelNS23817A620S1823_1_1Trpr_aa8f44d5f879b771fc4de331782e8e424} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!getMsg@{getMsg}}
+\index{getMsg@{getMsg}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{getMsg()}{getMsg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::get\+Msg (\begin{DoxyParamCaption}\item[{E2\+TRPR \texorpdfstring{$\ast$}{*}}]{msg\+Buf }\end{DoxyParamCaption}) const}
+
+Копирование внутреннего сообщения Е2ТРПР в заданный буфер. 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Buf} & указатель на объект сетевого сообщения Е2ТРПР (буфер) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a02d37b6d9e105f993c49dd52777ab152}\label{classModelNS23817A620S1823_1_1Trpr_a02d37b6d9e105f993c49dd52777ab152} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!getPolarsMask@{getPolarsMask}}
+\index{getPolarsMask@{getPolarsMask}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{getPolarsMask()}{getPolarsMask()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::get\+Polars\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Index }\end{DoxyParamCaption}) const}
+
+Возврат маски поляризаций для заданного строба такта. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Index} & индекс строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+маска поляризаций 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a1534eb01c1de4fc02135bba03e0ba9fd}\label{classModelNS23817A620S1823_1_1Trpr_a1534eb01c1de4fc02135bba03e0ba9fd} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!getSignalType@{getSignalType}}
+\index{getSignalType@{getSignalType}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{getSignalType()}{getSignalType()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::get\+Signal\+Type (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Index }\end{DoxyParamCaption}) const}
+
+Возврат типа сигнала в заданном стробе. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Index} & индекс строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+тип сигнала 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a62f2acca19c26b1fd57a55bd6b7501c4}\label{classModelNS23817A620S1823_1_1Trpr_a62f2acca19c26b1fd57a55bd6b7501c4} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!getStrbId@{getStrbId}}
+\index{getStrbId@{getStrbId}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{getStrbId()}{getStrbId()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::get\+Strb\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Index }\end{DoxyParamCaption}) const}
+
+Возврат идентификатора заданного строба такта. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Index} & индекс строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+идентификатор строба 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_abeab087c56998990f3e688349b374e7c}\label{classModelNS23817A620S1823_1_1Trpr_abeab087c56998990f3e688349b374e7c} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!getStrobesNumber@{getStrobesNumber}}
+\index{getStrobesNumber@{getStrobesNumber}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{getStrobesNumber()}{getStrobesNumber()}}
+{\footnotesize\ttfamily uint32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::get\+Strobes\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Возврат количества стробов в ТРПР. \begin{DoxyReturn}{Returns}
+количество стробов в ТРПР 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_aec308203653e4398561ef67d9b730d78}\label{classModelNS23817A620S1823_1_1Trpr_aec308203653e4398561ef67d9b730d78} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!getTactId@{getTactId}}
+\index{getTactId@{getTactId}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{getTactId()}{getTactId()}}
+{\footnotesize\ttfamily uint64\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::get\+Tact\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Возврат идентификатора такта. \begin{DoxyReturn}{Returns}
+идентификатор такта 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ac248e0a7a6350beaf2e4e1c2603f82e2}\label{classModelNS23817A620S1823_1_1Trpr_ac248e0a7a6350beaf2e4e1c2603f82e2} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isStrobeForModel@{isStrobeForModel}}
+\index{isStrobeForModel@{isStrobeForModel}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isStrobeForModel()}{isStrobeForModel()}}
+{\footnotesize\ttfamily bool Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Strobe\+For\+Model (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Index }\end{DoxyParamCaption}) const}
+
+Проверка на принадлежность модели строба с заданным индексом. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Index} & индекс строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если заданный строб предназначен для модели, false в противном случае 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_af85c1a4b2b7d5831fa2320939e622a30}\label{classModelNS23817A620S1823_1_1Trpr_af85c1a4b2b7d5831fa2320939e622a30} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidDFGroupsAndRays@{isValidDFGroupsAndRays}}
+\index{isValidDFGroupsAndRays@{isValidDFGroupsAndRays}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidDFGroupsAndRays()}{isValidDFGroupsAndRays()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+DFGroups\+And\+Rays (\begin{DoxyParamCaption}\item[{const TStrobe \texorpdfstring{$\ast$}{*}}]{strb,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка количества лучей и количества пеленгационных групп на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em strb} & указатель на объект строба ТРПР \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если количество лучей или пеленгационных групп выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trpr_af85c1a4b2b7d5831fa2320939e622a30_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a485879e3a1f2fb1c1f4551ceec9a9b51}\label{classModelNS23817A620S1823_1_1Trpr_a485879e3a1f2fb1c1f4551ceec9a9b51} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidDFGroupsNum@{isValidDFGroupsNum}}
+\index{isValidDFGroupsNum@{isValidDFGroupsNum}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidDFGroupsNum()}{isValidDFGroupsNum()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+DFGroups\+Num (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dfgs\+Num,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка количества пеленгационных групп на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em dfgs\+Num} & количество пеленгационных групп \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если количество пеленгационных групп выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trpr_a485879e3a1f2fb1c1f4551ceec9a9b51_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_aeef1a004fa9211249db17aaa26fbb300}\label{classModelNS23817A620S1823_1_1Trpr_aeef1a004fa9211249db17aaa26fbb300} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidFg1@{isValidFg1}}
+\index{isValidFg1@{isValidFg1}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidFg1()}{isValidFg1()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Fg1 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fg1,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка частоты первого гетеродина на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em fg1} & частота первого гетеродина \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если частота первого гетеродина выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ab8eab945532cb89e12391fc5ab26c80f}\label{classModelNS23817A620S1823_1_1Trpr_ab8eab945532cb89e12391fc5ab26c80f} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidFg2@{isValidFg2}}
+\index{isValidFg2@{isValidFg2}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidFg2()}{isValidFg2()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Fg2 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fg2,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка кода частоты цифрового гетеродина на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em fg2} & код частоты цифрового гетеродина \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если код частоты цифрового гетеродина выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a67d273cd1ea89bbbf231d85620817e6b}\label{classModelNS23817A620S1823_1_1Trpr_a67d273cd1ea89bbbf231d85620817e6b} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidKdivXY@{isValidKdivXY}}
+\index{isValidKdivXY@{isValidKdivXY}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidKdivXY()}{isValidKdivXY()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Kdiv\+XY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type,  }\item[{uint8\+\_\+t}]{kdivx,  }\item[{uint8\+\_\+t}]{kdivy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка размерностей фрагмента полотна на соответствие таблице. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+{\em kdivx} & размер фрагмента по оси X \\
+\hline
+{\em kdivy} & размер фрагмента по оси Y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если значения размерностей не соответствуют таблице, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a2274872e12ae2010ce59543b460aa902}\label{classModelNS23817A620S1823_1_1Trpr_a2274872e12ae2010ce59543b460aa902} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidKgd@{isValidKgd}}
+\index{isValidKgd@{isValidKgd}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidKgd()}{isValidKgd()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Kgd (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{kgd,  }\item[{int32\+\_\+t}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка количества гипотез по дальности на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em kgd} & количество гипотез по дальности \\
+\hline
+{\em strb\+Type} & тип строба \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если количество гипотез по дальности выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a3e7de9b7b9952c1d0a2859b83fb7c838}\label{classModelNS23817A620S1823_1_1Trpr_a3e7de9b7b9952c1d0a2859b83fb7c838} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidKgrs@{isValidKgrs}}
+\index{isValidKgrs@{isValidKgrs}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidKgrs()}{isValidKgrs()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Kgrs (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{kgrs,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка количества гипотез по радиальной скорости (фильтров) на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em kgrs} & количество гипотез по радиальной скорости \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если количество гипотез по радиальной скорости выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a73a3d1727858bcb45caca82553d6df48}\label{classModelNS23817A620S1823_1_1Trpr_a73a3d1727858bcb45caca82553d6df48} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidN1grs@{isValidN1grs}}
+\index{isValidN1grs@{isValidN1grs}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidN1grs()}{isValidN1grs()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+N1grs (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{n1grs,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка кода частоты начала доплеровского диапазона на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em n1grs} & код частоты начала доплеровского диапазона \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если код частоты начала доплеровского диапазона выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_adf563303c912ac53ce8530aebeb857c4}\label{classModelNS23817A620S1823_1_1Trpr_adf563303c912ac53ce8530aebeb857c4} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidStrbBegin@{isValidStrbBegin}}
+\index{isValidStrbBegin@{isValidStrbBegin}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidStrbBegin()}{isValidStrbBegin()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Strb\+Begin (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Begin,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка дискрета начала строба на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Begin} & дискрет начала строба \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если дискрет начала строба выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_af257447ad571ba13a1ca29a060f8533f}\label{classModelNS23817A620S1823_1_1Trpr_af257447ad571ba13a1ca29a060f8533f} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidStrbLength@{isValidStrbLength}}
+\index{isValidStrbLength@{isValidStrbLength}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidStrbLength()}{isValidStrbLength()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Strb\+Length (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Len,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка длины строба на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Len} & длина строба \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если длина строба выходит за граничные значения, 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a84baab8953e6c3c62b699ff89b8bc90c}\label{classModelNS23817A620S1823_1_1Trpr_a84baab8953e6c3c62b699ff89b8bc90c} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!isValidThreshold@{isValidThreshold}}
+\index{isValidThreshold@{isValidThreshold}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{isValidThreshold()}{isValidThreshold()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::is\+Valid\+Threshold (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{thresholds\+Mask,  }\item[{uint16\+\_\+t}]{win\+SizeR,  }\item[{uint16\+\_\+t}]{win\+SizeV,  }\item[{uint16\+\_\+t}]{kgd,  }\item[{uint16\+\_\+t}]{kgrs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка параметров для порогово-\/логической обработки на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em thresholds\+Mask} & маска порогов \\
+\hline
+{\em win\+SizeR} & размер окна вычисления сигмы по гипотезам дальности \\
+\hline
+{\em win\+SizeV} & размер окна вычисления сигмы по гипотезам скорости \\
+\hline
+{\em kgd} & количество заказанных гипотез дальности \\
+\hline
+{\em kgrs} & количество заказанных гипотез скорости \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$<$}{<} 0 в случае если тип порога неизвестен или размер окна вычисления сигмы для плавающего порога выходит за граничные значения; 0 -\/ если проверка пройдена успешно 
+\end{DoxyReturn}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ac9dbe7e327f7db94be0944d92df5c77d}\label{classModelNS23817A620S1823_1_1Trpr_ac9dbe7e327f7db94be0944d92df5c77d} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!setNewMsg@{setNewMsg}}
+\index{setNewMsg@{setNewMsg}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{setNewMsg()}{setNewMsg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::set\+New\+Msg (\begin{DoxyParamCaption}\item[{const E2\+TRPR \texorpdfstring{$\ast$}{*}}]{new\+Msg }\end{DoxyParamCaption})}
+
+Инициализация внутреннего буфера объекта trpr значениями из new\+Msg. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Msg} & указатель на объект сетевого сообщения Е2ТРПР \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ad0a4674a71a6f41a2b4322b6f69bd12d}\label{classModelNS23817A620S1823_1_1Trpr_ad0a4674a71a6f41a2b4322b6f69bd12d} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!setStrbId@{setStrbId}}
+\index{setStrbId@{setStrbId}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{setStrbId()}{setStrbId()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::set\+Strb\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Id,  }\item[{uint32\+\_\+t}]{strb\+Index }\end{DoxyParamCaption})}
+
+Инициализация идентификатора заданного индексом строба такта заданным значением. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Id} & идентификатор строба \\
+\hline
+{\em strb\+Index} & индекс строба \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ad26f0f2a2ea65832f56ebf84488ce217}\label{classModelNS23817A620S1823_1_1Trpr_ad26f0f2a2ea65832f56ebf84488ce217} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!setStrobe@{setStrobe}}
+\index{setStrobe@{setStrobe}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{setStrobe()}{setStrobe()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::set\+Strobe (\begin{DoxyParamCaption}\item[{TStrobe \texorpdfstring{$\ast$}{*}}]{strb,  }\item[{uint32\+\_\+t}]{strb\+Index }\end{DoxyParamCaption})}
+
+Инициализация заданного строба такта во внутреннем буфере заданными значениями. 
+\begin{DoxyParams}{Parameters}
+{\em strb} & указатель на объект строба сетевого сообщения Е2ТРПР \\
+\hline
+{\em strb\+Index} & индекс строба в сообщении Е2ТРПР \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_aca73328cd5146245be8b8e1ebb0cd0db}\label{classModelNS23817A620S1823_1_1Trpr_aca73328cd5146245be8b8e1ebb0cd0db} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!setTactHeader@{setTactHeader}}
+\index{setTactHeader@{setTactHeader}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{setTactHeader()}{setTactHeader()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::set\+Tact\+Header (\begin{DoxyParamCaption}\item[{SDTRPR \texorpdfstring{$\ast$}{*}}]{header }\end{DoxyParamCaption})}
+
+Инициализация заголовка такта во внутреннем буфере заданными значениями. 
+\begin{DoxyParams}{Parameters}
+{\em header} & указатель на объект заголовка сетевого сообщения Е2ТРПР \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a81009017f06aea9beb3bf6d15bc0c508}\label{classModelNS23817A620S1823_1_1Trpr_a81009017f06aea9beb3bf6d15bc0c508} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!setUvPg@{setUvPg}}
+\index{setUvPg@{setUvPg}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{setUvPg()}{setUvPg()}}
+{\footnotesize\ttfamily void Model\+NS23817\+A620\+S1823\+::\+Trpr\+::set\+Uv\+Pg (\begin{DoxyParamCaption}\item[{float}]{u,  }\item[{float}]{v,  }\item[{uint32\+\_\+t}]{strb\+Index,  }\item[{int32\+\_\+t}]{pg\+Index }\end{DoxyParamCaption})}
+
+Инициализация угловых координат указанного центра группы лучей заданного строба такта заданными значениями. 
+\begin{DoxyParams}{Parameters}
+{\em u} & координата u для центра группы лучей \\
+\hline
+{\em v} & координата v для центра группы лучей \\
+\hline
+{\em strb\+Index} & индекс строба \\
+\hline
+{\em pg\+Index} & индекс пеленгационной группы \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_a18f40572e2e315adad0ea7793e8d1c1e}\label{classModelNS23817A620S1823_1_1Trpr_a18f40572e2e315adad0ea7793e8d1c1e} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!validate@{validate}}
+\index{validate@{validate}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type,  }\item[{int16\+\_\+t}]{active\+Interfs\+Num }\end{DoxyParamCaption}) const}
+
+Проверка полей ТРПР на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em st\+Type} & тип станции \\
+\hline
+{\em active\+Interfs\+Num} & количество активных помех \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если значения полей находятся вне пределов интервала \mbox{[}минимум; максимум\mbox{]}, 0 -\/ если проверки пройдены успешно 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trpr_a18f40572e2e315adad0ea7793e8d1c1e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_af56c47229f6dcd82c84978f91cd0ea7f}\label{classModelNS23817A620S1823_1_1Trpr_af56c47229f6dcd82c84978f91cd0ea7f} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!validateStrb@{validateStrb}}
+\index{validateStrb@{validateStrb}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{validateStrb()}{validateStrb()}}
+{\footnotesize\ttfamily int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Trpr\+::validate\+Strb (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{strb\+Index,  }\item[{\mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Shared\+Const\+::\+Station\+Type}}}]{st\+Type,  }\item[{int16\+\_\+t}]{active\+Interfs\+Num }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Проверка полей заданного строба на граничные значения. 
+\begin{DoxyParams}{Parameters}
+{\em strb\+Index} & индекс строба \\
+\hline
+{\em st\+Type} & тип станции \\
+\hline
+{\em active\+Interfs\+Num} & количество активных помех \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 в случае если значения полей находятся вне пределов интервала \mbox{[}минимум; максимум\mbox{]}, 0 -\/ если проверки пройдены успешно 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classModelNS23817A620S1823_1_1Trpr_af56c47229f6dcd82c84978f91cd0ea7f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Trpr_ab5f7d16a963a9c7af26ea759da9d72b5}\label{classModelNS23817A620S1823_1_1Trpr_ab5f7d16a963a9c7af26ea759da9d72b5} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!dfGroups@{dfGroups}}
+\index{dfGroups@{dfGroups}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{dfGroups}{dfGroups}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModelNS23817A620S1823_1_1DFGroups}{DFGroups}} Model\+NS23817\+A620\+S1823\+::\+Trpr\+::df\+Groups\hspace{0.3cm}{\ttfamily [private]}}
+
+список расстановок лучей \Hypertarget{classModelNS23817A620S1823_1_1Trpr_a4f06c9dd1c88a917f0e673dd2d864de1}\label{classModelNS23817A620S1823_1_1Trpr_a4f06c9dd1c88a917f0e673dd2d864de1} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!kdiv@{kdiv}}
+\index{kdiv@{kdiv}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{kdiv}{kdiv}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::pair$<$uint8\+\_\+t, uint8\+\_\+t$>$ $>$ $>$ Model\+NS23817\+A620\+S1823\+::\+Trpr\+::kdiv\hspace{0.3cm}{\ttfamily [private]}}
+
+список допустимых значений параметров дробления полотна kdiv\+\_\+\mbox{[}xy\mbox{]} \Hypertarget{classModelNS23817A620S1823_1_1Trpr_a7131d5f523741647b5d626bc24e57c40}\label{classModelNS23817A620S1823_1_1Trpr_a7131d5f523741647b5d626bc24e57c40} 
+\index{ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}!trpr@{trpr}}
+\index{trpr@{trpr}!ModelNS23817A620S1823::Trpr@{ModelNS23817A620S1823::Trpr}}
+\doxysubsubsection{\texorpdfstring{trpr}{trpr}}
+{\footnotesize\ttfamily E2\+TRPR Model\+NS23817\+A620\+S1823\+::\+Trpr\+::trpr\hspace{0.3cm}{\ttfamily [private]}}
+
+объект сетевой структуры тактового расписания приёмника 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{trpr_8h}{trpr.\+h}}\item 
+src/\mbox{\hyperlink{trpr_8cpp}{trpr.\+cpp}}\end{DoxyCompactItemize}

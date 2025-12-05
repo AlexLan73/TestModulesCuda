@@ -1,0 +1,121 @@
+\doxysection{Model\+NS23817\+A620\+S1823\+::Interface Class Reference}
+\hypertarget{classModelNS23817A620S1823_1_1Interface}{}\label{classModelNS23817A620S1823_1_1Interface}\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}
+
+
+{\ttfamily \#include $<$model\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for Model\+NS23817\+A620\+S1823\+::Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classModelNS23817A620S1823_1_1Interface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+NS23817\+A620\+S1823\+::Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classModelNS23817A620S1823_1_1Interface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739}{Init\+Level}} \{ \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739a4c73bcba4a5bab17bf798b2313c7cdb6}{control\+Msgs\+Only}}
+, \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739aac48c9b6ef2010aee18a8f8a3e6dc6ea}{full\+Init}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_aaf6eac83fc27f36c0cb6c7477e51155c}{\texorpdfstring{$\sim$}{\string~}\+Interface}} ()
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a5f0b1f05c85df381b4ae72f679f9ec10}{form\+All\+Control\+Messages}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs, const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}lattice\+Mask, std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&cntrl\+Msgs)=0
+\item 
+virtual int32\+\_\+t \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a072b0b4492b4cf8621ee4586231cc69a}{start\+Processing}} (\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}ext\+Msgs, \mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}cbacks)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс интерфейса модели. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739}\label{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739} 
+\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}!InitLevel@{InitLevel}}
+\index{InitLevel@{InitLevel}!ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}
+\doxysubsubsection{\texorpdfstring{InitLevel}{InitLevel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739}{Model\+NS23817\+A620\+S1823\+::\+Interface\+::\+Init\+Level}}}
+
+уровень инициализации объекта модели. control\+Msgs\+Only -\/ расчёт только УС full\+Init -\/ инициализация помимо памяти УС ещё и памяти для работы модели \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{controlMsgsOnly@{controlMsgsOnly}!ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}!controlMsgsOnly@{controlMsgsOnly}}}\Hypertarget{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739a4c73bcba4a5bab17bf798b2313c7cdb6}\label{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739a4c73bcba4a5bab17bf798b2313c7cdb6} 
+control\+Msgs\+Only&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fullInit@{fullInit}!ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}!fullInit@{fullInit}}}\Hypertarget{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739aac48c9b6ef2010aee18a8f8a3e6dc6ea}\label{classModelNS23817A620S1823_1_1Interface_a19667e5aedf02a1bffe6ecb013403739aac48c9b6ef2010aee18a8f8a3e6dc6ea} 
+full\+Init&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Interface_aaf6eac83fc27f36c0cb6c7477e51155c}\label{classModelNS23817A620S1823_1_1Interface_aaf6eac83fc27f36c0cb6c7477e51155c} 
+\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}!````~Interface@{\texorpdfstring{$\sim$}{\string~}Interface}}
+\index{````~Interface@{\texorpdfstring{$\sim$}{\string~}Interface}!ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Interface()}{\string~Interface()}}
+{\footnotesize\ttfamily virtual Model\+NS23817\+A620\+S1823\+::\+Interface\+::\texorpdfstring{$\sim$}{\string~}\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Деструктор объекта класса. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelNS23817A620S1823_1_1Interface_a5f0b1f05c85df381b4ae72f679f9ec10}\label{classModelNS23817A620S1823_1_1Interface_a5f0b1f05c85df381b4ae72f679f9ec10} 
+\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}!formAllControlMessages@{formAllControlMessages}}
+\index{formAllControlMessages@{formAllControlMessages}!ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}
+\doxysubsubsection{\texorpdfstring{formAllControlMessages()}{formAllControlMessages()}}
+{\footnotesize\ttfamily virtual int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Interface\+::form\+All\+Control\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs,  }\item[{const \mbox{\hyperlink{structModelNS23817A620S1823_1_1ChannelsMask}{Channels\+Mask}} \texorpdfstring{$\ast$}{*}}]{lattice\+Mask,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structModelNS23817A620S1823_1_1ControlMessage}{Control\+Message}} $>$ \&}]{cntrl\+Msgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Формирование УС для всех стробов такта и всех ячеек. 
+\begin{DoxyParams}{Parameters}
+{\em ext\+Msgs} & указатель на объект структуры входных сообщений \\
+\hline
+{\em cntrl\+Msgs} & ссылка на объект управляющего сообщения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}{Main\+::ok} (0) если модель завершила расчёт УС, \doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}{Main\+::locked} (1) в противном случае 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_a5c4ce562f37b044cec79356f6df0b7f1}{Model\+NS23817\+A620\+S1823\+::\+Main}}.
+
+\Hypertarget{classModelNS23817A620S1823_1_1Interface_a072b0b4492b4cf8621ee4586231cc69a}\label{classModelNS23817A620S1823_1_1Interface_a072b0b4492b4cf8621ee4586231cc69a} 
+\index{ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}!startProcessing@{startProcessing}}
+\index{startProcessing@{startProcessing}!ModelNS23817A620S1823::Interface@{ModelNS23817A620S1823::Interface}}
+\doxysubsubsection{\texorpdfstring{startProcessing()}{startProcessing()}}
+{\footnotesize\ttfamily virtual int32\+\_\+t Model\+NS23817\+A620\+S1823\+::\+Interface\+::start\+Processing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1ExternalMessages}{External\+Messages}} \texorpdfstring{$\ast$}{*}}]{ext\+Msgs,  }\item[{\mbox{\hyperlink{structModelNS23817A620S1823_1_1Callbacks}{Callbacks}} \texorpdfstring{$\ast$}{*}}]{cbacks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Запуск модели для расчёта одного такта работы приёмника станции. Передаваемые сетевые сообщения должны просуществовать как минимум до конца формирования УС. 
+\begin{DoxyParams}{Parameters}
+{\em ext\+Msgs} & указатель на объект структуры входных сообщений \\
+\hline
+{\em cbacks} & указатель на объект структуры коллбэков для срезов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3a13609fc8ad8d2d354158200637c956d1}{Main\+::ok} (0) если модель завершила расчёт, \doxylink{classModelNS23817A620S1823_1_1Main_a9f02078a357a84157afdfba1e937ddb3aef2577fc3c89203cf834e5bef351fef1}{Main\+::locked} (1) в противном случае 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classModelNS23817A620S1823_1_1Main_aeb9e16b44bbe2550bf6dc3f9f927e72c}{Model\+NS23817\+A620\+S1823\+::\+Main}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/model/\mbox{\hyperlink{modelInterface_8h}{model\+Interface.\+h}}\end{DoxyCompactItemize}

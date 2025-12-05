@@ -1,0 +1,75 @@
+\doxysection{src/jsonrpc/server\+\_\+main.cpp File Reference}
+\hypertarget{server__main_8cpp}{}\label{server__main_8cpp}\index{src/jsonrpc/server\_main.cpp@{src/jsonrpc/server\_main.cpp}}
+{\ttfamily \#include "{}server\+\_\+loop.\+h"{}}\newline
+{\ttfamily \#include "{}serdes.\+h"{}}\newline
+{\ttfamily \#include "{}../run\+Model.\+h"{}}\newline
+{\ttfamily \#include $<$libutils/sockhlp.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/result.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/chan.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/fdstream.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+Include dependency graph for server\+\_\+main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{server__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{server__main_8cpp_a912d2203355798c86a376cf4cb1d6128}{syslog\+\_\+ident}} = "{}model\+\_\+jsonrpc\+\_\+server"{}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{server__main_8cpp_aef1bd6ad890a110b466cb0e8088507a2}{usage}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{server__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{server\_main.cpp@{server\_main.cpp}!main@{main}}
+\index{main@{main}!server\_main.cpp@{server\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{server__main_8cpp_a912d2203355798c86a376cf4cb1d6128}\label{server__main_8cpp_a912d2203355798c86a376cf4cb1d6128} 
+\index{server\_main.cpp@{server\_main.cpp}!syslog\_ident@{syslog\_ident}}
+\index{syslog\_ident@{syslog\_ident}!server\_main.cpp@{server\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{syslog\_ident}{syslog\_ident}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} syslog\+\_\+ident = "{}model\+\_\+jsonrpc\+\_\+server"{}}
+
+\Hypertarget{server__main_8cpp_aef1bd6ad890a110b466cb0e8088507a2}\label{server__main_8cpp_aef1bd6ad890a110b466cb0e8088507a2} 
+\index{server\_main.cpp@{server\_main.cpp}!usage@{usage}}
+\index{usage@{usage}!server\_main.cpp@{server\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{usage}{usage}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} usage\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{jsonrpc\_server\ [-\/c\ N]\ [-\/s]\ хост[:порт]\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{Опции:\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ -\/c\ N\ \ \ cache\ of\ size\ N\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ -\/s\ \ \ \ \ sloppy\ cache\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}}}
+
+\end{DoxyCode}

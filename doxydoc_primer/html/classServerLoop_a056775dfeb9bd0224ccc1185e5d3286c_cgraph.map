@@ -1,0 +1,12 @@
+<map id="ServerLoop::cache_response" name="ServerLoop::cache_response">
+<area shape="rect" id="Node000001" title="Если ответ содержит пригодную к кэшированию выдачу модели, кэшируем его" alt="" coords="5,80,212,105"/>
+<area shape="rect" id="Node000002" href="$classCache.html#a1e34d8d53040ba97877d479ab0ccbae5" title=" " alt="" coords="283,5,409,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,77,259,39,284,32,286,37,261,45,147,82"/>
+<area shape="rect" id="Node000003" href="$classCache.html#afd7f7dce7f449d694cc4b6c8dc360033" title=" " alt="" coords="301,55,391,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,79,287,71,287,76,213,84"/>
+<area shape="rect" id="Node000004" href="$classCache.html#a6045f5d0056b3aac2693a2df0d8dbe53" title=" " alt="" coords="480,80,576,105"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="212,90,466,90,466,95,212,95"/>
+<area shape="rect" id="Node000005" href="$server__loop_8cpp.html#a98213d0d06c8ba5721df510b8493185b" title="Response кэшируем, если все стробы такта успешно обсчитаны" alt="" coords="260,156,432,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="150,103,293,149,292,154,148,108"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="392,71,467,82,466,87,391,76"/>
+</map>

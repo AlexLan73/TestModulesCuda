@@ -1,0 +1,142 @@
+\doxysection{include/model/min\+Defs.h File Reference}
+\hypertarget{minDefs_8h}{}\label{minDefs_8h}\index{include/model/minDefs.h@{include/model/minDefs.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/sumtype.\+h$>$}\newline
+{\ttfamily \#include $<$libutils/result.\+h$>$}\newline
+Include dependency graph for min\+Defs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minDefs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minDefs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structVector2d}{Vector2d$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structVector3d}{Vector3d$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structPolarized}{Polarized$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structTargetStrobeOutput}{Target\+Strobe\+Output}}
+\item 
+struct \mbox{\hyperlink{structInterfStrobeOutput}{Interf\+Strobe\+Output}}
+\item 
+struct \mbox{\hyperlink{structCalibStrobeOutput}{Calib\+Strobe\+Output}}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1SavePermissions}{Model\+NS23817\+A620\+S1823\+::\+Save\+Permissions}}
+\item 
+struct \mbox{\hyperlink{structModelNS23817A620S1823_1_1StationParams}{Model\+NS23817\+A620\+S1823\+::\+Station\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823}{Model\+NS23817\+A620\+S1823}}
+\item 
+namespace \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef libutils\+::\+Sum\+Type$<$ \mbox{\hyperlink{structTargetStrobeOutput}{Target\+Strobe\+Output}}, \mbox{\hyperlink{structInterfStrobeOutput}{Interf\+Strobe\+Output}}, \mbox{\hyperlink{structCalibStrobeOutput}{Calib\+Strobe\+Output}} $>$ \mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{Strobe\+Output}}
+\item 
+typedef libutils\+::\+Result$<$ \mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{Strobe\+Output}}, libutils\+::\+Err\+Msg $>$ \mbox{\hyperlink{minDefs_8h_a034d406bfc0074f302284b42a090aafc}{Strobe\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bb}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::\+Station\+Type}} \{ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bbae78c97d208e82f0b158cac554dcdd80d}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::voronezhM}}
+, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bba27d49506cd2e63c327f455ae41a346a1}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::voronezh\+SM}}
+, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_add16d297c1e2aa24a72ff4745f0494bba8f8042586aff8cd443c80f9fdc0d1ec5}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::mrik}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::\+Polarization\+Types}} \{ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38a1a046190c0b47878ec3638ecaa0d1820}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::vertical}}
+, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38a784f5f1e534464b27c65eac1c31335fb}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::horizontal}}
+, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_aa7267c32cb072b0ed3818ed4f39f6d38a10c2bec9896f009207af44ea5316c0c6}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::both}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::\+Quadr\+Comp\+Form\+Types}} \{ \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588a11eb961586e1eb63ed6389bf2cc7791a}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::hilbert}}
+, \mbox{\hyperlink{namespaceModelNS23817A620S1823_1_1SharedConst_a29a92c8106e526c9607729912fef8588a40867b571e9184195156884b542d5f99}{Model\+NS23817\+A620\+S1823\+::\+Shared\+Const\+::kaiser\+DPD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}{eq\+\_\+dims}} (const \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ T $>$ \&a)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{minDefs_8h_af0cf0182f1e3ef67155a6e9a9171f2ed}{eq\+\_\+dims}} (const \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ T $>$ \&a, const \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ T $>$ \&b)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{minDefs_8h_a6e017f37973a154d6a861e6fe7c293ed}{eq\+\_\+dims}} (const \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Проверяет, что поляризации a -\/ 3-\/мерные массивы одинаковых размерностей \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}\label{minDefs_8h_a24b292497bae1585d09efbd6de6d3579} 
+\index{minDefs.h@{minDefs.h}!StrobeOutput@{StrobeOutput}}
+\index{StrobeOutput@{StrobeOutput}!minDefs.h@{minDefs.h}}
+\doxysubsubsection{\texorpdfstring{StrobeOutput}{StrobeOutput}}
+{\footnotesize\ttfamily typedef libutils\+::\+Sum\+Type$<$\mbox{\hyperlink{structTargetStrobeOutput}{Target\+Strobe\+Output}}, \mbox{\hyperlink{structInterfStrobeOutput}{Interf\+Strobe\+Output}}, \mbox{\hyperlink{structCalibStrobeOutput}{Calib\+Strobe\+Output}}$>$ \mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{Strobe\+Output}}}
+
+Выдача, сгенерированная моделью по одному стробу (целевому, помеховому, калибровочному) при успешном завершении \Hypertarget{minDefs_8h_a034d406bfc0074f302284b42a090aafc}\label{minDefs_8h_a034d406bfc0074f302284b42a090aafc} 
+\index{minDefs.h@{minDefs.h}!StrobeResult@{StrobeResult}}
+\index{StrobeResult@{StrobeResult}!minDefs.h@{minDefs.h}}
+\doxysubsubsection{\texorpdfstring{StrobeResult}{StrobeResult}}
+{\footnotesize\ttfamily typedef libutils\+::\+Result$<$\mbox{\hyperlink{minDefs_8h_a24b292497bae1585d09efbd6de6d3579}{Strobe\+Output}}, libutils\+::\+Err\+Msg$>$ \mbox{\hyperlink{minDefs_8h_a034d406bfc0074f302284b42a090aafc}{Strobe\+Result}}}
+
+Результат работы модели по одному стробу -\/ либо данные, либо сообщение об ошибке 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{minDefs_8h_a6e017f37973a154d6a861e6fe7c293ed}\label{minDefs_8h_a6e017f37973a154d6a861e6fe7c293ed} 
+\index{minDefs.h@{minDefs.h}!eq\_dims@{eq\_dims}}
+\index{eq\_dims@{eq\_dims}!minDefs.h@{minDefs.h}}
+\doxysubsubsection{\texorpdfstring{eq\_dims()}{eq\_dims()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool eq\+\_\+dims (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structPolarized}{Polarized}}$<$ T $>$ \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Проверяет, что поляризации a -\/ 3-\/мерные массивы одинаковых размерностей 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{minDefs_8h_a6e017f37973a154d6a861e6fe7c293ed_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3}\label{minDefs_8h_a5b688da3861d0c7dad98caa0232f32e3} 
+\index{minDefs.h@{minDefs.h}!eq\_dims@{eq\_dims}}
+\index{eq\_dims@{eq\_dims}!minDefs.h@{minDefs.h}}
+\doxysubsubsection{\texorpdfstring{eq\_dims()}{eq\_dims()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool eq\+\_\+dims (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ T $>$ \&}]{a }\end{DoxyParamCaption})}
+
+Вспомогательная функция для sanity check -\/проверяет, что a имеет размерности "{}обычного"{} 3-\/мерного массива (т.\+к. \doxylink{structVector3d}{Vector3d} является т.\+н. jagged array размерности a\mbox{[}0\mbox{]}\mbox{[}0\mbox{]} и a\mbox{[}0\mbox{]}\mbox{[}1\mbox{]} могут не совпадать, а у обычного трехмерного массива они совпадают). \Hypertarget{minDefs_8h_af0cf0182f1e3ef67155a6e9a9171f2ed}\label{minDefs_8h_af0cf0182f1e3ef67155a6e9a9171f2ed} 
+\index{minDefs.h@{minDefs.h}!eq\_dims@{eq\_dims}}
+\index{eq\_dims@{eq\_dims}!minDefs.h@{minDefs.h}}
+\doxysubsubsection{\texorpdfstring{eq\_dims()}{eq\_dims()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool eq\+\_\+dims (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ T $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{structVector3d}{Vector3d}}$<$ T $>$ \&}]{b }\end{DoxyParamCaption})}
+
+Вспомогательная функция для sanity check -\/ проверяет, что a1 и a2 имеют размерности "{}обычных"{} 3-\/мерных массивов, и они равнцы у a1 и a2 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{minDefs_8h_af0cf0182f1e3ef67155a6e9a9171f2ed_cgraph}
+\end{center}
+\end{figure}
